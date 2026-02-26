@@ -91,7 +91,7 @@ output:2
 
 5.Modulus( " % " Remainder) :
 The modulus operator returns the remainder after dividing one number by another.
- ex.
+ ex. 
 	a = 10
  	b = 3
 	print(a % b)
@@ -224,7 +224,7 @@ The and operator returns True only if both conditions are True and If any one co
  ex.
 	a = 10
 	b = 5
-	print(a > 5 and b > 2)
+	print(a > 5 and b > 2)	
 output: True
 
 2.OR:
@@ -291,7 +291,7 @@ The & operator returns 1 only if both bits are 1.
  ex.
 	a = 5      # Binary: 101
 	b = 3      # Binary: 011
-	print(a & b)
+	print(a & b) 
 output: 1	# Binary:001
 
 2.OR(|):
@@ -340,7 +340,7 @@ ex.
 
 The elif statement stands for “else if” and It is used to check another condition if the previous if condition is False. When it finds the first True condition, It executes that block, Then skips the remaining conditions.
 
-ex.
+ex. 
 	marks = 60
 	if marks > 75:
    	   print("Grade A")
@@ -351,12 +351,44 @@ ex.
 
 The else statement is used when previous conditions are False and it acts as a default block of code.
  
-ex.
+ex. 
 	
 	marks = 60
 	if marks > 75:
     	   print("Grade A")
 	else:
    	    print("Fail")
+
+
+*Transfer Statements:-
+it will be used to control loop execution 
+
+1.break:
+The " break " statement is used to stop the loop execution immediately.
+ ex.
+	for i in range(1, 6):
+    	    if i == 4:
+               break
+    	    print(i)
+output: 1, 2, 3
+
+2.continue:
+The continue statement is used to skip the current iteration and move to the next iteration of the loop and It does not stop the loop completely.
+ ex.
+	num=[1,2,3,4,5,6]
+	if num == 3:
+	   continue
+	print(num)
+output: 1, 2, 4, 5, 6
+
+3.pass:
+It is used as a placeholder when a statement is required syntactically but no code is needed.
+ ex.
+	for i in range(3):
+   	   pass
+	print(i)
+output:2
+
+
 
 
