@@ -1,0 +1,362 @@
+Day 1: 18/02/2026
+
+*Comments:-
+usually the comments are used to add information about line of code or comment out the line of code that will not require for temporary.
+
+The comment has two types :-
+1.Single line comment :-
+  The single comment will be used to comment out only single line of code .
+  it is defined by (#).
+  
+  ex.  #This is commented line by single line comment.
+
+2.Multi-Line Comment:-
+  The Multi-Line comment will be used to comment out multiple lines of code or add the information about code lines.
+  it is defined by ("""   """ or '''   ''').
+
+  ex.  """print("Hello! this is multi-line comment.")
+	  print("This is example.")
+	  print("this also define two types .") """
+
+		or
+
+  ex.  '''print("Hello! this is multi-line comment.")
+	  print("This is example.")
+	  print("this also define two types .") '''
+
+
+*Identation:-
+The Identations is block of spaces and it's usually contains the atleast 2 to 4 blocks of spaces.
+
+ex.  for i in range(1,100):
+	 print(i)
+
+ 
+*Variables:-
+The variables store the numeric value or data in single variable to reduce the number of line code .
+
+ex.  num1 = 5
+     a = "Stored value in num1 is : "
+     print(a)
+     print(num1)
+
+
+
+
+Day 2:23/02/2026
+
+*Operator:-
+The Operators are symbols used to perform operations on variables and values.
+
+*Types of Operators in Python:
+
+1.Arithmetic Operators:-
+Arithmetic operators are used to perform mathematical calculations.
+
+Types:-
+
+1)Addition(+):
+The addition operator is used to add two numbers and return their sum.
+ ex.
+	a = 10
+	b = 5
+	print(a + b)
+output:15
+
+2.Subtraction(-):
+The subtraction operator is used to subtract one number from another.
+ ex.
+	a = 10
+	b = 5
+	print(a - b)
+output:10
+
+3.Multiplication(*):
+The multiplication operator is used to multiply two numbers.
+ ex.
+	a = 10
+	b = 5
+	print(a * b)
+output:50
+
+
+4.Division(/):
+The division operator divides one number by another.
+ ex.
+	a = 10
+	b = 5
+	print(a / b)
+output:2
+
+
+5.Modulus( " % " Remainder) :
+The modulus operator returns the remainder after dividing one number by another.
+ ex.
+	a = 10
+ 	b = 3
+	print(a % b)
+output:1
+
+6.Exponent (Power " ** "):
+The exponent operator is used to calculate the power of a number.
+  ex.
+	a = 2
+	print(a ** 3)
+output:8
+
+7.Floor Division (Quotient " // "):
+The floor division operator divides two numbers and returns only the integer part of the result.
+
+ ex.
+	a = 10
+	b = 3
+	print(a // b)
+output:3
+
+
+2)Assignment Operators:-
+Assignment operators are used to assign values to variables.
+
+Types:-
+
+1.Simple assignment(=):
+The = operator assigns a value to a variable.
+ ex.
+	x = 10
+	print(x)
+output:10
+
+2.Add and assign(+=):
+The += operator adds a value to the variable and assigns the result back to the same variable.
+ ex.
+	x = 10
+        x += 5
+	print(x)
+output:15
+
+3.Subtract and assign(-=):
+The -= operator subtracts a value from the variable and stores the result.
+ ex.
+	x = 20
+	x -= 4
+	print(x)
+output:16
+
+4.Multiply and assign(*=):
+The *= operator multiplies the variable by a value and stores the result.
+ ex.
+	x = 5
+	x *= 3
+	print(x)
+output:15
+
+5.Divide and assign(/=):
+The /= operator divides the variable by a value and stores the result.
+ ex.
+	x = 20
+	x /= 4
+	print(x)
+output:5.0
+
+
+3.Comparison (Relational) Operators:-
+Comparison operators are used to compare two values or variables.
+
+Types:-
+1.Equal to (==):
+This operator checks whether two values are equal. If both values are equal, it returns True otherwise False.
+ ex.
+	a = 10
+	b = 10
+	print(a == b)
+output: True
+
+2.Not equal to(!=):
+This operator checks whether two values are not equal. If the values are different, it returns True.
+ ex.
+	a = 10
+	b = 10
+	print(a != b)
+output: False
+
+3.Greater than(<):
+This operator checks whether the left value is greater than the right value.
+ ex.
+	a = 15
+	b = 10
+	print(a > b)
+output:True
+
+4.Less than(>):
+This operator checks whether the left value is smaller than the right value.
+ ex.
+	a = 15
+	b = 10
+	print(a < b)
+output: False
+
+5.Greater than or equal to(<=):
+This operator checks whether the left value is greater than or equal to the right value.
+ ex.
+	a = 10
+	b = 10
+	print(a >= b)
+output:True
+
+6.Less than or equal to(>=):
+This operator checks whether the left value is less than or equal to the right value.
+ ex.
+	a = 20
+	b = 19
+	print(a <= b)
+output: False
+
+
+
+Day 3:24/02/2026
+
+4)Logical Operators:-
+Logical operators are used to combine two or more conditions and They will be return a Boolean value True or False.
+it has three logical operators:
+
+1.AND:
+The and operator returns True only if both conditions are True and If any one condition is False, the result will be False.
+ ex.
+	a = 10
+	b = 5
+	print(a > 5 and b > 2)
+output: True
+
+2.OR:
+The or operator returns True if at least one condition is True and It returns False only when both conditions are False.
+ ex.
+	a = 10
+	b = 5
+	print(a > 20 or b > 2)
+output: True
+
+3.NOT:
+The not operator is used to reverse the result of a condition. If condition is True not makes it False. If condition is False not makes it True.
+ ex.
+	a = 10
+	print(not(a > 5))
+output: False
+
+
+5)Identity Operators:-
+Identity operators are used to check whether two variables refer to the same object in memory.
+Python has two identity operators:
+1.is:
+The " is " operator returns True if both variables refer to the same object if they refer to different objects, it returns False.
+ ex.
+	a = 10
+	b = 10
+	print(a is b)
+output: True
+
+2.is not:
+The " is not " operator returns True if both variables refer to different memory locations.
+ ex.
+	a = [1, 2]
+	b = [1, 2]
+	print(a is not b)
+output: True
+
+6.Membership Operators:-
+Membership operators are used to check whether a value exists in a sequence like List, Tuple, String, Set.
+Python has two membership operators:
+1.in:
+The " in " operator returns True if the specified value is present in the sequence.
+ ex.
+	num1 = [10, 20, 30]
+	print(20 in num1)
+output: True
+
+2.not in:
+The not in operator returns True if the specified value is NOT present in the sequence.
+ ex.
+	num2 = [10, 20, 30]
+	print(10 not in num2)
+output: False
+
+
+
+7.Bitwise Operators:-
+Bitwise operators are used to perform operations on binary numbers and Computers store numbers in binary form (0 and 1).
+
+Types:-
+
+1.AND(&):
+The & operator returns 1 only if both bits are 1.
+ ex.
+	a = 5      # Binary: 101
+	b = 3      # Binary: 011
+	print(a & b)
+output: 1	# Binary:001
+
+2.OR(|):
+The | operator returns 1 if at least one bit is 1.
+ ex.
+	a = 5      # 101
+	b = 3      # 011
+	print(a | b)
+output:7	#Binary:111
+
+3.XOR(^):
+The ^ operator returns 1 if both bits are different.
+ ex.
+	a = 5      # 101
+	b = 3      # 011
+	print(a ^ b)
+output:6	#binary:110
+
+4.NOT(~):
+The ~ operator inverts all bits (0 becomes 1, 1 becomes 0).
+formula:-
+	~a=-(a-1)
+ ex.
+	a = 5
+	print(~a)
+output:-6
+
+
+
+Day 4:26/02/2026
+
+*Conditional Statements (if ,elif ,else):
+This are used to make decisions in a program and They can execute different blocks of code based on conditions.
+
+Python provides:
+1) if:
+The if statement is used to test a condition. if the condition is True the block of code inside the if statement is executed. if the condition is False the block is skipped.
+
+ex.
+	age = 20
+	if age > 18:
+    	   print("You are eligible to vote")
+
+
+2) elif:
+
+The elif statement stands for “else if” and It is used to check another condition if the previous if condition is False. When it finds the first True condition, It executes that block, Then skips the remaining conditions.
+
+ex.
+	marks = 60
+	if marks > 75:
+   	   print("Grade A")
+	elif marks > 50:
+  	     print("Grade B")
+
+3) else:
+
+The else statement is used when previous conditions are False and it acts as a default block of code.
+ 
+ex.
+	
+	marks = 60
+	if marks > 75:
+    	   print("Grade A")
+	else:
+   	    print("Fail")
+
+
