@@ -1,0 +1,66 @@
+1.what is python?
+ - Pythgon is programming language often use to build website and software and analyze data
+ - Python is an simple,dynamic,interpreter,high level language and programming language
+
+
+2.Python is dynamic means?
+  -python is dynamic mean is does not need to declare variable and their types 
+
+3.compare interpretee and compiler?
+  -interpreter: interpreter means the code is execited line by line which make easier find to debugging
+  -compiler: means to transfer source code to machine code and then execute code
+
+4.what is General purpose of the python?
+  -Python is used to various purpose to developed any application
+
+5.What is application of the Python?
+  -Web Development
+  -software Development
+  -game Development
+  -data analytics
+  -data science
+  -machine learning
+  -statistics  etc.
+
+
+6. What is comment ?
+   -A note in the code that Python does not execute.
+   -sinle line comment : write starting with Hash(#)    
+   -Double line comment : a)Write in the double cote ("""___""")
+                          b)Write in the single cote ('''___''')
+
+7. what is indentation ?
+   - Indentation means adding space(tabs)nat beggining of line of code
+   -it makes code clean and readable
+
+8. what is variable ?
+   - it is one type of contatiner where we store the value
+   -ex. num = 10   (num is a variable and 10 is value)
+
+9. what is rule of define variables? 
+   - a)var name always start with charecter
+   - b)var name cant start with number
+   - c)it can be alphanumeric
+   - d)can use underscore:   #var_name =1234
+                             #_a = 10
+   - e)no charecter limit
+
+
+10.what is keywords?
+   - keywordsis a special words in a programming language to perform specific tasks.
+   - ex. def , for , in , if , import etc.
+
+
+11.how many keywords are use in python?
+   - 35
+
+
+12.do you write a program on keyword module?
+   - yes 
+   - program- import keyword as kw     
+              keywords = kw.kwlist
+              print(keywords)
+              print(len(keywords))
+
+
+13.
