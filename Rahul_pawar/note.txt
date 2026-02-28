@@ -1,0 +1,410 @@
+16-02-2026
+
+what is python?
+ - Pythgon is programming language often use to build website and software and analyze data
+ - Python is an simple,dynamic,interpreter,high level language and programming language
+ - it is developed by 1991 by Guido van Russam
+ 
+
+simple :  python has easy to learn and their syntax is simple
+dynamic: python is dynamic mean is does not need to declare variable and their type
+interpreted : that means the code is executed line by line which make easier to find debugging
+high level language : high level language means programmer is read and write easily
+General purpose : python is use ton various purpose to developed any application 
+                   like as game Development,
+                           web Development
+                           software Development
+                           data analytics
+                           data science  etc.
+
+
+
+17-02-2026
+
+what is comment?
+
+ -A note in the code that Python does not execute.
+   -sinle line comment : write starting with Hash(#)    
+   -Double line comment : a)Write in the double cote ("""___""")
+                          b)Write in the single cote ('''___''')
+
+what is Indentation?
+          - Indentation means adding space(tabs)nat beggining of line of code
+   -it makes code clean and readable
+   min space = 1
+   max space = 4(1 tab)       
+
+
+18-02-2026
+
+
+what is variable?
+
+  -variable is one type of container where we can store the value
+  -ex. num = 10   (num is a variable and 10 is value)
+  
+   rule of define variables? 
+   - a)var name always start with charecter
+   - b)var name cant start with number
+   - c)it can be alphanumeric
+   - d)can use underscore:   #var_name =1234
+                             #_a = 10
+   - e)no charecter limit
+
+
+what is keywords?
+   
+   - keywordsis a special words in a programming language to perform specific tasks.
+   - ex. def , for , in , if , import etc.
+
+   
+    #keyword module 
+    -program for the keyword
+ '''
+  import keyword as kw     #dont save file name as a module name
+  keywords = kw.kwlist
+  print(keywords)
+  print(len(keywords))   '''
+
+
+  23-02-2026
+
+
+what is operator?
+
+  Operator : used to perform operation of values and variable 
+   
+
+   # ex- 
+ # a = 1
+ # b = 2
+ # print (a + b)
+
+ # here the a and b is operands(variable) , 1 and 2 is values
+ # + is a operator
+
+
+ # Types of operator:
+
+ # 1. Arithematic operator (+,-, ,/,%,*,//)
+ # 2.Assisgnment opeartor (=,+=, -=, *=,/=, and all arithmetic operators are used)
+ # 3.Comparison/Relational opeartor (==, !=, >, < ,>=, <=)
+ # 4.Logical operator (and,or,not)
+ # 5.Identity operator(is, is not)
+ # 6.Membership operator(in, not in)
+ # 7.Bitwise opeartor(&, |, ~, ^)
+
+
+   1. Arithematic operator (+,-, ,/,%,*,//)
+      
+         it is use to done basic operation in python like as addition ,subtraction etc.
+         ex- 
+          # a = 1
+          # b = 2
+          # print (a + b)
+
+    2.Assisgnment opeartor (=,+=, -=, *=,/=, and all arithmetic operators are used)
+           
+           -it is use to perform operations in python
+
+           ex.- b) +=  :
+                      # a = 1
+                      # a += 10           (a = a + 10)
+                      # print(a)
+
+
+   24-02-2026
+
+
+
+  3.Comparison/Relational opeartor (==, !=, >, < ,>=, <=)
+
+     -Comparison operators are used to compare two values.
+     -They always return True or False.
+     -ex:
+          <  :show less than
+          a = 10
+          b = 12
+          print(a < b)
+
+   
+    4.Logical operator (and,or,not)
+
+      
+
+  a) and :
+ 
+      0 1 = 0
+      1 0 = 0
+      1 1 = 1
+      0 0 = 0
+              
+     a = 10
+     b = 20
+     print(a>=9 and b<=20)
+
+
+  b) or :
+
+       0 1 = 1
+       1 0 = 1
+       1 1 = 1
+       0 0 = 0
+
+     a = 10
+     b = 20
+     print(a>20 or b<=21)
+
+  c) not :
+
+        0 = 1
+        1 = 0
+
+     a = 10
+     print(not a > 12 )
+
+
+
+
+ 25-02-2026
+
+
+ 5.Identity operator(is, is not)
+
+     a) is : it operator check to both variable refer to one object or not 
+
+         a = 3
+         b = a
+         print(a is 3)
+
+
+      b) is not : means both objects are different in memory
+     (store variable value in different location so those are not same )
+
+         a = [1,2,3]
+         b = [1,2,3]
+         print (a is not b)
+
+
+      
+     6.Membership operator(in, not in)
+
+
+      a)  in :
+
+       number = [1,2,3,4]
+
+         if 1 in number:
+         print("number is in a string")
+
+
+
+      b)  not in :  
+
+          number = [1,2,3,4]
+
+       if 7 not in number:
+       print("number is not in a string")
+
+
+
+  7.Bitwise opeartor(&, |, ~, ^)
+
+      a)  &  :and(use a truth table)
+
+         a = 5         101
+         b = 3         011
+         print (a & b)
+
+
+     b)  |  : or 
+         a = 5         
+         b = 3        
+         print (a | b)
+                #    (addition of all bits means 4+2+1 = 7)
+
+
+
+     c)   ~   :negation
+
+         a = 5
+         print (~5)
+
+        formula : -(a + 1)
+
+     d)   ^  :xor  (if two bits are differ result get 1 and two bits are same result will be 0)
+         
+          1 ^ 1 = 0
+          0 ^ 0 = 0
+          1 ^ 0 = 1
+          0 ^ 1 = 1
+
+
+         a = 5         
+         b = 3         
+         print (a ^ b)
+                # (answer is 6)
+
+
+    
+
+   26-02-2026
+
+what is conditional Statements ?
+
+     - it is use to make decision in python
+
+
+
+  #  if - elif - else
+
+    # if : if is use to single condition
+        
+        age = 18
+        if age >= 18:
+        print("You are eligible to work in company")
+
+
+
+    # if - else : for the 2 condition
+
+
+           age = int(input("Enter Your age :- "))
+           if age > 18 :  
+              print("you can apply for the company")
+           else:
+             print("you cant apply for the company")
+
+
+
+    # if - else -elif   :(for more then 2 condition)
+
+        marks = int(input("Enter Your Marks :- "))
+
+         if marks > 75 :
+             print("Grade A")
+    
+         elif marks > 50:
+             print("Grade B") 
+    
+          elif marks > 35:
+               print("Grade C")
+    
+          else:
+               print("Fail")
+     
+         - we have use elif condition many times
+
+ 
+
+what is indexing and slicing ?
+
+ Indexing:
+     - fetch sinle element
+
+          There are 2 types:
+
+              # 1.positive indexing 
+              # 2.negative indexing
+
+
+
+     # Positive indexing : start with 0,1,2,...N
+
+
+         ex
+ 
+               0  1 2 3 4 5 6 7 = positive index 
+         num = [1,2,3,4,5,6,7,8] 
+
+         print(num[1])
+
+
+
+     # Negative Indexing
+                   -8 -7 -6 -5 -4 -3 -2 -1  = negative index 
+             num = [1 ,2 ,3 ,4 ,5 ,6 ,7 ,8] 
+ 
+              print(num[-4])
+
+
+
+ Slicing
+          -fetch more tha two elements
+
+        ex 1:-
+
+         num = [11,22,33,44,55,66,77,88] 
+           print(num[2:5])
+                              #(indexing from 2 to 4 )
+
+
+        ex 2:-
+
+           num = [11,22,33,44,55,66,77,88] 
+
+         print(num[   1     :  8       :  2  ])
+                 start value:end value :step value
+
+
+
+ 27-02-2026
+
+what is Data type?
+
+  - data type is a type of variable thet store the value in python
+
+  thre are two types:-
+                       1)primitive
+                       2)non primitive/ collective
+
+    1)primitive :
+
+        a. int - store only integer/whole number (ex. a = 10)
+
+        b.float - store only float (ex.10.00)
+
+        c. string- store text (ex. name ="rahul")
+
+        d.boolean = store true or false
+
+    2)Collective :
+              -store multiple value in one variable
+
+
+        a. list - 
+            -denoted by square brackets[]
+            - empty list denote by :[]
+            - access single elemengt in list
+            - various method use in list:-insert(),remove(),pop(),sort(),etc.
+
+                 ex:list=[1,2,3,4]
+                    list.insert[4,5]
+                     print(list(1))
+
+
+
+         list is:
+          mutable: means we are modified in list,or valuecan be change after creation
+          order  : maintain order in which element are added
+          indexed: have a theire position number start form 0
+          duplicate: same value can be use more times
+         
+
+        b. Dictionary:-
+            -stores values in key–value pairs.
+            -denoted by {}
+            -format {"key" : "value"}
+            -key is a unique that means it not a duplicate
+            -value must be duplicate
+
+          Dictionary is:
+          mutable: means we are modified in list,or valuecan be change after creation
+          order : it is order 
+          duplicate: key-dont allow
+                     value-allow  
+                
+                ex:-
+
+                 student = {"name": "Rahul", "age": 21 }
+                 print(student["name"])  
