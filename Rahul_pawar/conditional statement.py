@@ -1,4 +1,4 @@
-# onditional Statements
+# conditional Statements
 
 #  if - elif - else
 

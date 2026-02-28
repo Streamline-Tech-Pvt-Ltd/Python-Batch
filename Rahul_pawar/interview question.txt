@@ -1,7 +1,8 @@
 1.what is python?
  - Pythgon is programming language often use to build website and software and analyze data
  - Python is an simple,dynamic,interpreter,high level language and programming language
-
+ - it is developed by 1991 by Guido van Russam
+ 
 
 2.Python is dynamic means?
   -python is dynamic mean is does not need to declare variable and their types 
