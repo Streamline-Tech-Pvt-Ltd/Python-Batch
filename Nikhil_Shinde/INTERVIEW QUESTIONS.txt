@@ -1,0 +1,66 @@
+# INTERVIEW QUESTIONS:-
+
+1) What is Python?
+	python is a high level,easy to leran programming language used for web,data,AI,and automation.
+						or
+	Python is an simple,dynamic,interpreted,high level language and general purpose programming language.
+
+	*Simple:- Python is simple because its syntax is easy to read,write and understand.
+
+	*Dynamic:- A dynamic language allows changing variable types at runtime.
+
+	*Interpreted:- An interpreted language executes code line by line.
+
+	*High-level:- A high language is easy for humans easy to read and write.
+
+	*General purpose:- A general-purpose language is used for many types of application.
+
+2) Who developed python?
+	python was developed by Guido van Rossum,a dutch programmer.
+
+3) When was python realesed?
+	python was first released in 1991.
+
+4) What is variable?
+	variable is a one type of container where we can store a value.
+
+5) what is comment?
+	A comment note in the code that is not executed.
+
+		* A single-line comment is written using #.
+
+		* A multi-line comment is written using triple quotes.('''    ''') or ("""    """).
+
+6) Can variable start with a number?
+	No, a variable name cannot start with a number.
+
+7) Can variable start with an underscore?
+	Yes, a variable name can start with an underscore _ .
+
+8) What is indentation of python?
+	Indentation means adding spaces before code to define blocks.
+
+9) Why is indentation important?
+	Indentation defines the structure and grouping of code in python.
+
+10) What does range() do?
+	The range() function generates a sequence of numbers.
+
+11) What is loop?
+	A loop is used to repeat a block of code multiple times.
+
+12) Give an example of a for loop.
+	Example: for i in range(1,6):
+		print(i)
+
+13) What is the use of print()?
+	The print() function displays output on the screen. 
+
+14) What are python keywords?
+	Keywords are reserved words with special meaning in python.
+
+15) How to get pyhton keyword list?
+	By using keyword.kwlist from the keyword module.
+
+16) Can we can rename a module while importing?
+	Yes,we can rename a module using the  as  keyword. 	
