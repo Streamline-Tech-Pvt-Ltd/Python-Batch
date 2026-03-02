@@ -1,0 +1,45 @@
+#Interview Questions:
+
+1. What are comments in Python ? Why are they used ?
+2. What is the difference between single-line and multi-line comments?
+3. How do you write a single-line comment in Python?
+4. How do you write a multi-line comment in Python?
+5. Why is indentation important in Python?
+6. What is a variable?
+7. How do you assign a value to a variable?
+8. Can we store different data types in variables? Give examples.
+9.What are arithmetic operators in Python?
+10.What is the difference between / and //?
+11.What does the exponent (**) operator do?
+12.What is the difference between = and ==?
+13.What does += operator do?
+14.What are comparison operators?
+15.What is the difference between != and ==?
+16.What are logical operators in Python?
+17.When does the and operator return True?
+18.When does the or operator return False?
+19.What does the not operator do?
+20.What are identity operators?
+21.What is the difference between is and ==?
+22.What are membership operators?
+23.What is the purpose of if statement?
+24.What is the difference between if and elif?
+25.When is else executed?
+26.What is the use of break?
+27.What is the difference between break and continue?
+28.What is the purpose of pass?
+29.What is a list in Python?
+30.Are lists mutable or immutable?
+31.What does append() do?
+32.What is the difference between append() and insert()?
+33.What does sort() do?
+34.What does reverse() do?
+35.What does count() do?
+36.How do you find the length of a list?
+37.What is a dictionary?
+38.How are dictionary elements stored?
+39.Can dictionary keys be duplicated?
+40.What does keys() method return?
+41.What does items() method return?
+
+
