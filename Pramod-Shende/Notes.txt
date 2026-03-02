@@ -391,4 +391,149 @@ output:2
 
 
 
+Day 5:27/02/2026
+
+*List:-
+The List is a collection of elements It is written inside square brackets [] and Elements are separated by commas (,).
+
+ex.
+
+	list1 = [10, 20, 30, 40]
+	
+*Mutable: The list can be Changeable after creation.
+*Ordered: It can be maintain the ordered in which element are added.
+*Indexed: Each element has an index number. for positive starting from 0 and for negative indexing starting from -1.
+*Duplicate: In list the Duplicates are allowed.
+
+
+*List Methods:-
+1.append():
+the append() can be adds the elements in the lists end.
+
+ex.
+
+   list1 = [11, 22, 44, 55]
+   list1.append(66)
+   print(list1)
+
+Output: [11, 22, 44, 55, 66]
+
+
+2.insert():
+The insert() can be Adds element at specific position.
+
+ex.
+	list1 = [11, 22, 44, 55]
+	list1.insert(2, 33)
+	print(list1)
+
+Output: [11, 22, 33, 44, 55]
+
+
+3.remove():
+The remove() method can be Removes specific value.
+
+ex.
+	list1 = [11, 22, 33, 44]
+	list1.remove(22)
+	print(list1)
+
+Output: [11, 33, 44]
+
+4.pop():
+The pop() method can be Removes last element by default.
+
+ex.
+
+	list1 = [11, 22, 33, 44]
+	list1.pop()
+	print(list1)
+
+Output: [11, 22, 33]
+
+
+for remove by index use -
+				list1.pop(1)
+
+
+5.sort():
+The sort() method can be Sorts list in ascending order.
+
+ex.
+
+	list1 = [21, 34, 56, 76, 19]
+	list1.sort()
+	print(list1)
+
+Output: [19, 21, 34, 56, 76]
+
+
+6.reverse():
+The reverse() method can be Reverses the list.
+
+ex.
+
+	list1 = [1,2,3,4,5]
+	list1.reverse()
+	print(list1)
+
+output:[5,4,3,2,1]
+
+7.count():
+The count() method Counts how many times a value appears.
+
+ex.
+	list1 = [11, 22, 33, 22, 54, 22]
+	print(list1.count(22))
+
+Output: 3
+
+
+8. len():
+The len() method Returns total number of elements.
+
+ex.
+	list1 = [11, 22, 33, 44]
+	print(len(list1))
+ 
+Output: 4
+
+
+*Dictionary:-
+The Dictionary is a collection of key-value pairs Written inside curly brackets {} .
+Format → "key" : "value"
+
+ex.
+	Student = {
+    	"name": "Krishna",
+    	"age": 21,
+    	"city": "Pune"
+	}
+
+
+*Mutable: The Dictionary can be Changeable after creation.
+*Unordered: The Dictionary does not maintain elements based on index positions like lists.
+*Keys Must Be Unique: Each key in dictionary must be different. If you write duplicate keys, Python will keep the last value and overwrite the previous one.
+*Duplicate: In Dictionary the Duplicates are allowed.
+
+
+*Dictionary Method:-
+1.keys():
+	print(Student.keys())
+
+2. values():
+	print(Student.values())
+
+3. items():
+The items() can be Returns key-value pairs.
+ex.
+	Student = {
+   	 "name": "Krishna",
+   	 "age": 21,
+    	"city": "Pune"
+	}
+print(Student.items())
+
+output:dict_items([('name', 'Krishna'), ('age', 21), ('city', 'Pune')])
+
 
