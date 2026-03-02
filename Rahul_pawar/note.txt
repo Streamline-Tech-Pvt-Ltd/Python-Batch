@@ -408,3 +408,5 @@ what is Data type?
 
                  student = {"name": "Rahul", "age": 21 }
                  print(student["name"])  
+
+  2-03-2026               
