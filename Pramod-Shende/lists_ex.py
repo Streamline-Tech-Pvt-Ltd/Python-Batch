@@ -52,4 +52,4 @@ i = [100, [200, [300, 400], 500], 600]
 print(i[1][1][0])
 #o/p-300
 
-#examples are completed.. 
+#examples are completed..

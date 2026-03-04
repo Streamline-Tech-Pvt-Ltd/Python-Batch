@@ -534,6 +534,289 @@ ex.
 	}
 print(Student.items())
 
-output:dict_items([('name', 'Krishna'), ('age', 21), ('city', 'Pune')])
+output: dict_items([('name', 'Krishna'), ('age', 21), ('city', 'Pune')])
+
+
+Day 6: 02/03/2026
+
+
+*set:-
+A set is a collection of unique elements.
+Properties of Set:
+
+*Mutable (can modify)
+*Unordered (no fixed position)
+*Duplicates not allowed
+*Indexing not allowed
+
+ex.
+	set1 = {1,2,3,4,5}
+
+*Set Methods:
+1.remove():
+it removes a specific element.
+
+ex.	
+	set1 = {1,2,3,4,5}
+	set1.remove(2)
+
+output: {1,3,4,5}
+
+2.pop():
+it removes a random element (because set is unordered).
+
+ex.
+	set1 = {1,2,3,4,5}
+	set1.pop()
+
+output: {} # empty set..
+
+
+3.clear():
+it removes all elements.
+
+ex.
+	set1 = {1,2,3,4,5}
+	set1.clear()
+
+output: #it clear all elements from the list.
+
+4.copy():
+it returns a copy of set.
+
+ex.
+	set1 = {1,2,3,4,5}
+	print(set1.copy())
+
+output: {1,2,3,4,5} #it gives as it is copy of the set
+
+
+
+*type() and id() Function:-
+
+1.type():
+it returns the datatype of variable.
+ex.
+	num1=5
+	print(type(num1))
+
+output: <class 'int'>
+
+2.id():
+it returns memory address (unique identity) of object. id() shows memory location
+ex.
+	num2=10
+	print(id(num2))
+
+output: 139919916745704 #it provides the unique identification number for addressing .
+
+Every object in Python has unique ID in memory.
+
+Example:
+
+num1 = 1234567890      # int
+num2 = 1234567891.4225 # float
+
+
+*Tuple :-
+the tuple is a collection of elements inside ().
+ex.
+
+	tuple1 = (1,2,3,4,5)
+	print(tuple1)
+
+output: (1,2,3,4,5)
+
+Properties:
+*Immutable (cannot modify)
+*Ordered
+*Duplicates allowed
+*Indexing allowed
+
+
+*Tuple Methods:
+1.count():
+it can be counts the elements.
+ex.
+	tuple2 = (1,2,3,3,4,4)
+	print(tuple2.count(4))  
+
+output: 2
+
+2.index():
+it returns position of element.
+ex.
+	print(tuple2.index(2))  
+
+output:1
+
+*frozenset():
+the frozenset is an immutable version of set.
+
+ex.
+	num = frozenset([1,2,3,4])
+	print(type(num))  
+
+output: <class 'frozenset'>
+
+
+Properties:
+*Immutable
+*Unordered
+*No duplicates
+*No add/remove allowed
+
+
+*List extend() Method:-
+1.extend():
+it adds elements of one list into another list.
+ex.
+	list2 = [1,2,3,5]
+	list1 = [4,5]
+	list2.extend(list1)
+
+Output:[1,2,3,5,4,5]
+
+2range() Function:
+Syntax:
+range(start, stop, step)
+
+Example:
+
+	for numm in range(1,101,3):
+ 	   print(numm)
+
+Meaning:
+Start = 1
+Stop = 101 (not included)
+Step = 3
+
+Output: 1, 4, 7, 10, ... #Prints numbers from 1 to 100 with difference of 3.
+
+
+
+Day 7: 04/03/2026
+
+Function:-
+
+*What is Function?
+A function is a block of code that runs only when it is called.
+It helps:
+1.Avoid repetition
+2.Make code reusable
+3.Make program organized
+
+syntax:
+	
+	def function_name(parameters):   # Function Definition
+    		# function block / logic
+    		return value
+
+	variable = function_name(arguments)  # Function Calling
+
+
+ex.
+	def addition(num1, num2):
+   	    return num1 + num2
+
+	print(addition(10,20))
+	print(addition(30,40))
+	print(addition(50,60))
+	print(addition(70,80))
+
+
+*Scope in Python:-
+Scope means where a variable can be accessed.
+
+*Types of Scope:
+1. Global Scope:
+the global scope Declared outside function.
+ex.
+age = 23  # Global variable
+Accessible everywhere in program.
+
+2. Local Scope:
+the local scope Declared inside function.
+ex.
+	def main():
+	   name = "Krishna"  # Local variable
+
+Accessible only inside that function.
+
+*Namespaces in Python:
+Namespace : A place where variable names are stored.
+
+*Types:
+1. Built-in Namespace:
+Examples: print(), len(), type()
+
+2.Global Namespace:
+ex.
+	x = 5
+
+3. Local Namespace:
+ex.
+	def main():
+    		   x = 5
+
+4. Enclosing Namespace (Nested Function):
+ex.
+
+	def function1():
+    		   x = 5   # Enclosing namespace
+
+    		def function2():
+       		    y = 10
+      		print(y)
+
+    			function2()
+  		print(x)
+	function1()
+
+output:
+10
+5
+
+*Arguments in Python:
+Argument: Actual value passed to function.
+
+*Types of Arguments:-
+1.Positional Argument:
+Order matters.
+ex.
+	def student(name, rollno, age):
+   		   return f"My name is {name}. My roll no is {rollno} & my age is {age}"
+
+	print(student("Pramod", 12, 21))
+
+2.Keyword Argument:
+the Order does NOT matter.
+ex.
+	def student(name, rollno):
+    		   return f"My name is {name}. My roll no is {rollno}"
+
+	print(student(rollno=12, name="Pramod"))
+
+3.Default Argument:
+the Default value is given in function definition.
+ex.
+	def student(name, age=21):
+    		   return f"My name is {name}. My age is {age}"
+	print(student("Pramod", 23))
+
+If age not passed:
+
+	print(student("Pramod"))
+
+Output:  My name is Pramod. My age is 21
+
+
+
+
+
+
+
+
+
 
 
