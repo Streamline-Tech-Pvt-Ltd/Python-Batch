@@ -1,0 +1,82 @@
+Day 8: 14/03/2026
+
+*Higher Order Functions in Python:-
+A Higher Order Function is a function that Takes another function as an argument, or Returns a function as output.
+ 
+ ex.
+
+1. filter():-
+filter() is used to select elements from a list based on a condition. filter() returns only those elements that satisfy the condition.
+
+
+ex.
+    marks = [35,45,47,68,75,85,95]
+
+    def fail_students(score):
+        return score > 70
+        result = filter(fail_students, marks)
+    print(list(result))
+
+Output:[75, 85, 95]
+
+
+2. map():
+map() is used to apply a function to every element of a list.
+
+ex.
+marks = [35,45,47,68,75,85,89,95,92]
+
+def grade(marks):
+    if marks > 90:
+        return "Grade A"
+    elif marks > 80:
+        return "Grade B"
+    elif marks > 70:
+        return "Grade C"
+    else:
+        return "Fail Students"
+
+grd = map(grade, marks)
+print(list(grd))
+
+Output:['Fail Students', 'Fail Students', 'Fail Students', 'Fail Students', 'Grade C', 'Grade B', 'Grade B', 'Grade A', 'Grade A']
+
+3. reduce():
+reduce() is used to apply a function cumulatively to all elements of a list and return a single value.
+It is available in the functools module.
+
+ex.
+from functools import reduce
+from operator import add
+
+marks = [35,45,47,68,75,85,89,95,92]
+
+result = reduce(add, marks)
+print(result)
+
+Output: 631 #reduce() performs addition step by step
+
+*Difference Between filter(), map(), and reduce():-
+
+1.filter() Select elements based on condition	Filtered list
+2.map()	Apply function to every element	Modified list
+3.reduce() Combine all elements into single value	Single result
+
+Day 9: 16/03/2026
+
+*What is OOP?:
+Object Oriented Programming (OOP) is a programming approach used to organize and design code using objects.
+Objects represent real-world entities like a student, car, mobile, etc.
+
+*Class in Python:
+A Class is a blueprint or template used to create objects.
+It defines:
+Attributes (data)
+Methods (functions)
+Class is created using the class keyword.
+
+ex.
+    class Student:
+    name = "Pramod"
+    age = 21
+

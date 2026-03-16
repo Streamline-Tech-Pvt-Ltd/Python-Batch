@@ -41,3 +41,4 @@ print("Student IDs after clearing:", stud_id)
 snames = ["saras", "rushikesh", "rahul", "rohan", "yogesh", "saras", "rushikesh"]
 unique_student_names = set(snames)
 print("Unique student names:", unique_student_names)
+
