@@ -64,3 +64,90 @@
 
 16) Can we can rename a module while importing?
 	Yes,we can rename a module using the  as  keyword. 	
+
+17.what is assignment operator?
+  - it used to aasign values to variable.
+
+18.which operators are used assignment operators?
+  - =,+=, -=, *=,/=, and all arithmetic operators are used
+
+19.what is logical operator?
+  -logical operator combine two or more conditions
+
+20.which type of opereation performs the logical operators?
+  -they perform a logical opereation on the condition,they work on true or false values
+
+21.What are Identity Operators?
+  -Identity operators check whether two variables refer to the same object in memory.
+
+22.which operators are used in identity operators?
+  - 'is' and 'is not'
+
+23.what is membership operator?
+  - Membership operators are used to check whether a value exists in a sequence like a
+   list, tuple, string, set, or dictionary.
+
+24.What does the in operator do?
+  -The in operator checks if a value is present in a sequence. 
+  It returns True if the value exists.
+
+25.What does the not in operator do?
+  -The not in operator checks if a value is not present in a sequence. 
+  It returns True if the value does not exist.
+
+26.In which data types can membership operators be used?
+   -Membership operators can be used with:
+  List,Tuple,String,Set,Dictionary
+
+27.What are Bitwise Operators in Python?
+  -Bitwise operators are used to perform operations on binary numbers (bits).
+
+
+28.What is the Bitwise AND (&) operator?
+  -It returns 1 if both bits are 1, otherwise 0.
+
+29.What is the Bitwise NOT (~) operator?
+  -It inverts all bits of a number.
+
+30.what is formula use in negation of bitwise operators?
+  -~n = -(n + 1)
+
+31.What is indexing ?
+  -Indexing is used to access a specific element from a sequence
+
+32.What types of indexing are available in Python?
+ -There are two types of indexing:
+   Positive Indexing – starts from 0 from the beginning.
+   Negative Indexing – starts from -1 from the end.
+
+33.Can indexing modify list elements? How?
+  -Yes, indexing can be used to change list values.
+  Example:a = [10, 20, 30]
+          a[1] = 50
+          print(a)
+
+34.What is the difference between indexing and slicing?
+  -Indexing                	Slicing
+ Access single element	   Access multiple elements
+ Uses one index	         Uses start:stop:step
+
+
+35.What is slicing ?
+ -Slicing is used to extract a part of a sequence 
+ -syntax : sequence[start : stop : step]
+
+
+36.In which data types can slicing be used?
+  -Slicing can be used in: String ,List ,Tuple
+
+37.What happens if stop index is not given?
+  -Python will slice until the end of the sequence.
+
+
+38.What is step in slicing?
+  -Step defines how many positions to skip while selecting elements.
+
+39.How do you reverse a string using slicing?
+  -text = "Python"
+   print(text[::-1])    using this program
+
