@@ -80,3 +80,235 @@ ex.
     name = "Pramod"
     age = 21
 
+
+Day 10:17/03/2026
+
+*Inheritance :-
+
+Inheritance is a feature of Object-Oriented Programming (OOP) where one class (child) gets properties and methods from another class (parent).
+
+Parent Class (Base Class) → Gives properties
+Child Class (Derived Class) → Uses those properties
+
+ Benefit: Code reuse, less duplication, better structure
+
+ 1. Single Inheritance
+ One child class inherits from one parent class.
+
+ex.
+	class Parent:
+   	 name = "rahul"
+    
+    def property(self):
+        return "parent property"
+
+class Child(Parent):
+    def education(self):
+        return "education pursuing"
+
+	obj = Child()
+	print(obj.education())
+	print(obj.property())
+	print(obj.name)
+
+Key Point: Child can access both its own and parent’s data.
+
+ 2. Multiple Inheritance
+ One child class inherits from more than one parent class.
+
+ex.
+	class Father:
+  	  def property(self):
+              return "Father property"
+
+	class Mother:
+  	  def property1(self):
+  	      return "mother property"
+
+	class Child(Father, Mother):
+   	 def education(self):
+  	      return "education pursuing"
+
+		obj = Child()
+	print(obj.property())
+	print(obj.property1())
+
+ Key Point: Child gets features from multiple classes.
+
+ 3. Multilevel Inheritance
+ Inheritance chain (Grandparent → Parent → Child)
+
+ex.
+	class GrandFather:
+   	 name = "rahul"
+    
+  	  def property(self):
+      	  return "GrandFather property"
+
+	class Father(GrandFather):
+  	  def property1(self):
+  	      return "Father property"
+
+	class Child(Father):
+	    def education(self):
+  	      return "education pursuing"
+
+	obj = Child()
+	print(obj.name)
+
+ Key Point: Child can access all levels.
+
+ 4. Hierarchical Inheritance
+ One parent → Multiple child classes
+
+ex.
+ class Father:
+    def property(self):
+        return "Father property"
+
+class Son1(Father):
+    def education1(self):
+        return "Son1 property"
+
+class Son2(Father):
+    def education2(self):
+        return "Son2 property"
+
+obj1 = Son1()
+print(obj1.education1())
+
+ Key Point: Same parent shared by multiple children.
+
+ 5. Hybrid Inheritance
+ Combination of multiple types of inheritance.
+
+ex.
+
+class Family:
+    def member(self):
+        return "family member"
+
+class Father(Family):
+    def dad(self):
+        return "DAD"
+
+class Son1(Father):
+    def boy1(self):
+        return "BOY 1"
+
+class Son2(Father, Family):
+    def boy2(self):
+        return "BOY 2"
+
+obj = Son2()
+print(obj.boy2())
+
+obj1 = Son1()
+print(obj1.boy1())
+print(obj1.dad())
+print(obj1.member())
+
+print(Son2.mro())
+
+*MRO (Method Resolution Order):-
+ Defines the order in which Python searches for methods in inheritance.
+
+ print(Son2.mro())
+
+ Output example:
+	[Son2, Father, Family, object]
+
+Day 11:19/03/2026
+
+* Decorator:-
+ A decorator is a function that wraps another function to extend or modify its behavior without changing its actual code.
+ It is denoted by @ symbol.
+
+ex.
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
+
+
+*Abstraction :-
+ Abstraction means hiding internal implementation details and showing only essential features to the user. 
+ Abstraction is the process of hiding internal details and showing only essential features.
+
+
+ Real-Life Example
+
+*Banking System
+ User can see:
+
+Registration
+Account creation
+Payment
+Transaction
+
+User cannot see:
+
+Backend logic
+Database operations
+
+#Modules (Example Based):
+User Module
+Registration
+Attendance
+Payment Gateway
+Feedback
+Admin Module
+CRUD Operations
+Database Module
+Data storage
+
+Q. How to Achieve Abstraction in Python?
+=>
+
+Using:
+ABC (Abstract Base Class)
+@abstractmethod
+
+Syntax:
+from abc import ABC, abstractmethod
+
+class ClassName(ABC):
+
+    @abstractmethod
+    def method_name(self):
+        pass
+Example (Bank System):
+from abc import ABC, abstractmethod
+
+class RBI(ABC):
+
+    @abstractmethod
+    def registration(self):
+        pass
+
+    @abstractmethod
+    def account(self):
+        pass
+
+Child Class Implementation
+class SBI(RBI):
+
+    def registration(self):
+        return "Registration complete"
+
+    def account(self):
+        return "Account created"
+
+Object Creation
+obj = SBI()
+print(obj.registration())
+
