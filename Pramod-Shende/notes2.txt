@@ -58,9 +58,9 @@ Output: 631 #reduce() performs addition step by step
 
 *Difference Between filter(), map(), and reduce():-
 
-1.filter() Select elements based on condition	Filtered list
-2.map()	Apply function to every element	Modified list
-3.reduce() Combine all elements into single value	Single result
+1.filter():     Select elements based on condition	Filtered list.
+2.map():	    Apply function to every element	Modified list.
+3.reduce():     Combine all elements into single value	Single result.
 
 Day 9: 16/03/2026
 
@@ -311,4 +311,159 @@ class SBI(RBI):
 Object Creation
 obj = SBI()
 print(obj.registration())
+
+Day 12: 23/03/2026
+
+* Encapsulation :-
+Encapsulation = Data Binding + Data Hiding
+It means:
+Wrapping data (variables) and methods (functions) into a single unit (class)
+Restricting direct access to some data.
+
+it use private variables (__) to hide data and Use getter/setter to control access.
+It Improves security and control.
+
+
+Q. What is Encapsulation?
+=> Protects data from unwanted changes, Improves security and Makes code more controlled and maintainable.
+
+* Access Specifiers in Python:-
+
+    Type	             Syntax	           Access Level
+
+    1.Public	          name	           Accessible everywhere
+    2.Protected	         _name	           Accessible but should be used carefully
+    3.Private	         __name	           Not directly accessible outside class
+
+
+ex.
+class Employee:
+    def __init__(self,name,role,salary,age):
+        self.name = name        # public
+        self._role = role       # protected
+        self.__salary = salary  # private
+        self.age = age          # public
+
+*Getter and Setter :-
+ 1.Getter Method:
+    Used to read private data
+
+ex.
+
+def get_salary(self):
+    return self.__salary
+
+2.Setter Method:
+Used to update private data with conditions
+
+def set_salary(self, sal):
+    if sal >= 50000:
+        self.__salary = sal
+    else:
+        print("Invalid salary")
+
+obj = Employee("pramod","Full stack python developer",50000,21)
+print("Original salary:", obj.get_salary())
+obj.set_salary(40000)
+print("Updated salary:", obj.get_salary())
+
+Output:
+Original salary: 50000
+Invalid salary
+Updated salary: 50000
+
+Q. Why __salary is not directly accessible?
+=> (__salary) is not directly accessible because it is declared as a private variable using double underscore (__).
+    In Python, private variables are name-mangled to protect them from direct access outside the class.
+
+Day 13: 24/03/2026
+
+* Polymorphism :-
+Polymorphism = One name, many forms.
+It means the same function/method behaves differently depending on the situation.
+
+Python supports polymorphism mainly through overriding
+Overloading is achieved using:
+Default arguments : *args
+Overriding requires inheritance
+it Helps in code reusability and flexibility
+
+# Types of Polymorphism:-
+
+1) Compile-Time Polymorphism (Method Overloading):-
+    Same method name with different parameters and it Decided at compile time.
+    Python does NOT support method overloading
+
+# How we achieve it in Python?
+=> Using Default Arguments
+
+ex.
+def add(a, b, c=0):
+    return a + b + c
+print(add(2, 3))       # Output: 5
+print(add(2, 3, 10))   # Output: 15
+
+2) Run-Time Polymorphism (Method Overriding):-
+    Same method name in parent and child class Child class changes the behavior and it Decided at runtime
+    Fully supported in Python
+    
+    ex.
+
+class Person:
+    def age(self):
+        print("this is the age of person")
+
+class Student(Person):
+    def age(self):
+        return "this is the age of Student"
+
+class Leader(Person):
+    def age(self):
+        return "this is the age of leader"
+
+class Employee(Person):
+    def age(self):
+        return "this is the age of employee"
+
+class Hr(Person):
+    def age(self):
+        return "this is the age of HR"
+
+
+obj1 = Student()
+print(obj1.age())
+
+obj2 = Leader()
+print(obj2.age())
+
+obj3 = Employee()
+print(obj3.age())
+
+obj4 = Hr()
+print(obj4.age())
+
+ Output:-
+this is the age of Student
+this is the age of leader
+this is the age of employee
+this is the age of HR
+
+* Explanation :-
+All classes inherit from Person
+Each class overrides the age() method
+Same method name → different outputs → polymorphism
+
+* Difference between overriding and overloading:-
+
+Parameter	         Method Overloading	              Method Overriding
+    
+Method Name :        	    Same	                            Same
+Parameters   :       	    Different	                        Same
+Inheritance	  :             Not required	                    Required
+Time           :     	    Compile Time	                    Runtime
+Python Support	:           Not directly supported	            Supported
+Concept Type	 :          Functional Programming style	    OOP concepts
+
+
+
 
