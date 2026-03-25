@@ -237,6 +237,108 @@
 54. What is an Argument?
 =>	An argument is the actual value passed to a function.
 
+55. What is OOP?
+=> Object-Oriented Programming (OOP) is a programming paradigm that organizes code using classes and objects.
+	It helps in:
+	Structuring programs
+	Reusing code
+	Managing complexity
+   In OOP, data and functions are combined into a single unit called a class.
 
+56. What are the 4 pillars of OOP?
+=> in the oops their are 4 pillers :-
+1. Encapsulation:
+Binding data and methods together and restricting access.
 
+2. Inheritance:
+Acquiring properties from another class.
 
+3. Polymorphism:
+One method behaving in multiple ways.
+
+4. Abstraction:
+Hiding internal details and showing only important features.
+
+57. What is Inheritance?
+=> Inheritance is a mechanism where a child class acquires properties and methods of a parent class.
+   It promotes:
+   Code reuse
+   Less duplication
+   Better structure
+
+58. How many Types of Inheritance?
+=>
+Single
+Multiple
+Multilevel
+Hierarchical
+Hybrid
+
+59. What is MRO?
+=> MRO (Method Resolution Order) defines the order in which Python searches for methods in inheritance.
+   It is important in multiple inheritance to avoid confusion.
+
+60.What is super()?
+=> super() is used to call methods of the parent class.
+   It helps avoid rewriting parent code and supports inheritance.
+
+61. What is Encapsulation?
+=> Encapsulation means binding data and methods into a single unit and restricting direct access to data.
+   It improves:
+   Security
+   Control
+	Data protection
+
+62. What are access specifiers?
+=>Access specifiers are used to control the visibility and accessibility of variables and methods in a class.
+  In simple words:
+  They decide where and how data can be accessed.
+
+63.Why use private variables?
+=> To protect sensitive data and avoid direct modification.
+
+64. What are Getter and Setter?
+=> Getter Used to read private data and Setter Used to update private data with conditions, 
+	They provide controlled access to variables.
+
+65. What is Polymorphism?
+=> Polymorphism means one method can behave in different ways depending on the object.
+   It improves flexibility and reusability.
+
+66. How many Types of Polymorphism?
+=> They have 2 types of polymorphism:
+	1. Compile-Time (Overloading)
+		Same method name, different parameters and Not directly supported in Python
+	Achieved using Default arguments : *args .
+
+	2. Run-Time (Overriding)
+	Same method in parent and child class and Child modifies behavior it is Supported in Python
+
+67. What is Abstraction?
+=> Abstraction means hiding internal implementation details and showing only essential features.
+   ex.
+   		ATM → You can withdraw money But you don’t see backend process
+
+68. How to achieve abstraction in Python?
+=> Using: ABC (Abstract Base Class)
+	@abstractmethod
+
+69.Can we create object of abstract class?
+=> No, we cannot create an object of an abstract class because it contains incomplete methods.
+	We must create a child class and implement those methods to instantiate an object.
+
+70. What is a Decorator?
+=> A decorator is a function that modifies another function without changing its code.
+	 It is written using @ symbol.
+
+71. Why use decorators?
+=> we can use for Code reuse, Add extra functionality, Logging, authentication and validation
+
+72. What is Class and Object?
+=> Class is Blueprint for creating objects and Object is Instance of class
+	ex.
+	Class → Car
+	Object → BMW, Audi
+
+73. Why OOP is important?
+=> because we can use for code Reusability, Maintainability, Security, Scalability
