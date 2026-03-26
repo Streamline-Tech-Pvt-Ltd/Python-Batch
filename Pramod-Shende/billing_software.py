@@ -48,14 +48,18 @@ while True:
         break
         
         
-        
     if choice in items:
         user_quantiy = int(input("Enter Quantity :"))
+
+    if choice in items_key:
+        
+        index = items_key.index(choice)
+        qunatity[index] += user_quantiy
+        
+    else:
         items_key.append(choice)
         qunatity.append(user_quantiy)
-        print("Item added sucessfully")
-    else:
-        print("invalid choice")
+        print("Item added successfully")
             
 
 print("=" * 149)
