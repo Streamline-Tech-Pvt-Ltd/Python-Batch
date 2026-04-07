@@ -1,0 +1,37 @@
+.container{
+background-color:aqua;
+height:70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+}
+
+.logo img{
+background-color: blue;
+height:70px;
+width:70px;
+position: fixed;
+}
+
+.logo h1{
+margin-left:80px;
+}
+.nav{
+list-style:none;
+display:flex;
+}
+
+.nav li{
+margin-right:100px;
+}
+
+.img1,img{
+height: 90%;
+width: 100%;
+
+}
