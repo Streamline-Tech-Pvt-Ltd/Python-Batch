@@ -1,0 +1,344 @@
+#Interview Questions:
+
+1. What are comments in Python ? Why are they used ?
+
+=>	Comments are lines that completely ignores when running the code. We write them to explain what the code is doing. They help us to understand the code later.
+
+2. What is the difference between single-line and multi-line comments?
+=>	Single-line comment means only one line and define with '#' and Multi-line comment means many lines at once and define with (""" """ or ''' ''')
+
+3. How do you write a single-line comment in Python?
+=>	Just put # at the beginning of the line.
+
+4. How do you write a multi-line comment in Python?
+=>	use triple quotes (''' or """)  this is actually a multi-line string, but Python ignores it if we don’t assign it to any variable.
+
+5. Why is indentation important in Python?
+=>	In Python indentation is spaces or tabs that decides which code belongs to which block.
+
+6. What is a variable?
+=>	A variable is like a named box where we store some value like number, text, list. We give it a name so we can use it later.
+
+7. How do you assign a value to a variable?
+=>	Using = sign
+	ex. age = 18
+
+8. Can we store different data types in variables? Give examples.
+=>	Yes! Python is very flexible.
+
+	marks = 89          # integer
+	percentage = 92.5   # float
+	subject = "Math"    # string
+	passed = True       # boolean
+	friends = ["Saras", "rushikesh", "pramod"]   # list
+
+9.What are arithmetic operators in Python?
+=>	the arithmetic operators can be help to solve the mathematical problems through the progamming.
+
+10.What is the difference between / and //?
+=>	/ means normal division gives float answer and // means floor division gives integer (cuts off decimal part)
+
+12.What is the difference between = and ==?
+=>	' = ' assignment put value into variable and ' == ' compares the two statements are equal or not.
+
+13.What does += operator do?
+=>	It adds the variable and updates it.
+
+14.What are comparison operators?
+=>	They compare two values and give True or False.
+
+15.What is the difference between != and ==?
+=>	== checks if values are the same → True if equal
+	!= checks if values are different → True if NOT equal
+
+16.What are logical operators in Python?
+=>	They combine multiple conditions like and , or , not.
+
+17.When does the and operator return True?
+=>	Only when BOTH conditions are True
+
+18.When does the or operator return False?
+=>	Only when BOTH conditions are False
+
+
+19.What does the not operator do?
+=>	It reverses the boolean value like true or false.
+
+
+20.What are identity operators?
+=>	They check if two variables point to the exact same object in memory not just same value .
+
+	
+21.What are membership operators?
+=>	Check if something is inside a list, string , tuple, etc.
+	fruits = ["apple", "banana", "cherry"]
+	print("banana" in fruits)      # True
+	print("mango" not in fruits)   # True
+
+22.What is the purpose of if statement?
+=>	To runs the code only when if a condition is True.
+
+23.What is the difference between if and elif?
+=>	if checks first condition we check and elif checks "else if"  we check only if previous if , elif was False We can have many elifs.
+
+24.What is the use of break?
+=>	It immediately stops the loop (for or while) and jumps out of it.
+
+25.What is the difference between break and continue?
+=>	break is completely exit the loop and continue is skip execution and turn go to next iteration
+
+26.What is the purpose of pass?
+=>	It’s a "do nothing" statement. Used when Python needs a statement but we don’t want to write code yet.
+
+27.What is a list in Python?
+=>	A list is an ordered collection of items. You can put anything inside: numbers, strings, other lists
+
+28.Are lists mutable or immutable?
+=>	The List is mutable we can change them after creating , add, remove, modify the items.
+
+29.What does append() do?
+=>	Adds one new item at end of the list.
+	ex.
+		games = ["cricket", "football"]
+		games.append("chess")
+		print(games)
+		#o/p:- games: ["cricket", "football", "chess"]
+
+30.What is the difference between append() and insert()?
+=>	append() → adds at the end
+	insert() → adds at specific position
+
+	ex.
+		colors = ["red", "blue"]
+		colors.insert(1, "green")   # insert at index 1
+		# o/p:- colors: ["red", "green", "blue"]
+
+31.What does sort() do?
+=>	Sorts the list in ascending order (small -> big / A -> Z). Changes the original list.
+
+32.What does reverse() do?
+=>	Reverses the order of items in the list. it also changes the original list.
+
+33.What does count() do?
+=>	Tells how many times an item appears in the list.
+	ex.
+
+		num = [1, 4, 2, 4, 7, 4]
+		print(num.count(4))  #3 times 
+		o/p:- 3 
+
+34.How do you find the length of a list?
+=>Use len() function to display the length. 
+	ex.
+		friends = ["saras", "rushikesh", "yogesh", "pramod"]
+		print(len(friends))  
+		o/p:- 4
+
+36.What is a dictionary?
+=>	A dictionary can stores the data in key: value pairs.
+
+37.How are dictionary elements stored?
+=>	we can store the multiple elements in dictionary but it must be require unique key value for every single element.
+
+38.Can dictionary keys be duplicated?
+=>	No. If you try to add same key again, it overwrites the old value.
+
+49.What does keys() method return?
+=>	Returns all the keys of the dictionary as a view object.
+	ex. 
+		student = {"name":" pramod", "age":22, "class":"M.Scs(cs)"}
+			print(student.keys())  
+		 #o/p:-  dict_keys(['name', 'age', 'class'])
+	
+
+40.What does items() method return?
+=>	Returns all key-value pairs as tuples (like a view of pairs).
+	ex.
+		Pythonprint(student.items())
+	#o/p:- dict_items([('name', 'pramod'), ('age', 22), ('class', 'M.Sc(cs)')])
+
+41. What is a Set in Python?
+=> A set is a collection of unique elements in Python. It is written using curly braces {}.
+	ex.
+		set1 = {1,2,3,4,5}
+		print(set1)
+
+42.What does remove() method do in a Set?
+=>	The remove() method deletes a specific element from a set.
+		ex.
+			set1 = {1,2,3,4,5}
+			set1.remove(2)
+			print(set1)
+
+43. What does pop() method do in a Set?
+=>	The pop() method removes a random element from a set because sets are unordered.
+	ex.
+		set1 = {1,2,3,4,5}
+		set1.pop()
+		print(set1)
+
+44. What does clear() method do?
+=>	The clear() method removes all elements from the set.
+	ex.
+		set1 = {1,2,3,4,5}
+		set1.clear()
+		print(set1)
+
+45. What is type() function?
+=>	The type() function returns the datatype of a variable.
+	ex.
+		num1 = 5
+		print(type(num1))
+
+46. 8. What is id() function?
+=>	The id() function returns the unique memory address of an object.
+		ex.
+			num2 = 10
+			print(id(num2))
+
+47. What is a Tuple?
+=>	A tuple is a collection of elements stored inside parentheses ().
+		ex.
+			tuple1 = (1,2,3,4,5)
+			print(tuple1)
+
+48. What is Frozenset?
+=>	A frozenset is an immutable version of a set.
+		ex.
+			num = frozenset([1,2,3,4])
+			print(type(num))
+
+49. What does extend() method do?
+=>	The extend() method adds elements of one list into another list.
+	ex.
+		list2 = [1,2,3,5]
+		list1 = [4,5]
+		list2.extend(list1)
+		print(list2)
+
+
+50. What is a Function?
+=>	A function is a block of code that runs when it is called and it defines with def keyword.
+
+51. What is Global Scope?
+=>	A global variable is declared outside the function and it can be accessed anywhere.
+		ex.
+			 age = 18
+
+52. What is Local Scope?
+=>	A local variable is declared inside a function and can only be accessed within that function.
+		ex.
+			def main():
+   				name = "Krishna"
+
+53. What is Namespace?
+=> A namespace is a place where variable names are stored.
+
+54. What is an Argument?
+=>	An argument is the actual value passed to a function.
+
+55. What is OOP?
+=> Object-Oriented Programming (OOP) is a programming paradigm that organizes code using classes and objects.
+	It helps in:
+	Structuring programs
+	Reusing code
+	Managing complexity
+   In OOP, data and functions are combined into a single unit called a class.
+
+56. What are the 4 pillars of OOP?
+=> in the oops their are 4 pillers :-
+1. Encapsulation:
+Binding data and methods together and restricting access.
+
+2. Inheritance:
+Acquiring properties from another class.
+
+3. Polymorphism:
+One method behaving in multiple ways.
+
+4. Abstraction:
+Hiding internal details and showing only important features.
+
+57. What is Inheritance?
+=> Inheritance is a mechanism where a child class acquires properties and methods of a parent class.
+   It promotes:
+   Code reuse
+   Less duplication
+   Better structure
+
+58. How many Types of Inheritance?
+=>
+Single
+Multiple
+Multilevel
+Hierarchical
+Hybrid
+
+59. What is MRO?
+=> MRO (Method Resolution Order) defines the order in which Python searches for methods in inheritance.
+   It is important in multiple inheritance to avoid confusion.
+
+60.What is super()?
+=> super() is used to call methods of the parent class.
+   It helps avoid rewriting parent code and supports inheritance.
+
+61. What is Encapsulation?
+=> Encapsulation means binding data and methods into a single unit and restricting direct access to data.
+   It improves:
+   Security
+   Control
+	Data protection
+
+62. What are access specifiers?
+=>Access specifiers are used to control the visibility and accessibility of variables and methods in a class.
+  In simple words:
+  They decide where and how data can be accessed.
+
+63.Why use private variables?
+=> To protect sensitive data and avoid direct modification.
+
+64. What are Getter and Setter?
+=> Getter Used to read private data and Setter Used to update private data with conditions, 
+	They provide controlled access to variables.
+
+65. What is Polymorphism?
+=> Polymorphism means one method can behave in different ways depending on the object.
+   It improves flexibility and reusability.
+
+66. How many Types of Polymorphism?
+=> They have 2 types of polymorphism:
+	1. Compile-Time (Overloading)
+		Same method name, different parameters and Not directly supported in Python
+	Achieved using Default arguments : *args .
+
+	2. Run-Time (Overriding)
+	Same method in parent and child class and Child modifies behavior it is Supported in Python
+
+67. What is Abstraction?
+=> Abstraction means hiding internal implementation details and showing only essential features.
+   ex.
+   		ATM → You can withdraw money But you don’t see backend process
+
+68. How to achieve abstraction in Python?
+=> Using: ABC (Abstract Base Class)
+	@abstractmethod
+
+69.Can we create object of abstract class?
+=> No, we cannot create an object of an abstract class because it contains incomplete methods.
+	We must create a child class and implement those methods to instantiate an object.
+
+70. What is a Decorator?
+=> A decorator is a function that modifies another function without changing its code.
+	 It is written using @ symbol.
+
+71. Why use decorators?
+=> we can use for Code reuse, Add extra functionality, Logging, authentication and validation
+
+72. What is Class and Object?
+=> Class is Blueprint for creating objects and Object is Instance of class
+	ex.
+	Class → Car
+	Object → BMW, Audi
+
+73. Why OOP is important?
+=> because we can use for code Reusability, Maintainability, Security, Scalability

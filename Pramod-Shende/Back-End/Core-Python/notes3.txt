@@ -1,0 +1,94 @@
+*Exception Handling in Python :-
+    an exception handling is Used for Closing files,Database connections,Cleanup tasks.
+
+Q. What is an Exception?
+=> An exception is an abnormal condition or error that occurs during the execution of a program,
+ which disrupts the normal flow. In simple words when your program crashes due to an error → that is an exception
+
+#Why Exception Handling is Important?
+    Prevents program from crashing , Maintains normal flow of program ,Helps handle errors gracefully,Improves user experience
+
+* Types of Errors :-
+1.Syntax Errors:
+it can be occurred when due to wrong syntax and Detected before execution
+ex.
+    print("Hello
+
+
+2.Runtime Errors :
+it will occurred during execution and Handled using exception handling
+ex.
+    10 / 0   # ZeroDivisionError
+
+*Exception Handling Mechanism:
+ Python uses try-except blocks to handle exceptions.
+
+Syntax:
+    try:
+        # risky code
+    except:
+        # handling code
+
+
+*Working of try-except:
+Python executes try block If no error → skip except If error occurs → jump to except Program continues execution
+
+*Multiple Exception Handling:-
+ You can handle different errors separately:
+    ex.
+            try:
+                num = int(input())
+                result = 10 / num
+            except ZeroDivisionError:
+                print("Cannot divide by zero")
+            except ValueError:
+                print("Invalid input")
+
+* else Block:
+Executes only if no exception occurred
+    ex.
+        try:
+            x = 10 / 2
+        except:
+            print("Error occurred")
+        else:
+            print("No error")
+
+* finally Block:
+Executes always 
+ex.
+    try:
+        x = 10 / 2
+    except:
+        print("Error")
+    finally:
+        print("Always executes")
+
+
+* raise Statement :
+it will be used to manually generate the exception.
+
+    ex.
+        balance = 40000
+        amount = 50000
+
+        if amount > balance:
+            raise Exception("Insufficient balance")
+
+
+* Exception Object:
+ex.
+    except Exception as e:
+        print(e)
+
+ e stores the error message Helps in debugging.
+
+* Built-in Exceptions:
+
+1.SyntaxError:	Wrong syntax
+2.ZeroDivisionError:	Division by zero
+3.TypeError :	Wrong data type
+4.ValueError:	Invalid value
+5.KeyError	: Key not found in dictionary
+6.FileNotFoundError:	File not found
+
