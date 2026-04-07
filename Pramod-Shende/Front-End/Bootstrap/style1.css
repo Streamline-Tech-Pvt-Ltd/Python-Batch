@@ -1,0 +1,66 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+.head {
+    text-align: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    height: 40px;
+    width:100%;
+    background: #666;
+    padding: 15px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: blue;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+#home img {
+    width: 200px;
+    border-radius: 10%;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ddd;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 150px;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+#about, #skills, #contact {
+    text-align: center;
+}
