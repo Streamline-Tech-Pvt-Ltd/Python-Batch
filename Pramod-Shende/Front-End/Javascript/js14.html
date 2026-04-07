@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- finding an element by id
+    <p id="intro">finding an element by id</p>
+    <p id="demo"></p> -->
+
+    <!-- finding element by tag name
+    <p>finding an element by tag name</p>
+    <p id="demo"></p>-->
+
+    <!-- finding element by class name:
+    <p>finding an element by class name</p>
+    <p class="intro">hello world!</p>
+    <div class="intro">javascript</div>
+    <p id="demo"></p> -->
+
+    <!-- finding element by query selector  
+    <p id="one">Welcome</p>
+    <p class="demo">javascript</p>-->
+
+    <!-- finding element by query selectorAll:
+    <p class="demo">One</p>
+    <p class="demo">Two</p> -->
+
+    <img id="myImage" src="C:\Users\Lenovo\OneDrive\Pictures\google_logo.png">
+
+    <script>
+        // finding an element by Id:
+        // const element = document.getElementById("intro");
+
+        //document.getElementById("demo").innerHTML = "the intro paragraph is :" + element.innerHTML;
+
+        // finding an element by Tag namme:
+
+        // const element = document.getElementsByTagName("p");
+
+        //document.getElementById("demo").innerHTML = "the text in first paragraph is :" + element[0].innerHTML;
+
+        // finding an element by class:
+
+        //const element = document.getElementsByClassName("intro");
+
+        //document.getElementById("demo").innerHTML = "the first paragraph with class = intro is :" + element[1].innerHTML;
+
+        //finding element by query selector:
+       // const myItems=document.querySelector("#one");
+        //const myItems2=document.querySelector(".demo");
+
+        //myItems.innerHTML = "hello world!";
+        //myItems2.innerHTML = "Welcome to js";
+
+        //finding element by query selectorAll:
+        //const myItems=document.querySelectorAll("#one");
+        //const myItems2=document.querySelectorAll(".demo");
+
+        //myItems[1].innerHTML = "First";
+        //myItems2[2].innerHTML = "Second";
+
+        document.getElementById("myImage").src="C:\Users\Lenovo\OneDrive\Pictures\google_logo.png";
+
+    </script>
+</body>
+
+</html>

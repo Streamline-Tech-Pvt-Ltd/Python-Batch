@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //map method:
+        const fruits = new Map();
+
+        fruits.set("apples", 500);
+        fruits.set("bananas", 300);
+        fruits.set("orange", 200);
+
+        console.log(fruits);
+
+    const cars = new Map([
+    ["bmw", 20],
+    ["defender", 10],
+    ["volvo", 30]
+    ]);
+
+    //get and set method:
+    cars.set("audi",40);
+    console.log(cars);
+
+    let value =cars.get("bmw");
+    console.log(value);
+
+//map.delete() and clear():
+
+let val1 = cars.delete("defender");
+    console.log(val1);
+let val2 = cars.clear()
+    console.log(val2);
+    </script>
+</body>
+
+</html>
