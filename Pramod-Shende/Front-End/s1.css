@@ -1,0 +1,17 @@
+.div1{
+	background-color:yellow;
+}
+
+.div2{
+	background-color:aqua;
+}
+
+.div3{
+	background-color:green;
+}
+
+.div1:hover{
+	
+	background-color:red;
+	
+}
