@@ -1,0 +1,724 @@
+1.what is python?
+ - Pythgon is programming language often use to build website and software and analyze data
+ - Python is an simple,dynamic,interpreter,high level language and programming language
+ - it is developed by 1991 by Guido van Russam
+ 
+
+2.Python is dynamic means?
+  -python is dynamic mean is does not need to declare variable and their types 
+
+3.compare interpretee and compiler?
+  -interpreter: interpreter means the code is execited line by line which make easier find to debugging
+  -compiler: means to transfer source code to machine code and then execute code
+
+4.what is General purpose of the python?
+  -Python is used to various purpose to developed any application
+
+5.What is application of the Python?
+  -Web Development
+  -software Development
+  -game Development
+  -data analytics
+  -data science
+  -machine learning
+  -statistics  etc.
+
+
+6. What is comment ?
+   -A note in the code that Python does not execute.
+   -sinle line comment : write starting with Hash(#)    
+   -Double line comment : a)Write in the double cote ("""___""")
+                          b)Write in the single cote ('''___''')
+
+7. what is indentation ?
+   - Indentation means adding space(tabs)nat beggining of line of code
+   -it makes code clean and readable
+
+8. what is variable ?
+   - it is one type of contatiner where we store the value
+   -ex. num = 10   (num is a variable and 10 is value)
+
+9. what is rule of define variables? 
+   - a)var name always start with charecter
+   - b)var name cant start with number
+   - c)it can be alphanumeric
+   - d)can use underscore:   #var_name =1234
+                             #_a = 10
+   - e)no charecter limit
+
+
+10.what is keywords?
+   - keywordsis a special words in a programming language to perform specific tasks.
+   - ex. def , for , in , if , import etc.
+
+
+11.how many keywords are use in python?
+   - 35
+
+
+12.do you write a program on keyword module?
+   - yes 
+   - program- import keyword as kw     
+              keywords = kw.kwlist
+              print(keywords)
+              print(len(keywords))
+
+
+13.What are operators in Python?
+   -it is symbol or keyword
+   -it is used to perform a operation on values and variables.
+
+14.What are the types of operators in Python?
+  -Python has 7 main types of operators:
+  -1)Arithmetic Operators
+  -2)Assignment Operators
+  -3)Comparison (Relational) Operators
+  -4)Logical Operators
+  -5)Identity Operators
+  -6)Membership Operators
+  -7)Bitwise Operators
+
+15.What are Arithmetic Operators?
+  -Arithmetic operators are used to perform mathematical calculations.
+
+16.which operation perform in Arithmetic operators?
+  - addition,subtractio,division,multiplication,modulus,exponent and floor division
+
+17.what is assignment operator?
+  - it used to aasign values to variable.
+
+18.which operators are used assignment operators?
+  - =,+=, -=, *=,/=, and all arithmetic operators are used
+
+19.what is logical operator?
+  -logical operator combine two or more conditions
+
+20.which type of opereation performs the logical operators?
+  -they perform a logical opereation on the condition,they work on true or false values
+
+21.What are Identity Operators?
+  -Identity operators check whether two variables refer to the same object in memory.
+
+22.which operators are used in identity operators?
+  - 'is' and 'is not'
+
+23.what is membership operator?
+  - Membership operators are used to check whether a value exists in a sequence like a
+   list, tuple, string, set, or dictionary.
+
+24.What does the in operator do?
+  -The in operator checks if a value is present in a sequence. 
+  It returns True if the value exists.
+
+25.What does the not in operator do?
+  -The not in operator checks if a value is not present in a sequence. 
+  It returns True if the value does not exist.
+
+26.In which data types can membership operators be used?
+   -Membership operators can be used with:
+  List,Tuple,String,Set,Dictionary
+
+27.What are Bitwise Operators in Python?
+  -Bitwise operators are used to perform operations on binary numbers (bits).
+
+
+28.What is the Bitwise AND (&) operator?
+  -It returns 1 if both bits are 1, otherwise 0.
+
+29.What is the Bitwise NOT (~) operator?
+  -It inverts all bits of a number.
+
+30.what is formula use in negation of bitwise operators?
+  -~n = -(n + 1)
+
+31.What is indexing ?
+  -Indexing is used to access a specific element from a sequence
+
+32.What types of indexing are available in Python?
+ -There are two types of indexing:
+   Positive Indexing – starts from 0 from the beginning.
+   Negative Indexing – starts from -1 from the end.
+
+33.Can indexing modify list elements? How?
+  -Yes, indexing can be used to change list values.
+  Example:a = [10, 20, 30]
+          a[1] = 50
+          print(a)
+
+34.What is the difference between indexing and slicing?
+  -Indexing                	Slicing
+ Access single element	   Access multiple elements
+ Uses one index	         Uses start:stop:step
+
+
+35.What is slicing ?
+ -Slicing is used to extract a part of a sequence 
+ -syntax : sequence[start : stop : step]
+
+
+36.In which data types can slicing be used?
+  -Slicing can be used in: String ,List ,Tuple
+
+37.What happens if stop index is not given?
+  -Python will slice until the end of the sequence.
+
+
+38.What is step in slicing?
+  -Step defines how many positions to skip while selecting elements.
+
+39.How do you reverse a string using slicing?
+  -text = "Python"
+   print(text[::-1])    using this program
+
+
+40.what is data type?
+    -data type are used for a what kind of data a variable are stores
+    -there are two types:
+                        -primitive
+                        -collective (non-primitive)
+
+
+41.what is primitive data type?
+    -it's store are simple or single values , that means int,bool,complex and float
+
+42.what is use of integer in python program?
+     - integer is use to stores a whole number ,ex.50
+
+43.what is use of complex in python?
+      -complex use to stored complex number or mathematical function    ex.3 + 2j
+
+
+44.what is use of boolean in python?
+      -it use to store True or False in the program
+
+45.what is collective data type?
+     -collective data type stores multiple values or collection of data in the variable
+     -there are 6 data types:
+                            -string
+                            -list
+                            -dictionary
+                            -set
+                            -frozenset
+                            -tuple
+
+46.what is string and how to define?
+     -string is a set of charecter
+     -it define in double coat("")   
+                    
+47.what is list and how to define ?
+     -list is a order of collection of element
+     -the list are Mutable-are the modify
+                   Ordered
+                   duplicate
+                   indexed
+
+     -it write in a square brackets - []
+     -access single element using indexing
+     -access multiple element using slicing
+
+48.what is mutable data type?
+     -value can be changed after creation
+
+49.which type of function perform in the list?
+     -in the list we perform the append(),insert(),remove(),pop(),sort(),reverse(),count(),len(),
+  extend(),clear(),max(),min(),sum() functions.
+
+50.what happens when you assign one list to another list?
+     -we create 1 list ,create second variable and assign 1st variable to the second variable
+     -theat means both variables refer to the same memory location
+
+51.what is difference between append() and extend()?
+     -append() adds one element in a end of the list
+     -extend() adds elements individually (concatenate two string)
+
+
+52.what is difference between remove() and pop() funtions?
+     -remove() element in the list as a without index
+     -pop() is remove the element using their index
+
+53.what a use of sort() function?
+     -sort() function is use to arrange list element into asending order
+
+54.what is Dictionary?
+     -Dictionary is a collection of data type use to store in data key-value pairs
+     -denoted by curly brases-{}
+     -syntax:{"key" : "value"}
+
+55.what is property of Dictionary?
+     -mutable
+     -unorderd
+     -duplicate: keys- not allow
+                value-allow
+
+
+56.which methods are use in a dictionary?
+     -keys(),values(),items(),update(),pop(),popitem(),copy(),etc.
+
+57.can we use list as a dictionary key?
+     -no,because list is mutable
+     -immutable type allow:int,float,tuple
+
+58.why are dictionary keys unique?
+     -because keys are stored using hashing,and duplicate keys are not allowed
+
+59.what is Hashing(hash function)?
+     -Hashing is a process of converting a key into fix-size hash value for fast data retrival
+     -in short converting input data value into fixed integer value
+
+60.what is hash value?
+     -it is a integer produced when a key is passed through a hash function
+     -in short key is converted into a number
+
+61.what is time complexity of dictionary lookup?
+      -in average case :0(1)  (very fast) 
+
+62.what does (in) operator check in dictionary?
+     -it check keys not value
+
+63.dictionary is faster than list? why?
+    -yes
+    -because of hash implementation
+
+64.what is mean by nested dictionary?
+     -means dictionary inside another dictionary
+
+65.what is dictionary key must be immutable?
+     -because dictionary use hashing ,and if key is change then hash is change,then data
+  becomes unreachable 
+
+66.what is set ?
+     - set is a collection of datatype that used to store multiple items in a single
+  variable
+     -it is a collection of elements
+     -set is a: Mutable
+                unorderd: do not have fix Order
+                duplicate: not allow
+                indexed: not support
+
+     ex: a = {1,2,3,4,5}
+          print(a)
+      
+
+67.which operation performs in the Set?
+     - Union,Intersection,difference,symmetric difference
+
+68.how do you create set in python?
+     -set can created using curly braces {} or the set() function
+
+69.set can contain duplicate values?
+     -set not allow duplicate values,it can be automatically remove duplicates
+
+70.how to perform Union operation in a set?
+     -the union returns all elements from both sets without duplicates
+     -use in operation as  |  symbol
+
+
+71.Explain intersection operation in sets ?
+     -the intersection returns common elements from both sets
+     -use in operation as  &  symbol
+
+
+72.Explain difference operation in sets ?
+     -difference returns element present in the first set but not in second set
+     -use in operation as  -  symbol
+
+
+73.Explain symmetric difference operation in sets ?
+     -symmetric difference returns elements present in either set but not in both
+     - present as ^ symbol
+     -ex a = {1,2,3}
+         b = (3,4,5)
+         print (a ^ b)       # output = {1,2,4,5} 
+
+74.What is subset and superset?
+     -subset - all element of _one set are present in another set
+     -superset - a set that contain all element of another set 
+
+75.what is frozenset?
+     - it is immutable set
+     -in this set you cannot add and remove elements
+     
+
+76.what is mean by tuple in python?
+     -store multiple values in a single variable
+     -it declare as (element ,)   ex: t = (5,)
+     it is: -immutable
+            -Ordered
+            -duplicate : allow
+            -indexing : allow
+
+77.can a tuple contain mutable elements?
+     -a tuple itself is immutable, but it can contain mutable element like lists
+     ex: t = (1,2,[3,4],5)
+
+78.Is tuple is faster then list?
+     - yes. because they are immutable and required less memory.
+
+79.Can you delete a tuple element ?
+     - no. individual element an not be deleted
+     but entire tuple can be deleted use of del()   ex:del t
+
+80.what is advantages of tuple over a list ?
+     -fastre execution
+     -less memory usage
+     -immutable
+     -can be use as dictionary keys
+     
+
+81.What is for loop ?
+    -a for loop is used to iterate over a sequence and execute a block of code multiple times
+    -that means it use repeat a block of code multiple times
+
+82.what does range() function do in a for loop?
+    - range() function generate a sequence of numbers
+    -syntax : (start ,stop, step)
+
+83.what is nested for loop?
+    -a loop inside another loop called as nested loop
+
+84.what are the break ,continue or pass in a for loop?
+    - break is use to stop loop
+    - continue is use to skip current iteration
+    - pass means does nothing
+    
+85.what is list comprehension related to for loop?
+    - it is short way to write a for loop
+    - example: squares = [x*x for x in range(5)]
+               print(squares)                        #output:[0,1,4,9,16]
+
+86. What is a while loop in Python?
+    -A while loop repeatedly executes a block of code as long as the given condition is True.
+    -syntax : while condition:
+              statement
+
+87.What is the difference between for loop and while loop?
+For Loop	                                   While Loop
+Used when number of iterations is known 	Used when number of iterations is unknown
+Iterates over sequence	                   Works based on condition
+Simpler syntax	                             Requires manual update of variable
+
+88.What is an infinite while loop?
+     -An infinite loop occurs when the condition never becomes false
+
+89.When should you use a while loop?
+     -Use a while loop when:
+     -Number of iterations is not known
+     -Loop depends on user input
+     -Loop depends on condition
+
+90.What is Functional Programming?
+    -Functional programming is a programming paradigm where computation is done using functions 
+   without changing state or mutable data.
+
+91.What is a function in Python?
+    - A function is a block of reusable code that used to perform a specific task.
+
+92.What are the advantages of using functions?
+     -Code reusability
+     -Reduces duplication
+     -Makes program modular
+     -Improves readability
+
+93.What are function parameters and arguments?
+     -Parameter → Variable in function definition
+     -Argument → Actual value passed to function
+
+     Example:
+             def add(a, b):   # parameters
+             return a + b
+             add(3,4)         # arguments
+
+94.What is scope in Python?
+     -Scope refers to the region where a variable is access
+     -In simple words, it defines where a variable can be used
+
+95.What are the types of scope in Python?
+     -Python follows LEGB rule for scope.
+     -Local Scope
+     -Enclosing Scope
+     -Global Scope
+     -Built-in Scope
+
+96.What is Local Scope?
+     - A variable defined inside a function is called a local variable 
+    can only be used inside that function.
+
+     -example: def func():
+              x = 5
+              print(x)
+              func()        # output : 5
+
+97.What is Global Scope?
+     -A variable defined outside all functions 
+     -used anywhere in the program
+     -example:
+               x = 20
+               def show():
+               print(x)
+               show()
+
+98.What is Enclosing Scope?
+     -Enclosing scope occurs when a function is defined inside another function.
+     -example:
+               def outer():
+                  x = 10
+    
+                  def inner():
+                     print(x)
+                  inner()
+              outer()
+
+99.What is Built-in Scope?
+     -it is predifine name in python that are always available
+     -ex.print()
+         len()
+         type()
+
+100.What are arguments in Python?
+    - passed actual value or function
+    -eaxample:
+             def add(a, b):
+             return a + b
+               add(3, 4)   # 3 and 4 are arguments
+
+101.What are the types of arguments in Python?
+     -Positional arguments
+     -Keyword arguments
+     -Default arguments
+     -Variable-length arguments (*args, **kwargs)
+
+102.What are positional arguments?
+     -Arguments that are passed in the same order as parameters.
+     -example:
+                def greet(name, age):
+                 print(name, age)
+               greet("Rahul", 22)
+
+103.What is the advantage of keyword arguments?
+     -Order of arguments does not matter
+     -Code becomes more readable
+     -Useful when functions have many parameters
+
+104.What is a keyword argument in Python?
+     - argument passed to a function using the parameter name.
+     -example: 
+               def student(name, age):
+                print(name, age)
+                 student(name="Rahul", age=22)
+
+105.What is a default argument in Python?
+     -A default argument is a parameter that has a default value.
+     -If the user does not provide a value when calling the function, the default value is used.
+     -example:
+              def greet(name="Guest"):
+               print("Hello", name)
+               greet()
+
+106.Can we override default arguments?
+     -Yes, you can override the default value by passing a new value.
+     -eaxample:
+              def add(a, b=5):
+                print(a + b)
+                add(10, 20)
+
+107.What is an arbitrary argument in Python?
+     -An arbitrary argument allows a function to accept any number of arguments.
+     -uses when do not know how many arguments will be passed to function
+
+108.Why do we use arbitrary arguments?
+     -We use them when the number of arguments is unknown.
+     -example:
+               def students(*names):
+                 for name in names:
+                 print(name)
+                 students("Rahul", "Amit", "Riya")
+
+109.what are the types of arbitrary argument?
+     -1.arbitrary positional argument
+     -2.arbitrary keyword argument
+
+110.What is an arbitrary positional argument?
+     -An arbitrary positional argument allows a function to accept any number of positional
+    arguments.
+     -all values store in a tuple
+     -syntax:
+             def function_name(*args):
+             #code
+     -it define as a *args
+     -example:   def func(*args):
+                 print(args)
+                 func(1, 2, 3, 4)
+
+111.what is arbitrary keyword argument?
+     -accept any number of keyword argument
+     -all value stored in dictionary
+     -syntax:
+             def function_name(**kwargs):
+             #code
+     -it is define as a **kwargs
+     -example:
+               def student(name, age):
+                print(name, age)
+                student(name="Rahul", age=22)
+
+112.What is the advantage of keyword arguments?
+     -Order of arguments does not matter
+     -Makes code more readable
+     -Useful when a function has many parameters
+
+113.What is the difference between positional and keyword arguments?
+Positional Argument	         Keyword Argument
+Order matters	              Order does not matter
+Passed directly	          Passed using parameter name
+Example: func(10,20)        	Example: func(a=10,b=20)
+
+
+114.What is **kwargs?
+     -**kwargs allows a function to accept multiple keyword arguments.
+
+115.What is an f-string in Python?
+     -it is formatting string
+     -it is a way to insert variable or expression in tghghe string
+     -use 'f' before the string
+     -use {} <-- place holder
+     -syntax : f"string{variable}"
+
+116.What are the advantages of f-strings?
+     -Easy to read
+     -Faster than other formatting methods
+     -Allows expressions inside {}
+
+117.Can expressions be used inside f-strings?
+    -Yes.
+    -example:print(f"{5*5}")
+
+118.Can we use dictionary values in f-strings?
+     -Yes.
+     -Example:
+               data = {"name":"Rahul","age":22}
+               print(f"{data['name']} is {data['age']} years old")
+
+119.What is a lambda function in Python?
+     -A lambda function is a small anonymous function
+     -used to short operation
+     -syntax:
+              lambda arguments : expression
+     -example:  square = lambda x: x*x
+                print(square(5))
+
+120.Why are lambda functions used?
+     -Lambda functions are used for:
+          Short functions
+          One-time use functions
+          Functional programming operations like map(), filter(), reduce()
+
+121.Can lambda functions contain multiple statements?
+     - No.
+     -Lambda functions can contain only one expression.
+
+122.When should lambda functions be avoided?
+     -Avoid lambda when:
+           Function logic is complex
+           Multiple statements are required
+           Code readability becomes difficult
+
+123.What is a Higher Order Function?
+    -function that work with other function
+    -type: filter()
+           map()
+           reduce()
+
+124.What is filter() in Python?
+     -filter elements from an iterable based on a condition.
+     -syntax:
+             filter(function, iterable)      #iterable = list ,tuple ,set etc.
+
+125.What is map() in Python?
+     -used to apply a function to every element of an iterable such as a list, tuple, etc.
+     -syntax:
+            map(function, iterable)
+          
+126.What is reduce() in Python?
+    -reduce iterables to a single value.
+    -it is present in the functools module.
+
+127.Why do we import reduce from functools?
+     -reduce() is not a built-in function.
+     -It is available in the functools module.
+
+128.which are four types of import module?
+     -1.import module_name as alias_name
+         ex.import numpy as np 
+
+     -2.import module_name
+          ex: import keyword 
+     
+     -3.from module_name import function_name
+          ex: from math import sqrt
+              print(sqrt(25))           # output: 5
+
+     -4.from module_name import *
+
+129.what is What is OOP in Python?
+     -OOP (Object-Oriented Programming) is a programming paradigm based on objects and classes.
+   It helps organize code into reusable structures.
+
+130.What is a Class in Python?
+     -A class is a blueprint for creating objects.
+
+131.What is an Object?
+     -An object is an instance of a class.
+
+132.What is the __init__ method?
+    - __init__ is a constructor in Python
+   It runs automatically when an object is created and initializes object attributes.
+   -example:
+           class Employee:
+           def __init__(self, name, salary):
+                self.name = name
+                self.salary = salary
+           emp1 = Employee("Rahul", 50000)
+
+133.What is self in Python?
+     -self represents the current object of the class. 
+    It is used to access variables and methods inside the class.
+
+134.What is a Constructor?
+    -A constructor is a special method used to initialize objects.
+    -In Python:
+                 __init__()
+
+135.Difference Between Class and Object
+Class	                         Object
+Blueprint	                     Instance of class
+Logical entity	                Physical entity
+Defined using class keyword	Created using class
+
+136.What is an Object Reference in Python?
+    -An object reference is a variable that stores the memory address of an object, 
+ not the actual object itself.
+
+137.What are the four pillars of OOP? 
+        -Inheritance
+        -Abstraction
+        -Encapsulation
+        -Polymorphism
+        
+ 
+138.What is Inheritance?
+     -one class acquires properties and methods from another class.
+     -that means child class aquire properties from the parent class
+
+139.What are the types of inheritance in Python?
+    1)Single Inheritance
+    2)Multiple Inheritance
+    3)Multilevel Inheritance
+    4)Hierarchical Inheritance
+    5)Hybrid Inheritance 
+
+140.What is Single Inheritance in Python?
+  Single Inheritance is a type of inheritance where one child class inherits
+ properties and methods from only one parent class.
+
+
+
