@@ -1,0 +1,117 @@
+Day 1: 07/04/2026
+
+
+*What is MySQL? :
+MySQL is a Relational Database Management System, It is used to store and manage data.
+
+Example:
+
+SELECT * FROM student1;
+
+SHOW DATABASES;
+
+USE ninja_database;
+
+*Table: 
+It is a Structure with rows and columns
+ SHOW TABLES;
+
+*Data Types:
+
+Data Type	Description	    	Example
+
+INT		    Integer			    1, 10
+VARCHAR(n)	String			    "XYZ"
+FLOAT		Decimal numbers	 	89.5
+BOOLEAN		True/False		    TRUE
+DATE		Date			    '2002-08-23'
+YEAR		Year			    2022
+
+Example:
+
+	CREATE TABLE student1(sr_no INT, name VARCHAR(15),percent FLOAT, present BOOLEAN, birth_date DATE, admission_year YEAR);
+
+*DDL Commands:
+ DDL means Data Definition Language
+
+1.CREATE:
+
+CREATE TABLE student2(
+    sr_no INT,
+    name VARCHAR(20)
+);
+
+ 
+2.DROP:
+DROP TABLE student2;
+
+3.ALTER :
+ALTER TABLE student1 ADD email VARCHAR(50);
+
+*DML Commands :
+
+DML means Data Manipulation Language
+
+1.INSERT:
+INSERT INTO student1 VALUES
+(1,"xyz",89.90,TRUE,"2002-08-23",2022);
+
+2.SELECT:
+SELECT * FROM student1;
+
+*Constraints :
+
+ 1. NOT NULL:
+In NOT NULL Column cannot store NULL value
+ex.
+CREATE TABLE student2(sr_no INT, name VARCHAR(20) NOT NULL);
+
+2. UNIQUE:
+IN UNIQUE No duplicate values allowed
+ex.
+CREATE TABLE student2(sr_no INT, roll_no INT UNIQUE);
+
+3. PRIMARY KEY:
+In PRIMARY KEY Uniquely identifies each row Cannot be NULL Only one per table
+ex.
+CREATE TABLE student3(sr_no INT PRIMARY KEY, roll_no INT UNIQUE);
+
+4. AUTO_INCREMENT:
+Automatically increases value
+ex.
+CREATE TABLE student4(sr_no INT AUTO_INCREMENT PRIMARY KEY, roll_no INT UNIQUE);
+INSERT INTO student4(roll_no) VALUES(10);
+
+ 5. DEFAULT:
+It will be Assigns default value if not provided
+ex.
+CREATE TABLE student5(sr_no INT, admission_year INT DEFAULT '2022');
+
+6. CHECK:
+It will be Restricts the values based on condition
+ex.
+CREATE TABLE student6(sr_no INT,age INT CHECK(age > 18));
+
+7. FOREIGN KEY:
+It Maintains the relationship between tables and Ensures referential integrity
+ex.
+Parent Table:
+CREATE TABLE department(dept_id INT PRIMARY KEY, d_name VARCHAR(20));
+insert into department values(1,"Java Developer");
+insert into department values(2,"Python Developer");
+insert into department values(3,"Data Analytics");
+
+Child Table:
+CREATE TABLE employees(emp_id INT, e_name varchar(20), E_role VARCHAR(20), salary FLOAT, dept_id INT, FOREIGN KEY (dept_id) REFERENCES department(dept_id));
+INSERT INTO employees VALUES(101,"rushi","Java Developer",50000,1);
+INSERT INTO employees VALUES(102,"Pramod", "Python Developer",70000,2);
+
+
+#Error Example:
+INSERT INTO employees VALUES(101,"rushi","java developer",100000,4);
+
+Reason:
+because dept_id = 4 does not exist in department
+
+
+
