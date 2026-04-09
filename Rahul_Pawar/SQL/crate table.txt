@@ -1,0 +1,130 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sql_ninja          |
+| sys                |
++--------------------+
+5 rows in set (0.12 sec)
+
+mysql> use sql_ninja
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_sql_ninja |
++---------------------+
+| students            |
++---------------------+
+1 row in set (0.07 sec)
+
+mysql> select * from students;
++----+-------+------+--------+
+| id | NAME  | AGE  | CITY   |
++----+-------+------+--------+
+|  1 | Rahul |   21 | Nashik |
++----+-------+------+--------+
+1 row in set (0.03 sec)
+
+mysql> insert into students values(2,'Nikhil',21,'Dindori'),(3,'Rohit',21,'Sinnar'),(4,'Nikita',22,'Dindori'),(5,'Ram',21,'Pune'),(6,'Ramesh',33,'Sambhajinagar'),(7,'Prasad',23,'Nashik'),(8,'Pooja',34,'Mumbai'),(9,'Roshan',23,'Palghar'),(10,'Pranali',23,'Aadgoan'),(11,'Gayatri',30,'Nashik'),(12,'Nikita',23,'Pune'),(13,'Prem',22,'Parbhani'),(14,'Sayali',31,'Sambhajinagar'),(15,'Pramod',22,'Nashik'),(16,'Prakash',26,'Manmad'),(17,'Krishna',22,'Chandwad'),(18,'Rohini',21,'Sambhajinagar'),(19,'Ganesh',25,'Nashik'),(20,'Rahul',20,'Nanded');
+
+mysql> select * from students;
++----+---------+------+---------------+
+| id | NAME    | AGE  | CITY          |
++----+---------+------+---------------+
+|  1 | Rahul   |   21 | Nashik        |
+|  2 | Nikhil  |   21 | Dindori       |
+|  3 | Rohit   |   21 | Sinnar        |
+|  4 | Nikita  |   22 | Dindori       |
+|  5 | Ram     |   21 | Pune          |
+|  6 | Ramesh  |   33 | Sambhajinagar |
+|  7 | Prasad  |   23 | Nashik        |
+|  8 | Pooja   |   34 | Mumbai        |
+|  9 | Roshan  |   23 | Palghar       |
+| 10 | Pranali |   23 | Aadgoan       |
+| 11 | Gayatri |   30 | Nashik        |
+| 12 | Nikita  |   23 | Pune          |
+| 13 | Prem    |   22 | Parbhani      |
+| 14 | Sayali  |   31 | Sambhajinagar |
+| 15 | Pramod  |   22 | Nashik        |
+| 16 | Prakash |   26 | Manmad        |
+| 17 | Krishna |   22 | Chandwad     |
+| 18 | Rohini  |   21 | Sambhajinagar |
+| 19 | Ganesh  |   25 | Nashik        |
+| 20 | Rahul   |   20 | Nanded        |
++----+---------+------+---------------+
+20 rows in set (0.00 sec)
+
+mysql> insert into students values(20,'Nikhil',21,'NAshik');
+ERROR 1062 (23000): Duplicate entry '20' for key 'students.PRIMARY'
+mysql> select * from students;
++----+---------+------+---------------+
+| id | NAME    | AGE  | CITY          |
++----+---------+------+---------------+
+|  1 | Rahul   |   21 | Nashik        |
+|  2 | Nikhil  |   21 | Dindori       |
+|  3 | Rohit   |   21 | Sinnar        |
+|  4 | Nikita  |   22 | Dindori       |
+|  5 | Ram     |   21 | Pune          |
+|  6 | Ramesh  |   33 | Sambhajinagar |
+|  7 | Prasad  |   23 | Nashik        |
+|  8 | Pooja   |   34 | Mumbai        |
+|  9 | Roshan  |   23 | Palghar       |
+| 10 | Pranali |   23 | Aadgoan       |
+| 11 | Gayatri |   30 | Nashik        |
+| 12 | Nikita  |   23 | Pune          |
+| 13 | Prem    |   22 | Parbhani      |
+| 14 | Sayali  |   31 | Sambhajinagar |
+| 15 | Pramod  |   22 | Nashik        |
+| 16 | Prakash |   26 | Manmad        |
+| 17 | Krishna |   22 | Chandwad     |
+| 18 | Rohini  |   21 | Sambhajinagar |
+| 19 | Ganesh  |   25 | Nashik        |
+| 20 | Rahul   |   20 | Nanded        |
++----+---------+------+---------------+
+20 rows in set (0.00 sec)
+
+mysql> insert into students values(21,'Sumit',20,'Latur'),(22,'Amit',23,'Mumbai'),(23,'Sham',21,'Nagar'),(24,'Ved',21,'Nashik'),(25,'Sanket',30,'Nashik'),(26,'Vivek',20,'Manmad'),(27,'Vishal',21,'Nashik'),(28,'Yash',23,'Latur'),(29,'Pranav',19,'Dindori'),(30,'Piyush',21,'Satana');
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from students;
++----+---------+------+---------------+
+| id | NAME    | AGE  | CITY          |
++----+---------+------+---------------+
+|  1 | Rahul   |   21 | Nashik        |
+|  2 | Nikhil  |   21 | Dindori       |
+|  3 | Rohit   |   21 | Sinnar        |
+|  4 | Nikita  |   22 | Dindori       |
+|  5 | Ram     |   21 | Pune          |
+|  6 | Ramesh  |   33 | Sambhajinagar |
+|  7 | Prasad  |   23 | Nashik        |
+|  8 | Pooja   |   34 | Mumbai        |
+|  9 | Roshan  |   23 | Palghar       |
+| 10 | Pranali |   23 | Aadgoan       |
+| 11 | Gayatri |   30 | Nashik        |
+| 12 | Nikita  |   23 | Pune          |
+| 13 | Prem    |   22 | Parbhani      |
+| 14 | Sayali  |   31 | Sambhajinagar |
+| 15 | Pramod  |   22 | Nashik        |
+| 16 | Prakash |   26 | Manmad        |
+| 17 | krishna |   22 | Chandwad     |
+| 18 | Rohini  |   21 | Sambhajinagar |
+| 19 | Ganesh  |   25 | Nashik        |
+| 20 | Rahul   |   20 | Nanded        |
+| 21 | Sumit   |   20 | Latur         |
+| 22 | Amit    |   23 | Mumbai        |
+| 23 | Sham    |   21 | Nagar         |
+| 24 | Ved     |   21 | Nashik        |
+| 25 | Sanket  |   30 | Nashik        |
+| 26 | Vivek   |   20 | Manmad        |
+| 27 | Vishal  |   21 | Nashik        |
+| 28 | Yash    |   23 | Latur         |
+| 29 | Pranav  |   19 | Dindori       |
+| 30 | Piyush  |   21 | Satana        |
++----+---------+------+---------------+
+30 rows in set (0.03 sec)
+
+mysql>
