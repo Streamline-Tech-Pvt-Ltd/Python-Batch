@@ -1,0 +1,15 @@
+{% extends "interns/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f8f9fa;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px;">
+        <h2>Welcome to the Home Page</h2>
+
+        <p>You are successfully logged in !</p>
+        <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+    </div>
+</div>
+{% endblock %}
