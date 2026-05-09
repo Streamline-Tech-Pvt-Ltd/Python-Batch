@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fordemo</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Emp_id</th>
+            <th>Emp_name</th>
+            <th>Emp_salary</th>
+            <th>Emp_Experience</th>
+        </tr>
+        {% for i in products %}
+        <tr>
+            <td>{{i.Emp_id}}</td>
+            <td>{{i.Emp_name}}</td>
+            <td>{{i.Emp_salary}}</td>
+            <td>{{i.Emp_Experience}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

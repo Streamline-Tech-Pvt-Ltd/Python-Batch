@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>If Demo</title>
+</head>
+<body>
+
+    <h2>Welcome {{ Data.name }}</h2>
+
+    <!-- Check visibility -->
+    {% if Data.inVisible %}
+        <p>This content is visible.</p>
+    {% else %}
+        <p>This content is hidden.</p>
+    {% endif %}
+
+    <!-- Login check -->
+    {% if Data.LoggedIn %}
+        <p>User is logged in.</p>
+    {% else %}
+        <p>Please login first.</p>
+    {% endif %}
+
+    <!-- Country check -->
+    {% if Data.CountryCode == 'india' %}
+        <p>You are from India 🇮🇳</p>
+    {% else %}
+        <p>You are from another country.</p>
+    {% endif %}
+
+    <!-- Work Experience check -->
+    {% if Data.workExperiance > 10 %}
+        <p>Experienced Professional</p>
+    {% elif Data.workExperiance > 5 %}
+        <p>Mid-level Experience</p>
+    {% else %}
+        <p>Fresher</p>
+    {% endif %}
+
+    <!-- State check -->
+    {% if Data.stateCode == 'maharashtra' %}
+        <p>From Maharashtra</p>
+    {% endif %}
+
+</body>
+</html>
