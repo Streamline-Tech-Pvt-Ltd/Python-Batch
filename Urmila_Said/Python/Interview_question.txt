@@ -1,0 +1,45 @@
+# Interview Questions & Answer
+
+1. What is python ?
+Ans:.Python is a simple,high level,dynamic,interpreted and general purpose programming language.
+     1)Simple:Python is easy to learn and write.
+     2)High level:Python uses human-readable words, so programmers don't need
+       to manage complex computer hardware details.
+     3)Dynamic:You don't need to specify the data type of a variable. 
+     4)Interpreted:Python executes code line by line instead of converting
+       the entire program into machine code before running.
+     5)General purpose:Python can be used for many different types of applications.
+
+2. Explain interpreted in detail ?
+Ans:.Python is an interpreted language because its source code is executed line by line
+     by the Python interpreter without requiring separate compilation.This makes debugging 
+     easier and program development faster.
+
+3. Explain indentation in python ?
+Ans:.Indentation is the use of spaces or tabs at the beginning of a line to define a 
+     block of code in Python.It is mandatory and helps improve code readability and structure.
+
+4. Difference between static & dynamic ?
+Ans:.| Static                                                   |             Dynamic                                 
+| ------------------------------------------------------------- | --------------------------------------------------- |
+| Variable type is declared before use.                         | Variable type is decided automatically at runtime.  |
+| Data type cannot change easily.                               | Data type can change during execution.              |
+| Errors related to types are found beforerunning the program.  | Type errors are found while the program is running. |
+| More strict.                                                  | More flexible.                                      |
+| Examples: C, C++, Java                                        | Examples: Python, JavaScript                        |
+
+5. What is IDE & Give me three example ?
+Ans:.IDE (Integrated Development Environment) is software that provides tools such as a code editor,
+     compiler/interpreter, and debugger in a single environment for developing programs.
+      Examples;PyCharm, Visual Studio Code,Jupyter notebook and Spyder.
+
+6. Explain the types of python language ?
+Ans:.1. Sequential Programming
+        In sequential programming, statements are executed one after another in order 
+        from top to bottom.
+     2. Functional Programming
+        In functional programming the program is divided into functions. Each function performs 
+        a specific task and can be called whenever needed.
+     3. Object-Oriented Programming (OOP)
+        In OOP programs are organized using classes and objects Data and functions
+         are combined into a single unit called an object.
