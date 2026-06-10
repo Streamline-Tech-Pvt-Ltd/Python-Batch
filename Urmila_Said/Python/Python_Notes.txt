@@ -1,0 +1,52 @@
+# Python
+Python is a simple,dynamic,high-level,interpreted and general purpose programming language.
+1.Simple
+  Python syntax is easy to read and write.
+  Ex:.print("Hello World")
+2.dynamic
+  We do not need to declare the data type of a variable.
+  Ex:.name = "Urmila"   # String
+      age = 20          # Integer
+3.High-level
+  Python is close to human language and easy to understand.
+  Ex:.a = 10
+      b = 20
+4.Interpreted
+  Python executes code line by line.
+  Ex:.print("First Line")
+      print("Second Line")
+5.Genral purpose
+  Python can be used for many types of applications.
+  Ex:.Data Science
+      Artificial Intelligence
+      Machine Learning
+      Game development
+
+* Difference between Static & Dyanamic 
+
+|Static                                      | Dynamic                                            |
+| ------------------------------------------ | -------------------------------------------------- |
+| Variable type is declared before use.      | Variable type is decided automatically at runtime. |
+| Type checking happens during compilation.  | Type checking happens during execution.            |
+| Programmer must specify data types.        | No need to specify data types.                     |
+| Errors related to types are found earlier. | Type errors are found while the program runs.      |
+| More strict and less flexible.             | More flexible and easier to write.                 |
+| Examples: C, C++, Java                     | Examples: Python, JavaScript, Ruby                 |
+---------------------------------------------------------------------------------------------------
+
+* Main types of python 
+1. Sequential programming 
+   Sequential programming is the simplest programming style in which statements are executed one
+   after another in the order they are written.
+2. Functional programming
+   Functional programming is a programming style in which the program is divided into functions.
+    Each function performs a specific task.
+3. Object oriented programming(OOP)
+   Object-Oriented Programming is a programming style that organizes programs using classes
+    and objects.
+
+* Types of comments
+1. Single line comment
+   A single-line comment starts with #.
+2. Multi-line comment
+   Multi-line comments are written using triple quotes (''' or """).
