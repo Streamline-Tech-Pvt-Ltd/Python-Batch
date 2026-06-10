@@ -1,0 +1,58 @@
+Q. What is Python?
+A. Python is a simple,dynamic,high-level,interpreted,object oriented programming & general purpose programming language.
+
+   Simple :-Python is considered simple because its syntax is easy to read and write, similar to English language statements.
+   dynamic :-Python is a dynamically typed language, which means you do not need to declare the data type of a variable. Python automatically determines the type at runtime.
+   high-level language :- programming language that is easy for humans to read, write, and understand. It uses English-like syntax and hides complex hardware details from the programmer.
+   interpreted :- where code is executed line by line by an interpreter, instead of being compiled into machine code before execution.
+   OOP :- organizes code using classes and objects. It helps make programs reusable, secure, and easy to maintain.
+
+
+Q. Explain interpreter in details?
+A. An interpreter is a software program that reads, translates, and executes code line by line.
+   Python Interpreter executes your Python code and converts it into instructions that the computer can understand.
+
+Q. Explain indentation  in pyhon?
+A. defines a block of code.
+   Indentation refers to the spaces or tabs at the beginning of a line of code. In Python, indentation is used to define code blocks and is mandatory.
+   Python typically uses 4 spaces for each indentation level. Incorrect indentation results in an IndentationError.
+
+
+Q. Difference Between Static Typing and Dynamic Typing
+A.   
+    
+        Static Typing                                   Dynamic Typing
+
+    Variable type must be declared before use	        Variable type is determined automatically at runtime
+    Type checking occurs at compile time	            Type checking occurs at runtime
+    Less flexible	                                    More flexible
+    Faster execution	                                Slightly slower execution
+    Examples: Java, C, C++                          	Examples: Python, JavaScript
+
+
+Q. What is IDE give me its 3 Example
+A. IDE (Integrated Development Environment) is a software application that provides all the tools needed for programming in one place, such as:
+   Code Editor ,Compiler/Interpreter.
+  # Examples of IDEs
+        PyCharm
+        Visual Studio Code
+        Jupyter Notebook
+        Spyder
+        Eclipse
+        IDLE
+
+
+Q. Explain types of python language
+A. Sequential Programming – statements execute one after another.
+                            i.e :- loops ,operator
+
+   Functional Programming – programs are organized using functions.
+                            i.e:- argument , parameters
+   Object-Oriented Programming (OOP) – programs are built using classes and objects.
+                            
+            Pillar	                                 Meaning
+
+          Encapsulation 	                         Data Hiding
+          Inheritance	                             Code Reuse
+          Polymorphism	                             Many Forms
+          Abstraction	                           Hiding Complexity
