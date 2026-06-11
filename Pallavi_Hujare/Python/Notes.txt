@@ -27,9 +27,9 @@ Date : 10/06/2026
         Static Typing                              |     Dynamic Typing
     -----------------------------------------------|----------------------------------------------------------
     Variable type must be declared before use	   |    Variable type is determined automatically at runtime
-    Type checking occurs at compile time	       |     Type checking occurs at runtime
-    Less flexible	                               |     More flexible
-    Faster execution	                           |    Slightly slower execution
+    Type checking occurs at compile time	         |     Type checking occurs at runtime
+    Less flexible	                                 |     More flexible
+    Faster execution	                              |    Slightly slower execution
     Examples: Java, C, C++                         |	Examples: Python, JavaScript
 
 
@@ -42,9 +42,28 @@ Date : 10/06/2026
 
    C.Object-Oriented Programming (OOP) – programs are built using classes and objects.
                             
-            Pillar	                   |              Meaning
+            Pillar	                  |              Meaning
   -------------------------------------|--------------------------------------------------------------
-          Encapsulation 	           |             Data Hiding
+          Encapsulation 	            |             Data Hiding
           Inheritance	               |             Code Reuse
           Polymorphism	               |             Many Forms
           Abstraction	               |           Hiding Complexity
+
+
+# Comments in Python
+  Comments are used to explain code and make it easier to understand. Python ignores comments when executing the program.
+
+  1. Single-Line Comment
+            Starts with #
+            Used for short explanations
+            # This is a single-line comment
+            print("Hello World")
+
+ 2. Multi-Line Comment
+            Written using triple quotes (''' ''' or """ """)
+            Used for longer descriptions
+            """
+            This is a
+            multi-line comment
+            """
+            print("Python")
