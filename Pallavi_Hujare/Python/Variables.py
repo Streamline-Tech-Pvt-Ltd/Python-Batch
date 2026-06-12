@@ -48,7 +48,7 @@ print(name1)
 student_name = "Pallavi"
 print(student_name)
 
---------------------------------------------------------------------------------------------------------------------------------------
+
 
 #Naming Conventions (Cases)
 
@@ -65,9 +65,11 @@ class PallaviHujare:
 # UPPER_CASE (used for constants)
 PALLAVI_HUJARE = "Constant Value"
 
+
+
+
 #*******Variables & Functions → snake_case
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Keyword: A keyword is a reserved word in Python that has a predefined meaning and cannot be used as an identifier (variable name, function name, or class name).
          #Examples: if, else, for, while, True, False, class, def, return.
@@ -81,7 +83,8 @@ print(keyword.kwlist)
   'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return',
  'try', 'while', 'with', 'yield']'''
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 #f-String in Python
 
@@ -89,14 +92,16 @@ print(keyword.kwlist)
  #An f-string (formatted string) is used to insert variables or expressions directly inside a string using {} brackets.
 
 #Syntax
-f"Text {variable}"
+#   f"Text {variable}" 
 
 #Example 1: Variable
 
 name = "Pallavi"
 print(f"My name is {name}")  #My name is Pallavi
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 #Input Function in Python
 
@@ -111,23 +116,23 @@ print(f"My name is {name}")  #My name is Pallavi
 name = input("Enter your name: ")
 print("Name:", name)
 
-Input:
-Pallavi
+# Input:
+# Pallavi
 
-Output:
-Name: Pallavi
+# Output:
+# Name: Pallavi
 
 
 
-Example 3: Taking Number Input
+#Example 2: Taking Number Input
 num = int(input("Enter a number: "))
-
 print(num)
 
-Input:
-10
-Output:
-10
+# Input:
+# 10
+
+# Output:
+# 10
 
 
 #**********Important Note
@@ -137,10 +142,8 @@ Output:
 age = input("Enter age: ")
 print(type(age))
 
-Output:
-<class 'str'>
+# Output:
+# <class 'str'>
 
 #To use numbers, convert them using int() or float():
 
-age = int(input("Enter age: "))
-salary = float(input("Enter salary: "))
