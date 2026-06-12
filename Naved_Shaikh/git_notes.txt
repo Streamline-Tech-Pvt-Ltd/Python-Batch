@@ -1,1 +1,22 @@
-in side this folder i will create my git hub notes
+in side this folder i will create my git hub notes 
+# Git commands 
+ 1.git --version OR -V 
+ Purpose:check if git is installed and see its version.
+
+ 2.git clone <-link>
+ purpose:copy a github repository to your computer.
+
+ 3.git status
+ purpose:check the current status of your git project OR
+         show which files are changed, added, or ready to be committed.
+
+ 4:git add.
+ purpose:Adds all changed files for the next commit.
+ OR git add <filename>
+ purpoes:adds only the specfied file for the next commit.
+
+ 5.git commit -m "message"
+ purpose:save your changes in git with a short message.
+
+ 6.git push origin main 
+ purpose:upload your committed changes to github.
