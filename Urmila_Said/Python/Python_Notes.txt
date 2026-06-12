@@ -50,3 +50,4 @@ Python is a simple,dynamic,high-level,interpreted and general purpose programmin
    A single-line comment starts with #.
 2. Multi-line comment
    Multi-line comments are written using triple quotes (''' or """).
+   
