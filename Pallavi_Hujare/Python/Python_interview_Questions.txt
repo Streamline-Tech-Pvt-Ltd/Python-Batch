@@ -154,3 +154,114 @@ Assignment Operator	     Comparison Operator
 Assigns value	             Compares values
 
 
+
+#####Data_type#####
+
+1. What is a data type in Python?
+Answer:
+A data type specifies the type of value stored in a variable.
+Example:
+x = 10
+Here, 10 is of type int.
+
+
+2. What are the built-in data types in Python?
+Answer:
+Numeric → int, float, complex
+Text → str
+Sequence → list, tuple, range
+Set → set, frozenset
+Mapping → dict
+Boolean → bool
+Binary → bytes, bytearray, memoryview
+None Type → NoneType
+
+
+3. What is an Integer (int)?
+Answer:
+An integer is a whole number without a decimal point.
+Example:
+age = 25
+
+4. What is a Float (float)?
+Answer:
+A float is a number with a decimal point.
+Example:
+salary = 25000.50
+
+
+5. What is a Complex Data Type?
+Answer:
+A complex number contains a real and imaginary part.
+Example:
+x = 2 + 3j
+
+6. What is a String (str)?
+Answer:
+A string is a collection of characters enclosed in quotes.
+Example:
+name = "Pallavi"
+
+
+7. What is a List?
+Answer:
+A list is an ordered and mutable collection.
+Example:
+fruits = ["Apple", "Mango", "Banana"]
+
+8. What is a Tuple?
+Answer:
+A tuple is an ordered and immutable collection.
+Example:
+data = (10, 20, 30)
+
+9. Difference between List and Tuple?
+List	Tuple
+Mutable	Immutable
+Uses []	Uses ()
+Can modify data	Cannot modify data
+
+
+######indexing#####
+
+Q. What is indexing in Python?
+A:
+Indexing is used to access individual elements of a sequence (string, list, tuple) using their position number.
+Example:
+name = "Python"
+print(name[0])
+Output:
+P
+
+Q.Difference between positive and negative indexing?
+A.Positive Indexing	         Negative Indexing
+Starts from 0               	Starts from -1
+Left to Right	               Right to Left
+First element = 0          	Last element = -1
+
+Q.What is slicing in Python?
+A:Slicing is used to extract a portion (multiple elements) from a string, list, or tuple.
+Example:
+name = "Python"
+print(name[1:4])
+Output:
+yth
+
+Q.What is the syntax of slicing?
+A:sequence[start : stop : step]
+   start → Starting index
+   stop → Ending index (not included)
+   step → Increment/skip value
+
+
+Q.What is the difference between indexing and slicing?
+A:
+    Indexing                  	Slicing
+Returns one element         	Returns multiple elements
+Uses one index	               Uses start:stop
+Example: name[0]            	Example: name[0:3]
+
+Q: What does [::-1] do in Python?
+A: [::-1] reverses a sequence (string, list, or tuple) by traversing it from the end to the beginning using a step value of -1.
+
+
