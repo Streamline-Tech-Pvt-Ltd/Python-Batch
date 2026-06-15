@@ -57,7 +57,11 @@ A. Sequential Programming – statements execute one after another.
           Polymorphism	                             Many Forms
           Abstraction	                           Hiding Complexity
 
+<<<<<<< HEAD
 
+=======
+ Date :
+>>>>>>> 2ec9d9d (updated Notes)
 
 
 Q. What is a variable in Python?
@@ -111,7 +115,10 @@ print(name1)
 student_name = "Pallavi"
 print(student_name)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2ec9d9d (updated Notes)
 Q.What is a keyword in Python?
 A: A keyword is a reserved word with a predefined meaning and cannot be used as a variable name.35 keywords.
 Examples:
@@ -151,6 +158,7 @@ Q.Difference between = and == ?
 A:
      =	                           ==
 Assignment Operator	     Comparison Operator
+<<<<<<< HEAD
 Assigns value	             Compares values
 
 
@@ -265,3 +273,6 @@ Q: What does [::-1] do in Python?
 A: [::-1] reverses a sequence (string, list, or tuple) by traversing it from the end to the beginning using a step value of -1.
 
 
+=======
+Assigns value	             Compares values
+>>>>>>> 2ec9d9d (updated Notes)
