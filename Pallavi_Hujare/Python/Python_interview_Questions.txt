@@ -56,3 +56,101 @@ A. Sequential Programming – statements execute one after another.
           Inheritance	                             Code Reuse
           Polymorphism	                             Many Forms
           Abstraction	                           Hiding Complexity
+
+
+
+
+Q. What is a variable in Python?
+A: A variable is a name used to store data in memory.
+i.e:
+name = "Pallavi"
+
+ Q.What are the rules for naming variables?
+ A.# Rule 1: Variable name should start with A-Z, a-z, or _
+name = "Pallavi"
+print(name)
+
+_name = "Pallavi"
+print(_name)
+
+# Rule 2: Variable names are case-sensitive
+Name = "Pallavi"
+name = "Hujare"
+
+print(Name)  # Pallavi
+print(name)  # Hujare
+
+# Rule 3: Special characters are not allowed
+# Invalid:
+# @name = "Pallavi"
+# print(@name)
+
+# Rule 4: Spaces are not allowed
+# Invalid:
+# my name = "Pallavi"
+# print(my name)
+
+# Correct:
+my_name = "Pallavi"
+print(my_name)
+
+# Rule 5: Variable name cannot start with a number
+# Invalid:
+# 1Name = "Pallavi"
+
+# Correct:
+name1 = "Pallavi"
+print(name1)
+
+# Rule 6: Keywords cannot be used as variable names
+# Invalid:
+# if = "Pallavi"
+# print(if)
+
+# Correct:
+student_name = "Pallavi"
+print(student_name)
+
+
+Q.What is a keyword in Python?
+A: A keyword is a reserved word with a predefined meaning and cannot be used as a variable name.35 keywords.
+Examples:
+if, else, for, while, class, def
+Code:import keyword
+     print(keyword.kwlist)
+
+
+Q.What is an f-string?
+A: An f-string is used to insert variables directly inside a string.
+Example:
+name = "Pallavi"
+print(f"My name is {name}")
+Output:
+My name is Pallavi
+
+
+Q.What is the input() function?
+A: It is used to take input from the user.t always returns a string (str).
+Example:
+name = input("Enter your name: ")
+
+Q.What is type casting?
+A: Converting one data type into another.
+Example:
+age = int("25")
+
+
+Q.Difference between input() and print()?
+A:
+   input()            	        print()
+Takes input from user	   Displays output
+Reads data	               Shows data
+
+
+Q.Difference between = and == ?
+A:
+     =	                           ==
+Assignment Operator	     Comparison Operator
+Assigns value	             Compares values
+
+
