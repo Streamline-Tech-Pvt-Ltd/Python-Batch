@@ -11,24 +11,32 @@
 # Negative indexing start from right to left
 
 # Ex:
-# 1. List = [10,20,30,40,50,60]
-
-# print(List[1:3:1])
-# print(List[1:4:2])
-# print(List[1:6:4])
-
- List = [10,20,30,[40,50,60],70,80,90]
+List = [10,20,30,40,50,60]
  
-# print(List[3][0:3:2])
-# print(List[4:7:2])
-# print(List[1:6:6])
+print(List[1:3:1])
+# OUTPUT:[20,30]
 
- print(List[-1:-10:-2])
+print(List[1:4:2])
+# OUTPUT:[20,40]
+
+print(List[1:6:4])
+# OUTPUT:[20,60]
+
+List = [10,20,30,[40,50,60],70,80,90]
+ 
+print(List[3][0:3:2])
+# OUTPUT:[40,60]
+
+print(List[4:7:2])
+# OUTPUT:[70,90]
+
+print([List[-1], List[-6]])
+# OUTPUT:[90,20]
 
 
- # List = [10,20,30,[40,50,[60,70,80],25,35,45],55,65,74]
+List = [10,20,30,[40,50,[60,70,80],25,35,45],55,65,74]
 
-# print(List[4][1:3:1])
+print(List[1][1:5])
 
 
 
