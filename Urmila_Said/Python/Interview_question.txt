@@ -124,6 +124,172 @@ Ans:.Keywords are reserved words in Python that have special meanings and cannot
   # Syntax
    import keyword 
    print(keyword.kwlist)
+
+ 11.What is an f-string ?
+ Ans:.An f-string (formatted string) is used to insert 
+      variables or expressions directly inside a string using {} brackets.
+      *Syntax:f"string {variable}"
+      EX:name = "Urmila"
+         age = 20
+         print(f"My name is {name} and I am {age} years old.")
+
+ 12.What is input function ?
+ Ans:.The input() function is used to take input from the user through the keyboard.
+    Ex:name = input("Enter your name: ")
+       print("Hello", name)
+
+13.What is type Casting ?
+Ans:Type Casting means converting one data type into another data type.
+
+14.Difference between input() and print()
+Ans:
+|input()                                       | print()                               |
+| -------------------------------------------- | ------------------------------------- |
+| Used to take input from the user.            | Used to display output on the screen. |
+| Returns data as a string (`str`) by default. | Displays any type of data.            |
+| Waits for the user to enter a value.         | Does not wait for user input.         |
+| Used for accepting data.                     | Used for showing data.                |
+
+15.Difference Between Assignment and comparison operator.
+Ans:
+    = (Assignment Operator)	                   == (Comparison Operator)
+  Used to assign a value to a variable.     	    Used to compare two values.
+  Stores data in a variable.	                   Returns True or False.
+  Does not perform comparison.	                Checks whether values are equal.
+
+
+# Data types
+
+16.What is a data type in a python ?
+Ans:Data types are used to store different types of  data in a variable.
+
+17.What are the built-in data types in Python?
+Ans:Numeric → int, float, complex
+Text → str
+Sequence → list, tuple, range
+Set → set, frozenset
+Mapping → dict
+Boolean → bool
+Binary → bytes, bytearray, memoryview
+None Type → NoneType
+
+18.What is an Integer (int) ?
+Ans:.Stores whole numbers (without decimal points).
+    Ex:age = 20
+       marks = 95
+
+19.What is a Float (float) ?
+Ans:.Stores decimal numbers.
+    Ex:.price = 99.99
+        height = 5.8
+
+20.What is a Complex Data Type ?
+Ans:Stores numbers with a real and imaginary part.
+   Ex:.num = 2 + 3j
+
+21.What is a String (str) ?
+Ans:.A string is a collection of characters enclosed in quotes.
+    Ex:name = "Urmila"
+       city = 'Pune'
+
+22.What is a List?
+Ans:.An ordered and mutable collection.
+     Ex:.numbers = [10, 20, 30, 40]
+
+23.What is a Tuple ?
+Ans:.An ordered but immutable collection.
+    Features:
+    * Ordered
+    * Immutable (cannot be changed)
+    * Allows duplicates
+    Ex:.data = (10, 20, 30)
+  
+24.What is set() ?
+Ans:.An unordered collection of unique values.
+    Ex: nums = {10, 20, 30, 20}
+        print(nums)  
+
+25.What is boolean(bool) ?
+Ans:.Stores only two values:
+     True
+     False 
+     Ex:is_student = True
+        is_married = False
+
+26.What is ditionary(dict) ?
+Ans:.Stores data in key-value pairs.
+    Ex:student = {
+    "name": "Urmila",
+    "age": 20
+    }
+
+27.What is Range (range) ?
+Ans:.Generates a sequence of numbers.
+   Ex:.r = range(1, 6)
+      for i in r:
+          print(i)    
+
+28.Difference between List and Tuple ?
+Ans:
+| List                                        | Tuple                          |
+| ------------------------------------------- | ------------------------------ |
+| Uses `[]`                                   | Uses `()`                      |
+| Mutable (can change)                        | Immutable (cannot change)      |
+| Supports `append()`, `remove()`, `extend()` | Does not support these methods |
+| Uses more memory                            | Uses less memory               |
+| Slower than tuple                           | Faster than list               |
+| Used for dynamic data                       | Used for fixed data            |
+
+29.What is indexing in python ?
+Ans:Indexing is used to access individual elements (characters or items) from a sequence
+    such as a string, list, tuple, etc., using their position number called an index.
+
+    * Positive Indexing: Positive indexing starts from 0 and moves from left to right.
+      Ex:name = "Python"
+        print(name[0])  # P
+        print(name[1])  # y
+        print(name[2])  # t
+
+    * Negative Indexing: Negative indexing starts from -1 and moves from right to left.
+      Ex:name = "Python"
+         print(name[-1])  # n
+         print(name[-2])  # o
+         print(name[-3])  # h
+
+30.What is slicing in Python ?
+Ans:Slicing is used to access a range of multiple elements from a string, list, or tuple.
+    * sequence[start : stop : step]
+
+    start → Starting index (included)
+    stop → Ending index (Index it will stop before that number)
+    step → Increment/decrement value (Number of position to move)
+    Ex:numbers = [10, 20, 30, 40, 50]
+       print(numbers[1:4])
+
+31.What is the difference between indexing and slicing ?
+Ans:
+| Indexing                                  | Slicing                                         |
+| ----------------------------------------- | ----------------------------------------------- |
+| Used to access **one element** at a time. | Used to access **multiple elements** (a range). |
+| Returns a single value.                   | Returns a sequence (string, list, tuple, etc.). |
+| Uses one index position.                  | Uses start, stop, and step values.              |
+| Syntax: `sequence[index]`                 | Syntax: `sequence[start:stop:step]`             |
+
+32.What does [::-1] do in Python ?
+Ans:reverses a sequence (string, list, or tuple) by traversing it from the end to the beginning using a step value of -1.
+
+33.
+
+
+  
+      
+
+
+
+
+
+
+  
  
 
 
