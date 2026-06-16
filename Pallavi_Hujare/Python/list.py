@@ -99,3 +99,9 @@ print(max(l1))
 # sum()
 print(sum(l1))
 # Output: 15
+
+
+
+l1 = [1,2,3,4,5]
+print(l1[0])
+print(l1[4])
