@@ -9,7 +9,10 @@ List = [ 10,20,30,40,50,60]
 
 # positive
 print(List[1])
+# OUTPUT:20
+
 print(List[3])
+# OUTPUT:
 print(List[5])
 
 # Negative
