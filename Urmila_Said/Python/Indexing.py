@@ -12,14 +12,24 @@ print(List[1])
 # OUTPUT:20
 
 print(List[3])
-# OUTPUT:
+# OUTPUT:40
+
 print(List[5])
+# OUTPUT:60
 
 # Negative
 print(List[-1])
+# OUTPUT:60
+
 print(List[-6])
+# OUTPUT:10
+
 print(List[-3])
+# OUTPUT:40
+
 print(List[-5])
+# OUTPUT:20
+
 
 
 
