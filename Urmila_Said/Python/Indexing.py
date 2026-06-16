@@ -29,7 +29,20 @@ print(List[-3])
 
 print(List[-5])
 # OUTPUT:20
+  
+L2 = [15,25,35,45,55,65,75,85]
+ 
+print(L2[3])
+# OUTPUT:45
 
+print(L2[7])
+# OUTPUT:85
+
+print(L2[-7])
+# OUTPUT:25
+
+print(L2[-5])
+# OUTPUT:45
 
 
 

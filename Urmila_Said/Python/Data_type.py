@@ -13,8 +13,7 @@
  c = 4 + 5j
  print(type(c))
 
- #sequeance data type:list,tupple,string
-
+ 
  #dictionary data type:dict
  #set data type:set
 
