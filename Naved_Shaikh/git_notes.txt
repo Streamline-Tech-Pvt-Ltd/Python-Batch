@@ -10,7 +10,7 @@ in side this folder i will create my git hub notes
  purpose:check the current status of your git project OR
          show which files are changed, added, or ready to be committed.
 
- 4:git add.
+ 4:git add .
  purpose:Adds all changed files for the next commit.
  OR git add <filename>
  purpoes:adds only the specfied file for the next commit.
