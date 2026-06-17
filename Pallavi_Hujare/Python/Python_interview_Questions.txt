@@ -57,11 +57,7 @@ A. Sequential Programming – statements execute one after another.
           Polymorphism	                             Many Forms
           Abstraction	                           Hiding Complexity
 
-<<<<<<< HEAD
-
-=======
- Date :
->>>>>>> 2ec9d9d (updated Notes)
+ 
 
 
 Q. What is a variable in Python?
@@ -115,10 +111,6 @@ print(name1)
 student_name = "Pallavi"
 print(student_name)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2ec9d9d (updated Notes)
 Q.What is a keyword in Python?
 A: A keyword is a reserved word with a predefined meaning and cannot be used as a variable name.35 keywords.
 Examples:
@@ -158,121 +150,266 @@ Q.Difference between = and == ?
 A:
      =	                           ==
 Assignment Operator	     Comparison Operator
-<<<<<<< HEAD
 Assigns value	             Compares values
 
 
 
-#####Data_type#####
-
-1. What is a data type in Python?
-Answer:
-A data type specifies the type of value stored in a variable.
+Q. What is a List?
+A: A list is an ordered, mutable collection used to store multiple values.
 Example:
-x = 10
-Here, 10 is of type int.
+l1 = [10, 20, 30, 40]
 
 
-2. What are the built-in data types in Python?
-Answer:
-Numeric → int, float, complex
-Text → str
-Sequence → list, tuple, range
-Set → set, frozenset
-Mapping → dict
-Boolean → bool
-Binary → bytes, bytearray, memoryview
-None Type → NoneType
-
-
-3. What is an Integer (int)?
-Answer:
-An integer is a whole number without a decimal point.
+Q. What is a Tuple?
+A: A tuple is an ordered, immutable collection used to store multiple values.
 Example:
-age = 25
-
-4. What is a Float (float)?
-Answer:
-A float is a number with a decimal point.
-Example:
-salary = 25000.50
+t1 = (10, 20, 30, 40)
 
 
-5. What is a Complex Data Type?
-Answer:
-A complex number contains a real and imaginary part.
-Example:
-x = 2 + 3j
-
-6. What is a String (str)?
-Answer:
-A string is a collection of characters enclosed in quotes.
+Q. What is a String?
+A: A string is a sequence of characters enclosed in single or double quotes.
 Example:
 name = "Pallavi"
 
 
-7. What is a List?
-Answer:
-A list is an ordered and mutable collection.
+Q. What is a Boolean Data Type?
+A: A Boolean data type stores only two values: True or False.
 Example:
-fruits = ["Apple", "Mango", "Banana"]
+is_student = True
+is_logged_in = False
 
-8. What is a Tuple?
-Answer:
-A tuple is an ordered and immutable collection.
+
+Q. Difference Between List and Tuple?
+
+      List	                                    Tuple
+Mutable (can be modified)	         Immutable (cannot be modified)
+Uses square brackets []          	Uses parentheses ()
+Has more built-in methods        	Has fewer built-in methods
+Slower compared to tuple	         Faster compared to list
+
 Example:
-data = (10, 20, 30)
-
-9. Difference between List and Tuple?
-List	Tuple
-Mutable	Immutable
-Uses []	Uses ()
-Can modify data	Cannot modify data
+l1 = [10, 20, 30]   # Can be modified
+t1 = (10, 20, 30)   # Cannot be modified
 
 
-######indexing#####
-
-Q. What is indexing in Python?
-A:
-Indexing is used to access individual elements of a sequence (string, list, tuple) using their position number.
+Q. Is a List mutable or immutable?
+A: List is mutable.
 Example:
-name = "Python"
-print(name[0])
-Output:
-P
+l1 = [10, 20]
+l1.append(30)
 
-Q.Difference between positive and negative indexing?
-A.Positive Indexing	         Negative Indexing
-Starts from 0               	Starts from -1
-Left to Right	               Right to Left
-First element = 0          	Last element = -1
 
-Q.What is slicing in Python?
-A:Slicing is used to extract a portion (multiple elements) from a string, list, or tuple.
+Q. Is a Tuple mutable or immutable?
+A: Tuple is immutable.
+Example:
+t1 = (10, 20, 30)
+
+
+Q. Is a String mutable or immutable?
+A: String is immutable.
 Example:
 name = "Python"
-print(name[1:4])
+
+Q. Can a List store different data types?
+A: Yes, a list can store different data types.
+Example:
+l1 = [10, "Python", 5.5, True]
+
+
+Q. Can a Tuple store different data types?
+A: Yes, a tuple can store different data types.
+Example:
+t1 = (10, "Python", 5.5, True)
+
+
+Q. What are the Boolean values in Python?
+A: The Boolean values are True and False.
+Example:
+print(True)
+print(False)
+
+Q. Difference between append() and extend()?
+A: append() adds a single item, while extend() adds multiple items.
+Example:
+l1 = [1, 2]
+l1.append(3)      # [1, 2, 3]
+l2 = [1, 2]
+l2.extend([3, 4]) # [1, 2, 3, 4]
+
+Q. Difference between remove() and pop()?
+A: remove() deletes an element by value, while pop() deletes an element by index.
+Example:
+l1 = [10, 20, 30]
+l1.remove(20)  # Removes value 20
+l1.pop(1)      # Removes element at index 1  
+
+Q. What are Tuple methods?
+A: Tuple has only two built-in methods:
+count()
+index()
+Example:
+t1 = (10, 20, 10, 30)
+print(t1.count(10))
+print(t1.index(20))
+
+Q. What is the difference between upper() and lower()?
+A: upper() converts a string to uppercase, while lower() converts a string to lowercase.
+Example:
+name = "Python"
+print(name.upper())  # PYTHON
+print(name.lower())  # python
+
+
+Q. What does split() do?
+A: split() converts a string into a list by separating words.
+Example:
+text = "Python Java SQL"
+print(text.split())
 Output:
-yth
+['Python', 'Java', 'SQL']
 
-Q.What is the syntax of slicing?
-A:sequence[start : stop : step]
-   start → Starting index
-   stop → Ending index (not included)
-   step → Increment/skip value
+Q. What does replace() do?
+A: replace() replaces one value with another in a string.
+Example:
+name = "Python"
+print(name.replace("Python", "Java"))
+Output:
+Java
 
-
-Q.What is the difference between indexing and slicing?
-A:
-    Indexing                  	Slicing
-Returns one element         	Returns multiple elements
-Uses one index	               Uses start:stop
-Example: name[0]            	Example: name[0:3]
-
-Q: What does [::-1] do in Python?
-A: [::-1] reverses a sequence (string, list, or tuple) by traversing it from the end to the beginning using a step value of -1.
+Q. Why is Tuple faster than List?
+A: Tuple is faster because it is immutable (cannot be changed), so Python uses less memory and performs operations more efficiently.
+Example:
+t1 = (10, 20, 30)
+l1 = [10, 20, 30]
 
 
-=======
-Assigns value	             Compares values
->>>>>>> 2ec9d9d (updated Notes)
+Q. What is a Set in Python?
+Answer:
+A Set is an unordered collection of unique elements. It does not allow duplicate values and is defined using curly braces {}.
+s = {10, 20, 30}
+
+
+Q. What are the characteristics of a Set?
+Answer:
+Unordered
+Mutable (can be modified)
+Does not allow duplicate values
+Does not support indexing or slicing
+
+Q. Why are Sets used in Python?
+Answer:
+Sets are used to store unique values and perform mathematical operations such as union, intersection, and difference efficiently.
+
+
+Q. What is the difference between a List and a Set?
+List	Set
+Ordered	Unordered
+Allows duplicates	No duplicates
+Supports indexing	No indexing
+Written using []	Written using {}
+
+Q. What is the difference between remove() and discard() in a Set?
+Answer:
+remove() raises an error if the element is not present.
+discard() does not raise an error if the element is not present.
+
+Q. Can a Set contain mutable objects like Lists?
+Answer:
+No. Lists are mutable and cannot be stored inside a Set.
+# Invalid
+s = {1, 2, [3, 4]}
+
+Q. What is the difference between add() and update()?
+Answer:
+add() adds a single element.
+update() adds multiple elements.
+
+Q. Why does a Set not support indexing?
+Answer:
+Because Sets are unordered collections and do not maintain element positions.
+
+Q. What is a Frozen Set?
+Answer:
+A Frozen Set is an immutable version of a Set. Once created, it cannot be modified.
+fs = frozenset([1, 2, 3])
+
+Q. Explain Set operations in Python.
+Answer:
+Union (|) → Combines elements from both sets.
+Intersection (&) → Common elements.
+Difference (-) → Elements present in first set but not second.
+Symmetric Difference (^) → Elements present in either set but not both.
+
+
+Q. What is a Dictionary in Python?
+Answer:
+A Dictionary is a collection of data stored in key-value pairs.
+
+student = {
+    "name": "Pallavi",
+    "age": 22
+}
+
+Q. What are the characteristics of a Dictionary?
+Answer:
+Stores data in key-value pairs
+Mutable
+Keys must be unique
+Values can be duplicated
+Fast data retrieval using keys
+
+Q. What is the difference between a List and a Dictionary?
+List                    	Dictionary
+Access by index	     Access by key
+Ordered collection	  Key-value pairs
+Uses []	                 Uses {}
+
+Q. Can Dictionary keys be duplicated?
+Answer:
+No. Keys must be unique. If duplicate keys are provided, the last value overwrites the previous one.
+
+d = {"a": 1, "a": 2}
+print(d)
+# Output: {'a': 2}
+
+
+Q. Can Dictionary values be duplicated?
+Answer:
+Yes. Multiple keys can have the same value.
+
+d = {"a": 100, "b": 100}
+
+Q. What is the difference between get() and direct key access?
+Answer:
+get() returns None if the key is not found.
+Direct access raises a KeyError.
+
+Q. What is the difference between pop() and del?
+Answer:
+pop() removes an item and returns its value.
+del removes an item without returning a value.
+
+Q. What do keys(), values(), and items() methods return?
+Answer:
+keys() → All keys
+values() → All values
+items() → All key-value pairs
+
+Q. Can a Dictionary be nested?
+Answer:
+Yes. A Dictionary can contain another Dictionary.
+
+student = {
+    "name": "Pallavi",
+    "marks": {
+        "Python": 90,
+        "Java": 85
+    }
+}
+
+
+Q. Why are Dictionaries faster for searching data?
+Answer:
+Because Dictionaries use a hash table internally, allowing quick access to values using keys.
+
+
