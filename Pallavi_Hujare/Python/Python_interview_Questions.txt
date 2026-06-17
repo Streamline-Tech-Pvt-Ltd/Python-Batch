@@ -56,3 +56,360 @@ A. Sequential Programming – statements execute one after another.
           Inheritance	                             Code Reuse
           Polymorphism	                             Many Forms
           Abstraction	                           Hiding Complexity
+
+ 
+
+
+Q. What is a variable in Python?
+A: A variable is a name used to store data in memory.
+i.e:
+name = "Pallavi"
+
+ Q.What are the rules for naming variables?
+ A.# Rule 1: Variable name should start with A-Z, a-z, or _
+name = "Pallavi"
+print(name)
+
+_name = "Pallavi"
+print(_name)
+
+# Rule 2: Variable names are case-sensitive
+Name = "Pallavi"
+name = "Hujare"
+
+print(Name)  # Pallavi
+print(name)  # Hujare
+
+# Rule 3: Special characters are not allowed
+# Invalid:
+# @name = "Pallavi"
+# print(@name)
+
+# Rule 4: Spaces are not allowed
+# Invalid:
+# my name = "Pallavi"
+# print(my name)
+
+# Correct:
+my_name = "Pallavi"
+print(my_name)
+
+# Rule 5: Variable name cannot start with a number
+# Invalid:
+# 1Name = "Pallavi"
+
+# Correct:
+name1 = "Pallavi"
+print(name1)
+
+# Rule 6: Keywords cannot be used as variable names
+# Invalid:
+# if = "Pallavi"
+# print(if)
+
+# Correct:
+student_name = "Pallavi"
+print(student_name)
+
+Q.What is a keyword in Python?
+A: A keyword is a reserved word with a predefined meaning and cannot be used as a variable name.35 keywords.
+Examples:
+if, else, for, while, class, def
+Code:import keyword
+     print(keyword.kwlist)
+
+
+Q.What is an f-string?
+A: An f-string is used to insert variables directly inside a string.
+Example:
+name = "Pallavi"
+print(f"My name is {name}")
+Output:
+My name is Pallavi
+
+
+Q.What is the input() function?
+A: It is used to take input from the user.t always returns a string (str).
+Example:
+name = input("Enter your name: ")
+
+Q.What is type casting?
+A: Converting one data type into another.
+Example:
+age = int("25")
+
+
+Q.Difference between input() and print()?
+A:
+   input()            	        print()
+Takes input from user	   Displays output
+Reads data	               Shows data
+
+
+Q.Difference between = and == ?
+A:
+     =	                           ==
+Assignment Operator	     Comparison Operator
+Assigns value	             Compares values
+
+
+
+Q. What is a List?
+A: A list is an ordered, mutable collection used to store multiple values.
+Example:
+l1 = [10, 20, 30, 40]
+
+
+Q. What is a Tuple?
+A: A tuple is an ordered, immutable collection used to store multiple values.
+Example:
+t1 = (10, 20, 30, 40)
+
+
+Q. What is a String?
+A: A string is a sequence of characters enclosed in single or double quotes.
+Example:
+name = "Pallavi"
+
+
+Q. What is a Boolean Data Type?
+A: A Boolean data type stores only two values: True or False.
+Example:
+is_student = True
+is_logged_in = False
+
+
+Q. Difference Between List and Tuple?
+
+      List	                                    Tuple
+Mutable (can be modified)	         Immutable (cannot be modified)
+Uses square brackets []          	Uses parentheses ()
+Has more built-in methods        	Has fewer built-in methods
+Slower compared to tuple	         Faster compared to list
+
+Example:
+l1 = [10, 20, 30]   # Can be modified
+t1 = (10, 20, 30)   # Cannot be modified
+
+
+Q. Is a List mutable or immutable?
+A: List is mutable.
+Example:
+l1 = [10, 20]
+l1.append(30)
+
+
+Q. Is a Tuple mutable or immutable?
+A: Tuple is immutable.
+Example:
+t1 = (10, 20, 30)
+
+
+Q. Is a String mutable or immutable?
+A: String is immutable.
+Example:
+name = "Python"
+
+Q. Can a List store different data types?
+A: Yes, a list can store different data types.
+Example:
+l1 = [10, "Python", 5.5, True]
+
+
+Q. Can a Tuple store different data types?
+A: Yes, a tuple can store different data types.
+Example:
+t1 = (10, "Python", 5.5, True)
+
+
+Q. What are the Boolean values in Python?
+A: The Boolean values are True and False.
+Example:
+print(True)
+print(False)
+
+Q. Difference between append() and extend()?
+A: append() adds a single item, while extend() adds multiple items.
+Example:
+l1 = [1, 2]
+l1.append(3)      # [1, 2, 3]
+l2 = [1, 2]
+l2.extend([3, 4]) # [1, 2, 3, 4]
+
+Q. Difference between remove() and pop()?
+A: remove() deletes an element by value, while pop() deletes an element by index.
+Example:
+l1 = [10, 20, 30]
+l1.remove(20)  # Removes value 20
+l1.pop(1)      # Removes element at index 1  
+
+Q. What are Tuple methods?
+A: Tuple has only two built-in methods:
+count()
+index()
+Example:
+t1 = (10, 20, 10, 30)
+print(t1.count(10))
+print(t1.index(20))
+
+Q. What is the difference between upper() and lower()?
+A: upper() converts a string to uppercase, while lower() converts a string to lowercase.
+Example:
+name = "Python"
+print(name.upper())  # PYTHON
+print(name.lower())  # python
+
+
+Q. What does split() do?
+A: split() converts a string into a list by separating words.
+Example:
+text = "Python Java SQL"
+print(text.split())
+Output:
+['Python', 'Java', 'SQL']
+
+Q. What does replace() do?
+A: replace() replaces one value with another in a string.
+Example:
+name = "Python"
+print(name.replace("Python", "Java"))
+Output:
+Java
+
+Q. Why is Tuple faster than List?
+A: Tuple is faster because it is immutable (cannot be changed), so Python uses less memory and performs operations more efficiently.
+Example:
+t1 = (10, 20, 30)
+l1 = [10, 20, 30]
+
+
+Q. What is a Set in Python?
+Answer:
+A Set is an unordered collection of unique elements. It does not allow duplicate values and is defined using curly braces {}.
+s = {10, 20, 30}
+
+
+Q. What are the characteristics of a Set?
+Answer:
+Unordered
+Mutable (can be modified)
+Does not allow duplicate values
+Does not support indexing or slicing
+
+Q. Why are Sets used in Python?
+Answer:
+Sets are used to store unique values and perform mathematical operations such as union, intersection, and difference efficiently.
+
+
+Q. What is the difference between a List and a Set?
+List	Set
+Ordered	Unordered
+Allows duplicates	No duplicates
+Supports indexing	No indexing
+Written using []	Written using {}
+
+Q. What is the difference between remove() and discard() in a Set?
+Answer:
+remove() raises an error if the element is not present.
+discard() does not raise an error if the element is not present.
+
+Q. Can a Set contain mutable objects like Lists?
+Answer:
+No. Lists are mutable and cannot be stored inside a Set.
+# Invalid
+s = {1, 2, [3, 4]}
+
+Q. What is the difference between add() and update()?
+Answer:
+add() adds a single element.
+update() adds multiple elements.
+
+Q. Why does a Set not support indexing?
+Answer:
+Because Sets are unordered collections and do not maintain element positions.
+
+Q. What is a Frozen Set?
+Answer:
+A Frozen Set is an immutable version of a Set. Once created, it cannot be modified.
+fs = frozenset([1, 2, 3])
+
+Q. Explain Set operations in Python.
+Answer:
+Union (|) → Combines elements from both sets.
+Intersection (&) → Common elements.
+Difference (-) → Elements present in first set but not second.
+Symmetric Difference (^) → Elements present in either set but not both.
+
+
+Q. What is a Dictionary in Python?
+Answer:
+A Dictionary is a collection of data stored in key-value pairs.
+
+student = {
+    "name": "Pallavi",
+    "age": 22
+}
+
+Q. What are the characteristics of a Dictionary?
+Answer:
+Stores data in key-value pairs
+Mutable
+Keys must be unique
+Values can be duplicated
+Fast data retrieval using keys
+
+Q. What is the difference between a List and a Dictionary?
+List                    	Dictionary
+Access by index	     Access by key
+Ordered collection	  Key-value pairs
+Uses []	                 Uses {}
+
+Q. Can Dictionary keys be duplicated?
+Answer:
+No. Keys must be unique. If duplicate keys are provided, the last value overwrites the previous one.
+
+d = {"a": 1, "a": 2}
+print(d)
+# Output: {'a': 2}
+
+
+Q. Can Dictionary values be duplicated?
+Answer:
+Yes. Multiple keys can have the same value.
+
+d = {"a": 100, "b": 100}
+
+Q. What is the difference between get() and direct key access?
+Answer:
+get() returns None if the key is not found.
+Direct access raises a KeyError.
+
+Q. What is the difference between pop() and del?
+Answer:
+pop() removes an item and returns its value.
+del removes an item without returning a value.
+
+Q. What do keys(), values(), and items() methods return?
+Answer:
+keys() → All keys
+values() → All values
+items() → All key-value pairs
+
+Q. Can a Dictionary be nested?
+Answer:
+Yes. A Dictionary can contain another Dictionary.
+
+student = {
+    "name": "Pallavi",
+    "marks": {
+        "Python": 90,
+        "Java": 85
+    }
+}
+
+
+Q. Why are Dictionaries faster for searching data?
+Answer:
+Because Dictionaries use a hash table internally, allowing quick access to values using keys.
+
+
