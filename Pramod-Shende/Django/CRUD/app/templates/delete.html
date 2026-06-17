@@ -1,0 +1,73 @@
+{% extends "templates/index.html" %}
+
+{% block title %}delete{% endblock %}
+
+{% block content %}
+<div
+                class="modal fade"
+                id="deleteModal_{{ intern.id }}"
+                tabindex="-1">
+
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+
+                            <h5 class="modal-title">
+                                Delete Intern
+                            </h5>
+
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal">
+                            </button>
+
+                        </div>
+
+                        <div class="modal-body">
+                            Are you sure you want to delete
+                            <strong>{{ intern.name }}</strong> ?
+                        </div>
+
+                        <div class="modal-footer">
+
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal">
+                                Cancel
+                            </button>
+
+                            <form method="POST">
+
+                                {% csrf_token %}
+
+                                <input
+                                    type="hidden"
+                                    name="intern_id"
+                                    value="{{ intern.id }}">
+
+                                <button
+                                    type="submit"
+                                    name="delete"
+                                    class="btn btn-danger">
+                                    Delete
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+</div>
+
+{% endblock %}

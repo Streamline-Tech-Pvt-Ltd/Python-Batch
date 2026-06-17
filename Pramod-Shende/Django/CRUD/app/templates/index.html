@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <title>Intern CRUD</title>
+</head>
+<body>
+
+<div class="container mt-5">
+
+    <h1 class="mb-4">
+        Welcome At Streamline Tech Pvt Ltd.
+    </h1>
+
+    <!-- Messages -->
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ message }}
+
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert">
+        </button>
+    </div>
+    {% endfor %}
+
+    <!-- Add Button -->
+    <button
+        class="btn btn-primary mb-3"
+        data-bs-toggle="modal"
+        data-bs-target="#addModal">
+        Add New Intern
+    </button>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Add New Intern
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <form method="POST" action="{% url 'add' %}">
+                    {% csrf_token %}
+
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input
+                                type="text"
+                                name="phone"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Department</label>
+                            <input
+                                type="text"
+                                name="department"
+                                class="form-control"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+                            Save
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Intern Table -->
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% for intern in interns %}
+
+            <tr>
+
+                <td>{{ intern.id }}</td>
+                <td>{{ intern.name }}</td>
+                <td>{{ intern.phone }}</td>
+                <td>{{ intern.email }}</td>
+                <td>{{ intern.department }}</td>
+
+                <td>
+
+                    <!-- Edit Button -->
+                    <button
+                        class="btn btn-success btn-sm"
+                        data-bs-toggle="modal"
+                        data-bs-target="#editModal_{{ intern.id }}">
+                        Edit
+                    </button>
+
+                    <!-- Edit Modal -->
+                    <div
+                        class="modal fade"
+                        id="editModal_{{ intern.id }}"
+                        tabindex="-1">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h5 class="modal-title">
+                                        Edit Intern
+                                    </h5>
+
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal">
+                                    </button>
+
+                                </div>
+
+                                <form method="POST" action="{% url 'update' %}">
+                                    {% csrf_token %}
+
+                                    <input
+                                        type="hidden"
+                                        name="intern_id"
+                                        value="{{ intern.id }}">
+
+                                    <div class="modal-body">
+
+                                        <div class="mb-3">
+                                            <label>Name</label>
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                class="form-control"
+                                                value="{{ intern.name }}"
+                                                required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Email</label>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                class="form-control"
+                                                value="{{ intern.email }}"
+                                                required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Phone</label>
+                                            <input
+                                                type="text"
+                                                name="phone"
+                                                class="form-control"
+                                                value="{{ intern.phone }}"
+                                                required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label>Department</label>
+                                            <input
+                                                type="text"
+                                                name="department"
+                                                class="form-control"
+                                                value="{{ intern.department }}"
+                                                required>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="modal-footer">
+
+                                        <button
+                                            type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal">
+                                            Close
+                                        </button>
+
+                                        <button
+                                            type="submit"
+                                            class="btn btn-primary">
+                                            Save Changes
+                                        </button>
+
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delete Button -->
+                    <button
+                        class="btn btn-danger btn-sm"
+                        data-bs-toggle="modal"
+                        data-bs-target="#deleteModal_{{ intern.id }}">
+                        Delete
+                    </button>
+
+                    <!-- Delete Modal -->
+                    <div
+                        class="modal fade"
+                        id="deleteModal_{{ intern.id }}"
+                        tabindex="-1">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h5 class="modal-title">
+                                        Delete Intern
+                                    </h5>
+
+                                    <button
+                                        type="button"
+                                        class="btn-close"
+                                        data-bs-dismiss="modal">
+                                    </button>
+
+                                </div>
+
+                                <div class="modal-body">
+
+                                    Are you sure you want to delete
+
+                                    <strong>
+                                        {{ intern.name }}
+                                    </strong> ?
+
+                                </div>
+
+                                <div class="modal-footer">
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">
+                                        Cancel
+                                    </button>
+
+                                    <form method="POST" action="{% url 'delete' %}">
+                                        {% csrf_token %}
+
+                                        <input
+                                            type="hidden"
+                                            name="intern_id"
+                                            value="{{ intern.id }}">
+
+                                        <button
+                                            type="submit"
+                                            class="btn btn-danger">
+                                            Delete
+                                        </button>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
