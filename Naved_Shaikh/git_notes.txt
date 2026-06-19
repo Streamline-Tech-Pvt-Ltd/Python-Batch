@@ -23,7 +23,7 @@ in side this folder i will create my git hub notes
 ----------------------------------------------------------------------------------------------------
 # Git Configration 
   Git Configration is used to set you name and email in Git and 
-  Helps Git identify who made the vhanges in a project.
+  Helps Git identify who made the changed in a project.
 
 * Git Configration commands
 1. Git config --global user.name "Username"
@@ -35,6 +35,7 @@ Ex:.Git config --global user.email "naveds2901@email.com"
 3.Git config --list
   shows all the git settings configured on your computer, such as username, email
   and other preferens.
+
 
 
  
