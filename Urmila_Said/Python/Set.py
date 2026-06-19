@@ -50,3 +50,23 @@ set1.add(5)
 print(set1)
 
 
+# Frozen Set:A frozenset is an immutable version of a set in Python.
+#A normal set can be modified (add, remove, update elements).
+#A frozenset cannot be modified after creation.
+fs = frozenset([10, 20, 30, 40])
+print(fs)
+print(type(fs))
+
+
+# Difference Between set and Frozen set.
+
+#| Set                                | Frozen Set                      |
+#| ---------------------------------- | ------------------------------- |
+#| Mutable (can be changed)           | Immutable (cannot be changed)   |
+#| Created using `set()`              | Created using `frozenset()`     |
+#| Supports `add()` method            | Does not support `add()`        |
+#| Supports `remove()` method         | Does not support `remove()`     |
+#| Supports `update()` method         | Does not support `update()`     |
+#| Not hashable                       | Hashable                        |
+#| Cannot be used as a dictionary key | Can be used as a dictionary key |
+#| Example: `{1, 2, 3}`               | Example: `frozenset({1, 2, 3})` |
