@@ -7,3 +7,5 @@ print("my college name is prathibha junior college")
 
 
 
+
+

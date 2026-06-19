@@ -20,3 +20,21 @@ in side this folder i will create my git hub notes
 
  6.git push origin main 
  purpose:upload your committed changes to github.
+----------------------------------------------------------------------------------------------------
+# Git Configration 
+  Git Configration is used to set you name and email in Git and 
+  Helps Git identify who made the vhanges in a project.
+
+* Git Configration commands
+1. Git config --global user.name "Username"
+Ex:.Git config --global user .name "navedshaikh2102" 
+ 
+2. Git config --global user.email "user email"
+Ex:.Git config --global user.email "naveds2901@email.com"
+
+3.Git config --list
+  shows all the git settings configured on your computer, such as username, email
+  and other preferens.
+
+
+ 
