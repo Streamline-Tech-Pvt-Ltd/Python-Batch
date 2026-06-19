@@ -1,4 +1,5 @@
  # Data Types:data types are used store different type of data in a variable.
+
  # Numeric data type:int,float,complex
 
  #int
@@ -14,8 +15,6 @@
  print(type(c))
 
  
- #dictionary data type:dict
- #set data type:set
 
  #boolean data type:bool
  isplaced = True
@@ -146,3 +145,6 @@ print(fruits.count("Mango"))
 # method is used to create a copy (duplicate) of a list.
 new_fruits = fruits.copy()
 print(fruits)
+
+
+

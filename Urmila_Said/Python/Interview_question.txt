@@ -278,18 +278,75 @@ Ans:
 32.What does [::-1] do in Python ?
 Ans:reverses a sequence (string, list, or tuple) by traversing it from the end to the beginning using a step value of -1.
 
-33.
+33.Difference between append() and extend() ?
+Ans:
+| Feature     |  append()                                  |  extend()                                     |
+| ----------- | ------------------------------------------ | --------------------------------------------- |
+| Purpose     | Adds a single element at the end of a list | Adds multiple elements from another iterable  |
+| Argument    | Takes one item                             | Takes an iterable (list, tuple, string, etc.) |
+| List Length | Increases by 1                             | Increases by the number of elements added     |
+| Output      | Element is added as a single item          | Elements are added individually               |
 
+33.Difference between remove() and POP() ?
+Ans:
+| Feature          |  remove()                                 |  pop()`                                       |
+| ---------------- | ----------------------------------------- | --------------------------------------------- |
+| Removes by       | **Value**                                 | **Index**                                     |
+| Return Value     | Does not return the removed item (`None`) | Returns the removed item                      |
+| Syntax           | `list.remove(value)`                      | `list.pop(index)`                             |
+| Default Behavior | Must specify the value                    | Removes the last element if no index is given |
+| Error            | `ValueError` if value not found           | `IndexError` if index is out of range         |
 
-  
-      
+34. Why are Sets used in Python ?
+Answer:Sets are used to store unique values and perform mathematical operations such as union,
+       intersection, and difference efficiently.
 
+35.Difference between list() and set() ?
+Ans:
+| Feature          | List                        | Set                                  |
+| ---------------- | --------------------------- | ------------------------------------ |
+| Definition       | Ordered collection of items | Unordered collection of unique items |
+| Syntax           | `[]`                        | `{}`                                 |
+| Duplicate Values | Allowed                     | Not Allowed                          |
+| Indexing         | Supported                   | Not Supported                        |
+| Mutable          | Yes                         | Yes                                  |
+| Order            | Maintains insertion order   | Does not guarantee order             |
+| Use Case         | Store ordered data          | Store unique data                    |
 
+36.difference between add() and update() ?
+Ans:
+| Feature                  | add()                 | update()                                  |
+| ------------------------ | --------------------- | ----------------------------------------- |
+| Purpose                  | Adds a single element | Adds multiple elements                    |
+| Argument                 | One element           | Iterable (list, tuple, set, string, etc.) |
+| Number of Elements Added | One                   | One or more                               |
+| Return Value             | `None`                | `None`                                    |
 
+36.What is dictionary in python and their characteristic ?
+Ans:A Dictionary is a built-in data type in Python used to store data in key-value pairs.
+   Each key is unique.
+   Values can be of any data type.
+   Dictionaries are mutable (can be modified after creation).
+   Dictionaries are written using curly braces {}.
 
+  # characteristic
+  1. Stores Data in Key-Value Pairs
+  2. Keys Must Be Unique
+  3. Values Can Be Duplicated
+  4. Mutable
 
+38.Difference between List and dictionary ?
+Ans:
+| Feature          | List                        | Dictionary                          |
+| ---------------- | --------------------------- | ----------------------------------- |
+| Definition       | Ordered collection of items | Collection of key-value pairs       |
+| Syntax           | `[]`                        | `{}`                                |
+| Access           | By index                    | By key                              |
+| Duplicate Values | Allowed                     | Values allowed, keys must be unique |
+| Order            | Ordered                     | Maintains insertion order           |
+| Data Storage     | Stores only values          | Stores key-value pairs              |
+| Example          | `[10, 20, 30]`              | `{"a":10, "b":20}`                  |
 
-  
  
 
 

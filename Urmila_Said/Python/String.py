@@ -58,10 +58,11 @@ print(str.startswith("M"))
 str = "Maharashtra"
 print(str.endswith("a"))
 
-#Tuple: Tuple is a collection of multiple data items in a simgle variable.
-# Tuple is denoted by ()
-#Tuple is immutable
-#tuple is ordered
+
+# 3.Tuple: Tuple is a collection of multiple data items in a simgle variable.
+   # Tuple is denoted by ()
+   #Tuple is immutable
+   #tuple is ordered
 
 tuple1 = (1,2,3,4,5,6,7,"India","Pune",[1,2,3])
 print(type(tuple))
