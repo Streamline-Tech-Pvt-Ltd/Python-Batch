@@ -28,7 +28,7 @@ print("Multiplication:",a * b)
 # 4.Division (/): Divides one number by another and returns a float value.
 a = 10
 b = 2
-print("Multiplication:",a / b)
+print("Division:",a / b)
 
 # 5.Modulus (%): Returns the remainder after division.
 a = 10
@@ -42,8 +42,8 @@ print("exponentiation:",a ** b)
 
 # 7. Floor Division (//) : Returns only the integer part of the division result (removes decimal part).
 a = 10
-a = 3
-print("Division:",a // b)
+b = 3
+print("Floor Division:",a // b)
 
 
 ## 2. Assignment operators : Assignment operators assign values to variables.
