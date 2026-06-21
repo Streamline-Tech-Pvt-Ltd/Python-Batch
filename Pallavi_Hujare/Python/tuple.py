@@ -35,7 +35,6 @@ tuple1 = (1,2,3,4,2,4,1,1,5,3,6)
 print(tuple1.count(2))
 
 
-
 t1 =("Apple","Bannana","Pinnapple","Graphs","Coconut")
 print(t1[1])
 print(t1[3])

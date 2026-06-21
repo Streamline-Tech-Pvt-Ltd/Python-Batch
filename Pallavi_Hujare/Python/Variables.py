@@ -49,7 +49,6 @@ student_name = "Pallavi"
 print(student_name)
 
 
-
 #Naming Conventions (Cases)
 
 # snake_case (recommended for variables)  #*******Variables & Functions → snake_case
