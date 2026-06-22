@@ -414,11 +414,11 @@ Answer:
 Because Dictionaries use a hash table internally, allowing quick access to values using keys.
 
 
-44. What is an operator in Python?
+Q. What is an operator in Python?
 Ans:An operator is a symbol that performs an operation on one
      or more operands (values or variables).
 
-45.What are the types of operators in Python?
+Q.What are the types of operators in Python?
 Ans:1.Arithmetic Operators
     2.Assignment Operators
     3.Comparison (Relational) Operators
@@ -427,7 +427,7 @@ Ans:1.Arithmetic Operators
     6.Membership Operators
     7.Identity Operators
 
-46.What is the difference between = and == ?
+Q.What is the difference between = and == ?
 Ans:
 | `=`                 | `==`                |
 | ------------------- | ------------------- |
@@ -435,7 +435,7 @@ Ans:
 | Assigns value       | Compares values     |
 | `a = 10`            | `a == 10`           |
 
-47.What are Arithmetic Operators ?
+Q.What are Arithmetic Operators ?
 Ans:Used for mathematical calculations.
     +   Addition
     -   Subtraction
@@ -445,35 +445,57 @@ Ans:Used for mathematical calculations.
     **  Exponentiation
     //  Floor Division
 
-48.What is the difference between / and // ?
+Q.What is the difference between / and // ?
 Ans: / returns a float value, while // returns the integer quotient.
    Ex:print(10 / 3)   # 3.3333
       print(10 // 3)  # 3
 
-49.What are Logical Operators ?
+Q.What are Logical Operators ?
 Ans:and - Returns True if both conditions are True
     or - Returns True if at least one condition is True
     not - Reverses the result
 
-50.What are Membership Operators ?
+Q.What are Membership Operators ?
 Ans:Used to check whether a value exists in a sequence.
    in
    not in
 
-51.What are Identity Operators?
+Q.What are Identity Operators?
 Ans:Used to compare object identities.
     is
     is not
 
-52.What is the highest precedence operator in Python ?
+Q.What is the highest precedence operator in Python ?
 Ans:() (Parentheses) have the highest precedence because expressions
      inside parentheses are evaluated first.
-      
-53.What is comparison Operator ?
+    
+Q.What is comparison Operator ?
 Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
     The result of a comparison is always either True or False.
 
     
+Q.What are Bitwise Operators?
+A:Bitwise operators perform operations on the binary representation (bits) of integers.
+Operators:
+&, |, ^, ~, <<, >>
+
+Q.What are Logical Operators in Python?
+A:Logical operators are used to combine conditional statements.
+and
+or
+not
+
+Q.What is the difference between and and &?
+A:
+     and	                                     &
+Logical Operator	               Bitwise Operator
+Works with Boolean values	        Works with bits
+Returns True/False	            Returns numeric result
 
 
-     
+Q.What is the difference between or and |?
+A:
+
+or                              	|
+Logical OR                 	Bitwise OR
+Works on conditions	         Works on bits
