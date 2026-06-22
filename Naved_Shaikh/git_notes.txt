@@ -34,7 +34,7 @@ Ex:.Git config --global user.email "naveds2901@email.com"
 
 3.Git config --list
   shows all the git settings configured on your computer, such as username, email
-  and other preferens.
+  and other preferens. 
 
 
 
