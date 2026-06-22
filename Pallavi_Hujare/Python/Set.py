@@ -11,7 +11,7 @@ print(type(s1))
 #1. clear() -
 s1 = {1,2,3,4,5,"apple"}
 s1.clear()
-print(s1)
+print(s1)   #set()
 
 #2. copy()
 s1 = {1,2,3,4,5,"apple"}
@@ -42,7 +42,7 @@ print(set1.union(set2))
 
 s1 = {1,2,3,4}
 s2 = {4,5,6}
-# print(s1.isdisjoint(s2))
+print(s1.isdisjoint(s2))
 
 #7. add()
 set1 = {1,2,3,4}

@@ -21,13 +21,13 @@ A. defines a block of code.
 Q. Difference Between Static Typing and Dynamic Typing
 A.   
     
-        Static Typing                                   Dynamic Typing
-
-    Variable type must be declared before use	        Variable type is determined automatically at runtime
-    Type checking occurs at compile time	            Type checking occurs at runtime
-    Less flexible	                                    More flexible
-    Faster execution	                                Slightly slower execution
-    Examples: Java, C, C++                          	Examples: Python, JavaScript
+        Static Typing                            |      Dynamic Typing
+    ---------------------------------------------|-------------------------------------------------------------
+    Variable type must be declared before use	 |      Variable type is determined automatically at runtime
+    Type checking occurs at compile time	       |    Type checking occurs at runtime
+    Less flexible	                               |    More flexible
+    Faster execution	                            |   Slightly slower execution
+    Examples: Java, C, C++                       |  	Examples: Python, JavaScript
 
 
 Q. What is IDE give me its 3 Example
@@ -50,12 +50,12 @@ A. Sequential Programming – statements execute one after another.
                             i.e:- argument , parameters
    Object-Oriented Programming (OOP) – programs are built using classes and objects.
                             
-            Pillar	                                 Meaning
-
-          Encapsulation 	                         Data Hiding
-          Inheritance	                             Code Reuse
-          Polymorphism	                             Many Forms
-          Abstraction	                           Hiding Complexity
+            Pillar	             |                    Meaning
+    ------------------------------|----------------------------------------
+          Encapsulation 	       |                 Data Hiding
+          Inheritance	          |                  Code Reuse
+          Polymorphism	          |                  Many Forms
+          Abstraction	          |                Hiding Complexity
 
  
 
@@ -359,10 +359,11 @@ Values can be duplicated
 Fast data retrieval using keys
 
 Q. What is the difference between a List and a Dictionary?
-List                    	Dictionary
-Access by index	     Access by key
-Ordered collection	  Key-value pairs
-Uses []	                 Uses {}
+List                   |    	Dictionary
+-----------------------|-----------------------
+Access by index	     |   Access by key
+Ordered collection	  |   Key-value pairs
+Uses []	              |    Uses {}
 
 Q. Can Dictionary keys be duplicated?
 Answer:
@@ -413,3 +414,66 @@ Answer:
 Because Dictionaries use a hash table internally, allowing quick access to values using keys.
 
 
+44. What is an operator in Python?
+Ans:An operator is a symbol that performs an operation on one
+     or more operands (values or variables).
+
+45.What are the types of operators in Python?
+Ans:1.Arithmetic Operators
+    2.Assignment Operators
+    3.Comparison (Relational) Operators
+    4.Logical Operators
+    5.Bitwise Operators
+    6.Membership Operators
+    7.Identity Operators
+
+46.What is the difference between = and == ?
+Ans:
+| `=`                 | `==`                |
+| ------------------- | ------------------- |
+| Assignment operator | Comparison operator |
+| Assigns value       | Compares values     |
+| `a = 10`            | `a == 10`           |
+
+47.What are Arithmetic Operators ?
+Ans:Used for mathematical calculations.
+    +   Addition
+    -   Subtraction
+    *   Multiplication
+    /   Division
+    %   Modulus
+    **  Exponentiation
+    //  Floor Division
+
+48.What is the difference between / and // ?
+Ans: / returns a float value, while // returns the integer quotient.
+   Ex:print(10 / 3)   # 3.3333
+      print(10 // 3)  # 3
+
+49.What are Logical Operators ?
+Ans:and - Returns True if both conditions are True
+    or - Returns True if at least one condition is True
+    not - Reverses the result
+
+50.What are Membership Operators ?
+Ans:Used to check whether a value exists in a sequence.
+   in
+   not in
+
+51.What are Identity Operators?
+Ans:Used to compare object identities.
+    is
+    is not
+
+52.What is the highest precedence operator in Python ?
+Ans:() (Parentheses) have the highest precedence because expressions
+     inside parentheses are evaluated first.
+      
+53.What is comparison Operator ?
+Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
+    The result of a comparison is always either True or False.
+
+    
+
+
+     

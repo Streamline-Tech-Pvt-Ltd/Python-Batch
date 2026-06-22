@@ -347,9 +347,108 @@ Ans:
 | Data Storage     | Stores only values          | Stores key-value pairs              |
 | Example          | `[10, 20, 30]`              | `{"a":10, "b":20}`                  |
 
- 
+39.What are the characteristics of a Set ?
+Ans:Elements do not have a fixed position.
+   Indexing and slicing are not supported
+   Duplicate values are automatically removed.
+   You can add or remove elements after creation.
+   A set can contain different data types.
+   Since sets are unordered, elements cannot be accessed by index.
 
+40.What is a Frozen Set?
+Ans:A Frozen Set is an immutable version of a Set. Once created, it cannot be modified.
+   fs = frozenset([1, 2, 3])
 
+41.Explain set operation in python ?
+Ans:Supports Set Operations
+    Union (|)
+    Intersection (&)
+    Difference (-)
+    Symmetric Difference (^)
+
+42.What are the characteristics of a dictionary ?
+Ans:1. Key-Value Pair - Data stored as key:value
+    2. Mutable - Can be modified
+    3. Keys Must Be Unique - Duplicate keys not allowed
+    4. Values Can Be Duplicated - Allowed
+    5. Accessed Using Keys - Access values using keys
+    6. Heterogeneous Data Allowed - Different data types allowed
+    7. Dynamic Size - Elements can be added or removed at runtime.
+    
+43.Difference Between set and Frozen set.
+Ans:
+ | Set                                | Frozen Set                      |
+ | ---------------------------------- | ------------------------------- |
+ | Mutable (can be changed)           | Immutable (cannot be changed)   |
+ | Created using `set()`              | Created using `frozenset()`     |
+ | Supports `add()` method            | Does not support `add()`        |
+ | Supports `remove()` method         | Does not support `remove()`     |
+ | Supports `update()` method         | Does not support `update()`     |
+ | Not hashable                       | Hashable                        |
+ | Cannot be used as a dictionary key | Can be used as a dictionary key |
+ | Example: `{1, 2, 3}`               | Example: `frozenset({1, 2, 3})` |
+
+44. What is an operator in Python?
+Ans:An operator is a symbol that performs an operation on one
+     or more operands (values or variables).
+
+45.What are the types of operators in Python?
+Ans:1.Arithmetic Operators
+    2.Assignment Operators
+    3.Comparison (Relational) Operators
+    4.Logical Operators
+    5.Bitwise Operators
+    6.Membership Operators
+    7.Identity Operators
+
+46.What is the difference between = and == ?
+Ans:
+| `=`                 | `==`                |
+| ------------------- | ------------------- |
+| Assignment operator | Comparison operator |
+| Assigns value       | Compares values     |
+| `a = 10`            | `a == 10`           |
+
+47.What are Arithmetic Operators ?
+Ans:Used for mathematical calculations.
+    +   Addition
+    -   Subtraction
+    *   Multiplication
+    /   Division
+    %   Modulus
+    **  Exponentiation
+    //  Floor Division
+
+48.What is the difference between / and // ?
+Ans: / returns a float value, while // returns the integer quotient.
+   Ex:print(10 / 3)   # 3.3333
+      print(10 // 3)  # 3
+
+49.What are Logical Operators ?
+Ans:and - Returns True if both conditions are True
+    or - Returns True if at least one condition is True
+    not - Reverses the result
+
+50.What are Membership Operators ?
+Ans:Used to check whether a value exists in a sequence.
+   in
+   not in
+
+51.What are Identity Operators?
+Ans:Used to compare object identities.
+    is
+    is not
+
+52.What is the highest precedence operator in Python ?
+Ans:() (Parentheses) have the highest precedence because expressions
+     inside parentheses are evaluated first.
       
+53.What is comparison Operator ?
+Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
+    The result of a comparison is always either True or False.
+
+    
+
+
      
        
