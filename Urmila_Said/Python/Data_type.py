@@ -14,7 +14,7 @@ print(type(a))
 c = 4 + 5j
 print(type(c))
 
- 
+
  #boolean data type:bool
 isplaced = True
 print(type(isplaced))

@@ -158,7 +158,7 @@ a = [10, 20, 30]
 b = [10, 20, 30]
 print(a is not b)
 
-##5. Logical operator: (and, or , not):Logical operators are used to combine 
+##6. Logical operator: (and, or , not):Logical operators are used to combine 
 # two or more conditions and return either True or False.
 
 #and: returns true if both conditions are true
@@ -194,7 +194,7 @@ a = 10
 print(not(a <= 15))
 
 
-#6. Bitwise operator : &, |, ~, ^
+#7. Bitwise operator : &, |, ~, ^
 #Bitwise operators perform operations on the binary (bit-by-bit) representation of integers.
 
 a = 10
@@ -230,7 +230,7 @@ b = 2
 print(a << b)
 
 # Right shift -- cut a number in right side
-#formula = number << n
+#formula = number >> n
            # number / 2^n
 a = 5 
 b = 2
@@ -273,11 +273,11 @@ print("Floor Division:",a // b)
 # >=
 # <=
 
-# a =int(input("ENter The First Number:"))
+# a =int(input("Enter The First Number:"))
 # b =int(input("Enter The Second Number:"))
-# print(a == b)
-# print(a != b)
-# print(a > b)
+print(a == b)
+print(a != b)
+print(a > b)
 print(a < b)
 print(a >= b)
 print(a <= b)
