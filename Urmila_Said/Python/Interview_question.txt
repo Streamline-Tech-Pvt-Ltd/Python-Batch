@@ -447,8 +447,135 @@ Ans:() (Parentheses) have the highest precedence because expressions
 Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
     The result of a comparison is always either True or False.
 
+54.What are Bitwise Operators?
+Ans:Bitwise operators perform operations on the binary representation (bits) of integers.
+    Operators:&, |, ^, ~, <<, >>
+
+55.Difference Between and n & ?
+Ans:
+| `and`                                      | `&`                                       |
+| ------------------------------------------ | ----------------------------------------- |
+| Logical Operator                           | Bitwise Operator                          |
+| Used with Boolean values (`True`, `False`) | Used with binary (bit) values of integers |
+| Returns `True` if both conditions are true | Performs bit-by-bit AND operation         |
+| Used in conditional statements             | Used in bit manipulation                  |
+
+56.What is loop in python ?
+Ans:Loop is used to repeat a block of code until this given condition is true.
+    Two Loop: 1. For Loop 
+              2. While loop
+
+57.Difference Between For Loop And while Loop ?
+Ans:
+| `for` Loop                                  | `while` Loop                                      |
+| ------------------------------------------- | ------------------------------------------------- |
+| Used when we know how many times to repeat. | Used when we don't know how many times to repeat. |
+| Easy to write.                              | Needs a condition.                                |
+| Iterates over a sequence.                   | Runs based on a condition.                        |
+
+EX:for i in range(1, 6):
+    print(i)
+
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+
+58. What is the purpose of the range() function?
+Ans:range() is a built-in Python function that generates a sequence of numbers and
+    is commonly used with for loops.
+    EX:for i in range(1, 6):
+       print(i)              #1 2 3 4 5
+
+59. What is a conditional statement?
+Ans: A conditional statement is used to make decisions in a program based on a condition.
+
+60.What is the purpose of the if statement ?
+Ans: The if statement executes a block of code only when the condition is True.
+
+61.What is the difference between if and if-else ?
+Ans:if → Executes code when the condition is true.
+    if-else → Executes one block if the condition is true and another block if it is false.
     
+62.What is the use of elif ?
+Ans: elif is used to check multiple conditions.
+
+63.What is a nested if statement?
+Ans: An if statement inside another if statement is called a nested if.
+
+64. Program to check Odd or Even
+Ans: 
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+65.Take a number n from the user and print the first n terms of the Fibonacci series using a while loop.
+# For Loop
+n = int(input("Enter the no n:"))
+a = 0
+b = 1
+for i in range(n):
+     print(a)
+     c = a + b
+     a = b
+     b = c
 
 
-     
+# While Loop
+n = int(input("Enter the no n:"))
+a = 0
+b = 1
+count = 0
+while count < n:
+     print(a)
+     c = a + b
+     a = b
+     b = c
+     count += 1
+
+66.# 7. Take a number from the user and check whether it is a palindrome or not.
+# While Loop
+num = int(input("Enter a number:"))
+temp = num
+reverse = 0
+while (temp > 0):
+      remainder = temp % 10
+      reverse = (reverse * 10) + remainder
+      temp = temp // 10
+
+if (num == reverse):
+      print("Palindrome Number")
+else:
+      print("Not Palindrome number")
+
+
+67. Difference between Nested if and elif
+Ans: 
+| Nested `if`                   | `elif`                          |
+| ----------------------------- | ------------------------------- |
+| `if` inside another `if`      | Checks multiple conditions      |
+| Used for dependent conditions | Used for alternative conditions |
+
+
+68.What is a control statement ?
+Ans:A control statement controls the flow of execution of a program.
+    It decides which statement will execute and how many times.
        
+69.What is the purpose of the break statement?
+Ans: break immediately terminates the loop.
+
+70. What is the purpose of the continue statement?
+Ans: continue skips the current iteration and moves to the next iteration.
+
+71.What is the purpose of the pass statement?
+Ans: pass is a null statement. It does nothing and is used as a placeholder
+
+72. What are the types of control statements in Python?
+Ans:
+Conditional Statements (if, if-else, elif)
+Looping Statements (for, while)
+Jump Statements (break, continue, pass)
+
