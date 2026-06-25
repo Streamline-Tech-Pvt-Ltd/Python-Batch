@@ -202,3 +202,14 @@
 #      print(num[i])
 #      i +=1
     
+# for i in range (1,11):
+#     print(i)
+
+# i = 100
+# while (i>=1):
+#     print(i)
+#     i-=1
+
+for i in range(2,51,2):
+    print(i)
+    

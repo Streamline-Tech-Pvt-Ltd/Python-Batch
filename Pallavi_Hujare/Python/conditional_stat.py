@@ -137,13 +137,20 @@
 # Otherwise → Incorrect Password
 # Otherwise → Invalid Username
 
-username = input("Enter Your name: ")
-password = int(input("Enter Password: "))
-if username == "Pallavi" and password == 123456:
-    print("Login Successful")
-elif username == "Pallavi":
-    print("Incorrect Password")
-else:
-    print("Invalid Username")
+# username = input("Enter Your name: ")
+# password = int(input("Enter Password: "))
+# if username == "Pallavi" and password == 123456:
+#     print("Login Successful")
+# elif username == "Pallavi":
+#     print("Incorrect Password")
+# else:
+#     print("Invalid Username")
          
 
+# for i in range (1,11):
+#     print(i)
+
+i = 100
+while (i>=1):
+    print(i)
+    i-=1

@@ -24,9 +24,9 @@ A.
         Static Typing                            |      Dynamic Typing
     ---------------------------------------------|-------------------------------------------------------------
     Variable type must be declared before use	 |      Variable type is determined automatically at runtime
-    Type checking occurs at compile time	       |    Type checking occurs at runtime
-    Less flexible	                               |    More flexible
-    Faster execution	                            |   Slightly slower execution
+    Type checking occurs at compile time	     |    Type checking occurs at runtime
+    Less flexible	                             |    More flexible
+    Faster execution	                         |   Slightly slower execution
     Examples: Java, C, C++                       |  	Examples: Python, JavaScript
 
 
@@ -50,9 +50,9 @@ A. Sequential Programming – statements execute one after another.
                             i.e:- argument , parameters
    Object-Oriented Programming (OOP) – programs are built using classes and objects.
                             
-            Pillar	             |                    Meaning
+            Pillar	              |                Meaning
     ------------------------------|----------------------------------------
-          Encapsulation 	       |                 Data Hiding
+          Encapsulation 	      |                 Data Hiding
           Inheritance	          |                  Code Reuse
           Polymorphism	          |                  Many Forms
           Abstraction	          |                Hiding Complexity
@@ -527,7 +527,6 @@ Q. What is the purpose of the range() function?
 Answer:
 range() generates a sequence of numbers.
 range(start, stop, step)
-
 Example:
 for i in range(1, 6):
     print(i)   #1 2 3 4 5
@@ -541,12 +540,11 @@ for i in range(1, 10):
     if i == 5:
         break
     print(i)
-
 Output:
 1 2 3 4
 
 
-6. What is the use of the continue statement?
+Q. What is the use of the continue statement?
 Answer:
 continue skips the current iteration and moves to the next iteration.
 
@@ -557,3 +555,57 @@ for i in range(1, 6):
 
 Output:
 1 2 4 5
+
+Q .What is a conditional statement?
+A . conditional statement allows a program to make decisions based on certain conditions (true/false).
+
+Q. Difference between if, if-else, and else if ladder?
+A.if: Executes block if condition is true
+if-else: Executes one block if true, another if false
+else if: Checks multiple conditions in sequence
+
+Q. What is a switch statement?
+Used to select one of many blocks to execute based on a variable’s value.
+
+Q.What is a function in Python?
+Answer:
+A function is a block of reusable code that performs a specific task. It helps reduce code duplication and improves readability.
+Example:
+def greet():
+    print("Hello")
+
+
+Q.
+What are function parameters?
+Answer:
+Parameters are variables listed inside the function definition.
+Example  :
+def add(a, b):
+    print(a + b)
+
+Here, a and b are parameters.
+
+Q What are arguments?
+Answer:
+Arguments are the values passed to a function when it is called.
+add(10, 20)
+Here, 10 and 20 are arguments.
+
+
+Q. What is the difference between parameters and arguments?
+    Parameters                                      Arguments
+Defined in function                     	Passed during function call
+Placeholder values                          	Actual values
+Example: a, b                                  	Example: 10, 20
+
+
+Q.Difference between print() and return()?
+    print()                                     	return()
+Displays output	                            Sends value back
+Cannot be reused                       	Can be stored and reused
+
+Q.What is the difference between built-in and user-defined functions?
+Built-in Function	                  User-defined Function
+Already available               	    Created by programmer
+len(), max(), min()	                    add(), square()
+
