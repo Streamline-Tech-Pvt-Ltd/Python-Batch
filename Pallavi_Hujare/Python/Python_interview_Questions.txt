@@ -609,3 +609,113 @@ Built-in Function	                  User-defined Function
 Already available               	    Created by programmer
 len(), max(), min()	                    add(), square()
 
+
+Q.What are function arguments in Python?
+Answer:
+Arguments are the values passed to a function when it is called.
+
+def greet(name):
+    print("Hello", name)
+greet("Pallavi")
+
+Output
+Hello Pallavi
+
+
+Q.Difference between *args and **kwargs?
+
+  *args                                   	**kwargs
+Stores tuple                        	Stores dictionary
+Positional arguments	                Keyword arguments
+Uses *                                     	Uses **
+
+
+Q . How many types of arguments are there in Python?
+Answer
+There are 4 types of arguments:
+
+Positional Arguments
+Keyword Arguments
+Default Arguments
+Variable-Length Arguments (*args and **kwargs)
+
+Q. What are Positional Arguments?
+Answer
+Arguments are passed according to their position.
+
+def student(name, age):
+    print(name, age)
+student("Rahul", 20)
+
+Output
+Rahul 20
+
+Q. What happens if positional arguments are passed in the wrong order?
+def student(name, age):
+    print(name, age)
+student(20, "Rahul")
+
+Output
+20 Rahul
+
+Python assigns values based on position, not meaning.
+
+
+Q. What are Keyword Arguments?
+Answer
+Arguments are passed using parameter names.
+
+def student(name, age):
+    print(name, age)
+student(age=20, name="Rahul")
+Output
+Rahul 20
+
+Q. What are Default Arguments?
+Answer
+
+A default value is assigned to a parameter.
+
+def greet(name="Guest"):
+    print("Hello", name)
+greet()
+greet("Pallavi")
+
+Output
+Hello Guest
+Hello Pallavi
+
+Q. What are Variable-Length Arguments?
+Answer
+Used when the number of arguments is unknown.
+
+Using *args
+def add(*numbers):
+    print(numbers)
+add(10,20,30,40)
+Output
+(10, 20, 30, 40)
+
+
+Q. What is *args?
+Answer
+*args collects multiple positional arguments into a tuple.
+
+def total(*num):
+    print(sum(num))
+
+total(10,20,30)
+Output
+60
+
+Q. What is **kwargs?
+Answer
+**kwargs collects keyword arguments into a dictionary.
+
+def details(**info):
+    print(info)
+
+details(name="Rahul", age=20)
+
+Output
+{'name': 'Rahul', 'age': 20}

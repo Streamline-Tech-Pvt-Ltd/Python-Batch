@@ -579,3 +579,40 @@ Conditional Statements (if, if-else, elif)
 Looping Statements (for, while)
 Jump Statements (break, continue, pass)
 
+73.What is a function in Python ?
+Ans:A function is a block of reusable code that performs a specific task
+
+74.Why do we use functions?
+Ans:Code reusability
+    Reduces code duplication
+    Makes code easier to understand and maintain
+
+75.Difference Between Parameter And Argument ?
+Ans:
+| Parameter                                                      | Argument                                                                  |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| A parameter is a variable defined in the function declaration. | An argument is the actual value passed to the function when it is called. |
+| Parameters receive values from arguments.                      | Arguments provide values to parameters.                                   |
+| Used in function definition.                                   | Used in function call.                                                    |
+|Ex: a,b,c etc                                                   |Ex: 1,2,3 etc
+
+
+76.Difference Between Print() & return function ?
+Ans:
+| `print()`                           | `return`                                      |
+| ----------------------------------- | --------------------------------------------- |
+| Displays output on the screen.      | Sends a value back from the function.         |
+| Output cannot be stored directly.   | Returned value can be stored in a variable.   |
+| Used for showing results.           | Used for further calculations and processing. |
+| Function continues after `print()`. | Function ends when `return` is executed.      |
+
+77.Difference Between User-Defined Function and Built-in Function
+Ans:
+| User-Defined Function                                   | Built-in Function                      |
+| ------------------------------------------------------- | -------------------------------------- |
+| Created by the programmer.                              | Already provided by Python.            |
+| Defined using the `def` keyword.                        | No need to define them.                |
+| Used for specific tasks according to user requirements. | Used for common tasks.                 |
+| Example: `add()`, `factorial()`                         | Example: `print()`, `len()`, `input()` |
+
+78.
