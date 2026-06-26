@@ -210,6 +210,39 @@
 #     print(i)
 #     i-=1
 
-for i in range(2,51,2):
-    print(i)
+# for i in range(2,51,2):
+#     print(i)
+
     
+
+# num = int(input("Enter the NUmber : "))
+# sum = 0
+# for i in range(1, num+1):
+#     sum = sum + i
+# print(sum)
+
+
+
+# num = int(input("Enter the Number :"))
+# fact = 1
+# i = 1
+# while i<=num:
+#     fact  = fact * i
+#     i = i + 1
+# print(fact)
+
+# num = int(input("Enter the Number :"))
+# fact = 1 
+# for num in range (num):
+#     fact = fact*(num +1)
+# print(fact)
+
+num = int(input("Enter the Number :"))
+sum = 0
+for i in range(1 , num +1):
+    sum = sum +i
+print(sum)
+
+
+
+

@@ -87,25 +87,91 @@
 # Max_No(10,1)
 #4.Create a function to calculate area of circle.
 
+#4.Create a function to calculate area of circle.
+# def area_circle(r):
+#     area = 3.14 * r * r
+#     return area
+# result = area_circle(5)
+# print("Area of circle:",result)
 
 #5.Create a function to check prime number.
+
 # def Prime_Number(a):
-#     if a <= 1:
-#         print("Number is Not Prime")
-#         return
-#     for i in range(2, a):
-#         if a % i == 0:
-#             print("Number is Not Prime")
-#             return
-#     print("Number is Prime")
-# Prime_Number(4)
+#      if a <= 1:
+#          print("Number is Not Prime")
+#          return
+#      for i in range(2, a):
+#          if a % i == 0:
+#              print("Number is Not Prime")
+#              return
+#      print("Number is Prime")
+# Prime_Number(2)
 
+# Lambda function: one line , small function.
+# Lambda function is also known as anonymous function.
 
-#fctorial   Number  Program 
+# Syntax :   lambda arguments : expression;
 
-# def factorial(num):
+# add = lambda a,b : a + b
+# print(add(10,2))
+
+# square = lambda x : x*x
+# print(square(2))
+
+# Recursive function: a function that call itself.
+
+# def factorial(n):
 #     fact = 1
-#     for i in range(1, num + 1):
-#         fact = fact* (i)
-#     print( fact)
+#     for i in range(1, n+1):
+#         fact = fact * i
+#     print(fact)
+
 # factorial(5)
+# def factorial(n):
+#     if n == 1 or n == 0:
+#         return 1
+#     else:
+#         return n*factorial(n-1)
+# print(factorial(5))
+
+# Practice Question:
+# Write a lambda function to check whether a number is even or odd.
+# even_or_odd = lambda a: "Even" if a % 2 == 0 else "Odd"
+# print(even_or_odd(3))
+
+# Write a lambda function to find the larger of two numbers.
+# larger_no = lambda a , b: "a is Larger" if a > b else "b i Larger"
+# print(larger_no(3,7))
+
+# Write a lambda function to multiply two numbers.
+# Multiplication = lambda a, b : a * b
+# print(Multiplication(2,2))
+
+
+# Write a recursive function to print numbers from 1 to N.
+# def num(n):
+#     i = 1
+#     while(i <= n):
+#         print(i)
+#         i = i + 1
+# print(num(10))
+
+
+# Write a recursive function to calculate the sum of first N natural numbers.
+
+# def sum_n(n):
+#     if n == 1:          
+#         return 1
+#     else:
+#         return n + sum_n(n - 1)
+# print(sum_n(2))
+
+
+# Write a recursive function to calculate the power of a number.
+
+# def power(base, exp):
+#     if exp == 0:
+#         return 1
+#     else:
+#         return base * power(base, exp - 1)
+# print(power(2,2))
