@@ -615,4 +615,50 @@ Ans:
 | Used for specific tasks according to user requirements. | Used for common tasks.                 |
 | Example: `add()`, `factorial()`                         | Example: `print()`, `len()`, `input()` |
 
-78.
+78.What are function arguments in Python?
+Ans:Arguments are the values passed to a function when it is called.
+
+79.How many types of arguments are there in Python?
+Ans:There are 4 types:
+    Positional Arguments
+    Keyword Arguments
+    Default Arguments
+    Variable-length Arguments (*args, **kwargs)
+
+80.What are keyword arguments?
+Ans:Arguments passed using parameter names.
+
+81.What are default arguments?
+Ans:Arguments with predefined values.
+
+82.What are variable-length arguments?
+Ans:Used when the number of arguments is unknown.
+Using *args
+
+83.What does *args mean?
+Ans: *args collects multiple positional arguments into a tuple.
+
+84.What does **kwargs mean?
+Ans: **kwargs collects keyword arguments into a dictionary.
+
+85.What is a required argument?
+Ans: A parameter that must receive a value.
+
+86.Which should come first: positional or keyword arguments?
+Ans: Positional arguments must come before keyword arguments.
+
+87.What is the advantage of using arguments?
+Ans: Makes functions reusable.
+    Avoids repeating code.
+    Allows different input values.
+    Improves flexibility and readability.
+
+88. Difference Between *args and **kwargs in Python
+Ans:,
+| `*args`                                                | `**kwargs`                                          |
+| ------------------------------------------------------ | --------------------------------------------------- |
+| Stands for **arguments**.                              | Stands for **keyword arguments**.                   |
+| Accepts a variable number of **positional arguments**. | Accepts a variable number of **keyword arguments**. |
+| Stores values in a **tuple**.                          | Stores values in a **dictionary**.                  |
+| Access values using indexes or loops.                  | Access values using keys or loops.                  |
+| Syntax: `*args`                                        | Syntax: `**kwargs`                                  |
