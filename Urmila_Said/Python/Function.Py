@@ -93,12 +93,19 @@
 
     
 #5.Create a function to check prime number..
-def check_prime(n):
-     if n <= 1:
-         return False
-     for i in range(2, n):
-         if n % i == 0:
-             return False
+# def prime(num):
+
+#      if num <= 1:
+#          return "Not prime Number"
+    
+#      for i in range(2, num):
+#          if(num % i == 0):
+#              return "Not prime number"
+      
+#      return "Prime Number"
+        
+# print(prime(2))
+
         
 #6.Find a factorial
 #n = int(input("Enter a number: "))
@@ -108,3 +115,78 @@ def check_prime(n):
 #         fact = fact * i
 #     return fact
 # print(factorial(n))
+
+
+# Lambda function: one line , small function.
+#Lambda function is a small anonymous (nameless) function in Python. 
+# It is created using the lambda keyword and is used for short, simple operations.
+# Syntax :   lambda arguments : expression;
+
+# add = lambda a,b : a + b
+# print(add(10,2))
+
+# square = lambda x : x*x
+# print(square(2))
+
+
+# Recursive function: A recursive function is a function that calls itself to solve a problem. 
+# Instead of using loops (for or while), recursion solves a problem by breaking it into smaller subproblems.
+
+# Print a factorial number using recursive function.
+# def factorial(n):
+    
+#     fact = 1
+#     for i in range(1, n+1):
+#         fact = fact * i
+#     print(fact)
+
+# factorial(5)
+
+# def factorial(n):
+#   if n == 1 or n == 0:
+#         return 1
+#     else:
+#         return n*factorial(n-1)
+
+# print(factorial(5))
+
+# Practice Question:
+# Write a lambda function to check whether a number is even or odd.
+# n = 7
+# check = lambda n :"Even" if n % 2 == 0 else "Odd"
+# print(check(n))
+
+# Write a lambda function to find the larger of two numbers. 
+# a = 2
+# b = 20
+# max = lambda a, b: a if a > b else b
+# print("Larger Number:", max(a,b))
+
+# larger = lambda a,b : a < b
+# print(larger(10,20))
+
+# Write a lambda function to multiply two numbers.
+# multiplication = lambda a,b: a * b
+# print(multiplication(5,2))
+
+# Write a recursive function to print numbers from 1 to N.
+# def numbers(n):
+#     if n == 0:
+#         return
+#     numbers(n - 1)
+#     print(n)    
+# numbers(10)
+
+# Write a recursive function to calculate the sum of first N natural numbers.
+# def sum_n(n):
+#     if n == 0:
+#         return 0
+#     return n + sum_n(n - 1)
+# print(sum_n(5))
+
+# Write a recursive function to calculate the power of a number.
+def power(a, b):
+    if b == 0:
+        return 1
+    return a * power(a, b - 1)
+print(power(5,5))
