@@ -716,6 +716,127 @@ def details(**info):
     print(info)
 
 details(name="Rahul", age=20)
-
 Output
 {'name': 'Rahul', 'age': 20}
+
+
+Q. What is a Higher-Order Function?
+Answer:
+A Higher-Order Function is a function that accepts another function as an argument or returns another function.
+
+Q. Give examples of Higher-Order Functions in Python.
+Answer:
+map()
+filter()
+sorted()
+reduce() (from the functools module)
+
+
+Q. Why are Higher-Order Functions used?
+Answer:
+To reduce code duplication.
+To make code reusable.
+To write cleaner and more readable code.
+They are commonly used with lambda functions.
+
+
+Q. Is lambda a Higher-Order Function?
+Answer:
+No. A lambda is an anonymous function, not a higher-order function. It is often passed to higher-order functions such as map(), filter(), and sorted().
+
+
+Q. What is the difference between a normal function and a Higher-Order Function?
+Normal Function	Higher-Order Function
+Performs a task	Takes or returns functions
+Doesn't necessarily work with functions	Works with other functions
+Example: print(), len()
+
+Q. What is type casting in Python?
+Answer:
+Type casting is the process of converting one data type into another. Python supports two types:
+
+Implicit Type Casting (Automatic)
+Explicit Type Casting (Manual)
+
+
+Q. What is implicit type casting?
+Answer:
+Implicit type casting is the automatic conversion of one data type into another by Python during an operation.
+Example:
+a = 10
+b = 2.5
+print(a + b)
+print(type(a + b))
+
+Output
+12.5
+<class 'float'>
+
+
+Q. What is explicit type casting?
+Answer:
+Explicit type casting is the manual conversion of one data type into another using built-in functions.
+Example functions:
+
+int()
+float()
+str()
+bool()
+list()
+tuple()
+set()
+dict()
+complex()
+
+
+4. What is the difference between implicit and explicit type casting?
+
+Implicit Type Casting	                        Explicit Type Casting
+Done automatically by Python	            Done manually by the programmer
+No function is used	                    Uses functions like int(), float(), str()
+Example: 10 + 2.5	                            Example: int("10")
+
+
+Q. What is a variable scope?
+Answer:
+Scope is the area of a program where a variable can be accessed.
+
+Q. What is a local variable?
+Answer:
+A variable declared inside a function is called a local variable. It can be accessed only inside that function.
+Example:
+def show():
+    x = 10
+    print(x)
+show()
+
+Q. What is a global variable?
+Answer:
+A variable declared outside all functions is called a global variable. It can be accessed throughout the program.
+
+Example:
+x = 100
+def show():
+    print(x)
+show()
+
+4. What is the difference between local and global variables?
+Local Variable	                                  Global Variable
+Declared inside a function	                Declared outside a function
+Accessible only inside that function	    Accessible throughout the program
+Lifetime ends after the function finishes	Exists until the program ends
+
+5. What is the global keyword?
+Answer:
+The global keyword is used to modify a global variable inside a function.
+Example:
+x = 10
+def update():
+    global x
+    x = 20
+update()
+print(x)
+
+Output
+20
+
