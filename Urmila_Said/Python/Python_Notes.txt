@@ -4,7 +4,7 @@ Python is a simple,dynamic,high-level,interpreted and general purpose programmin
   Python syntax is easy to read and write.
   Ex:.print("Hello World")
 2.dynamic
-  We do not need to declare the data type of a variable.
+  We do not need to declare data type of a variable.
   Ex:.name = "Urmila"   # String
       age = 20          # Integer
 3.High-level
@@ -43,7 +43,7 @@ Python is a simple,dynamic,high-level,interpreted and general purpose programmin
     Each function performs a specific task.
 3. Object oriented programming(OOP)
    Object-Oriented Programming is a programming style that organizes programs using classes
-    and objects.
+   and objects.
 
 * Types of comments
 1. Single line comment

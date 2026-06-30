@@ -34,7 +34,7 @@ dict = {1:"c", 2:"c++", 3:"java", 4:"python"}
 dict.clear()
 print(dict)
 
-#7. popitem() - 
+#7. popitem(): is used to remove and return the last inserted key-value pair from a dictionary.
 dict = {1:"c", 2:"c++", 3:"java", 4:"python"}
 dict.popitem()
 print(dict)
@@ -44,6 +44,11 @@ dict = {1:"c", 2:"c++", 3:"java", 4:"python"}
 dict.pop(1)
 print(dict)
 
+#9.copy() - copy() method is used to create a copy of a dictionary.
+dict = {1:"c", 2:"c++", 3:"java", 4:"python"}
+dict1 = dict.copy()
+print(dict1)
+print(dict)
 
 
 

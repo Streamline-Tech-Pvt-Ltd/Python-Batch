@@ -26,7 +26,7 @@ print(name)
 name2 = "Urmila"
 print(name2)
 
- # Rule 3:Special characters are not allowed
+# Rule 3:Special characters are not allowed
   # Ex: Invalid     
        # student@name = "Urmila"
       
