@@ -41,8 +41,8 @@ print(fruits)
 
 # 7. pop()
 # Removes an element by index.
- fruits.pop(0)
- print(fruits)
+fruits.pop(0)
+print(fruits)
 
 # 8. delete()
 # Delets on element or entire list.
