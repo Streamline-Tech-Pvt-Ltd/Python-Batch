@@ -84,3 +84,13 @@ def counter():
 
 counter()
 counter()
+
+
+# Difference Between Local Variable and Global Variable
+# | **Local Variable**                         | **Global Variable**                                                              |
+# | ------------------------------------------ | -------------------------------------------------------------------------------- |
+# | Declared **inside a function**.            | Declared **outside all functions**.                                              |
+# | Can be used **only inside that function**. | Can be used **throughout the program**.                                          |
+# | Created when the function is called.       | Created when the program starts.                                                 |
+# | Destroyed when the function ends.          | Exists until the program ends.                                                   |
+# | Changes affect only that function.         | Changes affect the whole program (using the `global` keyword inside a function). |
