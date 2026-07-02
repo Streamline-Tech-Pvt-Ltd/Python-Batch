@@ -1,4 +1,4 @@
-# Tuple - Tuple is a collection of multiple data items in a simgle variable.
+# Tuple - Tuple is a collection of multiple data items in a single variable.
 # Tuple is denoted by ()
 #Tuple is immutable
 #tuple is ordered

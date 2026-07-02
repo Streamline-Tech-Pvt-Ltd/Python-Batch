@@ -735,6 +735,7 @@ reduce() (from the functools module)
 Q. Why are Higher-Order Functions used?
 Answer:
 To reduce code duplication.
+
 To make code reusable.
 To write cleaner and more readable code.
 They are commonly used with lambda functions.
@@ -840,3 +841,26 @@ print(x)
 Output
 20
 
+
+OPP::
+
+Q1. What is a constructor?
+Answer: A constructor is a special method (__init__) that is automatically called when an object is created. It initializes the object's attributes.
+
+Q2. What is a default constructor?
+Answer: A default constructor is a constructor that takes no arguments other than self.
+
+Q3. What is a parameterized constructor?
+Answer: A parameterized constructor accepts parameters to initialize object attributes with specific values.
+
+Q4. What is a destructor?
+Answer: A destructor is a special method (__del__) that is automatically called when an object is destroyed or deleted, and it is used for cleanup tasks.
+
+
+Q5. What is the difference between a constructor and a destructor?
+
+Constructor                                                	Destructor
+__init__()	                                                __del__()
+Called when an object is created	                Called when an object is destroyed
+Initializes object data                             	Cleans up resources
+Runs automatically at object creation           	Runs automatically before object destruction
