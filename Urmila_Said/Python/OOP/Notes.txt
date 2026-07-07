@@ -1,0 +1,55 @@
+# POP (Procedure-Oriented Programming)
+  POP (Procedure-Oriented Programming) is a programming style in which a program is divided 
+  into small functions (procedures) to perform specific tasks.
+
+# OOP(Object Oriented Programming Language)
+  OOP (Object-Oriented Programming) is a programming paradigm that
+  organizes a program using classes and objects.
+
+# Difference Between POP and OOP ?
+
+|     POP (Procedure-Oriented Programming) | OOP (Object-Oriented Programming)             |
+| ---------------------------------------- | --------------------------------------------- |
+| Focuses on   functions                   | Focuses on   classes and objects              |
+| Uses a     top-down approach.            | Uses a   bottom-up approach.         nn       |
+| Data is  less secure                     | Data is more secure due to encapsulation.     |
+| Suitable for small programs              | Suitable for large and complex programs       |
+| Example: C                               | Examples: Python, Java, C++                   |
+
+
+
+# Class :
+A class is a blueprint (template) used to create objects.
+It defines the properties (variables) and behaviors (methods/functions) of an object.
+Syntax:class ClassName:
+
+
+# Object:
+An object is an instance of a class. 
+It is used to access the variables and methods defined in the class.
+Ex:
+class Student:
+    name = "Urmila"
+
+    def display(self):
+        print("Student Name:", self.name)
+
+# Creating an object
+s1 = Student()
+
+# Accessing variable
+print(s1.name)
+
+# Calling method
+s1.display()
+
+
+# Difference Between functions and methods
+
+|   Function                                          |   Method                               |
+| --------------------------------------------------- | -------------------------------------- |
+| A function is a block of code that performs a task. | A method is a function inside a class. |
+| It is not part of any class.                        | It always belongs to a class.          |
+| It is called directly by its name.                  | It is called using an object.          |
+| Example: `greet()`                                  | Example: `obj.greet()`                 |
+

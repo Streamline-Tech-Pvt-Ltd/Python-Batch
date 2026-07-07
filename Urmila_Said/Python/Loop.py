@@ -55,7 +55,7 @@ for i in range(n):
  print(fact)
 
 # While Loop
-# n = int(input("Enter the no n:"))
+n = int(input("Enter the no n:"))
 fact = 1
 i = 1
 while(i <= n):
