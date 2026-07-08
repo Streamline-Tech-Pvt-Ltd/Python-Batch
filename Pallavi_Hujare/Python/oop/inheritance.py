@@ -182,3 +182,33 @@ p.meow()
 
 # D → B → C → A
 
+
+
+
+# class College:
+#     def __init__(self, college_name):
+#         self.name = college_name
+#         print("college name")
+
+# class Student(co):
+#     def __init__(self,student_nmae,):
+#         self.student_name = student_name
+#         print("This is Student class")
+# s1= Student()
+# s1.
+
+class College:
+    def __init__(self, name):
+        self.name = name
+    def admission(self,name):
+            return f"This is my college Name {self.name}"
+
+class Student(College):
+    def __init__(self,name):
+        self.name = name
+    def Learning(self,name):
+            return f"This is my course name {self.name}"
+s1 = Student('pallavi')
+print(s1.admission("kkw"))
+print(s1.Learning("py"))
+
