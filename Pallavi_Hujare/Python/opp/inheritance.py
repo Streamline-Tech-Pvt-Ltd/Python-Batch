@@ -93,7 +93,7 @@ c.gold()
 #    ▼
 #  chiled
 
-class :
+class Animal:
 
     def eat(self):
         print("Eating")
