@@ -31,7 +31,7 @@ print(name.find("my"))
 str = "India"
 print(str.isalpha())
 
-#6.isalnum(): alphabets and numbers do not allow space & special characters
+#6.isalnum(): alphabets and numbers allow. do not allow space & special characters
 str = "2345" 
 print(str.isalnum())
 
@@ -57,6 +57,7 @@ print(str.startswith("M"))
 #11.endswith(): method is used to check if the string ends with the specified value.
 str = "Maharashtra"
 print(str.endswith("a"))
+
 
 
 

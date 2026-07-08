@@ -117,9 +117,9 @@
 # print(factorial(n))
 
 
-# Lambda function: one line , small function.
-#Lambda function is a small anonymous (nameless) function in Python. 
-# It is created using the lambda keyword and is used for short, simple operations.
+# 3. Lambda function: one line , small function.
+#    Lambda function is a small anonymous (nameless) function in Python. 
+#    It is created using the lambda keyword and is used for short, simple operations.
 # Syntax :   lambda arguments : expression;
 
 # add = lambda a,b : a + b
@@ -129,7 +129,7 @@
 # print(square(2))
 
 
-# Recursive function: A recursive function is a function that calls itself to solve a problem. 
+#4. Recursive function: A recursive function is a function that calls itself to solve a problem. 
 # Instead of using loops (for or while), recursion solves a problem by breaking it into smaller subproblems.
 
 # Print a factorial number using recursive function.
@@ -147,7 +147,6 @@
 #         return 1
 #     else:
 #         return n*factorial(n-1)
-
 # print(factorial(5))
 
 # Practice Question:
@@ -185,8 +184,8 @@
 # print(sum_n(5))
 
 # Write a recursive function to calculate the power of a number.
-def power(a, b):
-    if b == 0:
-        return 1
-    return a * power(a, b - 1)
-print(power(5,5))
+# def power(a, b):
+#     if b == 0:
+#         return 1
+#     return a * power(a, b - 1)
+# print(power(5,5))
