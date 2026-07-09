@@ -37,6 +37,12 @@ print(a+b)
 # print(a1)
 
 
+# types: 
+# 1. overloading :-   does not support in python.
+        # 1. Method overloading
+
+# 2. Overriding :- Supoort in python 
+# 1. method overriding
 # class Urmila:
 #     def add(self,n1,n2):
 #         return n1+n2
@@ -56,20 +62,27 @@ print(a+b)
 # print(p1.add(20,30,20))
 # print(p1.sub(50,40))
 
+class Parent:
+    def display(self):
+        print("Parent Method")
+class Child(Parent):
+    def display(self):
+        print("Child Method")
+o1 =Child()
+o1.display()
 
+ # 2. variable overriding
 # class Intern1:
 #     name = "Urmila"
-
 # class Intern2(Intern1):
 #     name = "pallavi"
-
 # i1 = Intern2()
 # print(i1.name)
 
 
-# types: 
-# 1. overloading :-   does not support in python.
-        # 1. Method overloading
-# 2. Overriding :- Supoort in python 
-        # 1. method overriding
-        # 2. variable overriding
+class Parent:
+        name = "Parent Method"
+class Child(Parent):
+        name = "Child Method"
+o1 =Child()
+print(o1.name)
