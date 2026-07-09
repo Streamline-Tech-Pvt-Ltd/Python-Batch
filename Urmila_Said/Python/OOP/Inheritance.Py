@@ -140,3 +140,34 @@
 # print(obj1.boy1())
 # print(obj1.dad())
 # print(obj1.member())
+
+# Constructor through single inheritance
+
+# class College:
+#     def __init__(self,name):
+#         self.F_name = self.name
+        
+        
+# class Daughter(Father):
+#     def __init__(Father):
+#         print("Daughter class")
+
+# D = Daughter()
+# D = Father()
+
+class College:
+    def __init__(self,name):
+        self.name = name
+    def addmission(self,name):
+        return f"This is my college name{self.name}"
+        
+class Student(College):
+    def __init__(self,name):
+        self.name = name
+    def learning(self,name):
+        return f"This is my{self.name}"
+        
+s1 = Student("D.Y.P")
+print(s1.addmission("Urmila"))
+print(s1.learning("Python"))
+print(s1.name)

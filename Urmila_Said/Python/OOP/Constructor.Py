@@ -36,7 +36,7 @@
 # Student()
 
 
-#Destructor
+#Destructor:
 # A destructor is a special method named __del__() that is automatically called when an object is destroyed.
 #  It is used to perform cleanup tasks before the object is removed from memory.
 
