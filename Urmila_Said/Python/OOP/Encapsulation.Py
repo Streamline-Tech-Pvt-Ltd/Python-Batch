@@ -71,53 +71,53 @@
 # b1.recipt()
 
 
-class Student:
-    def __init__(self,name,roll_no,marks):
-        self.name = name
-        self._roll_no = roll_no
-        self.__marks = marks
-
-    def get_roll_no(self):
-        return self._roll_no
-    
-    def marks(self,marks):
-        return self.__marks
-    
-    def receipt(self):
-        print("Addmission Receipt")
-        print("name:",self.name)
-        print("roll_no:",self._roll_no)
-        print("marks:",self.__marks)
-
-S1 = Student("Saniya",15,90)
-# print(S1.name)
-# print(S1.roll_no)              
-# print(S1.__marks)              # Occur the Attribute error
-print(S1.get_roll_no())          # Access get through method
-S1.receipt()
-
-
-# class Phone:
-#     def __init__(self,name,email,contact_no):
+# class Student:
+#     def __init__(self,name,roll_no,marks):
 #         self.name = name
-#         self._email = email
-#         self.__contact_no = contact_no
+#         self._roll_no = roll_no
+#         self.__marks = marks
 
-#     def get_email(self):
-#         return self._email
+#     def get_roll_no(self):
+#         return self._roll_no
     
-#     def contact(self,contact_no):
-#         return self.__contact_no
+#     def marks(self,marks):
+#         return self.__marks
     
-#     def details(self):
-#         print("My Phone Details")
+#     def receipt(self):
+#         print("Addmission Receipt")
 #         print("name:",self.name)
-#         print("email:",self._email)
-#         print("contact_no:",self.__contact_no)
+#         print("roll_no:",self._roll_no)
+#         print("marks:",self.__marks)
 
-# P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
-# # print(P1.name)
-# # print(P1.get_email())         
-# # print(P1.__contact_no)           # Occur the attribute error
-# P1.details()
+# S1 = Student("Saniya",15,90)
+# # print(S1.name)
+# # print(S1.roll_no)              
+# # print(S1.__marks)              # Occur the Attribute error
+# print(S1.get_roll_no())          # Access get through method
+# S1.receipt()
+
+
+class Phone:
+    def __init__(self,name,email,contact_no):
+        self.name = name
+        self._email = email
+        self.__contact_no = contact_no
+
+    def get_email(self):
+        return self._email
+    
+    def contact(self,contact_no):
+        return self.__contact_no
+    
+    def details(self):
+        print("My Phone Details")
+        print("name:",self.name)
+        print("email:",self._email)
+        print("contact_no:",self.__contact_no)
+
+P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
+# print(P1.name)
+# print(P1.get_email())         
+# print(P1.__contact_no)           # Occur the attribute error
+P1.details()
 
