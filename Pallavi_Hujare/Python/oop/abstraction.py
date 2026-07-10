@@ -32,7 +32,6 @@
 # def display(self):
 #     pass
 
-
 from abc import ABC, abstractmethod
 class Car(ABC):
     @abstractmethod
@@ -43,8 +42,6 @@ class BMW(Car):
         print("BMW IS ON THE WAY.....")
 car = BMW()
 car.start()
-
-
 
 
 # Import Method                     	Example
