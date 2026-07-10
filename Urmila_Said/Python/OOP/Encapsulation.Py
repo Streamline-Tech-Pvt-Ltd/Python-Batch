@@ -71,7 +71,6 @@
 # b1.recipt()
 
 
-
 # class Student:
 #     def __init__(self,name,roll_no,marks):
 #         self.name = name
