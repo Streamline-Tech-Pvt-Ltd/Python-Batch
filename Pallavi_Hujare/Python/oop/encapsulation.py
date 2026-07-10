@@ -121,13 +121,11 @@
 # e1.display()
 
 
-
 class Atm:
     def __init__(self ,name , pin , amount):
         self.name = name
         self._pin = pin
         self.__amount = amount
-       
     def get_amount(self):
         return self.__amount
     def Withdraw_amo(self, w_amount):
