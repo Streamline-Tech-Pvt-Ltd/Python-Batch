@@ -1,7 +1,7 @@
-a = 100
-b = 200
-print(a.__add__(b))
-print(a+b)
+# a = 100
+# b = 200
+# print(a.__add__(b))
+# print(a+b)
 
 # a = 100
 # b = 200
@@ -33,7 +33,6 @@ print(a+b)
 #         self.name = name
 #         self.city = city
 # a1 = Addition(1,"Pallavi","Nashik")
-
 # print(a1)
 
 
@@ -62,14 +61,14 @@ print(a+b)
 # print(p1.add(20,30,20))
 # print(p1.sub(50,40))
 
-class Parent:
-    def display(self):
-        print("Parent Method")
-class Child(Parent):
-    def display(self):
-        print("Child Method")
-o1 =Child()
-o1.display()
+# class Parent:
+#     def display(self):
+#         print("Parent Method")
+# class Child(Parent):
+#     def display(self):
+#         print("Child Method")
+# o1 =Child()
+# o1.display()
 
  # 2. variable overriding
 # class Intern1:
@@ -80,9 +79,18 @@ o1.display()
 # print(i1.name)
 
 
-class Parent:
-        name = "Parent Method"
-class Child(Parent):
-        name = "Child Method"
-o1 =Child()
-print(o1.name)
+# class Parent:
+#         name = "Parent Method"
+# class Child(Parent):
+#         name = "Child Method"
+# o1 =Child()
+# print(o1.name)
+
+
+class Student:
+    def __init__(self):
+        print("Constructor called")
+s1 = Student()
+
+
+

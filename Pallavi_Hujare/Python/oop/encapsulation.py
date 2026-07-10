@@ -17,13 +17,12 @@
 #         pass
 
 # access Specifiers in Python
-
 # Python provides three types of access specifiers.
 
-# Access Specifier	            Symbol                  	    Access
+# Access Specifier	               Symbol                  	    Access
 # Public	                      No underscore	                Anywhere
-# Protected	                    _variable	          Inside class and subclasses (by convention)
-# Private	                   __variable	            Only inside the class
+# Protected	                     _variable	          Inside class and subclasses (by convention)
+# Private	                     __variable	            Only inside the class
 
 # This is Encapsulation.
 
@@ -38,26 +37,21 @@
 # print(b1.__balance)
 
 
-
 # class Bank:
-
 #     def __init__(self, name, acc_type, balance, password, age):
 #         self.name = name              # Public attribute
 #         self._acc_type = acc_type     # Protected attribute
 #         self.__balance = balance      # Private attribute
 #         self.__password = password    # Private attribute
 #         self._age = age               # Protected attribute
-
 #     def get_balance(self):
 #         return self.__balance
-
 #     def deposit(self, amount):
 #         if amount > 0:
 #             self.__balance += amount
 #             return f"Deposited {amount}. New balance is {self.__balance}"
 #         else:
 #             return "Invalid deposit amount"
-
 #     def receipt(self):
 #         print("Receipt is generated")
 #         print("Name :", self.name)
@@ -95,7 +89,6 @@
 #         print("Student Name :", self.name)
 #         print("Course :", self._course)
 #         print("Marks :", self.__marks)
-
 # s1 = Student("Pallavi", "MCA", 85, "abc123")
 # print(s1.name)
 # print(s1._course)
@@ -106,27 +99,56 @@
 # s1.display()
 
 
-class Employee:
-    def __init__(self, name, department, salary):
-        self.name = name
-        self._department = department
-        self.__salary = salary
-    def get_salary(self):
-        return self.__salary
-    def increment(self, amount):
-        self.__salary += amount
-    def display(self):
-        print("Employee :", self.name)
-        print("Department :", self._department)
-        print("Salary :", self.__salary)
-e1 = Employee("Pallavi", "CS", 5000000)
-print(e1.name)
-print(e1._department)
-print(e1.get_salary())
-e1.increment(500000)
-print("Updated Salary :", e1.get_salary())
-e1.display()
+# class Employee:
+#     def __init__(self, name, department, salary):
+#         self.name = name
+#         self._department = department
+#         self.__salary = salary
+#     def get_salary(self):
+#         return self.__salary
+#     def increment(self, amount):
+#         self.__salary += amount
+#     def display(self):
+#         print("Employee :", self.name)
+#         print("Department :", self._department)
+#         print("Salary :", self.__salary)
+# e1 = Employee("Pallavi", "CS", 5000000)
+# print(e1.name)
+# print(e1._department)
+# print(e1.get_salary())
+# e1.increment(500000)
+# print("Updated Salary :", e1.get_salary())
+# e1.display()
 
+
+
+class Atm:
+    def __init__(self ,name , pin , amount):
+        self.name = name
+        self._pin = pin
+        self.__amount = amount
+       
+    def get_amount(self):
+        return self.__amount
+    def Withdraw_amo(self, w_amount):
+        self.__amount -= w_amount
+    def display(self):  
+        print("Name : ",self.name)
+        print("pin: ",self._pin)
+        print("Availabal amount :", self.__amount)
+a1 = Atm("Pallavi",10111, 100000)
+print(a1.name)
+print(a1._pin)
+print(a1.get_amount())
+print("\n===")
+print("________Your ATM Recipt________")
+a1.Withdraw_amo(5000)
+print("Withdraw amount : ",a1.get_amount())
+a1.display()
+
+
+
+        
 
 
         
