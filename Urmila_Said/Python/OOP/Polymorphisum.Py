@@ -5,10 +5,14 @@
 # Polymorphism means One thing, many forms.
 
 # types: 
-# 1. overloading :- does not support in python.
+# 1. overloading :- Multiple methods have the same name but different parameters.
+# Same method name with different parameters
+# does not support in python.
         # 1. Method overloading
 
-# 2. Overriding :- Supoort in python 
+# 2. Overriding :- Same method name in parent and child class
+# Replacing the parent's method in the child class.
+# Supoort in python 
         # 1. method overriding
         # 2. variable overriding
 
@@ -62,7 +66,6 @@
 #         return n1+n2
 #     def sub(self,n1,n2):
 #         return n1-n2
-    
 # class Pallavi(Urmila):
 #     def mul(self,n1,n2):
 #         return n1*n2
@@ -120,3 +123,4 @@ class Circle(Shape):
 
 S1 = Circle()
 S1.draw()
+

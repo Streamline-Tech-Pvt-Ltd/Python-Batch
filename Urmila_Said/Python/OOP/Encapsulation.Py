@@ -120,3 +120,4 @@ P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
 # print(P1.get_email())         
 # print(P1.__contact_no)           # Occur the attribute error
 P1.details()
+
