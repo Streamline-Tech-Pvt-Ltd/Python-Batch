@@ -56,7 +56,6 @@
 #         return n1/n2
 #     def add(self,n1,n2,n3):
 #         return n1+n2+n3
-    
 # p1 = Pallavi()
 # print(p1.add(20,30,20))
 # print(p1.sub(50,40))
@@ -85,12 +84,6 @@
 #         name = "Child Method"
 # o1 =Child()
 # print(o1.name)
-
-
-class Student:
-    def __init__(self):
-        print("Constructor called")
-s1 = Student()
 
 
 
