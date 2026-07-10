@@ -84,7 +84,7 @@
 #         return self.__marks
     
 #     def receipt(self):
-#         print("Generated The Addmission Receipt")
+#         print("Addmission Receipt")
 #         print("name:",self.name)
 #         print("roll_no:",self._roll_no)
 #         print("marks:",self.__marks)
@@ -98,25 +98,25 @@
 
 
 class Phone:
-    def __init__(self,name,email,contact):
+    def __init__(self,name,email,contact_no):
         self.name = name
         self._email = email
-        self.__contact = contact
+        self.__contact_no = contact_no
 
     def get_email(self):
         return self._email
     
-    def contact(self,contact):
-        return self.__contact
+    def contact(self,contact_no):
+        return self.__contact_no
     
     def details(self):
         print("My Phone Details")
         print("name:",self.name)
         print("email:",self._email)
-        print("contact:",self.__contact)
+        print("contact_no:",self.__contact_no)
 
 P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
 # print(P1.name)
 # print(P1.get_email())         
-# print(P1.__contact)           # Occur the attribute error
+# print(P1.__contact_no)           # Occur the attribute error
 P1.details()
