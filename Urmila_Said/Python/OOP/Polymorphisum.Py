@@ -115,13 +115,13 @@
 
 
 
-class Shape:
-    def draw(self):
-        print("Draw Shape")
+# class Shape:
+#     def draw(self):
+#         print("Draw Shape")
 
-class Circle(Shape):
-    def draw(self):
-        print("Draw Circle")
+# class Circle(Shape):
+#     def draw(self):
+#         print("Draw Circle")
 
-S1 = Circle()
-S1.draw()
+# S1 = Circle()
+# S1.draw()

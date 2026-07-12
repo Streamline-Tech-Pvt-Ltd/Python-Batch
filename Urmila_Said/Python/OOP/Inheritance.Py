@@ -143,18 +143,6 @@
 
 # Constructor through single inheritance
 
-# class College:
-#     def __init__(self,name):
-#         self.F_name = self.name
-        
-        
-# class Daughter(Father):
-#     def __init__(Father):
-#         print("Daughter class")
-
-# D = Daughter()
-# D = Father()
-
 class College:
     def __init__(self,name):
         self.name = name
