@@ -2,6 +2,7 @@
 
 
 # Variables in Python
+#type of container where we can store the value
 
 # Rule 1: Variable name should start with A-Z, a-z, or _
 name = "Pallavi"

@@ -925,3 +925,121 @@ Multiple Inheritance
 Multilevel Inheritance
 Hierarchical Inheritance
 Hybrid Inheritance
+
+Q.What is Encapsulation?
+Encapsulation is the process of wrapping data (variables) and methods (functions) into a single unit called a class. 
+It also helps protect data by restricting direct access.
+
+In Python, encapsulation is achieved using access modifiers:
+
+Public
+Protected
+Private
+
+Real-world Example:
+
+An ATM machine hides your account details. You can only access your money using your PIN. The internal banking process is protected.
+
+Python Example:
+
+class Bank:
+    def __init__(self):
+        self.__balance = 5000
+    def deposit(self, amount):
+        self.__balance += amount
+    def get_balance(self):
+        return self.__balance
+obj = Bank()
+obj.deposit(1000)
+print(obj.get_balance())
+
+
+Q. What are access modifiers in Python?
+
+Python provides three levels of access:
+
+Modifier	              Syntax	                    Access
+Public	                   name	                    Accessible everywhere
+Protected	               _name	            Accessible within the class and subclasses (by convention)
+Private                   	__name	            Accessible only inside the class (name-mangled)
+
+Q.What is Abstraction?
+Abstraction means showing only the essential features of an object while hiding the internal implementation details.
+The user knows what an object does but does not need to know how it does it.
+Python supports abstraction using the abc module and abstract classes.
+
+Real-world Example:
+When you drive a car, you use the steering wheel, brake, and accelerator. You don't need to know how the engine works internally.
+
+Q.Difference between Encapsulation and Abstraction
+Encapsulation	                        Abstraction
+Hides data                  	    Hides implementation
+Focuses on data security            	Focuses on simplicity
+Uses access modifiers	            Uses abstract classes and methods
+Protects internal state	            Exposes only essential functionality
+
+Q.What is an Abstract Class?
+An abstract class is a class that cannot be instantiated directly. It serves as a blueprint for other classes and may contain abstract methods that child classes must implement.
+
+Example:
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+obj = Dog()
+obj.sound()
+
+Q.What is Polymorphism?
+Polymorphism means "many forms." It allows the same method or interface to behave differently depending on the object.
+In Python, polymorphism makes code flexible and reusable.
+
+Q.What is Method Overriding?
+Method overriding occurs when a child class provides its own implementation of a method that already exists in the parent class.
+Example:
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+obj = Dog()
+obj.sound()
+
+Output
+Bark
+
+Q.What is Exception Handling?
+Answer:
+Exception handling is a mechanism in Python that allows a program to handle runtime errors gracefully without crashing.
+It helps the program continue executing even if an error occurs.
+
+Q.Explain try, except, else, and finally.
+try: Contains code that may raise an exception.
+except: Handles the exception if one occurs.
+else: Executes only if no exception occurs.
+finally: Always executes, whether an exception occurs or not. It is commonly used for cleanup tasks such as closing files.
+
+Example:
+try:
+    a = 10
+    b = 2
+    print(a / b)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("Division successful")
+finally:
+    print("Program finished")
+
+
+Q.What is the purpose of the raise keyword?
+The raise keyword is used to manually generate an exception when a specific condition is met.
+
+Example:
+age = 16
+if age < 18:
+    raise Exception("Age must be 18 or above.")

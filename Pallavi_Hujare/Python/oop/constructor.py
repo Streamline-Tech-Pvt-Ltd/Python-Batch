@@ -38,7 +38,6 @@ class Student:
         self.city = city
 
 s1 = Student(1, "Pallavi", "Nashik")
-
 print(s1.id)
 print(s1.name)
 print(s1.city)
@@ -63,7 +62,7 @@ print(s1.city)
 class Student:
     def __del__(self):
         print("Object Destroyed")
-
+        
 s1 = Student()
 del s1
 

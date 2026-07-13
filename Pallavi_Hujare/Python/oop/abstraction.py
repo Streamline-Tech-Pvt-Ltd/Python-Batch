@@ -1,7 +1,6 @@
 # Abstraction
 # Abstraction is the process of hiding the implementation details and showing only the essential features to the user.
 
-
 # How is Abstraction achieved in Python?
 
 # Python provides the ABC (Abstract Base Class) module.
@@ -42,6 +41,20 @@ class BMW(Car):
         print("BMW IS ON THE WAY.....")
 car = BMW()
 car.start()
+
+
+from abc import ABC, abstractmethod
+class Streamline(ABC):
+    @abstractmethod
+    def inputbox(self):
+        pass
+
+class Pallavi(Streamline):
+    def inputbox(self):
+        print("Input Box is created ...")
+streamline = Pallavi()
+streamline.inputbox()
+
 
 
 # Import Method                     	Example

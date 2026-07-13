@@ -5,6 +5,7 @@
         #    statement
 #Example
 # fact = 1
+
 # for i in range(5):
 #     fact= fact*(i+1)
 # print(fact)   #120
