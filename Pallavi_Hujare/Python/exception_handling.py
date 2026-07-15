@@ -43,7 +43,6 @@ try:
     a = 20
     b = 0
     print(a / b)
-
 except:
     print("Division by zero is not allowed")
 
@@ -121,9 +120,7 @@ except:
 
 # try:
 #     print(10/0)
-
 # except:
 #     print("Error")
-
 # finally:
 #     print("Program Finished")

@@ -59,6 +59,17 @@
 # d.sound()
 # d.bark()
 
+class Parent:
+    def property(self):
+        print("parent property")
+class Child(Parent):
+    def life(self):
+        print("Child class")
+c = Child()
+c.life()
+c.property()
+
+
 # 2 . Multiple Inheritance
 # Father      Mother
 #     │          │
@@ -211,6 +222,5 @@ p.meow()
 # s1 = Student('pallavi')
 # print(s1.admission("kkw"))
 # print(s1.Learning("py"))
-
 
 
