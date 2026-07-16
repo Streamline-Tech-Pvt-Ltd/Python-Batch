@@ -830,3 +830,345 @@ Ans:Yes.
 122. What happens if we define our own constructor?
 Ans: Python uses the constructor defined by the programmer instead of the automatically provided one.
 
+123. What is Inheritance?
+Ans: Inheritance is an OOP (Object-Oriented Programming) feature that allows 
+one class to acquire the properties and methods of another class.
+
+1.Parent Class (Base Class)
+2.Child Class (Derived Class)
+
+124. Why do we use Inheritance?
+Ans: Inheritance is used for:
+Code Reusability
+Easy Maintenance
+Reduces Code Duplication
+Makes programs modular
+Supports Method Overriding
+
+125. What are the advantages of Inheritance?
+Ans: Reuse existing code
+    Less coding
+    Easy maintenance
+    Faster development
+    Supports polymorphism
+    Improves readability
+
+126. What is a Parent Class?
+Ans: A class whose properties are inherited by another class
+
+127. What is a Child Class?
+Ans: A class that inherits another class
+
+128. How many types of Inheritance are there?
+Ans: There are 5 types:
+    1. Single Inheritance
+    2. Multiple Inheritance
+    3. Multilevel Inheritance
+    4. Hierarchical Inheritance
+    5. Hybrid Inheritance
+
+129. Explain Single Inheritance.
+Ans: Single Inheritance:
+    One child class inherits from one parent class.
+     Parent
+       │
+      Child
+
+130. Explain Multiple Inheritance.
+Ans: A child class inherits from more than one parent class.
+    Parent1    Parent2
+         \      /
+          Child
+
+131. Explain Multilevel Inheritance.
+Ans: A class inherits from another child class.
+        Grandparent
+         │
+       Parent
+         │
+       Child 
+
+132. Explain Hierarchical Inheritance.
+Ans: One parent class has multiple child classes.
+        Parent
+       /      \
+    Child1   Child2
+
+133. Explain Hybrid Inheritance.
+Ans: Hybrid inheritance is a combination of two or more inheritance types.
+         A
+       /   \
+      B     C
+       \   /
+         D
+
+134. What is super()
+Ans: super() is used to call methods or constructors of the parent class.
+
+135. Why is super() used?
+Ans: Call parent constructor
+     Call parent methods
+     Avoid writing parent class name
+     Support multiple inheritance
+
+136. Can constructors be inherited?
+Ans: Yes
+If the child class doesn't define its own constructor, it inherits the parent's constructor
+
+137. Explain inheritance with a real-world example
+Ans: Inheritance is like a child inheriting qualities from their parents.
+ For example, if we have an Employee class with a work() method, then a Manager class can inherit from Employee.
+  The manager can use the work() method and also add its own methods like approve_leave()
+  This avoids duplicate code and makes programs easier to maintain
+
+138. What is Polymorphism?
+Ans: Polymorphism means "many forms." In Python, 
+the same method or function can behave differently depending on the object that calls it.
+
+139. What does the word "Polymorphism" mean?
+Ans: Poly = Many
+     Morph = Forms
+Polymorphism = Many Forms.
+
+140. Why do we use Polymorphism?
+Ans: Improves code reusability
+     Makes programs flexible
+     Reduces code duplication
+     Makes code easier to maintain
+     Supports dynamic behavior
+
+141. What are the types of Polymorphism in Python?
+Ans: Compile-Time Polymorphism (Method Overloading)
+     Run-Time Polymorphism (Method Overriding)
+
+142. What is Method Overloading?
+Ans: Method overloading means having methods with the same name but different parameters.
+
+143. Does Python support Method Overloading?
+Ans: No. 
+Python does not support traditional method overloading.
+
+144. What is Method Overriding?
+Ans: Method overriding means a child class provides its own implementation of a method already defined in the parent class.
+
+145. Can operators be overloaded in Python?
+Ans: Yes.
+Python uses special (magic) methods like:
+ __add__()
+ __sub__()
+ __mul__()
+ __lt__()
+ __gt__()
+
+
+146. What is the difference between Method Overloading and Method Overriding?
+Ans: 
+| Method Overloading                          | Method Overriding                    |
+| ------------------------------------------- | ------------------------------------ |
+| Same method name with different parameters  | Same method name and same parameters |
+| Compile-time concept                        | Runtime concept                      |
+| Not directly supported in Python            | Fully supported                      |
+| Achieved using default arguments or `*args` | Achieved using inheritance           |
+
+
+147. Can Polymorphism exist without Inheritance?
+Ans: Yes
+Duck typing is an example where inheritance is not required.
+
+148. What is Encapsulation?
+Ans: Encapsulation is an Object-Oriented Programming (OOP) concept of binding data (variables)
+ and methods (functions) into a single unit (class) and restricting direct access to some data.
+
+149. Why do we use Encapsulation?
+Ans: Encapsulation is used to:
+Protect data from unauthorized access
+Improve security
+Hide implementation details
+Make code easier to maintain
+Improve code reusability
+
+150. What are the advantages of Encapsulation?
+Ans: Data security
+     Better code organization
+     Easy maintenance
+     Improved readability
+     Code reusability
+     Data hiding
+
+151. What is Data Hiding?
+Ans: Data hiding means restricting direct access to data by making variables private 
+and providing controlled access through methods.
+
+152. Access Modifier in Encapsulation
+Ans: 1.Public
+     2.Protected
+     3.private
+
+153. What is a Public Variable?
+Ans: A public variable can be accessed from anywhere.
+
+154. What is a Protected Variable?
+Ans: A protected variable starts with a single underscore (_).
+    It should be accessed within the class and its subclasses by convention.
+
+155. What is a Private Variable?
+Ans: A private variable starts with double underscores (__).
+    It cannot be accessed directly outside the class.
+
+156. How can we access a private variable?
+Ans: Using a public method.
+
+157. Can private variables be inherited?
+Ans: Yes,
+they are inherited, but they cannot be accessed directly in the child class because of name mangling.
+
+158. What is a Getter Method?
+Ans: A getter method returns the value of a private variable.
+
+160. What is a Setter Method?
+Ans: A setter method updates the value of a private variable.
+
+161. Why are Getter and Setter methods used?
+Ans: To protect data
+     To validate input before updating data
+    To control access to private variables
+
+162. Can we modify a private variable directly?
+Ans: No
+
+163. Is Encapsulation supported in Python?
+Ans: Yes
+Python supports encapsulation using:
+Public members
+Protected members (_variable)
+Private members (__variable)
+Getter and Setter methods
+Properties (@property)
+
+163. What is Abstraction?
+Ans: Abstraction means hiding unnecessary details and showing only the required functionality.
+
+164. Why do we use Abstraction?
+Ans: We use abstraction to:
+Hide complex implementation
+Improve security
+Reduce code complexity
+Improve maintainability
+Focus on essential features
+
+165. 4. What is an Abstract Class?
+Ans: An abstract class is a class that cannot be instantiated directly.
+ It is used as a blueprint for other classes.
+In Python, abstract classes are created using the ABC module.
+
+166. What is an Abstract Method?
+Ans: An abstract method is a method that is declared but has no implementation in the abstract class.
+ Every child class must implement it.
+
+167. Which module is used for Abstraction?
+Ans: The abc module.
+
+168. What is ABC?
+Ans: ABC stands for Abstract Base Class.
+It is used to create abstract classes.
+
+169. What is @abstractmethod?
+Ans: @abstractmethod is a decorator used to declare an abstract method.
+Every child class must provide its own implementation.
+
+170. Can we create an object of an Abstract Class?
+Ans: No.
+
+171. Why can't we create an object of an Abstract Class?
+Ans: Because it may contain abstract methods that have no implementation.
+ Python requires a child class to implement those methods first.
+
+172. Can an Abstract Class have normal methods?
+Ans: Yes
+
+173. Can an Abstract Class have a constructor?
+Ans:Yes.
+
+174. What happens if a child class does not implement an Abstract Method?
+Ans: The child class also becomes abstract and cannot be instantiated
+
+175. Can an Abstract Class have instance variables?
+Ans: Yes
+
+176. Is Abstraction supported in Python?
+Ans: Yes.
+Python supports abstraction using:
+abc module
+ABC
+@abstractmethod
+
+177. What is Exception Handling?
+Ans: Exception Handling is a mechanism used to handle runtime errors so 
+that the program does not terminate unexpectedly.
+
+178. What is an Exception?
+Ans: An exception is an error that occurs during program execution (runtime).
+
+179. Why do we use Exception Handling?
+Ans: 
+Prevents program crashes
+Handles runtime errors
+Improves user experience
+Makes programs reliable
+Helps in debugging
+
+180. What are the keywords used in Exception Handling?
+Ans:Python uses five main keywords:
+try
+except
+else
+finally
+raise
+
+181. What is the purpose of the try block?
+Ans: The try block contains code that may generate an exception.
+
+182. What is the purpose of the except block?
+Ans: The except block catches and handles exceptions.
+
+183. What is the else block?
+Ans:The else block executes only if no exception occurs.
+
+184. What is the finally block?
+Ans: The finally block executes whether an exception occurs or not.
+
+185. What is the raise keyword?
+Ans: raise is used to manually create an exception.
+
+186.Can we have multiple except blocks?
+Ans: Yes.
+
+187. Can we use try without except?
+Ans: No.
+A try block must have at least one except or a finally block.
+
+189. Can we use finally without except?
+Ans: Yes.
+
+190. What is Exception?
+Ans: Exception is the base class for most built-in exceptions in Python.
+
+191. What is as e in Exception Handling?
+Ans: It stores the exception object in a variable.
+
+192. What are some common built-in exceptions?
+Ans:
+ZeroDivisionError
+ValueError
+TypeError
+IndexError
+KeyError
+NameError
+AttributeError
+FileNotFoundError
+ImportError
+
+193. What is ZeroDivisionError?
+Ans: It occurs when a number is divided by zero.
+
+194. 

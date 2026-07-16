@@ -22,16 +22,16 @@
 # This is encapsulation.
 
 
-# class Bank:
-#     def __init__(self,name,acc_type,balance):
-#         self.name = name
-#         self._acc_type = acc_type
-#         self.__balance = balance
+class Bank:
+    def __init__(self,name,acc_type,balance):
+        self.name = name
+        self._acc_type = acc_type
+        self.__balance = balance
 
-# B1 = Bank("Urmila","Saving",50000)
-# print(B1.name)
-# print(B1._acc_type)
-# print(B1.__balance)
+B1 = Bank("Urmila","Saving",50000)
+print(B1.name)
+print(B1._acc_type)
+print(B1.__balance)
       
 
 # Using Getter and Setter Method:
@@ -97,27 +97,27 @@
 # S1.receipt()
 
 
-class Phone:
-    def __init__(self,name,email,contact_no):
-        self.name = name
-        self._email = email
-        self.__contact_no = contact_no
+# class Phone:
+#     def __init__(self,name,email,contact_no):
+#         self.name = name
+#         self._email = email
+#         self.__contact_no = contact_no
 
-    def get_email(self):
-        return self._email
+#     def get_email(self):
+#         return self._email
     
-    def contact(self,contact_no):
-        return self.__contact_no
+#     def contact(self,contact_no):
+#         return self.__contact_no
     
-    def details(self):
-        print("My Phone Details")
-        print("name:",self.name)
-        print("email:",self._email)
-        print("contact_no:",self.__contact_no)
+#     def details(self):
+#         print("My Phone Details")
+#         print("name:",self.name)
+#         print("email:",self._email)
+#         print("contact_no:",self.__contact_no)
 
-P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
-# print(P1.name)
-# print(P1.get_email())         
-# print(P1.__contact_no)           # Occur the attribute error
-P1.details()
+# P1 = Phone("Samsung","urmi07@gmail.com",8767389329,)
+# # print(P1.name)
+# # print(P1.get_email())         
+# # print(P1.__contact_no)           # Occur the attribute error
+# P1.details()
 
