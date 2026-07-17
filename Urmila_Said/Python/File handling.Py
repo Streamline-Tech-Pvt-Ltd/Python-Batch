@@ -38,10 +38,10 @@
 # file.close()
 
 #6 Read and Write Mode (r+): Can read and write.
-file = open("student.txt","r+")
-print(file.read())
-file.write("\nI am a fullstack developer")
-file.close()
+# file = open("student.txt","r+")
+# print(file.read())
+# file.write("\nI am a fullstack developer")
+# file.close()
 
 
 
