@@ -147,10 +147,3 @@
 #     print("Invalid Username")
          
 
-# for i in range (1,11):
-#     print(i)
-
-i = 100
-while (i>=1):
-    print(i)
-    i-=1

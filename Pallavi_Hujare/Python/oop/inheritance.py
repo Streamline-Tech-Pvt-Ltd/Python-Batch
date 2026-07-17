@@ -59,6 +59,17 @@
 # d.sound()
 # d.bark()
 
+class Parent:
+    def property(self):
+        print("parent property")
+class Child(Parent):
+    def life(self):
+        print("Child class")
+c = Child()
+c.life()
+c.property()
+
+
 # 2 . Multiple Inheritance
 # Father      Mother
 #     │          │
@@ -197,18 +208,19 @@ p.meow()
 # s1= Student()
 # s1.
 
-class College:
-    def __init__(self, name):
-        self.name = name
-    def admission(self,name):
-            return f"This is my college Name {self.name}"
+# class College:
+#     def __init__(self, name):
+#         self.name = name
+#     def admission(self,name):
+#             return f"This is my college Name {self.name}"
 
-class Student(College):
-    def __init__(self,name):
-        self.name = name
-    def Learning(self,name):
-            return f"This is my course name {self.name}"
-s1 = Student('pallavi')
-print(s1.admission("kkw"))
-print(s1.Learning("py"))
+# class Student(College):
+#     def __init__(self,name):
+#         self.name = name
+#     def Learning(self,name):
+#             return f"This is my course name {self.name}"
+# s1 = Student('pallavi')
+# print(s1.admission("kkw"))
+# print(s1.Learning("py"))
+
 

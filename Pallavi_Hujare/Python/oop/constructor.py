@@ -63,7 +63,7 @@ print(s1.city)
 class Student:
     def __del__(self):
         print("Object Destroyed")
-
+        
 s1 = Student()
 del s1
 

@@ -32,23 +32,31 @@
 # def display(self):
 #     pass
 
-from abc import ABC, abstractmethod
-class Car(ABC):
-    @abstractmethod
-    def start(self):
-        pass
-class BMW(Car):
-    def start(self):
-        print("BMW IS ON THE WAY.....")
-car = BMW()
-car.start()
+
+# from abc import ABC, abstractmethod
+
+# class Car(ABC):
+
+#     @abstractmethod
+#     def start(self):
+#         pass
+
+# class BMW(Car):
+
+#     def start(self):
+#         print("BMW Started")
+
+# car = BMW()
+# car.start()
 
 
-# Import Method                     	Example
 
-# Import entire module	            import math
-# Import specific function        	from math import sqrt
-# Import multiple functions	        from math import sqrt, factorial
-# Import with alias	                import math as m
-# Import everything	                from math import *
 
+
+# Summary Table
+# Import Method	                                Example
+# Import entire module                        	import math
+# Import specific function	                from math import sqrt
+# Import multiple functions	            from math import sqrt, factorial
+# Import with alias	                          import math as m
+# Import everything	                        from math import *

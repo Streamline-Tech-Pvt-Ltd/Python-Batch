@@ -38,15 +38,15 @@
 
 # types: 
 # 1. overloading :-   does not support in python.
-        # 1. Method overloading
+# 1. Method overloading
 
 # 2. Overriding :- Supoort in python 
 # 1. method overriding
-# class Urmila:
-#     def add(self,n1,n2):
-#         return n1+n2
-#     def sub(self,n1,n2):
-#         return n1-n2
+class Urmila:
+    def add(self,n1,n2):
+        return n1+n2
+    def sub(self,n1,n2):
+        return n1-n2
     
 
 # class Pallavi(Urmila):

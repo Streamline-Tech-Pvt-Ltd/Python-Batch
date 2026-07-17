@@ -1,7 +1,6 @@
 *********Git Commands*********
 
-
-###This commands run on VS code 
+###   This commands run on VS code 
 
 1.git --version
   Purpose : used to Verify installation.
@@ -21,8 +20,6 @@ Purpose : Creates a commit (snapshot) of all files that have been added to the s
 6.git push origin main
 Purpose :Uploads your local commits from the main branch to the GitHub repository.
 
-
-
 ------------------------------------------------------------------------------------------------------------------
 
 ****Git configuration is used to set your name and email so Git can identify who made each commit.****
@@ -39,7 +36,6 @@ Sets your username for all Git repositories on computer.
 Your name appears in commit history.
 
 
-
 2. git config --global user.email "email"
 
 Example
@@ -47,7 +43,6 @@ git config --global user.email "pallavihujare123@gmail.com"
 
 Purpose :Sets email for Git commits.
 Should ideally match GitHub email.
-
 
 
 3.git config --list
