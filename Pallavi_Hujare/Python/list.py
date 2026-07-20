@@ -50,6 +50,7 @@ l1.remove(5)
 print(l1) #[1, 2, 2, 2, 3, 4]
 
 
+
 print(l1.count(2))  #3
 
 l1.copy()
@@ -103,5 +104,4 @@ print(sum(l1))
 
 #practice
 l1 = [1,2,3,4,5]
-print(l1[0])
-print(l1[4])
+l1.replace

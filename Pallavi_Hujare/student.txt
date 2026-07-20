@@ -1,0 +1,13 @@
+Intern ID : 1
+Name : Omkar Hujare
+Domain Name : Python
+Registration Fee : 5500
+College Name : KKW
+City : Nashik
+----------------------------------------
+Intern ID : 2
+Name : Urmila Said
+Domain Name : Python
+Registration Fee : 5500
+College Name : KKW
+City : Pune

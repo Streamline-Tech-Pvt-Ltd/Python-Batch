@@ -121,6 +121,6 @@ except:
 # try:
 #     print(10/0)
 # except:
-#     print("Error")git status
+#     print("Error")
 # finally:
 #     print("Program Finished")
