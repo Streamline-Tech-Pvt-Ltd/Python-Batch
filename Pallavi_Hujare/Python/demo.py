@@ -77,7 +77,7 @@
 # while temp > 0:
 #     sum = sum + temp % 10 ** count
 #     temp = temp // 10
-# if sum == num:
+# if sum == num:git 
 #     print("Armstrong Number")
 # else:
 #     print("Not Armstrong Number")
@@ -112,12 +112,6 @@
 # print(fact)
 
 
-# num =int(input("Enter the Number :"))
-# rev = 0
-# while num > 0:
-#     rev = rev * 10 + num %10
-#     num = num // 10
-# print(rev)
 
 
 num = int(input("Enter the Number :"))

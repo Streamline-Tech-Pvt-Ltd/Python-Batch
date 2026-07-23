@@ -1,0 +1,21 @@
+body{
+width:400px;
+height:400px;
+.class1:hover{
+background-color: yellow;
+}
+.class2:hover{
+background-color:pink;
+}
+.class3:hover{
+background-color:silver;
+}
+.class1{
+background-color:red;
+}
+.class2{
+background-color:blue;
+}
+.class3{
+background-color:green;
+}
