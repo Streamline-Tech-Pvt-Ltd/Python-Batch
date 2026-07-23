@@ -50,9 +50,6 @@
 # car.start()
 
 
-
-
-
 # Summary Table
 # Import Method	                                Example
 # Import entire module                        	import math
