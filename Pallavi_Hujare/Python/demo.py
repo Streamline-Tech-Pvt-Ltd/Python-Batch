@@ -13,6 +13,7 @@
 # else:
 #     print("Odd Number ")
 
+<<<<<<< HEAD
 # #Print Even Number
 # for i in range(2,11,2):
 #     print(i, end= " ")
@@ -154,3 +155,5 @@ else:
 
 
 
+=======
+>>>>>>> 42d33eb362b814e919013f06f5fad40b23cc51fa
