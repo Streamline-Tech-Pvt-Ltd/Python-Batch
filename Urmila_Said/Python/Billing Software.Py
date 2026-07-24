@@ -17,7 +17,6 @@ price ={
 }
 
    
-
 domain_key = []
 quantity = []
 
@@ -82,4 +81,4 @@ print("="*120)
 print(" "*80,"Total Bill Amount = RS-",total,"/-")
 print("="*120)
 print(" "*40,"Thank you for visiting Streamline tech")
-
+print("="*120)

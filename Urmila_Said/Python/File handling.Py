@@ -5,7 +5,7 @@
 # Types of files
 #1.text files(.txt) : These files store readable text.
 
-#2.Binary giles(.jpg,.pdf): These store data in binary format.
+#2.Binary files(.jpg,.pdf): These store data in binary format.
 
 
 #1.Create Mode (x): Creates a new file.
@@ -26,22 +26,55 @@
 # print(file.read())
 # file.close()
 
-#4 readline(): Reads one line at a time.
+#readline(): Reads one line at a time.
 # file = open("student.txt","r")
 # print(file.readline())
 # print(file.readline())
 # file.close()
 
-#5 readlines(): Reads all lines into a list.
+#readlines(): Reads all lines into a list.
 # file = open("student.txt","r")
 # print(file.readlines())
 # file.close()
 
-#6 Read and Write Mode (r+): Can read and write.
+#5 Read and Write Mode (r+): Can read and write.
 # file = open("student.txt","r+")
 # print(file.read())
 # file.write("\nI am a fullstack developer")
 # file.close()
+
+#6 write and read(w+): Deletes old data
+# file = open("student.txt","w+")
+# file.write("Hello")
+# print(file.read())
+# file.close()
+
+#remove(): Deletes a file
+# import os
+# os.remove("student.txt")
+
+# With use
+# with open("Student.txt","r") as file:
+#     file.read()
+
+
+# replace(): repalce the file exit value
+
+file = open("Student.txt","w")
+file.write("Urmila Said")
+file.close()
+
+file = open("Student.txt","r")
+data = file.read()
+file.close()
+
+data = data.replace("Said","Hujare")
+
+file = open("Student.txt","w")
+data = file.write(data)
+file.close()
+
+
 
 
 
