@@ -447,8 +447,728 @@ Ans:() (Parentheses) have the highest precedence because expressions
 Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
     The result of a comparison is always either True or False.
 
+54.What are Bitwise Operators?
+Ans:Bitwise operators perform operations on the binary representation (bits) of integers.
+    Operators:&, |, ^, ~, <<, >>
+
+55.Difference Between and n & ?
+Ans:
+| `and`                                      | `&`                                       |
+| ------------------------------------------ | ----------------------------------------- |
+| Logical Operator                           | Bitwise Operator                          |
+| Used with Boolean values (`True`, `False`) | Used with binary (bit) values of integers |
+| Returns `True` if both conditions are true | Performs bit-by-bit AND operation         |
+| Used in conditional statements             | Used in bit manipulation                  |
+
+56.What is loop in python ?
+Ans:Loop is used to repeat a block of code until this given condition is true.
+    Two Loop: 1. For Loop 
+              2. While loop
+
+57.Difference Between For Loop And while Loop ?
+Ans:
+| `for` Loop                                  | `while` Loop                                      |
+| ------------------------------------------- | ------------------------------------------------- |
+| Used when we know how many times to repeat. | Used when we don't know how many times to repeat. |
+| Easy to write.                              | Needs a condition.                                |
+| Iterates over a sequence.                   | Runs based on a condition.                        |
+
+EX:for i in range(1, 6):
+    print(i)
+
+i = 1
+while i <= 5:
+    print(i)
+    i = i + 1
+
+58. What is the purpose of the range() function?
+Ans:range() is a built-in Python function that generates a sequence of numbers and
+    is commonly used with for loops.
+    EX:for i in range(1, 6):
+       print(i)              #1 2 3 4 5
+
+59. What is a conditional statement?
+Ans: A conditional statement is used to make decisions in a program based on a condition.
+
+60.What is the purpose of the if statement ?
+Ans: The if statement executes a block of code only when the condition is True.
+
+61.What is the difference between if and if-else ?
+Ans:if → Executes code when the condition is true.
+    if-else → Executes one block if the condition is true and another block if it is false.
     
+62.What is the use of elif ?
+Ans: elif is used to check multiple conditions.
+
+63.What is a nested if statement?
+Ans: An if statement inside another if statement is called a nested if.
+
+64. Program to check Odd or Even
+Ans: 
+num = int(input("Enter a number: "))
+
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+65.Take a number n from the user and print the first n terms of the Fibonacci series using a while loop.
+# For Loop
+n = int(input("Enter the no n:"))
+a = 0
+b = 1
+for i in range(n):
+     print(a)
+     c = a + b
+     a = b
+     b = c
 
 
-     
+# While Loop
+n = int(input("Enter the no n:"))
+a = 0
+b = 1
+count = 0
+while count < n:
+     print(a)
+     c = a + b
+     a = b
+     b = c
+     count += 1
+
+66.# 7. Take a number from the user and check whether it is a palindrome or not.
+# While Loop
+num = int(input("Enter a number:"))
+temp = num
+reverse = 0
+while (temp > 0):
+      remainder = temp % 10
+      reverse = (reverse * 10) + remainder
+      temp = temp // 10
+
+if (num == reverse):
+      print("Palindrome Number")
+else:
+      print("Not Palindrome number")
+
+
+67. Difference between Nested if and elif
+Ans: 
+| Nested `if`                   | `elif`                          |
+| ----------------------------- | ------------------------------- |
+| `if` inside another `if`      | Checks multiple conditions      |
+| Used for dependent conditions | Used for alternative conditions |
+
+
+68.What is a control statement ?
+Ans:A control statement controls the flow of execution of a program.
+    It decides which statement will execute and how many times.
        
+69.What is the purpose of the break statement?
+Ans: break immediately terminates the loop.
+
+70. What is the purpose of the continue statement?
+Ans: continue skips the current iteration and moves to the next iteration.
+
+71.What is the purpose of the pass statement?
+Ans: pass is a null statement. It does nothing and is used as a placeholder
+
+72. What are the types of control statements in Python?
+Ans:
+Conditional Statements (if, if-else, elif)
+Looping Statements (for, while)
+Jump Statements (break, continue, pass)
+
+73.What is a function in Python ?
+Ans:A function is a block of reusable code that performs a specific task
+
+74.Why do we use functions?
+Ans:Code reusability
+    Reduces code duplication
+    Makes code easier to understand and maintain
+
+75.Difference Between Parameter And Argument ?
+Ans:
+| Parameter                                                      | Argument                                                                  |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| A parameter is a variable defined in the function declaration. | An argument is the actual value passed to the function when it is called. |
+| Parameters receive values from arguments.                      | Arguments provide values to parameters.                                   |
+| Used in function definition.                                   | Used in function call.                                                    |
+|Ex: a,b,c etc                                                   |Ex: 1,2,3 etc
+
+
+76.Difference Between Print() & return function ?
+Ans:
+| `print()`                           | `return`                                      |
+| ----------------------------------- | --------------------------------------------- |
+| Displays output on the screen.      | Sends a value back from the function.         |
+| Output cannot be stored directly.   | Returned value can be stored in a variable.   |
+| Used for showing results.           | Used for further calculations and processing. |
+| Function continues after `print()`. | Function ends when `return` is executed.      |
+
+77.Difference Between User-Defined Function and Built-in Function
+Ans:
+| User-Defined Function                                   | Built-in Function                      |
+| ------------------------------------------------------- | -------------------------------------- |
+| Created by the programmer.                              | Already provided by Python.            |
+| Defined using the `def` keyword.                        | No need to define them.                |
+| Used for specific tasks according to user requirements. | Used for common tasks.                 |
+| Example: `add()`, `factorial()`                         | Example: `print()`, `len()`, `input()` |
+
+78.What are function arguments in Python?
+Ans:Arguments are the values passed to a function when it is called.
+
+79.How many types of arguments are there in Python?
+Ans:There are 4 types:
+    Positional Arguments
+    Keyword Arguments
+    Default Arguments
+    Variable-length Arguments (*args, **kwargs)
+
+80.What are keyword arguments?
+Ans:Arguments passed using parameter names.
+
+81.What are default arguments?
+Ans:Arguments with predefined values.
+
+82.What are variable-length arguments?
+Ans:Used when the number of arguments is unknown.
+Using *args
+
+83.What does *args mean?
+Ans: *args collects multiple positional arguments into a tuple.
+
+84.What does **kwargs mean?
+Ans: **kwargs collects keyword arguments into a dictionary.
+
+85.What is a required argument?
+Ans: A parameter that must receive a value.
+
+86.Which should come first: positional or keyword arguments?
+Ans: Positional arguments must come before keyword arguments.
+
+87.What is the advantage of using arguments?
+Ans: Makes functions reusable.
+    Avoids repeating code.
+    Allows different input values.
+    Improves flexibility and readability.
+
+88. Difference Between *args and **kwargs in Python
+Ans:,
+| `*args`                                                | `**kwargs`                                          |
+| ------------------------------------------------------ | --------------------------------------------------- |
+| Stands for **arguments**.                              | Stands for **keyword arguments**.                   |
+| Accepts a variable number of **positional arguments**. | Accepts a variable number of **keyword arguments**. |
+| Stores values in a **tuple**.                          | Stores values in a **dictionary**.                  |
+| Access values using indexes or loops.                  | Access values using keys or loops.                  |
+| Syntax: `*args`                                        | Syntax: `**kwargs`                                  |
+
+
+89. What is a Higher Order Function?
+Ans: A Higher Order Function is a function that:
+     Takes another function as an argument, or
+     Returns another function as a result.
+
+90. Why are Higher Order Functions used?
+Ans:To reduce code duplication.
+    To make code reusable.
+    To improve readability.
+    To implement functional programming concepts.
+
+91. Give examples of built-in Higher Order Functions in Python.
+Ans: map()
+    filter()
+    reduce()
+    sorted()  (import the functools module)
+
+92. Is lambda a Higher-Order Function?
+Ans: No. 
+   A lambda is an anonymous function, not a higher-order function. It is often passed to higher-order functions such as map(), filter(), and sorted().
+
+93. What is the difference between a normal function and a Higher Order Function?
+Ans:
+| Normal Function                    | Higher Order Function             |
+| ---------------------------------- | --------------------------------- |
+| Performs a task                    | Takes or returns another function |
+| Doesn't require function arguments | Accepts functions as arguments    |
+
+94. What is Type Casting in Python?
+Ans: Type casting is the process of converting one data type into another data type.
+For example, converting:
+Integer (int) → Float (float)
+Float (float) → Integer (int)
+String (str) → Integer (int)
+
+95. What are the types of Type Casting?
+Ans: There are 2 types:
+    1.Implicit Type Casting
+    2.Explicit Type Casting
+
+96.What is Implicit Type Casting?
+Ans: Python automatically converts one data type into another.
+
+97. What is Explicit Type Casting?
+Ans: The programmer manually converts one data type into another using functions like int(), float(), etc.
+
+98. Why do we use Type Casting?
+Ans:
+To convert one data type into another.
+To perform mathematical operations.
+To avoid type errors.
+To process user input correctly.
+
+99. What is the difference between Implicit and Explicit Type Casting?
+Ans: 
+| Implicit Type Casting              | Explicit Type Casting                                 |
+| ---------------------------------- | ----------------------------------------------------- |
+| Done automatically by Python       | Done manually by the programmer                       |
+| No conversion function is required | Uses functions like `int()`, `float()`, `str()`, etc. |
+| Safe and automatic                 | Programmer controls the conversion                    |
+
+100. Why is user input often type cast?
+Ans: The input() function always returns a string. 
+     If you want to perform calculations, you must convert it to a numeric type.
+
+101. What is Variable Scope?
+Ans: Variable scope refers to the area of a program where a variable can be accessed.
+
+102. What are the types of variable scope in Python?
+Ans: There are 2 types of variable scope:
+     1.Local Scope
+     2.Global Scope
+
+103. What is a Local Variable?
+Ans: A variable declared inside a function is called a local variable. It can only be used inside that function.
+
+104. What is a Global Variable?
+Ans: A variable declared outside all functions is called a global variable.
+    It can be accessed throughout the program.
+
+105. What is the difference between Local and Global Variables?
+Ans: 
+| Local Variable                        | Global Variable                   |
+| ------------------------------------- | --------------------------------- |
+| Declared inside a function            | Declared outside a function       |
+| Accessible only inside the function   | Accessible throughout the program |
+| Exists only during function execution | Exists until the program ends     |
+
+106. What is the global keyword?
+Ans: The global keyword is used to modify a global variable inside a function.
+
+
+-------------------------------------------------------------------------------------------------------------------
+ ## OOPS 
+
+107. What is OOP?
+Ans: OOP (Object-Oriented Programming) is a programming approach in which the program is organized using objects and classes.
+
+108. What is POP?
+Ans: POP (Procedure-Oriented Programming) is a programming approach in which the program is divided into functions (procedures).
+
+109. What is the difference between POP and OOP?
+Ans:
+| POP                            | OOP                         |
+| ------------------------------ | --------------------------- |
+| Procedure-Oriented Programming | Object-Oriented Programming |
+| Focuses on functions           | Focuses on objects          |
+| Data is less secure            | Data is more secure         |
+| No inheritance                 | Supports inheritance        |
+| No polymorphism                | Supports polymorphism       |
+| Suitable for small programs    | Suitable for large programs |
+
+110. What is a Class?
+Ans: A class is a blueprint or template used to create objects.
+
+111. What is an Object?
+Ans: An object is an instance of a class.
+
+112. What are the four pillars of OOP?
+Ans: Encapsulation
+     Inheritance
+     Polymorphism
+     Abstraction
+
+113. Difference Between Function and Method (Python)
+Ans:
+| Function                                                     | Method                                                    |
+| ------------------------------------------------------------ | --------------------------------------------------------- |
+| A function is a block of code that performs a specific task. | A method is a function that belongs to a class or object. |
+| It is defined using the `def` keyword.                       | It is also defined using `def`, but inside a class.       |
+| It can be called directly by its name.                       | It is called using an object or class.                    |
+| It is independent of any object.                             | It is associated with an object or class.                 |
+| Example: `print()`, `len()`                                  | Example: `list.append()`, `str.upper()`                   |
+
+114. What is a Constructor?
+Ans: A constructor is a special method that is automatically called when an object is created.
+     It is used to initialize the object's data.
+
+115. What is the name of the constructor in Python?
+Ans: The constructor in Python is __init__().
+
+116. Why do we use a constructor?
+Ans: To initialize object data.
+     To assign values to object variables.
+     To perform setup tasks automatically when an object is created
+
+117. When is a constructor called?
+Ans: A constructor is called automatically when an object is created.
+
+118. What is a Default Constructor?
+Ans: A default constructor does not take any user-defined parameters (except self).
+
+119. What is a Parameterized Constructor?
+Ans: A parameterized constructor accepts values during object creation.
+
+120. What is the purpose of self in a constructor?
+Ans: self refers to the current object of the class.
+    It is used to access the object's variables and methods.
+
+121. Can we create an object without a constructor?
+Ans:Yes.
+     If you do not define a constructor, Python provides a default constructor automatically.
+
+122. What happens if we define our own constructor?
+Ans: Python uses the constructor defined by the programmer instead of the automatically provided one.
+
+123. What is Inheritance?
+Ans: Inheritance is an OOP (Object-Oriented Programming) feature that allows 
+one class to acquire the properties and methods of another class.
+
+1.Parent Class (Base Class)
+2.Child Class (Derived Class)
+
+124. Why do we use Inheritance?
+Ans: Inheritance is used for:
+Code Reusability
+Easy Maintenance
+Reduces Code Duplication
+Makes programs modular
+Supports Method Overriding
+
+125. What are the advantages of Inheritance?
+Ans: Reuse existing code
+    Less coding
+    Easy maintenance
+    Faster development
+    Supports polymorphism
+    Improves readability
+
+126. What is a Parent Class?
+Ans: A class whose properties are inherited by another class
+
+127. What is a Child Class?
+Ans: A class that inherits another class
+
+128. How many types of Inheritance are there?
+Ans: There are 5 types:
+    1. Single Inheritance
+    2. Multiple Inheritance
+    3. Multilevel Inheritance
+    4. Hierarchical Inheritance
+    5. Hybrid Inheritance
+
+129. Explain Single Inheritance.
+Ans: Single Inheritance:
+    One child class inherits from one parent class.
+     Parent
+       │
+      Child
+
+130. Explain Multiple Inheritance.
+Ans: A child class inherits from more than one parent class.
+    Parent1    Parent2
+         \      /
+          Child
+
+131. Explain Multilevel Inheritance.
+Ans: A class inherits from another child class.
+        Grandparent
+         │
+       Parent
+         │
+       Child 
+
+132. Explain Hierarchical Inheritance.
+Ans: One parent class has multiple child classes.
+        Parent
+       /      \
+    Child1   Child2
+
+133. Explain Hybrid Inheritance.
+Ans: Hybrid inheritance is a combination of two or more inheritance types.
+         A
+       /   \
+      B     C
+       \   /
+         D
+
+134. What is super()
+Ans: super() is used to call methods or constructors of the parent class.
+
+135. Why is super() used?
+Ans: Call parent constructor
+     Call parent methods
+     Avoid writing parent class name
+     Support multiple inheritance
+
+136. Can constructors be inherited?
+Ans: Yes
+If the child class doesn't define its own constructor, it inherits the parent's constructor
+
+137. Explain inheritance with a real-world example
+Ans: Inheritance is like a child inheriting qualities from their parents.
+ For example, if we have an Employee class with a work() method, then a Manager class can inherit from Employee.
+  The manager can use the work() method and also add its own methods like approve_leave()
+  This avoids duplicate code and makes programs easier to maintain
+
+138. What is Polymorphism?
+Ans: Polymorphism means "many forms." In Python, 
+the same method or function can behave differently depending on the object that calls it.
+
+139. What does the word "Polymorphism" mean?
+Ans: Poly = Many
+     Morph = Forms
+Polymorphism = Many Forms.
+
+140. Why do we use Polymorphism?
+Ans: Improves code reusability
+     Makes programs flexible
+     Reduces code duplication
+     Makes code easier to maintain
+     Supports dynamic behavior
+
+141. What are the types of Polymorphism in Python?
+Ans: Compile-Time Polymorphism (Method Overloading)
+     Run-Time Polymorphism (Method Overriding)
+
+142. What is Method Overloading?
+Ans: Method overloading means having methods with the same name but different parameters.
+
+143. Does Python support Method Overloading?
+Ans: No. 
+Python does not support traditional method overloading.
+
+144. What is Method Overriding?
+Ans: Method overriding means a child class provides its own implementation of a method already defined in the parent class.
+
+145. Can operators be overloaded in Python?
+Ans: Yes.
+Python uses special (magic) methods like:
+ __add__()
+ __sub__()
+ __mul__()
+ __lt__()
+ __gt__()
+
+
+146. What is the difference between Method Overloading and Method Overriding?
+Ans: 
+| Method Overloading                          | Method Overriding                    |
+| ------------------------------------------- | ------------------------------------ |
+| Same method name with different parameters  | Same method name and same parameters |
+| Compile-time concept                        | Runtime concept                      |
+| Not directly supported in Python            | Fully supported                      |
+| Achieved using default arguments or `*args` | Achieved using inheritance           |
+
+
+147. Can Polymorphism exist without Inheritance?
+Ans: Yes
+Duck typing is an example where inheritance is not required.
+
+148. What is Encapsulation?
+Ans: Encapsulation is an Object-Oriented Programming (OOP) concept of binding data (variables)
+ and methods (functions) into a single unit (class) and restricting direct access to some data.
+
+149. Why do we use Encapsulation?
+Ans: Encapsulation is used to:
+Protect data from unauthorized access
+Improve security
+Hide implementation details
+Make code easier to maintain
+Improve code reusability
+
+150. What are the advantages of Encapsulation?
+Ans: Data security
+     Better code organization
+     Easy maintenance
+     Improved readability
+     Code reusability
+     Data hiding
+
+151. What is Data Hiding?
+Ans: Data hiding means restricting direct access to data by making variables private 
+and providing controlled access through methods.
+
+152. Access Modifier in Encapsulation
+Ans: 1.Public
+     2.Protected
+     3.private
+
+153. What is a Public Variable?
+Ans: A public variable can be accessed from anywhere.
+
+154. What is a Protected Variable?
+Ans: A protected variable starts with a single underscore (_).
+    It should be accessed within the class and its subclasses by convention.
+
+155. What is a Private Variable?
+Ans: A private variable starts with double underscores (__).
+    It cannot be accessed directly outside the class.
+
+156. How can we access a private variable?
+Ans: Using a public method.
+
+157. Can private variables be inherited?
+Ans: Yes,
+they are inherited, but they cannot be accessed directly in the child class because of name mangling.
+
+158. What is a Getter Method?
+Ans: A getter method returns the value of a private variable.
+
+160. What is a Setter Method?
+Ans: A setter method updates the value of a private variable.
+
+161. Why are Getter and Setter methods used?
+Ans: To protect data
+     To validate input before updating data
+    To control access to private variables
+
+162. Can we modify a private variable directly?
+Ans: No
+
+163. Is Encapsulation supported in Python?
+Ans: Yes
+Python supports encapsulation using:
+Public members
+Protected members (_variable)
+Private members (__variable)
+Getter and Setter methods
+Properties (@property)
+
+163. What is Abstraction?
+Ans: Abstraction means hiding unnecessary details and showing only the required functionality.
+
+164. Why do we use Abstraction?
+Ans: We use abstraction to:
+Hide complex implementation
+Improve security
+Reduce code complexity
+Improve maintainability
+Focus on essential features
+
+165. 4. What is an Abstract Class?
+Ans: An abstract class is a class that cannot be instantiated directly.
+ It is used as a blueprint for other classes.
+In Python, abstract classes are created using the ABC module.
+
+166. What is an Abstract Method?
+Ans: An abstract method is a method that is declared but has no implementation in the abstract class.
+ Every child class must implement it.
+
+167. Which module is used for Abstraction?
+Ans: The abc module.
+
+168. What is ABC?
+Ans: ABC stands for Abstract Base Class.
+It is used to create abstract classes.
+
+169. What is @abstractmethod?
+Ans: @abstractmethod is a decorator used to declare an abstract method.
+Every child class must provide its own implementation.
+
+170. Can we create an object of an Abstract Class?
+Ans: No.
+
+171. Why can't we create an object of an Abstract Class?
+Ans: Because it may contain abstract methods that have no implementation.
+ Python requires a child class to implement those methods first.
+
+172. Can an Abstract Class have normal methods?
+Ans: Yes
+
+173. Can an Abstract Class have a constructor?
+Ans:Yes.
+
+174. What happens if a child class does not implement an Abstract Method?
+Ans: The child class also becomes abstract and cannot be instantiated
+
+175. Can an Abstract Class have instance variables?
+Ans: Yes
+
+176. Is Abstraction supported in Python?
+Ans: Yes.
+Python supports abstraction using:
+abc module
+ABC
+@abstractmethod
+
+177. What is Exception Handling?
+Ans: Exception Handling is a mechanism used to handle runtime errors so 
+that the program does not terminate unexpectedly.
+
+178. What is an Exception?
+Ans: An exception is an error that occurs during program execution (runtime).
+
+179. Why do we use Exception Handling?
+Ans: 
+Prevents program crashes
+Handles runtime errors
+Improves user experience
+Makes programs reliable
+Helps in debugging
+
+180. What are the keywords used in Exception Handling?
+Ans:Python uses five main keywords:
+try
+except
+else
+finally
+raise
+
+181. What is the purpose of the try block?
+Ans: The try block contains code that may generate an exception.
+
+182. What is the purpose of the except block?
+Ans: The except block catches and handles exceptions.
+
+183. What is the else block?
+Ans:The else block executes only if no exception occurs.
+
+184. What is the finally block?
+Ans: The finally block executes whether an exception occurs or not.
+
+185. What is the raise keyword?
+Ans: raise is used to manually create an exception.
+
+186.Can we have multiple except blocks?
+Ans: Yes.
+
+187. Can we use try without except?
+Ans: No.
+A try block must have at least one except or a finally block.
+
+189. Can we use finally without except?
+Ans: Yes.
+
+190. What is Exception?
+Ans: Exception is the base class for most built-in exceptions in Python.
+
+191. What is as e in Exception Handling?
+Ans: It stores the exception object in a variable.
+
+192. What are some common built-in exceptions?
+Ans:
+ZeroDivisionError
+ValueError
+TypeError
+IndexError
+KeyError
+NameError
+AttributeError
+FileNotFoundError
+ImportError
+
+193. What is ZeroDivisionError?
+Ans: It occurs when a number is divided by zero.
+
+194. 

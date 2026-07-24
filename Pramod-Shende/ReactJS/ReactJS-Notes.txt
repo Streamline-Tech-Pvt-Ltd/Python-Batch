@@ -179,3 +179,138 @@ function App() {
     <h2>{today}</h2>
   );
 }
+
+
+Date : 15/07/2026
+
+# React Conditional Rendering :
+1. Using if...else:
+Use if...else when you want to return completely different JSX.
+
+ex. 
+
+function App() {
+  const isLogin = false;
+
+  if (isLogin) {
+    return <h1>Welcome User</h1>;
+  } else {
+    return <h1>Please Login</h1>;
+  }
+}
+
+export default App;
+
+2. Using Ternary Operator (? :) :
+
+Syntax:-
+          condition ? truePart : falsePart
+
+Example 1:
+
+function App() {
+  const age = 22;
+
+  return (
+    <>
+      {age > 20 ? (
+        <h1>Eligible for Voting</h1>
+      ) : (
+        <h1>Not Eligible</h1>
+      )}
+    </>
+  );
+}
+
+export default App;
+
+
+Example 2: Login System using use state :-
+
+import { useState } from "react";
+
+function App() {
+  const [login, setLogin] = useState(false);
+
+  return (
+    <>
+      {login ? <h1>Welcome Page</h1> : <h1>Please Login</h1>}
+
+      <button onClick={() => setLogin(!login)}>
+        Login / Logout
+      </button>
+    </>
+  );
+}
+
+export default App;
+
+3. Logical AND (&&):
+
+Displays JSX only when the condition is true.
+
+Syntax:-
+        condition && JSX code 
+
+Ex.
+function App() {
+  const isAdmin = true;
+
+  return (
+    <>
+      {isAdmin && <h1>Welcome Admin</h1>}
+    </>
+  );
+}
+
+export default App;
+
+*Note:-
+1.If isAdmin is false, nothing is displayed.
+
+# map() Method in React:
+map() is a JavaScript array method used to display multiple elements.
+
+Syntax:-
+
+array.map((item, index) => {
+  return JSX;
+});
+
+Ex.
+function App() {
+  const students = ["Omkar", "Pramod", "Rushi", "Yash", "Urmila"];
+
+  return (
+    <>
+      {students.map((student) => (
+        <h1>{student}</h1>
+      ))}
+    </>
+  );
+}
+
+export default App;
+
+Output:-
+Omkar
+Pramod
+Rushi
+Yash
+Urmila
+
+Note: Always provide a key prop when using map() in React to help React efficiently update the UI.
+
+{students.map((student, index) => (
+  <h1 key={index}>{student}</h1>
+))}
+
+
+Summary:-
+Method	                  Use
+1.if...else	          Return completely different JSX
+2.? : (Ternary)	      Display one of two JSX elements
+3.&&	                Display JSX only if the condition is true
+4.map()	              Display a list of elements from an array
+
+These are the four most commonly used techniques for rendering content dynamically in React.

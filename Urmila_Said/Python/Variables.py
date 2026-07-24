@@ -16,6 +16,9 @@ print(name)
 _name="Urmila"
 print(_name)
 
+name = "Pallavi"
+print(name)
+
 # Rule 2:Variable name cannot start with a number
  # Ex: Invalid
      # 2Name = "Urmila" 
@@ -23,7 +26,7 @@ print(_name)
 name2 = "Urmila"
 print(name2)
 
- # Rule 3:Special characters are not allowed
+# Rule 3:Special characters are not allowed
   # Ex: Invalid     
        # student@name = "Urmila"
       
@@ -118,3 +121,6 @@ print("Age =", age)
 num = input("Enter a number: ")
 print(type(num))
   #  O/P: <class 'str'>  
+
+
+  
