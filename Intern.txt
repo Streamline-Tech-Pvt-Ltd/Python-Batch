@@ -1,8 +1,0 @@
-Intern Id          :1
-Intern Name        :Urmila Said
-Registration Date  :20
-Domain Name        :DA
-Registration Fee   :5000
-College Name       :KKW
-City Name          :Pune
---------------------------------------------------------------------------------

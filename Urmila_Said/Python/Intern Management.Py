@@ -4,22 +4,22 @@ print("=" * 130)
 
 def add_intern():
     print("\n======================================= Add Intern ===========================================")
-    intern_id =int(input("Enter Intern ID        : "))
-    name = input("Enter Intern Name              : ")
-    reg_date = input("Enter Registration Date    : ")
-    domain = input("Enter Domain Name            : ")
-    reg_fee = int(input("Enter Registration Fee  : "))
-    college_name = input("Enter College Name     : ")
-    city = input("Enter City                     : ")    
+    intern_id =int(input("Enter Intern ID :"))
+    name = input("Enter Intern Name :")
+    reg_date = input("Enter Registration Date :")
+    domain = input("Enter Domain Name :")
+    reg_fee = int(input("Enter Registration Fee :"))
+    college_name = input("Enter College Name :")
+    city = input("Enter City :")    
 
     with open("Intern.txt","a") as file:
-        file.write(f"Intern Id          :{intern_id}\n")
-        file.write(f"Intern Name        :{name}\n")
+        file.write(f"Intern Id :{intern_id}\n")
+        file.write(f"Intern Name :{name}\n")
         file.write(f"Registration Date  :{reg_date}\n")
-        file.write(f"Domain Name        :{domain}\n")
-        file.write(f"Registration Fee   :{reg_fee}\n")
-        file.write(f"College Name       :{college_name}\n")
-        file.write(f"City Name          :{city}\n")
+        file.write(f"Domain Name :{domain}\n")
+        file.write(f"Registration Fee :{reg_fee}\n")
+        file.write(f"College Name :{college_name}\n")
+        file.write(f"City Name  :{city}\n")
         file.write("-" * 80 + "\n")
 
     print("\n Your Admission Successfully Done!")
@@ -66,22 +66,22 @@ def update_intern():
                         print(detail)
 
                         print("\n Enter New Updated Details")
-                        intern_id = int(input("Enter Intern ID      : "))
-                        name = input("Enter Intern Name             : ")
-                        reg_date = input("Enter Registration Date   : ")
-                        domain = input("Enter Domain Name           : ")
+                        intern_id = int(input("Enter Intern ID : "))
+                        name = input("Enter Intern Name : ")
+                        reg_date = input("Enter Registration Date : ")
+                        domain = input("Enter Domain Name : ")
                         reg_fee = int(input("Enter Registration Fee : "))
-                        college_name = input("Enter College Name    : ")
-                        city = input("Enter City                    : ")    
+                        college_name = input("Enter College Name : ")
+                        city = input("Enter City : ")    
 
                         new_detail = (
-                            f"Intern Id         :{intern_id}\n"
-                            f"Intern Name       :{name}\n"
+                            f"Intern Id :{intern_id}\n"
+                            f"Intern Name :{name}\n"
                             f"Registration Date :{reg_date}\n"
-                            f"Domain Name       :{domain}\n"
-                            f"Registration Fee  :{reg_fee}\n"
-                            f"College Name      :{college_name}\n"
-                            f"City Name         :{city}\n"
+                            f"Domain Name :{domain}\n"
+                            f"Registration Fee :{reg_fee}\n"
+                            f"College Name :{college_name}\n"
+                            f"City Name :{city}\n"
                         )
                         updated_details.append(new_detail)
                         found = True
@@ -213,7 +213,7 @@ while True:
     except ValueError:
         print("Please enter a valid choice")
 
-
+print("=" * 130)
 
 
 

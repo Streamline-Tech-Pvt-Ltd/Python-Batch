@@ -6,15 +6,13 @@
 # print("sum =", sum)
 
 #Using FUnction
-def add(a,b):
-    return a + b
-a = int(input("Enter The Number:"))
-b = int(input("Enter The Number:"))
+# def add(a,b):
+#     return a + b
+# a = int(input("Enter The Number:"))
+# b = int(input("Enter The Number:"))
 
-add = sum(a,b)
-print("Sum =",add)
-
-
+# a = add(a,b)
+# print("Sum =",a)
 
 
 #2.Even or Odd
@@ -24,4 +22,16 @@ print("Sum =",add)
 #     print(f"{num} is even")
 # else:
 #     print(f"{num} is odd")
+
+# Using Function
+def check_even_odd(num):
+    if num % 2 == 0:
+     print(f"{num} is even")
+    else:
+     print(f"{num} is odd")
+
+num = int(input("Enter The Number:"))
+check_even_odd(num)
+
+
 
