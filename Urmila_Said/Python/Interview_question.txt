@@ -1171,4 +1171,6 @@ ImportError
 193. What is ZeroDivisionError?
 Ans: It occurs when a number is divided by zero.
 
-194. 
+194.What is file handling in Python?
+Ans: File handling is the process of creating, opening, reading, writing, updating, and deleting files using Python.
+
