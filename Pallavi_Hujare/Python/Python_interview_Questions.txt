@@ -23,10 +23,10 @@ A.
     
         Static Typing                            |      Dynamic Typing
     ---------------------------------------------|-------------------------------------------------------------
-    Variable type must be declared before use	 |      Variable type is determined automatically at runtime
+    Variable type must be declared before use	 |    Variable type is determined automatically at runtime
     Type checking occurs at compile time	     |    Type checking occurs at runtime
     Less flexible	                             |    More flexible
-    Faster execution	                         |   Slightly slower execution
+    Faster execution	                         |     Slightly slower execution
     Examples: Java, C, C++                       |  	Examples: Python, JavaScript
 
 
@@ -129,7 +129,7 @@ My name is Pallavi
 
 
 Q.What is the input() function?
-A: It is used to take input from the user.t always returns a string (str).
+A: It is used to take input from the user nd always returns a string (str).
 Example:
 name = input("Enter your name: ")
 
@@ -302,8 +302,8 @@ Sets are used to store unique values and perform mathematical operations such as
 
 
 Q. What is the difference between a List and a Set?
-List	Set
-Ordered	Unordered
+List	               Set
+Ordered	             Unordered
 Allows duplicates	No duplicates
 Supports indexing	No indexing
 Written using []	Written using {}
@@ -361,9 +361,9 @@ Fast data retrieval using keys
 Q. What is the difference between a List and a Dictionary?
 List                   |    	Dictionary
 -----------------------|-----------------------
-Access by index	     |   Access by key
-Ordered collection	  |   Key-value pairs
-Uses []	              |    Uses {}
+Access by index	       |   Access by key
+Ordered collection	   |   Key-value pairs
+Uses []	               |    Uses {}
 
 Q. Can Dictionary keys be duplicated?
 Answer:
@@ -631,7 +631,7 @@ Uses *                                     	Uses **
 
 
 Q . How many types of arguments are there in Python?
-Answer
+Answer:
 There are 4 types of arguments:
 
 Positional Arguments
@@ -640,7 +640,7 @@ Default Arguments
 Variable-Length Arguments (*args and **kwargs)
 
 Q. What are Positional Arguments?
-Answer
+Answer:
 Arguments are passed according to their position.
 
 def student(name, age):

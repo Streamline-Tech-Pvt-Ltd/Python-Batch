@@ -2,6 +2,8 @@
 
 1. What is python ?
 Ans:.Python is a simple,high level,dynamic,interpreted and general purpose programming language.
+
+#Python Features:
      1)Simple:Python is easy to learn and write.
      2)High level:Python uses human-readable words, so programmers don't need
        to manage complex computer hardware details.
@@ -9,6 +11,7 @@ Ans:.Python is a simple,high level,dynamic,interpreted and general purpose progr
      4)Interpreted:Python executes code line by line instead of converting
        the entire program into machine code before running.
      5)General purpose:Python can be used for many different types of applications.
+
 
 2. Explain interpreted in detail ?
 Ans:.Python is an interpreted language because its source code is executed line by line
