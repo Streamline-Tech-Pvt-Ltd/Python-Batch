@@ -95,7 +95,7 @@ file.close()
 
 # =====================================================================
 
-# Replace cocept
+# Replace concept
 # file = open("replace.txt","x")
 # file.close()
 

@@ -136,8 +136,9 @@ name = input("Enter your name: ")
 Q.What is type casting?
 A: Converting one data type into another.
 Example:
-age = int("25")
 
+num = "100"
+print(int(num)) 
 
 Q.Difference between input() and print()?
 A:
@@ -302,8 +303,13 @@ Sets are used to store unique values and perform mathematical operations such as
 
 
 Q. What is the difference between a List and a Set?
+<<<<<<< HEAD
+List	                Set
+Ordered	            Unordered
+=======
 List	               Set
 Ordered	             Unordered
+>>>>>>> f2c7a51ad8e54c19619fb2e041caec6e4b60d6f4
 Allows duplicates	No duplicates
 Supports indexing	No indexing
 Written using []	Written using {}
