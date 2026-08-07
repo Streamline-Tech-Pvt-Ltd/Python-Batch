@@ -96,21 +96,48 @@
 
 
 #Amstrong Number 
-num = int(input("Enter the Number :" ))
-temp =num
-sum = 0
-digitss = len(str(num))
+# num = int(input("Enter the Number :" ))
+# temp =num
+# sum = 0
+# digitss = len(str(num))
+# while num > 0:
+#     digit = num % 10
+#     sum = sum + digit**digitss
+#     num = num // 10
+# if sum == temp:
+#     print("Number is amstrong")
+# else:
+#     print("Number is not amstrong")
+
+
+num = int(input("Enter the Number :"))
+rev =0
+temp = num
 while num > 0:
-    digit = num % 10
-    sum = sum + digit**digitss
+    rev = rev * 10 + num % 10
     num = num // 10
-if sum == temp:
-    print("Number is amstrong")
+if temp == rev:
+    print("P")
 else:
-    print("Number is not amstrong")
+    print("NP")
 
-    
+num  = int(input("Enter the Number :"))
+if num == 0:
+    print("Number is Zero")
+elif num > 0:
+    print("Number is Positive")
+else:
+    print("Number is Negative")
+
+
+text = input("Enter the text :")
+if text == text[::-1]:
+    print("String is pellindrome")
+else:
+    print("Not Pellindrome")
 
 
 
-
+text = input("Enter the text :")
+rev = text[::-1]
+print(rev)
