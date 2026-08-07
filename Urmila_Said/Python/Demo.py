@@ -73,19 +73,18 @@
 # print("Rverse Number:",rev)
 
 
-num = int(input("Enter the number:"))
-rev = 0
-while num > 0:
-    rev = rev * 10 + num % 10
-    num = num // 10
+# num = int(input("Enter the number:"))
+# rev = 0
+# while num > 0:
+#     rev = rev * 10 + num % 10
+#     num = num // 10
 
-print("Reverse Number",rev)
+# print("Reverse Number",rev)
 
-
-
-
-
-
+# Natural no 
+# num = int(input("Enter The Number:"))
+# for num in range(1,num+1):
+#     print(num)
 
 
 #5.Print Factorial Number
@@ -96,6 +95,15 @@ print("Reverse Number",rev)
 
 # print("Factorial:",fact)
 
+
+num = int(input("Enter The Number:"))
+fact = 1
+for i in range(1,num+1):
+    fact = fact*i
+
+print("Factorial:",fact)
+
+
 #6.Pallindrom or Not
 # num = int(input("Enter The Number:"))
 # temp = num
@@ -105,7 +113,7 @@ print("Reverse Number",rev)
 #     num = num // 10
 # if temp == rev:
 #     print("Palindrome Number")
-# else:
+# else:                                                                                                         
 #     print("Not a Palindrome Number")
 
 #7.Print The Fibonacci Series
@@ -145,14 +153,14 @@ print("Reverse Number",rev)
 # print("GCD =", a)
 
 #Using for loop find the gcd of two numbers
-# a = int(input("Enter First Number: "))
-# b = int(input("Enter Second Number: "))
-# gcd = 1
-# for i in range(1, min(a, b) + 1):
-#     if a % i == 0 and b % i == 0:
-#         gcd = i
+a = int(input("Enter First Number: "))
+b = int(input("Enter Second Number: "))
+gcd = 1
+for i in range(1, min(a, b) + 1):
+    if a % i == 0 and b % i == 0:
+        gcd = i
 
-# print("GCD =", gcd)
+print("GCD =", gcd)
 
 
 #10.Find the LCM(Least common multiple) of two numbers.
@@ -183,8 +191,6 @@ print("Reverse Number",rev)
 
 #     if prime:
 #         print(num, end=" ")
-
-
 
 
 #sum

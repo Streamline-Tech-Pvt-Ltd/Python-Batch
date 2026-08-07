@@ -1,0 +1,136 @@
+.navbar{
+    padding: 12px 0;
+    transition: 0.3s;
+}
+
+.navbar-brand img{
+    border:2px solid #ffc107;
+}
+
+.nav-link{
+    color:white !important;
+    font-size:18px;
+    font-weight:500;
+    position:relative;
+    transition:0.4s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:2px;
+    background:#ffc107;
+    left:0;
+    bottom:0;
+    transition:0.4s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+
+
+.hero{
+    position: relative;
+}
+
+.hero img{
+    width:100%;
+    height:540px;
+    object-fit:cover;
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    color:white;
+    max-width:450px;
+}
+
+.hero-content h1{
+    font-size:57px;
+    font-weight:bold;
+}
+
+.hero-content p{
+    font-size:25px;
+    margin:25px 0;
+}
+
+.hero-content .btn{
+    padding:12px 30px;
+    font-weight:bold;
+}
+
+
+
+.product-card{
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.product-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.product-card img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body h5{
+    font-weight: bold;
+}
+
+.card-body button:hover{
+    border-radius: 30px;
+}
+
+
+
+
+
+#contact{
+    background: #f8f9fa;
+}
+
+#contact h2{
+    font-weight: bold;
+}
+
+#contact .card{
+    border-radius: 15px;
+}
+
+#contact .form-control{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#contact .btn{
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#contact .btn:hover{
+    background-color: #212529;
+    color: white;
+    transform: scale(1.03);
+}
+
+
