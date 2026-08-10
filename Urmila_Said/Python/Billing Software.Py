@@ -51,8 +51,6 @@ while True:
             domain_key.append(choice)
             quantity.append(qun)
         
-        # print(domain_key)
-        # print(quantity)
     else:
         print("Invalid Input")
         
@@ -65,7 +63,6 @@ print("="*120)
 
 total = 0 
 
-# domain_key =[1,2]
 
 for i in range(len(domain_key)):
     sr_no = i+1

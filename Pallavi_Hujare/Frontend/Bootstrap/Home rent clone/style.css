@@ -1,0 +1,103 @@
+.hero{
+    height:100vh;
+    background-image: url("https://img.freepik.com/premium-photo/empty-living-room-with-sofa-table-empty-white-wall-background-3d-rendering_41470-4173.jpg?w=2000");
+    background-size:;
+    background-position:center;
+    padding-top:56px;
+}
+
+.hero2 p{
+    color: rgb(22, 8, 8);
+    font-size: 70px;
+    font-weight: bold;
+    padding-top: 140px;
+    margin-left: 280px;
+    font-family: Georgia, serif;
+}
+.hero4 p{
+    color: rgb(22, 8, 8);
+    font-size: 20px;
+     padding-top: 10px;
+    margin-left: 370px;
+
+}
+.card{
+    padding: 10px ;
+    margin: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.contact{
+    background:#e5e6e7;
+    color:rgb(10, 1, 1);
+}
+
+.contact h2{
+    font-weight:700;
+}
+
+.contact hr{
+    width:100px;
+    border:2px solid rgb(4, 0, 0);
+}
+.contact p{
+    font-size:18px;
+    margin:20px 0;
+}
+
+.contact i{
+    margin-right:10px;
+}
+
+.h2{
+text-align: center;
+padding-left: 30px;
+}
+.footer{
+    background:#111827;
+    color:white;
+    padding:50px 0 20px;
+}
+
+.footer h3{
+    font-weight:700;
+}
+
+.footer h5{
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.footer p{
+    color:#cbd5e1;
+}
+
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer ul li{
+    margin-bottom:10px;
+}
+
+.footer ul li a{
+    color:#cbd5e1;
+    text-decoration:none;
+}
+
+.footer ul li a:hover{
+    color:white;
+}
+
+.social-icons a{
+    color:white;
+    font-size:22px;
+    margin-right:15px;
+}
+
+.footer hr{
+    border-color:#475569;
+    margin-top:30px;
+}

@@ -1,15 +1,15 @@
-# with open("student.txt","x") as file:
+#Intern Management System
 print("=" * 120)
 print(" " * 30, "Welcome to the Streamline Tech Portal")
 print("=" * 120)
 
 def add_details():
-    Id = int(input("Enter Your ID :  \n"))
-    Name = input("Enter Your Name: \n ")
-    Domain_name = input("Enter Your Domain Name :\n")
-    Registration_fee = int(input("Enter Your Registration Fee:\n"))
-    College_name = input("Enter Your College Name :\n")
-    City = input("Enter Your Current City: \n")
+    Id = int(input("Enter Your ID :  "))
+    Name = input("Enter Your Name:  ")
+    Domain_name = input("Enter Your Domain Name :")
+    Registration_fee = int(input("Enter Your Registration Fee:"))
+    College_name = input("Enter Your College Name :")
+    City = input("Enter Your Current City: ")
     
     with open("student.txt", "a") as file:
 
@@ -22,7 +22,6 @@ def add_details():
         file.write("=" * 120 + "\n")
 
     print("Data Saved Successfully!")
-
 
 def view_details():
     try:
@@ -74,7 +73,6 @@ def search_intern():
                 break
         if not search:
                 print("Record Not Found")
-
 
        
 def delete_intern():

@@ -1,0 +1,135 @@
+.contact{
+    background:#081b4b;
+    min-height:100vh;
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:48px;
+    font-weight:700;
+}
+
+.section-title span{
+    color:#38bdf8;
+}
+
+.section-title p{
+    color:#dbeafe;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.contact-info,
+.contact-form{
+    flex:1;
+}
+
+.contact-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    background:#11255f;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(56,189,248,.3);
+}
+
+.contact-card i{
+    font-size:35px;
+    color:#38bdf8;
+}
+
+.contact-card h4{
+    margin-bottom:5px;
+    color:white;
+}
+
+.contact-card p{
+    color:#dbeafe;
+    margin:0;
+}
+
+.social-links{
+    margin-top:30px;
+}
+
+.social-links a{
+    width:55px;
+    height:55px;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#11255f;
+    color:white;
+    margin-right:15px;
+    font-size:22px;
+    transition:.3s;
+    text-decoration:none;
+}
+
+.social-links a:hover{
+    background:#38bdf8;
+    color:#081b4b;
+    transform:translateY(-5px);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#11255f;
+    color:white;
+    outline:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#cbd5e1;
+}
+
+.contact-form button{
+    background:#38bdf8;
+    color:#081b4b;
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+@media(max-width:768px){
+
+.contact-container{
+    flex-direction:column;
+}
+
+.section-title h2{
+    font-size:38px;
+}
+
+}

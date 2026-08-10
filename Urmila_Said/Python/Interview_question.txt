@@ -2,6 +2,8 @@
 
 1. What is python ?
 Ans:.Python is a simple,high level,dynamic,interpreted and general purpose programming language.
+
+#Python Features:
      1)Simple:Python is easy to learn and write.
      2)High level:Python uses human-readable words, so programmers don't need
        to manage complex computer hardware details.
@@ -9,6 +11,7 @@ Ans:.Python is a simple,high level,dynamic,interpreted and general purpose progr
      4)Interpreted:Python executes code line by line instead of converting
        the entire program into machine code before running.
      5)General purpose:Python can be used for many different types of applications.
+
 
 2. Explain interpreted in detail ?
 Ans:.Python is an interpreted language because its source code is executed line by line
@@ -1173,4 +1176,89 @@ Ans: It occurs when a number is divided by zero.
 
 194.What is file handling in Python?
 Ans: File handling is the process of creating, opening, reading, writing, updating, and deleting files using Python.
+
+195.Difference between sort and sorted?
+Ans:
+| `sort()`                  | `sorted()`                                          |
+| ------------------------- | --------------------------------------------------- |
+| Used only with lists      | Works with any iterable (list, tuple, string, etc.) |
+| Changes the original list | Does not change the original data                   |
+| Returns `None`            | Returns a new sorted list                           |
+
+
+196.Explain in PIP?
+Ans:PIP (Pip Installs Packages) is Python's package manager. It is used to install, update, and 
+    uninstall Python libraries and packages from the Python Package Index (PyPI).
+    PIP helps us add extra libraries to Python so we don't have to write everything from scratch.
+
+197.What is PEP8 ?
+Ans: PEP 8 stands for Python Enhancement Proposal 8.
+It is the official style guide for writing clean, readable, and consistent Python code.
+PEP 8 (Python Enhancement Proposal 8) is the official coding style guide for Python. It provides rules for writing clean,
+readable, and consistent Python code, such as proper indentation, naming conventions, spacing, and line length.
+
+198.what is decorator in python?
+Ans: A Decorator is a special function in Python that adds extra functionality to another
+ function without changing its original code. It is applied using the @decorator_name syntax.
+
+199. What is garbage collection ?
+Ans: A Decorator is a special function in Python that adds extra functionality to another function without
+     changing its original code. It is applied using the @decorator_name syntax.
+
+200. Ways to import function in python
+Ans: There are 4 ways to import functions in Python:
+1.import module_name – Imports the entire module.
+2.from module_name import function_name – Imports a specific function.
+3.import module_name as alias – Imports the module with a shorter name (alias).
+4.from module_name import * – Imports all functions from the module (generally not recommended 
+                           because it can cause name conflicts.)
+
+
+201.What is a generator in python?
+Ans:A Generator is a function that uses the yield keyword to return values one at a time instead of all at once.
+    It is memory-efficient and is useful when working with large datasets.
+
+202.What is GIL?
+Ans: GIL (Global Interpreter Lock) is a lock in CPython that allows only one thread to execute 
+    Python bytecode at a time. It simplifies memory management but limits the performance of CPU-bound multithreaded programs.
+
+203.What is File Handling?
+Ans: File Handling is the process of creating, opening, reading, writing, updating, and deleting files in Python.
+
+204. What are the file modes?
+Ans:
+r – Read
+w – Write
+a – Append
+x – Create
+r+ – Read and Write
+w+ – Read and Write (Overwrite)
+a+ – Read and Append
+rb / wb – Binary Read/Write
+
+
+205. What is the difference between w and a?
+Ans:w	                                             a
+Overwrites existing data	                  Adds data at the end
+Creates file if it doesn't exist	       Creates file if it doesn't exist
+
+
+206. Why is the with statement preferred?
+Ans: It automatically closes the file, even if an exception occurs, making the code safer and cleaner.
+
+207. What is the difference between read(), readline(), and readlines()?
+Ans:
+read() → Reads the entire file.
+readline() → Reads one line at a time.
+readlines() → Reads all lines and returns them as a list.
+
+208.Difference Between compiler And Interpreted?
+Ans:
+| **Interpreter**                                    | **Compiler**                                     |
+| -------------------------------------------------- | ------------------------------------------------ |
+| Translates and executes the code **line by line**. | Translates the **entire program at once**.       |
+| Stops immediately if an error is found.            | Shows all errors after compilation.              |
+| Execution is generally slower.                     | Execution is generally faster after compilation. |
+| No separate executable file is created.            | Creates an executable/object file.               |
+| Example: **Python**, JavaScript                    | Example: **C**, **C++**                          |
 

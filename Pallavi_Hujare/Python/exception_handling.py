@@ -1,4 +1,4 @@
-#  Exception Handling : 
+# Exception Handling : 
 # Exception Handling is a mechanism in Python used to handle runtime errors without stopping the execution of the program.
 # eval -- without take int float in input
 
