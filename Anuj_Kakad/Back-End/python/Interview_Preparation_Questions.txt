@@ -1,0 +1,82 @@
+Python Programming Fundamentals — Notes & Study Guide:-
+
+1. Definition of Python Programming:-
+        Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
+
+
+    2. Core Python Concepts:-
+
+        1. Simple:-
+            Python uses clean and readable syntax that closely resembles plain English, making it easy for beginners to learn.
+        2. Dynamic:-
+            Python is dynamically typed. You do not need to explicitly declare the data type of a variable. Python determines the type automatically at runtime.
+        3. Interpreted:-
+            Python programs are executed by an interpreter. Python source code is first compiled into bytecode, which is then executed by the Python Virtual Machine (PVM).
+        4. High-Level:-
+            Python hides complex hardware-level details such as memory management, allowing programmers to focus mainly on application logic.
+        5. General Purpose:-
+            Python can be used to develop many types of applications, including websites, automation scripts, desktop applications, data analysis tools, and AI/ML applications.
+        6. Object-Oriented Programming (OOP):-
+            Python supports object-oriented programming, where programs can be organized around objects that contain data and methods.
+
+
+3. Difference Between Static Typing and Dynamic Typing:-
+
+| Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
+| --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
+| Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
+| Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
+| Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
+| Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
+| Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
+| Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
+
+
+4. Indentation in Python:-
+    Indentation refers to the spaces or tabs placed at the beginning of a line of code.
+    Python uses indentation to define blocks of code instead of using curly braces {}.
+
+    Indentation is commonly used with:
+        if and else statements
+        for and while loops
+        Functions
+        Classes
+        Exception handling
+    
+    Example:
+        if age >= 18:
+        print("You are eligible to vote.")
+    
+        Here, the print() statement is indented, which indicates that it belongs to the if block.
+        Important: Incorrect indentation can result in an IndentationError.
+
+
+5. Difference Between Compiler and Interpreter:-
+
+| Feature         | Compiler                                                                               | Interpreter                                                                                                              |
+| --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
+| Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
+| Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
+| Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
+| Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
+| Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
+
+    Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
+
+
+6. What is OOP (Object-Oriented Programming)?
+    Object-Oriented Programming (OOP) is a programming approach that organizes software around objects and classes.
+
+        An object can contain:
+            
+            Attributes → Data or properties
+            Methods → Functions or actions performed by the object
+
+        OOP helps make programs:
+            Modular
+            Reusable
+            Organized
+            Maintainable
+            Scalable
