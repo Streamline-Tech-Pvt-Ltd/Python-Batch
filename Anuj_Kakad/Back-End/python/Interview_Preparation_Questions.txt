@@ -1,7 +1,10 @@
 Python Programming Fundamentals — Notes & Study Guide:-
 
+Python Internship Notes Day01:-
+
 1. Definition of Python Programming:-
-        Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
+        Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. 
+        It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
 
 
     2. Core Python Concepts:-
@@ -19,6 +22,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
         6. Object-Oriented Programming (OOP):-
             Python supports object-oriented programming, where programs can be organized around objects that contain data and methods.
 
+*/*-*/*-*/*-*/*-*/*
 
 3. Difference Between Static Typing and Dynamic Typing:-
 
@@ -32,6 +36,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 | Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
 | Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
 
+*/*-*/*-*/*-*/*-*/*
 
 4. Indentation in Python:-
     Indentation refers to the spaces or tabs placed at the beginning of a line of code.
@@ -51,6 +56,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
         Here, the print() statement is indented, which indicates that it belongs to the if block.
         Important: Incorrect indentation can result in an IndentationError.
 
+*/*-*/*-*/*-*/*-*/*
 
 5. Difference Between Compiler and Interpreter:-
 
@@ -65,6 +71,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
 
+*/*-*/*-*/*-*/*-*/*
 
 6. What is OOP (Object-Oriented Programming)?
     Object-Oriented Programming (OOP) is a programming approach that organizes software around objects and classes.
@@ -80,3 +87,124 @@ Python Programming Fundamentals — Notes & Study Guide:-
             Organized
             Maintainable
             Scalable
+
+*/*-*/*-*/*-*/*-*/*
+
+6. What is OOP (Object-Oriented Programming)?
+    OOP is a coding method that organizes software around reusable data structures called objects, which contain attributes and actions.
+    It helps keep code modular, organized, and scalable for large applications.
+
+*/*-*/*-*/*-*/*-*/*
+
+7. Meaning of "Python is a High-Level Language"
+    It means Python code is easy for humans to read and write without managing low-level computer hardware or system memory directly.
+
+*/*-*/*-*/*-*/*-*/*
+
+8. Explanation of IDE and Examples
+    An IDE (Integrated Development Environment) is a software tool combining an editor, build tools, terminal, and debugger in one window.
+    Examples include Visual Studio Code, PyCharm, and Jupyter Notebook.
+
+*/*-*/*-*/*-*/*-*/*
+
+9. Applications of Python
+    Python is used for:-
+    1.web development,
+    2.data analysis,
+    3. machine learning,
+    4. automated scripting,
+    5. desktop apps, and
+    6. web scraping.
+
+*/*-*/*-*/*-*/*-*/*
+
+10. Difference Between High-Level and Low-Level Language:-
+
+| Feature            | High-Level Language                           | Low-Level Language                              |
+| ------------------ | --------------------------------------------- | ----------------------------------------------- |
+| Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
+| Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
+| Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
+| Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
+| Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
+| Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Python Internship Notes: Day 2
+
+1. Programming Paradigms (Types of Programming)
+
+    1. Sequential Programming:-
+        Executes code step-by-step from top to bottom using variables, operators, and conditional logic (`if`, `else`).
+    2. Functional Programming:-
+        Structures code using functions, parameters, arguments, and return values to process data cleanly.
+    3. Object-Oriented Programming (OOP):-
+        Organizes code using classes, objects, the 4 pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), along with file handling and exception handling.
+
+*/*-*/*-*/*-*/*-*/*
+
+2. Python Keywords
+
+    Definition:-
+        Reserved words in Python that have fixed meanings and cannot be used as variable names.
+    Checking Keywords:-
+        Use `import keyword` followed by `keyword.kwlist` to print all keywords, or `len(keyword.kwlist)` to get the total count.
+    Verifying Words:-
+        Use `keyword.iskeyword('word')` to check if a specific string is a reserved keyword (returns `True` or `False`).
+
+*/*-*/*-*/*-*/*-*/*
+
+3. Comments in Python:-
+
+    Definition:-
+        Explanatory notes in your code that Python ignores during execution.
+    Single-Line Comment:-
+        Uses the hash symbol (`#`) to annotate a single line.
+    Multi-Line Comment:-
+        Uses triple single quotes (`'''`) or triple double quotes (`"""`) to write comments spanning multiple lines.
+
+*/*-*/*-*/*-*/*-*/*
+
+4. Variables & Declaration Rules
+
+    Definition:-
+        Dynamically typed containers used to store data without needing to explicitly declare the data type.
+
+
+    Rule 1 (No Starting Numbers):-
+        Names must start with a letter or an underscore, never a number (e.g., `user1`, not `1user`).
+    Rule 2 (No Special Characters):-
+        Only letters, numbers, and underscores (`_`) are allowed; special symbols like `@`, `$`, or `-` are forbidden.
+    Rule 3 (No Keywords):-
+        Reserved keywords like `if`, `def`, or `finally` cannot be used as variable names.
+    Rule 4 (No Spaces):-
+        Variable names cannot contain spaces; use underscores instead (e.g., `user_name`).
+    Rule 5 (Meaningful Names):-
+        Names should clearly describe the data they hold (e.g., `age` instead of `a`).
+
+*/*-*/*-*/*-*/*-*/*
+
+5. Python Data Types
+
+     Primary Data Types
+    String (`str`):-
+        Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
+    Integer (`int`):-
+        Whole numbers without decimals (e.g., `number = 123456789`).
+    Boolean (`bool`):-
+        Logical values representing truth states (`True` or `False`).
+    Complex (`complex`):-
+        Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
+
+     Collection Data Types
+    List:-
+        An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
+    Tuple:-
+        An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
+    Dictionary:-
+        Unordered collection of key-value pairs written in curly braces `{ key: value }`.
+    Set:-
+        An unordered collection of unique elements written in curly braces `{ }`.
+    Frozenset:-
+        An immutable (un-changeable) version of a standard set.
