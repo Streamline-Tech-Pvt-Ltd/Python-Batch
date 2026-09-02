@@ -208,3 +208,151 @@ Python Internship Notes: Day 2
         An unordered collection of unique elements written in curly braces `{ }`.
     Frozenset:-
         An immutable (un-changeable) version of a standard set.
+
+_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Python Internship Notes:- Day 3 - Operators
+
+1. Introduction to Operators
+    Definition:-
+        Symbols used to perform operations on variables and values.
+        (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
+
+*/*-*/*-*/*-*/*-*/*
+
+2. Arithmetic Operators
+    1. Adition (`+`):- 
+        Adds two numbers together 
+        (e.g., `10 + 20` outputs `30`).
+
+    2. Subtraction (`-`):-
+        Subtracts the right number from the left 
+        (e.g., `20 - 10` outputs `10`).
+    
+    3. Multiplication (`*`):-
+        Multiplies two numbers
+        (e.g., `10 * 20` outputs `200`).
+    
+    4. Division (`/`):-
+        Divides numbers and always returns a floating-point number
+        (e.g., `10 / 20` outputs `0.5`).
+    
+    5. Modulus (`%`):-
+        Returns the remainder left over after division
+        (e.g., `10 % 3` outputs `1`).
+    
+    6. Floor Division (`//`):-
+        Divides numbers and chops off decimals to return the lower whole number.
+        (e.g., `10 // 3` outputs `3`).
+    
+    7. Exponentiation (`**`):-
+        Raises the base number to a power.
+        (e.g., `2 ** 3` outputs `8`).
+
+*/*-*/*-*/*-*/*-*/*
+
+3. Assignment Operators
+    1. Assign (`=`):-
+        Assigns a value to a variable
+        (e.g., `x = 20`).
+    
+    2. Add and Assign (`+=`):-
+        Adds a value and assigns result
+        (e.g., `x += 10` sets `x` to `30`).
+    
+    3. Subtract and Assign (`-=`):-
+        Subtracts a value and assigns result
+        (e.g., `x -= 5` sets `x` to `15`).
+    
+    4. Multiply and Assign (`*=`):
+        Multiplies by a value and assigns result
+        (e.g., `x *= 2` sets `x` to `40`).
+    
+    5. Divide and Assign (`/=`):-
+        Divides by a value and assigns result
+        (e.g., `x /= 2` sets `x` to `10.0`).
+    
+    6. Floor Divide and Assign (`//=`):-
+        Floor divides and assigns result
+        (e.g., `x //= 3` sets `x` to `6`).
+    
+    7. Modulus and Assign (`%=`):-
+        Takes modulus and assigns result
+        (e.g., `x %= 3` sets `x` to `2`).
+    
+    8. Exponentiate and Assign (`**=`):-
+        Raises to power and assigns result
+        (e.g., `x **= 2` sets `x` to `400`).
+
+*/*-*/*-*/*-*/*-*/*
+
+4. Comparison (Relational) Operators
+    1. Equal To (`==`):-
+        Returns `True` if both values are equal
+        (e.g., `20 == 20` outputs `True`).
+    
+    2. Not Equal To (`!=`):-
+        Returns `True` if values are different
+        (e.g., `25 != 20` outputs `True`).
+    
+    3. Greater Than (`>`):-
+        Returns `True` if left value is bigger
+        (e.g., `25 > 18` outputs `True`).
+    
+    4. Less Than (`<`):
+        Returns `True` if left value is smaller
+        (e.g., `15 < 18` outputs `True`).
+    
+    5. Greater Than or Equal To (`>=`):-
+        Returns `True` if left value is bigger or equal
+        (e.g., `18 >= 18` outputs `True`).
+    
+    6. Less Than or Equal To (`<=`):-
+        Returns `True` if left value is smaller or equal
+        (e.g., `15 <= 18` outputs `True`).
+
+*/*-*/*-*/*-*/*-*/*
+
+5. Logical Operators
+    1.`and`:-
+        Returns `True` only if **both** conditions are true
+        (e.g., `5 > 2 and 10 > 5` outputs `True`).
+    
+    2. `or`:-
+        Returns `True` if **at least one** condition is true
+        (e.g., `15 >= 18 or 10 > 5` outputs `True`).
+    
+    3. `not`:-
+        Reverses the logical state, returning `True` for false conditions and vice versa
+        (e.g., `not(10 > 20)` outputs `True`).
+
+*/*-*/*-*/*-*/*-*/*
+
+6. Bitwise Operators
+    1. Bitwise AND (`&`):-
+        Compares bits and sets each bit to `1` only if both corresponding bits are `1`
+        (e.g., `5 & 3` outputs `1`).
+    
+    2. Bitwise OR (`|`):-
+        Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
+        (e.g., `5 | 3` outputs `7`).
+    
+    3. Bitwise NOT (`~`):-
+        Inverts all bits of a binary number
+        (e.g., `~5` outputs `-6`).
+    
+    4. Bitwise XOR (`^`):-
+        Sets each bit to `1` only if one of the corresponding bits is `1`
+        (e.g., `5 ^ 3` outputs `6`).
+
+*/*-*/*-*/*-*/*-*/*
+
+7. Membership Operators
+`in`:-Returns `True` if a sequence/item is found inside a given object (e.g., `'a' in 'apple'` outputs `True`).
+`not in`:-Returns `True` if a sequence/item is **not** present inside an object (e.g., `10 not in [1, 2, 3]` outputs `True`).
+
+*/*-*/*-*/*-*/*-*/*
+
+8. Identity Operators
+`is`:-Returns `True` if both variables point to the exact same object in computer memory (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
+`is not`:-Returns `True` if both variables point to different objects in memory (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
