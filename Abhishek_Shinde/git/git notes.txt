@@ -1,0 +1,12 @@
+*********Git Commands*********
+
+###   This commands run on VS code 
+
+1.git --version
+  Purpose : used to Verify installation.
+
+2.git clone <repository-url path>
+  Purpose: Downloads an existing GitHub repository to the computer.
+
+3.git status
+  Purpose : Shows the current state of the Git repository.
