@@ -74,8 +74,8 @@ print("Is the candidate eligible for placement? :-", Age >= 18 and percentage >=
 
 # 2. Or Operator:-
 
-age = 17
-percentage = 55
+age = 15
+percentage = 59
 
 print("Is the candidate eligible for placement? :-", age >= 18 or percentage >= 60)
 
