@@ -137,8 +137,11 @@ print("The Result of x OR y is:-", x | y)
 
 # 3. (^) XOR Bitwise Operator:-
 
+x = 15
+y = 10
 print("The Result of x XOR y is:-", x ^ y)
 
 # 4. (~) NOT Bitwise Operator:-
 
+x = 94
 print("The Result of NOT x is:-", ~x)
