@@ -33,6 +33,8 @@ print("The Result of a raised to the power of b is:-", a ** b)
 
 print()
 
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
 # 2. Comparison Operators:-
 
 print("Comparison Operators:-")
@@ -60,6 +62,8 @@ print("Is A less than or equal to B? :-", A <= B)
 
 print()
 
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
 # 3. Logical Operators:-
 
 print("Logical Operators:-")
@@ -85,6 +89,8 @@ print("Is the candidate eligible for placement? :-", age >= 18 or percentage >= 
 print("Is the candidate not eligible for placement? :-", not (age >= 18 and percentage >= 60))
 
 print()
+
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 # 4. Assignment Operators:-
 
@@ -118,6 +124,8 @@ salary %= 1000
 print("The Updated Salary after Modulus is:-", salary)
 
 print()
+
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 # 5. Bitwise Operators:-
 
@@ -168,3 +176,7 @@ print("The Result of NOT x is:-", ~x)
 # 	    ~x = -(x + 1)
 #       ~94 = -(94 + 1)
 #       ~x = -95
+
+print()
+
+# _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
