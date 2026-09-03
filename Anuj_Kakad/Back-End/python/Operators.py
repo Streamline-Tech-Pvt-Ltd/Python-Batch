@@ -33,9 +33,9 @@ print("The Result of a raised to the power of b is:-", a ** b)
 
 print()
 
-print("Comparison Operators:-")
-
 # 2. Comparison Operators:-
+
+print("Comparison Operators:-")
 
 A = 100
 B = 225
@@ -60,8 +60,9 @@ print("Is A less than or equal to B? :-", A <= B)
 
 print()
 
-print("Logical Operators:-")
 # 3. Logical Operators:-
+
+print("Logical Operators:-")
 
 # 1. And Operator:-
 
@@ -85,9 +86,9 @@ print("Is the candidate not eligible for placement? :-", not (age >= 18 and perc
 
 print()
 
-print("Assignment Operators:-")
-
 # 4. Assignment Operators:-
+
+print("Assignment Operators:-")
 
 salary = 25000
 
