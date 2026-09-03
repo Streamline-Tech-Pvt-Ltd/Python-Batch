@@ -129,11 +129,23 @@ x = 10
 y = 4
 print("The Result of x AND y is:-", x & y)
 
+# AND Bitwise operator Solution:-
+# binary no of (x)10 =	  1 0 1 0
+# 	            (y)4  =	& 0 1 0 0
+# 			              _______
+# 			              0 0 0 0 = 0
+
 # 2. (|) OR Bitwise Operator:-
 
 x = 9
 y = 7
 print("The Result of x OR y is:-", x | y)
+
+# OR Bitwise operator Solution:-
+# 	    9 = 1 0 0 1
+# 	    7 = 0 1 1 1
+# 	        _______
+# 	        1 1 1 1 = 15
 
 # 3. (^) XOR Bitwise Operator:-
 
@@ -141,7 +153,18 @@ x = 15
 y = 10
 print("The Result of x XOR y is:-", x ^ y)
 
+# XOR Bitwise operator Solution:-
+# 	    15 = 1 1 1 1
+# 	    10 = 1 0 1 0
+# 	         _______
+# 	         0 1 0 1 = 5
+
 # 4. (~) NOT Bitwise Operator:-
 
 x = 94
 print("The Result of NOT x is:-", ~x)
+
+# NOT Bitwise operator Solution:-
+# 	    ~x = -(x + 1)
+#       ~94 = -(94 + 1)
+#       ~x = -95
