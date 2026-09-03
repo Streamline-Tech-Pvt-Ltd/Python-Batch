@@ -116,3 +116,27 @@ print("The Updated Salary after Division is:-", salary)
 
 salary %= 1000
 print("The Updated Salary after Modulus is:-", salary)
+
+print()
+
+# 5. Bitwise Operators:-
+
+print("Bitwise Operators:-")
+
+# 1. (&) AND Bitwise Operator:-
+
+x = 10
+y = 4
+print("The Result of x AND y is:-", x & y)
+
+# 2. (|) OR Bitwise Operator:-
+
+print("The Result of x OR y is:-", x | y)
+
+# 3. (^) XOR Bitwise Operator:-
+
+print("The Result of x XOR y is:-", x ^ y)
+
+# 4. (~) NOT Bitwise Operator:-
+
+print("The Result of NOT x is:-", ~x)
