@@ -26,15 +26,15 @@ Python Internship Notes Day01:-
 
 3. Difference Between Static Typing and Dynamic Typing:-
 
-| Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
-| --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
-| Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
-| Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
-| Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
-| Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
-| Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
-| Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
+    | Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
+    | --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+    | Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
+    | Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
+    | Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
+    | Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
+    | Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
+    | Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
+    | Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
 
 */*-*/*-*/*-*/*-*/*
 
@@ -60,14 +60,14 @@ Python Internship Notes Day01:-
 
 5. Difference Between Compiler and Interpreter:-
 
-| Feature         | Compiler                                                                               | Interpreter                                                                                                              |
-| --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
-| Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
-| Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
-| Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
-| Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
-| Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
+    | Feature         | Compiler                                                                               | Interpreter                                                                                                              |
+    | --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+    | Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
+    | Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
+    | Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
+    | Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
+    | Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
+    | Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
 
     Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
 
@@ -120,20 +120,20 @@ Python Internship Notes Day01:-
 
 10. Difference Between High-Level and Low-Level Language:-
 
-| Feature            | High-Level Language                           | Low-Level Language                              |
-| ------------------ | --------------------------------------------- | ----------------------------------------------- |
-| Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
-| Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
-| Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
-| Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
-| Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
-| Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+    | Feature            | High-Level Language                           | Low-Level Language                              |
+    | ------------------ | --------------------------------------------- | ----------------------------------------------- |
+    | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
+    | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
+    | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
+    | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
+    | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
+    | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
 
 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 Python Internship Notes: Day 2
 
-1. Programming Paradigms (Types of Programming)
+1. Programming Paradigms (Types of Programming):-
 
     1. Sequential Programming:-
         Executes code step-by-step from top to bottom using variables, operators, and conditional logic (`if`, `else`).
@@ -144,7 +144,7 @@ Python Internship Notes: Day 2
 
 */*-*/*-*/*-*/*-*/*
 
-2. Python Keywords
+2. Python Keywords:-
 
     Definition:-
         Reserved words in Python that have fixed meanings and cannot be used as variable names.
@@ -185,7 +185,7 @@ Python Internship Notes: Day 2
 
 */*-*/*-*/*-*/*-*/*
 
-5. Python Data Types
+5. Python Data Types:-
 
      Primary Data Types
     String (`str`):-
@@ -208,6 +208,49 @@ Python Internship Notes: Day 2
         An unordered collection of unique elements written in curly braces `{ }`.
     Frozenset:-
         An immutable (un-changeable) version of a standard set.
+
+Interview Questions On Day 2 Topics:-
+
+1. What are the main Programming Paradigms supported by python?
+    Python support Sequential Programming(Step-By-Step Logic), Funtional Programming (using reausable functions)
+    and Object Oriented Programming(OOP) (structuring code around objects and classes).
+
+2. What are python keywords and how do you print all the keywords and how do you check total number of keywords using code?
+    Keyword are reserved words in Python with fixed meaning that cannot be used as variables.
+    You can print all the keyword by importing the Keyword ("import keyword") and running ("Print(keyword.kwlist)).
+    You can chech the total count by running ("print(len(keyword.kwlist))").
+
+3. What are the rules for declaring Variables In Python?
+    variable names must start with a "letter" or "Underscore", it cannot start with a "number", 
+    cannot contain spaces or spacial characters except (Underscore "_") And cannot be a reserves Python "Keyword".
+
+4. Why is Python called a Dynamically Typed language?
+    Python Automatically determines the data type of a variable at "RUN TIME", 
+    means you dont need to explicitly decalre the data type (like "int" or "String") when assigning a value.
+
+5. What is the difference between Single-Line And Multi-Line Comments in Python?
+    Single-Line Comments starts with a "Hash Symbol" ("#") for short notes, 
+    While Multi-Line Comments starts with "Triple Single Or Double Quotes" ('''  ''' OR """  """) to comment out across multiple lines.
+
+6. What is the main difference bet a "List" and a "Tupple"?
+    A "list" (created with [ ]) is "Mutable", meaning its items can be changed or modified after creation.
+    A "Tuple" (created with ()) is "Immutable", meaning its items cannot be changed once created.
+
+7. How does a "Dictionary" Differ from a "Set" in Python?
+    A dictionary stores data as Key-Value Pairs in curly Braces (e.g., "{"age"=22}"),
+    Whlie a set stores only "Unique, Single Values" in curly braces (e.g., "{1, 2, 3}").
+
+8. What is a Frozen Set in Python?
+    A Frozenset is simple a immutable ("Un-Changable") version of a standard set.
+    Once created you cannot add or remove elements from it.
+
+9. What is aComplex Data Type in Python, and how it is Written?
+    A complex Data type represents numbers with "A Real Part" and "An Imaginary Part"
+    In Python it is written Using the letter "j" for the Imaginary Component (e.g., "comp = 2 + 3j").
+
+10. What is the difference between a Set and a Frozenset?
+    A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
+    A Frozenset is "immutable", meaning its elements are locked and cannot change after creation.
 
 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
