@@ -348,11 +348,22 @@ Python Internship Notes:- Day 3 - Operators
 */*-*/*-*/*-*/*-*/*
 
 7. Membership Operators
-`in`:-Returns `True` if a sequence/item is found inside a given object (e.g., `'a' in 'apple'` outputs `True`).
-`not in`:-Returns `True` if a sequence/item is **not** present inside an object (e.g., `10 not in [1, 2, 3]` outputs `True`).
+    
+    1. `in`:-
+        Returns `True` if a sequence/item is found inside a given object.
+        (e.g., `'a' in 'apple'` outputs `True`).
+    
+    2. `not in`:-
+        Returns `True` if a sequence/item is **not** present inside an object.
+        (e.g., `10 not in [1, 2, 3]` outputs `True`).
 
 */*-*/*-*/*-*/*-*/*
 
 8. Identity Operators
-`is`:-Returns `True` if both variables point to the exact same object in computer memory (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
-`is not`:-Returns `True` if both variables point to different objects in memory (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
+    
+    1. `is`:-
+        Returns `True` if both variables point to the exact same object in computer memory.
+        (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
+    2. `is not`:-
+        Returns `True` if both variables point to different objects in memory.
+        (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
