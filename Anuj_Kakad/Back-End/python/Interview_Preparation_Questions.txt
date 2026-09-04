@@ -213,14 +213,15 @@ _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 Python Internship Notes:- Day 3 - Operators
 
-1. Introduction to Operators
+1. Introduction to Operators:-
+
     Definition:-
         Symbols used to perform operations on variables and values.
         (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
 
 */*-*/*-*/*-*/*-*/*
 
-2. Arithmetic Operators
+2. Arithmetic Operators:-
     1. Adition (`+`):- 
         Adds two numbers together 
         (e.g., `10 + 20` outputs `30`).
@@ -251,7 +252,8 @@ Python Internship Notes:- Day 3 - Operators
 
 */*-*/*-*/*-*/*-*/*
 
-3. Assignment Operators
+3. Assignment Operators:-
+
     1. Assign (`=`):-
         Assigns a value to a variable
         (e.g., `x = 20`).
@@ -286,7 +288,8 @@ Python Internship Notes:- Day 3 - Operators
 
 */*-*/*-*/*-*/*-*/*
 
-4. Comparison (Relational) Operators
+4. Comparison (Relational) Operators:-
+
     1. Equal To (`==`):-
         Returns `True` if both values are equal
         (e.g., `20 == 20` outputs `True`).
@@ -313,7 +316,8 @@ Python Internship Notes:- Day 3 - Operators
 
 */*-*/*-*/*-*/*-*/*
 
-5. Logical Operators
+5. Logical Operators:-
+    
     1.`and`:-
         Returns `True` only if **both** conditions are true
         (e.g., `5 > 2 and 10 > 5` outputs `True`).
@@ -328,7 +332,7 @@ Python Internship Notes:- Day 3 - Operators
 
 */*-*/*-*/*-*/*-*/*
 
-6. Bitwise Operators
+6. Bitwise Operators:-
     1. Bitwise AND (`&`):-
         Compares bits and sets each bit to `1` only if both corresponding bits are `1`
         (e.g., `5 & 3` outputs `1`).
@@ -347,7 +351,7 @@ Python Internship Notes:- Day 3 - Operators
 
 */*-*/*-*/*-*/*-*/*
 
-7. Membership Operators
+7. Membership Operators:-
     
     1. `in`:-
         Returns `True` if a sequence/item is found inside a given object.
@@ -356,10 +360,18 @@ Python Internship Notes:- Day 3 - Operators
     2. `not in`:-
         Returns `True` if a sequence/item is **not** present inside an object.
         (e.g., `10 not in [1, 2, 3]` outputs `True`).
+    
+    3. Bitwise Left Shift (`<<`):-
+        Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
+        (e.g., `5 << 1` outputs `10`).
+    
+    4. Bitwise Right Shift (`>>`):-
+        Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
+        (e.g., `5 >> 1` outputs `2`).
 
 */*-*/*-*/*-*/*-*/*
 
-8. Identity Operators
+8. Identity Operators:-
     
     1. `is`:-
         Returns `True` if both variables point to the exact same object in computer memory.
