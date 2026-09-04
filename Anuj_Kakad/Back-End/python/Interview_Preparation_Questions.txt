@@ -392,6 +392,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
             Sets each bit to `1` only if one of the corresponding bits is `1`
             (e.g., `5 ^ 3` outputs `6`).
 
+        5. Bitwise Left Shift (`<<`):-
+            Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
+            (e.g., `5 << 1` outputs `10`).
+        
+        6. Bitwise Right Shift (`>>`):-
+            Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
+            (e.g., `5 >> 1` outputs `2`).
+
     */*-*/*-*/*-*/*-*/*
 
     7. Membership Operators:-
@@ -404,21 +412,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
             Returns `True` if a sequence/item is **not** present inside an object.
             (e.g., `10 not in [1, 2, 3]` outputs `True`).
         
-        3. Bitwise Left Shift (`<<`):-
-            Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
-            (e.g., `5 << 1` outputs `10`).
-        
-        4. Bitwise Right Shift (`>>`):-
-            Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
-            (e.g., `5 >> 1` outputs `2`).
 
     */*-*/*-*/*-*/*-*/*
 
     8. Identity Operators:-
     
-    1. `is`:-
-        Returns `True` if both variables point to the exact same object in computer memory.
-        (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
-    2. `is not`:-
-        Returns `True` if both variables point to different objects in memory.
-        (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
+        1. `is`:-
+                Returns `True` if both variables point to the exact same object in computer memory.
+                (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
+        2. `is not`:-
+                Returns `True` if both variables point to different objects in memory.
+                (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
