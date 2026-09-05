@@ -18,8 +18,8 @@ print("The Difference of a and b is:-", a - b)
 print("The Product of a and b is:-", a * b)
 
 # 4. Division:-
-a= 40
-b= 6
+a= 165
+b= 22
 print("The Quotient of a and b is:-", a / b)
 
 # 5. Floor Division:-
