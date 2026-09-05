@@ -216,39 +216,57 @@ Python Programming Fundamentals — Notes & Study Guide:-
         1. What are the main Programming Paradigms supported by python?
             Python support Sequential Programming(Step-By-Step Logic), Funtional Programming (using reausable functions)
             and Object Oriented Programming(OOP) (structuring code around objects and classes).
+            
+        */*-*/*-*/*-*/*-*/*
 
         2. What are python keywords and how do you print all the keywords and how do you check total number of keywords using code?
             Keyword are reserved words in Python with fixed meaning that cannot be used as variables.
             You can print all the keyword by importing the Keyword ("import keyword") and running ("Print(keyword.kwlist)).
             You can chech the total count by running ("print(len(keyword.kwlist))").
 
+        */*-*/*-*/*-*/*-*/*
+
         3. What are the rules for declaring Variables In Python?
             variable names must start with a "letter" or "Underscore", it cannot start with a "number", 
             cannot contain spaces or spacial characters except (Underscore "_") And cannot be a reserves Python "Keyword".
+
+        */*-*/*-*/*-*/*-*/*
 
         4. Why is Python called a Dynamically Typed language?
             Python Automatically determines the data type of a variable at "RUN TIME", 
             means you dont need to explicitly decalre the data type (like "int" or "String") when assigning a value.
 
+        */*-*/*-*/*-*/*-*/*
+
         5. What is the difference between Single-Line And Multi-Line Comments in Python?
             Single-Line Comments starts with a "Hash Symbol" ("#") for short notes, 
             While Multi-Line Comments starts with "Triple Single Or Double Quotes" ('''  ''' OR """  """) to comment out across multiple lines.
+
+        */*-*/*-*/*-*/*-*/*
 
         6. What is the main difference bet a "List" and a "Tupple"?
             A "list" (created with [ ]) is "Mutable", meaning its items can be changed or modified after creation.
             A "Tuple" (created with ()) is "Immutable", meaning its items cannot be changed once created.
 
+        */*-*/*-*/*-*/*-*/*
+
         7. How does a "Dictionary" Differ from a "Set" in Python?
             A dictionary stores data as Key-Value Pairs in curly Braces (e.g., "{"age"=22}"),
             Whlie a set stores only "Unique, Single Values" in curly braces (e.g., "{1, 2, 3}").
+
+        */*-*/*-*/*-*/*-*/*
 
         8. What is a Frozen Set in Python?
             A Frozenset is simple a immutable ("Un-Changable") version of a standard set.
             Once created you cannot add or remove elements from it.
 
+        */*-*/*-*/*-*/*-*/*
+
         9. What is aComplex Data Type in Python, and how it is Written?
             A complex Data type represents numbers with "A Real Part" and "An Imaginary Part"
             In Python it is written Using the letter "j" for the Imaginary Component (e.g., "comp = 2 + 3j").
+
+        */*-*/*-*/*-*/*-*/*
 
         10. What is the difference between a Set and a Frozenset?
             A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
@@ -256,223 +274,253 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-Python Internship Notes:- Day 3 - Operators:-
+    Python Internship Notes:- Day 3 - Operators:-
 
-    1. Introduction to Operators:-
+        1. Introduction to Operators:-
 
-        Definition:-
-            Symbols used to perform operations on variables and values.
-            (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
+            Definition:-
+                Symbols used to perform operations on variables and values.
+                (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
 
-    */*-*/*-*/*-*/*-*/*
+        */*-*/*-*/*-*/*-*/*
 
-    2. Arithmetic Operators:-
-        1. Adition (`+`):- 
-            Adds two numbers together 
-            (e.g., `10 + 20` outputs `30`).
+        2. Arithmetic Operators:-
+            1. Adition (`+`):- 
+                Adds two numbers together 
+                (e.g., `10 + 20` outputs `30`).
 
-        2. Subtraction (`-`):-
-            Subtracts the right number from the left 
-            (e.g., `20 - 10` outputs `10`).
+            2. Subtraction (`-`):-
+                Subtracts the right number from the left 
+                (e.g., `20 - 10` outputs `10`).
+            
+            3. Multiplication (`*`):-
+                Multiplies two numbers
+                (e.g., `10 * 20` outputs `200`).
+            
+            4. Division (`/`):-
+                Divides numbers and always returns a floating-point number
+                (e.g., `10 / 20` outputs `0.5`).
+            
+            5. Modulus (`%`):-
+                Returns the remainder left over after division
+                (e.g., `10 % 3` outputs `1`).
+            
+            6. Floor Division (`//`):-
+                Divides numbers and chops off decimals to return the lower whole number.
+                (e.g., `10 // 3` outputs `3`).
+            
+            7. Exponentiation (`**`):-
+                Raises the base number to a power.
+                (e.g., `2 ** 3` outputs `8`).
+
+        */*-*/*-*/*-*/*-*/*
+
+        3. Assignment Operators:-
+
+            1. Assign (`=`):-
+                Assigns a value to a variable
+                (e.g., `x = 20`).
+            
+            2. Add and Assign (`+=`):-
+                Adds a value and assigns result
+                (e.g., `x += 10` sets `x` to `30`).
+            
+            3. Subtract and Assign (`-=`):-
+                Subtracts a value and assigns result
+                (e.g., `x -= 5` sets `x` to `15`).
+            
+            4. Multiply and Assign (`*=`):
+                Multiplies by a value and assigns result
+                (e.g., `x *= 2` sets `x` to `40`).
+            
+            5. Divide and Assign (`/=`):-
+                Divides by a value and assigns result
+                (e.g., `x /= 2` sets `x` to `10.0`).
+            
+            6. Floor Divide and Assign (`//=`):-
+                Floor divides and assigns result
+                (e.g., `x //= 3` sets `x` to `6`).
+            
+            7. Modulus and Assign (`%=`):-
+                Takes modulus and assigns result
+                (e.g., `x %= 3` sets `x` to `2`).
+            
+            8. Exponentiate and Assign (`**=`):-
+                Raises to power and assigns result
+                (e.g., `x **= 2` sets `x` to `400`).
+
+        */*-*/*-*/*-*/*-*/*
+
+        4. Comparison (Relational) Operators:-
+
+            1. Equal To (`==`):-
+                Returns `True` if both values are equal
+                (e.g., `20 == 20` outputs `True`).
+            
+            2. Not Equal To (`!=`):-
+                Returns `True` if values are different
+                (e.g., `25 != 20` outputs `True`).
+            
+            3. Greater Than (`>`):-
+                Returns `True` if left value is bigger
+                (e.g., `25 > 18` outputs `True`).
+            
+            4. Less Than (`<`):
+                Returns `True` if left value is smaller
+                (e.g., `15 < 18` outputs `True`).
+            
+            5. Greater Than or Equal To (`>=`):-
+                Returns `True` if left value is bigger or equal
+                (e.g., `18 >= 18` outputs `True`).
+            
+            6. Less Than or Equal To (`<=`):-
+                Returns `True` if left value is smaller or equal
+                (e.g., `15 <= 18` outputs `True`).
+
+        */*-*/*-*/*-*/*-*/*
+
+        5. Logical Operators:-
+            
+            1.`and`:-
+                Returns `True` only if **both** conditions are true
+                (e.g., `5 > 2 and 10 > 5` outputs `True`).
+            
+            2. `or`:-
+                Returns `True` if **at least one** condition is true
+                (e.g., `15 >= 18 or 10 > 5` outputs `True`).
+            
+            3. `not`:-
+                Reverses the logical state, returning `True` for false conditions and vice versa
+                (e.g., `not(10 > 20)` outputs `True`).
+
+        */*-*/*-*/*-*/*-*/*
+
+        6. Bitwise Operators:-
+            1. Bitwise AND (`&`):-
+                Compares bits and sets each bit to `1` only if both corresponding bits are `1`
+                (e.g., `5 & 3` outputs `1`).
+            
+            2. Bitwise OR (`|`):-
+                Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
+                (e.g., `5 | 3` outputs `7`).
+            
+            3. Bitwise NOT (`~`):-
+                Inverts all bits of a binary number
+                (e.g., `~5` outputs `-6`).
+            
+            4. Bitwise XOR (`^`):-
+                Sets each bit to `1` only if one of the corresponding bits is `1`
+                (e.g., `5 ^ 3` outputs `6`).
+
+            5. Bitwise Left Shift (`<<`):-
+                Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
+                (e.g., `5 << 1` outputs `10`).
+            
+            6. Bitwise Right Shift (`>>`):-
+                Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
+                (e.g., `5 >> 1` outputs `2`).
+
+        */*-*/*-*/*-*/*-*/*
+
+        7. Membership Operators:-
+            
+            1. `in`:-
+                Returns `True` if a sequence/item is found inside a given object.
+                (e.g., `'a' in 'apple'` outputs `True`).
+            
+            2. `not in`:-
+                Returns `True` if a sequence/item is **not** present inside an object.
+                (e.g., `10 not in [1, 2, 3]` outputs `True`).
+            
+        */*-*/*-*/*-*/*-*/*
+
+        8. Identity Operators:-
         
-        3. Multiplication (`*`):-
-            Multiplies two numbers
-            (e.g., `10 * 20` outputs `200`).
-        
-        4. Division (`/`):-
-            Divides numbers and always returns a floating-point number
-            (e.g., `10 / 20` outputs `0.5`).
-        
-        5. Modulus (`%`):-
-            Returns the remainder left over after division
-            (e.g., `10 % 3` outputs `1`).
-        
-        6. Floor Division (`//`):-
-            Divides numbers and chops off decimals to return the lower whole number.
-            (e.g., `10 // 3` outputs `3`).
-        
-        7. Exponentiation (`**`):-
-            Raises the base number to a power.
-            (e.g., `2 ** 3` outputs `8`).
+            1. `is`:-
+                    Returns `True` if both variables point to the exact same object in computer memory.
+                    (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
+            2. `is not`:-
+                    Returns `True` if both variables point to different objects in memory.
+                    (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
 
-    */*-*/*-*/*-*/*-*/*
+    Interview Questions on Day 3 Topics:-
 
-    3. Assignment Operators:-
+        1. What is the difference between single division ( / ) and floor division in Python?
+            Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
+            Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
 
-        1. Assign (`=`):-
-            Assigns a value to a variable
-            (e.g., `x = 20`).
-        
-        2. Add and Assign (`+=`):-
-            Adds a value and assigns result
-            (e.g., `x += 10` sets `x` to `30`).
-        
-        3. Subtract and Assign (`-=`):-
-            Subtracts a value and assigns result
-            (e.g., `x -= 5` sets `x` to `15`).
-        
-        4. Multiply and Assign (`*=`):
-            Multiplies by a value and assigns result
-            (e.g., `x *= 2` sets `x` to `40`).
-        
-        5. Divide and Assign (`/=`):-
-            Divides by a value and assigns result
-            (e.g., `x /= 2` sets `x` to `10.0`).
-        
-        6. Floor Divide and Assign (`//=`):-
-            Floor divides and assigns result
-            (e.g., `x //= 3` sets `x` to `6`).
-        
-        7. Modulus and Assign (`%=`):-
-            Takes modulus and assigns result
-            (e.g., `x %= 3` sets `x` to `2`).
-        
-        8. Exponentiate and Assign (`**=`):-
-            Raises to power and assigns result
-            (e.g., `x **= 2` sets `x` to `400`).
+                मराठीमध्ये:-
+                    साधा भागाकार (/) केल्यावर उत्तर नेहमी पॉइंटमध्ये (Decimal/Float) येते. पण Floor Division (//) (पूर्णांक भागाकार (Integer Quotient)) 
+                    काय करतो, तर पॉइंटच्या नंतरचे सर्व आकडे काढून टाकतो आणि फक्त पॉइंटच्या आधीचा पूर्णांक (Whole Number) उत्तर म्हणून देतो.
 
-    */*-*/*-*/*-*/*-*/*
+                    ex:-
+                        a = 10
+                        b = 3
+                        print(a / b)   # Output: 3.3333333333333335 (साधा भागाकार)
+                        print(a // b)  # Output: 3 (Floor Division)
 
-    4. Comparison (Relational) Operators:-
+        */*-*/*-*/*-*/*-*/*
 
-        1. Equal To (`==`):-
-            Returns `True` if both values are equal
-            (e.g., `20 == 20` outputs `True`).
-        
-        2. Not Equal To (`!=`):-
-            Returns `True` if values are different
-            (e.g., `25 != 20` outputs `True`).
-        
-        3. Greater Than (`>`):-
-            Returns `True` if left value is bigger
-            (e.g., `25 > 18` outputs `True`).
-        
-        4. Less Than (`<`):
-            Returns `True` if left value is smaller
-            (e.g., `15 < 18` outputs `True`).
-        
-        5. Greater Than or Equal To (`>=`):-
-            Returns `True` if left value is bigger or equal
-            (e.g., `18 >= 18` outputs `True`).
-        
-        6. Less Than or Equal To (`<=`):-
-            Returns `True` if left value is smaller or equal
-            (e.g., `15 <= 18` outputs `True`).
+        2. What is the "Modulus Operator ( '%' )" used in Python?
+            The "Modulus Operator ( '%' )" returns the "reminder" left over after dividing two numbers (e.g., 10 % 3 reeturns 1).
+            It is commonly used to check if a number is even or odd (num % 2 == 0).
 
-    */*-*/*-*/*-*/*-*/*
+                मराठीमध्ये:-
+                    मॉड्युलस ऑपरेटरचा वापर दोन संख्यांचा भागाकार केल्यानंतर शेवटी शिल्लक राहणारी बाकी (Remainder) शोधण्यासाठी होतो.
 
-    5. Logical Operators:-
-        
-        1.`and`:-
-            Returns `True` only if **both** conditions are true
-            (e.g., `5 > 2 and 10 > 5` outputs `True`).
-        
-        2. `or`:-
-            Returns `True` if **at least one** condition is true
-            (e.g., `15 >= 18 or 10 > 5` outputs `True`).
-        
-        3. `not`:-
-            Reverses the logical state, returning `True` for false conditions and vice versa
-            (e.g., `not(10 > 20)` outputs `True`).
+                    ex:-
+                        a = 10
+                        b = 3
+                        print(a % b)  # Output: 1 (बाकी 1 उरते).
 
-    */*-*/*-*/*-*/*-*/*
+        */*-*/*-*/*-*/*-*/*
 
-    6. Bitwise Operators:-
-        1. Bitwise AND (`&`):-
-            Compares bits and sets each bit to `1` only if both corresponding bits are `1`
-            (e.g., `5 & 3` outputs `1`).
-        
-        2. Bitwise OR (`|`):-
-            Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
-            (e.g., `5 | 3` outputs `7`).
-        
-        3. Bitwise NOT (`~`):-
-            Inverts all bits of a binary number
-            (e.g., `~5` outputs `-6`).
-        
-        4. Bitwise XOR (`^`):-
-            Sets each bit to `1` only if one of the corresponding bits is `1`
-            (e.g., `5 ^ 3` outputs `6`).
+        3. What is the difference between the "=" and "==" operators?
+            The "single equals" (=) is an "Assignment Operator" used to "assign a value" to a variable (e.g., x = 10).
+            The "double equals" (==) is a "Comparison Operator" used to check if two "values are equal", returning "True or False".
 
-        5. Bitwise Left Shift (`<<`):-
-            Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
-            (e.g., `5 << 1` outputs `10`).
-        
-        6. Bitwise Right Shift (`>>`):-
-            Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
-            (e.g., `5 >> 1` outputs `2`).
+        */*-*/*-*/*-*/*-*/*
 
-    */*-*/*-*/*-*/*-*/*
+        4. How does the "AND" logical operator work compared to the "OR" operator?
+            The "AND" Opertaor Returns "True" Only if "both" the conditions are "True", Othervise returns "False",
+            The "OR" Operator returns "True" if "at least one" condition is "True". Othervise returns "False".
 
-    7. Membership Operators:-
-        
-        1. `in`:-
-            Returns `True` if a sequence/item is found inside a given object.
-            (e.g., `'a' in 'apple'` outputs `True`).
-        
-        2. `not in`:-
-            Returns `True` if a sequence/item is **not** present inside an object.
-            (e.g., `10 not in [1, 2, 3]` outputs `True`).
-        
-    */*-*/*-*/*-*/*-*/*
+        */*-*/*-*/*-*/*-*/*
 
-    8. Identity Operators:-
-    
-        1. `is`:-
-                Returns `True` if both variables point to the exact same object in computer memory.
-                (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
-        2. `is not`:-
-                Returns `True` if both variables point to different objects in memory.
-                (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
+        5. What do the "Membership operators" "in" and "not in" do?
+            They check if a specific value or sequence exists inside a collection (like a string, list, or tuple).
+            "in" returns "True" if the item is "found", while "not in" returns "True" if the item is "absent".
 
-Interview Questions on Day 3 Topics:-
+        */*-*/*-*/*-*/*-*/*
 
-1. What is the difference between single division ( / ) and floor division in Python?
-    Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
-    Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
+        6. What is the difference between the "==" comparison operator and the "is" identity operator?
+            The "==" operator checks if "two variables" hold the "same value".
+            The "is" operator checks if "two variables" point to the exact same memory location (Address).
 
-        मराठीमध्ये:-
-            साधा भागाकार (/) केल्यावर उत्तर नेहमी पॉइंटमध्ये (Decimal/Float) येते. पण Floor Division (//) (पूर्णांक भागाकार (Integer Quotient)) 
-            काय करतो, तर पॉइंटच्या नंतरचे सर्व आकडे काढून टाकतो आणि फक्त पॉइंटच्या आधीचा पूर्णांक (Whole Number) उत्तर म्हणून देतो.
+        */*-*/*-*/*-*/*-*/*
 
-            ex:-
-                a = 10
-                b = 3
-                print(a / b)   # Output: 3.3333333333333335 (साधा भागाकार)
-                print(a // b)  # Output: 3 (Floor Division)
+        7. How do "Bitwise Left Shift (<<)" and "Right Shift (>>)" operators affect a number mathematically?
+            Bitwise Left Shift (x << n) multiplies a number by (2^n).
+            Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
 
-2. What is the "Modulus Operator ( '%' )" used in Python?
-    The "Modulus Operator ( '%' )" returns the "reminder" left over after dividing two numbers (e.g., 10 % 3 reeturns 1).
-    It is commonly used to check if a number is even or odd (num % 2 == 0).
+        */*-*/*-*/*-*/*-*/*
 
-        मराठीमध्ये:-
-            मॉड्युलस ऑपरेटरचा वापर दोन संख्यांचा भागाकार केल्यानंतर शेवटी शिल्लक राहणारी बाकी (Remainder) शोधण्यासाठी होतो.
+        8. What are "Compound Assignment Operators" in Python?
+            They combine an arithmetic operation with variable assignment into a shorter expression.
+            (e.g., x += 5 is a shorthand equivalent to x = x + 5).
 
-            ex:-
-                a = 10
-                b = 3
-                print(a % b)  # Output: 1 (बाकी 1 उरते).
+        */*-*/*-*/*-*/*-*/*
 
-3. What is the difference between the "=" and "==" operators?
-    The "single equals" (=) is an "Assignment Operator" used to "assign a value" to a variable (e.g., x = 10).
-    The "double equals" (==) is a "Comparison Operator" used to check if two "values are equal", returning "True or False".
+        9. What are "Identity Operators" in Python, and how do "is" and "is not" work?
+            Identity operators "compare" the "memory locations" of "two objects" rather than their "actual values".
+            The is operator returns "True" if both variables refer to the "exact same" object in "memory"(Address),
+            while "is not" returns "True" if they point to "different" memory locations.
 
-4. How does the "AND" logical operator work compared to the "OR" operator?
-    The "AND" Opertaor Returns "True" Only if "both" the conditions are "True", Othervise returns "False",
-    The "OR" Operator returns "True" if "at least one" condition is "True". Othervise returns "False".
+        */*-*/*-*/*-*/*-*/*
 
-5. What do the Membership operators "in" and "not in" do?
-    They check if a specific value or sequence exists inside a collection (like a string, list, or tuple).
-    "in" returns "True" if the item is "found", while "not in" returns "True" if the item is "absent".
+        10. How does "Bitwise NOT (~)" work on an "integer" in Python?
+        The Bitwise NOT operator (~) inverts all the binary bits of an integer (changing 1s to 0s and vice versa).
+        In Python, due to two's complement representation, "~x" mathematically evaluates to "-(x + 1)" 
+        "(for example, ~5 returns -6)".
 
-6. What is the difference between the == comparison operator and the is identity operator?
-    The "==" operator checks if "two variables" hold the "same value".
-    The "is" operator checks if "two variables" point to the exact same memory location (Address).
-
-7. How do "Bitwise Left Shift (<<)" and "Right Shift (>>)" operators affect a number mathematically?
-    Bitwise Left Shift (x << n) multiplies a number by (2^n).
-    Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
-
-8. What are Compound Assignment Operators in Python?
-    They combine an arithmetic operation with variable assignment into a shorter expression.
-    (e.g., x += 5 is a shorthand equivalent to x = x + 5).
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
