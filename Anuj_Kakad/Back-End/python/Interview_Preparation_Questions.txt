@@ -6,7 +6,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 03(31/8/26):-
 
-        Python Internship Notes Day 1(31/8/26) With Interview Questions:-
+        Python Notes Day 1(31/8/26) With Interview Questions:-
 
             1. Definition of Python Programming:-
                     Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. 
@@ -139,7 +139,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 04(1/9/26):- 
 
-        Python Internship Notes: Day 2(1/9/26)
+        Python Notes: Day 2(1/9/26)
 
             1. Programming Paradigms (Types of Programming):-
 
@@ -284,7 +284,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 05 , 06, 07(2/9/26 to 4/9/26):-
 
-        Python Internship Notes:- Day 3,4,5 - Operators:-
+        Python Notes:- Day 3,4,5 - Operators:-
 
             1. Introduction to Operators:-
 
@@ -453,7 +453,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                         Returns `True` if both variables point to different objects in memory.
                         (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
 
-        # Python Internship Notes:- Input Function
+        # Python Notes:- Input Function
 
             1. Overview & Basic Syntax:-
                 Definition:-
