@@ -473,3 +473,6 @@ Interview Questions on Day 3 Topics:-
     Bitwise Left Shift (x << n) multiplies a number by (2^n).
     Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
 
+8. What are Compound Assignment Operators in Python?
+    They combine an arithmetic operation with variable assignment into a shorter expression.
+    (e.g., x += 5 is a shorthand equivalent to x = x + 5).
