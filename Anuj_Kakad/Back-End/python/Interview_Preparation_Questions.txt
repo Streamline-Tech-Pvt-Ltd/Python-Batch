@@ -519,8 +519,8 @@ Python Programming Fundamentals — Notes & Study Guide:-
         */*-*/*-*/*-*/*-*/*
 
         10. How does "Bitwise NOT (~)" work on an "integer" in Python?
-        The Bitwise NOT operator (~) inverts all the binary bits of an integer (changing 1s to 0s and vice versa).
-        In Python, due to two's complement representation, "~x" mathematically evaluates to "-(x + 1)" 
-        "(for example, ~5 returns -6)".
+            The Bitwise NOT operator (~) inverts all the binary bits of an integer (changing 1s to 0s and vice versa).
+            In Python, due to two's complement representation, "~x" mathematically evaluates to "-(x + 1)" 
+            "(for example, ~5 returns -6)".
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
