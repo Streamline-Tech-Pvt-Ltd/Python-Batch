@@ -18,14 +18,17 @@ print("The Difference of a and b is:-", a - b)
 print("The Product of a and b is:-", a * b)
 
 # 4. Division:-
-
+a= 40
+b= 6
 print("The Quotient of a and b is:-", a / b)
 
-# 5. Modulus:-
+# 5. Floor Division:-
+print("The Floor Quotient of a and b is:-", a // b)
 
+# 6. Modulus:-
 print("The Remainder of a and b is:-", a % b)
 
-# 6. Exponentiation:-
+# 7. Exponentiation:-
 
 a = 2
 b = 3

@@ -129,7 +129,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
         | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
         | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
 
-    _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
     Python Internship Notes: Day 2
 
@@ -187,27 +187,29 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
         5. Python Data Types:-
 
-        Primary Data Types
-        String (`str`):-
-            Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
-        Integer (`int`):-
-            Whole numbers without decimals (e.g., `number = 123456789`).
-        Boolean (`bool`):-
-            Logical values representing truth states (`True` or `False`).
-        Complex (`complex`):-
-            Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
+            Primary Data Types
+            
+                String (`str`):-
+                    Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
+                Integer (`int`):-
+                    Whole numbers without decimals (e.g., `number = 123456789`).
+                Boolean (`bool`):-
+                    Logical values representing truth states (`True` or `False`).
+                Complex (`complex`):-
+                    Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
 
-        Collection Data Types
-        List:-
-            An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
-        Tuple:-
-            An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
-        Dictionary:-
-            Unordered collection of key-value pairs written in curly braces `{ key: value }`.
-        Set:-
-            An unordered collection of unique elements written in curly braces `{ }`.
-        Frozenset:-
-            An immutable (un-changeable) version of a standard set.
+            Collection Data Types
+            
+                List:-
+                    An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
+                Tuple:-
+                    An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
+                Dictionary:-
+                    Unordered collection of key-value pairs written in curly braces `{ key: value }`.
+                Set:-
+                    An unordered collection of unique elements written in curly braces `{ }`.
+                Frozenset:-
+                    An immutable (un-changeable) version of a standard set.
 
     Interview Questions On Day 2 Topics:-
 
@@ -252,7 +254,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
             A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
             A Frozenset is "immutable", meaning its elements are locked and cannot change after creation.
 
-    _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
 Python Internship Notes:- Day 3 - Operators:-
 
@@ -412,7 +414,6 @@ Python Internship Notes:- Day 3 - Operators:-
             Returns `True` if a sequence/item is **not** present inside an object.
             (e.g., `10 not in [1, 2, 3]` outputs `True`).
         
-
     */*-*/*-*/*-*/*-*/*
 
     8. Identity Operators:-
@@ -423,3 +424,11 @@ Python Internship Notes:- Day 3 - Operators:-
         2. `is not`:-
                 Returns `True` if both variables point to different objects in memory.
                 (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
+
+Interview Questions on Day 3 Topics:-
+
+1. What is the difference between single division ( / ) and floor division in Python?
+    Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
+    Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
+
+2. 
