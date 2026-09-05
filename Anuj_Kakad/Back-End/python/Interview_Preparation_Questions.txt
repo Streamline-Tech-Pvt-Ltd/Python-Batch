@@ -431,4 +431,41 @@ Interview Questions on Day 3 Topics:-
     Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
     Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
 
-2. 
+        मराठीमध्ये:-
+            साधा भागाकार (/) केल्यावर उत्तर नेहमी पॉइंटमध्ये (Decimal/Float) येते. पण Floor Division (//) (पूर्णांक भागाकार (Integer Quotient)) 
+            काय करतो, तर पॉइंटच्या नंतरचे सर्व आकडे काढून टाकतो आणि फक्त पॉइंटच्या आधीचा पूर्णांक (Whole Number) उत्तर म्हणून देतो.
+
+            ex:-
+                a = 10
+                b = 3
+                print(a / b)   # Output: 3.3333333333333335 (साधा भागाकार)
+                print(a // b)  # Output: 3 (Floor Division)
+
+2. What is the "Modulus Operator ( '%' )" used in Python?
+    The "Modulus Operator ( '%' )" returns the "reminder" left over after dividing two numbers (e.g., 10 % 3 reeturns 1).
+    It is commonly used to check if a number is even or odd (num % 2 == 0).
+
+        मराठीमध्ये:-
+            मॉड्युलस ऑपरेटरचा वापर दोन संख्यांचा भागाकार केल्यानंतर शेवटी शिल्लक राहणारी बाकी (Remainder) शोधण्यासाठी होतो.
+
+            ex:-
+                a = 10
+                b = 3
+                print(a % b)  # Output: 1 (बाकी 1 उरते).
+
+3. What is the difference between the "=" and "==" operators?
+    The "single equals" (=) is an "Assignment Operator" used to "assign a value" to a variable (e.g., x = 10).
+    The "double equals" (==) is a "Comparison Operator" used to check if two "values are equal", returning "True or False".
+
+4. How does the "AND" logical operator work compared to the "OR" operator?
+    The "AND" Opertaor Returns "True" Only if "both" the conditions are "True", Othervise returns "False",
+    The "OR" Operator returns "True" if "at least one" condition is "True". Othervise returns "False".
+
+5. What do the Membership operators "in" and "not in" do?
+    They check if a specific value or sequence exists inside a collection (like a string, list, or tuple).
+    "in" returns "True" if the item is "found", while "not in" returns "True" if the item is "absent".
+
+6. What is the difference between the == comparison operator and the is identity operator?
+    The "==" operator checks if "two variables" hold the "same value".
+    The "is" operator checks if "two variables" point to the exact same memory location (Address).
+
