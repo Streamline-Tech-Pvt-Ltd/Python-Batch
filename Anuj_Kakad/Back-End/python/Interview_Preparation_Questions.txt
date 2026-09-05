@@ -469,3 +469,7 @@ Interview Questions on Day 3 Topics:-
     The "==" operator checks if "two variables" hold the "same value".
     The "is" operator checks if "two variables" point to the exact same memory location (Address).
 
+7. How do "Bitwise Left Shift (<<)" and "Right Shift (>>)" operators affect a number mathematically?
+    Bitwise Left Shift (x << n) multiplies a number by (2^n).
+    Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
+
