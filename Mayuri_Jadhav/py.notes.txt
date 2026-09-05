@@ -1,0 +1,607 @@
+Q1.What is Python?
+
+Python is a simple, high-level, interpreted, dynamically typed, general-purpose, object-oriented programming language.
+
+It is easy to learn and read because of its simple syntax. Python is used in various fields such as web development, data analysis, machine learning, artificial intelligence, automation, and software development.
+
+
+Q2.Difference Between Static and Dynamic?
+
+| Point                   | Static               | Dynamic           |
+| ----------------------- | -------------------- | --------------------------- |
+| 1. Data Type            | Declared explicitly  | Determined automatically    |
+| 2. Type Checking        | Done at compile time | Done at runtime             |
+| 3. Variable Declaration | Type is required     | Type is not required        |
+| 4. Flexibility          | Less flexible        | More flexible               |
+| 5. Errors               | Detected earlier     | Detected during execution   |
+| 6. Code Length          | Usually more code    | Usually less code           |
+| 7. Examples             | Java, C, C++         | Python, JavaScript          |
+| 8. Python               | Not static typed     | Python is dynamically typed |
+
+
+Q3.Explain Indentation in Python.
+
+Indentation means spaces or tabs at the beginning of a line to define a block of code.
+
+Python uses indentation instead of { } braces.
+
+Example:
+
+if 10 > 5:
+    print("10 is greater")
+
+Here, the spaces before print() are called indentation.
+
+
+
+Q4.Difference Between Compiler and Interpreter
+
+| Point              | Compiler                              | Interpreter                                   |
+| ------------------ | ------------------------------------- | --------------------------------------------- |
+| 1. Translation     | Translates the whole program at once  | Translates code line by line                  |
+| 2. Execution       | Executes after compilation            | Executes during translation                   |
+| 3. Error Detection | Shows errors after compiling          | Shows errors line by line                     |
+| 4. Speed           | Generally faster                      | Generally slower                              |
+| 5. Output          | Creates machine/object code           | Usually does not create separate machine code |
+| 6. Error Handling  | Multiple errors can be shown together | Stops when it finds an error                  |
+| 7. Examples        | C, C++                                | Python                                        |
+| 8. Process         | Compile → Run                         | Translate and Run simultaneously              |
+
+
+
+
+Q5.What is meant by Python is a High-Level Language?
+
+A high-level language is easy for humans to read, write, and understand.
+
+Python uses simple English-like syntax and hides complex hardware-level operations from the programmer.
+
+Example:
+
+print("Hello")
+
+
+Q6.What is OOP?
+
+OOP stands for Object-Oriented Programming. It is a programming approach based on objects and classes.
+
+The four main concepts of OOP are:
+
+Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+
+
+Q7.Explain IDE and give an example.
+
+IDE stands for Integrated Development Environment.
+
+It is software that provides tools for writing, running, debugging, and managing code in one place.
+
+Examples:
+
+VS Code
+PyCharm
+Jupyter Notebook
+Spyder
+
+
+
+Q8. Explain various applications of Python.
+
+Python is used in:
+
+Data Analysis – Pandas, NumPy
+Machine Learning – Scikit-learn
+Artificial Intelligence
+Web Development – Django, Flask
+Automation
+Data Visualization – Matplotlib
+Web Scraping
+Desktop Applications
+Game Development
+
+
+
+Q9. Difference between High-Level and Low-Level Language?
+| Point                 | High-Level Language         | Low-Level Language               |
+| --------------------- | --------------------------- | -------------------------------- |
+| 1. Readability        | Easy to read and understand | Difficult to read and understand |
+| 2. Syntax             | Simple and human-friendly   | Complex and machine-oriented     |
+| 3. Programming        | Easier to write             | Difficult to write               |
+| 4. Hardware Knowledge | Not required much           | More hardware knowledge required |
+| 5. Portability        | More portable               | Less portable                    |
+| 6. Development Time   | Faster development          | Slower development               |
+| 7. Examples           | Python, Java                | Assembly, Machine Language       |
+| 8. Abstraction        | High level of abstraction   | Low level of abstraction         |
+
+
+Q10. What is a Variable in Python?
+
+A variable is a name used to store data or a value in memory.
+
+Example:
+       name = "Mayuri"
+       age = 22
+       salary = 25000
+
+       print(name)
+       print(age)
+        print(salary)
+
+Here:
+
+.name, age, and salary are variables.
+."Mayuri", 22, and 25000 are values.
+
+#Variable Naming Rules
+
+While creating a variable, follow these rules:
+
+Rule 1: Variable name can contain letters
+     name = "Mayuri"
+     city = "Pune"
+Rule 2: Variable name can contain numbers
+      age1 = 22
+      student2 = "Mayuri"
+
+❌ Number cannot come at the beginning.
+
+    1name = "Mayuri"
+
+   This is invalid.
+
+Rule 3: Variable name can contain underscore _
+      first_name = "Mayuri"
+      student_age = 22
+Rule 4: Variable names are case-sensitive
+      name = "Mayuri"
+      Name = "Rahul"
+
+      print(name)
+      print(Name)
+
+Both are different variables.
+
+Rule 5: Spaces are not allowed
+
+❌ Wrong:
+
+     first name = "Mayuri"
+
+✅ Correct:
+
+      first_name = "Mayuri"
+Rule 6: Special characters are not allowed
+
+❌ Wrong:
+
+    name@ = "Mayuri"
+    age# = 22
+
+✅ Correct:
+
+    name = "Mayuri"
+Rule 7: Keywords cannot be used as variable names
+
+❌ Wrong:
+
+if = 10
+
+Because if is a Python keyword.
+
+
+Q11. What is a Data Type?
+
+A data type defines the type of value stored in a variable.
+
+Python automatically identifies the data type.
+
+Example:
+     name = "Mayuri"
+     age = 22
+     salary = 25000.50
+
+     print(type(name))
+     print(type(age))
+     print(type(salary))
+
+#Main Data Types in Python
+1. int
+
+Used to store whole numbers.
+
+age = 22
+salary = 25000
+
+print(type(age))
+
+2. float
+
+Used to store decimal numbers.
+
+percentage = 85.5
+price = 100.75
+
+print(type(price))
+
+3. str
+
+Used to store text or characters.
+
+name = "Mayuri"
+city = "Pune"
+
+print(type(name))
+
+4. bool
+
+Stores True or False.
+
+    is_student = True
+    is_working = False
+
+    print(type(is_student))
+
+ 
+Q12. What is a Keyword?
+
+A keyword is a reserved word in Python that has a special meaning.
+
+Keywords cannot be used as variable names.
+
+Examples of Python keywords:
+if
+else
+elif
+for
+while
+def
+class
+True
+False
+None
+import
+return
+   Program to Display Python Keywords
+   import keyword
+
+        print(keyword.kwlist)
+Check the number of keywords
+import keyword
+
+     print(len(keyword.kwlist))
+
+
+Q13. What is type() in Python?
+
+The type() function is used to identify the data type of a variable or value.
+
+Example:
+       name = "Mayuri"
+        age = 22
+       percentage = 85.5
+       student = True
+
+       print(type(name))
+       print(type(age))
+       print(type(percentage))    
+       print(type(student))
+
+Output will show:
+
+<class 'str'>
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+
+
+
+Q14. What is id() in Python?
+
+The id() function is used to get the unique identity of an object in memory.
+
+Example:
+      x = 10
+
+     print(id(x))
+
+The number displayed represents the object's identity during that Python session.
+
+Program using both type() and id()
+          name = "Mayuri"
+          age = 22
+          percentage = 85.5
+
+          print("Name Type:", type(name))
+          print("Name ID:", id(name))
+
+          print("Age Type:", type(age))
+          print("Age ID:", id(age))
+
+          print("Percentage Type:", type(percentage))
+          print("Percentage ID:", id(percentage))
+
+
+
+Q15. What are Operators in Python?
+
+Operators are special symbols or keywords used to perform operations on variables and values.
+
+Example:
+a = 10
+b = 5
+
+print(a + b)
+
+Here:
+
+a and b are operands
++ is an operator
+
+Types of Operators in Python
+
+# Python mainly has 6 types of operators:
+
+1.Arithmetic Operators
+2.Assignment Operators
+3.Comparison Operators
+4.Logical Operators
+5.Bitwise Operators
+6.Membership Operators
+7.Identity Operators
+
+
+
+1. Arithmetic Operators
+
+Arithmetic operators are used to perform mathematical calculations.
+| Operator | Meaning        | Example |
+| -------- | -------------- | ------- |
+| `+`      | Addition       | a + b   |
+| `-`      | Subtraction    | a - b   |
+| `*`      | Multiplication | a * b   |
+| `/`      | Division       | a / b   |
+| `%`      | Modulus        | a % b   |
+| `**`     | Exponent       | a ** b  |
+| `//`     | Floor Division | a // b  |
+
+
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % b)
+print("Exponent:", a ** b)
+print("Floor Division:", a // b)
+
+2. Assignment Operators
+
+Assignment operators are used to assign values to variables.
+| Operator | Example | Same As   |
+| -------- | ------- | --------- |
+| `=`      | x = 10  | x = 10    |
+| `+=`     | x += 5  | x = x + 5 |
+| `-=`     | x -= 5  | x = x - 5 |
+| `*=`     | x *= 5  | x = x * 5 |
+| `/=`     | x /= 5  | x = x / 5 |
+| `%=`     | x %= 5  | x = x % 5 |
+
+
+x = 10
+
+x += 5
+print(x)
+
+x -= 3
+print(x)
+
+x *= 2
+print(x)
+
+
+
+3. Comparison Operators
+
+Comparison operators compare two values and return either True or False.
+
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `==`     | Equal to                 |
+| `!=`     | Not equal to             |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+ a = 10
+b = 20
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+
+
+4. Logical Operators
+
+Logical operators are used to combine conditions.
+
+There are three logical operators:
+
+
+| Operator | Meaning                                  |
+| -------- | ---------------------------------------- |
+| `and`    | True when both conditions are True       |
+| `or`     | True when at least one condition is True |
+| `not`    | Reverses the result                      |
+
+
+
+age = 22
+
+print(age >= 18 and age <= 60)
+print(age < 18 or age > 60)
+print(not(age >= 18))
+
+
+
+5. Bitwise Operators
+
+Bitwise operators perform operations on binary numbers.
+
+| Operator | Meaning     |            
+| -------- | ----------- |  |
+| `&`      | Bitwise AND |            
+| `        |  Bitwise OR |
+| `^`      | Bitwise XOR |            
+| `~`      | Bitwise NOT |            
+| `<<`     | Left Shift  |            
+| `>>`     | Right Shift |
+
+            a = 5
+b = 3
+
+print("AND:", a & b)
+print("OR:", a | b)
+print("XOR:", a ^ b)
+print("NOT:", ~a)
+print("Left Shift:", a << 1)
+print("Right Shift:", a >> 1)
+
+
+6. Membership Operators
+
+Membership operators are used to check whether a value exists in a sequence.
+
+There are two membership operators:
+
+| Operator | Meaning                               |
+| -------- | ------------------------------------- |
+| `in`     | Checks whether a value exists         |
+| `not in` | Checks whether a value does not exist |
+ 
+
+
+
+fruits = ["Apple", "Mango", "Banana"]
+
+print("Apple" in fruits)
+print("Orange" in fruits)
+
+print("Orange" not in fruits)
+print("Mango" not in fruits)
+
+
+
+7. Identity Operators in Python
+
+Identity operators are used to check whether two variables refer to the same object in memory.
+
+There are 2 identity operators:
+ 
+
+| Operator | Meaning                                                          |
+| -------- | ---------------------------------------------------------------- |
+| `is`     | Returns `True` if both variables refer to the same object        |
+| `is not` | Returns `True` if both variables do not refer to the same object |
+
+
+
+#1. is Operator
+
+The is operator checks whether two variables have the same identity (same object in memory).
+
+Example:
+a = 10
+b = 10
+
+print(a is b)
+
+Output:
+
+True
+
+To check their identity:
+
+a = 10
+b = 10
+
+print(id(a))
+print(id(b))
+
+print(a is b)
+
+
+#2. is not Operator
+
+The is not operator checks whether two variables do not refer to the same object.
+
+Example:
+a = 10
+b = 20
+
+print(a is not b)
+
+Output:
+
+True
+   
+
+
+  Q16. What is input() in Python?
+
+The input() function is used to take input from the user during program execution.
+
+Example:
+       name = input("Enter your name: ")
+
+       print("Hello", name)
+
+When the program runs:
+
+       Enter your name: Mayuri
+       Hello Mayuri
+Important: input() Always Returns String
+    age = input("Enter your age: ")
+
+     print(type(age))
+
+The output will be:
+
+<class 'str'>
+
+Therefore, for numerical calculations, we need type conversion.
+
+Integer Input
+       age = int(input("Enter your age: "))
+
+        print(age)
+
+Float Input
+
+      salary = float(input("Enter your salary: "))
+
+     print(salary)
+
+
+  #calculator Program
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+print("Addition =", a + b)
+print("Subtraction =", a - b)
+print("Multiplication =", a * b)
+print("Division =", a / b)
+print("Modulus =", a % b)
+print("Floor Division =", a // b)
+print("Exponent =", a ** b)
