@@ -147,7 +147,7 @@ print("The Result of x AND y is:-", x & y)
 # 			              0 0 0 0 = 0
 
 # 2. (|) OR Bitwise Operator:-
-
+# hjbhghg 
 x = 9
 y = 7
 print("The Result of x OR y is:-", x | y)
