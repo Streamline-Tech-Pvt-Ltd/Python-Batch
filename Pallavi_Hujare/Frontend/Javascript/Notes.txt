@@ -1,0 +1,310 @@
+
+1. WHAT IS JAVASCRIPT?
+JavaScript (JS) is a programming language used to make web pages interactive and dynamic.
+
+Examples:
+* Button clicks
+* Form validation
+* Pop-up messages
+* Changing HTML and CSS
+* Calculations
+* Animations
+* API calls
+
+
+HTML + CSS + JavaScript:
+
+HTML       -> Structure
+CSS        -> Design
+JavaScript -> Behavior / Logic
+
+2. WHERE DOES JAVASCRIPT RUN?
+JavaScript can run in:
+
+1. Web browsers
+   Examples: Chrome, Edge, Firefox
+
+2. Outside the browser
+   Using Node.js, JavaScript can also be used for backend development.
+---------------------------------------------------------------------------------------------
+3. ADDING JAVASCRIPT TO HTML
+There are three ways to add JavaScript to HTML.
+
+A. Inline JavaScript
+<button onclick="alert('Hello')">Click Me</button>
+
+B. Internal JavaScript
+<script>
+    alert("Hello World");
+</script>
+
+C. External JavaScript - Recommended
+HTML:
+<script src="script.js"></script>
+JavaScript file:
+script.js
+alert("Hello World");
+
+4. JAVASCRIPT SYNTAX
+JavaScript instructions are called statements.
+
+Example:
+let name = "Pallavi";
+console.log(name);
+
+Semicolon can be used at the end of a statement.
+
+Example:
+let age = 20;
+let city = "Nashik";
+
+5. COMMENTS
+Comments are ignored by JavaScript.
+
+Single-line comment:
+// This is a comment
+
+Multi-line comment:
+/*
+This is
+a multi-line comment
+*/
+
+6. console.log()
+console.log() is used to display output in the browser console.
+
+Example:
+console.log("Hello World");
+
+Output:
+Hello World
+
+Example:
+console.log(10);
+console.log("Pallavi");
+console.log(10 + 20);
+
+Output:
+10
+Pallavi
+30
+
+To open the console:
+Right Click -> Inspect -> Console
+
+7. VARIABLES
+A variable is used to store data.
+
+Example:
+let name = "Pallavi";
+let age = 20;
+
+Here:
+name -> "Pallavi"
+age  -> 20
+
+8. let
+let is used to declare a variable whose value can be changed.
+
+Example:
+let age = 20;
+age = 21;
+
+console.log(age);
+Output:
+21
+
+9. const
+const is used when a variable should not be reassigned.
+Example:
+const pi = 3.14;
+console.log(pi);
+
+This is not allowed:
+const pi = 3.14;
+pi = 4;
+Simple rule:
+let   -> value can change
+const -> value cannot be reassigned
+
+10. var
+var is an older way of declaring variables.
+Example:
+var name = "Pallavi";
+
+Modern JavaScript generally prefers:
+let
+const
+As a beginner, focus mainly on let and const.
+
+11. RULES FOR VARIABLE NAMES
+Valid variable names:
+
+let name = "Pallavi";
+let age1 = 20;
+let studentName = "Pallavi";
+
+Invalid variable names:
+let 1age = 20;
+let student-name = "Pallavi";
+
+Variable names should not start with a number.
+Use camelCase for multiple words.
+
+Example:
+let studentName = "Pallavi";
+let totalMarks = 90;
+let phoneNumber = 1234567890;
+
+12. DATA TYPES
+JavaScript has different types of data.
+
+A. String
+Used for text.
+
+Example:
+let name = "Pallavi";
+
+B. Number
+Used for numbers.
+
+Example:
+let age = 20;
+let salary = 50000;
+
+C. Boolean
+Boolean has only two values:
+true
+false
+
+Example:
+let isStudent = true;
+let isLoggedIn = false;
+
+D. Undefined
+A variable exists but does not have a value.
+Example:
+let city;
+console.log(city);
+Output:
+undefined
+
+E. Null
+null represents an intentionally empty value.
+Example:
+let result = null;
+
+13. typeof
+typeof is used to check the data type.
+
+Example:
+
+let name = "Pallavi";
+let age = 20;
+let student = true;
+
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof student);
+
+Output:
+string
+number
+boolean
+
+14. ARITHMETIC OPERATORS
+Arithmetic operators are used for mathematical calculations.
+
+* -> Addition
+
+- -> Subtraction
+
+* -> Multiplication
+  /  -> Division
+  %  -> Remainder
+
+Example:
+let a = 10;
+let b = 5;
+console.log(a + b);  // 15
+console.log(a - b);  // 5
+console.log(a * b);  // 50
+console.log(a / b);  // 2
+console.log(a % b);  // 0
+
+15. STRING CONCATENATION
+The + operator can be used to combine strings.
+
+Example:
+let firstName = "Pallavi";
+let lastName = "Hujare";
+console.log(firstName + " " + lastName);
+Output:
+Pallavi Hujare
+
+16. TEMPLATE LITERALS
+
+Template literals are used to insert variables inside strings.
+They use backticks (`).
+
+Example:
+let name = "Pallavi";
+let age = 20;
+console.log(`My name is ${name} and I am ${age} years old.`);
+Output:
+My name is Pallavi and I am 20 years old.
+
+17. SIMPLE JAVASCRIPT PROGRAM
+
+let name = "Pallavi";
+let age = 20;
+let course = "MCA";
+
+console.log("Name:", name);
+console.log("Age:", age);
+console.log("Course:", course);
+
+Output:
+Name: Pallavi
+Age: 20
+Course: MCA
+
+
+JavaScript
+-> Programming language used to make web pages interactive.
+
+console.log()
+-> Displays output in the browser console.
+
+let
+-> Declares a variable whose value can be changed.
+
+const
+-> Declares a variable that cannot be reassigned.
+
+var
+-> Older way of declaring variables.
+
+String
+-> Text data. Example: "Hello"
+
+Number
+-> Numeric data. Example: 100
+
+Boolean
+-> true or false
+
+undefined
+-> Variable has no assigned value.
+
+null
+-> Intentionally empty value.
+
+typeof
+-> Checks the data type.
+
+* * * / %
+      -> Arithmetic operators.
+
+
+
