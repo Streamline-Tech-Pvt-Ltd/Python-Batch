@@ -1,0 +1,759 @@
+# 🐍 Python Interview Questions and Answers
+
+## Q1. What is Python?
+
+Python is a simple, high-level, interpreted, dynamically typed, general-purpose, object-oriented programming language.
+
+It is easy to learn and read because of its simple syntax.
+
+Python is used in various fields such as:
+
+* Web Development
+* Data Analysis
+* Machine Learning
+* Artificial Intelligence
+* Automation
+* Software Development
+
+---
+
+## Q2. Difference Between Static and Dynamic Typing
+
+| Point                | Static Typing        | Dynamic Typing              |
+| -------------------- | -------------------- | --------------------------- |
+| Data Type            | Declared explicitly  | Determined automatically    |
+| Type Checking        | Done at compile time | Done at runtime             |
+| Variable Declaration | Type is required     | Type is not required        |
+| Flexibility          | Less flexible        | More flexible               |
+| Errors               | Detected earlier     | Detected during execution   |
+| Code Length          | Usually more code    | Usually less code           |
+| Examples             | Java, C, C++         | Python, JavaScript          |
+| Python               | Not statically typed | Python is dynamically typed |
+
+---
+
+## Q3. Explain Indentation in Python
+
+Indentation means spaces or tabs at the beginning of a line to define a block of code.
+
+Python uses indentation instead of `{ }` braces.
+
+### Example
+
+```python
+if 10 > 5:
+    print("10 is greater")
+```
+
+Here, the spaces before `print()` are called indentation.
+
+### Interview Question
+
+**Q: Why is indentation important in Python?**
+
+Indentation is used to define blocks of code such as `if`, `for`, `while`, and functions.
+
+---
+
+## Q4. Difference Between Compiler and Interpreter
+
+| Point           | Compiler                              | Interpreter                                   |
+| --------------- | ------------------------------------- | --------------------------------------------- |
+| Translation     | Translates the whole program at once  | Translates code line by line                  |
+| Execution       | Executes after compilation            | Executes during translation                   |
+| Error Detection | Shows errors after compiling          | Shows errors line by line                     |
+| Speed           | Generally faster                      | Generally slower                              |
+| Output          | Creates machine/object code           | Usually does not create separate machine code |
+| Error Handling  | Multiple errors can be shown together | Stops when it finds an error                  |
+| Examples        | C, C++                                | Python                                        |
+| Process         | Compile → Run                         | Translate and Run                             |
+
+---
+
+## Q5. What is meant by Python is a High-Level Language?
+
+A high-level language is easy for humans to read, write, and understand.
+
+Python uses simple English-like syntax and hides complex hardware-level operations from the programmer.
+
+### Example
+
+```python
+print("Hello")
+```
+
+---
+
+## Q6. What is OOP?
+
+OOP stands for **Object-Oriented Programming**.
+
+It is a programming approach based on objects and classes.
+
+### Four Main Concepts of OOP
+
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+---
+
+## Q7. What is an IDE?
+
+IDE stands for **Integrated Development Environment**.
+
+It is software that provides tools for writing, running, debugging, and managing code in one place.
+
+### Examples
+
+* VS Code
+* PyCharm
+* Jupyter Notebook
+* Spyder
+
+---
+
+## Q8. What are the Applications of Python?
+
+Python is used in:
+
+* Data Analysis – Pandas, NumPy
+* Machine Learning – Scikit-learn
+* Artificial Intelligence
+* Web Development – Django, Flask
+* Automation
+* Data Visualization – Matplotlib
+* Web Scraping
+* Desktop Applications
+* Game Development
+
+---
+
+## Q9. Difference Between High-Level and Low-Level Language
+
+| Point              | High-Level Language         | Low-Level Language               |
+| ------------------ | --------------------------- | -------------------------------- |
+| Readability        | Easy to read and understand | Difficult to read and understand |
+| Syntax             | Simple and human-friendly   | Complex and machine-oriented     |
+| Programming        | Easier to write             | Difficult to write               |
+| Hardware Knowledge | Less required               | More required                    |
+| Portability        | More portable               | Less portable                    |
+| Development Time   | Faster development          | Slower development               |
+| Examples           | Python, Java                | Assembly, Machine Language       |
+| Abstraction        | High level of abstraction   | Low level of abstraction         |
+
+---
+
+# Variables
+
+## Q10. What is a Variable in Python?
+
+A variable is a name used to store data.
+
+### Example
+
+```python
+name = "Mayuri"
+age = 22
+
+print(name)
+print(age)
+```
+
+Here:
+
+* `name` stores `"Mayuri"`
+* `age` stores `22`
+
+---
+
+## Variable Naming Rules
+
+1. Variable name must start with a letter or `_`.
+2. Variable name cannot start with a number.
+3. Spaces are not allowed.
+4. Special characters are not allowed except `_`.
+5. Python keywords cannot be used as variable names.
+6. Variable names are case-sensitive.
+
+### Valid Variables
+
+```python
+name = "Mayuri"
+_age = 22
+student_name = "Mayuri"
+```
+
+### Invalid Variables
+
+```python
+2name = "Mayuri"
+student name = "Mayuri"
+class = "Python"
+```
+
+---
+
+## Variable Interview Questions
+
+### Q: What is a variable?
+
+A variable is a name used to store data in memory.
+
+### Q: Does Python require declaring the data type of a variable?
+
+No. Python automatically determines the data type.
+
+### Q: Are Python variable names case-sensitive?
+
+Yes.
+
+```python
+name = "Mayuri"
+Name = "Python"
+
+print(name)
+print(Name)
+```
+
+---
+
+# Data Types
+
+## Q11. What is a Data Type?
+
+A data type defines the type of value stored in a variable.
+
+---
+
+## Main Data Types in Python
+
+| Data Type  | Description                           | Example              |
+| ---------- | ------------------------------------- | -------------------- |
+| `int`      | Integer numbers                       | `10`                 |
+| `float`    | Decimal numbers                       | `10.5`               |
+| `complex`  | Complex numbers                       | `2 + 3j`             |
+| `str`      | Text/String                           | `"Python"`           |
+| `list`     | Ordered and mutable collection        | `[1, 2, 3]`          |
+| `tuple`    | Ordered and immutable collection      | `(1, 2, 3)`          |
+| `set`      | Unordered collection of unique values | `{1, 2, 3}`          |
+| `dict`     | Key-value pairs                       | `{"name": "Mayuri"}` |
+| `bool`     | True or False                         | `True`               |
+| `NoneType` | Represents no value                   | `None`               |
+
+---
+
+## Program to Check Data Type
+
+We use the `type()` function to check the data type of a variable.
+
+```python
+a = 10
+b = 10.5
+name = "Mayuri"
+numbers = [1, 2, 3]
+data = {"name": "Mayuri"}
+status = True
+
+print(type(a))
+print(type(b))
+print(type(name))
+print(type(numbers))
+print(type(data))
+print(type(status))
+```
+
+### Output
+
+```text
+<class 'int'>
+<class 'float'>
+<class 'str'>
+<class 'list'>
+<class 'dict'>
+<class 'bool'>
+```
+
+---
+
+## Data Type Interview Questions
+
+### Q: What is a data type?
+
+A data type defines the type of data stored in a variable.
+
+### Q: How do you check the data type of a variable in Python?
+
+Using the `type()` function.
+
+```python
+x = 10
+
+print(type(x))
+```
+
+### Q: What is the output of `type(10)`?
+
+```python
+<class 'int'>
+```
+
+### Q: What is the output of `type("Python")`?
+
+```python
+<class 'str'>
+```
+
+---
+
+# id() Function
+
+## Q12. What is `id()` Function in Python?
+
+The `id()` function returns the unique identity of an object.
+
+In CPython, this identity is commonly related to the object's memory address during its lifetime.
+
+### Syntax
+
+```python
+id(object)
+```
+
+---
+
+## Program to Check Object Identity
+
+```python
+a = 10
+
+print(id(a))
+```
+
+The output will be a unique numeric identity value.
+
+> The exact value can be different on different systems and program executions.
+
+---
+
+## Program with Two Variables
+
+```python
+a = 10
+b = 10
+
+print(id(a))
+print(id(b))
+```
+
+You can compare the identity values to see whether both variables refer to the same object.
+
+---
+
+## Program to Check Identity Using `id()`
+
+```python
+a = [1, 2, 3]
+b = a
+
+print(id(a))
+print(id(b))
+```
+
+Here, `a` and `b` refer to the same object, so their `id()` values are the same.
+
+---
+
+## `id()` Interview Questions
+
+### Q: What is the use of the `id()` function?
+
+The `id()` function is used to get the unique identity of an object.
+
+### Q: How can you check whether two variables refer to the same object?
+
+Using the `is` operator or by comparing their `id()` values.
+
+```python
+a = [1, 2, 3]
+b = a
+
+print(a is b)
+print(id(a) == id(b))
+```
+
+### Q: What is the difference between `id()` and `type()`?
+
+| `id()`                     | `type()`                       |
+| -------------------------- | ------------------------------ |
+| Returns object identity    | Returns data type              |
+| Used to identify an object | Used to check the type of data |
+
+Example:
+
+```python
+a = 10
+
+print(id(a))
+print(type(a))
+```
+
+---
+
+# Keywords
+
+## Q13. What are Keywords in Python?
+
+Keywords are reserved words that have special meanings in Python.
+
+Keywords cannot be used as variable names.
+
+### Example
+
+```python
+if = 10
+```
+
+This will give an error because `if` is a Python keyword.
+
+---
+
+## Program to Display All Python Keywords
+
+```python
+import keyword
+
+print(keyword.kwlist)
+```
+
+---
+
+## Program to Count Python Keywords
+
+```python
+import keyword
+
+print(len(keyword.kwlist))
+```
+
+---
+
+## Keyword Interview Questions
+
+### Q: What are keywords?
+
+Keywords are reserved words with predefined meanings in Python.
+
+### Q: Can we use a keyword as a variable name?
+
+No.
+
+### Q: How can you display all Python keywords?
+
+```python
+import keyword
+
+print(keyword.kwlist)
+```
+
+---
+
+# Input
+
+## Q14. What is Input in Python?
+
+The `input()` function is used to take input from the user.
+
+By default, `input()` returns data as a string.
+
+---
+
+## Example
+
+```python
+name = input("Enter your name: ")
+
+print(name)
+```
+
+---
+
+## Integer Input
+
+```python
+age = int(input("Enter your age: "))
+
+print(age)
+```
+
+---
+
+## Input and Calculation Program
+
+```python
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+sum = num1 + num2
+
+print("Addition =", sum)
+```
+
+---
+
+## Input Interview Questions
+
+### Q: Which function is used to take input from the user?
+
+`input()`
+
+### Q: What is the default data type returned by `input()`?
+
+String (`str`).
+
+### Q: How do you take an integer input?
+
+```python
+age = int(input("Enter age: "))
+```
+
+---
+
+# Operators
+
+## Q15. What are Operators in Python?
+
+Operators are special symbols used to perform operations on variables and values.
+
+### Main Types of Operators
+
+1. Arithmetic Operators
+2. Comparison Operators
+3. Logical Operators
+4. Bitwise Operators
+5. Membership Operators
+6. Identity Operators
+
+---
+
+# Arithmetic Operators
+
+## Q16. What are Arithmetic Operators?
+
+Arithmetic operators are used to perform mathematical calculations.
+
+| Operator | Meaning        | Example  |
+| -------- | -------------- | -------- |
+| `+`      | Addition       | `a + b`  |
+| `-`      | Subtraction    | `a - b`  |
+| `*`      | Multiplication | `a * b`  |
+| `/`      | Division       | `a / b`  |
+| `%`      | Modulus        | `a % b`  |
+| `**`     | Exponent       | `a ** b` |
+| `//`     | Floor Division | `a // b` |
+
+### Example Program
+
+```python
+a = 10
+b = 3
+
+print("Addition =", a + b)
+print("Subtraction =", a - b)
+print("Multiplication =", a * b)
+print("Division =", a / b)
+print("Modulus =", a % b)
+print("Exponent =", a ** b)
+print("Floor Division =", a // b)
+```
+
+---
+
+# Comparison Operators
+
+## Q17. What are Comparison Operators?
+
+Comparison operators are used to compare two values.
+
+The result is always `True` or `False`.
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `==`     | Equal to                 |
+| `!=`     | Not equal to             |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+### Example
+
+```python
+a = 10
+b = 20
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+```
+
+---
+
+# Logical Operators
+
+## Q18. What are Logical Operators?
+
+Logical operators are used to combine conditional statements.
+
+### Types
+
+* `and`
+* `or`
+* `not`
+
+### Example
+
+```python
+age = 22
+
+print(age > 18 and age < 30)
+print(age > 18 or age > 30)
+print(not True)
+```
+
+---
+
+# Bitwise Operators
+
+## Q19. What are Bitwise Operators?
+
+Bitwise operators perform operations on binary values.
+
+| Operator | Name        |            |
+| -------- | ----------- | ---------- |
+| `&`      | Bitwise AND |            |
+| `        | `           | Bitwise OR |
+| `^`      | Bitwise XOR |            |
+| `~`      | Bitwise NOT |            |
+| `<<`     | Left Shift  |            |
+| `>>`     | Right Shift |            |
+
+### Example
+
+```python
+a = 5
+b = 3
+
+print(a & b)
+print(a | b)
+print(a ^ b)
+print(~a)
+print(a << 1)
+print(a >> 1)
+```
+
+---
+
+# Membership Operators
+
+## Q20. What are Membership Operators?
+
+Membership operators are used to check whether a value exists in a sequence.
+
+### Types
+
+* `in`
+* `not in`
+
+### Example
+
+```python
+fruits = ["Apple", "Mango", "Banana"]
+
+print("Apple" in fruits)
+print("Orange" not in fruits)
+```
+
+---
+
+# Identity Operators
+
+## Q21. What are Identity Operators?
+
+Identity operators are used to check whether two variables refer to the same object.
+
+### Types
+
+* `is`
+* `is not`
+
+### Example
+
+```python
+a = [1, 2, 3]
+b = a
+
+print(a is b)
+```
+
+---
+
+## Difference Between `==` and `is`
+
+| `==`            | `is`                                         |
+| --------------- | -------------------------------------------- |
+| Compares values | Compares object identity                     |
+| Checks content  | Checks whether both refer to the same object |
+
+### Example
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)
+print(a is b)
+```
+
+---
+
+# Quick Interview Questions
+
+### Q: What are the main types of operators in Python?
+
+1. Arithmetic
+2. Comparison
+3. Logical
+4. Bitwise
+5. Membership
+6. Identity
+
+### Q: How do you check the data type of a variable?
+
+Using:
+
+```python
+type(variable)
+```
+
+### Q: How do you check the identity of an object?
+
+Using:
+
+```python
+id(variable)
+```
+
+### Q: Which operator checks whether two variables refer to the same object?
+
+The `is` operator.
+
+### Q: What is the difference between `type()` and `id()`?
+
+* `type()` checks the data type of an object.
+* `id()` returns the unique identity of an object.
+
