@@ -1,425 +1,573 @@
 Python Programming Fundamentals — Notes & Study Guide:-
 
-    Python Internship Notes Day 1 With Interview Questions:-
+    Internship Day 01(24/8/26):- Complete Guide to Git, GitHub, Git And GitHub Configuration, VS Code, Work Environment Setup.
 
-        1. Definition of Python Programming:-
-                Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. 
-                It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
+    Internship Day 02(25/8/26):- Complete LinkedIn And Noukri Optimization.
+
+    Internship Day 03(31/8/26):-
+
+        Python Notes Day 1(31/8/26) With Interview Questions:-
+
+            1. Definition of Python Programming:-
+                    Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. 
+                    It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
 
 
-            2. Core Python Concepts:-
+                2. Core Python Concepts:-
 
-                1. Simple:-
-                    Python uses clean and readable syntax that closely resembles plain English, making it easy for beginners to learn.
-                2. Dynamic:-
-                    Python is dynamically typed. You do not need to explicitly declare the data type of a variable. Python determines the type automatically at runtime.
-                3. Interpreted:-
-                    Python programs are executed by an interpreter. Python source code is first compiled into bytecode, which is then executed by the Python Virtual Machine (PVM).
-                4. High-Level:-
-                    Python hides complex hardware-level details such as memory management, allowing programmers to focus mainly on application logic.
-                5. General Purpose:-
-                    Python can be used to develop many types of applications, including websites, automation scripts, desktop applications, data analysis tools, and AI/ML applications.
-                6. Object-Oriented Programming (OOP):-
-                    Python supports object-oriented programming, where programs can be organized around objects that contain data and methods.
+                    1. Simple:-
+                        Python uses clean and readable syntax that closely resembles plain English, making it easy for beginners to learn.
+                    2. Dynamic:-
+                        Python is dynamically typed. You do not need to explicitly declare the data type of a variable. Python determines the type automatically at runtime.
+                    3. Interpreted:-
+                        Python programs are executed by an interpreter. Python source code is first compiled into bytecode, which is then executed by the Python Virtual Machine (PVM).
+                    4. High-Level:-
+                        Python hides complex hardware-level details such as memory management, allowing programmers to focus mainly on application logic.
+                    5. General Purpose:-
+                        Python can be used to develop many types of applications, including websites, automation scripts, desktop applications, data analysis tools, and AI/ML applications.
+                    6. Object-Oriented Programming (OOP):-
+                        Python supports object-oriented programming, where programs can be organized around objects that contain data and methods.
 
-        */*-*/*-*/*-*/*-*/*
+            */*-*/*-*/*-*/*-*/*
 
-        3. Difference Between Static Typing and Dynamic Typing:-
+            3. Difference Between Static Typing and Dynamic Typing:-
 
-            | Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
-            | --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-            | Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
-            | Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
-            | Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
-            | Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
-            | Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
-            | Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
-            | Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
+                | Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
+                | --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+                | Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
+                | Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
+                | Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
+                | Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
+                | Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
+                | Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
+                | Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
 
-        */*-*/*-*/*-*/*-*/*
+            */*-*/*-*/*-*/*-*/*
 
-        4. Indentation in Python:-
-            Indentation refers to the spaces or tabs placed at the beginning of a line of code.
-            Python uses indentation to define blocks of code instead of using curly braces {}.
+            4. Indentation in Python:-
+                Indentation refers to the spaces or tabs placed at the beginning of a line of code.
+                Python uses indentation to define blocks of code instead of using curly braces {}.
 
-            Indentation is commonly used with:
-                if and else statements
-                for and while loops
-                Functions
-                Classes
-                Exception handling
+                Indentation is commonly used with:
+                    if and else statements
+                    for and while loops
+                    Functions
+                    Classes
+                    Exception handling
+                
+                Example:
+                    if age >= 18:
+                    print("You are eligible to vote.")
+                
+                    Here, the print() statement is indented, which indicates that it belongs to the if block.
+                    Important: Incorrect indentation can result in an IndentationError.
+
+            */*-*/*-*/*-*/*-*/*
+
+            5. Difference Between Compiler and Interpreter:-
+
+                | Feature         | Compiler                                                                               | Interpreter                                                                                                              |
+                | --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+                | Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
+                | Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
+                | Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
+                | Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
+                | Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
+                | Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
+
+                Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
+
+            */*-*/*-*/*-*/*-*/*
+
+            6. What is OOP (Object-Oriented Programming)?
+                Object-Oriented Programming (OOP) is a programming approach that organizes software around objects and classes.
+
+                    An object can contain:
+                        
+                        Attributes → Data or properties
+                        Methods → Functions or actions performed by the object
+
+                    OOP helps make programs:
+                        Modular
+                        Reusable
+                        Organized
+                        Maintainable
+                        Scalable
+
+            */*-*/*-*/*-*/*-*/*
+
+            6. What is OOP (Object-Oriented Programming)?
+                OOP is a coding method that organizes software around reusable data structures called objects, which contain attributes and actions.
+                It helps keep code modular, organized, and scalable for large applications.
+
+            */*-*/*-*/*-*/*-*/*
+
+            7. Meaning of "Python is a High-Level Language"
+                It means Python code is easy for humans to read and write without managing low-level computer hardware or system memory directly.
+
+            */*-*/*-*/*-*/*-*/*
+
+            8. Explanation of IDE and Examples
+                An IDE (Integrated Development Environment) is a software tool combining an editor, build tools, terminal, and debugger in one window.
+                Examples include Visual Studio Code, PyCharm, and Jupyter Notebook.
+
+            */*-*/*-*/*-*/*-*/*
+
+            9. Applications of Python
+                Python is used for:-
+                1.web development,
+                2.data analysis,
+                3. machine learning,
+                4. automated scripting,
+                5. desktop apps, and
+                6. web scraping.
+
+            */*-*/*-*/*-*/*-*/*
+
+            10. Difference Between High-Level and Low-Level Language:-
+
+            | Feature            | High-Level Language                           | Low-Level Language                              |
+            | ------------------ | --------------------------------------------- | ----------------------------------------------- |
+            | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
+            | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
+            | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
+            | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
+            | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
+            | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 04(1/9/26):- 
+
+        Python Notes: Day 2(1/9/26)
+
+            1. Programming Paradigms (Types of Programming):-
+
+                1. Sequential Programming:-
+                    Executes code step-by-step from top to bottom using variables, operators, and conditional logic (`if`, `else`).
+                2. Functional Programming:-
+                    Structures code using functions, parameters, arguments, and return values to process data cleanly.
+                3. Object-Oriented Programming (OOP):-
+                    Organizes code using classes, objects, the 4 pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), along with file handling and exception handling.
+
+            */*-*/*-*/*-*/*-*/*
+
+            2. Python Keywords:-
+
+                Definition:-
+                    Reserved words in Python that have fixed meanings and cannot be used as variable names.
+                Checking Keywords:-
+                    Use `import keyword` followed by `keyword.kwlist` to print all keywords, or `len(keyword.kwlist)` to get the total count.
+                Verifying Words:-
+                    Use `keyword.iskeyword('word')` to check if a specific string is a reserved keyword (returns `True` or `False`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            3. Comments in Python:-
+
+                Definition:-
+                    Explanatory notes in your code that Python ignores during execution.
+                Single-Line Comment:-
+                    Uses the hash symbol (`#`) to annotate a single line.
+                Multi-Line Comment:-
+                    Uses triple single quotes (`'''`) or triple double quotes (`"""`) to write comments spanning multiple lines.
+
+            */*-*/*-*/*-*/*-*/*
+
+            4. Variables & Declaration Rules
+
+                Definition:-
+                    Dynamically typed containers used to store data without needing to explicitly declare the data type.
+
+
+                Rule 1 (No Starting Numbers):-
+                    Names must start with a letter or an underscore, never a number (e.g., `user1`, not `1user`).
+                Rule 2 (No Special Characters):-
+                    Only letters, numbers, and underscores (`_`) are allowed; special symbols like `@`, `$`, or `-` are forbidden.
+                Rule 3 (No Keywords):-
+                    Reserved keywords like `if`, `def`, or `finally` cannot be used as variable names.
+                Rule 4 (No Spaces):-
+                    Variable names cannot contain spaces; use underscores instead (e.g., `user_name`).
+                Rule 5 (Meaningful Names):-
+                    Names should clearly describe the data they hold (e.g., `age` instead of `a`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            5. Python Data Types:-
+
+                Primary Data Types
+                
+                    String (`str`):-
+                        Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
+                    Integer (`int`):-
+                        Whole numbers without decimals (e.g., `number = 123456789`).
+                    Boolean (`bool`):-
+                        Logical values representing truth states (`True` or `False`).
+                    Complex (`complex`):-
+                        Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
+
+                Collection Data Types
+                
+                    List:-
+                        An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
+                    Tuple:-
+                        An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
+                    Dictionary:-
+                        Unordered collection of key-value pairs written in curly braces `{ key: value }`.
+                    Set:-
+                        An unordered collection of unique elements written in curly braces `{ }`.
+                    Frozenset:-
+                        An immutable (un-changeable) version of a standard set.
+
+        Interview Questions On Day 2(1/9/26) Topics:-
+
+            1. What are the main Programming Paradigms supported by python?
+                Python support Sequential Programming(Step-By-Step Logic), Funtional Programming (using reausable functions)
+                and Object Oriented Programming(OOP) (structuring code around objects and classes).
+                
+            */*-*/*-*/*-*/*-*/*
+
+            2. What are python keywords and how do you print all the keywords and how do you check total number of keywords using code?
+                Keyword are reserved words in Python with fixed meaning that cannot be used as variables.
+                You can print all the keyword by importing the Keyword ("import keyword") and running ("Print(keyword.kwlist)).
+                You can chech the total count by running ("print(len(keyword.kwlist))").
+
+            */*-*/*-*/*-*/*-*/*
+
+            3. What are the rules for declaring Variables In Python?
+                variable names must start with a "letter" or "Underscore", it cannot start with a "number", 
+                cannot contain spaces or spacial characters except (Underscore "_") And cannot be a reserves Python "Keyword".
+
+            */*-*/*-*/*-*/*-*/*
+
+            4. Why is Python called a Dynamically Typed language?
+                Python Automatically determines the data type of a variable at "RUN TIME", 
+                means you dont need to explicitly decalre the data type (like "int" or "String") when assigning a value.
+
+            */*-*/*-*/*-*/*-*/*
+
+            5. What is the difference between Single-Line And Multi-Line Comments in Python?
+                Single-Line Comments starts with a "Hash Symbol" ("#") for short notes, 
+                While Multi-Line Comments starts with "Triple Single Or Double Quotes" ('''  ''' OR """  """) to comment out across multiple lines.
+
+            */*-*/*-*/*-*/*-*/*
+
+            6. What is the main difference bet a "List" and a "Tupple"?
+                A "list" (created with [ ]) is "Mutable", meaning its items can be changed or modified after creation.
+                A "Tuple" (created with ()) is "Immutable", meaning its items cannot be changed once created.
+
+            */*-*/*-*/*-*/*-*/*
+
+            7. How does a "Dictionary" Differ from a "Set" in Python?
+                A dictionary stores data as Key-Value Pairs in curly Braces (e.g., "{"age"=22}"),
+                Whlie a set stores only "Unique, Single Values" in curly braces (e.g., "{1, 2, 3}").
+
+            */*-*/*-*/*-*/*-*/*
+
+            8. What is a Frozen Set in Python?
+                A Frozenset is simple a immutable ("Un-Changable") version of a standard set.
+                Once created you cannot add or remove elements from it.
+
+            */*-*/*-*/*-*/*-*/*
+
+            9. What is aComplex Data Type in Python, and how it is Written?
+                A complex Data type represents numbers with "A Real Part" and "An Imaginary Part"
+                In Python it is written Using the letter "j" for the Imaginary Component (e.g., "comp = 2 + 3j").
+
+            */*-*/*-*/*-*/*-*/*
+
+            10. What is the difference between a Set and a Frozenset?
+                A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
+                A Frozenset is "immutable", meaning its elements are locked and cannot change after creation.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 05 , 06, 07(2/9/26 to 4/9/26):-
+
+        Python Notes:- Day 3,4,5 - Operators:-
+
+            1. Introduction to Operators:-
+
+                Definition:-
+                    Symbols used to perform operations on variables and values.
+                    (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
+
+            */*-*/*-*/*-*/*-*/*
+
+            2. Arithmetic Operators:-
+                1. Adition (`+`):- 
+                    Adds two numbers together 
+                    (e.g., `10 + 20` outputs `30`).
+
+                2. Subtraction (`-`):-
+                    Subtracts the right number from the left 
+                    (e.g., `20 - 10` outputs `10`).
+                
+                3. Multiplication (`*`):-
+                    Multiplies two numbers
+                    (e.g., `10 * 20` outputs `200`).
+                
+                4. Division (`/`):-
+                    Divides numbers and always returns a floating-point number
+                    (e.g., `10 / 20` outputs `0.5`).
+                
+                5. Modulus (`%`):-
+                    Returns the remainder left over after division
+                    (e.g., `10 % 3` outputs `1`).
+                
+                6. Floor Division (`//`):-
+                    Divides numbers and chops off decimals to return the lower whole number.
+                    (e.g., `10 // 3` outputs `3`).
+                
+                7. Exponentiation (`**`):-
+                    Raises the base number to a power.
+                    (e.g., `2 ** 3` outputs `8`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            3. Assignment Operators:-
+
+                1. Assign (`=`):-
+                    Assigns a value to a variable
+                    (e.g., `x = 20`).
+                
+                2. Add and Assign (`+=`):-
+                    Adds a value and assigns result
+                    (e.g., `x += 10` sets `x` to `30`).
+                
+                3. Subtract and Assign (`-=`):-
+                    Subtracts a value and assigns result
+                    (e.g., `x -= 5` sets `x` to `15`).
+                
+                4. Multiply and Assign (`*=`):
+                    Multiplies by a value and assigns result
+                    (e.g., `x *= 2` sets `x` to `40`).
+                
+                5. Divide and Assign (`/=`):-
+                    Divides by a value and assigns result
+                    (e.g., `x /= 2` sets `x` to `10.0`).
+                
+                6. Floor Divide and Assign (`//=`):-
+                    Floor divides and assigns result
+                    (e.g., `x //= 3` sets `x` to `6`).
+                
+                7. Modulus and Assign (`%=`):-
+                    Takes modulus and assigns result
+                    (e.g., `x %= 3` sets `x` to `2`).
+                
+                8. Exponentiate and Assign (`**=`):-
+                    Raises to power and assigns result
+                    (e.g., `x **= 2` sets `x` to `400`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            4. Comparison (Relational) Operators:-
+
+                1. Equal To (`==`):-
+                    Returns `True` if both values are equal
+                    (e.g., `20 == 20` outputs `True`).
+                
+                2. Not Equal To (`!=`):-
+                    Returns `True` if values are different
+                    (e.g., `25 != 20` outputs `True`).
+                
+                3. Greater Than (`>`):-
+                    Returns `True` if left value is bigger
+                    (e.g., `25 > 18` outputs `True`).
+                
+                4. Less Than (`<`):
+                    Returns `True` if left value is smaller
+                    (e.g., `15 < 18` outputs `True`).
+                
+                5. Greater Than or Equal To (`>=`):-
+                    Returns `True` if left value is bigger or equal
+                    (e.g., `18 >= 18` outputs `True`).
+                
+                6. Less Than or Equal To (`<=`):-
+                    Returns `True` if left value is smaller or equal
+                    (e.g., `15 <= 18` outputs `True`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            5. Logical Operators:-
+                
+                1.`and`:-
+                    Returns `True` only if **both** conditions are true
+                    (e.g., `5 > 2 and 10 > 5` outputs `True`).
+                
+                2. `or`:-
+                    Returns `True` if **at least one** condition is true
+                    (e.g., `15 >= 18 or 10 > 5` outputs `True`).
+                
+                3. `not`:-
+                    Reverses the logical state, returning `True` for false conditions and vice versa
+                    (e.g., `not(10 > 20)` outputs `True`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            6. Bitwise Operators:-
+                1. Bitwise AND (`&`):-
+                    Compares bits and sets each bit to `1` only if both corresponding bits are `1`
+                    (e.g., `5 & 3` outputs `1`).
+                
+                2. Bitwise OR (`|`):-
+                    Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
+                    (e.g., `5 | 3` outputs `7`).
+                
+                3. Bitwise NOT (`~`):-
+                    Inverts all bits of a binary number
+                    (e.g., `~5` outputs `-6`).
+                
+                4. Bitwise XOR (`^`):-
+                    Sets each bit to `1` only if one of the corresponding bits is `1`
+                    (e.g., `5 ^ 3` outputs `6`).
+
+                5. Bitwise Left Shift (`<<`):-
+                    Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
+                    (e.g., `5 << 1` outputs `10`).
+                
+                6. Bitwise Right Shift (`>>`):-
+                    Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
+                    (e.g., `5 >> 1` outputs `2`).
+
+            */*-*/*-*/*-*/*-*/*
+
+            7. Membership Operators:-
+                
+                1. `in`:-
+                    Returns `True` if a sequence/item is found inside a given object.
+                    (e.g., `'a' in 'apple'` outputs `True`).
+                
+                2. `not in`:-
+                    Returns `True` if a sequence/item is **not** present inside an object.
+                    (e.g., `10 not in [1, 2, 3]` outputs `True`).
+                
+            */*-*/*-*/*-*/*-*/*
+
+            8. Identity Operators:-
             
-            Example:
-                if age >= 18:
-                print("You are eligible to vote.")
-            
-                Here, the print() statement is indented, which indicates that it belongs to the if block.
-                Important: Incorrect indentation can result in an IndentationError.
+                1. `is`:-
+                        Returns `True` if both variables point to the exact same object in computer memory.
+                        (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
+                2. `is not`:-
+                        Returns `True` if both variables point to different objects in memory.
+                        (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
 
-        */*-*/*-*/*-*/*-*/*
+        # Python Notes:- Input Function
 
-        5. Difference Between Compiler and Interpreter:-
+            1. Overview & Basic Syntax:-
+                Definition:-
+                    The "input()" function pauses program execution, asks the user to enter data from the terminal, and reads it.
+                
+                Basic Syntax:- 
+                    "variable_name = input("Prompt message to user: ")"
+                
+                Default Data Type:-
+                    The `input()` function "always returns user input as a String (`str`)*", 
+                    regardless of whether the user enters numbers, letters, or symbols.
 
-            | Feature         | Compiler                                                                               | Interpreter                                                                                                              |
-            | --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-            | Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
-            | Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
-            | Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
-            | Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
-            | Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
-            | Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
+            */*-*/*-*/*-*/*-*/*
 
-            Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
+            2. Type Casting Input Data"-
+                Since "input()" returns a string by default, you must explicitly convert (typecast) 
+                the input to perform mathematical or logical operations.
 
-        */*-*/*-*/*-*/*-*/*
+                Converting to Integer (`int`):-
+                    Used for whole numbers (e.g., `age = int(input("Enter your age: "))`).
+                
+                Converting to Float (`float`):-
+                    Used for decimal values or prices (e.g., `price = float(input("Enter total price: "))`).
+                
+                Converting to Boolean (`bool`):-
+                    Evaluates non-empty input as `True` and empty input as `False`.
 
-        6. What is OOP (Object-Oriented Programming)?
-            Object-Oriented Programming (OOP) is a programming approach that organizes software around objects and classes.
+            */*-*/*-*/*-*/*-*/*
 
-                An object can contain:
-                    
-                    Attributes → Data or properties
-                    Methods → Functions or actions performed by the object
+            3. Practical Code Examples:-
 
-                OOP helps make programs:
-                    Modular
-                    Reusable
-                    Organized
-                    Maintainable
-                    Scalable
+            Example 1: Basic String Input:-
+                ```python
+                name = input("Enter your name: ")
+                print("Hello, " + name + "!")
 
-        */*-*/*-*/*-*/*-*/*
+        Interview Questions on Day 3,4,5 Topics:-
 
-        6. What is OOP (Object-Oriented Programming)?
-            OOP is a coding method that organizes software around reusable data structures called objects, which contain attributes and actions.
-            It helps keep code modular, organized, and scalable for large applications.
+            1. What is the difference between single division ( / ) and floor division in Python?
+                Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
+                Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
 
-        */*-*/*-*/*-*/*-*/*
+                    मराठीमध्ये:-
+                        साधा भागाकार (/) केल्यावर उत्तर नेहमी पॉइंटमध्ये (Decimal/Float) येते. पण Floor Division (//) (पूर्णांक भागाकार (Integer Quotient)) 
+                        काय करतो, तर पॉइंटच्या नंतरचे सर्व आकडे काढून टाकतो आणि फक्त पॉइंटच्या आधीचा पूर्णांक (Whole Number) उत्तर म्हणून देतो.
 
-        7. Meaning of "Python is a High-Level Language"
-            It means Python code is easy for humans to read and write without managing low-level computer hardware or system memory directly.
+                        ex:-
+                            a = 10
+                            b = 3
+                            print(a / b)   # Output: 3.3333333333333335 (साधा भागाकार)
+                            print(a // b)  # Output: 3 (Floor Division)
 
-        */*-*/*-*/*-*/*-*/*
+            */*-*/*-*/*-*/*-*/*
 
-        8. Explanation of IDE and Examples
-            An IDE (Integrated Development Environment) is a software tool combining an editor, build tools, terminal, and debugger in one window.
-            Examples include Visual Studio Code, PyCharm, and Jupyter Notebook.
-
-        */*-*/*-*/*-*/*-*/*
-
-        9. Applications of Python
-            Python is used for:-
-            1.web development,
-            2.data analysis,
-            3. machine learning,
-            4. automated scripting,
-            5. desktop apps, and
-            6. web scraping.
-
-        */*-*/*-*/*-*/*-*/*
-
-        10. Difference Between High-Level and Low-Level Language:-
-
-        | Feature            | High-Level Language                           | Low-Level Language                              |
-        | ------------------ | --------------------------------------------- | ----------------------------------------------- |
-        | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
-        | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
-        | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
-        | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
-        | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
-        | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
-
-    _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Python Internship Notes: Day 2
-
-        1. Programming Paradigms (Types of Programming):-
-
-            1. Sequential Programming:-
-                Executes code step-by-step from top to bottom using variables, operators, and conditional logic (`if`, `else`).
-            2. Functional Programming:-
-                Structures code using functions, parameters, arguments, and return values to process data cleanly.
-            3. Object-Oriented Programming (OOP):-
-                Organizes code using classes, objects, the 4 pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), along with file handling and exception handling.
-
-        */*-*/*-*/*-*/*-*/*
-
-        2. Python Keywords:-
-
-            Definition:-
-                Reserved words in Python that have fixed meanings and cannot be used as variable names.
-            Checking Keywords:-
-                Use `import keyword` followed by `keyword.kwlist` to print all keywords, or `len(keyword.kwlist)` to get the total count.
-            Verifying Words:-
-                Use `keyword.iskeyword('word')` to check if a specific string is a reserved keyword (returns `True` or `False`).
-
-        */*-*/*-*/*-*/*-*/*
-
-        3. Comments in Python:-
-
-            Definition:-
-                Explanatory notes in your code that Python ignores during execution.
-            Single-Line Comment:-
-                Uses the hash symbol (`#`) to annotate a single line.
-            Multi-Line Comment:-
-                Uses triple single quotes (`'''`) or triple double quotes (`"""`) to write comments spanning multiple lines.
-
-        */*-*/*-*/*-*/*-*/*
+            2. What is the "Modulus Operator ( '%' )" used in Python?
+                The "Modulus Operator ( '%' )" returns the "reminder" left over after dividing two numbers (e.g., 10 % 3 reeturns 1).
+                It is commonly used to check if a number is even or odd (num % 2 == 0).
 
-        4. Variables & Declaration Rules
-
-            Definition:-
-                Dynamically typed containers used to store data without needing to explicitly declare the data type.
-
-
-            Rule 1 (No Starting Numbers):-
-                Names must start with a letter or an underscore, never a number (e.g., `user1`, not `1user`).
-            Rule 2 (No Special Characters):-
-                Only letters, numbers, and underscores (`_`) are allowed; special symbols like `@`, `$`, or `-` are forbidden.
-            Rule 3 (No Keywords):-
-                Reserved keywords like `if`, `def`, or `finally` cannot be used as variable names.
-            Rule 4 (No Spaces):-
-                Variable names cannot contain spaces; use underscores instead (e.g., `user_name`).
-            Rule 5 (Meaningful Names):-
-                Names should clearly describe the data they hold (e.g., `age` instead of `a`).
-
-        */*-*/*-*/*-*/*-*/*
-
-        5. Python Data Types:-
-
-        Primary Data Types
-        String (`str`):-
-            Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
-        Integer (`int`):-
-            Whole numbers without decimals (e.g., `number = 123456789`).
-        Boolean (`bool`):-
-            Logical values representing truth states (`True` or `False`).
-        Complex (`complex`):-
-            Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
-
-        Collection Data Types
-        List:-
-            An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
-        Tuple:-
-            An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
-        Dictionary:-
-            Unordered collection of key-value pairs written in curly braces `{ key: value }`.
-        Set:-
-            An unordered collection of unique elements written in curly braces `{ }`.
-        Frozenset:-
-            An immutable (un-changeable) version of a standard set.
-
-    Interview Questions On Day 2 Topics:-
-
-        1. What are the main Programming Paradigms supported by python?
-            Python support Sequential Programming(Step-By-Step Logic), Funtional Programming (using reausable functions)
-            and Object Oriented Programming(OOP) (structuring code around objects and classes).
-
-        2. What are python keywords and how do you print all the keywords and how do you check total number of keywords using code?
-            Keyword are reserved words in Python with fixed meaning that cannot be used as variables.
-            You can print all the keyword by importing the Keyword ("import keyword") and running ("Print(keyword.kwlist)).
-            You can chech the total count by running ("print(len(keyword.kwlist))").
-
-        3. What are the rules for declaring Variables In Python?
-            variable names must start with a "letter" or "Underscore", it cannot start with a "number", 
-            cannot contain spaces or spacial characters except (Underscore "_") And cannot be a reserves Python "Keyword".
-
-        4. Why is Python called a Dynamically Typed language?
-            Python Automatically determines the data type of a variable at "RUN TIME", 
-            means you dont need to explicitly decalre the data type (like "int" or "String") when assigning a value.
-
-        5. What is the difference between Single-Line And Multi-Line Comments in Python?
-            Single-Line Comments starts with a "Hash Symbol" ("#") for short notes, 
-            While Multi-Line Comments starts with "Triple Single Or Double Quotes" ('''  ''' OR """  """) to comment out across multiple lines.
-
-        6. What is the main difference bet a "List" and a "Tupple"?
-            A "list" (created with [ ]) is "Mutable", meaning its items can be changed or modified after creation.
-            A "Tuple" (created with ()) is "Immutable", meaning its items cannot be changed once created.
-
-        7. How does a "Dictionary" Differ from a "Set" in Python?
-            A dictionary stores data as Key-Value Pairs in curly Braces (e.g., "{"age"=22}"),
-            Whlie a set stores only "Unique, Single Values" in curly braces (e.g., "{1, 2, 3}").
-
-        8. What is a Frozen Set in Python?
-            A Frozenset is simple a immutable ("Un-Changable") version of a standard set.
-            Once created you cannot add or remove elements from it.
-
-        9. What is aComplex Data Type in Python, and how it is Written?
-            A complex Data type represents numbers with "A Real Part" and "An Imaginary Part"
-            In Python it is written Using the letter "j" for the Imaginary Component (e.g., "comp = 2 + 3j").
-
-        10. What is the difference between a Set and a Frozenset?
-            A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
-            A Frozenset is "immutable", meaning its elements are locked and cannot change after creation.
-
-    _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-Python Internship Notes:- Day 3 - Operators:-
-
-    1. Introduction to Operators:-
-
-        Definition:-
-            Symbols used to perform operations on variables and values.
-            (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
-
-    */*-*/*-*/*-*/*-*/*
-
-    2. Arithmetic Operators:-
-        1. Adition (`+`):- 
-            Adds two numbers together 
-            (e.g., `10 + 20` outputs `30`).
-
-        2. Subtraction (`-`):-
-            Subtracts the right number from the left 
-            (e.g., `20 - 10` outputs `10`).
-        
-        3. Multiplication (`*`):-
-            Multiplies two numbers
-            (e.g., `10 * 20` outputs `200`).
-        
-        4. Division (`/`):-
-            Divides numbers and always returns a floating-point number
-            (e.g., `10 / 20` outputs `0.5`).
-        
-        5. Modulus (`%`):-
-            Returns the remainder left over after division
-            (e.g., `10 % 3` outputs `1`).
-        
-        6. Floor Division (`//`):-
-            Divides numbers and chops off decimals to return the lower whole number.
-            (e.g., `10 // 3` outputs `3`).
-        
-        7. Exponentiation (`**`):-
-            Raises the base number to a power.
-            (e.g., `2 ** 3` outputs `8`).
-
-    */*-*/*-*/*-*/*-*/*
-
-    3. Assignment Operators:-
-
-        1. Assign (`=`):-
-            Assigns a value to a variable
-            (e.g., `x = 20`).
-        
-        2. Add and Assign (`+=`):-
-            Adds a value and assigns result
-            (e.g., `x += 10` sets `x` to `30`).
-        
-        3. Subtract and Assign (`-=`):-
-            Subtracts a value and assigns result
-            (e.g., `x -= 5` sets `x` to `15`).
-        
-        4. Multiply and Assign (`*=`):
-            Multiplies by a value and assigns result
-            (e.g., `x *= 2` sets `x` to `40`).
-        
-        5. Divide and Assign (`/=`):-
-            Divides by a value and assigns result
-            (e.g., `x /= 2` sets `x` to `10.0`).
-        
-        6. Floor Divide and Assign (`//=`):-
-            Floor divides and assigns result
-            (e.g., `x //= 3` sets `x` to `6`).
-        
-        7. Modulus and Assign (`%=`):-
-            Takes modulus and assigns result
-            (e.g., `x %= 3` sets `x` to `2`).
-        
-        8. Exponentiate and Assign (`**=`):-
-            Raises to power and assigns result
-            (e.g., `x **= 2` sets `x` to `400`).
-
-    */*-*/*-*/*-*/*-*/*
-
-    4. Comparison (Relational) Operators:-
-
-        1. Equal To (`==`):-
-            Returns `True` if both values are equal
-            (e.g., `20 == 20` outputs `True`).
-        
-        2. Not Equal To (`!=`):-
-            Returns `True` if values are different
-            (e.g., `25 != 20` outputs `True`).
-        
-        3. Greater Than (`>`):-
-            Returns `True` if left value is bigger
-            (e.g., `25 > 18` outputs `True`).
-        
-        4. Less Than (`<`):
-            Returns `True` if left value is smaller
-            (e.g., `15 < 18` outputs `True`).
-        
-        5. Greater Than or Equal To (`>=`):-
-            Returns `True` if left value is bigger or equal
-            (e.g., `18 >= 18` outputs `True`).
-        
-        6. Less Than or Equal To (`<=`):-
-            Returns `True` if left value is smaller or equal
-            (e.g., `15 <= 18` outputs `True`).
-
-    */*-*/*-*/*-*/*-*/*
-
-    5. Logical Operators:-
-        
-        1.`and`:-
-            Returns `True` only if **both** conditions are true
-            (e.g., `5 > 2 and 10 > 5` outputs `True`).
-        
-        2. `or`:-
-            Returns `True` if **at least one** condition is true
-            (e.g., `15 >= 18 or 10 > 5` outputs `True`).
-        
-        3. `not`:-
-            Reverses the logical state, returning `True` for false conditions and vice versa
-            (e.g., `not(10 > 20)` outputs `True`).
-
-    */*-*/*-*/*-*/*-*/*
-
-    6. Bitwise Operators:-
-        1. Bitwise AND (`&`):-
-            Compares bits and sets each bit to `1` only if both corresponding bits are `1`
-            (e.g., `5 & 3` outputs `1`).
-        
-        2. Bitwise OR (`|`):-
-            Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
-            (e.g., `5 | 3` outputs `7`).
-        
-        3. Bitwise NOT (`~`):-
-            Inverts all bits of a binary number
-            (e.g., `~5` outputs `-6`).
-        
-        4. Bitwise XOR (`^`):-
-            Sets each bit to `1` only if one of the corresponding bits is `1`
-            (e.g., `5 ^ 3` outputs `6`).
-
-        5. Bitwise Left Shift (`<<`):-
-            Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
-            (e.g., `5 << 1` outputs `10`).
-        
-        6. Bitwise Right Shift (`>>`):-
-            Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
-            (e.g., `5 >> 1` outputs `2`).
-
-    */*-*/*-*/*-*/*-*/*
-
-    7. Membership Operators:-
-        
-        1. `in`:-
-            Returns `True` if a sequence/item is found inside a given object.
-            (e.g., `'a' in 'apple'` outputs `True`).
-        
-        2. `not in`:-
-            Returns `True` if a sequence/item is **not** present inside an object.
-            (e.g., `10 not in [1, 2, 3]` outputs `True`).
-        
-
-    */*-*/*-*/*-*/*-*/*
-
-    8. Identity Operators:-
-    
-        1. `is`:-
-                Returns `True` if both variables point to the exact same object in computer memory.
-                (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
-        2. `is not`:-
-                Returns `True` if both variables point to different objects in memory.
-                (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
+                    मराठीमध्ये:-
+                        मॉड्युलस ऑपरेटरचा वापर दोन संख्यांचा भागाकार केल्यानंतर शेवटी शिल्लक राहणारी बाकी (Remainder) शोधण्यासाठी होतो.
+
+                        ex:-
+                            a = 10
+                            b = 3
+                            print(a % b)  # Output: 1 (बाकी 1 उरते).
+
+            */*-*/*-*/*-*/*-*/*
+
+            3. What is the difference between the "=" and "==" operators?
+                The "single equals" (=) is an "Assignment Operator" used to "assign a value" to a variable (e.g., x = 10).
+                The "double equals" (==) is a "Comparison Operator" used to check if two "values are equal", returning "True or False".
+
+            */*-*/*-*/*-*/*-*/*
+
+            4. How does the "AND" logical operator work compared to the "OR" operator?
+                The "AND" Opertaor Returns "True" Only if "both" the conditions are "True", Othervise returns "False",
+                The "OR" Operator returns "True" if "at least one" condition is "True". Othervise returns "False".
+
+            */*-*/*-*/*-*/*-*/*
+
+            5. What do the "Membership operators" "in" and "not in" do?
+                They check if a specific value or sequence exists inside a collection (like a string, list, or tuple).
+                "in" returns "True" if the item is "found", while "not in" returns "True" if the item is "absent".
+
+            */*-*/*-*/*-*/*-*/*
+
+            6. What is the difference between the "==" comparison operator and the "is" identity operator?
+                The "==" operator checks if "two variables" hold the "same value".
+                The "is" operator checks if "two variables" point to the exact same memory location (Address).
+
+            */*-*/*-*/*-*/*-*/*
+
+            7. How do "Bitwise Left Shift (<<)" and "Right Shift (>>)" operators affect a number mathematically?
+                Bitwise Left Shift (x << n) multiplies a number by (2^n).
+                Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
+
+            */*-*/*-*/*-*/*-*/*
+
+            8. What are "Compound Assignment Operators" in Python?
+                They combine an arithmetic operation with variable assignment into a shorter expression.
+                (e.g., x += 5 is a shorthand equivalent to x = x + 5).
+
+            */*-*/*-*/*-*/*-*/*
+
+            9. What are "Identity Operators" in Python, and how do "is" and "is not" work?
+                Identity operators "compare" the "memory locations" of "two objects" rather than their "actual values".
+                The is operator returns "True" if both variables refer to the "exact same" object in "memory"(Address),
+                while "is not" returns "True" if they point to "different" memory locations.
+
+            */*-*/*-*/*-*/*-*/*
+
+            10. How does "Bitwise NOT (~)" work on an "integer" in Python?
+                The Bitwise NOT operator (~) inverts all the binary bits of an integer (changing 1s to 0s and vice versa).
+                In Python, due to two's complement representation, "~x" mathematically evaluates to "-(x + 1)" 
+                "(for example, ~5 returns -6)".
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
