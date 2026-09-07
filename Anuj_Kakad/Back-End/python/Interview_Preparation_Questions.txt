@@ -571,3 +571,81 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 "(for example, ~5 returns -6)".
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Internship Day 08:-
+
+Python Notes Day 6:- Data Types:- Primary And Collective Data Types:-
+
+    1 Primary Data Types:-
+        1. Interger ('int'):-
+            Contains Whole numbers without "Decimals".
+            (e.g., `x = 10`).
+        
+        2. Float ('float'):-
+            Contains numbers with "floating Decimal Points".
+            (e.g., `pi = 3.14`).
+
+        3. String (`str`):-
+            Contains Text inside 'Single Quotes' Or "Double Quotes".
+            (e.g., `msg = "Hello" OR msg = 'Hello'`).
+        
+        4. Boolean (`bool`):-
+            Generates Output in the form of "Truth Values" i.e., "True" OR "False".
+            (e.g., `"a=10; b=20; print(a<b)"; Outputs "True"`)
+        
+        5. Complex (`cpmplex`):-
+            Contains Numbers with "Real And Imaginary Part".
+            (e.g., `z = 2+3j`).
+
+    2. Collection Data Type:-
+
+        1. List:-
+            Ordered, mutable sequence of Elements Separated by "Comma (",")" written in square brackets `[]`.
+            OR A list is a built-in collection data type used to store multiple items in a single variable.
+            (e.g., `num = [10, 20, 30, 40, 50]`).
+
+        2. Characteristics:-
+            1. Mutable:-
+                List elements can be changed, replaced, or modified after creation.
+            
+            2. Indexed:-
+                Every element in a list has a defined position number starting from index `0`.
+
+            3. Ordered:-
+                Items maintain a fixed insertion order; new items are added at the end.
+            
+            4. Allows Duplicate:-
+                Lists can hold repeated identical values (e.g., `[1, 2, 2, 3]`).
+
+        3. List Indexing (Positive & Negative)
+            Indexing allows you to access individual elements in a list.
+
+            1. Positive Indexing (`+ve`):-
+                Starts from `0` at the leftmost item and moves rightward.
+
+            2. Negative Indexing (`-ve`):-
+                Starts from `-1` at the rightmost item and moves leftward.
+            
+            "my_list = [1, 2, 10, 4, 5]"
+
+            Positive Index (`+ve`):-   | `0` | `1` |  `2` | `3` | `4` |
+            Value:-                    | `1` | `2` | `10` | `4` | `5` |
+            Negative Index (`-ve`):-   | `-5`|`-4` | `-3` |`-2` |`-1` |
+
+            numbers = [1, 2, 10, 4, 5]
+
+            # Accessing elements:-
+
+            print(numbers[2])   # Output: 10 (Positive indexing)
+            print(numbers[-3])  # Output: 10 (Negative indexing)     
+
+        4. Built-in List Functions:-
+            Built-in Python functions accept a list as an argument to perform general calculations.
+
+            1. len(list):-
+                Returns the total number of items in a list.
+                (e.g., len([1, 2, 3]) outputs 3).
+
+            2. max(list):-
+                Returns the item with the highest value.
+                (e.g., max([1, 10, 5]) outputs 10).
