@@ -1,0 +1,213 @@
+# List
+
+##  Definition 
+A ** List is comma-separated elements enclosed within square brackets [].
+
+B **List in Python is a mutable, ordered, and indexed collection that allows duplicate values.**
+Definition 2
+
+c **List is used to store multiple values in a single variable.**
+
+### List Properties
+
+* **Mutable** → List elements can be changed.
+* **Ordered** → Elements have a specific order.
+* **Indexed** → Every element has an index number.
+* **Duplicates Allowed** → The same value can appear multiple times.
+
+### Example
+
+
+fruits = ["Apple", "Mango", "Banana", "Mango"]
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango', 'Banana', 'Mango']
+
+
+### Example
+
+fruits = ["Apple", "Mango", "Banana"]
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango', 'Banana']
+
+
+# 📚 Python List Methods
+
+## 1. Changing an Element
+
+* Used to change an existing element in a list.
+
+
+fruits = ["Apple", "Mango", "Banana"]
+
+fruits[1] = "Orange"
+
+print(fruits)
+
+### Output
+
+['Apple', 'Orange', 'Banana']
+
+## 2. `append()`
+
+* Used to add one element at the end of a list.
+
+fruits = ["Apple", "Mango"]
+
+fruits.append("Banana")
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango', 'Banana']
+
+## 3. `insert()`
+
+* Used to add an element at a specific position.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+fruits.insert(2, "Orange")
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango', 'Orange', 'Banana']
+
+
+## 4. `remove()`
+
+* Used to remove a specific value from a list.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+fruits.remove("Banana")
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango']
+
+## 5. `pop()`
+
+* Used to remove an element using its index.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+fruits.pop(0)
+
+print(fruits)
+
+### Output
+
+['Mango', 'Banana']
+
+
+## 6. `del`
+
+* Used to delete an element or the entire list.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+del fruits[1]
+
+print(fruits)
+
+### Output
+
+
+['Apple', 'Banana']
+
+## 7. `extend()`
+
+* Used to add multiple elements to a list.
+
+fruits = ["Apple", "Mango"]
+
+fruits.extend(["Grape", "Banana", "Pineapple"])
+
+print(fruits)
+
+### Output
+
+['Apple', 'Mango', 'Grape', 'Banana', 'Pineapple']
+
+## 8. `sort()`
+
+* Used to arrange list elements in ascending or descending order.
+
+
+fruits = ["Mango", "Apple", "Banana"]
+
+fruits.sort()
+
+print(fruits)
+
+### Output
+
+['Apple', 'Banana', 'Mango']
+
+## 9. `reverse()`
+
+* Used to reverse the order of elements in a list.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+fruits.reverse()
+
+print(fruits)
+
+### Output
+
+['Banana', 'Mango', 'Apple']
+
+## 10. `count()`
+
+* Used to count how many times a specific element appears in a list.
+
+fruits = ["Apple", "Mango", "Banana", "Mango"]
+
+print(fruits.count("Mango"))
+
+### Output
+
+2
+
+## 11. `copy()`
+
+* Used to create a copy of a list.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+new_fruits = fruits.copy()
+
+print(new_fruits)
+
+### Output
+
+['Apple', 'Mango', 'Banana']
+
+# 🔥 Quick Summary
+
+| Method      | Use                                    |
+| ----------- | -------------------------------------- |
+| `append()`  | Adds one element at the end            |
+| `insert()`  | Adds an element at a specific position |
+| `remove()`  | Removes a specific value               |
+| `pop()`     | Removes an element using its index     |
+| `del`       | Deletes an element or the entire list  |
+| `extend()`  | Adds multiple elements                 |
+| `sort()`    | Arranges elements in order             |
+| `reverse()` | Reverses the list                      |
+| `count()`   | Counts a specific element              |
+| `copy()`    | Creates a copy of the list             |
