@@ -1,0 +1,140 @@
+
+# Python Interview Questions
+
+1. What is Python?
+Python is a high-level, interpreted, general-purpose programming language. It is easy to learn and widely used in web development, data science, AI, automation, etc.
+
+
+2. What are the features of Python?
+
+Easy to learn
+
+Interpreted language
+
+Object-oriented
+
+Dynamically typed
+
+Open source
+
+Large number of libraries
+
+
+
+3. What is a variable in Python?
+A variable is a name used to store a value.
+
+name = "Abhishek"
+age = 23
+
+
+4. What are Python data types?
+
+int
+
+float
+str
+
+bool
+
+list
+
+tuple
+
+set
+
+dict
+
+
+
+5. Difference between List and Tuple?
+
+List	Tuple
+
+Mutable	Immutable
+Uses []	Uses ()
+Can be changed	Cannot be changed
+
+
+
+6. What is a function?
+A function is a reusable block of code.
+
+def add(a, b):
+    return a + b
+
+
+7. What is OOP?
+OOP means Object-Oriented Programming. It is based on concepts such as class, object, inheritance, polymorphism, encapsulation and abstraction.
+
+
+8. What is a class?
+A class is a blueprint for creating objects.
+
+class Student:
+    name = "Abhishek"
+
+
+9. What is an object?
+An object is an instance of a class.
+
+
+10. What is inheritance?
+Inheritance allows one class to use the properties and methods of another class.
+
+
+11. What is __init__()?
+__init__() is a constructor method that is automatically called when an object is created.
+
+
+12. What is the difference between == and is?
+
+== checks whether values are equal.
+
+is checks whether two references point to the same object.
+
+
+
+13. What is exception handling?
+It is used to handle errors without stopping the entire program.
+
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+
+14. What is a dictionary?
+A dictionary stores data in key-value pairs.
+
+student = {"name": "Abhishek", "age": 23}
+
+
+15. What is a loop?
+A loop is used to execute a block of code repeatedly. Python mainly provides for and while loops.
+
+
+
+# Frequently asked coding questions
+
+Reverse a string
+
+Check whether a number is prime
+
+Find factorial of a number
+
+Check palindrome
+
+Find largest number in a list
+
+Count vowels in a string
+
+Remove duplicates from a list
+
+Print Fibonacci series
+
+Swap two numbers
+
+Find even and odd numbers
+
+
