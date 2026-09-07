@@ -649,3 +649,68 @@ Python Notes Day 6:- Data Types:- Primary And Collective Data Types:-
             2. max(list):-
                 Returns the item with the highest value.
                 (e.g., max([1, 10, 5]) outputs 10).
+
+            3. min(list):-
+                Returns the item with the lowest value.
+                (e.g., min([1, 10, 5]) outputs 1).
+
+            4. sum(list):-
+                Calculates and returns the total sum of all numeric elements.
+                (e.g., sum([1, 2, 3]) outputs 6).
+
+            5. type(list):-
+                Confirms the object class.
+                (e.g., type([1, 2]) outputs <class 'list'>).
+
+        5. Essential List Methods:-
+            Methods are called directly on a list object using dot notation (list.method()) to modify or inspect it.
+
+            Adding Elements:-
+                1. append(element):-
+                    Adds a single item to the very end of the list.
+
+                2. insert(index, element):-
+                    Inserts an item at a specific index position.
+                
+                3. extend(iterable):-
+                    Appends all elements from another list/iterable to the current list.
+
+            Removing Elements:-
+                1. pop(index):-
+                    Removes and returns the item at a specific index (defaults to the last item if no index is given).
+
+                2. remove(value):-
+                    Removes the first occurrence of a specified value from the list.
+
+                3. clear():-
+                    Removes all items, leaving an empty list [].
+
+            Sorting & Utility:-
+                1. sort():-
+                    Sorts list items in ascending order permanently in place.
+
+                2. reverse():-
+                    Reverses the current order of elements in place.
+
+                3. count(value):-
+                    Returns the number of times a specific value appears in the list.
+
+                4. index(value):-
+                    Returns the position index of the first occurrence of a value.
+
+        6. Practical Code Examples:-
+
+            # Creating a list
+            fruits = ["apple", "banana", "cherry"]
+
+            # 1. Modifying elements (Mutability)
+            fruits[1] = "blueberry"  # Changes "banana" to "blueberry"
+
+            # 2. Using methods
+            fruits.append("orange")      # ["apple", "blueberry", "cherry", "orange"]
+            fruits.insert(1, "mango")    # ["apple", "mango", "blueberry", "cherry", "orange"]
+            fruits.remove("cherry")      # Removes "cherry"
+
+            # 3. Using functions
+            print("Total fruits:", len(fruits))
+            print("Final list:", fruits)
