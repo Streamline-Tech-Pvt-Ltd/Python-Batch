@@ -630,7 +630,7 @@ Python Notes Day 6:- Data Types:- Primary And Collective Data Types:-
 
             Positive Index (`+ve`):-   | `0` | `1` |  `2` | `3` | `4` |
             Value:-                    | `1` | `2` | `10` | `4` | `5` |
-            Negative Index (`-ve`):-   | `-5`|`-4` | `-3` |`-2` |`-1` |
+            Negative Index (`-ve`):-   |`-5` |`-4` | `-3` |`-2` |`-1` |
 
             numbers = [1, 2, 10, 4, 5]
 
