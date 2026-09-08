@@ -24,10 +24,12 @@ print(num)
 num.pop(4)  # Removes an element at a specific index
 print(num)
 
-# num.clear()  # Removes all elements from the list
-# print(num)
+num.clear()  # Removes all elements from the list
+print(num)
 
 # Sorting & Utility Functions:-
+
+num = [10, 50, 30, 40, 20, 70]
 
 num.sort()  # Sorts the list in ascending order
 print(num)
@@ -35,8 +37,30 @@ print(num)
 num.reverse()  # Reverses the order of elements in the list
 print(num)
 
-num.count(70)  # Counts the occurrences of a value in the list
+print(num.count(70))  # Counts the occurrences of a value in the list
+
+print(num.index(50))  # Returns the index of the first occurrence of a value
+
+num.sort(reverse=True)
 print(num)
 
-num.index(50)  # Returns the index of the first occurrence of a value
-print(num)
+num1 = num.copy()  # Creates a shallow copy of the list
+print(num1)
+
+print()
+
+print("Indexing And Slicing in Python:-")
+list = ["apple", "banana", "cherry", "date", 30, 40, 50, 60, 70]
+
+
+print(list[0])
+print(list[3][2])
+print(list[-1])
+print(list[1][4])
+print(list[2:6])
+print(list[0:9:2])
+print(list[::3])
+print(list[-5:-1])
+print(list[:-1])
+print(list[::-1])
+print(list[-7][-4])
