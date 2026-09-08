@@ -347,3 +347,320 @@ print("Addition:", a + b)
 print("Subtraction:", a - b)
 print("Multiplication:", a * b)
 print("Division:", a / b)
+
+
+Python List
+
+A List in Python is a collection of multiple values stored in a single variable.
+
+Features of List
+
+- Ordered
+- Mutable (Changeable)
+- Allows duplicate values
+- Can store different data types
+- Supports indexing and slicing
+
+Syntax
+
+my_list = [10, 20, 30, 40]
+
+Example
+
+student = ["Shivu", 21, "BE IT", 85.5]
+
+print(student)
+
+Output:
+
+['Shivu', 21, 'BE IT', 85.5]
+
+---
+
+List Indexing
+
+Indexing means accessing a particular element from a list using its position.
+
+Python indexing starts from 0.
+
+fruits = ["Apple", "Mango", "Banana", "Orange"]
+
+Element| Index
+Apple| 0
+Mango| 1
+Banana| 2
+Orange| 3
+
+Example
+
+print(fruits[0])
+print(fruits[2])
+
+Output:
+
+Apple
+Banana
+
+Negative Indexing
+
+Negative indexing starts from the last element.
+
+Element| Negative Index
+Apple| -4
+Mango| -3
+Banana| -2
+Orange| -1
+
+Example
+
+print(fruits[-1])
+
+Output:
+
+Orange
+
+---
+
+List Slicing
+
+Slicing means extracting a part of a list.
+
+Syntax
+
+list[start:stop]
+
+«The "stop" index is not included.»
+
+Example
+
+fruits = ["Apple", "Mango", "Banana", "Orange", "Grapes"]
+
+print(fruits[1:4])
+
+Output:
+
+['Mango', 'Banana', 'Orange']
+
+More Examples
+
+print(fruits[:3])
+
+Output:
+
+['Apple', 'Mango', 'Banana']
+
+print(fruits[2:])
+
+Output:
+
+['Banana', 'Orange', 'Grapes']
+
+print(fruits[:])
+
+Output:
+
+['Apple', 'Mango', 'Banana', 'Orange', 'Grapes']
+
+Step Slicing
+
+Syntax
+
+list[start:stop:step]
+
+Example
+
+print(fruits[0:5:2])
+
+Output:
+
+['Apple', 'Banana', 'Grapes']
+
+---
+
+List Methods
+
+List methods are built-in methods used to perform different operations on a list.
+
+1. append()
+
+Adds an element at the end of the list.
+
+fruits.append("Kiwi")
+
+print(fruits)
+
+---
+
+2. insert()
+
+Adds an element at a specific index.
+
+Syntax
+
+list.insert(index, value)
+
+Example
+
+fruits.insert(1, "Pineapple")
+
+print(fruits)
+
+---
+
+3. remove()
+
+Removes a specific value from the list.
+
+fruits.remove("Banana")
+
+print(fruits)
+
+---
+
+4. pop()
+
+Removes an element using its index.
+
+fruits.pop(2)
+
+print(fruits)
+
+If no index is given, it removes the last element.
+
+fruits.pop()
+
+---
+
+5. clear()
+
+Removes all elements from the list.
+
+fruits.clear()
+
+print(fruits)
+
+Output:
+
+[]
+
+---
+
+6. index()
+
+Returns the index of a specific value.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+print(fruits.index("Mango"))
+
+Output:
+
+1
+
+---
+
+7. count()
+
+Returns the number of times a value occurs.
+
+numbers = [10, 20, 10, 30, 10]
+
+print(numbers.count(10))
+
+Output:
+
+3
+
+---
+
+8. sort()
+
+Sorts the list in ascending order.
+
+numbers = [40, 10, 30, 20]
+
+numbers.sort()
+
+print(numbers)
+
+Output:
+
+[10, 20, 30, 40]
+
+---
+
+9. reverse()
+
+Reverses the order of elements.
+
+numbers.reverse()
+
+print(numbers)
+
+---
+
+10. copy()
+
+Creates a copy of the list.
+
+new_list = numbers.copy()
+
+print(new_list)
+
+---
+
+11. extend()
+
+Adds elements from another list.
+
+a = [1, 2]
+b = [3, 4]
+
+a.extend(b)
+
+print(a)
+
+Output:
+
+[1, 2, 3, 4]
+
+---
+
+Important List Methods
+
+Method| Description
+"append()"| Adds element at the end
+"insert()"| Adds element at specific index
+"remove()"| Removes a specific value
+"pop()"| Removes element by index
+"clear()"| Removes all elements
+"index()"| Returns index of a value
+"count()"| Counts occurrences
+"sort()"| Sorts the list
+"reverse()"| Reverses the list
+"copy()"| Creates a copy
+"extend()"| Adds another list
+
+---
+
+Quick Example
+
+fruits = ["Apple", "Mango", "Banana", "Orange"]
+
+# Indexing
+print(fruits[0])
+
+# Slicing
+print(fruits[1:3])
+
+# Add element
+fruits.append("Grapes")
+
+# Remove element
+fruits.remove("Banana")
+
+# Reverse
+fruits.reverse()
+
+print(fruits)
+
