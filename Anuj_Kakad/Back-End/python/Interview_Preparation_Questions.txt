@@ -669,7 +669,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     Contains Numbers with "Real And Imaginary Part".
                     (e.g., `z = 2+3j`).
 
-            2. Collection Data Type:-Python Internship Notes: Day 7:-
+            2. Collection Data Type:-Python Internship Notes: Day 7(8/9/26):-
 
                 1. List:-
                     Ordered, mutable sequence of Elements Separated by "Comma (",")" written in square brackets `[]`.
