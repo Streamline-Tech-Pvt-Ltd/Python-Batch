@@ -787,5 +787,4 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     print("Total fruits:", len(fruits))
                     print("Final list:", fruits)
 
-        
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
