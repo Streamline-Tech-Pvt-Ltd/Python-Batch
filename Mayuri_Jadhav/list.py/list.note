@@ -197,6 +197,13 @@ print(new_fruits)
 
 ['Apple', 'Mango', 'Banana']
 
+#index
+* used to searching element index
+numbers = [10, 20, 30]
+
+print(numbers.index(20))
+
+
 # 🔥 Quick Summary
 
 | Method      | Use                                    |
@@ -211,3 +218,318 @@ print(new_fruits)
 | `reverse()` | Reverses the list                      |
 | `count()`   | Counts a specific element              |
 | `copy()`    | Creates a copy of the list             |
+  index          searching element index
+
+
+  # Python Indexing and Slicing
+
+## 1. Indexing
+
+Indexing is used to access a single element from a list, string, tuple, or other sequence using its position.
+
+### Syntax
+
+sequence[index]
+
+## Types of Indexing
+
+### 1. Positive Indexing
+
+Positive indexing starts from `0` and moves from left to right.
+
+Index:     0   1   2   3   4
+Value:    10  20  30  40  50
+
+
+### Example
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[0])
+print(numbers[2])
+print(numbers[4])
+
+
+### Output
+
+10
+30
+50
+
+
+### 2. Negative Indexing
+
+Negative indexing starts from `-1` and moves from right to left.
+
+Positive Index:   0   1   2   3   4
+Value:           10  20  30  40  50
+Negative Index:  -5  -4  -3  -2  -1
+
+
+### Example
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[-1])
+print(numbers[-2])
+print(numbers[-5])
+
+
+### Output
+
+50
+40
+10
+
+
+### 3. Nested Indexing
+
+Nested indexing is used to access an element inside another sequence.
+
+### Example
+
+data = [10, 20, "Mayuri", 40]
+
+print(data[2])
+print(data[2][0])
+print(data[2][3])
+```
+
+### Output
+
+Mayuri
+M
+u
+
+
+### Explanation
+
+data[2]
+Output:
+
+Mayuri
+
+data[2][0]
+
+Output:
+
+M
+
+
+### 4. Nested List Indexing
+
+data = [10, [20, 30, 40], 50]
+
+print(data[1])
+print(data[1][0])
+print(data[1][2])
+
+
+### Output
+
+[20, 30, 40]
+20
+40
+
+
+# 2. Slicing
+
+Slicing is used to access multiple elements from a sequence by specifying a range.
+
+## Syntax
+
+sequence[start : stop : step]
+
+
+* `start` → Starting index
+* `stop` → Ending index (not included)
+* `step` → Number of positions to move
+
+## Types of Slicing
+
+### 1. Basic Slicing
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+
+### Output
+
+[20, 30, 40]
+
+
+### 2. Start Index Omitted
+
+When the start index is omitted, slicing starts from the beginning.
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[:3])
+
+### Output
+
+[10, 20, 30]
+
+### 3. Stop Index Omitted
+
+When the stop index is omitted, slicing continues until the end.
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2:])
+
+
+### Output
+
+[30, 40, 50]
+
+
+### 4. Both Start and Stop Omitted
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[:])
+
+### Output
+
+[10, 20, 30, 40, 50]
+
+### 5. Step Slicing
+
+The `step` determines how many positions to move.
+
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[0:6:2])
+
+### Output
+
+[10, 30, 50]
+
+
+### 6. Every Second Element
+
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[::2])
+
+
+### Output
+
+[10, 30, 50]
+
+
+### 7. Every Third Element
+
+numbers = [10, 20, 30, 40, 50, 60, 70]
+
+print(numbers[::3])
+
+
+### Output
+
+[10, 40, 70]
+
+### 8. Negative Slicing
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[-4:-1])
+
+
+## Output
+
+[20, 30, 40]
+
+
+### 9. Reverse a List Using Slicing
+
+
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[::-1])
+
+### Output
+
+[50, 40, 30, 20, 10]
+
+
+### 10. Reverse Slicing with Step
+
+
+numbers = [10, 20, 30, 40, 50, 60]
+
+print(numbers[5:1:-1])
+
+### Output
+
+[60, 50, 40, 30]
+
+
+# Indexing vs Slicing
+
+| Feature | Indexing                | Slicing                  |
+| ------- | ----------------------- | ------------------------ |
+| Purpose | Access a single element | Access multiple elements |
+| Syntax  | `list[index]`           | `list[start:stop:step]`  |
+| Result  | Single value            | Multiple values          |
+| Example | `numbers[2]`            | `numbers[1:4]`           |
+
+
+
+# Complete Example
+
+
+numbers = [10, 20, 30, 40, "Mayuri", 50, 60]
+
+# Positive Indexing
+print(numbers[0])
+
+# Negative Indexing
+print(numbers[-1])
+
+# Nested Indexing
+print(numbers[4][0])
+
+# Basic Slicing
+print(numbers[1:4])
+
+# From Beginning
+print(numbers[:3])
+
+# Until End
+print(numbers[3:])
+
+# Step Slicing
+print(numbers[::2])
+
+# Reverse
+print(numbers[::-1])
+
+## Output
+
+10
+60
+M
+[20, 30, 40]
+[10, 20, 30]
+[40, 'Mayuri', 50, 60]
+[10, 30, 'Mayuri', 60]
+[60, 50, 'Mayuri', 40, 30, 20, 10]
+
+
+
+# Quick Memory Trick
+
+
+Indexing → Access one element
+Slicing  → Access multiple elements
+
+[0]       → First element
+[-1]      → Last element
+[1:4]     → Elements from index 1 to 3
+[:3]      → From beginning to index 2
+[2:]      → From index 2 to the end
+[::2]     → Every second element
+[::-1]    → Reverse the sequence
+```
