@@ -49,7 +49,7 @@ print(num1)
 
 print()
 
-print("Indexing And Slicing in Python:-")
+print("Indexing And Slicing of Lists in Python:-")
 list = ["apple", "banana", "cherry", "date", 30, 40, 50, 60, 70]
 
 
@@ -64,3 +64,16 @@ print(list[-5:-1])
 print(list[:-1])
 print(list[::-1])
 print(list[-7][-4])
+
+print()
+print("Indexing And Slicing of Strings in Python:-")
+str = "india is my country"
+
+print(str[1:8])
+print(str[2:12:2])
+print(str[::])
+print(str[::-1])
+print(str[-1])
+print(str[:-1])
+print(str[9][-1])
+print(str[12])
