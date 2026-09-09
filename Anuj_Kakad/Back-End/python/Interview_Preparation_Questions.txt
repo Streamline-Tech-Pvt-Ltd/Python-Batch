@@ -572,9 +572,9 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 08:-
+    Internship Day 08, 09 & 10:-
 
-        Python Notes Day 6:- Data Types:- Primary And Collective Data Types:-
+        Python Notes Day 6, 7 & 8:- Data Types:- Primary And Collective Data Types:-
 
             1 Primary Data Types:-
                 1. Interger ('int'):-
@@ -588,6 +588,78 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 3. String (`str`):-
                     Contains Text inside 'Single Quotes' Or "Double Quotes".
                     (e.g., `msg = "Hello" OR msg = 'Hello'`).
+
+                    Python Internship Notes: Day 8 (9/9/26):- Strings & String Methods
+
+                        1. Introduction to Strings:-
+                            A string is an immutable sequence of characters used to store text data.
+                        
+                            Immutable:-
+                                Once created, string values cannot be changed or modified directly in memory.
+                            
+                            Syntax:-
+                                Written inside single quotes ('...') or double quotes ("...").
+
+                        ---
+
+                        2. String Methods & Explanations
+
+                            1. capitalize():-
+                                Converts the very first character of the string to uppercase and the rest to lowercase.
+                                Example: "india is my country".capitalize() outputs "India is my country".
+
+                            2. casefold():-
+                                Converts all characters in the string to lowercase (more aggressive than .lower() for unicode matching).
+                                Example: "INDIA IS MY COUNTRY".casefold() outputs "india is my country".
+
+                            3. index(value):-
+                                Returns the index of the first occurrence of a substring. Raises a ValueError if not found.
+                                Example: "india is my country".index("my") outputs 9.
+
+                            4. find(value):-
+                                Returns the index of the first occurrence of a substring. Returns -1 if the value is not found (does not throw an error).
+                                Example: "india is my country".find("My") outputs -1.
+
+                            5. isalpha():-
+                                Returns True if all characters in the string are letters. Returns False if spaces, numbers, or symbols exist.
+                                Example: "Sakshi".isalpha() returns True, but "Sakshi123" or " Sakshi" returns False.
+
+                            6. isalnum():-
+                                Returns True if all characters are alphanumeric (only letters and/or numbers). Returns False for spaces or special symbols like @.
+                                Example: "123abc".isalnum() returns True, but "abc@" or "abc " returns False.
+
+                            7. center(width, fillchar):-
+                                Center-aligns the string within a specified total width, padding the sides with a fill character.
+                                Example: "StreamlineTech".center(22, "*") outputs "****StreamlineTech****".
+
+                            8. zfill(width):-
+                                Pads the string on the left with zeros ('0') until it reaches the specified total width.
+                                Example: "StreamlineTech".zfill(20) outputs "000000StreamlineTech".
+
+                            9. count(value):-
+                                Counts how many times a specified substring appears in the string (case-sensitive).
+                                Example: "StreamlineTech".count("e") outputs 3.
+
+                            10. startswith(prefix):-
+                                Returns True if the string starts with the exact specified substring.
+                                Example: "india is my country".startswith("india") returns True.
+
+                            11. endswith(suffix):-
+                                Returns True if the string ends with the exact specified substring.
+                                Example: "StreamlineTech".endswith("Tech") returns True, but endswith("TecH") returns False.
+
+                        ---
+
+                            3. String Indexing & Slicing Examples
+
+                            Given: str = "india is my country"
+
+                            * str[1:8] -> Slices from index 1 to 7: outputs "ndia is"
+                            * str[2:15:2] -> Slices from index 2 to 14, stepping by 2: outputs "dasi yc"
+                            * str[::] -> Copies the entire string: outputs "india is my country"
+                            * str[::-1] -> Reverses the entire string: outputs "yrtnuoc ym si aidni"
+                            * str[-1] -> Gets the last character: outputs "y"
+                            * str[:-1] -> Slices from start up to (but excluding) the last character: outputs "india is my countr"
                 
                 4. Boolean (`bool`):-
                     Generates Output in the form of "Truth Values" i.e., "True" OR "False".
@@ -597,7 +669,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     Contains Numbers with "Real And Imaginary Part".
                     (e.g., `z = 2+3j`).
 
-            2. Collection Data Type:-
+            2. Collection Data Type:-Python Internship Notes: Day 7:-
 
                 1. List:-
                     Ordered, mutable sequence of Elements Separated by "Comma (",")" written in square brackets `[]`.
