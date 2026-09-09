@@ -1,3 +1,5 @@
+print("List Methods in Python:-")
+
 num = [10, 50, 30, 40, 20, 70]
 
 print(len(num))
@@ -46,6 +48,8 @@ print(num)
 
 num1 = num.copy()  # Creates a shallow copy of the list
 print(num1)
+
+
 
 print()
 print("String Methods in Python:-")
@@ -121,7 +125,6 @@ print(str.startswith("anuj"))
 
 str = "anuj kakad"
 print(str.endswith("kakad"))
-
 
 
 print()
