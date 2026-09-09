@@ -1,0 +1,326 @@
+1. What is JavaScript?
+Answer:
+JavaScript is a high-level, dynamically typed programming language used to make web pages interactive and dynamic.
+Example:
+let name = "Pallavi";
+console.log("Hello " + name);
+
+2. Why is JavaScript used?
+Answer:
+JavaScript is used to:
+Make web pages interactive
+Handle user actions like clicks and typing
+Validate forms
+Manipulate HTML and CSS
+Create animations
+Communicate with servers using APIs
+Build web applications
+
+Example:
+document.getElementById("btn").onclick = function() {
+    alert("Button clicked!");
+};
+
+
+3. What are the features of JavaScript?
+Answer:
+Important features of JavaScript are:
+Easy to learn
+Dynamically typed
+Object-based
+Interpreted/JIT-compiled by modern engines
+Event-driven
+Supports asynchronous programming
+Platform independent
+Can run in browsers and on servers using environments like Node.js
+Supports functions and higher-order functions
+Supports DOM manipulation
+
+
+4. What is the difference between Java and JavaScript?
+| Java                                              | JavaScript                                                      |
+| ------------------------------------------------- | --------------------------------------------------------------- |
+| Programming language                              | Programming language                                            |
+| Statically typed                                  | Dynamically typed                                               |
+| Runs mainly on JVM                                | Runs in browsers and environments like Node.js                  |
+| Commonly used for backend/enterprise applications | Commonly used for web interactivity and full-stack applications |
+| Syntax and execution model are different          | Syntax and execution model are different                        |
+
+
+5. How do you include JavaScript in an HTML file?
+There are 3 common ways:
+1. Inline JavaScript
+<button onclick="alert('Hello')">Click</button>
+2. Internal JavaScript
+<script>
+    console.log("Hello");
+</script>
+3. External JavaScript
+<script src="script.js"></script>
+
+7. Is JavaScript compiled or interpreted?
+Best fresher interview answer:
+"Traditionally, JavaScript is described as an interpreted language. However, modern JavaScript engines use JIT (Just-In-Time) compilation to improve performance."
+Simple explanation:
+JavaScript engines such as Chrome's V8 execute JavaScript using techniques including JIT compilation.
+Important: Don't simply say "JavaScript is only interpreted" because modern engines optimize and compile code.
+
+
+8. What is ECMAScript?
+Answer:
+ECMAScript is the standard/specification that defines the rules and features of JavaScript.
+JavaScript is an implementation of the ECMAScript specification.
+Example:
+ES6 (ECMAScript 2015) introduced features such as:
+let
+const
+arrow functions
+classes
+template literals
+
+9. What is a variable?
+Answer:
+A variable is a named storage location used to store a value.
+Example:
+let age = 20;
+
+11. What is the difference between var, let, and const?
+| Feature                 | `var`          | `let`  | `const` |
+| ----------------------- | -------------- | ------ | ------- |
+| Reassign                | ✅ Yes        | ✅ Yes  | ❌ No  |
+| Redeclare in same scope | ✅ Yes         | ❌ No   | ❌ No |
+| Scope                   | Function       | Block  | Block   |
+| Modern usage            | Less preferred | Common | Common  |
+
+let age = 20;
+age = 21;       // ✅
+
+const pi = 3.14;
+pi = 3.15;      // ❌ Error
+
+
+12. Can we redeclare a let variable?
+Answer:
+No. A let variable cannot be redeclared in the same scope.
+let age = 20;
+let age = 21;   // ❌ Error
+
+But it can be reassigned:
+let age = 20;
+age = 21;       // ✅
+
+
+13. Can we reassign a const variable?
+Answer:
+No. A const variable cannot be reassigned after initialization.
+
+const age = 20;
+age = 21;       // ❌ Error
+
+Important interview point:
+const prevents reassignment of the binding. It does not make objects or arrays completely immutable.
+
+14. What is scope?
+Answer:
+Scope defines where a variable can be accessed in a program.
+Main types:
+Global scope
+Function scope
+Block scope
+
+Example:
+let name = "Pallavi";
+
+function test() {
+    console.log(name);
+}
+
+Here name can be accessed inside the function because it is in an outer/global scope.
+
+15. What is block scope?
+Answer:
+Block scope means a variable is accessible only inside the block { } where it is declared.
+let and const are block-scoped.
+
+if (true) {
+    let age = 20;
+    console.log(age); // ✅
+}
+console.log(age);    // ❌ Erro
+
+16. What is function scope?
+Answer:
+Function scope means a variable declared with var inside a function can be accessed within that function, but not outside it.
+function test() {
+    var age = 20;
+    console.log(age); // ✅
+}
+
+console.log(age);    // ❌
+
+
+3. Data Types
+17. What are the data types in JavaScript?
+JavaScript has 8 main data types:
+
+| Data Type | Example             |
+| --------- | ------------------- |
+| String    | `"Pallavi"`         |
+| Number    | `20`                |
+| BigInt    | `123456789n`        |
+| Boolean   | `true`              |
+| Undefined | `let x;`            |
+| Null      | `null`              |
+| Symbol    | `Symbol("id")`      |
+| Object    | `{name: "Pallavi"}` |
+
+
+
+18. What are primitive data types?
+Answer:
+Primitive data types represent single values and are not objects.
+
+The 7 primitive types are:
+String
+Number
+BigInt
+Boolean
+Undefined
+Null
+Symbol
+
+ Data Type     | Definition                      | Example             |
+| ------------- | ------------------------------- | ------------------- |
+| **String**    | Stores text                     | `"Pallavi"`         |
+| **Number**    | Stores numbers                  | `20`                |
+| **BigInt**    | Stores very large integers      | `12345n`            |
+| **Boolean**   | Stores true/false               | `true`              |
+| **Undefined** | Declared but no value           | `let x;`            |
+| **Null**      | Intentional empty value         | `let x = null`      |
+| **Symbol**    | Creates unique values           | `Symbol("id")`      |
+| **Object**    | Stores multiple key-value pairs | `{name: "Pallavi"}` |
+
+Arrays and functions are also objects in JavaScript.
+
+28. What is the difference between null and undefined?
+| `null`                       | `undefined`                 |
+| ---------------------------- | --------------------------- |
+| Intentional absence of value | Value has not been assigned |
+| Assigned explicitly          | Often occurs automatically  |
+| `let x = null;`              | `let x;`                    |
+
+29. What is NaN?
+Answer:
+NaN means Not-a-Number.
+It represents an invalid or unsuccessful numeric result.
+let result = "hello" / 2;
+console.log(result);
+Output:
+NaN
+Interesting point:
+typeof NaN
+Output:
+"number"
+
+30. What is the use of typeof?
+Answer:
+typeof is an operator used to determine the type of a value.
+let age = 20;
+console.log(typeof age);
+
+31. Why does typeof null return "object"?
+Answer:
+This is a historical behavior/legacy bug in JavaScript.
+typeof null
+Output:
+"object"
+Although null is actually a primitive value, typeof returns "object" for historical compatibility.
+
+32.operators in JS
+Operators 
+
+| Operator Type             | Definition                                        | Operators                 | Example                         |
+| ------------------------- | ------------------------------------------------- | ------------------------- | ------------------------------- |
+| **Arithmetic**            | Performs mathematical operations                  | `+ - * / % **`            | `10 + 5`                        |
+| **Assignment**            | Assigns or updates a value                        | `= += -= *= /= %=`        | `x = 10`                        |
+| **Comparison**            | Compares two values                               | `== === != !== > < >= <=` | `10 > 5`                        |
+| **Logical**               | Combines or reverses conditions                   | `&& \|\| !`               | `age > 18 && age < 30`          |
+| **Increment / Decrement** | Increases or decreases value by 1                 | `++ --`                   | `x++`                           |
+| **Ternary**               | Short form of `if...else`                         | `? :`                     | `age >= 18 ? "Adult" : "Minor"` |
+| **Type**                  | Checks or tests data types                        | `typeof`, `instanceof`    | `typeof age`                    |
+| **Bitwise**               | Performs operations on binary bits                | `& \| ^ ~ << >> >>>`      | `5 & 1`                         |
+| **Nullish coalescing**    | Uses fallback when value is `null` or `undefined` | `??`                      | `name ?? "Guest"`               |
+| **Optional chaining**     | Safely accesses nested properties                 | `?.`                      | `user?.name`                    |
+
+36. What is the difference between == and ===?
+This is a very important fresher interview question.
+
+| `==`                          | `===`                            |
+| ----------------------------- | -------------------------------- |
+| Loose equality                | Strict equality                  |
+| May perform type conversion   | Does not perform type conversion |
+| Checks value after conversion | Checks value and type            |
+
+
+37. What is the difference between != and !==?
+"!= checks inequality after possible type conversion, while !== checks both value and type without type conversion."
+| `!=`                               | `!==`                            |
+| ---------------------------------- | -------------------------------- |
+| Loose not equal                    | Strict not equal                 |
+| May perform type conversion        | Does not perform type conversion |
+| Checks inequality after conversion | Checks value or type difference  |
+
+⭐ 38. What is the ternary operator?
+Answer:
+The ternary operator is a short form of an if...else statement.
+Syntax:
+condition ? valueIfTrue : valueIfFalse
+Example:
+let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
+Output:
+Adul
+
+
+39. What is the difference between && and ||?
+&& — AND
+Returns a truthy result only when both conditions are truthy.
+let age = 20;
+
+age > 18 && age < 30
+// true
+|| — OR
+Returns a truthy result when at least one condition is truthy.
+let age = 20;
+age < 18 || age > 18
+
+
+5. Conditions & Control Statements
+What is an if statement in JavaScript?
+What is an if...else statement?
+What is an else if statement?
+What is a nested if statement?
+What is the switch statement?
+What is the difference between if...else and switch?
+What is the break statement?
+What is the continue statement?
+What is a loop?
+Why are loops used in JavaScript?
+6. Loops
+What is a for loop?
+What is a while loop?
+What is a do...while loop?
+What is the difference between for, while, and do...while?
+What is an infinite loop?
+What is a nested loop?
+Can we use break inside a loop?
+Can we use continue inside a loop?
+What is a for...of loop?
+What is a for...in loop?
+What is the difference between for...of and for...in?
+7. Type Conversion & Coercion
+What is type conversion in JavaScript?
+What is implicit type conversion?
+What is explicit type conversion?
+What is type coercion in JavaScript?

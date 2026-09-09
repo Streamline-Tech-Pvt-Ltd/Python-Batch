@@ -1,5 +1,5 @@
 
-1. WHAT IS JAVASCRIPT?
+ JAVASCRIPT?
 JavaScript (JS) is a programming language used to make web pages interactive and dynamic.
 
 Examples:
@@ -11,14 +11,23 @@ Examples:
 * Animations
 * API calls
 
-
 HTML + CSS + JavaScript:
-
 HTML       -> Structure
 CSS        -> Design
 JavaScript -> Behavior / Logic
 
-2. WHERE DOES JAVASCRIPT RUN?
+---------------------------------------------------------------------------------------------
+| JavaScript                 | Java                              |
+| -------------------------- | --------------------------------- |
+| Dynamically typed          | Statically typed                  |
+| Mainly web development     | Backend & enterprise applications |
+| Runs in browser / Node.js  | Runs on JVM                       |
+| `.js`                      | `.java`                           |
+| Uses `let`, `const`, `var` | Uses explicit data types          |
+| Example: `let age = 20;`   | Example: `int age = 20;`          |
+---------------------------------------------------------------------------------------------------
+
+ WHERE DOES JAVASCRIPT RUN?
 JavaScript can run in:
 
 1. Web browsers
@@ -26,10 +35,10 @@ JavaScript can run in:
 
 2. Outside the browser
    Using Node.js, JavaScript can also be used for backend development.
----------------------------------------------------------------------------------------------
+
 3. ADDING JAVASCRIPT TO HTML
 There are three ways to add JavaScript to HTML.
-
+---------------------------------------------------------------------------------------------
 A. Inline JavaScript
 <button onclick="alert('Hello')">Click Me</button>
 
@@ -43,9 +52,9 @@ HTML:
 <script src="script.js"></script>
 JavaScript file:
 script.js
-alert("Hello World");
-
-4. JAVASCRIPT SYNTAX
+alert("Hello");
+---------------------------------------------------------------------------------------------
+# JAVASCRIPT SYNTAX
 JavaScript instructions are called statements.
 
 Example:
@@ -57,8 +66,8 @@ Semicolon can be used at the end of a statement.
 Example:
 let age = 20;
 let city = "Nashik";
-
-5. COMMENTS
+---------------------------------------------------------------------------------------------
+** COMMENTS
 Comments are ignored by JavaScript.
 
 Single-line comment:
@@ -69,13 +78,14 @@ Multi-line comment:
 This is
 a multi-line comment
 */
+---------------------------------------------------------------------------------------------
 
-6. console.log()
+console.log()
+
 console.log() is used to display output in the browser console.
 
 Example:
 console.log("Hello World");
-
 Output:
 Hello World
 
@@ -91,19 +101,19 @@ Pallavi
 
 To open the console:
 Right Click -> Inspect -> Console
-
-7. VARIABLES
+---------------------------------------------------------------------------------------------
+********* VARIABLES **********
 A variable is used to store data.
 
-Example:
-let name = "Pallavi";
-let age = 20;
 
-Here:
-name -> "Pallavi"
-age  -> 20
+| Keyword   | Definition                                                   | Example            |
+| --------- | ------------------------------------------------------------ | ------------------ |
+| **var**   | Used to declare a variable; can be reassigned and redeclared | `var age = 20;`    |
+| **let**   | Used to declare a variable whose value can be changed        | `let age = 20;`    |
+| **const** | Used to declare a variable that cannot be reassigned         | `const pi = 3.14;` |
+   
 
-8. let
+ 1] let
 let is used to declare a variable whose value can be changed.
 
 Example:
@@ -114,7 +124,7 @@ console.log(age);
 Output:
 21
 
-9. const
+2] const
 const is used when a variable should not be reassigned.
 Example:
 const pi = 3.14;
@@ -127,17 +137,18 @@ Simple rule:
 let   -> value can change
 const -> value cannot be reassigned
 
-10. var
+3] var
 var is an older way of declaring variables.
 Example:
 var name = "Pallavi";
 
-Modern JavaScript generally prefers:
+ #   Modern JavaScript generally prefers:
 let
 const
 As a beginner, focus mainly on let and const.
+---------------------------------------------------------------------------------------------
 
-11. RULES FOR VARIABLE NAMES
+*********RULES FOR VARIABLE NAMES*****&
 Valid variable names:
 
 let name = "Pallavi";
@@ -155,156 +166,52 @@ Example:
 let studentName = "Pallavi";
 let totalMarks = 90;
 let phoneNumber = 1234567890;
+---------------------------------------------------------------------------------------------
+*********  Data Types  ********
 
-12. DATA TYPES
-JavaScript has different types of data.
+| Data Type     | Definition                      | Example             |
+| ------------- | ------------------------------- | ------------------- |
+| **String**    | Stores text                     | `"Pallavi"`         |
+| **Number**    | Stores numbers                  | `20`                |
+| **BigInt**    | Stores very large integers      | `12345n`            |
+| **Boolean**   | Stores true/false               | `true`              |
+| **Undefined** | Declared but no value           | `let x;`            |
+| **Null**      | Intentional empty value         | `let x = null`      |
+| **Symbol**    | Creates unique values           | `Symbol("id")`      |
+| **Object**    | Stores multiple key-value pairs | `{name: "Pallavi"}` |
 
-A. String
-Used for text.
 
-Example:
-let name = "Pallavi";
+----------------------------------------------------------------------------------------------
+**  typeof Operator
+Used to check the data type of a value.
 
-B. Number
-Used for numbers.
 
-Example:
-let age = 20;
-let salary = 50000;
-
-C. Boolean
-Boolean has only two values:
-true
-false
-
-Example:
-let isStudent = true;
-let isLoggedIn = false;
-
-D. Undefined
-A variable exists but does not have a value.
-Example:
-let city;
-console.log(city);
-Output:
-undefined
-
-E. Null
-null represents an intentionally empty value.
-Example:
-let result = null;
-
-13. typeof
-typeof is used to check the data type.
-
-Example:
-
-let name = "Pallavi";
-let age = 20;
-let student = true;
-
-console.log(typeof name);
-console.log(typeof age);
-console.log(typeof student);
-
-Output:
-string
-number
-boolean
-
-14. ARITHMETIC OPERATORS
-Arithmetic operators are used for mathematical calculations.
-
-* -> Addition
-
-- -> Subtraction
-
-* -> Multiplication
-  /  -> Division
-  %  -> Remainder
-
-Example:
-let a = 10;
-let b = 5;
-console.log(a + b);  // 15
-console.log(a - b);  // 5
-console.log(a * b);  // 50
-console.log(a / b);  // 2
-console.log(a % b);  // 0
-
-15. STRING CONCATENATION
-The + operator can be used to combine strings.
-
-Example:
-let firstName = "Pallavi";
-let lastName = "Hujare";
-console.log(firstName + " " + lastName);
-Output:
-Pallavi Hujare
-
-16. TEMPLATE LITERALS
-
-Template literals are used to insert variables inside strings.
-They use backticks (`).
+** length Property
+Used to find the number of characters in a String or number of elements in an Array.
+Return type of length is Number.
 
 Example:
 let name = "Pallavi";
-let age = 20;
-console.log(`My name is ${name} and I am ${age} years old.`);
-Output:
-My name is Pallavi and I am 20 years old.
 
-17. SIMPLE JAVASCRIPT PROGRAM
+console.log(name.length);                       // 7
+console.log(typeof name.length);                // number
 
-let name = "Pallavi";
-let age = 20;
-let course = "MCA";
+----------------------------------------------------------------------------------------------
 
-console.log("Name:", name);
-console.log("Age:", age);
-console.log("Course:", course);
+** Operators 
 
-Output:
-Name: Pallavi
-Age: 20
-Course: MCA
-
-
-JavaScript
--> Programming language used to make web pages interactive.
-
-console.log()
--> Displays output in the browser console.
-
-let
--> Declares a variable whose value can be changed.
-
-const
--> Declares a variable that cannot be reassigned.
-
-var
--> Older way of declaring variables.
-
-String
--> Text data. Example: "Hello"
-
-Number
--> Numeric data. Example: 100
-
-Boolean
--> true or false
-
-undefined
--> Variable has no assigned value.
-
-null
--> Intentionally empty value.
-
-typeof
--> Checks the data type.
-
-* * * / %
-      -> Arithmetic operators.
+| Operator Type             | Definition                                        | Operators                 | Example                         |
+| ------------------------- | ------------------------------------------------- | ------------------------- | ------------------------------- |
+| **Arithmetic**            | Performs mathematical operations                  | `+ - * / % **`            | `10 + 5`                        |
+| **Assignment**            | Assigns or updates a value                        | `= += -= *= /= %=`        | `x = 10`                        |
+| **Comparison**            | Compares two values                               | `== === != !== > < >= <=` | `10 > 5`                        |
+| **Logical**               | Combines or reverses conditions                   | `&& \|\| !`               | `age > 18 && age < 30`          |
+| **Increment / Decrement** | Increases or decreases value by 1                 | `++ --`                   | `x++`                           |
+| **Ternary**               | Short form of `if...else`                         | `? :`                     | `age >= 18 ? "Adult" : "Minor"` |
+| **Type**                  | Checks or tests data types                        | `typeof`, `instanceof`    | `typeof age`                    |
+| **Bitwise**               | Performs operations on binary bits                | `& \| ^ ~ << >> >>>`      | `5 & 1`                         |
+| **Nullish coalescing**    | Uses fallback when value is `null` or `undefined` | `??`                      | `name ?? "Guest"`               |
+| **Optional chaining**     | Safely accesses nested properties                 | `?.`                      | `user?.name`                    |
 
 
 

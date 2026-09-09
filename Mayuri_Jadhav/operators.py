@@ -83,3 +83,24 @@ print("Addition=",num1+num2)
 print("Subtraction=",num1-num2)
 print("Multiplication=",num1*num2)
 print("Divison=",num1/num2)
+
+
+
+#BITWISE OPERATORS(Left shift <<)
+a=0B1010  #binary literals =o(zero)b or 0B
+b=a<<2
+print(b)
+
+a=0b0011
+b=a<<3
+print(bin(b))
+
+ #right shift(>>)
+a=0b1110
+b=a>>2
+print(bin(b))
+
+
+a=0b1101
+b=a>>3
+print(b)

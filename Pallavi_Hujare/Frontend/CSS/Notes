@@ -1,0 +1,402 @@
+1. What is CSS?
+Interview answer:
+CSS stands for Cascading Style Sheets. It is used to style and design HTML web pages.
+
+Key points:
+CSS controls colors, fonts, spacing, layout, etc.
+CSS separates presentation from HTML structure.
+🧠 Trick:
+HTML = Structure | CSS = Style | JS = Behavior
+
+
+2. What are the different ways to apply CSS?
+There are 3 ways:
+| Type     | Where?               | Example                   |
+| -------- | -------------------- | ------------------------- |
+| Inline   | Inside HTML element  | `style="color:red"`       |
+| Internal | Inside `<style>`     | `<style>...</style>`      |
+| External | Separate `.css` file | `<link rel="stylesheet">` |
+
+3. What is the CSS Syntax?
+selector {
+    property: value;
+}
+
+Example:
+p {
+    color: blue;
+    font-size: 20px;
+}
+p → selector
+color → property
+blue → value
+
+
+4. What is a CSS Selector?
+A selector is used to select HTML elements that you want to style.
+Common selectors:
+
+p { }
+.box { }
+#header { }
+* { }
+
+
+⭐ 5. What are the types of CSS selectors?
+Important selectors:
+| Selector  | Example              | Selects             |
+| --------- | -------------------- | ------------------- |
+| Universal | `*`                  | All elements        |
+| Element   | `p`                  | All `<p>`           |
+| Class     | `.box`               | Elements with class |
+| ID        | `#header`            | Element with ID     |
+| Group     | `h1, p`              | Multiple elements   |
+| Attribute | `input[type="text"]` | Matching attributes |
+
+⭐ 6. What is the difference between Class and ID in CSS?
+| Class             | ID                                 |
+| ----------------- | ---------------------------------- |
+| `.box`            | `#box`                             |
+| Can be reused     | Should identify one unique element |
+| Lower specificity | Higher specificity                 |
+
+🧠 Trick:
+. = Class | # = ID
+
+⭐ 7. What is CSS Specificity?
+Specificity determines which CSS rule wins when multiple rules target the same element.
+Basic order:
+Inline > ID > Class/Attribute/Pseudo-class > Element
+
+Example:
+p {
+    color: red;
+}
+
+.text {
+    color: blue;
+}
+
+#title {
+    color: green;
+}
+
+If an element has all three, the ID rule has higher specificity than class and element.
+
+⭐ 8. What is the CSS Box Model?
+| Part    | Meaning              |
+| ------- | -------------------- |
+| Content | Actual content       |
+| Padding | Space inside border  |
+| Border  | Boundary             |
+| Margin  | Space outside border |
+
+⭐ 9. Padding vs Margin
+| Padding                            | Margin                                   |
+| ---------------------------------- | ---------------------------------------- |
+| Space inside the element           | Space outside the element                |
+| Between content and border         | Between element and surrounding elements |
+| Background can extend into padding | Background doesn't extend into margin    |
+
+Example:
+.box {
+    padding: 20px;
+    margin: 20px;
+}
+
+⭐ 10. What is box-sizing?
+It controls how an element's width and height are calculated.
+content-box
+Default behavior.
+
+Width applies to content only.
+border-box
+
+Width includes:
+Content + Padding + Border
+
+Example:
+
+* {
+    box-sizing: border-box;
+}
+
+⭐ 11. What is the difference between display: block, inline, and inline-block?
+| Block                         | Inline                                         | Inline-block          |
+| ----------------------------- | ---------------------------------------------- | --------------------- |
+| New line                      | Same line                                      | Same line             |
+| Usually takes available width | Takes content width                            | Takes specified width |
+| Width/height works            | Width/height generally don't apply as expected | Width/height works    |
+
+⭐ 12. What is display: none?
+It removes the element from the layout.
+
+.box {
+    display: none;
+}
+
+The element does not occupy space.
+Difference from visibility: hidden
+.box {
+    visibility: hidden;
+}
+
+The element is invisible but still occupies space.
+🧠 Trick:
+display:none = Gone | visibility:hidden = Invisible
+
+⭐ 13. What is the position property?
+It controls how an element is positioned.
+Main values:
+
+static
+relative
+absolute
+fixed
+sticky
+
+| Value      | Simple meaning                                      |
+| ---------- | --------------------------------------------------- |
+| `static`   | Normal position                                     |
+| `relative` | Moves relative to its normal position               |
+| `absolute` | Positioned relative to a containing block           |
+| `fixed`    | Fixed relative to viewport                          |
+| `sticky`   | Acts relative until a scroll threshold, then sticks |
+
+
+
+⭐ 14. Relative vs Absolute
+Relative
+.box {
+    position: relative;
+    top: 10px;
+}
+
+Moves relative to its normal position.
+
+Absolute
+.box {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+Removed from normal flow and positioned relative to its positioned containing block.
+
+🧠 Trick:
+Relative = Own position | Absolute = Containing block
+
+⭐ 15. What is z-index?
+z-index controls the stacking order of positioned elements and certain other stacking contexts.
+
+Higher value generally appears in front when elements participate in the same stacking context.
+
+.box1 {
+    position: relative;
+    z-index: 10;
+}
+
+🧠 Trick:
+z-index = Front/Back
+
+⭐ 16. What is Flexbox?
+Flexbox is a CSS layout system designed mainly for one-dimensional layouts.
+It works with:
+Row
+Column
+
+Example:
+.container {
+    display: flex;
+}
+
+Important properties:
+
+flex-direction
+justify-content
+align-items
+flex-wrap
+gap
+
+
+⭐ 17. justify-content vs align-items
+This is a very common interview question.
+The answer depends on the flex direction.
+For default:
+flex-direction: row;
+| Property          | Controls   |
+| ----------------- | ---------- |
+| `justify-content` | Main axis  |
+| `align-items`     | Cross axis |
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+⭐ 18. What is CSS Grid?
+CSS Grid is a two-dimensional layout system.
+It works with:
+Rows + Columns
+
+Example:
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+🧠 Trick:
+Flex = 1D | Grid = 2D
+
+⭐ 19. Flexbox vs Grid
+| Flexbox                         | Grid                   |
+| ------------------------------- | ---------------------- |
+| One-dimensional                 | Two-dimensional        |
+| Row OR column                   | Rows AND columns       |
+| Great for components/navigation | Great for page layouts |
+
+
+⭐ 20. What are pseudo-classes?
+Pseudo-classes define a special state of an element.
+
+Examples:
+a:hover {
+    color: red;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+Common ones:
+
+:hover
+:focus
+:active
+:visited
+:first-child
+:last-child
+:nth-child()
+
+
+
+⭐ 21. What are pseudo-elements?
+Pseudo-elements style a specific part of an element.
+
+Examples:
+p::first-letter {
+    font-size: 30px;
+}
+p::before {
+    content: "→ ";
+}
+
+Common:
+::before
+::after
+::first-letter
+::first-line
+
+
+⭐ 22. What are CSS units?
+Absolute unit
+px
+Relative units
+%
+em
+rem
+vw
+vh
+| Unit  | Based on                                                 |
+| ----- | -------------------------------------------------------- |
+| `px`  | Fixed CSS pixel unit                                     |
+| `%`   | Relative to containing context                           |
+| `em`  | Relative to font size of relevant element/parent context |
+| `rem` | Root element's font size                                 |
+| `vw`  | Viewport width                                           |
+| `vh`  | Viewport height                                          |
+
+⭐ 23. em vs rem
+| `em`                                                     | `rem`                               |
+| -------------------------------------------------------- | ----------------------------------- |
+| Relative to relevant inherited/current font-size context | Relative to root (`html`) font size |
+| Can compound through nesting                             | More predictable                    |
+
+Example:
+p {
+    font-size: 2rem;
+}
+
+🧠 Trick:
+REM = Root EM
+
+⭐ 24. What is responsive web design?
+Responsive design means a website adapts to different screen sizes.
+
+Examples:
+Mobile
+Tablet
+Laptop
+Desktop
+
+Common tools:
+
+Media queries
+Flexible layouts
+Flexbox
+Grid
+Responsive units
+
+⭐ 25. What are Media Queries?
+Media queries apply CSS based on conditions such as viewport size.
+
+Example:
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+26. What is overflow?
+Controls what happens when content doesn't fit inside an element.
+
+Values:
+visible
+hidden
+scroll
+auto
+
+Example:
+.box {
+    overflow: hidden;
+}
+
+27. What is the difference between opacity: 0 and display: none?
+| `opacity: 0`                                          | `display: none`             |
+| ----------------------------------------------------- | --------------------------- |
+| Element becomes transparent                           | Element removed from layout |
+| Still occupies space                                  | Doesn't occupy space        |
+| Can still receive pointer events depending on context | Not rendered                |
+
+| `opacity: 0`                                          | `display: none`             |
+| ----------------------------------------------------- | --------------------------- |
+| Element becomes transparent                           | Element removed from layout |
+| Still occupies space                                  | Doesn't occupy space        |
+| Can still receive pointer events depending on context | Not rendered                |
+
+28. What is inherit?
+It tells a CSS property to take its value from the parent element when the property supports inheritance.
+
+p {
+    color: inherit;
+}
+
+30. What is the difference between relative, absolute, fixed, and sticky?
+| Position   | Remember                                |
+| ---------- | --------------------------------------- |
+| `relative` | Relative to normal position             |
+| `absolute` | Relative to containing block            |
+| `fixed`    | Fixed to viewport                       |
+| `sticky`   | Sticks during scrolling after threshold |
+

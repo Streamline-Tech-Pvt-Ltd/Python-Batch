@@ -358,3 +358,804 @@ Enter your age: 21
 Output:
 Name: Shivani
 Age: 21
+
+# Python List, Slicing & Binary – Interview Notes
+
+## 1. Binary
+
+### What is Binary?
+
+Binary is a number system that uses only two digits:
+
+* `0`
+* `1`
+
+Computers use binary because electronic circuits work with two states: **ON (1)** and **OFF (0)**.
+
+### Bit
+
+A **bit** is the smallest unit of data in a computer. It can store either `0` or `1`.
+
+### Byte
+
+**1 Byte = 8 Bits**
+
+Example:
+
+```text
+10101100
+```
+
+This contains 8 bits = 1 byte.
+
+### Binary to Decimal Example
+
+Convert `1010` into decimal:
+
+```text
+1 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰
+
+= 8 + 0 + 2 + 0
+
+= 10
+```
+
+Therefore:
+
+```text
+Binary 1010 = Decimal 10
+```
+
+---
+
+# 2. Python List
+
+## What is a List?
+
+A **List** is an ordered and mutable collection used to store multiple values in a single variable.
+
+### Example
+
+```python
+numbers = [10, 20, 30, 40]
+print(numbers)
+```
+
+Output:
+
+```text
+[10, 20, 30, 40]
+```
+
+---
+
+# 3. Properties of Python List
+
+Python Lists have the following properties:
+
+### 1. Ordered
+
+List elements maintain their insertion order.
+
+```python
+a = [10, 20, 30]
+```
+
+The order remains:
+
+```text
+10 → 20 → 30
+```
+
+### 2. Mutable
+
+A list can be changed after creation.
+
+```python
+a = [10, 20, 30]
+
+a[0] = 100
+
+print(a)
+```
+
+Output:
+
+```text
+[100, 20, 30]
+```
+
+### 3. Allows Duplicate Values
+
+Lists can contain duplicate elements.
+
+```python
+a = [10, 20, 10, 30]
+```
+
+### 4. Allows Different Data Types
+
+A single list can contain different data types.
+
+```python
+a = [10, "Python", 20.5, True]
+```
+
+### 5. Indexed
+
+List elements can be accessed using indexes.
+
+```python
+a = [10, 20, 30]
+
+print(a[0])
+```
+
+Output:
+
+```text
+10
+```
+
+### 6. Supports Slicing
+
+Lists support slicing.
+
+```python
+a = [10, 20, 30, 40, 50]
+
+print(a[1:4])
+```
+
+Output:
+
+```text
+[20, 30, 40]
+```
+
+### 7. Dynamic Size
+
+A list can grow or shrink during program execution.
+
+```python
+a = [10, 20]
+
+a.append(30)
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+---
+
+# 4. Python List Methods
+
+## 1. append()
+
+Adds one element at the end of the list.
+
+```python
+a = [10, 20]
+
+a.append(30)
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+---
+
+## 2. insert()
+
+Adds an element at a specific index.
+
+```python
+a = [10, 20, 30]
+
+a.insert(1, 15)
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 15, 20, 30]
+```
+
+---
+
+## 3. extend()
+
+Adds multiple elements to the list.
+
+```python
+a = [10, 20]
+
+a.extend([30, 40])
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 20, 30, 40]
+```
+
+---
+
+## 4. remove()
+
+Removes the first occurrence of a specified value.
+
+```python
+a = [10, 20, 30]
+
+a.remove(20)
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 30]
+```
+
+---
+
+## 5. pop()
+
+Removes and returns an element using its index.
+
+```python
+a = [10, 20, 30]
+
+a.pop(1)
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 30]
+```
+
+If no index is provided, `pop()` removes the last element.
+
+```python
+a.pop()
+```
+
+---
+
+## 6. clear()
+
+Removes all elements from the list.
+
+```python
+a = [10, 20, 30]
+
+a.clear()
+
+print(a)
+```
+
+Output:
+
+```text
+[]
+```
+
+---
+
+## 7. index()
+
+Returns the index of the first occurrence of a value.
+
+```python
+a = [10, 20, 30]
+
+print(a.index(20))
+```
+
+Output:
+
+```text
+1
+```
+
+---
+
+## 8. count()
+
+Returns the number of occurrences of a value.
+
+```python
+a = [10, 20, 10, 30, 10]
+
+print(a.count(10))
+```
+
+Output:
+
+```text
+3
+```
+
+---
+
+## 9. sort()
+
+Sorts the list.
+
+```python
+a = [30, 10, 20]
+
+a.sort()
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+Descending order:
+
+```python
+a.sort(reverse=True)
+```
+
+Output:
+
+```text
+[30, 20, 10]
+```
+
+---
+
+## 10. reverse()
+
+Reverses the current order of elements.
+
+```python
+a = [10, 30, 20]
+
+a.reverse()
+
+print(a)
+```
+
+Output:
+
+```text
+[20, 30, 10]
+```
+
+> **Important:** `reverse()` does not sort the list. It only reverses the existing order.
+
+---
+
+## 11. copy()
+
+Creates a copy of the list.
+
+```python
+a = [10, 20, 30]
+
+b = a.copy()
+
+print(b)
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+---
+
+# 5. Python List Slicing
+
+## Slicing Syntax
+
+```python
+list[start : stop : step]
+```
+
+Example:
+
+```python
+a = [10, 20, 30, 40, 50]
+```
+
+### Important Rule
+
+**Start index is included, but stop index is excluded.**
+
+---
+
+## Example 1: `a[1:4]`
+
+```python
+a = [10, 20, 30, 40, 50]
+
+print(a[1:4])
+```
+
+Output:
+
+```text
+[20, 30, 40]
+```
+
+---
+
+## Example 2: `a[:3]`
+
+```python
+print(a[:3])
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+It starts from the beginning.
+
+---
+
+## Example 3: `a[2:]`
+
+```python
+print(a[2:])
+```
+
+Output:
+
+```text
+[30, 40, 50]
+```
+
+It continues from index `2` to the end.
+
+---
+
+## Example 4: `a[::2]`
+
+```python
+print(a[::2])
+```
+
+Output:
+
+```text
+[10, 30, 50]
+```
+
+It takes every second element.
+
+---
+
+## Example 5: Reverse a List
+
+```python
+print(a[::-1])
+```
+
+Output:
+
+```text
+[50, 40, 30, 20, 10]
+```
+
+---
+
+# 6. Negative Indexing
+
+Python supports negative indexes.
+
+```python
+a = [10, 20, 30, 40, 50]
+```
+
+Index positions:
+
+```text
+Positive:   0    1    2    3    4
+Values:    10   20   30   40   50
+Negative:  -5   -4   -3   -2   -1
+```
+
+Example:
+
+```python
+print(a[-1])
+```
+
+Output:
+
+```text
+50
+```
+
+---
+
+# 7. Important Interview Questions
+
+## Q1. Is Python List mutable?
+
+**Answer:** Yes, Python List is mutable.
+
+```python
+a = [10, 20, 30]
+
+a[0] = 100
+
+print(a)
+```
+
+Output:
+
+```text
+[100, 20, 30]
+```
+
+---
+
+## Q2. Can a List contain duplicate values?
+
+**Answer:** Yes.
+
+```python
+a = [10, 20, 10, 30]
+```
+
+---
+
+## Q3. Can a List contain different data types?
+
+**Answer:** Yes.
+
+```python
+a = [10, "Python", 20.5, True]
+```
+
+---
+
+## Q4. What is the difference between `append()` and `extend()`?
+
+### append()
+
+Adds the complete object as one element.
+
+```python
+a = [1, 2]
+
+a.append([3, 4])
+
+print(a)
+```
+
+Output:
+
+```text
+[1, 2, [3, 4]]
+```
+
+### extend()
+
+Adds elements individually.
+
+```python
+a = [1, 2]
+
+a.extend([3, 4])
+
+print(a)
+```
+
+Output:
+
+```text
+[1, 2, 3, 4]
+```
+
+---
+
+## Q5. Difference between `remove()` and `pop()`?
+
+| Method     | Removes using |
+| ---------- | ------------- |
+| `remove()` | Value         |
+| `pop()`    | Index         |
+
+Example:
+
+```python
+a.remove(20)
+```
+
+Removes value `20`.
+
+```python
+a.pop(1)
+```
+
+Removes element at index `1`.
+
+---
+
+## Q6. Difference between `sort()` and `reverse()`?
+
+### sort()
+
+Arranges elements in ascending or descending order.
+
+```python
+a = [30, 10, 20]
+
+a.sort()
+
+print(a)
+```
+
+Output:
+
+```text
+[10, 20, 30]
+```
+
+### reverse()
+
+Reverses the existing order.
+
+```python
+a = [30, 10, 20]
+
+a.reverse()
+
+print(a)
+```
+
+Output:
+
+```text
+[20, 10, 30]
+```
+
+---
+
+# 8. Tricky Interview Questions
+
+### Question 1
+
+What is the output?
+
+```python
+a = [1, 2, 3, 4, 5]
+
+print(a[-1])
+```
+
+**Answer:**
+
+```text
+5
+```
+
+---
+
+### Question 2
+
+What is the output?
+
+```python
+a = [1, 2, 3, 4, 5]
+
+print(a[-3:])
+```
+
+**Answer:**
+
+```text
+[3, 4, 5]
+```
+
+---
+
+### Question 3
+
+What is the output?
+
+```python
+a = [1, 2, 3, 4, 5]
+
+print(a[::-1])
+```
+
+**Answer:**
+
+```text
+[5, 4, 3, 2, 1]
+```
+
+---
+
+### Question 4
+
+What is the output?
+
+```python
+a = [10, 20, 30, 40, 50]
+
+print(a[1:5:2])
+```
+
+**Answer:**
+
+```text
+[20, 40]
+```
+
+---
+
+# Quick Revision
+
+| Topic                | Important Point        |
+| -------------------- | ---------------------- |
+| List                 | Ordered and mutable    |
+| Duplicate            | Allowed                |
+| Different data types | Allowed                |
+| Indexing             | Starts from `0`        |
+| Negative indexing    | Starts from `-1`       |
+| Slicing              | `[start:stop:step]`    |
+| append()             | Adds one object        |
+| extend()             | Adds multiple elements |
+| insert()             | Adds at specific index |
+| remove()             | Removes by value       |
+| pop()                | Removes by index       |
+| clear()              | Removes all elements   |
+| count()              | Counts occurrences     |
+| index()              | Returns index          |
+| sort()               | Sorts elements         |
+| reverse()            | Reverses current order |
+| copy()               | Creates a copy         |
+| Binary               | Uses `0` and `1`       |
+| 1 Byte               | 8 bits                 |
+
+## Interview Tip
+
+Remember these four differences:
+
+```text
+append()  → One object
+extend()  → Multiple elements
+remove()  → Value
+pop()     → Index
+```
+
+And:
+
+```text
+sort()    → Sorts
+reverse() → Reverses
+```
