@@ -1,0 +1,333 @@
+# JAVASCRIPT :
+JavaScript is a high-level, interpreted programming language mainly used to make websites interactive and dynamic.
+
+For example:
+* Button click → JavaScript performs an action
+* Form validation → JavaScript checks user input
+* Dropdown menu → JavaScript controls it
+* Calculator → JavaScript performs calculations
+* API calls → JavaScript gets data from a server
+* Web applications → JavaScript handles frontend logic
+
+# HTML, CSS and JavaScript
+Think of a website like a human body:
+Technology	    Purpose
+HTML	        Structure
+CSS	            Design / Styling
+JavaScript  	Behavior / Functionality
+
+
+EX: <button onclick="showMessage()">Click Me</button>
+
+<script>
+function showMessage() {
+    alert("Hello Urmila!");
+}
+</script>
+_-------------------------------------------------------------------------------------------------------------------------
+
+# Important features:
+
+1.Lightweight
+2.Interpreted/JIT-compiled
+3.Dynamically typed
+4.Object-based and prototype-based
+5.Case-sensitive
+6.Supports event-driven programming
+7.Supports functional programming
+8.Can manipulate HTML and CSS using the DOM
+9.Can communicate with servers using APIs
+10.Runs in browsers and also outside browsers using environments such as Node.js.
+
+-------------------------------------------------------------------------------------------------------------------------
+# Where Does JavaScript Run?
+JavaScript runs inside a JavaScript engine.
+The engine reads JavaScript code, executes it, and produces the result.
+
+1. In Web Browsers 🌐
+JavaScript commonly runs inside web browsers such as:
+
+Google Chrome
+Microsoft Edge
+Firefox
+Safari
+
+2. Outside the Browser
+JavaScript can also run outside browsers using Node.js.
+EX: console.log("Hello World");
+
+-------------------------------------------------------------------------------------------------------------------------
+
+# There are three ways to add JavaScript to HTML.
+
+1. Inline JavaScript
+JavaScript is written directly inside an HTML element, usually using an event attribute such as onclick.
+Syntax: <button onclick="alert('Hello World!')">
+        Click Me
+       </button>
+
+Here, JavaScript is written directly inside the HTML tag.
+Advantage: Easy for very small actions.
+Disadvantage: Makes HTML difficult to maintain for larger projects.
+
+1. Inline JavaScript
+
+JavaScript is written directly inside an HTML element, usually using an event attribute such as onclick.
+
+<button onclick="alert('Hello World!')">
+    Click Me
+</button>
+
+Here, JavaScript is written directly inside the HTML tag.
+
+Advantage: Easy for very small actions.
+Disadvantage: Makes HTML difficult to maintain for larger projects.
+
+2. Internal JavaScript
+JavaScript is written inside the <script> tag in the same HTML file.
+Syntax: <script>
+        console.log("Hello World!");
+    </script>
+
+3.External JavaScript 
+JavaScript is written in a separate .js file and connected to HTML using the <script src=""> tag.
+Syntax: 
+HTML file — index.html: <script src="script.js"></script>
+JavaScript file — script.js: console.log("Hello from External JavaScript!");
+
+----------------------------------------------------------------------------------------------------------------------
+
+# JAVASCRIPT SYNTAX
+JavaScript syntax means the rules and structure used to write JavaScript code correctly.
+
+1. JavaScript Statements
+JavaScript instructions are called statements.
+A statement tells JavaScript what to do.
+
+Ex: let name = "Urmila";
+console.log(name);
+
+* Semicolon ;
+A semicolon is commonly used to indicate the end of a statement
+
+let age = 22;
+let city = "Pune";
+console.log(age);
+
+2. JavaScript is Case-Sensitive
+JavaScript treats uppercase and lowercase letters as different.
+
+Ex: let name = "Urmila";
+let Name = "Priya";
+name and Name are two different variables.
+
+
+3. JavaScript Comments
+Comments are used to explain code. They are not executed.
+
+1: Single-line comment
+Use //.
+
+Ex: // This is a comment
+let age = 22;
+
+2: Multi-line comment
+Use /* */.
+
+Ex: /*
+   This is a
+   multi-line comment
+*/
+
+let name = "Urmila";
+
+4. Identifiers
+An identifier is the name given to variables, functions, objects, classes, etc.
+Ex: let studentName = "Urmila";
+
+Rules for identifiers
+Can contain:
+Letters
+Digits
+_
+$
+
+Cannot start with a digit.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+# Difference Between Java & JavaScript
+| Java                                      | JavaScript                              |
+| ----------------------------------------- | ---------------------------------------- |
+| Used to build applications                | Mainly used to make websites interactive |
+| Runs on **JVM**                           | Runs on **JavaScript Engine**            |
+| More difficult for beginners              | Easier to start                          |
+| File extension: `.java`                   | File extension: `.js`                    |
+| Used in backend, Android, enterprise apps | Used in websites and web applications    |
+| Example: `System.out.println()`           | Example: `console.log()`                 |
+
+------------------------------------------------------------------------------------------------------------------------
+
+# Variables in JavaScript
+A variable is a container used to store data/value in a program.
+
+* Three Ways to Declare Variables
+JavaScript has 3 keywords for variables:
+
+1. var
+Older way of declaring variables
+Can be changed and redeclared
+Mostly avoided in modern JavaScript
+
+Ex: var name = "Urmila";
+
+2. let
+Used when the value can change
+Cannot be redeclared in the same scope
+
+Ex: let age = 22;
+    age = 23;
+
+3. const
+Used when the value should not be reassigned
+Cannot be redeclared or reassigned
+
+Ex: const pi = 3.14;
+
+# Simple Difference
+
+| `var`           | `let`            | `const`          |
+| --------------- | ---------------- | ---------------- |
+| Old method      | Modern method    | Modern method    |
+| Can change      | Can change       | Cannot reassign  |
+| Can redeclare   | Cannot redeclare | Cannot redeclare |
+| Function scoped | Block scoped     | Block scoped     |
+
+Easy rule to remember:
+* Value can change → let
+* Value should not change → const
+* var → old style, generally avoid in new code.
+
+# Variables Rules
+1. Variable name can contain letters
+2. It can contain numbers, but cannot start with a number
+3. It can use _ (underscore)
+4. It can use $ (dollar sign)
+5. Spaces are not allowed
+6. JavaScript is case-sensitive
+7. Reserved keywords cannot be used
+8. Use meaningful names
+
+------------------------------------------------------------------------------------------------------------------------
+
+# Data Types
+
+| Data Type | Example           | Used for                     |
+| --------- | ----------------- | ---------------------------- |
+| String    | `"Urmila"`        | Text                         |
+| Number    | `22`              | Numbers                      |
+| Boolean   | `true`            | True/False                   |
+| Undefined | `undefined`       | No value assigned            |
+| Null      | `null`            | Empty/no value intentionally |
+| BigInt    | `123n`            | Very large integers          |
+| Symbol    | `Symbol("id")`    | Unique values                |
+| Object    | `{name:"Urmila"}` | Related data                 |
+| Array     | `["A","B"]`       | Multiple values              |
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Operator :
+An operator is a special symbol used to perform an operation on values or variables.
+
+| Operator Type             | What it does                                 | Operators                 | Simple Example                  |
+| ------------------------- | -------------------------------------------- | ------------------------- | ------------------------------- |
+| **Arithmetic**            | Does mathematical calculations               | `+ - * / % **`            | `10 + 5 = 15`                   |
+| **Assignment**            | Gives/updates a value                        | `= += -= *= /= %=`        | `x = 10`                        |
+| **Comparison**            | Compares two values                          | `== === != !== > < >= <=` | `10 > 5` → `true`               |
+| **Logical**               | Combines conditions                          | `&& \|\| !`               | `age > 18 && age < 30`          |
+| **Increment / Decrement** | Increases/decreases by 1                     | `++ --`                   | `x++`                           |
+| **Ternary**               | Short `if...else`                            | `? :`                     | `age >= 18 ? "Adult" : "Minor"` |
+| **Type**                  | Checks the data type                         | `typeof`, `instanceof`    | `typeof age`                    |
+| **Bitwise**               | Works with binary bits                       | `& \| ^ ~ << >> >>>`      | `5 & 1`                         |
+| **Nullish Coalescing**    | Gives a default value for `null`/`undefined` | `??`                      | `name ?? "Guest"`               |
+| **Optional Chaining**     | Safely accesses a property                   | `?.`                      | `user?.name`                    |
+
+
+* Type Operators
+typeof
+Used to find the data type of a value.
+Ex: 
+let name = "Urmila";
+let age = 22;
+console.log(typeof name);
+console.log(typeof age);
+
+-----------------------------------------------------------------------------------------------------------------------------
+# Conditional Statement: 
+A conditional statement is used to make a decision in JavaScript.
+
+It checks a condition:
+If the condition is true → one block of code runs.
+If the condition is false → another block can run.
+
+* Types of Conditional Statements
+
+| Statement             | Use                                  |
+| --------------------- | ------------------------------------ |
+| `if`                  | Executes code when condition is true |
+| `if...else`           | Chooses between two conditions       |
+| `if...else if...else` | Checks multiple conditions           |
+| `switch`              | Selects one option from many         |
+| Ternary `?:`          | Short form of `if...else`            |
+
+
+1. if Statement
+Used when you want to execute code only when a condition is true.
+Syntax: if (condition) {
+    // code
+}
+
+EX: let age = 20;
+if (age >= 18) {
+    console.log("Adult");
+}
+
+2. if...else Statement
+Used when there are two possibilities.
+Syntax: if (condition) {
+    // if condition is true
+} else {
+    // if condition is false
+}
+
+EX: let age = 16;
+
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+3. if...else if...else
+Used when you have multiple conditions.
+
+EX: let marks = 75;
+
+if (marks >= 90) {
+    console.log("Grade A+");
+} else if (marks >= 75) {
+    console.log("Grade A");
+} else if (marks >= 60) {
+    console.log("Grade B");
+} else {
+    console.log("Fail");
+}
+
+4. Ternary Operator
+The ternary operator is a short way to write if...else.
+
+Ex: let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
+
+--------------------------------------------------------------------------------------------------------------------
