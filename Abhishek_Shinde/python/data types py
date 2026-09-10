@@ -1,0 +1,274 @@
+print("List Methods in Python:-")
+
+num = [10, 50, 30, 40, 20, 70]
+
+print(len(num))
+print(max(num))
+print(min(num))
+print(sum(num))
+print(type(num))
+
+# Essential List Methods in Python:-
+
+# Adding Elements
+num.append(60)  # Adds an element to the end
+print(num)
+num.insert(2, 25)  # Inserts an element at a specific index
+print(num)
+num.extend([70, 80])  # Adds multiple elements to the end
+print(num)
+
+# Removing elements:-
+
+num.remove(30)  # Removes the first occurrence of a value
+print(num)
+
+num.pop(4)  # Removes an element at a specific index
+print(num)
+
+num.clear()  # Removes all elements from the list
+print(num)
+
+# Sorting & Utility Functions:-
+
+num = [10, 50, 30, 40, 20, 70]
+
+num.sort()  # Sorts the list in ascending order
+print(num)
+
+num.reverse()  # Reverses the order of elements in the list
+print(num)
+
+print(num.count(70))  # Counts the occurrences of a value in the list
+
+print(num.index(50))  # Returns the index of the first occurrence of a value
+
+num.sort(reverse=True)
+print(num)
+
+num1 = num.copy()  # Creates a shallow copy of the list
+print(num1)
+
+Important String Methods in Python
+
+1. upper()
+
+Converts all characters to uppercase.
+
+text = "hello"
+print(text.upper())
+
+Output:
+
+HELLO
+2. lower()
+
+Converts all characters to lowercase.
+
+text = "HELLO"
+print(text.lower())
+
+Output:
+
+hello
+
+3. capitalize()
+
+Converts the first character to uppercase.
+
+text = "hello world"
+print(text.capitalize())
+
+Output:
+
+Hello world
+
+4. title()
+
+Converts the first character of every word to uppercase.
+
+text = "hello world"
+print(text.title())
+
+Output:
+
+Hello World
+
+5. strip()
+
+Removes spaces from the beginning and end of a string.
+
+text = "  hello  "
+print(text.strip())
+
+Output:
+
+hello
+
+6. replace()
+
+Replaces one part of a string with another.
+
+text = "I like Java"
+print(text.replace("Java", "Python"))
+
+Output:
+
+I like Python
+
+7. split()
+
+Breaks a string into a list.
+
+text = "apple banana mango"
+print(text.split())
+
+Output:
+
+['apple', 'banana', 'mango']
+
+You can also specify a separator:
+
+text = "apple,banana,mango"
+print(text.split(","))
+
+Output:
+
+['apple', 'banana', 'mango']
+
+8. join()
+
+Joins elements of a list into a string.
+
+words = ["Hello", "World"]
+
+print(" ".join(words))
+
+Output:
+
+Hello World
+
+Another example:
+
+print("-".join(["2026", "09", "10"]))
+
+Output:
+
+2026-09-10
+
+9. find()
+
+Finds the position (index) of a substring.
+
+text = "hello"
+
+print(text.find("e"))
+
+Output:
+
+1
+
+If the text is not found, it returns -1.
+
+print(text.find("z"))
+
+Output:
+
+-1
+
+10. count()
+
+Counts how many times something occurs.
+
+text = "banana"
+
+print(text.count("a"))
+
+Output:
+
+3
+
+11. startswith()
+
+Checks whether a string starts with a particular value.
+
+text = "Python"
+
+print(text.startswith("Py"))
+
+Output:
+
+True
+
+12. endswith()
+
+Checks whether a string ends with a particular value.
+
+text = "Python"
+
+print(text.endswith("on"))
+
+Output:
+
+True
+
+13. isdigit()
+
+Checks whether all characters are digits.
+
+text = "12345"
+
+print(text.isdigit())
+
+Output:
+
+True
+text = "123abc"
+
+print(text.isdigit())
+
+Output:
+
+False
+
+14. isalpha()
+
+Checks whether all characters are alphabets.
+
+text = "Python"
+
+print(text.isalpha())
+
+Output:
+
+True
+
+15. isalnum()
+
+Checks whether all characters are letters or numbers.
+
+text = "Python123"
+
+print(text.isalnum())
+
+Output:
+
+True
+
+Quick Revision
+Method	Meaning
+upper()	Convert to uppercase
+lower()	Convert to lowercase
+capitalize()	First letter uppercase
+title()	First letter of every word uppercase
+strip()	Remove spaces from ends
+replace()	Replace text
+split()	String → List
+join()	List → String
+find()	Find position
+count()	Count occurrences
+startswith()	Check beginning
+endswith()	Check ending
+isdigit()	Check digits
+isalpha()	Check alphabets
+isalnum()	Check letters/numbers
