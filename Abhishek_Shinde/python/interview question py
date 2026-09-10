@@ -338,4 +338,32 @@ Python Internship Notes: Day 8 (9/9/26):- Strings & String Methods
                     print("Final list:", fruits)
 
         
-    
+   # Difference between shallow copy and deep copy:
+
+Shallow copy                            deep copy	
+
+
+Copies only the outer object	-   Copies the outer object and all nested objects
+Nested objects are shared       -	Nested objects are independent
+Faster                          - and uses less memory	Slower and uses more memory
+Changes to nested data affect both copies-	Changes do not affect the other copy
+
+Example
+python
+
+Collapse
+
+
+ Copy
+
+import copy
+
+original = [[1, 2], [3, 4]]
+
+shallow = copy.copy(original)
+deep = copy.deepcopy(original)
+
+original[0][0] = 100
+
+print(shallow)  # [[100, 2], [3, 4]]
+print(deep)     # [[1, 2], [3, 4]]
