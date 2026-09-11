@@ -144,6 +144,14 @@ print(list[:-1])
 print(list[::-1])
 print(list[-7][-4])
 
+print()
+print("Indexing And Slicing of Nested Lists in Python:-")
+l1 = [1,2,3,[7,3],[3,8],4,5] 
+
+print(l1[3][0], l1[3][1])
+print(l1[3][0:2])
+print(l1[-4][0:2])
+
 
 
 print()

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. To check weather a given number is Odd or Even.
+        let number = 10
+        if (number % 2 === 0) {
+            console.log("Even Number");
+        } else {
+            console.log("Odd Number");
+        }
+
+
+        //2.Write a JavaScript program to find the largest number between two variables a and b. Print the result.
+        let a = 25;
+        let b = 15;
+        if (a > b) {
+            console.log("Largest number is:", a);
+        } else {
+            console.log("Largest number is:", b);
+        }
+
+
+        //3.Write a JavaScript program that takes a variable marks and prints the grade based on the following conditions:
+        //80 and above → Grade A
+        //60 to 79 → Grade B
+        //40 to 59 → Grade C
+        //Below 35 → Fail
+        
+        let marks = 75;
+        if (marks >= 80) {
+            console.log("Grade A");
+        } else if (marks >= 60) {
+            console.log("Grade B");
+        } else if (marks >= 40) {
+            console.log("Grade C");
+        } else if (marks < 35) {
+            console.log("Fail");
+        } else {
+            console.log("Marks are between 35 and 39");
+        }
+
+
+        //4.Write a JavaScript program that checks login credentials. If “username” is “admin” and “password” is “1234”, print “Login Successfully” Otherwise, print “invalid credentials”
+        let username = "admin";
+        let password = "1234";
+        if (username === "admin" && password === "1234") {
+            console.log("Login Successfully");
+        } else {
+            console.log("Invalid Credentials");
+        }
+
+        
+        //5.Write a JavaScript program that compares two numbers a and b using the ternary operator.
+        let x = 20;
+        let y = 15;
+        console.log(x > y ? "x is greater" : "y is greater");
+
+    //Output:
+    //1.Even Number
+    //2.Largest number is: 25
+    //3.Grade B
+    //4.Login Successfully
+    //5.x is greater   
+
+    
+    </script>
+    
+</body>
+</html>

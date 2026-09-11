@@ -572,7 +572,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 08, 09 & 10:-
+    Internship Day 08, 09 & 10(7/9/26 to 9/9/26):-
 
         Python Notes Day 6, 7 & 8:- Data Types:- Primary And Collective Data Types:-
 
@@ -788,3 +788,202 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     print("Final list:", fruits)
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+    Internship Day 11(10/9/26):-
+
+        Python Notes Day 9:- Dictionary, Dict Methods and functions:-
+
+            1. Introduction to Dictionary:-
+
+                Definition:-
+                    A Dictionary is an unordered collection of data stored in key-value pairs.
+                
+                Syntax: dict_name = {key: value, key: value}
+                
+                Dictionary uses keys for accessing values instead of numerical indexes.
+                Duplicate keys are not allowed, but duplicate values are allowed.
+                Dictionaries are mutable, meaning their data can be changed after creation.
+
+            2. Creating a Dictionary
+
+                Example:
+                dict1 = {"id": 123, "name": "anuj", "age": 23, "mob_no": 1234567890}
+
+                Here:
+                    "id", "name", "age", and "mob_no" are called Keys.
+                    123, "anuj", 23, and 1234567890 are called Values.
+                    Each key is connected to its value using a colon (:).
+
+            3. Accessing Dictionary Values
+
+                Dictionary values can be accessed using their corresponding keys.
+
+                Example:
+                dict1 = {"id": 123, "name": "anuj", "age": 23, "mob_no": 1234567890}
+                print(dict1["mob_no"])
+
+                Output:
+                1234567890
+
+                We can also use the get() method to access a value.
+
+                Example:
+                print(dict1.get("name"))
+
+                Output:
+                anuj
+
+                Difference between [] and get():
+
+                | Method        | Description                               | If Key Does Not Exist   |
+                |---------------|-------------------------------------------|-------------------------|
+                | dict[key]     | Directly accesses the value using the key | Raises KeyError         |
+                | dict.get(key) | Returns the value associated with the key | Returns None by default |
+
+            4. Dictionary Methods
+
+                1. keys():- Returns all the keys present in the dictionary.
+
+                    Example:
+                    dict1 = {"id": 123, "name": "anuj", "age": 23, "mob_no": 1234567890}
+                    print(dict1.keys())
+
+                2. values():- Returns all the values present in the dictionary.
+
+                    Example:
+                    print(dict1.values())
+
+                3. items():- Returns all key-value pairs as dictionary items.
+
+                    Example:
+                    print(dict1.items())
+
+                4. get(key):- Returns the value associated with the specified key.
+
+                    Example:
+                    print(dict1.get("name"))
+
+                5. copy():- Creates a copy of the dictionary.
+
+                    Example:
+                    dict2 = dict1.copy()
+                    print(dict2)
+
+                6. clear():- Removes all items from the dictionary.
+
+                    Example:
+                    dict1.clear()
+                    print(dict1)
+
+                    Output:
+                    {}
+
+            5. Removing Elements from Dictionary
+
+                1. pop(key): Removes the specified key and its corresponding value from the dictionary and returns the removed value.
+
+                    Example:
+                    dict1 = {"id": 123, "name": "anuj", "age": 23}
+                    print(dict1.pop("id"))
+                    print(dict1)
+
+                2. popitem(): Removes and returns the last inserted key-value pair from the dictionary.
+
+                    Example:
+                    dict1 = {"id": 123, "name": "anuj", "age": 23}
+                    print(dict1.popitem())
+                    print(dict1)
+
+            6. Updating a Dictionary
+
+                The update() method is used to add new key-value pairs or modify the value of an existing key.
+
+                Example:
+                dict1 = {"id": 123, "name": "anuj", "age": 23}
+                dict1.update({"id": 456})
+                print(dict1)
+
+                Output:
+                {'id': 456, 'name': 'anuj', 'age': 23}
+
+                In this example, the value of the existing key "id" is changed from 123 to 456.
+
+            7. Duplicate Keys and Duplicate Values
+
+                Dictionary keys must be unique. If the same key is written more than once, the latest value replaces the previous value.
+
+                Example:
+                dict1 = {"id": 123, "name": "anuj", "id": 456}
+                print(dict1)
+
+                Output:
+                {'id': 456, 'name': 'anuj'}
+
+                Duplicate values are allowed in a dictionary.
+
+                Example:
+                dict1 = {"id": 123, "age": 123, "marks": 123}
+                print(dict1)
+
+                Output:
+                {'id': 123, 'age': 123, 'marks': 123}
+
+            8. Mutable Nature of Dictionary
+
+                A dictionary is mutable, which means we can change, add, or remove its elements after creating it.
+
+                Example:
+                dict1 = {"id": 123, "name": "anuj", "age": 23}
+                dict1["age"] = 24
+                print(dict1)
+
+                Output:
+                {'id': 123, 'name': 'anuj', 'age': 24}
+
+            9. Important Dictionary Points
+
+                * Dictionary stores data in key-value pairs.
+                * Keys are used to access dictionary values.
+                * Dictionary keys must be unique.
+                * Duplicate values are allowed.
+                * Dictionary is mutable.
+                * Dictionary does not use numerical indexing like a list.
+                * get() can be used to safely access a value using a key.
+                * update() is used to add or modify key-value pairs.
+                * pop() removes a specified key-value pair.
+                * popitem() removes the last inserted key-value pair.
+                * clear() removes all elements from the dictionary.
+                * copy() creates a copy of the dictionary.
+
+            10. Quick Revision
+
+                | Method    | Purpose                                  |
+                |-----------|------------------------------------------|
+                | keys()    | Returns all keys                         |
+                | values()  | Returns all values                       |
+                | items()   | Returns all key-value pairs              |
+                | get()     | Accesses a value using a key             |
+                | copy()    | Creates a copy of the dictionary         |
+                | clear()   | Removes all elements                     |
+                | pop()     | Removes a specified key-value pair       |
+                | popitem() | Removes the last inserted key-value pair |
+                | update()  | Adds or updates key-value pairs          |
+
+            11. Nested Dictionary
+
+                A nested dictionary means a dictionary containing another dictionary as its value.
+
+                Example:
+                    dict2 = {"student1": {"id": 123, "name": "anuj", "age": 23}, "student2": {"id": 124, "name": "rahul", "age": 24}}
+
+                    Nested dictionaries are useful for storing structured or related data.
+
+                Important:
+                    The example with two dictionaries written inside double curly braces is not a valid dictionary structure in Python 
+                    because dictionaries are not hashable and cannot be directly stored as elements of a set.
+                    If you want to store multiple dictionaries, use a list.
+
+                Example:
+                    dict2 = [{"id": 123, "name": "anuj", "age": 23}, {"id": 124, "name": "rahul", "age": 24}]
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
