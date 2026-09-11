@@ -104,3 +104,8 @@ print(bin(b))
 a=0b1101
 b=a>>3
 print(b)
+
+#slicing
+#string
+a="Mayuri devidas jadhav"
+print(a.capitalize())

@@ -605,3 +605,8 @@ print("Division =", a / b)
 print("Modulus =", a % b)
 print("Floor Division =", a // b)
 print("Exponent =", a ** b)
+
+
+
+l1 = [1,2,3[7,3],[3,8],4,5]
+print(l1.index(3:2))
