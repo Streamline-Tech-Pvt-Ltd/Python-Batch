@@ -650,4 +650,43 @@ age
 marks
 
 
+58. What is the difference between slice() and substring()?
+Expected answer:
+Both are used to extract a part of a string. The main difference is that slice() supports negative indexes, while substring() treats negative indexes as 0.
+let text = "JavaScript";
+console.log(text.slice(-6));       // Script
+console.log(text.substring(0, 4)); // Java
+
+59. What is the difference between == and ===?
+console.log(5 == "5");   // true
+console.log(5 === "5");  // false
+
+Expected answer:
+== compares values with type conversion, while === compares both value and data type without type conversion.
+
+60. What is the difference between indexOf() and includes()?
+let text = "JavaScript";
+console.log(text.indexOf("S"));   // 4
+console.log(text.includes("S"));  // true
+indexOf() returns the index of the first occurrence, while includes() returns true or false.
+
+61. What is the difference between replace() and replaceAll()?
+let text = "Java Java";
+console.log(text.replace("Java", "Python"));
+// Python Java
+
+console.log(text.replaceAll("Java", "Python"));
+// Python Python
+replace() replaces the first matching occurrence, while replaceAll() replaces all matching occurrences.
+
+62. What is split() and why is it used?
+Expected answer:
+split() divides a string into an array based on a specified separator.
+let names = "Pallavi,Urmila,Sujit";
+console.log(names.split(","));
+Output:
+
+["Pallavi", "Jay", "Sarthak","Disha"]
+
+
 
