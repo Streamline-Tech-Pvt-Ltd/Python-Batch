@@ -295,32 +295,359 @@ Returns a truthy result when at least one condition is truthy.
 let age = 20;
 age < 18 || age > 18
 
+40. What is an if statement?
+Expected answer:
+The if statement is used to execute a block of code only when a specified condition is true.
+let age = 20;
+if (age >= 18) {
+    console.log("Eligible to vote");
+}
+Interview point:
+If the condition is false, the code inside if does not execute.
 
-5. Conditions & Control Statements
-What is an if statement in JavaScript?
-What is an if...else statement?
-What is an else if statement?
-What is a nested if statement?
-What is the switch statement?
-What is the difference between if...else and switch?
-What is the break statement?
-What is the continue statement?
-What is a loop?
-Why are loops used in JavaScript?
-6. Loops
-What is a for loop?
-What is a while loop?
-What is a do...while loop?
-What is the difference between for, while, and do...while?
-What is an infinite loop?
-What is a nested loop?
-Can we use break inside a loop?
-Can we use continue inside a loop?
-What is a for...of loop?
-What is a for...in loop?
-What is the difference between for...of and for...in?
-7. Type Conversion & Coercion
-What is type conversion in JavaScript?
-What is implicit type conversion?
-What is explicit type conversion?
-What is type coercion in JavaScript?
+41. What is the difference between if, else, and else if?
+Expected answer:
+if checks the first condition, else if checks another condition when the previous condition is false, and else executes when none of the conditions are true.
+let marks = 75;
+if (marks >= 90) {
+    console.log("A");
+} else if (marks >= 60) {
+    console.log("B");
+} else {
+    console.log("C");
+}
+
+Important: You can have multiple else if blocks, but only one starting if.
+
+42. What is the difference between == and ===?
+⭐ Very common interview question
+Expected answer:
+== compares values after type conversion, whereas === compares both value and data type without type conversion.
+
+console.log(5 == "5");    // true
+console.log(5 === "5");   // false
+Comparison
+| `==`                     | `===`                            |
+| ------------------------ | -------------------------------- |
+| Loose equality           | Strict equality                  |
+| Checks value             | Checks value + type              |
+| Performs type conversion | Does not perform type conversion |
+| Less strict              | More strict                      |
+
+
+
+43. What are truthy and falsy values?
+Expected answer:
+Truthy values behave like true in a condition, while falsy values behave like false.
+Important falsy values:
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+Example:
+let name = "";
+if (name) {
+    console.log("Name exists");
+} else {
+    console.log("Name is empty");
+}
+Output:
+Name is empty
+Interview question:
+
+Q: Is "0" falsy?
+Answer: No. "0" is a truthy string.
+
+44. What is the ternary operator?
+⭐ Very common
+Expected answer:
+The ternary operator is a short way of writing a simple if...else condition.
+Syntax:
+condition ? valueIfTrue : valueIfFalse;
+
+Example:
+let age = 20;
+let result = age >= 18 ? "Eligible" : "Not Eligible";
+console.log(result);
+
+Output:
+Eligible
+Interview question:
+
+45: Why is it called ternary?
+Answer:
+Because it has three parts: a condition, a value for true, and a value for false.
+
+46. What is a switch statement?
+Expected answer:
+A switch statement is used to execute different blocks of code based on different possible values of an expression.
+Example:
+let day = 2;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    case 3:
+        console.log("Wednesday");
+        break;
+
+    default:
+        console.log("Invalid day");
+}
+
+Important keywords:
+| Keyword   | Purpose                   |
+| --------- | ------------------------- |
+| `switch`  | Starts switch statement   |
+| `case`    | Defines possible value    |
+| `break`   | Stops execution           |
+| `default` | Runs when no case matches |
+
+
+47. What is the difference between break and continue?
+
+⭐ Very importan
+Expected answer:
+break completely terminates the loop, while continue skips the current iteration and moves to the next iteration.
+
+break
+for (let i = 1; i <= 5; i++) {
+    if (i == 3) {
+        break;
+    }
+    console.log(i);
+}
+
+Output:
+1
+2
+
+
+continue
+for (let i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;
+    }
+    console.log(i);
+}
+
+Output:
+1
+2
+4
+5
+Easy way to remember:
+break → Stop the loop
+continue → Skip current iteration
+
+48. What is a for loop?
+Expected answer:
+A for loop is used to repeatedly execute a block of code when the number of iterations is known or easily controlled.
+Syntax:
+for (initialization; condition; increment/decrement) {
+    // code
+}
+
+Example:
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+Output:
+1
+2
+3
+4
+5
+Three important parts:
+Initialization → Condition → Increment/Decrement
+
+49. What is a while loop?
+Expected answer:
+A while loop repeatedly executes code as long as the specified condition is true.
+Syntax:
+while (condition) {
+    // code
+}
+Example:
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+Output:
+1
+2
+3
+4
+5
+
+50. What is a do...while loop?
+Expected answer:
+A do...while loop executes the code block first and then checks the condition. Therefore, it executes at least once.
+Example:
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+Output:
+1
+2
+3
+4
+5
+Important interview question:
+
+51: Which loop executes at least once?
+Answer:
+do...while loop.
+Example:
+let i = 10;
+do {
+    console.log(i);
+} while (i < 5);
+
+Output:
+10
+
+
+52. What is an infinite loop?
+⭐ Important
+Expected answer:
+An infinite loop is a loop that never becomes false and therefore continues executing indefinitely.
+Example:
+
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+}
+
+Here, i is never increased, so the condition always remains true.
+Correct version:
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+53. What is a nested loop?
+Expected answer:
+A nested loop is a loop inside another loop.
+Example:
+for (let i = 1; i <= 3; i++) {
+
+    for (let j = 1; j <= 3; j++) {
+        console.log(i, j);
+    }
+}
+
+The outer loop executes, and for each outer iteration, the inner loop executes completely.
+
+Common uses:
+Pattern programs
+Matrix operations
+Comparing elements
+Working with 2D arrays
+
+54. What is array traversal using loops?
+Expected answer:
+Array traversal means visiting or accessing each element of an array one by one using a loop.
+Example:
+let numbers = [10, 20, 30, 40];
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+Output:
+10
+20
+30
+40
+Using for...of
+let numbers = [10, 20, 30, 40];
+for (let number of numbers) {
+    console.log(number);
+}
+
+
+
+55. Difference between for, while, and do...while
+⭐ Extremely important interview question
+Expected answer:
+for is generally used when the number of iterations is known, while is used when the condition controls the repetition, and do...while is used when the code must execute at least once.
+
+| Feature           | `for`               | `while`         | `do...while`      |
+| ----------------- | ------------------- | --------------- | ----------------- |
+| Condition checked | Before              | Before          | After             |
+| Minimum execution | 0                   | 0               | **1**             |
+| Best used when    | Iterations known    | Condition-based | Must execute once |
+| Initialization    | Usually inside      | Usually before  | Usually before    |
+| Increment         | Usually inside loop | Usually inside  | Usually inside    |
+
+Example
+for:
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+while:
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+do...while:
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+
+56. What is for...of?
+Expected answer:
+for...of is used to iterate over the values of an iterable such as an array or string.
+let fruits = ["Apple", "Mango", "Banana"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+
+Output:
+Apple
+Mango
+Banana
+
+
+57. What is for...in?
+Expected answer:
+for...in is mainly used to iterate over the enumerable property keys of an object.
+
+let student = {
+    name: "Pallavi",
+    age: 21,
+    marks: 85
+};
+for (let key in student) {
+    console.log(key);
+}
+
+Output:
+name
+age
+marks
+
+
+
