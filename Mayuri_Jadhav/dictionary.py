@@ -13,9 +13,11 @@ student = {
 
 print(student)
 
+
 **Output:**
 
 {'name': 'Mayuri', 'age': 22, 'city': 'Pune'}
+
 
 ## Dictionary Rules
 
@@ -34,6 +36,7 @@ print(student)
 
 Returns all keys.
 
+
 student = {"name": "Mayuri", "age": 22}
 
 print(student.keys())
@@ -41,23 +44,38 @@ print(student.keys())
 
 **Output:**
 
+
 dict_keys(['name', 'age'])
+
+
 
 ## 2. `values()`
 
 Returns all values.
 
+
+
 student = {"name": "Mayuri", "age": 22}
 
 print(student.values())
 
+
 **Output:**
 
+
 dict_values(['Mayuri', 22])
+
+
+
+
+
+
 
 ## 3. `items()`
 
 Returns all key-value pairs.
+
+
 
 student = {"name": "Mayuri", "age": 22}
 
@@ -66,9 +84,8 @@ print(student.items())
 
 **Output:**
 
+
 dict_items([('name', 'Mayuri'), ('age', 22)])
-
-
 
 
 ## 4. `get()`
@@ -76,19 +93,23 @@ dict_items([('name', 'Mayuri'), ('age', 22)])
 Returns the value of a key.
 
 
+
 student = {"name": "Mayuri", "age": 22}
 
 print(student.get("name"))
-```
+
 
 **Output:**
 
+
 Mayuri
+
 
 
 ## 5. `update()`
 
 Adds or updates data.
+
 
 
 student = {"name": "Mayuri", "age": 22}
@@ -97,7 +118,9 @@ student.update({"city": "Pune"})
 
 print(student)
 
+
 **Output:**
+
 
 {'name': 'Mayuri', 'age': 22, 'city': 'Pune'}
 
@@ -106,14 +129,16 @@ print(student)
 Creates a copy of the dictionary.
 
 
+
 student = {"name": "Mayuri", "age": 22}
 
 student2 = student.copy()
 
 print(student2)
-```
+
 
 **Output:**
+
 
 {'name': 'Mayuri', 'age': 22}
 
@@ -121,6 +146,8 @@ print(student2)
 ## 7. `pop()`
 
 Removes a specific key.
+
+
 
 student = {"name": "Mayuri", "age": 22}
 
@@ -135,11 +162,10 @@ print(student)
 {'name': 'Mayuri'}
 
 
----
-
 ## 8. `popitem()`
 
 Removes the last key-value pair.
+
 
 
 student = {
@@ -151,9 +177,10 @@ student = {
 student.popitem()
 
 print(student)
-```
+
 
 **Output:**
+
 
 {'name': 'Mayuri', 'age': 22}
 
@@ -164,20 +191,25 @@ Returns the value if the key exists.
 If the key does not exist, it adds the key.
 
 
+
 student = {"name": "Mayuri", "age": 22}
 
 student.setdefault("city", "Pune")
 
 print(student)
 
+
 **Output:**
+
 
 {'name': 'Mayuri', 'age': 22, 'city': 'Pune'}
 
 
-## 10. `clear()
+## 10. `clear()`
 
 Removes all items.
+
+
 
 student = {"name": "Mayuri", "age": 22}
 
@@ -185,7 +217,9 @@ student.clear()
 
 print(student)
 
+
 **Output:**
+
 
 {}
 
@@ -195,17 +229,22 @@ print(student)
 Creates a new dictionary using given keys.
 
 
+
 keys = ["name", "age", "city"]
 
 student = dict.fromkeys(keys)
 
 print(student)
 
+
 **Output:**
+
 
 {'name': None, 'age': None, 'city': None}
 
+
 ### With Default Value
+
 
 
 keys = ["name", "age", "city"]
@@ -214,7 +253,9 @@ student = dict.fromkeys(keys, "Unknown")
 
 print(student)
 
+
 **Output:**
+
 
 {'name': 'Unknown', 'age': 'Unknown', 'city': 'Unknown'}
 
@@ -222,7 +263,8 @@ print(student)
 # Quick Revision
 
 | Method         | Use                         |
-| -------------- | --------------------------- |
+|
+ |
 | `keys()`       | Get all keys                |
 | `values()`     | Get all values              |
 | `items()`      | Get key + value             |
