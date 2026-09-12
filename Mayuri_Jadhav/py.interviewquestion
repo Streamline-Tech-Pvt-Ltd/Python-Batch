@@ -15,12 +15,11 @@ Python is used in various fields such as:
 * Automation
 * Software Development
 
----
 
 ## Q2. Difference Between Static and Dynamic Typing
 
 | Point                | Static Typing        | Dynamic Typing              |
-| -------------------- | -------------------- | --------------------------- |
+|-- |-- | |
 | Data Type            | Declared explicitly  | Determined automatically    |
 | Type Checking        | Done at compile time | Done at runtime             |
 | Variable Declaration | Type is required     | Type is not required        |
@@ -30,7 +29,6 @@ Python is used in various fields such as:
 | Examples             | Java, C, C++         | Python, JavaScript          |
 | Python               | Not statically typed | Python is dynamically typed |
 
----
 
 ## Q3. Explain Indentation in Python
 
@@ -40,10 +38,8 @@ Python uses indentation instead of `{ }` braces.
 
 ### Example
 
-```python
 if 10 > 5:
     print("10 is greater")
-```
 
 Here, the spaces before `print()` are called indentation.
 
@@ -53,12 +49,11 @@ Here, the spaces before `print()` are called indentation.
 
 Indentation is used to define blocks of code such as `if`, `for`, `while`, and functions.
 
----
 
 ## Q4. Difference Between Compiler and Interpreter
 
 | Point           | Compiler                              | Interpreter                                   |
-| --------------- | ------------------------------------- | --------------------------------------------- |
+| |- | |
 | Translation     | Translates the whole program at once  | Translates code line by line                  |
 | Execution       | Executes after compilation            | Executes during translation                   |
 | Error Detection | Shows errors after compiling          | Shows errors line by line                     |
@@ -68,7 +63,6 @@ Indentation is used to define blocks of code such as `if`, `for`, `while`, and f
 | Examples        | C, C++                                | Python                                        |
 | Process         | Compile → Run                         | Translate and Run                             |
 
----
 
 ## Q5. What is meant by Python is a High-Level Language?
 
@@ -78,11 +72,7 @@ Python uses simple English-like syntax and hides complex hardware-level operatio
 
 ### Example
 
-```python
 print("Hello")
-```
-
----
 
 ## Q6. What is OOP?
 
@@ -97,7 +87,6 @@ It is a programming approach based on objects and classes.
 3. Polymorphism
 4. Abstraction
 
----
 
 ## Q7. What is an IDE?
 
@@ -112,7 +101,6 @@ It is software that provides tools for writing, running, debugging, and managing
 * Jupyter Notebook
 * Spyder
 
----
 
 ## Q8. What are the Applications of Python?
 
@@ -128,12 +116,11 @@ Python is used in:
 * Desktop Applications
 * Game Development
 
----
 
 ## Q9. Difference Between High-Level and Low-Level Language
 
 | Point              | High-Level Language         | Low-Level Language               |
-| ------------------ | --------------------------- | -------------------------------- |
+| | |-- |
 | Readability        | Easy to read and understand | Difficult to read and understand |
 | Syntax             | Simple and human-friendly   | Complex and machine-oriented     |
 | Programming        | Easier to write             | Difficult to write               |
@@ -143,7 +130,6 @@ Python is used in:
 | Examples           | Python, Java                | Assembly, Machine Language       |
 | Abstraction        | High level of abstraction   | Low level of abstraction         |
 
----
 
 # Variables
 
@@ -153,20 +139,17 @@ A variable is a name used to store data.
 
 ### Example
 
-```python
 name = "Mayuri"
 age = 22
 
 print(name)
 print(age)
-```
 
 Here:
 
 * `name` stores `"Mayuri"`
 * `age` stores `22`
 
----
 
 ## Variable Naming Rules
 
@@ -179,21 +162,15 @@ Here:
 
 ### Valid Variables
 
-```python
 name = "Mayuri"
 _age = 22
 student_name = "Mayuri"
-```
 
 ### Invalid Variables
 
-```python
 2name = "Mayuri"
 student name = "Mayuri"
 class = "Python"
-```
-
----
 
 ## Variable Interview Questions
 
@@ -209,15 +186,11 @@ No. Python automatically determines the data type.
 
 Yes.
 
-```python
 name = "Mayuri"
 Name = "Python"
 
 print(name)
 print(Name)
-```
-
----
 
 # Data Types
 
@@ -225,12 +198,11 @@ print(Name)
 
 A data type defines the type of value stored in a variable.
 
----
 
 ## Main Data Types in Python
 
 | Data Type  | Description                           | Example              |
-| ---------- | ------------------------------------- | -------------------- |
+|- |- |-- |
 | `int`      | Integer numbers                       | `10`                 |
 | `float`    | Decimal numbers                       | `10.5`               |
 | `complex`  | Complex numbers                       | `2 + 3j`             |
@@ -242,13 +214,11 @@ A data type defines the type of value stored in a variable.
 | `bool`     | True or False                         | `True`               |
 | `NoneType` | Represents no value                   | `None`               |
 
----
 
 ## Program to Check Data Type
 
 We use the `type()` function to check the data type of a variable.
 
-```python
 a = 10
 b = 10.5
 name = "Mayuri"
@@ -262,20 +232,14 @@ print(type(name))
 print(type(numbers))
 print(type(data))
 print(type(status))
-```
 
 ### Output
-
-```text
 <class 'int'>
 <class 'float'>
 <class 'str'>
 <class 'list'>
 <class 'dict'>
 <class 'bool'>
-```
-
----
 
 ## Data Type Interview Questions
 
@@ -287,25 +251,17 @@ A data type defines the type of data stored in a variable.
 
 Using the `type()` function.
 
-```python
 x = 10
 
 print(type(x))
-```
 
 ### Q: What is the output of `type(10)`?
 
-```python
 <class 'int'>
-```
 
 ### Q: What is the output of `type("Python")`?
 
-```python
 <class 'str'>
-```
-
----
 
 # id() Function
 
@@ -317,53 +273,40 @@ In CPython, this identity is commonly related to the object's memory address dur
 
 ### Syntax
 
-```python
 id(object)
-```
-
----
 
 ## Program to Check Object Identity
 
-```python
 a = 10
 
 print(id(a))
-```
 
 The output will be a unique numeric identity value.
 
 > The exact value can be different on different systems and program executions.
 
----
 
 ## Program with Two Variables
 
-```python
 a = 10
 b = 10
 
 print(id(a))
 print(id(b))
-```
 
 You can compare the identity values to see whether both variables refer to the same object.
 
----
 
 ## Program to Check Identity Using `id()`
 
-```python
 a = [1, 2, 3]
 b = a
 
 print(id(a))
 print(id(b))
-```
 
 Here, `a` and `b` refer to the same object, so their `id()` values are the same.
 
----
 
 ## `id()` Interview Questions
 
@@ -375,31 +318,25 @@ The `id()` function is used to get the unique identity of an object.
 
 Using the `is` operator or by comparing their `id()` values.
 
-```python
 a = [1, 2, 3]
 b = a
 
 print(a is b)
 print(id(a) == id(b))
-```
 
 ### Q: What is the difference between `id()` and `type()`?
 
 | `id()`                     | `type()`                       |
-| -------------------------- | ------------------------------ |
+|-- | |
 | Returns object identity    | Returns data type              |
 | Used to identify an object | Used to check the type of data |
 
 Example:
 
-```python
 a = 10
 
 print(id(a))
 print(type(a))
-```
-
----
 
 # Keywords
 
@@ -411,33 +348,22 @@ Keywords cannot be used as variable names.
 
 ### Example
 
-```python
 if = 10
-```
 
 This will give an error because `if` is a Python keyword.
 
----
 
 ## Program to Display All Python Keywords
 
-```python
 import keyword
 
 print(keyword.kwlist)
-```
-
----
 
 ## Program to Count Python Keywords
 
-```python
 import keyword
 
 print(len(keyword.kwlist))
-```
-
----
 
 ## Keyword Interview Questions
 
@@ -451,13 +377,9 @@ No.
 
 ### Q: How can you display all Python keywords?
 
-```python
 import keyword
 
 print(keyword.kwlist)
-```
-
----
 
 # Input
 
@@ -467,40 +389,27 @@ The `input()` function is used to take input from the user.
 
 By default, `input()` returns data as a string.
 
----
 
 ## Example
 
-```python
 name = input("Enter your name: ")
 
 print(name)
-```
-
----
 
 ## Integer Input
 
-```python
 age = int(input("Enter your age: "))
 
 print(age)
-```
-
----
 
 ## Input and Calculation Program
 
-```python
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
 sum = num1 + num2
 
 print("Addition =", sum)
-```
-
----
 
 ## Input Interview Questions
 
@@ -514,11 +423,7 @@ String (`str`).
 
 ### Q: How do you take an integer input?
 
-```python
 age = int(input("Enter age: "))
-```
-
----
 
 # Operators
 
@@ -535,7 +440,6 @@ Operators are special symbols used to perform operations on variables and values
 5. Membership Operators
 6. Identity Operators
 
----
 
 # Arithmetic Operators
 
@@ -544,7 +448,7 @@ Operators are special symbols used to perform operations on variables and values
 Arithmetic operators are used to perform mathematical calculations.
 
 | Operator | Meaning        | Example  |
-| -------- | -------------- | -------- |
+|-- |-- |-- |
 | `+`      | Addition       | `a + b`  |
 | `-`      | Subtraction    | `a - b`  |
 | `*`      | Multiplication | `a * b`  |
@@ -555,7 +459,6 @@ Arithmetic operators are used to perform mathematical calculations.
 
 ### Example Program
 
-```python
 a = 10
 b = 3
 
@@ -566,9 +469,6 @@ print("Division =", a / b)
 print("Modulus =", a % b)
 print("Exponent =", a ** b)
 print("Floor Division =", a // b)
-```
-
----
 
 # Comparison Operators
 
@@ -579,7 +479,7 @@ Comparison operators are used to compare two values.
 The result is always `True` or `False`.
 
 | Operator | Meaning                  |
-| -------- | ------------------------ |
+|-- | |
 | `==`     | Equal to                 |
 | `!=`     | Not equal to             |
 | `>`      | Greater than             |
@@ -589,7 +489,6 @@ The result is always `True` or `False`.
 
 ### Example
 
-```python
 a = 10
 b = 20
 
@@ -599,9 +498,6 @@ print(a > b)
 print(a < b)
 print(a >= b)
 print(a <= b)
-```
-
----
 
 # Logical Operators
 
@@ -617,15 +513,11 @@ Logical operators are used to combine conditional statements.
 
 ### Example
 
-```python
 age = 22
 
 print(age > 18 and age < 30)
 print(age > 18 or age > 30)
 print(not True)
-```
-
----
 
 # Bitwise Operators
 
@@ -634,7 +526,7 @@ print(not True)
 Bitwise operators perform operations on binary values.
 
 | Operator | Name        |            |
-| -------- | ----------- | ---------- |
+|-- |-- |- |
 | `&`      | Bitwise AND |            |
 | `        | `           | Bitwise OR |
 | `^`      | Bitwise XOR |            |
@@ -644,7 +536,6 @@ Bitwise operators perform operations on binary values.
 
 ### Example
 
-```python
 a = 5
 b = 3
 
@@ -654,9 +545,6 @@ print(a ^ b)
 print(~a)
 print(a << 1)
 print(a >> 1)
-```
-
----
 
 # Membership Operators
 
@@ -671,14 +559,10 @@ Membership operators are used to check whether a value exists in a sequence.
 
 ### Example
 
-```python
 fruits = ["Apple", "Mango", "Banana"]
 
 print("Apple" in fruits)
 print("Orange" not in fruits)
-```
-
----
 
 # Identity Operators
 
@@ -693,33 +577,25 @@ Identity operators are used to check whether two variables refer to the same obj
 
 ### Example
 
-```python
 a = [1, 2, 3]
 b = a
 
 print(a is b)
-```
-
----
 
 ## Difference Between `==` and `is`
 
 | `==`            | `is`                                         |
-| --------------- | -------------------------------------------- |
+| |-- |
 | Compares values | Compares object identity                     |
 | Checks content  | Checks whether both refer to the same object |
 
 ### Example
 
-```python
 a = [1, 2, 3]
 b = [1, 2, 3]
 
 print(a == b)
 print(a is b)
-```
-
----
 
 # Quick Interview Questions
 
@@ -736,17 +612,13 @@ print(a is b)
 
 Using:
 
-```python
 type(variable)
-```
 
 ### Q: How do you check the identity of an object?
 
 Using:
 
-```python
 id(variable)
-```
 
 ### Q: Which operator checks whether two variables refer to the same object?
 
@@ -756,4 +628,1563 @@ The `is` operator.
 
 * `type()` checks the data type of an object.
 * `id()` returns the unique identity of an object.
+
+# Python Interview Questions & Answers
+
+## List, Set, String, Tuple, Indexing & Slicing
+
+
+# PART 1 — Python Basics
+
+## Q1. What is Python?
+
+**Answer:**
+Python is a **high-level, interpreted, dynamically typed, general-purpose programming language**.
+
+
+## Q2. What are Python's built-in collection data types?
+
+**Answer:**
+The main collection data types are:
+
+* List
+* Tuple
+* Set
+* Dictionary
+
+
+## Q3. What is the difference between mutable and immutable?
+
+**Answer:**
+
+**Mutable** objects can be changed after creation.
+
+Examples:
+List
+Set
+Dictionary
+
+**Immutable** objects cannot be changed after creation.
+
+Examples:
+String
+Tuple
+
+# PART 2 — LIST INTERVIEW QUESTIONS
+
+## Q4. What is a List?
+
+**Answer:**
+A List is an **ordered and mutable collection of comma-separated elements enclosed within square brackets `[]`**.
+
+Example:
+
+a = [10, 20, 30]
+
+## Q5. What are the properties of a List?
+
+**Answer:**
+
+* Ordered
+* Mutable
+* Indexed
+* Supports slicing
+* Allows duplicates
+* Allows different data types
+* Supports positive and negative indexing
+* Supports nested lists
+
+
+## Q6. Is List mutable?
+
+**Answer:**
+Yes, List is mutable.
+
+a = [10, 20, 30]
+a[0] = 100
+
+print(a)
+
+Output:
+[100, 20, 30]
+
+## Q7. Does List allow duplicate elements?
+
+**Answer:**
+Yes.
+
+a = [10, 20, 10, 30]
+
+Duplicates are allowed.
+
+
+## Q8. Can a List contain different data types?
+
+**Answer:**
+Yes.
+
+a = [10, "Python", 20.5, True]
+
+## Q9. Does List support indexing?
+
+**Answer:**
+Yes.
+
+a = [10, 20, 30]
+
+print(a[1])
+
+Output:
+20
+
+## Q10. Does List support negative indexing?
+
+**Answer:**
+Yes.
+
+a = [10, 20, 30]
+
+print(a[-1])
+
+Output:
+30
+
+## Q11. Does List support slicing?
+
+**Answer:**
+Yes.
+
+a = [10, 20, 30, 40]
+
+print(a[1:3])
+
+Output:
+[20, 30]
+
+## Q12. What is `append()`?
+
+**Answer:**
+`append()` adds **one element at the end** of a list.
+
+a = [10, 20]
+
+a.append(30)
+
+print(a)
+
+Output:
+[10, 20, 30]
+
+## Q13. What is `extend()`?
+
+**Answer:**
+`extend()` adds multiple elements to a list.
+
+a = [10, 20]
+
+a.extend([30, 40])
+
+print(a)
+
+Output:
+[10, 20, 30, 40]
+
+## Q14. Difference between `append()` and `extend()`?
+
+**Answer:**
+
+a = [10, 20]
+
+a.append([30, 40])
+
+Result:
+[10, 20, [30, 40]]
+
+Whereas:
+
+a = [10, 20]
+
+a.extend([30, 40])
+
+Result:
+[10, 20, 30, 40]
+
+**append → one object**
+**extend → multiple elements**
+
+
+## Q15. What is `insert()`?
+
+**Answer:**
+`insert()` adds an element at a specific index.
+
+a = [10, 20, 40]
+
+a.insert(2, 30)
+
+print(a)
+
+Output:
+[10, 20, 30, 40]
+
+## Q16. What is `remove()`?
+
+**Answer:**
+`remove()` removes the **first occurrence** of a specified value.
+
+a = [10, 20, 30, 20]
+
+a.remove(20)
+
+print(a)
+
+Output:
+[10, 30, 20]
+
+## Q17. What is `pop()`?
+
+**Answer:**
+`pop()` removes and returns an element using its index. By default, it removes the last element.
+
+a = [10, 20, 30]
+
+print(a.pop())
+
+Output:
+30
+
+## Q18. Difference between `remove()` and `pop()`?
+
+**Answer:**
+remove(value) → removes by value
+pop(index)    → removes by index
+
+## Q19. What is `clear()`?
+
+**Answer:**
+`clear()` removes all elements.
+
+a = [10, 20, 30]
+
+a.clear()
+
+print(a)
+
+Output:
+[]
+
+## Q20. What is `index()`?
+
+**Answer:**
+`index()` returns the index of the first occurrence of a value.
+
+a = [10, 20, 30, 20]
+
+print(a.index(20))
+
+Output:
+1
+
+## Q21. What is `count()`?
+
+**Answer:**
+`count()` returns the number of occurrences of a value.
+
+a = [10, 20, 10, 30]
+
+print(a.count(10))
+
+Output:
+2
+
+## Q22. What is `sort()`?
+
+**Answer:**
+`sort()` sorts the original list.
+
+a = [30, 10, 20]
+
+a.sort()
+
+print(a)
+
+Output:
+[10, 20, 30]
+
+## Q23. What is `reverse()`?
+
+**Answer:**
+`reverse()` reverses the current order of elements.
+
+a = [10, 20, 30]
+
+a.reverse()
+
+print(a)
+
+Output:
+[30, 20, 10]
+
+## Q24. What is `copy()`?
+
+**Answer:**
+`copy()` creates a shallow copy of a list.
+
+a = [10, 20, 30]
+
+b = a.copy()
+
+print(b)
+
+Output:
+[10, 20, 30]
+
+## Q25. How many standard List methods are there?
+
+**Answer:**
+append()
+clear()
+copy()
+count()
+extend()
+index()
+insert()
+pop()
+remove()
+reverse()
+sort()
+
+# PART 3 — TUPLE INTERVIEW QUESTIONS
+
+## Q26. What is a Tuple?
+
+**Answer:**
+A Tuple is an **ordered and immutable collection of comma-separated elements enclosed within parentheses `()`**.
+
+Example:
+
+a = (10, 20, 30)
+
+## Q27. What are the properties of Tuple?
+
+**Answer:**
+
+* Ordered
+* Immutable
+* Indexed
+* Supports slicing
+* Allows duplicates
+* Allows different data types
+* Supports positive indexing
+* Supports negative indexing
+* Supports packing and unpacking
+
+
+## Q28. Is Tuple mutable?
+
+**Answer:**
+No. Tuple is immutable.
+
+a = (10, 20, 30)
+
+a[0] = 100
+
+This gives a `TypeError`.
+
+
+## Q29. Does Tuple allow duplicates?
+
+**Answer:**
+Yes.
+
+a = (10, 20, 10, 30)
+
+## Q30. Does Tuple support indexing?
+
+**Answer:**
+Yes.
+
+a = (10, 20, 30)
+
+print(a[1])
+
+Output:
+20
+
+## Q31. Does Tuple support slicing?
+
+**Answer:**
+Yes.
+
+a = (10, 20, 30, 40)
+
+print(a[1:3])
+
+Output:
+(20, 30)
+
+## Q32. How do you create a single-element Tuple?
+
+**Answer:**
+Use a comma.
+
+a = (10,)
+
+Without comma:
+
+a = (10)
+
+This is an integer, not a tuple.
+
+
+## Q33. Why is comma important in Tuple?
+
+**Answer:**
+The comma is what makes a single value a tuple.
+(10)  → int
+(10,) → tuple
+
+## Q34. What is Tuple Packing?
+
+**Answer:**
+Packing means putting multiple values into one tuple.
+
+a = 10, 20, 30
+
+print(a)
+
+Output:
+(10, 20, 30)
+
+## Q35. What is Tuple Unpacking?
+
+**Answer:**
+Unpacking means assigning tuple elements to separate variables.
+
+a = (10, 20, 30)
+
+x, y, z = a
+
+print(x)
+print(y)
+print(z)
+
+Output:
+10
+20
+30
+
+## Q36. What are the main Tuple methods?
+
+**Answer:**
+count()
+index()
+
+## Q37. What is `count()` in Tuple?
+
+**Answer:**
+It returns the number of occurrences.
+
+a = (10, 20, 10, 30)
+
+print(a.count(10))
+
+Output:
+2
+
+## Q38. What is `index()` in Tuple?
+
+**Answer:**
+It returns the index of the first occurrence.
+
+a = (10, 20, 30)
+
+print(a.index(20))
+
+Output:
+1
+
+# PART 4 — SET INTERVIEW QUESTIONS
+
+## Q39. What is a Set?
+
+**Answer:**
+A Set is an **unordered and mutable collection of unique elements enclosed within curly brackets `{}`**.
+
+Example:
+
+a = {10, 20, 30}
+
+## Q40. What are the properties of Set?
+
+**Answer:**
+
+* Unordered
+* Mutable
+* No indexing
+* No slicing
+* Does not allow duplicates
+* Stores unique elements
+* Supports set operations
+* Elements must be hashable
+
+
+## Q41. Is Set mutable?
+
+**Answer:**
+Yes.
+
+Elements can be added or removed from a set.
+
+
+## Q42. Does Set allow duplicates?
+
+**Answer:**
+No.
+
+a = {10, 20, 10, 30}
+
+print(a)
+
+Output contains each value only once:
+{10, 20, 30}
+
+## Q43. Does Set support indexing?
+
+**Answer:**
+No. Set is unordered and does not have index positions.
+
+a = {10, 20, 30}
+
+a[0]
+
+This gives a `TypeError`.
+
+
+## Q44. Does Set support slicing?
+
+**Answer:**
+No.
+
+a[0:2]
+
+Set does not support slicing.
+
+
+## Q45. How do you create an empty Set?
+
+**Answer:**
+
+a = set()
+
+Important:
+
+{}
+
+creates an empty dictionary, not an empty set.
+
+
+## Q46. What is `add()`?
+
+**Answer:**
+`add()` adds one element.
+
+a = {10, 20}
+
+a.add(30)
+
+print(a)
+
+Output:
+{10, 20, 30}
+
+## Q47. What is `update()`?
+
+**Answer:**
+`update()` adds multiple elements.
+
+a = {10, 20}
+
+a.update([30, 40])
+
+print(a)
+
+Output:
+{10, 20, 30, 40}
+
+## Q48. What is `remove()` in Set?
+
+**Answer:**
+It removes a specified element. If the element does not exist, it raises `KeyError`.
+
+a = {10, 20, 30}
+
+a.remove(20)
+
+print(a)
+
+## Q49. What is `discard()`?
+
+**Answer:**
+It removes an element without raising an error if the element is absent.
+
+a = {10, 20, 30}
+
+a.discard(50)
+
+print(a)
+
+Output:
+{10, 20, 30}
+
+## Q50. Difference between `remove()` and `discard()`?
+
+**Answer:**
+remove()  → missing element → KeyError
+discard() → missing element → No error
+
+## Q51. What is `pop()` in Set?
+
+**Answer:**
+`pop()` removes and returns an arbitrary element from the set.
+
+a = {10, 20, 30}
+
+x = a.pop()
+
+print(x)
+
+The removed element should not be assumed to be a particular value because a set is unordered.
+
+
+## Q52. What is `clear()`?
+
+**Answer:**
+`clear()` removes all elements.
+
+a = {10, 20, 30}
+
+a.clear()
+
+print(a)
+
+Output:
+set()
+
+## Q53. What is `union()`?
+
+**Answer:**
+`union()` returns all unique elements from two or more sets.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.union(b))
+
+Output:
+{1, 2, 3, 4, 5}
+
+## Q54. What is `intersection()`?
+
+**Answer:**
+It returns common elements.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.intersection(b))
+
+Output:
+{3}
+
+## Q55. What is `difference()`?
+
+**Answer:**
+It returns elements present in the first set but not in the second.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.difference(b))
+
+Output:
+{1, 2}
+
+## Q56. What is `symmetric_difference()`?
+
+**Answer:**
+It returns elements that are in either set but not in both.
+
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.symmetric_difference(b))
+
+Output:
+{1, 2, 4, 5}
+
+## Q57. What is `issubset()`?
+
+**Answer:**
+It checks whether all elements of one set are present in another set.
+
+a = {1, 2}
+b = {1, 2, 3}
+
+print(a.issubset(b))
+
+Output:
+True
+
+## Q58. What is `issuperset()`?
+
+**Answer:**
+It checks whether a set contains all elements of another set.
+
+a = {1, 2, 3}
+b = {1, 2}
+
+print(a.issuperset(b))
+
+Output:
+True
+
+## Q59. What is `isdisjoint()`?
+
+**Answer:**
+It returns `True` if two sets have no common elements.
+
+a = {1, 2}
+b = {3, 4}
+
+print(a.isdisjoint(b))
+
+Output:
+True
+
+# PART 5 — STRING INTERVIEW QUESTIONS
+
+## Q60. What is a String?
+
+**Answer:**
+A String is an **immutable sequence of characters** enclosed within single quotes, double quotes, or triple quotes.
+
+Examples:
+
+a = 'Python'
+b = "Python"
+c = """Python"""
+
+## Q61. Is String mutable?
+
+**Answer:**
+No. String is immutable.
+
+a = "Python"
+
+a[0] = "J"
+
+This gives `TypeError`.
+
+
+## Q62. Does String support indexing?
+
+**Answer:**
+Yes.
+
+a = "Python"
+
+print(a[0])
+
+Output:
+P
+
+## Q63. Does String support negative indexing?
+
+**Answer:**
+Yes.
+
+a = "Python"
+
+print(a[-1])
+
+Output:
+n
+
+## Q64. Does String support slicing?
+
+**Answer:**
+Yes.
+
+a = "Python"
+
+print(a[1:4])
+
+Output:
+yth
+
+## Q65. Does String allow duplicate characters?
+
+**Answer:**
+Yes.
+
+a = "banana"
+
+The character `a` appears multiple times.
+
+
+## Q66. What is `upper()`?
+
+**Answer:**
+Converts all letters to uppercase.
+
+a = "python"
+
+print(a.upper())
+
+Output:
+PYTHON
+
+## Q67. What is `lower()`?
+
+**Answer:**
+Converts all letters to lowercase.
+
+a = "PYTHON"
+
+print(a.lower())
+
+Output:
+python
+
+## Q68. What is `capitalize()`?
+
+**Answer:**
+Converts the first character to uppercase and the remaining characters to lowercase.
+
+a = "python"
+
+print(a.capitalize())
+
+Output:
+Python
+
+## Q69. What is `title()`?
+
+**Answer:**
+Converts the first character of each word to uppercase.
+
+a = "python programming"
+
+print(a.title())
+
+Output:
+Python Programming
+
+## Q70. What is `strip()`?
+
+**Answer:**
+Removes leading and trailing whitespace.
+
+a = "  Python  "
+
+print(a.strip())
+
+Output:
+Python
+
+## Q71. What is `replace()`?
+
+**Answer:**
+Replaces one substring with another.
+
+a = "I like Java"
+
+print(a.replace("Java", "Python"))
+
+Output:
+I like Python
+
+## Q72. What is `split()`?
+
+**Answer:**
+Splits a string into a list.
+
+a = "Python Java SQL"
+
+print(a.split())
+
+Output:
+['Python', 'Java', 'SQL']
+
+## Q73. What is `join()`?
+
+**Answer:**
+`join()` combines strings from an iterable using a separator.
+
+a = ["Python", "Java", "SQL"]
+
+print("-".join(a))
+
+Output:
+Python-Java-SQL
+
+## Q74. Difference between `split()` and `join()`?
+
+**Answer:**
+split() → String → List
+join()  → List/iterable of strings → String
+
+## Q75. What is `find()`?
+
+**Answer:**
+`find()` returns the index of the first occurrence of a substring. If not found, it returns `-1`.
+
+a = "Python"
+
+print(a.find("t"))
+
+Output:
+2
+
+## Q76. What is `index()` in String?
+
+**Answer:**
+It returns the index of the first occurrence. If not found, it raises `ValueError`.
+
+a = "Python"
+
+print(a.index("t"))
+
+Output:
+2
+
+## Q77. Difference between `find()` and `index()`?
+
+**Answer:**
+find()  → not found → -1
+index() → not found → ValueError
+
+## Q78. What is `count()` in String?
+
+**Answer:**
+It counts the occurrences of a substring.
+
+a = "banana"
+
+print(a.count("a"))
+
+Output:
+3
+
+## Q79. What is `startswith()`?
+
+**Answer:**
+Checks whether a string starts with a specified value.
+
+a = "Python"
+
+print(a.startswith("Py"))
+
+Output:
+True
+
+## Q80. What is `endswith()`?
+
+**Answer:**
+Checks whether a string ends with a specified value.
+
+a = "Python"
+
+print(a.endswith("on"))
+
+Output:
+True
+
+## Q81. What is `isalpha()`?
+
+**Answer:**
+Returns `True` if all characters are alphabetic and the string is not empty.
+
+a = "Python"
+
+print(a.isalpha())
+
+Output:
+True
+
+## Q82. What is `isdigit()`?
+
+**Answer:**
+Returns `True` if all characters are digits and the string is not empty.
+
+a = "12345"
+
+print(a.isdigit())
+
+Output:
+True
+
+## Q83. What is `isalnum()`?
+
+**Answer:**
+Returns `True` if all characters are letters or digits and the string is not empty.
+
+a = "Python123"
+
+print(a.isalnum())
+
+Output:
+True
+
+## Q84. What is `isspace()`?
+
+**Answer:**
+Returns `True` if the string contains only whitespace characters and is not empty.
+
+a = "   "
+
+print(a.isspace())
+
+Output:
+True
+
+# PART 6 — INDEXING INTERVIEW QUESTIONS
+
+## Q85. What is Indexing?
+
+**Answer:**
+Indexing is the process of accessing an individual element using its position.
+
+Example:
+
+a = [10, 20, 30]
+
+print(a[1])
+
+Output:
+20
+
+## Q86. From which number does positive indexing start?
+
+**Answer:**
+Positive indexing starts from `0`.
+0, 1, 2, 3, ...
+
+## Q87. From which number does negative indexing start?
+
+**Answer:**
+Negative indexing starts from `-1`.
+-1, -2, -3, ...
+
+## Q88. Which data types support indexing?
+
+**Answer:**
+Common Python sequence types that support indexing include:
+
+* String
+* List
+* Tuple
+
+Example:
+
+a = "Python"
+b = [10, 20, 30]
+c = (10, 20, 30)
+
+Set does not support indexing.
+
+
+## Q89. What happens if the index is out of range?
+
+**Answer:**
+For a string, list, or tuple, Python raises `IndexError`.
+
+a = [10, 20, 30]
+
+print(a[5])
+
+Output:
+IndexError
+
+# PART 7 — SLICING INTERVIEW QUESTIONS
+
+## Q90. What is Slicing?
+
+**Answer:**
+Slicing is used to extract a portion of a sequence.
+
+It can be used with:
+
+* String
+* List
+* Tuple
+
+
+## Q91. What is the syntax of slicing?
+
+**Answer:**
+
+sequence[start:stop:step]
+
+## Q92. Is the stop index included?
+
+**Answer:**
+No. The stop index is excluded.
+
+a = [10, 20, 30, 40, 50]
+
+print(a[1:4])
+
+Output:
+[20, 30, 40]
+
+Index `4` is not included.
+
+
+## Q93. What is `a[:3]`?
+
+**Answer:**
+It starts from the beginning and stops before index `3`.
+
+a = [10, 20, 30, 40]
+
+print(a[:3])
+
+Output:
+[10, 20, 30]
+
+## Q94. What is `a[2:]`?
+
+**Answer:**
+It starts from index `2` and continues to the end.
+
+a = [10, 20, 30, 40]
+
+print(a[2:])
+
+Output:
+[30, 40]
+
+## Q95. What is `a[:]`?
+
+**Answer:**
+It returns the complete sequence.
+
+a = [10, 20, 30]
+
+print(a[:])
+
+Output:
+[10, 20, 30]
+
+## Q96. What is `a[::2]`?
+
+**Answer:**
+It selects every second element.
+
+a = [10, 20, 30, 40, 50]
+
+print(a[::2])
+
+Output:
+[10, 30, 50]
+
+## Q97. What is `a[::-1]`?
+
+**Answer:**
+It reverses the sequence.
+
+a = [10, 20, 30]
+
+print(a[::-1])
+
+Output:
+[30, 20, 10]
+
+## Q98. Can we use negative values in slicing?
+
+**Answer:**
+Yes.
+
+a = [10, 20, 30, 40, 50]
+
+print(a[-4:-1])
+
+Output:
+[20, 30, 40]
+
+## Q99. What happens if step is negative?
+
+**Answer:**
+The sequence is traversed from right to left.
+
+a = [10, 20, 30, 40, 50]
+
+print(a[4:1:-1])
+
+Output:
+[50, 40, 30]
+
+# PART 8 — COMPARISON QUESTIONS
+
+## Q100. Difference between List and Tuple?
+
+**Answer:**
+
+| List               | Tuple              |
+| | |
+| Mutable            | Immutable          |
+| `[]`               | `()`               |
+| More methods       | Fewer methods      |
+| Ordered            | Ordered            |
+| Duplicates allowed | Duplicates allowed |
+| Indexed            | Indexed            |
+| Slicing supported  | Slicing supported  |
+
+
+## Q101. Difference between List and Set?
+
+**Answer:**
+
+| List              | Set             |
+|-- | |
+| Ordered           | Unordered       |
+| Mutable           | Mutable         |
+| Allows duplicates | Unique elements |
+| Supports indexing | No indexing     |
+| Supports slicing  | No slicing      |
+| `[]`              | `{}`            |
+
+
+## Q102. Difference between Tuple and Set?
+
+**Answer:**
+
+| Tuple              | Set                    |
+| |- |
+| Ordered            | Unordered              |
+| Immutable          | Mutable                |
+| Duplicates allowed | Duplicates not allowed |
+| Indexing supported | No indexing            |
+| Slicing supported  | No slicing             |
+| `()`               | `{}`                   |
+
+
+## Q103. Difference between String and List?
+
+**Answer:**
+
+| String     | List               |
+|- | |
+| Immutable  | Mutable            |
+| Characters | Any Python objects |
+| Quotes     | `[]`               |
+| Indexed    | Indexed            |
+| Slicing    | Slicing            |
+| `str` type | `list` type        |
+
+
+## Q104. Which are mutable among List, Tuple, Set and String?
+
+**Answer:**
+List   → Mutable
+Tuple  → Immutable
+Set    → Mutable
+String → Immutable
+
+## Q105. Which support indexing?
+
+**Answer:**
+List   → Yes
+Tuple  → Yes
+String → Yes
+Set    → No
+
+## Q106. Which support slicing?
+
+**Answer:**
+List   → Yes
+Tuple  → Yes
+String → Yes
+Set    → No
+
+## Q107. Which allow duplicate elements?
+
+**Answer:**
+List   → Yes
+Tuple  → Yes
+String → Yes
+Set    → No
+
+# PART 9 — OUTPUT-BASED INTERVIEW QUESTIONS
+
+## Q108. What is the output?
+
+a = [10, 20, 30, 40]
+
+print(a[-1])
+
+**Answer:**
+40
+
+## Q109. What is the output?
+
+a = "Python"
+
+print(a[1:4])
+
+**Answer:**
+yth
+
+## Q110. What is the output?
+
+a = (10, 20, 30, 40)
+
+print(a[::-1])
+
+**Answer:**
+(40, 30, 20, 10)
+
+## Q111. What is the output?
+
+a = [10, 20, 30]
+
+a.append([40, 50])
+
+print(a)
+
+**Answer:**
+[10, 20, 30, [40, 50]]
+
+## Q112. What is the output?
+
+a = [10, 20, 30]
+
+a.extend([40, 50])
+
+print(a)
+
+**Answer:**
+[10, 20, 30, 40, 50]
+
+## Q113. What is the output?
+
+a = (10, 20, 30)
+
+x, y, z = a
+
+print(y)
+
+**Answer:**
+20
+
+## Q114. What is the output?
+
+a = {10, 20, 10, 30}
+
+print(len(a))
+
+**Answer:**
+3
+
+## Q115. What is the output?
+
+a = "banana"
+
+print(a.count("a"))
+
+**Answer:**
+3
+
+## Q116. What is the output?
+
+a = [10, 20, 30, 40, 50]
+
+print(a[::2])
+
+**Answer:**
+[10, 30, 50]
+
+## Q117. What is the output?
+
+a = [10, 20, 30, 40, 50]
+
+print(a[::-1])
+
+**Answer:**
+[50, 40, 30, 20, 10]
+
+# PART 10 — VERY IMPORTANT QUICK REVISION
+
+## List
+Definition:
+Ordered + Mutable + comma-separated elements + enclosed within []
+
+Duplicates → Yes
+Indexing → Yes
+Slicing → Yes
+
+Main methods:
+append()
+extend()
+insert()
+remove()
+pop()
+clear()
+index()
+count()
+sort()
+reverse()
+copy()
+
+## Tuple
+Definition:
+Ordered + Immutable + comma-separated elements + enclosed within ()
+
+Duplicates → Yes
+Indexing → Yes
+Slicing → Yes
+Packing → Yes
+Unpacking → Yes
+
+Main methods:
+count()
+index()
+
+## Set
+Definition:
+Unordered + Mutable + Unique elements + enclosed within {}
+
+Duplicates → No
+Indexing → No
+Slicing → No
+
+Main methods:
+add()
+update()
+remove()
+discard()
+pop()
+clear()
+copy()
+union()
+intersection()
+difference()
+difference_update()
+symmetric_difference()
+symmetric_difference_update()
+intersection_update()
+issubset()
+issuperset()
+isdisjoint()
+
+## String
+Definition:
+Immutable sequence of characters
+
+Enclosed within:
+' '
+" "
+''' '''
+""" """
+
+Duplicates → Yes
+Indexing → Yes
+Slicing → Yes
+Mutable → No
+
+Important methods:
+upper()
+lower()
+capitalize()
+title()
+swapcase()
+strip()
+lstrip()
+rstrip()
+replace()
+split()
+rsplit()
+join()
+find()
+rfind()
+index()
+rindex()
+count()
+startswith()
+endswith()
+isalpha()
+isdigit()
+isdecimal()
+isnumeric()
+isalnum()
+isspace()
+islower()
+isupper()
+istitle()
+
+# MOST IMPORTANT INTERVIEW TABLE
+
+| Feature    | List                          | Tuple            | Set                        | String                     |
+|- |-- |- |-- |-- |
+| Ordered    | Yes                           | Yes              | No                         | Yes                        |
+| Mutable    | Yes                           | No               | Yes                        | No                         |
+| Indexed    | Yes                           | Yes              | No                         | Yes                        |
+| Slicing    | Yes                           | Yes              | No                         | Yes                        |
+| Duplicates | Yes                           | Yes              | No                         | Yes                        |
+| Syntax     | `[]`                          | `()`             | `{}`                       | `' '` / `" "`              |
+| Main use   | Collection of changeable data | Fixed collection | Unique values              | Text                       |
+| Packing    | Possible                      | Yes              | Not tuple-style            | No                         |
+| Unpacking  | Possible                      | Yes              | Possible through iteration | Possible through iteration |
+
+
+# GOLDEN INTERVIEW ANSWERS
+
+### List
+
+> A List is an ordered and mutable collection of comma-separated elements enclosed within square brackets `[]`.
+
+### Tuple
+
+> A Tuple is an ordered and immutable collection of comma-separated elements enclosed within parentheses `()`.
+
+### Set
+
+> A Set is an unordered and mutable collection of unique elements enclosed within curly brackets `{}`.
+
+### String
+
+> A String is an immutable sequence of characters enclosed within single, double, or triple quotes.
+
+### Indexing
+
+> Indexing is the process of accessing an individual element using its position.
+
+### Slicing
+
+> Slicing is the process of extracting a portion of a sequence using `start`, `stop`, and `step`.
+
+### Packing
+
+> Packing means combining multiple values into a single tuple.
+
+### Unpacking
+
+> Unpacking means assigning the elements of a collection to separate variables.
+
+
+# FINAL MEMORY TRICK
+LIST
+[] → Ordered → Mutable → Duplicates → Indexing → Slicing
+
+TUPLE
+() → Ordered → Immutable → Duplicates → Indexing → Slicing
+     Packing → Unpacking
+
+SET
+{} → Unordered → Mutable → Unique → No Indexing → No Slicing
+
+STRING
+"" / '' → Ordered → Immutable → Characters → Indexing → Slicing
 
