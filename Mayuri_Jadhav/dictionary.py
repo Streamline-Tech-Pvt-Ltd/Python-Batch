@@ -175,7 +175,7 @@ print(student)
 {'name': 'Mayuri', 'age': 22, 'city': 'Pune'}
 
 
-## 10. `clear()`
+## 10. `clear()
 
 Removes all items.
 
