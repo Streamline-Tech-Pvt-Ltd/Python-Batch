@@ -30,7 +30,7 @@ Date : 10/06/2026
     Type checking occurs at compile time	         |     Type checking occurs at runtime
     Less flexible	                                 |     More flexible
     Faster execution	                              |    Slightly slower execution
-    Examples: Java, C, C++                         |	Examples: Python, JavaScript
+    Examples: Java, C, C++                         |	Examples: Pytho n, JavaScript
 
 
 #  types of python language

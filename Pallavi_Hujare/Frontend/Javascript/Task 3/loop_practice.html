@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+
+// Questions:
+// 1.	Write a program using a for loop to print all even numbers from 1 to 20.
+for(let v =1;v<=101;v++){
+    if(v % 2==0){
+        console.log(v);
+    }
+}
+// 2.	Write a program using a while loop to calculate the sum of numbers from 1 to 5.
+ let i = 1;
+ let sum = 0;
+ while (i <= 5) {
+    sum = sum+i;
+    i++;
+}console.log(sum);
+
+// 3.	Write a program using a do...while loop that prints numbers from 1 to 10, but stops when the number becomes 6.
+    let j =1;
+    do{
+        if(j ===6){
+            break;
+        }
+        console.log(i);
+        j++;
+    }while(j<=10);
+
+// 4.	Write a program using a loop that prints numbers from 1 to 10, but skips number 5 using continue.
+    for (let m = 1; m <= 10; m++) {
+        if (m === 5) {
+            continue;
+        }
+        console.log(m);
+    }
+// 5.	Write a program using a while loop to find the factorial of a number.
+    let num0= 5;
+    let factorial = 1;
+    let k= 1;
+
+    while (k <= num0) {
+        factorial = factorial * k;
+        k++;
+    }
+    console.log(factorial);
+// 6.	Print the table of 2 using do...while loop.
+    let p = 1;
+    do {
+        console.log("2 × " + p + " = " + (2 * p));
+        p++;
+    } while (p <= 10);
+
+// 7.	Check number is palindrome or not.
+    let num = 121;
+    let original = num;
+    let reverse = 0;
+
+    while (num > 0) {
+        let digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    if (original === reverse) {
+        console.log("Palindrome");
+    } else {
+        console.log("Not Palindrome");
+    }
+// 8.	Check whether a number is prime or not.
+let num1= 7;
+let count = 0;
+let b = 1;
+while (b<= num1) {
+    if (num1 % b === 0) {
+        count++;
+    }
+    b++;
+}
+if (count === 2) {
+    console.log("Prime");
+} else {
+    console.log("Not Prime");
+}
+
+
+//for loop To get list of all Student name and marks
+    let student_name1 = ["Pallavi","Urmila","Raj"];
+    let marks1 = [85,94,78]
+    for (let i = 0; i < student_name1.length; i++) {
+    console.log("Student:", student_name1[i]);
+    console.log("Marks:", marks1[i]);
+}
+
+//While loop To get list of all Student name and marks
+    let student_name2 = ["Pallavi","Urmila","Raj"];
+    let marks2 = [85,94,78]
+    let j = 0;
+    while (j< student_name2.length) {
+    console.log("Student:", student_name2[j]);
+    console.log("Marks:", marks2[j]);
+    j++
+    }
+
+
+// do While loop To get list of all Student name and marks
+ let student_name3 = ["Pallavi","Urmila","Raj"];
+    let marks3 = [85,94,78]
+    let k = 0;
+    do {
+    console.log("Student:", student_name3[k]);
+    console.log("Marks:", marks3[k]);
+    k++;
+} while (k < student_name3.length);
+
+
+</script>
+</body>
+</html>

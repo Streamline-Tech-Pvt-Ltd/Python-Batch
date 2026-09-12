@@ -1,5 +1,5 @@
 
- JAVASCRIPT?
+#  JAVASCRIPT
 JavaScript (JS) is a programming language used to make web pages interactive and dynamic.
 
 Examples:
@@ -27,7 +27,7 @@ JavaScript -> Behavior / Logic
 | Example: `let age = 20;`   | Example: `int age = 20;`          |
 ---------------------------------------------------------------------------------------------------
 
- WHERE DOES JAVASCRIPT RUN?
+# WHERE DOES JAVASCRIPT RUN?
 JavaScript can run in:
 
 1. Web browsers
@@ -38,7 +38,21 @@ JavaScript can run in:
 
 3. ADDING JAVASCRIPT TO HTML
 There are three ways to add JavaScript to HTML.
----------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+# Important features:
+
+1.Lightweight
+2.Interpreted/JIT-compiled
+3.Dynamically typed
+4.Object-based and prototype-based
+5.Case-sensitive
+6.Supports event-driven programming
+7.Supports functional programming
+8.Can manipulate HTML and CSS using the DOM
+9.Can communicate with servers using APIs
+10.Runs in browsers and also outside browsers using environments such as Node.js.
+-------------------------------------------------------------------------------------------------
+# Way to Write JS Program
 A. Inline JavaScript
 <button onclick="alert('Hello')">Click Me</button>
 
@@ -112,6 +126,12 @@ A variable is used to store data.
 | **let**   | Used to declare a variable whose value can be changed        | `let age = 20;`    |
 | **const** | Used to declare a variable that cannot be reassigned         | `const pi = 3.14;` |
    
+| `var`           | `let`            | `const`          |
+| --------------- | ---------------- | ---------------- |
+| Old method      | Modern method    | Modern method    |
+| Can change      | Can change       | Cannot reassign  |
+| Can redeclare   | Cannot redeclare | Cannot redeclare |
+| Function scoped | Block scoped     | Block scoped     |
 
  1] let
 let is used to declare a variable whose value can be changed.
@@ -148,7 +168,7 @@ const
 As a beginner, focus mainly on let and const.
 ---------------------------------------------------------------------------------------------
 
-*********RULES FOR VARIABLE NAMES*****&
+*********RULES FOR VARIABLE NAMES*****
 Valid variable names:
 
 let name = "Pallavi";
@@ -182,7 +202,7 @@ let phoneNumber = 1234567890;
 
 
 ----------------------------------------------------------------------------------------------
-**  typeof Operator
+##  typeof Operator
 Used to check the data type of a value.
 
 
@@ -213,5 +233,249 @@ console.log(typeof name.length);                // number
 | **Nullish coalescing**    | Uses fallback when value is `null` or `undefined` | `??`                      | `name ?? "Guest"`               |
 | **Optional chaining**     | Safely accesses nested properties                 | `?.`                      | `user?.name`                    |
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Conditional Statement: 
+A conditional statement is used to make a decision in JavaScript.
+
+* Types of Conditional Statements
+
+| Statement             | Use                                  |
+| --------------------- | ------------------------------------ |
+| `if`                  | Executes code when condition is true |
+| `if...else`           | Chooses between two conditions       |
+| `if...else if...else` | Checks multiple conditions           |
+| `switch`              | Selects one option from many         |
+| Ternary `?:`          | Short form of `if...else`            |
 
 
+1. if Statement
+Used when you want to execute code only when a condition is true.
+Syntax: if (condition) {
+    // code
+}
+
+EX: let age = 20;
+if (age >= 18) {
+    console.log("Adult");
+}
+
+
+2. if...else Statement
+Used when there are two possibilities.
+Syntax: if (condition) {
+    // if condition is true
+} else {
+    // if condition is false
+}
+
+EX: let age = 16;
+if (age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+
+
+3. if...else if...else
+Used when you have multiple conditions.
+
+EX: let marks = 75;
+if (marks >= 90) {
+    console.log("Grade A+");
+} else if (marks >= 75) {
+    console.log("Grade A");
+} else if (marks >= 60) {
+    console.log("Grade B");
+} else {
+    console.log("Fail");
+}
+
+4. Ternary Operator
+The ternary operator is a short way to write if...else.
+Ex: let age = 20;
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
+
+--------------------------------------------------------------------------------
+## loop - execte code repetedly
+there are 3 types of loop
+
+| Loop Name           | Definition                                                                         | Syntax                                        | Example                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **for loop**        | Used to execute a block of code repeatedly when the number of iterations is known. | `for (initialization; condition; update) { }` | `for (let i = 1; i <= 5; i++) { console.log(i); }`                                         |
+| **while loop**      | Executes a block of code repeatedly as long as the given condition is true.        | `while (condition) { }`                       | `let i = 1; while (i <= 5) { console.log(i); i++; }`                                       |
+| **do...while loop** | Executes the code at least once and then checks the condition.                     | `do { } while (condition);`                   | `let i = 1; do { console.log(i); i++; } while (i <= 5);`                                   |
+| **for...of loop**   | Used to iterate over the **values** of an iterable such as an array or string.     | `for (let value of iterable) { }`             | `let fruits = ["Apple", "Mango"]; for (let fruit of fruits) { console.log(fruit); }`       |
+| **for...in loop**   | Used to iterate over the **keys/properties** of an object.                         | `for (let key in object) { }`                 | `let student = {name: "Pallavi", age: 20}; for (let key in student) { console.log(key); }` |
+
+
+
+1] for loop
+   uesd when number of iterations are known.
+
+   syntax: 
+            for (initialization; condition; increment/decrement) {
+                // code
+            }
+   Example :
+         for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+2] while loop:
+   Used when the number of iterations may depend on a condition.
+ 
+    Syntax:
+        while (condition) {
+            // code
+        }
+
+    Example:
+        let i = 1;
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+3] do...while Loop
+The do...while loop executes the code at least once, even if the condition is false.
+
+Syntax:
+    do {
+        // code
+    } while (condition);
+
+Example:
+    let i = 1;
+    do {
+        console.log(i);
+        i++;
+    } while (i <= 5);
+
+---------------------------------------------------------------------------------------------------------------
+# The Break Statement
+The break statement "jumps out" of loops and switches.
+The break statement terminates the execution of a loop or a switch statement.
+No more loop iterations are executed.
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { 
+break; 
+}
+  text = "The number is " + i + "\n";
+}
+
+# Break in a Switch statement:
+In a switch statement, a break statement will exit the switch block after a matching case is executed.
+Ex-
+let dayNumber = 3;
+let dayName;
+
+switch (dayNumber) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+console.log(dayName);
+
+
+# The Continue Statement
+The continue statement skips the current iteration in a loop.
+The remaining code in the iteration is skipped and processing moves to the next iteration.
+Ex-
+for (let i = 1; i < 10; i++) {
+  if (i === 3) { 
+continue; 
+}
+  text += "The number is " + i + "\n";
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+
+String
+Methods of string:
+1.string length: The length property returns the length of a string
+Ex-
+let text = "ABCDE";
+let length = text.length;
+console.log(length);
+
+2. String charAt()
+The charAt() method returns the character at a specified index (position) in a string:
+let text = "HELLO WORLD";
+let char = text.charAt(1);
+console.log(char);
+
+3. String concat()
+concat() joins two or more strings:
+Example
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+console.log(text3);
+
+4.String slice()
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: start position, and end position (end not included).
+Ex-
+let text = "Apple,Banana,Kiwi";
+let part = text.slice(6,12);
+console.log(part); 
+
+5. Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+JavaScript String toUpperCase()
+Example
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+console.log(text2);
+
+JavaScript String toLowerCase()
+let text1 = "Hello World!";       
+ let text2 = text1.toLowerCase();
+console.log(text2);
+
+JavaScript String trim()
+The trim() method removes whitespace from both sides of a string:
+Example
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+console.log(text2);
+
+6.Replace method:
+The replace() method replaces a specified value with another value in a string:
+Example
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "Amazon");
+console.log(newText);
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work.
+
+7. ReplaceAll()
+In 2021, JavaScript introduced the string method replaceAll():
+Example
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+console.log(text);
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
