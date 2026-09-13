@@ -478,4 +478,30 @@ text = text.replaceAll("Cats","Dogs");
 text = text.replaceAll("cats","dogs");
 console.log(text);
 
+|  # | Method          | Purpose & Important Point                                                           | Syntax                      | Example                            | Result          |
+| -: | --------------- | ----------------------------------------------------------------------------------- | --------------------------- | ---------------------------------- | --------------- |
+|  1 | `length`        | Finds the number of characters. **Property, not a method.**                         | `str.length`                | `"Hello".length`                   | `5`             |
+|  2 | `toUpperCase()` | Converts string to uppercase. **Does not change original string.**                  | `str.toUpperCase()`         | `"hello".toUpperCase()`            | `"HELLO"`       |
+|  3 | `toLowerCase()` | Converts string to lowercase. **Does not change original string.**                  | `str.toLowerCase()`         | `"HELLO".toLowerCase()`            | `"hello"`       |
+|  4 | `charAt()`      | Returns character at a specified index. **Index starts from 0.**                    | `str.charAt(index)`         | `"Hello".charAt(1)`                | `"e"`           |
+|  5 | `at()`          | Returns character at a specified index. **Supports negative indexes.**              | `str.at(index)`             | `"Hello".at(-1)`                   | `"o"`           |
+|  6 | `includes()`    | Checks whether a value exists. **Returns `true` or `false`.**                       | `str.includes(value)`       | `"Hello".includes("ell")`          | `true`          |
+|  7 | `startsWith()`  | Checks whether string starts with a value. **Case-sensitive.**                      | `str.startsWith(value)`     | `"Hello".startsWith("He")`         | `true`          |
+|  8 | `endsWith()`    | Checks whether string ends with a value. **Case-sensitive.**                        | `str.endsWith(value)`       | `"Hello".endsWith("lo")`           | `true`          |
+|  9 | `indexOf()`     | Finds the first occurrence of a value. **Returns `-1` if not found.**               | `str.indexOf(value)`        | `"Hello".indexOf("l")`             | `2`             |
+| 10 | `lastIndexOf()` | Finds the last occurrence of a value. **Searches from the end.**                    | `str.lastIndexOf(value)`    | `"Hello".lastIndexOf("l")`         | `3`             |
+| 11 | `slice()`       | Extracts part of a string. **Supports negative indexes.**                           | `str.slice(start,end)`      | `"Hello".slice(1,4)`               | `"ell"`         |
+| 12 | `substring()`   | Extracts characters between indexes. **Negative values become 0.**                  | `str.substring(start,end)`  | `"Hello".substring(1,4)`           | `"ell"`         |
+| 13 | `replace()`     | Replaces a value. **Replaces only the first match.**                                | `str.replace(old,new)`      | `"Hi Hi".replace("Hi","Hello")`    | `"Hello Hi"`    |
+| 14 | `replaceAll()`  | Replaces all matching values. **Replaces every match.**                             | `str.replaceAll(old,new)`   | `"Hi Hi".replaceAll("Hi","Hello")` | `"Hello Hello"` |
+| 15 | `trim()`        | Removes whitespace from both ends. **Middle spaces remain.**                        | `str.trim()`                | `"  Hello  ".trim()`               | `"Hello"`       |
+| 16 | `trimStart()`   | Removes whitespace from the beginning. **Also called `trimLeft()`.**                | `str.trimStart()`           | `"  Hello".trimStart()`            | `"Hello"`       |
+| 17 | `trimEnd()`     | Removes whitespace from the end. **Also called `trimRight()`.**                     | `str.trimEnd()`             | `"Hello  ".trimEnd()`              | `"Hello"`       |
+| 18 | `split()`       | Splits a string into an array. **String → Array.**                                  | `str.split(separator)`      | `"A,B,C".split(",")`               | `["A","B","C"]` |
+| 19 | `concat()`      | Joins two or more strings. **`+` and template literals are commonly used instead.** | `str.concat(str2)`          | `"Hello".concat(" World")`         | `"Hello World"` |
+| 20 | `repeat()`      | Repeats a string a specified number of times. **Count controls repetition.**        | `str.repeat(count)`         | `"Hi ".repeat(3)`                  | `"Hi Hi Hi "`   |
+| 21 | `padStart()`    | Adds characters to the beginning. **Useful for formatting.**                        | `str.padStart(length,char)` | `"5".padStart(3,"0")`              | `"005"`         |
+| 22 | `padEnd()`      | Adds characters to the end. **Useful for formatting.**                              | `str.padEnd(length,char)`   | `"5".padEnd(3,"0")`                | `"500"`         |
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
+

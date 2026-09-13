@@ -585,36 +585,18 @@ for (let number of numbers) {
 
 
 55. Difference between for, while, and do...while
-⭐ Extremely important interview question
-Expected answer:
-for is generally used when the number of iterations is known, while is used when the condition controls the repetition, and do...while is used when the code must execute at least once.
-
-| Feature           | `for`               | `while`         | `do...while`      |
-| ----------------- | ------------------- | --------------- | ----------------- |
-| Condition checked | Before              | Before          | After             |
-| Minimum execution | 0                   | 0               | **1**             |
-| Best used when    | Iterations known    | Condition-based | Must execute once |
-| Initialization    | Usually inside      | Usually before  | Usually before    |
-| Increment         | Usually inside loop | Usually inside  | Usually inside    |
-
-Example
-for:
-for (let i = 1; i <= 5; i++) {
-    console.log(i);
-}
-while:
-let i = 1;
-while (i <= 5) {
-    console.log(i);
-    i++;
-}
-
-do...while:
-let i = 1;
-do {
-    console.log(i);
-    i++;
-} while (i <= 5);
+| Feature               | `for` Loop                                                          | `while` Loop                                        | `do...while` Loop                                                        |
+| --------------------- | ------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Definition**        | Repeats a block of code for a known/controlled number of iterations | Repeats code while a condition is `true`            | Repeats code while a condition is `true`, but executes **at least once** |
+| **Condition checked** | **Before** each iteration                                           | **Before** each iteration                           | **After** each iteration                                                 |
+| **Minimum execution** | `0` times                                                           | `0` times                                           | **1 time**                                                               |
+| **Best used when**    | Number of iterations is known                                       | Number of iterations is not known / condition-based | Code must execute at least once                                          |
+| **Initialization**    | Usually inside the loop                                             | Usually before the loop                             | Usually before the loop                                                  |
+| **Condition**         | Written inside loop                                                 | Written inside loop                                 | Written after loop body                                                  |
+| **Increment/Update**  | Usually inside loop declaration                                     | Usually inside loop body                            | Usually inside loop body                                                 |
+| **Syntax**            | `for (initialization; condition; update)`                           | `while (condition)`                                 | `do { } while (condition);`                                              |
+| **Example use**       | Print numbers `1–10`                                                | Run until user enters correct value                 | Show menu at least once                                                  |
+| **Important point**   | Compact and commonly used for counting                              | Good for condition-controlled repetition            | Guarantees at least one execution                                        |
 
 
 56. What is for...of?
