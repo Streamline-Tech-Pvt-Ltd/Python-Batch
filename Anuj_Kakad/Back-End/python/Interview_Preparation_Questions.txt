@@ -987,3 +987,726 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     dict2 = [{"id": 123, "name": "anuj", "age": 23}, {"id": 124, "name": "rahul", "age": 24}]
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+Python Internship Notes: Day 10 - Tuple, Set & Frozenset
+
+1. Introduction to Tuple
+
+* Definition: A Tuple is an ordered and immutable collection of data that can store multiple values in a single variable.
+* Syntax: tuple_name = (value1, value2, value3)
+* Tuples are ordered, meaning elements maintain their insertion order.
+* Tuples are immutable, meaning their elements cannot be changed after creation.
+* Tuples allow duplicate values.
+* Tuples support indexing and slicing.
+* Tuples can contain different data types.
+* Tuples are generally faster than lists because they are immutable.
+
+2. Creating a Tuple
+
+Example:
+tuple1 = (10, 20, 30, 40, 50)
+print(tuple1)
+
+Output:
+(10, 20, 30, 40, 50)
+
+Tuple with different data types:
+
+tuple1 = (10, "Anuj", 23, 5.5, True)
+print(tuple1)
+
+Output:
+(10, 'Anuj', 23, 5.5, True)
+
+3. Single Element Tuple
+
+To create a tuple containing only one element, a comma is required after the element.
+
+Example:
+tuple1 = (10,)
+print(type(tuple1))
+
+Output:
+<class 'tuple'>
+
+Without a comma:
+
+tuple1 = (10)
+print(type(tuple1))
+
+Output:
+<class 'int'>
+
+Therefore, the comma is important when creating a single-element tuple.
+
+4. Tuple Indexing
+
+Indexing is used to access individual elements from a tuple.
+
+* Positive indexing starts from 0 from the left side.
+* Negative indexing starts from -1 from the right side.
+
+Example:
+tuple1 = (10, 20, 30, 40, 50)
+print(tuple1[0])
+print(tuple1[2])
+print(tuple1[-1])
+print(tuple1[-2])
+
+Output:
+10
+30
+50
+40
+
+5. Tuple Slicing
+
+Slicing is used to access a range of elements from a tuple.
+
+* Syntax: tuple[start:stop]
+* start is included.
+* stop is excluded.
+* Syntax with step: tuple[start:stop:step]
+
+Example:
+tuple1 = (10, 20, 30, 40, 50)
+print(tuple1[1:4])
+
+Output:
+(20, 30, 40)
+
+Example with step:
+
+print(tuple1[0:5:2])
+
+Output:
+(10, 30, 50)
+
+Reverse a tuple:
+
+print(tuple1[::-1])
+
+Output:
+(50, 40, 30, 20, 10)
+
+6. Tuple Functions
+
+* len(): Returns the total number of elements in a tuple.
+
+Example:
+tuple1 = (10, 20, 30, 40, 50)
+print(len(tuple1))
+
+Output:
+5
+
+* max(): Returns the largest value from a tuple.
+
+Example:
+tuple1 = (10, 50, 20, 40, 30)
+print(max(tuple1))
+
+Output:
+50
+
+* min(): Returns the smallest value from a tuple.
+
+Example:
+print(min(tuple1))
+
+Output:
+10
+
+* sum(): Returns the sum of numeric elements in a tuple.
+
+Example:
+print(sum(tuple1))
+
+Output:
+150
+
+* type(): Returns the data type of the object.
+
+Example:
+print(type(tuple1))
+
+Output:
+<class 'tuple'>
+
+7. Tuple Methods
+
+Tuples have only two commonly used built-in methods because tuples are immutable.
+
+* count(value): Returns the number of times a specified value occurs in a tuple.
+
+Example:
+tuple1 = (10, 20, 10, 30, 10)
+print(tuple1.count(10))
+
+Output:
+3
+
+* index(value): Returns the index of the first occurrence of the specified value.
+
+Example:
+tuple1 = (10, 20, 30, 40, 50)
+print(tuple1.index(30))
+
+Output:
+2
+
+8. Tuple Packing
+
+Tuple packing means storing multiple values in a single tuple without explicitly using parentheses.
+
+Example:
+tuple1 = 10, 20, 30, 40
+print(tuple1)
+
+Output:
+(10, 20, 30, 40)
+
+9. Tuple Unpacking
+
+Tuple unpacking means assigning the elements of a tuple to separate variables.
+
+Example:
+tuple1 = (10, 20, 30)
+a, b, c = tuple1
+print(a)
+print(b)
+print(c)
+
+Output:
+10
+20
+30
+
+Important:
+The number of variables should normally match the number of values being unpacked.
+
+10. Difference Between List and Tuple
+
+| Feature | List | Tuple |
+|---|---|---|
+| **Syntax** | Uses square brackets [] | Uses parentheses () |
+| **Mutability** | Mutable | Immutable |
+| **Indexing** | Supported | Supported |
+| **Slicing** | Supported | Supported |
+| **Duplicates** | Allowed | Allowed |
+| **Methods** | Many methods available | Only two main methods: count() and index() |
+| **Performance** | Generally slower than tuple | Generally faster than list |
+| **Use** | Used when data may need to change | Used when data should remain unchanged |
+
+11. Introduction to Set
+
+* Definition: A Set is an unordered and mutable collection of unique elements.
+* Syntax: set_name = {value1, value2, value3}
+* Sets do not allow duplicate values.
+* Sets are mutable, so elements can be added or removed.
+* Sets do not support indexing or slicing.
+* Sets can store different data types, provided the elements are hashable.
+* Sets are commonly used for removing duplicate values and performing mathematical set operations.
+
+12. Creating a Set
+
+Example:
+set1 = {10, 20, 30, 40}
+print(set1)
+
+Output:
+{10, 20, 30, 40}
+
+Set with duplicate values:
+
+set1 = {10, 20, 10, 30, 20}
+print(set1)
+
+Output:
+{10, 20, 30}
+
+Duplicate values are automatically removed from a set.
+
+13. Creating an Empty Set
+
+To create an empty set, use set().
+
+Example:
+set1 = set()
+print(type(set1))
+
+Output:
+<class 'set'>
+
+Important:
+{} creates an empty dictionary, not an empty set.
+
+14. Set Does Not Support Indexing
+
+Sets are unordered collections, so we cannot access elements using an index.
+
+Example:
+set1 = {10, 20, 30, 40}
+print(set1[0])
+
+This gives an error because set elements cannot be accessed using numerical indexing.
+
+15. Set Functions
+
+* len(): Returns the number of elements in a set.
+
+Example:
+set1 = {10, 20, 30, 40}
+print(len(set1))
+
+Output:
+4
+
+* max(): Returns the largest element from a set.
+
+Example:
+set1 = {10, 50, 20, 40}
+print(max(set1))
+
+Output:
+50
+
+* min(): Returns the smallest element from a set.
+
+Example:
+print(min(set1))
+
+Output:
+10
+
+* sum(): Returns the sum of numeric elements in a set.
+
+Example:
+print(sum(set1))
+
+Output:
+120
+
+* type(): Returns the type of the object.
+
+Example:
+print(type(set1))
+
+Output:
+<class 'set'>
+
+16. Set Methods for Adding Elements
+
+* add(value): Adds a single element to the set.
+
+Example:
+set1 = {10, 20, 30}
+set1.add(40)
+print(set1)
+
+Output:
+{10, 20, 30, 40}
+
+* update(iterable): Adds multiple elements to the set.
+
+Example:
+set1 = {10, 20, 30}
+set1.update([40, 50, 60])
+print(set1)
+
+Output:
+{10, 20, 30, 40, 50, 60}
+
+17. Set Methods for Removing Elements
+
+* remove(value): Removes the specified element from the set. If the element does not exist, it raises a KeyError.
+
+Example:
+set1 = {10, 20, 30, 40}
+set1.remove(30)
+print(set1)
+
+Output:
+{10, 20, 40}
+
+* discard(value): Removes the specified element from the set. If the element does not exist, it does not raise an error.
+
+Example:
+set1 = {10, 20, 30}
+set1.discard(50)
+print(set1)
+
+Output:
+{10, 20, 30}
+
+* pop(): Removes and returns an arbitrary element from the set.
+
+Example:
+set1 = {10, 20, 30}
+removed = set1.pop()
+print(removed)
+print(set1)
+
+Note:
+Because a set is unordered, you should not assume which element pop() will remove.
+
+* clear(): Removes all elements from the set.
+
+Example:
+set1 = {10, 20, 30}
+set1.clear()
+print(set1)
+
+Output:
+set()
+
+18. Set Copy Method
+
+* copy(): Creates a shallow copy of the set.
+
+Example:
+set1 = {10, 20, 30}
+set2 = set1.copy()
+print(set2)
+
+Output:
+{10, 20, 30}
+
+19. Set Mathematical Operations
+
+Sets support mathematical operations such as:
+
+* Union
+* Intersection
+* Difference
+* Symmetric Difference
+
+20. Union of Sets
+
+Union combines all unique elements from two sets.
+
+Syntax:
+set1.union(set2)
+
+or
+
+set1 | set2
+
+Example:
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.union(set2))
+
+Output:
+{1, 2, 3, 4, 5, 6}
+
+Using | operator:
+
+print(set1 | set2)
+
+21. Intersection of Sets
+
+Intersection returns only the elements that are common in both sets.
+
+Syntax:
+set1.intersection(set2)
+
+or
+
+set1 & set2
+
+Example:
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.intersection(set2))
+
+Output:
+{3, 4}
+
+22. Difference of Sets
+
+Difference returns the elements that are present in the first set but not in the second set.
+
+Syntax:
+set1.difference(set2)
+
+or
+
+set1 - set2
+
+Example:
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.difference(set2))
+
+Output:
+{1, 2}
+
+Important:
+set1 - set2 and set2 - set1 can give different results.
+
+23. Symmetric Difference
+
+Symmetric difference returns the elements that are present in either set but not in both sets.
+
+Syntax:
+set1.symmetric_difference(set2)
+
+or
+
+set1 ^ set2
+
+Example:
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.symmetric_difference(set2))
+
+Output:
+{1, 2, 5, 6}
+
+24. Set Relationship Methods
+
+* issubset(): Checks whether all elements of one set are present in another set.
+
+Example:
+set1 = {1, 2}
+set2 = {1, 2, 3, 4}
+print(set1.issubset(set2))
+
+Output:
+True
+
+* issuperset(): Checks whether a set contains all elements of another set.
+
+Example:
+print(set2.issuperset(set1))
+
+Output:
+True
+
+* isdisjoint(): Checks whether two sets have no common elements.
+
+Example:
+set1 = {1, 2}
+set2 = {3, 4}
+print(set1.isdisjoint(set2))
+
+Output:
+True
+
+25. Difference Between remove() and discard()
+
+| Feature | remove() | discard() |
+|---|---|---|
+| **Purpose** | Removes a specified element | Removes a specified element |
+| **Element Exists** | Removes the element | Removes the element |
+| **Element Does Not Exist** | Raises KeyError | Does not raise an error |
+| **Example** | set1.remove(10) | set1.discard(10) |
+
+26. Introduction to Frozenset
+
+* Definition: A Frozenset is an immutable version of a set.
+* Syntax: frozenset(iterable)
+* Frozenset does not allow duplicate elements.
+* Frozenset is unordered.
+* Frozenset cannot be modified after creation.
+* Elements cannot be added or removed from a frozenset.
+* Frozensets can be used as dictionary keys because they are immutable and hashable.
+
+27. Creating a Frozenset
+
+Example:
+fs = frozenset([10, 20, 30, 40])
+print(fs)
+
+Output:
+frozenset({10, 20, 30, 40})
+
+Duplicate values are automatically removed.
+
+Example:
+fs = frozenset([10, 20, 10, 30, 20])
+print(fs)
+
+Output:
+frozenset({10, 20, 30})
+
+28. Frozenset Functions
+
+* len(): Returns the number of elements.
+
+Example:
+fs = frozenset([10, 20, 30, 40])
+print(len(fs))
+
+Output:
+4
+
+* max(): Returns the largest element.
+
+Example:
+print(max(fs))
+
+Output:
+40
+
+* min(): Returns the smallest element.
+
+Example:
+print(min(fs))
+
+Output:
+10
+
+* sum(): Returns the sum of numeric elements.
+
+Example:
+print(sum(fs))
+
+Output:
+100
+
+* type(): Returns the type of the object.
+
+Example:
+print(type(fs))
+
+Output:
+<class 'frozenset'>
+
+29. Frozenset Methods
+
+A frozenset cannot be changed, so methods that modify a set such as add(), remove(), discard(), pop(), clear(), and update() are not available.
+
+Frozenset supports methods used for non-modifying set operations.
+
+* union(): Returns the union of two sets or frozensets.
+
+Example:
+fs1 = frozenset([1, 2, 3])
+fs2 = frozenset([3, 4, 5])
+print(fs1.union(fs2))
+
+Output:
+frozenset({1, 2, 3, 4, 5})
+
+* intersection(): Returns common elements.
+
+Example:
+print(fs1.intersection(fs2))
+
+Output:
+frozenset({3})
+
+* difference(): Returns elements present in the first frozenset but not the second.
+
+Example:
+print(fs1.difference(fs2))
+
+Output:
+frozenset({1, 2})
+
+* symmetric_difference(): Returns elements present in either frozenset but not both.
+
+Example:
+print(fs1.symmetric_difference(fs2))
+
+Output:
+frozenset({1, 2, 4, 5})
+
+* issubset(): Checks whether one frozenset is a subset of another.
+
+Example:
+fs1 = frozenset([1, 2])
+fs2 = frozenset([1, 2, 3, 4])
+print(fs1.issubset(fs2))
+
+Output:
+True
+
+* issuperset(): Checks whether one frozenset contains all elements of another.
+
+Example:
+print(fs2.issuperset(fs1))
+
+Output:
+True
+
+* isdisjoint(): Checks whether two frozensets have no common elements.
+
+Example:
+fs1 = frozenset([1, 2])
+fs2 = frozenset([3, 4])
+print(fs1.isdisjoint(fs2))
+
+Output:
+True
+
+30. Difference Between Set and Frozenset
+
+| Feature | Set | Frozenset |
+|---|---|---|
+| **Mutability** | Mutable | Immutable |
+| **Syntax** | {1, 2, 3} | frozenset([1, 2, 3]) |
+| **Duplicate Values** | Not allowed | Not allowed |
+| **Indexing** | Not supported | Not supported |
+| **Adding Elements** | Supported using add() | Not supported |
+| **Removing Elements** | Supported using remove(), discard(), etc. | Not supported |
+| **Set Operations** | Supported | Supported |
+| **Hashable** | No | Yes |
+| **Can Be Dictionary Key** | No | Yes |
+| **Can Be Element of Another Set** | No | Yes |
+| **Use** | When the collection needs to be modified | When an immutable set is required |
+
+31. Difference Between Tuple, Set and Frozenset
+
+| Feature | Tuple | Set | Frozenset |
+|---|---|---|---|
+| **Order** | Ordered | Unordered | Unordered |
+| **Mutable** | No | Yes | No |
+| **Duplicates** | Allowed | Not allowed | Not allowed |
+| **Indexing** | Supported | Not supported | Not supported |
+| **Slicing** | Supported | Not supported | Not supported |
+| **Syntax** | (1, 2, 3) | {1, 2, 3} | frozenset([1, 2, 3]) |
+| **Add Elements** | No | Yes | No |
+| **Remove Elements** | No | Yes | No |
+| **Main Use** | Store ordered data that should not change | Store unique data that may change | Store unique data that should not change |
+| **Hashable** | Yes, if all elements are hashable | No | Yes, if its elements are hashable |
+
+32. Important Points for Day 10
+
+* Tuple is an ordered and immutable collection.
+* Tuple allows duplicate values.
+* Tuple supports indexing and slicing.
+* Tuple has two main methods: count() and index().
+* Set is an unordered and mutable collection.
+* Set stores only unique elements.
+* Set does not support indexing or slicing.
+* add() adds one element to a set.
+* update() adds multiple elements to a set.
+* remove() raises an error if the element is not found.
+* discard() does not raise an error if the element is not found.
+* pop() removes an arbitrary element from a set.
+* Frozenset is an immutable version of a set.
+* Frozenset does not support methods that modify the collection.
+* Set and frozenset support operations such as union, intersection, difference, and symmetric difference.
+* An empty set is created using set(), not {}.
+* {} creates an empty dictionary.
+
+33. Quick Revision
+
+| Collection | Ordered | Mutable | Duplicates | Indexing | Main Purpose |
+|---|---|---|---|---|---|
+| Tuple | Yes | No | Allowed | Yes | Store fixed ordered data |
+| Set | No | Yes | Not allowed | No | Store unique data |
+| Frozenset | No | No | Not allowed | No | Store unique immutable data |
+
+34. Common Methods Quick Revision
+
+| Collection | Important Methods |
+|---|---|
+| Tuple | count(), index() |
+| Set | add(), update(), remove(), discard(), pop(), clear(), copy() |
+| Set Operations | union(), intersection(), difference(), symmetric_difference() |
+| Set Relationship | issubset(), issuperset(), isdisjoint() |
+| Frozenset | union(), intersection(), difference(), symmetric_difference(), issubset(), issuperset(), isdisjoint() |
