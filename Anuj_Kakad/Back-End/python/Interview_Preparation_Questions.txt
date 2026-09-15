@@ -1646,3 +1646,319 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 | Frozenset        | union(), intersection(), difference(), symmetric_difference(), issubset(), issuperset(), isdisjoint() |
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 12(15/9/26):-
+
+        Python Notes: Day 11 - Conditional Statements
+
+            1. Introduction to Conditional Statements:-
+                Definition:-
+                    Conditional statements are used to make decisions in a Python program based on whether a given condition is True or False.
+                    They allow the program to execute different blocks of code depending on the condition.
+                
+                Python mainly provides the following conditional statements:
+                    1. if statement
+                    2. if-else statement
+                    3. if-elif-else statement
+                    4. Ternary statement
+
+                    1. if Statement:-
+                        The if statement is used when we want to execute a block of code only when a particular condition is True.
+
+                        Syntax:-
+
+                            if condition:
+                                statement
+
+                        Example:
+                            age = int(input("Enter your age: "))
+
+                            if age > 18:
+                                print("Your age is", age, "& you are eligible to buy a ticket")
+
+                        Explanation:
+                            * The user enters their age.
+                            * The condition age > 18 is checked.
+                            * If the condition is True, the print statement is executed.
+                            * If the condition is False, the program skips the if block.
+
+                    3. if-else Statement
+                        The if-else statement is used when we want to execute one block of code if the condition is True and another block if the condition is False.
+
+                        Syntax:
+                            if condition:
+                                statement_if_true
+                            else:
+                                statement_if_false
+
+                        Example:
+                            age = int(input("Enter your age: "))
+
+                            if age > 18:
+                                print("Your age is", age, "& you are eligible to buy a ticket")
+                            else:
+                                print("Your age is", age, "& you are not eligible to buy a ticket")
+
+                        Explanation:
+                            * If age is greater than 18, the if block is executed.
+                            * If age is 18 or less, the else block is executed.
+                            * Only one of the two blocks is executed.
+
+                    4. if-elif-else Statement
+                        The if-elif-else statement is used when we need to check multiple conditions.
+
+                        * if checks the first condition.
+                        * elif checks another condition if the previous condition is False.
+                        * Multiple elif statements can be used.
+                        * else executes when none of the conditions are True.
+
+                        Syntax:
+                            if condition1:
+                                statement1
+                            elif condition2:
+                                statement2
+                            elif condition3:
+                                statement3
+                            else:
+                                statement4
+
+                        Example:
+                            marks = int(input("Enter your Marks: "))
+
+                            if marks > 70:
+                                print("Grade A")
+                            elif marks > 50:
+                                print("Grade B")
+                            elif marks > 35:
+                                print("Grade C")
+                            else:
+                                print("Failed")
+
+                        Explanation:
+                            * If marks are greater than 70, Grade A is displayed.
+                            * If the first condition is False and marks are greater than 50, Grade B is displayed.
+                            * If the previous conditions are False and marks are greater than 35, Grade C is displayed.
+                            * If all conditions are False, Failed is displayed.
+
+                    5. Important Point About if-elif-else
+                        Python checks the conditions from top to bottom.
+                        Once a condition becomes True, its corresponding block is executed and the remaining elif and else blocks are skipped.
+
+                        Example:
+
+                            marks = 80
+
+                            if marks > 70:
+                                print("Grade A")
+                            elif marks > 50:
+                                print("Grade B")
+                            elif marks > 35:
+                                print("Grade C")
+                            else:
+                                print("Failed")
+
+                        Output:
+
+                            Grade A
+
+                        Even though 80 is also greater than 50 and 35, Python executes only the first True condition.
+
+                    6. Ternary Statement
+                        A Ternary Statement is a short and simple way of writing an if-else statement in a single line.
+
+                        Syntax:
+                            value_if_true if condition else value_if_false
+
+                        Example:
+                            age = int(input("Enter your Age: "))
+                            res = "valid" if age > 18 else "invalid"
+                            print(res)
+
+                        Explanation:
+                            * If age > 18 is True, res receives "valid".
+                            * If age > 18 is False, res receives "invalid".
+                            * The complete if-else logic is written in one line.
+
+                        Another Example:
+                            age = 20
+                            result = "Adult" if age >= 18 else "Child"
+                            print(result)
+
+                        Output:
+                            Adult
+
+            2. Difference Between if, if-else, if-elif-else and Ternary Statement:-
+
+                | Type         | Purpose                                | Number of Conditions | else Required | Format         |
+                |--------------|----------------------------------------|----------------------|---------------|----------------|
+                | if           | Executes code when a condition is True | One or more          | No            | Multiple lines |
+                | if-else      | Chooses between two blocks             | One                  | Yes           | Multiple lines |
+                | if-elif-else | Chooses between multiple conditions    | Multiple             | Optional      | Multiple lines |
+                | Ternary      | Short form of if-else                  | One                  | Yes           | Single line    |
+
+            3. Comparison of Conditional Statements:-
+
+                1. if:
+
+                    if age > 18:
+                        print("Adult")
+
+                    Use when you only need to perform an action when a condition is True.
+
+                2. if-else:
+
+                    if age > 18:
+                        print("Adult")
+                    else:
+                        print("Child")
+
+                    Use when there are two possible outcomes.
+
+                3. if-elif-else:
+
+                    if marks > 70:
+                        print("Grade A")
+                    elif marks > 50:
+                        print("Grade B")
+                    else:
+                        print("Failed")
+
+                    Use when there are multiple possible conditions or outcomes.
+
+                4. Ternary:
+
+                    result = "Adult" if age > 18 else "Child"
+
+                    Use when a simple if-else decision can be written clearly in one line.
+
+            4. Indentation in Conditional Statements:-
+                Indentation is very important in Python because it defines the block of code that belongs to a condition.
+
+                Example:
+                    if age > 18:
+                        print("Eligible")
+                        print("You can watch the movie")
+
+                Both print statements belong to the if block because they have the same indentation.
+                Incorrect indentation can result in an IndentationError.
+
+            5. Nested Conditional Statement:-
+                A nested conditional statement means using one conditional statement inside another conditional statement.
+
+                Example:
+                    age = int(input("Enter your age: "))
+
+                    if age > 18:
+                        print("You are an adult")
+
+                        if age >= 60:
+                            print("You are a senior citizen")
+
+                Explanation:
+                    * First, Python checks whether age is greater than 18.
+                    * If the condition is True, the inner if condition is checked.
+                    * The inner if statement is called a nested conditional statement.
+
+            6. Practical Example - PVR Ticket Booking:-
+                The following program uses conditional statements to create a simple movie ticket booking system.
+
+                    print("========= PVR =========")
+
+                    age = int(input("Enter your Age: "))
+
+                    if age > 18:
+                        print("Eligible to watch movie")
+                    else:
+                        print("Not eligible")
+
+                    print("""
+                    Select Eligibility:
+                        1. adult
+                        2. child
+                    """)
+
+                    chec = input("Enter your Eligibility: ")
+
+                    if chec == "adult":
+                        print("You are eligible")
+                    else:
+                        print("Not Eligible")
+
+                    print("""
+                    Select your sitting plan here:
+                        Sitting Row 1 : 1000
+                        Sitting Row 2 : 500
+                        Sitting Last Row : 250
+                    """)
+
+                    sitting_choice = int(input("Enter Your Choice For Sitting: "))
+
+                    if sitting_choice == 1:
+                        print("Your Row 1 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+                    elif sitting_choice == 2:
+                        print("Your Row 2 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+                    else:
+                        print("Your Row 3 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+
+            7. Conditional Operators Commonly Used:-
+
+                Conditional statements commonly use comparison operators to check conditions.
+
+                | Operator | Meaning                  | Example  | Result |
+                |----------|--------------------------|----------|--------|
+                | ==       | Equal to                 | 10 == 10 | True   |
+                | !=       | Not equal to             | 10 != 5  | True   |
+                | >        | Greater than             | 10 > 5   | True   |
+                | <        | Less than                | 5 < 10   | True   |
+                | >=       | Greater than or equal to | 10 >= 10 | True   |
+                | <=       | Less than or equal to    | 5 <= 10  | True   |
+
+            8. Logical Operators with Conditional Statements:-
+                Logical operators can be used to combine multiple conditions.
+
+                    * and: Returns True when both conditions are True.
+                    * or: Returns True when at least one condition is True.
+                    * not: Reverses the result of a condition.
+
+                Example:
+                    age = 25
+
+                    if age >= 18 and age <= 60:
+                        print("Eligible")
+
+                Output:
+                    Eligible
+
+            9. Important Points for Day 11
+
+                * Conditional statements are used for decision-making in Python.
+                * The if statement executes code only when its condition is True.
+                * The if-else statement provides two possible outcomes.
+                * The if-elif-else statement is used to check multiple conditions.
+                * Multiple elif statements can be used.
+                * The else block executes when all previous conditions are False.
+                * Ternary statements are a short form of if-else.
+                * A ternary statement is generally written in a single line.
+                * Indentation is mandatory for defining conditional blocks in Python.
+                * Conditions normally use comparison and logical operators.
+                * Python checks if-elif conditions from top to bottom.
+                * Once a condition is True, the remaining elif and else blocks are skipped.
+
+            10. Quick Revision:-
+
+                | Statement    | Simple Meaning                                     |
+                |--------------|----------------------------------------------------|
+                | if           | Execute code when a condition is True              |
+                | if-else      | Choose between two outcomes                        |
+                | if-elif-else | Choose between multiple outcomes                   |
+                | Ternary      | Write a simple if-else in one line                 |
+                | Nested if    | Write one conditional statement inside another     |
+                | Indentation  | Defines the block of code belonging to a condition |
+        
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
