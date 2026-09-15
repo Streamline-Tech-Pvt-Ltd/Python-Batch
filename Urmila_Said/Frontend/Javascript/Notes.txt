@@ -401,9 +401,155 @@ do {
 | `while`      | Before execution | Condition-based repetition      |
 | `do...while` | After execution  | Code must execute at least once |
 
+--------------------------------------------------------------------------------------------------------
+# The Break Statement
+The break statement "jumps out" of loops and switches.
+The break statement terminates the execution of a loop or a switch statement.
+No more loop iterations are executed.
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { 
+break; 
+}
+  text = "The number is " + i + "\n";
+}
+
+# Break in a Switch statement:
+In a switch statement, a break statement will exit the switch block after a matching case is executed.
+Ex-
+let dayNumber = 3;
+let dayName;
+switch (dayNumber) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+console.log(dayName);
 
 
+# The Continue Statement
+The continue statement skips the current iteration in a loop.
+The remaining code in the iteration is skipped and processing moves to the next iteration.
+Ex-
+for (let i = 1; i < 10; i++) {
+  if (i === 3) { 
+continue; 
+}
+  text += "The number is " + i + "\n";
+}
+-------------------------------------------------------------------------------------------------------------------
 
+# String :
+A String is a sequence of characters (letters, numbers, symbols, or spaces) written inside quotes.
+Ex:let name1 = "Urmila";
+let name2 = 'Urmila';
+let name3 = `Urmila`;
+
+1.String Length: The .length property tells us how many characters are present in a string.
+Ex: let name = "Urmila";
+console.log(name.length);
+
+2.string charAt() : charAt() returns the character at a particular index.
+Ex: let name = "Urmila";
+console.log(name.charAt(0));
+
+3.String concat()
+concat() joins two or more strings:
+Ex: 
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+console.log(text3);
+
+4.String slice()
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: start position, and end position (end not included).
+Ex:
+let text = "Apple,Banana,Kiwi";
+let part = text.slice(6,12);
+console.log(part); 
+
+5. Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+JavaScript String toUpperCase()
+Ex: 
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+console.log(text2);
+
+JavaScript String toLowerCase()
+let text1 = "Hello World!";       
+ let text2 = text1.toLowerCase();
+console.log(text2);
+
+JavaScript String trim()
+The trim() method removes whitespace from both sides of a string:
+Ex: 
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+console.log(text2);
+
+6.Replace method:
+The replace() method replaces a specified value with another value in a string:
+Ex: 
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "Amazon");
+console.log(newText);
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work.
+
+7. ReplaceAll()
+In 2021, JavaScript introduced the string method replaceAll():
+Ex: 
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+console.log(text);
+
+
+# JavaScript String Methods – Short Chart
+| Method          | Easy Meaning                 | Example                         |
+| --------------- | ---------------------------- | ------------------------------- |
+| `length`        | Count characters             | `text.length`                   |
+| `toUpperCase()` | Convert to CAPITAL letters   | `text.toUpperCase()`            |
+| `toLowerCase()` | Convert to small letters     | `text.toLowerCase()`            |
+| `charAt()`      | Get character at index       | `text.charAt(2)`                |
+| `at()`          | Get character at index       | `text.at(2)`                    |
+| `includes()`    | Check if text exists         | `text.includes("Hi")`           |
+| `startsWith()`  | Check starting text          | `text.startsWith("Hi")`         |
+| `endsWith()`    | Check ending text            | `text.endsWith("Hi")`           |
+| `indexOf()`     | Find first position          | `text.indexOf("a")`             |
+| `lastIndexOf()` | Find last position           | `text.lastIndexOf("a")`         |
+| `slice()`       | Extract part of string       | `text.slice(0, 3)`              |
+| `substring()`   | Extract part of string       | `text.substring(0, 3)`          |
+| `replace()`     | Replace text                 | `text.replace("Hi","Hello")`    |
+| `replaceAll()`  | Replace all matching text    | `text.replaceAll("Hi","Hello")` |
+| `trim()`        | Remove spaces from both ends | `text.trim()`                   |
+| `trimStart()`   | Remove starting spaces       | `text.trimStart()`              |
+| `trimEnd()`     | Remove ending spaces         | `text.trimEnd()`                |
+| `concat()`      | Join strings                 | `text.concat(" World")`         |
+| `split()`       | String → Array               | `text.split(" ")`               |
+| `repeat()`      | Repeat string                | `text.repeat(3)`                |
+| `charCodeAt()`  | Get character Unicode value  | `text.charCodeAt(0)`            |
 
 
 
