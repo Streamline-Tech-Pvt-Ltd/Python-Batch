@@ -15,12 +15,12 @@ for i in range(5):
      fact = fact * (i+1)
 print(fact)
 
-print a table using for loop
+#print a table using for loop
 for i in range(2,21,2):
      print(i)
 
 
-print odd number using while loop
+#print odd number using while loop
 i = 1
 while(i <= 10):
      print(i)
