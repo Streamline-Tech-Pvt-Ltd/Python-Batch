@@ -152,7 +152,6 @@ Here:
 
 
 ## Variable Naming Rules
-
 1. Variable name must start with a letter or `_`.
 2. Variable name cannot start with a number.
 3. Spaces are not allowed.
@@ -512,7 +511,6 @@ Logical operators are used to combine conditional statements.
 * `not`
 
 ### Example
-
 age = 22
 
 print(age > 18 and age < 30)
