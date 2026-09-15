@@ -1301,3 +1301,779 @@ IT
 
 ---
 
+# Python Set
+
+
+A **set** is a built-in collection data type in Python used to store **multiple unique elements**.
+
+### Definition
+
+> A set is an **unordered, mutable collection of unique elements**.
+
+---
+
+# 1. Creating a Set
+
+A set is created using **curly brackets `{}`**.
+
+```python
+numbers = {10, 20, 30, 40}
+
+print(numbers)
+```
+
+### Output
+
+```text
+{10, 20, 30, 40}
+```
+
+---
+
+# 2. Set Does Not Allow Duplicate Values
+
+A set automatically removes duplicate values.
+
+```python
+numbers = {10, 20, 20, 30, 30, 40}
+
+print(numbers)
+```
+
+### Output
+
+```text
+{10, 20, 30, 40}
+```
+
+### Explanation
+
+The values `20` and `30` were repeated, but the set keeps only one copy of each value.
+
+---
+
+# 3. Set is Unordered
+
+A set does not maintain a fixed order of elements.
+
+```python
+numbers = {10, 20, 30, 40}
+
+print(numbers)
+```
+
+The output order may not always be the same.
+
+### Important
+
+> A set is **unordered**, so we should not depend on the position of elements.
+
+---
+
+# 4. Set Does Not Support Indexing
+
+Sets do not support indexing.
+
+```python
+numbers = {10, 20, 30}
+
+print(numbers[0])
+```
+
+This will give an error because a set has **no index-based access**.
+
+### ❌ Incorrect
+
+```python
+numbers[0]
+```
+
+### ✅ Correct
+
+We can access set elements using a loop.
+
+```python
+numbers = {10, 20, 30}
+
+for number in numbers:
+    print(number)
+```
+
+---
+
+# 5. Set is Mutable
+
+A set is mutable, which means we can **add or remove elements** after creating it.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.add(40)
+
+print(numbers)
+```
+
+### Output
+
+```text
+{10, 20, 30, 40}
+```
+
+---
+
+# 6. Set Methods
+
+## `add()`
+
+The `add()` method is used to add **one element** to a set.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.add(40)
+
+print(numbers)
+```
+
+---
+
+## `update()`
+
+The `update()` method is used to add **multiple elements**.
+
+```python
+numbers = {10, 20}
+
+numbers.update([30, 40, 50])
+
+print(numbers)
+```
+
+### Output
+
+```text
+{10, 20, 30, 40, 50}
+```
+
+---
+
+## `remove()`
+
+The `remove()` method removes a specified element.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.remove(20)
+
+print(numbers)
+```
+
+### Output
+
+```text
+{10, 30}
+```
+
+### Important
+
+If the element does not exist, `remove()` raises a `KeyError`.
+
+---
+
+## `discard()`
+
+The `discard()` method also removes an element.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.discard(20)
+
+print(numbers)
+```
+
+Unlike `remove()`, `discard()` does not give an error if the element is not present.
+
+```python
+numbers.discard(50)
+```
+
+No error will occur.
+
+---
+
+## `pop()`
+
+The `pop()` method removes and returns an **arbitrary element** from the set.
+
+```python
+numbers = {10, 20, 30}
+
+value = numbers.pop()
+
+print(value)
+print(numbers)
+```
+
+Because sets are unordered, we should not assume which element will be removed.
+
+---
+
+## `clear()`
+
+The `clear()` method removes all elements from a set.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.clear()
+
+print(numbers)
+```
+
+### Output
+
+```text
+set()
+```
+
+---
+
+# 7. Set Operations
+
+Sets support mathematical operations such as **Union, Intersection, Difference, and Symmetric Difference**.
+
+---
+
+## Union `|`
+
+Union combines elements from both sets.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)
+```
+
+### Output
+
+```text
+{1, 2, 3, 4, 5}
+```
+
+### Method
+
+```python
+print(a.union(b))
+```
+
+---
+
+## Intersection `&`
+
+Intersection returns the elements that are common to both sets.
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a & b)
+```
+
+### Output
+
+```text
+{2, 3}
+```
+
+### Method
+
+```python
+print(a.intersection(b))
+```
+
+---
+
+## Difference `-`
+
+Difference returns elements that are present in the first set but not in the second set.
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a - b)
+```
+
+### Output
+
+```text
+{1}
+```
+
+### Method
+
+```python
+print(a.difference(b))
+```
+
+---
+
+## Symmetric Difference `^`
+
+Symmetric difference returns elements that are present in either set but **not in both**.
+
+```python
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+print(a ^ b)
+```
+
+### Output
+
+```text
+{1, 4}
+```
+
+### Method
+
+```python
+print(a.symmetric_difference(b))
+```
+
+---
+
+# 8. Empty Set
+
+### ❌ This is not an empty set
+
+```python
+s = {}
+```
+
+`{}` creates an **empty dictionary**.
+
+### ✅ Correct way
+
+```python
+s = set()
+
+print(type(s))
+```
+
+### Output
+
+```text
+<class 'set'>
+```
+
+---
+
+# 9. Set with Different Data Types
+
+A set can contain different data types, as long as its elements are hashable.
+
+```python
+data = {10, "Python", 20.5, True}
+
+print(data)
+```
+
+---
+
+# 10. Set with String Values
+
+```python
+languages = {"Python", "Java", "SQL", "Python"}
+
+print(languages)
+```
+
+### Output
+
+```text
+{'Python', 'Java', 'SQL'}
+```
+
+The duplicate `"Python"` is automatically removed.
+
+---
+# Python if, elif and else
+
+## 📌 Introduction
+
+`if`, `elif`, and `else` are **conditional statements** in Python.
+
+They are used to make decisions in a program based on whether a condition is **True or False**.
+
+---
+
+## 1. if Statement
+
+The `if` statement is used to execute a block of code when a specified condition is **True**.
+
+### Syntax
+
+```python
+if condition:
+    statement
+```
+
+### Example
+
+```python
+age = 20
+
+if age >= 18:
+    print("You are eligible to vote")
+```
+
+### Output
+
+```text
+You are eligible to vote
+```
+
+### Explanation
+
+The condition `age >= 18` is checked.
+
+Since the condition is `True`, the statement inside the `if` block is executed.
+
+---
+
+## 2. else Statement
+
+The `else` statement is executed when the `if` condition is **False**.
+
+### Syntax
+
+```python
+if condition:
+    statement
+else:
+    statement
+```
+
+### Example
+
+```python
+age = 15
+
+if age >= 18:
+    print("You are eligible to vote")
+else:
+    print("You are not eligible to vote")
+```
+
+### Output
+
+```text
+You are not eligible to vote
+```
+
+### Explanation
+
+The condition `age >= 18` is `False`, so Python executes the `else` block.
+
+---
+
+## 3. elif Statement
+
+`elif` means **"else if"**.
+
+It is used to check **multiple conditions**.
+
+### Syntax
+
+```python
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+```
+
+### Example
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 75:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+```
+
+### Output
+
+```text
+Grade A
+```
+
+### Explanation
+
+Python checks the conditions from top to bottom.
+
+* `marks >= 90` → False
+* `marks >= 75` → True
+* `Grade A` is printed
+* The remaining conditions are not checked
+
+---
+
+# 4. if + elif + else
+
+We can use `if`, `elif`, and `else` together when there are multiple possible outcomes.
+
+### Example
+
+```python
+age = 65
+
+if age < 18:
+    print("Minor")
+elif age < 60:
+    print("Adult")
+else:
+    print("Senior Citizen")
+```
+
+### Output
+
+```text
+Senior Citizen
+```
+
+---
+
+# 5. Real-Life Example: Movie Ticket
+
+```python
+age = 25
+
+if age < 5:
+    print("Ticket is Free")
+elif age < 18:
+    print("Child Ticket = ₹100")
+elif age < 60:
+    print("Adult Ticket = ₹200")
+else:
+    print("Senior Citizen Ticket = ₹150")
+```
+
+### Output
+
+```text
+Adult Ticket = ₹200
+```
+
+### Explanation
+
+| Age         | Ticket                |
+| ----------- | --------------------- |
+| Below 5     | Free                  |
+| 5 to 17     | Child Ticket          |
+| 18 to 59    | Adult Ticket          |
+| 60 or above | Senior Citizen Ticket |
+
+---
+
+# 6. Even or Odd Example
+
+```python
+number = 10
+
+if number % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+```
+
+### Output
+
+```text
+Even Number
+```
+
+---
+
+# 7. Positive, Negative or Zero
+
+```python
+number = -5
+
+if number > 0:
+    print("Positive Number")
+elif number < 0:
+    print("Negative Number")
+else:
+    print("Zero")
+```
+
+### Output
+
+```text
+Negative Number
+```
+
+---
+
+# 8. Temperature Example
+
+```python
+temperature = 35
+
+if temperature >= 40:
+    print("Very Hot")
+elif temperature >= 30:
+    print("Hot")
+elif temperature >= 20:
+    print("Normal")
+else:
+    print("Cold")
+```
+
+### Output
+
+```text
+Hot
+```
+
+---
+
+# 9. Important Rules
+
+### Rule 1: `if` is required
+
+An `elif` cannot be used without an `if`.
+
+```python
+if condition:
+    statement
+```
+
+---
+
+### Rule 2: Multiple `elif` statements are allowed
+
+```python
+if condition1:
+    statement
+elif condition2:
+    statement
+elif condition3:
+    statement
+elif condition4:
+    statement
+```
+
+---
+
+### Rule 3: Only one `else` is allowed
+
+```python
+if condition1:
+    statement
+elif condition2:
+    statement
+else:
+    statement
+```
+
+---
+
+### Rule 4: `else` is optional
+
+```python
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+### Rule 5: Indentation is mandatory
+
+Correct:
+
+```python
+if age >= 18:
+    print("Eligible")
+```
+
+Incorrect:
+
+```python
+if age >= 18:
+print("Eligible")
+```
+
+---
+
+# 10. How Python Executes Conditions
+
+Python checks conditions **from top to bottom**.
+
+```text
+if condition
+     ↓
+   True? ── Yes ──> Execute if block
+     │
+     No
+     ↓
+elif condition
+     ↓
+   True? ── Yes ──> Execute elif block
+     │
+     No
+     ↓
+else
+     ↓
+Execute else block
+```
+
+Once Python finds a **True condition**, it executes that block and skips the remaining blocks.
+
+---
+
+# 11. Difference Between if, elif and else
+
+| Statement | Purpose                                |
+| --------- | -------------------------------------- |
+| `if`      | Checks the first condition             |
+| `elif`    | Checks additional conditions           |
+| `else`    | Executes when all conditions are False |
+
+---
+
+# 12. Interview Definition
+
+> **`if`, `elif`, and `else` are conditional statements in Python used to control the flow of a program based on different conditions.**
+
+### Short Definition
+
+> **if** → first condition
+> **elif** → additional condition
+> **else** → when all conditions are False
+
+---
+
+# 13. Key Points
+
+* `if` checks a condition.
+* `elif` means "else if".
+* `else` executes when all previous conditions are False.
+* Multiple `elif` statements can be used.
+* Only one `else` can be used.
+* `else` is optional.
+* Conditions are checked from top to bottom.
+* Python executes the first matching `True` condition.
+* Proper indentation is required.
