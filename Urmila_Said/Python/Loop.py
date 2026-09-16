@@ -74,7 +74,7 @@ n = int(input("Enter the no n:"))
 i = 1
 while(i <= 10):
      print(n * i)
-    i += 1
+     i += 1
 
 
 # 4. Take a number n and print squares of numbers from 1 to n.
