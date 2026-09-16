@@ -331,3 +331,298 @@ let result = age >= 18 ? "Adult" : "Minor";
 console.log(result);
 
 --------------------------------------------------------------------------------------------------------------------
+
+# Loops:
+A loop in JavaScript is used to execute the same block of code repeatedly until a particular condition becomes false.
+
+1. for Loop
+The for loop is used when we know how many times we want to execute the code.
+
+* Syntax :
+ for (initialization; condition; increment/decrement) {
+    // code
+}
+
+* Ex: Print 1 to 10
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+* How it works
+let i = 1       → Initialization
+i <= 10         → Condition
+console.log(i)  → Code execution
+i++             → Increment
+
+2. while Loop
+The while loop executes the code as long as the condition is true.
+
+* Syntax :
+while (condition) {
+    // code
+}
+
+* Ex: 
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+3. do...while Loop
+The do...while loop executes the code at least once, even if the condition is false.
+
+* Syntax
+do {
+    // code
+} while (condition);
+
+* EX: 
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+
+# Important Difference
+
+> while checks the condition before execution.
+> do...while checks the condition after execution.
+
+
+# Loop Comparison
+
+| Loop         | Condition Check  | Best Used For                   |
+| ------------ | ---------------- | ------------------------------- |
+| `for`        | Before execution | Known number of repetitions     |
+| `while`      | Before execution | Condition-based repetition      |
+| `do...while` | After execution  | Code must execute at least once |
+
+--------------------------------------------------------------------------------------------------------
+# The Break Statement
+The break statement "jumps out" of loops and switches.
+The break statement terminates the execution of a loop or a switch statement.
+No more loop iterations are executed.
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { 
+break; 
+}
+  text = "The number is " + i + "\n";
+}
+
+# Break in a Switch statement:
+In a switch statement, a break statement will exit the switch block after a matching case is executed.
+Ex-
+let dayNumber = 3;
+let dayName;
+switch (dayNumber) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+console.log(dayName);
+
+
+# The Continue Statement
+The continue statement skips the current iteration in a loop.
+The remaining code in the iteration is skipped and processing moves to the next iteration.
+Ex-
+for (let i = 1; i < 10; i++) {
+  if (i === 3) { 
+continue; 
+}
+  text += "The number is " + i + "\n";
+}
+-------------------------------------------------------------------------------------------------------------------
+
+# String :
+A String is a sequence of characters (letters, numbers, symbols, or spaces) written inside quotes.
+Ex:let name1 = "Urmila";
+let name2 = 'Urmila';
+let name3 = `Urmila`;
+
+1.String Length: The .length property tells us how many characters are present in a string.
+Ex: let name = "Urmila";
+console.log(name.length);
+
+2.string charAt() : charAt() returns the character at a particular index.
+Ex: let name = "Urmila";
+console.log(name.charAt(0));
+
+3.String concat()
+concat() joins two or more strings:
+Ex: 
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+console.log(text3);
+
+4.String slice()
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: start position, and end position (end not included).
+Ex:
+let text = "Apple,Banana,Kiwi";
+let part = text.slice(6,12);
+console.log(part); 
+
+5. Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+JavaScript String toUpperCase()
+Ex: 
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+console.log(text2);
+
+JavaScript String toLowerCase()
+let text1 = "Hello World!";       
+ let text2 = text1.toLowerCase();
+console.log(text2);
+
+JavaScript String trim()
+The trim() method removes whitespace from both sides of a string:
+Ex: 
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+console.log(text2);
+
+6.Replace method:
+The replace() method replaces a specified value with another value in a string:
+Ex: 
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "Amazon");
+console.log(newText);
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work.
+
+7. ReplaceAll()
+In 2021, JavaScript introduced the string method replaceAll():
+Ex: 
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+console.log(text);
+
+
+# JavaScript String Methods – Short Chart
+| Method          | Easy Meaning                 | Example                         |
+| --------------- | ---------------------------- | ------------------------------- |
+| `length`        | Count characters             | `text.length`                   |
+| `toUpperCase()` | Convert to CAPITAL letters   | `text.toUpperCase()`            |
+| `toLowerCase()` | Convert to small letters     | `text.toLowerCase()`            |
+| `charAt()`      | Get character at index       | `text.charAt(2)`                |
+| `at()`          | Get character at index       | `text.at(2)`                    |
+| `includes()`    | Check if text exists         | `text.includes("Hi")`           |
+| `startsWith()`  | Check starting text          | `text.startsWith("Hi")`         |
+| `endsWith()`    | Check ending text            | `text.endsWith("Hi")`           |
+| `indexOf()`     | Find first position          | `text.indexOf("a")`             |
+| `lastIndexOf()` | Find last position           | `text.lastIndexOf("a")`         |
+| `slice()`       | Extract part of string       | `text.slice(0, 3)`              |
+| `substring()`   | Extract part of string       | `text.substring(0, 3)`          |
+| `replace()`     | Replace text                 | `text.replace("Hi","Hello")`    |
+| `replaceAll()`  | Replace all matching text    | `text.replaceAll("Hi","Hello")` |
+| `trim()`        | Remove spaces from both ends | `text.trim()`                   |
+| `trimStart()`   | Remove starting spaces       | `text.trimStart()`              |
+| `trimEnd()`     | Remove ending spaces         | `text.trimEnd()`                |
+| `concat()`      | Join strings                 | `text.concat(" World")`         |
+| `split()`       | String → Array               | `text.split(" ")`               |
+| `repeat()`      | Repeat string                | `text.repeat(3)`                |
+| `charCodeAt()`  | Get character Unicode value  | `text.charCodeAt(0)`            |
+
+-------------------------------------------------------------------------------------------------------------------
+# Functions :
+A function in JavaScript is a block of code that performs a specific task.
+We write the function once and can reuse it many times.
+
+Syntax: function functionName() {
+    // code
+}
+
+To run / Call the function :
+functionName();
+
+Ex: function greet(){
+    console.log("Hello World");
+ }
+ greet()
+ greet()
+
+
+# Parameters :
+A parameter is a variable written inside the function definition. 
+It receives a value when the function is called.
+
+EX: function add(a, b) {
+    return a + b;
+}
+Here, a and b are parameters.
+
+# Arguments :
+An argument is the actual value that we pass to the function when calling it.
+Ex: add(10, 20);
+ Here, 10 & 20 are argument
+
+* Easy Way :
+Parameter → Function बनवताना / defining time
+Argument → Function call करताना / calling time
+
+# Global Variable :
+A variable declared outside a function or block is generally called a global variable. 
+It can be accessed from different parts of the program.
+
+EX : let name = "Urmila";
+function greet() {
+    console.log(name);
+}
+greet();
+console.log(name);
+
+# Local Variable
+A variable declared inside a function is called a local variable. It can be accessed only inside that function.
+
+EX :function student() {
+    let marks = 85;
+}
+console.log(marks);
+
+# Difference
+| Global Variable                            | Local Variable                              |
+| ------------------------------------------ | ------------------------------------------- |
+| Declared outside a function                | Declared inside a function                  |
+| Can be accessed from many places           | Accessible only within its scope            |
+| Available for a larger part of the program | Available for a smaller part of the program |
+| Example: `let name = "Urmila";`            | Example: `let marks = 85;`                  |
+
+
+# Arrow Function :
+An Arrow Function is a shorter and simpler way to write a function in JavaScript.
+
+EX :const add = (a, b) => a + b;
+console.log(add(10, 20));
+
+If the function has only one statement that returns a value, we can remove {} and return.
+
+
+
