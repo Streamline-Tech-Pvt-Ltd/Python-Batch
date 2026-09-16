@@ -34,7 +34,7 @@ n = int(input("Enter the no n:"))
 sum = 0
 for i in range(1, n + 1):
       sum = sum + i
- print(sum)
+print(sum)
 
 # While Loop
 n = int(input("Enter the no n:"))
@@ -43,7 +43,7 @@ sum = 0
 while(i <= n):
      sum = sum + i
      i = i + 1
- print(sum)    
+print(sum)    
 
 
 # 2. Write a Python program to take a number from the user and find its factorial using a for loop and while loop.
@@ -52,7 +52,7 @@ n = int(input("Enter the no n:"))
 fact = 1
 for i in range(n):
       fact = fact * (i+1)
- print(fact)
+print(fact)
 
 # While Loop
 n = int(input("Enter the no n:"))
@@ -61,7 +61,7 @@ i = 1
 while(i <= n):
       fact = fact * i
       i = i + 1
- print(fact)    
+print(fact)    
 
 # 3. Take a number from the user and print its multiplication table up to 10.
 # For Loop

@@ -551,6 +551,78 @@ console.log(text);
 | `repeat()`      | Repeat string                | `text.repeat(3)`                |
 | `charCodeAt()`  | Get character Unicode value  | `text.charCodeAt(0)`            |
 
+-------------------------------------------------------------------------------------------------------------------
+# Functions :
+A function in JavaScript is a block of code that performs a specific task.
+We write the function once and can reuse it many times.
+
+Syntax: function functionName() {
+    // code
+}
+
+To run / Call the function :
+functionName();
+
+Ex: function greet(){
+    console.log("Hello World");
+ }
+ greet()
+ greet()
+
+
+# Parameters :
+A parameter is a variable written inside the function definition. 
+It receives a value when the function is called.
+
+EX: function add(a, b) {
+    return a + b;
+}
+Here, a and b are parameters.
+
+# Arguments :
+An argument is the actual value that we pass to the function when calling it.
+Ex: add(10, 20);
+ Here, 10 & 20 are argument
+
+* Easy Way :
+Parameter → Function बनवताना / defining time
+Argument → Function call करताना / calling time
+
+# Global Variable :
+A variable declared outside a function or block is generally called a global variable. 
+It can be accessed from different parts of the program.
+
+EX : let name = "Urmila";
+function greet() {
+    console.log(name);
+}
+greet();
+console.log(name);
+
+# Local Variable
+A variable declared inside a function is called a local variable. It can be accessed only inside that function.
+
+EX :function student() {
+    let marks = 85;
+}
+console.log(marks);
+
+# Difference
+| Global Variable                            | Local Variable                              |
+| ------------------------------------------ | ------------------------------------------- |
+| Declared outside a function                | Declared inside a function                  |
+| Can be accessed from many places           | Accessible only within its scope            |
+| Available for a larger part of the program | Available for a smaller part of the program |
+| Example: `let name = "Urmila";`            | Example: `let marks = 85;`                  |
+
+
+# Arrow Function :
+An Arrow Function is a shorter and simpler way to write a function in JavaScript.
+
+EX :const add = (a, b) => a + b;
+console.log(add(10, 20));
+
+If the function has only one statement that returns a value, we can remove {} and return.
 
 
 
