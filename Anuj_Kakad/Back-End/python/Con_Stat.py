@@ -1,3 +1,5 @@
+# 1. Theater Ticket Booking System:-
+
 print("========= PVR =========")
 
 age = int(input("Enter your Age: "))
@@ -41,3 +43,37 @@ else:
     print("Your Row 3 Seat is Booked...")
     print("Your Ticket Is Successfully Booked.")
     print("Thank You For Booking Ticket At PVR")
+
+
+# 2. Wheather Check:-
+
+temp = int(input("Enter the temperature: "))
+
+if temp >= 35:
+    print("It's very hot")
+elif temp >= 25:
+    print("The weather is warm")
+elif temp >= 15:
+    print("The weather is cool")
+else:
+    print("It's cold")
+
+# 3. Program for checking addmision eligibility of a student based on their marks:-
+
+take percentage and entrance marks:-
+conditions:-
+percentage >= 60 & entrance marks >= 70 :- Addmission is granted
+otherwise :- Marks are not sufficient for addmission
+percentage < 60 :- not eligible for addmission
+
+per = float(input("Enter your percentage:- "))
+entrance_marks = float(input("Enter your entrance marks:-"))
+
+
+if per >= 60 and entrance_marks >= 70:
+    print("Addmisson is granted")
+elif per >= 60 and entrance_marks <= 70:
+    print("Marks are not sufficient for addmission")
+else:
+    print("Not eligible for addmission")
+
