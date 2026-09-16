@@ -505,3 +505,256 @@ console.log(text);
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
+###  Functions
+Function?
+A **function** is a reusable block of code designed to perform a specific task.
+Instead of writing the same code multiple times, we can write it once inside a function and call it whenever required.
+### Basic Syntax
+
+function functionName() {
+    // code to execute
+}
+
+Example:
+function greet() {
+    console.log("Hello World");
+}
+greet();                    //`greet()` is the **function call**
+
+### Output
+Hello World
+
+| Part            | Meaning                               |
+| --------------- | ------------------------------------- |
+| `function`      | Keyword used to declare a function    |
+| `greet`         | Function name                         |
+| `()`            | Parameter list                        |
+| `{}`            | Function body                         |
+| `console.log()` | Code executed when function is called |
+
+
+#  Why Do We Use Functions?
+
+| Purpose          | Explanation                                   |
+| ---------------- | --------------------------------------------- |
+| Reusability      | Write code once and use it multiple times     |
+| Organization     | Divide a large program into smaller parts     |
+| Maintainability  | Easy to modify and manage code                |
+| Avoid repetition | Prevent writing the same code again and again |
+| Readability      | Makes code easier to understand               |
+
+#  Function With Parameters
+A **parameter** is a variable written inside the function definition that receives a value.
+
+### Syntax
+function functionName(parameter1, parameter2) {
+    // code
+}
+
+### Example
+function students(name, age, city) {
+    console.log("Name:", name);
+    console.log("Age:", age);
+    consol
+Name: Pallavi
+Age: 20
+City: Nashik
+
+### Parameter vs Argument
+
+| Term      | Meaning                                  | Example                      |
+| --------- | ---------------------------------------- | ---------------------------- |
+| Parameter | Variable in function definition          | `name`, `age`, `city`        |
+| Argument  | Actual value passed during function call | `"Urmila"`, `21`, `"Nashik"` |
+
+function students(name, age) {
+    console.log(name, age);
+}
+students("Pallavi", 20);
+
+# Function With Return Value
+The `return` statement sends a value back from a function.
+
+### Syntax
+function functionName(parameters) {
+    return value;
+}
+
+### Example
+function add(a, b) {
+    return a + b;
+}
+
+let addition = add(2, 10);
+console.log("Addition of a and b is:", addition);
+
+### Output
+Addition of a and b is: 12
+
+
+### Remember
+
+| `console.log()`                     | `return`                              |
+| ----------------------------------- | ------------------------------------- |
+| Displays value                      | Sends value back                      |
+| Mainly for output/debugging         | Used when result is needed elsewhere  |
+| Does not return the displayed value | Returns a value                       |
+| Execution continues after it        | Function exits when `return` executes |
+
+
+#  Local and Global Variables in Functions
+## Global Variable
+A variable declared outside a function is called a **global variable**.
+It can generally be accessed inside the function.
+
+let a = 10;
+function add() {
+    console.log(a);
+}
+add();
+Output:
+10
+
+## Local Variable
+A variable declared inside a function is called a **local variable**.
+It can be accessed inside that function, but not from outside.
+
+let a = 10;
+function add() {
+    let text = "Hello";
+    console.log(text);
+    console.log(a);
+}
+
+add();
+console.log(a);
+
+Output:
+Hello
+10
+10
+
+
+### Scope Table
+
+| Variable        | Declared         | Accessible                  |
+| --------------- | ---------------- | --------------------------- |
+| Global variable | Outside function | Inside and outside function |
+| Local variable  | Inside function  | Inside that function        |
+
+# Function Expression
+A function can be stored inside a variable. This is called a **function expression**.
+
+### Syntax
+let variableName = function() {
+    // code
+};
+
+### Example
+let greet = function() {
+    console.log("Hello World");
+};
+greet();
+
+#  Arrow Function
+An **arrow function** is a shorter way of writing a function expression.
+It was introduced in **ES6**.
+
+### Syntax
+let functionName = (parameters) => {
+    // code
+};
+
+### Example
+let greet = () => {
+    console.log("Hello World");
+};
+greet();
+
+#  Arrow Function With Parameters
+let add = (a, b) => {
+    return a + b;
+};
+console.log(add(10, 2));
+
+Output:
+12
+
+#Arrow Function With Implicit Return
+If an arrow function contains only one expression, we can remove `{}` and `return`.
+
+### Normal Function
+function add(a, b) {
+    return a + b;
+}
+
+### Arrow Function
+let add = (a, b) => a + b;
+console.log(add(10, 2));
+
+Output:
+12
+This is called an **implicit return**.
+
+#  Different Ways to Write Functions
+
+| Type                  | Syntax                                     |
+| --------------------- | ------------------------------------------ |
+| Function Declaration  | `function add(a,b) { return a+b; }`        |
+| Function Expression   | `let add = function(a,b) { return a+b; };` |
+| Arrow Function        | `let add = (a,b) => { return a+b; };`      |
+| Arrow Implicit Return | `let add = (a,b) => a+b;`                  |
+
+#  Function Declaration
+A function created using the `function` keyword is called a **function declaration**.
+function add(a, b) {
+    return a + b;
+}
+
+### Why use it?
+If an argument is not provided, the default value is used.
+
+#  Multiple Parameters
+A function can accept multiple parameters.
+function student(name, age, city) {
+    console.log(name);
+    console.log(age);
+    console.log(city);
+}
+student("Pallavi", 20, "Nashik");
+
+# Function With No Return
+function greet() {
+    console.log("Hello");
+}
+let result = greet();
+console.log(result);
+
+Output:
+Hello
+undefined
+
+If a function does not explicitly return a value, its return value is `undefined`.
+# Function Execution Flow
+Consider:
+function add(a, b) {
+    return a + b;
+}
+let result = add(5, 3);
+console.log(result);
+
+| Local Variable       | Variable available within its scope                |
+| Global Variable      | Variable declared outside a function               |
+| Default Parameter    | Parameter with a default value                     |
+| Callback Function    | Function passed as an argument to another function |
+
+#  Function vs Arrow Function
+| Feature            | Normal Function            | Arrow Function            |
+| ------------------ | -------------------------- | ------------------------- |
+| Syntax             | Longer                     | Shorter                   |
+| `function` keyword | Required                   | Not required              |
+| `this` behavior    | Has its own `this`         | Uses surrounding `this`   |
+| Constructor        | Can be used as constructor | Cannot be used with `new` |
+| Best for           | General functions          | Short functions/callbacks |
+
+

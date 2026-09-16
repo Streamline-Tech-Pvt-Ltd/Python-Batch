@@ -625,12 +625,10 @@ let student = {
 for (let key in student) {
     console.log(key);
 }
-
 Output:
 name
 age
 marks
-
 
 58. What is the difference between slice() and substring()?
 Expected answer:
@@ -667,8 +665,331 @@ split() divides a string into an array based on a specified separator.
 let names = "Pallavi,Urmila,Sujit";
 console.log(names.split(","));
 Output:
-
 ["Pallavi", "Jay", "Sarthak","Disha"]
+
+Q.63 What is a function in JavaScript?
+
+Answer:
+A function is a reusable block of code designed to perform a specific task.
+
+function greet() {
+    console.log("Hello World");
+}
+
+greet();
+Q.64 Why do we use functions in JavaScript?
+
+Answer:
+Functions are used to:
+
+Reuse code
+Avoid code repetition
+Organize code
+Improve readability
+Make programs easier to maintain
+Q.65 How do you declare a function in JavaScript?
+
+Answer:
+We use the function keyword.
+
+function add(a, b) {
+    return a + b;
+}
+
+Q.66 What is a function call?
+Answer:
+A function call means executing a function.
+
+function greet() {
+    console.log("Hello");
+}
+
+greet();
+Here, greet() is the function call.
+
+Q.67 What is a parameter?
+Answer:
+A parameter is a variable defined in a function that receives a value.
+
+function add(a, b) {
+    return a + b;
+}
+
+Here, a and b are parameters.
+
+Q.68 What is an argument?
+Answer:
+An argument is the actual value passed to a function when the function is called.
+
+function add(a, b) {
+    return a + b;
+}
+
+add(10, 20);
+Here:
+
+a, b → Parameters
+10, 20 → Arguments
+
+Q.69 What is the difference between parameter and argument?
+Answer:
+| Parameter           | Argument                    |
+| ------------------- | --------------------------- |
+| Defined in function | Passed during function call |
+| Acts as a variable  | Actual value                |
+| Example: `a, b`     | Example: `10, 20`           |
+
+function add(a, b) {
+    return a + b;
+}
+add(10, 20);
+
+Q.70 What is the return statement?
+Answer:
+return sends a value back from a function and stops the function's execution
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+console.log(result);
+Output:
+30
+
+Q.71 What happens if a function does not have a return statement?
+Answer:
+The function returns undefined.
+function greet() {
+    console.log("Hello");
+}
+
+let result = greet();
+console.log(result);
+Output:
+Hello
+undefined
+
+Q.72 What is the difference between console.log() and return?
+Answer:
+| `console.log()`                                   | `return`                             |
+| ------------------------------------------------- | ------------------------------------ |
+| Displays a value                                  | Sends a value back                   |
+| Used for output/debugging                         | Used to get a result from a function |
+| Does not return the displayed value               | Returns a value                      |
+| Function continues unless something else stops it | Function execution stops             |
+
+Example:
+function add(a, b) {
+    return a + b;
+}
+
+Q.73 What is a function expression?
+Answer:
+A function expression is a function assigned to a variable.
+
+let greet = function() {
+    console.log("Hello");
+};
+greet();
+
+Q.74 What is an arrow function?
+Answer:
+An arrow function is a shorter way of writing a function expression. It was introduced in ES6.
+let add = (a, b) => {
+    return a + b;
+};
+console.log(add(10, 20));
+
+Q.75 How can you write a short arrow function?
+Answer:
+If the function has a single expression, we can use an implicit return.
+let add = (a, b) => a + b;
+console.log(add(10, 20));
+Output:
+30
+
+Q.76 What is an implicit return?
+Answer:
+When an arrow function returns a value without explicitly writing the return keyword, it is called an implicit return.
+let square = n => n * n;
+console.log(square(5));
+Output:
+25
+
+Q.77 What is a default parameter?
+
+Answer:
+A default parameter provides a default value when no argument is passed.
+function greet(name = "Guest") {
+    console.log("Hello", name);
+}
+greet();
+
+Output:
+Hello Guest
+
+Q.78 What is a local variable?
+
+Answer:
+A variable declared inside a function is called a local variable. It can normally be accessed only within that function.
+function test() {
+    let message = "Hello";
+    console.log(message);
+}
+test();
+
+Q.79 What is a global variable?
+Answer:
+A variable declared outside a function is called a global variable. It can generally be accessed from different parts of the program, subject to JavaScript's scope rules.
+let a = 10;
+function test() {
+    console.log(a);
+}
+test();
+Output:
+10
+
+Q.80 Can a function access a global variable?
+Answer:
+Yes. A function can access variables from its outer scope.
+let x = 100;
+function test() {
+    console.log(x);
+}
+test();
+Output:
+100
+
+Q.81 Can we access a local variable outside a function?
+Answer:
+No, not directly.
+function test() {
+    let x = 10;
+}
+console.log(x);
+This produces an error because x is local to the function.
+
+Q.82 What is function scope?
+Answer:
+Function scope means that variables declared with var inside a function are accessible within that function but not outside it.
+
+function test() {
+    var x = 10;
+    console.log(x);
+}
+
+test();
+Q.83 What is the difference between function declaration and function expression?
+
+Answer:
+| Function Declaration                                     | Function Expression                                                   |
+| -------------------------------------------------------- | --------------------------------------------------------------------- |
+| Uses `function` declaration syntax                       | Function is assigned to a variable                                    |
+| Can be called before its declaration because of hoisting | Cannot be used before initialization when declared with `let`/`const` |
+| `function add() {}`                                      | `let add = function() {}`                                             |
+
+
+Example:
+function add(a, b) {
+    return a + b;
+}
+let add = function(a, b) {
+    return a + b;
+};
+
+Q.84 What is a callback function?
+Answer:
+A callback function is a function passed as an argument to another function.
+
+function greet(name, callback) {
+    console.log("Hello", name);
+    callback();
+}
+
+function message() {
+    console.log("Welcome");
+}
+
+greet("Pallavi", message);
+
+Q.85 What is a higher-order function?
+Answer:
+A higher-order function is a function that takes another function as an argument or returns a function.
+Example:
+function calculate(a, b, operation) {
+    return operation(a, b);
+}
+
+function add(x, y) {
+    return x + y;
+}
+
+console.log(calculate(10, 20, add));
+Output:
+30
+
+Q.86 Can a function return another function?
+Answer:
+Yes.
+function outer() {
+    return function() {
+        console.log("Hello");
+    };
+}
+let result = outer();
+result();
+
+Q.87 What is an anonymous function
+Answer:
+A function without a name is called an anonymous function.
+
+let greet = function() {
+    console.log("Hello");
+};
+
+The function itself has no name.
+
+Q.88 What is a named function?
+Answer:
+A function that has a name is called a named function.
+function greet() {
+    console.log("Hello");
+}
+Here, greet is the function name.
+
+Q.89 What happens when return is executed?
+Answer:
+The function immediately stops executing and sends the specified value back.
+function test() {
+    return 10;
+    console.log("Hello");
+}
+console.log(test());
+
+Output:
+10
+
+console.log("Hello") never executes.
+
+Q.90 What is the difference between normal function and arrow function?
+Answer:
+| Normal Function                                  | Arrow Function                 |
+| ------------------------------------------------ | ------------------------------ |
+| Uses `function` keyword                          | Uses `=>`                      |
+| Longer syntax                                    | Shorter syntax                 |
+| Has its own `this` depending on how it is called | Does not create its own `this` |
+| Can be used as a constructor                     | Cannot be used with `new`      |
+
+Example:
+function add(a, b) {
+    return a + b;
+}
+let add = (a, b) => a + b;
+
+
+
+
+
 
 
 
