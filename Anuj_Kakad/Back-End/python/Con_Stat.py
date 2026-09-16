@@ -58,6 +58,7 @@ elif temp >= 15:
 else:
     print("It's cold")
 
+
 # 3. Program for checking addmision eligibility of a student based on their marks:-
 
 take percentage and entrance marks:-
