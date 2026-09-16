@@ -988,725 +988,1330 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-Python Internship Notes: Day 10 - Tuple, Set & Frozenset
+    Internship Day 11(11/9/26):-
 
-1. Introduction to Tuple
+        Python Internship Notes: Day 10 - Tuple, Set & Frozenset
 
-* Definition: A Tuple is an ordered and immutable collection of data that can store multiple values in a single variable.
-* Syntax: tuple_name = (value1, value2, value3)
-* Tuples are ordered, meaning elements maintain their insertion order.
-* Tuples are immutable, meaning their elements cannot be changed after creation.
-* Tuples allow duplicate values.
-* Tuples support indexing and slicing.
-* Tuples can contain different data types.
-* Tuples are generally faster than lists because they are immutable.
+            1. Introduction to Tuple
 
-2. Creating a Tuple
+                Definition:-
+                    A Tuple is an ordered and immutable collection of data that can store multiple values in a single variable.
+                Syntax:-
+                    tuple_name = (value1, value2, value3)
 
-Example:
-tuple1 = (10, 20, 30, 40, 50)
-print(tuple1)
+                Tuples are ordered, meaning elements maintain their insertion order.
+                Tuples are immutable, meaning their elements cannot be changed after creation.
+                Tuples allow duplicate values.
+                Tuples support indexing and slicing.
+                Tuples can contain different data types.
+                Tuples are generally faster than lists because they are immutable.
 
-Output:
-(10, 20, 30, 40, 50)
+                2. Creating a Tuple:-
+                    Example:
+                        tuple1 = (10, 20, 30, 40, 50)
+                        print(tuple1)
 
-Tuple with different data types:
+                    Output:
+                        (10, 20, 30, 40, 50)
 
-tuple1 = (10, "Anuj", 23, 5.5, True)
-print(tuple1)
+                Tuple with different data types:
 
-Output:
-(10, 'Anuj', 23, 5.5, True)
+                    tuple1 = (10, "Anuj", 23, 5.5, True)
+                    print(tuple1)
 
-3. Single Element Tuple
+                    Output:
+                        (10, 'Anuj', 23, 5.5, True)
 
-To create a tuple containing only one element, a comma is required after the element.
+                3. Single Element Tuple:-
+                    To create a tuple containing only one element, a comma is required after the element.
 
-Example:
-tuple1 = (10,)
-print(type(tuple1))
+                    Example:                                    |           Without a comma:     
+                        tuple1 = (10,)                          |                tuple1 = (10)
+                        print(type(tuple1))                     |                print(type(tuple1))
 
-Output:
-<class 'tuple'>
+                    Output:                                     |            Output:
+                        <class 'tuple'>                         |                <class 'int'>
 
-Without a comma:
+                    Therefore, the comma is important when creating a single-element tuple.
 
-tuple1 = (10)
-print(type(tuple1))
+                4. Tuple Indexing:-
+                    Indexing is used to access individual elements from a tuple.
 
-Output:
-<class 'int'>
+                    * Positive indexing starts from 0 from the left side.
+                    * Negative indexing starts from -1 from the right side.
 
-Therefore, the comma is important when creating a single-element tuple.
+                    Example:
+                        tuple1 = (10, 20, 30, 40, 50)
+                        print(tuple1[0])
+                        print(tuple1[2])
+                        print(tuple1[-1])
+                        print(tuple1[-2])
 
-4. Tuple Indexing
+                    Output:
+                        10
+                        30
+                        50
+                        40
 
-Indexing is used to access individual elements from a tuple.
+                5. Tuple Slicing:-
 
-* Positive indexing starts from 0 from the left side.
-* Negative indexing starts from -1 from the right side.
+                    Slicing is used to access a range of elements from a tuple.
 
-Example:
-tuple1 = (10, 20, 30, 40, 50)
-print(tuple1[0])
-print(tuple1[2])
-print(tuple1[-1])
-print(tuple1[-2])
+                    * Syntax: tuple[start:stop]
+                    * start is included.
+                    * stop is excluded.
+                    * Syntax with step: tuple[start:stop:step]
 
-Output:
-10
-30
-50
-40
+                    Example:
+                        tuple1 = (10, 20, 30, 40, 50)
+                        print(tuple1[1:4])
 
-5. Tuple Slicing
+                    Output:
+                        (20, 30, 40)
 
-Slicing is used to access a range of elements from a tuple.
+                    Example with step:
 
-* Syntax: tuple[start:stop]
-* start is included.
-* stop is excluded.
-* Syntax with step: tuple[start:stop:step]
+                        print(tuple1[0:5:2])
 
-Example:
-tuple1 = (10, 20, 30, 40, 50)
-print(tuple1[1:4])
+                    Output:
+                        (10, 30, 50)
 
-Output:
-(20, 30, 40)
+                    Reverse a tuple:
+                        print(tuple1[::-1])
 
-Example with step:
+                    Output:
+                        (50, 40, 30, 20, 10)
 
-print(tuple1[0:5:2])
+                6. Tuple Functions:-
 
-Output:
-(10, 30, 50)
+                    1. len():-Returns the total number of elements in a tuple.
 
-Reverse a tuple:
+                        Example:-
+                            tuple1 = (10, 20, 30, 40, 50)
+                            print(len(tuple1))
 
-print(tuple1[::-1])
+                        Output:
+                            5
 
-Output:
-(50, 40, 30, 20, 10)
+                    2. max(): Returns the largest value from a tuple.
 
-6. Tuple Functions
+                        Example:
+                            tuple1 = (10, 50, 20, 40, 30)
+                            print(max(tuple1))
 
-* len(): Returns the total number of elements in a tuple.
+                        Output:
+                            50
 
-Example:
-tuple1 = (10, 20, 30, 40, 50)
-print(len(tuple1))
+                    3. min(): Returns the smallest value from a tuple.
 
-Output:
-5
+                        Example:
+                            print(min(tuple1))
 
-* max(): Returns the largest value from a tuple.
+                        Output:
+                            10
 
-Example:
-tuple1 = (10, 50, 20, 40, 30)
-print(max(tuple1))
+                    4. sum(): Returns the sum of numeric elements in a tuple.
 
-Output:
-50
+                        Example:
+                            print(sum(tuple1))
 
-* min(): Returns the smallest value from a tuple.
+                        Output:
+                        150
 
-Example:
-print(min(tuple1))
+                    5. type(): Returns the data type of the object.
 
-Output:
-10
+                        Example:
+                            print(type(tuple1))
 
-* sum(): Returns the sum of numeric elements in a tuple.
+                        Output:
+                            <class 'tuple'>
 
-Example:
-print(sum(tuple1))
+                7. Tuple Methods:-
+                    Tuples have only two commonly used built-in methods because tuples are immutable.
 
-Output:
-150
+                    1. count(value): Returns the number of times a specified value occurs in a tuple.
 
-* type(): Returns the data type of the object.
+                        Example:
+                            tuple1 = (10, 20, 10, 30, 10)
+                            print(tuple1.count(10))
 
-Example:
-print(type(tuple1))
+                        Output:
+                            3
 
-Output:
-<class 'tuple'>
+                    2. index(value): Returns the index of the first occurrence of the specified value.
 
-7. Tuple Methods
+                        Example:
+                            tuple1 = (10, 20, 30, 40, 50)
+                            print(tuple1.index(30))
 
-Tuples have only two commonly used built-in methods because tuples are immutable.
+                        Output:
+                            2
 
-* count(value): Returns the number of times a specified value occurs in a tuple.
+                8. Tuple Packing:-
+                    Tuple packing means storing multiple values in a single tuple without explicitly using parentheses.
 
-Example:
-tuple1 = (10, 20, 10, 30, 10)
-print(tuple1.count(10))
+                    Example:
+                        tuple1 = 10, 20, 30, 40
+                        print(tuple1)
 
-Output:
-3
+                    Output:
+                        (10, 20, 30, 40)
 
-* index(value): Returns the index of the first occurrence of the specified value.
+                9. Tuple Unpacking:-
+                    Tuple unpacking means assigning the elements of a tuple to separate variables.
 
-Example:
-tuple1 = (10, 20, 30, 40, 50)
-print(tuple1.index(30))
+                    Example:
+                        tuple1 = (10, 20, 30)
+                        a, b, c = tuple1
+                        print(a)
+                        print(b)
+                        print(c)
 
-Output:
-2
+                    Output:
+                        10
+                        20
+                        30
 
-8. Tuple Packing
+                    Important:
+                        The number of variables should normally match the number of values being unpacked.
 
-Tuple packing means storing multiple values in a single tuple without explicitly using parentheses.
+            2. Difference Between List and Tuple
 
-Example:
-tuple1 = 10, 20, 30, 40
-print(tuple1)
+                | Feature         | List                              | Tuple                                      |
+                |-----------------|-----------------------------------|--------------------------------------------|
+                | **Syntax**      | Uses square brackets []           | Uses parentheses ()                        |
+                | **Mutability**  | Mutable                           | Immutable                                  |
+                | **Indexing**    | Supported                         | Supported                                  |
+                | **Slicing**     | Supported                         | Supported                                  |
+                | **Duplicates**  | Allowed                           | Allowed                                    |
+                | **Methods**     | Many methods available            | Only two main methods: count() and index() |
+                | **Performance** | Generally slower than tuple       | Generally faster than list                 |
+                | **Use**         | Used when data may need to change | Used when data should remain unchanged     |
 
-Output:
-(10, 20, 30, 40)
+            3. Introduction to Set
 
-9. Tuple Unpacking
+                Definition:-
+                    A Set is an unordered and mutable collection of unique elements.
+                
+                Syntax:-
+                    set_name = {value1, value2, value3}
 
-Tuple unpacking means assigning the elements of a tuple to separate variables.
+                    Sets do not allow duplicate values.
+                    Sets are mutable, so elements can be added or removed.
+                    Sets do not support indexing or slicing.
+                    Sets can store different data types, provided the elements are hashable.
+                    Sets are commonly used for removing duplicate values and performing mathematical set operations.
 
-Example:
-tuple1 = (10, 20, 30)
-a, b, c = tuple1
-print(a)
-print(b)
-print(c)
+                1. Creating a Set
+                    Example:
+                        set1 = {10, 20, 30, 40}
+                        print(set1)
 
-Output:
-10
-20
-30
+                    Output:
+                        {10, 20, 30, 40}
 
-Important:
-The number of variables should normally match the number of values being unpacked.
+                    Set with duplicate values:
+                        set1 = {10, 20, 10, 30, 20}
+                        print(set1)
 
-10. Difference Between List and Tuple
+                    Output:
+                        {10, 20, 30}
 
-| Feature | List | Tuple |
-|---|---|---|
-| **Syntax** | Uses square brackets [] | Uses parentheses () |
-| **Mutability** | Mutable | Immutable |
-| **Indexing** | Supported | Supported |
-| **Slicing** | Supported | Supported |
-| **Duplicates** | Allowed | Allowed |
-| **Methods** | Many methods available | Only two main methods: count() and index() |
-| **Performance** | Generally slower than tuple | Generally faster than list |
-| **Use** | Used when data may need to change | Used when data should remain unchanged |
+                    Duplicate values are automatically removed from a set.
 
-11. Introduction to Set
+                2. Creating an Empty Set
 
-* Definition: A Set is an unordered and mutable collection of unique elements.
-* Syntax: set_name = {value1, value2, value3}
-* Sets do not allow duplicate values.
-* Sets are mutable, so elements can be added or removed.
-* Sets do not support indexing or slicing.
-* Sets can store different data types, provided the elements are hashable.
-* Sets are commonly used for removing duplicate values and performing mathematical set operations.
+                    To create an empty set, use set().
 
-12. Creating a Set
+                    Example:
+                        set1 = set()
+                        print(type(set1))
 
-Example:
-set1 = {10, 20, 30, 40}
-print(set1)
+                    Output:
+                        <class 'set'>
 
-Output:
-{10, 20, 30, 40}
+                    Important:
+                        {} creates an empty dictionary, not an empty set.
 
-Set with duplicate values:
+                3. Set Does Not Support Indexing
+                    Sets are unordered collections, so we cannot access elements using an index.
 
-set1 = {10, 20, 10, 30, 20}
-print(set1)
+                    Example:-
+                        set1 = {10, 20, 30, 40}
+                        print(set1[0])
 
-Output:
-{10, 20, 30}
+                    This gives an error because set elements cannot be accessed using numerical indexing.
 
-Duplicate values are automatically removed from a set.
+                4. Set Functions
 
-13. Creating an Empty Set
+                    1. len(): Returns the number of elements in a set.
+                        Example:
+                            set1 = {10, 20, 30, 40}
+                            print(len(set1))
 
-To create an empty set, use set().
+                        Output:
+                            4
 
-Example:
-set1 = set()
-print(type(set1))
+                    2. max(): Returns the largest element from a set.
+                        Example:
+                            set1 = {10, 50, 20, 40}
+                            print(max(set1))
 
-Output:
-<class 'set'>
+                        Output:
+                            50
 
-Important:
-{} creates an empty dictionary, not an empty set.
+                    3. min(): Returns the smallest element from a set.
+                        Example:
+                            print(min(set1))
 
-14. Set Does Not Support Indexing
+                        Output:
+                            10
 
-Sets are unordered collections, so we cannot access elements using an index.
+                    4. sum(): Returns the sum of numeric elements in a set.
+                        Example:
+                            print(sum(set1))
 
-Example:
-set1 = {10, 20, 30, 40}
-print(set1[0])
+                        Output:
+                            120
 
-This gives an error because set elements cannot be accessed using numerical indexing.
+                    5. type(): Returns the type of the object.
+                        Example:
+                            print(type(set1))
 
-15. Set Functions
+                        Output:
+                            <class 'set'>
 
-* len(): Returns the number of elements in a set.
+                5. Set Methods for Adding Elements:-
 
-Example:
-set1 = {10, 20, 30, 40}
-print(len(set1))
+                    1. add(value): Adds a single element to the set.
+                        Example:
+                            set1 = {10, 20, 30}
+                            set1.add(40)
+                            print(set1)
 
-Output:
-4
+                        Output:
+                            {10, 20, 30, 40}
 
-* max(): Returns the largest element from a set.
+                    2. update(iterable): Adds multiple elements to the set.
+                        Example:
+                            set1 = {10, 20, 30}
+                            set1.update([40, 50, 60])
+                            print(set1)
 
-Example:
-set1 = {10, 50, 20, 40}
-print(max(set1))
+                        Output:
+                            {10, 20, 30, 40, 50, 60}
 
-Output:
-50
+                6. Set Methods for Removing Elements:-
 
-* min(): Returns the smallest element from a set.
+                    1. remove(value): Removes the specified element from the set. If the element does not exist, it raises a KeyError.
+                        Example:
+                            set1 = {10, 20, 30, 40}
+                            set1.remove(30)
+                            print(set1)
 
-Example:
-print(min(set1))
+                        Output:
+                            {10, 20, 40}
 
-Output:
-10
+                    2. discard(value): Removes the specified element from the set. If the element does not exist, it does not raise an error.
+                        Example:
+                            set1 = {10, 20, 30}
+                            set1.discard(50)
+                            print(set1)
 
-* sum(): Returns the sum of numeric elements in a set.
+                        Output:
+                            {10, 20, 30}
 
-Example:
-print(sum(set1))
+                    3. pop(): Removes and returns an arbitrary element from the set.
+                        Example:
+                            set1 = {10, 20, 30}
+                            removed = set1.pop()
+                            print(removed)
+                            print(set1)
 
-Output:
-120
+                        Note:
+                            Because a set is unordered, you should not assume which element pop() will remove.
 
-* type(): Returns the type of the object.
+                    4. clear(): Removes all elements from the set.
+                        Example:
+                            set1 = {10, 20, 30}
+                            set1.clear()
+                            print(set1)
 
-Example:
-print(type(set1))
+                        Output:
+                            set()
 
-Output:
-<class 'set'>
+                7. Set Copy Method
 
-16. Set Methods for Adding Elements
+                    1. copy(): Creates a shallow copy of the set.
+                        Example:
+                            set1 = {10, 20, 30}
+                            set2 = set1.copy()
+                            print(set2)
 
-* add(value): Adds a single element to the set.
+                        Output:
+                            {10, 20, 30}
 
-Example:
-set1 = {10, 20, 30}
-set1.add(40)
-print(set1)
+                8. Set Mathematical Operations
+                    Sets support mathematical operations such as:
+                        * Union
+                        * Intersection
+                        * Difference
+                        * Symmetric Difference
 
-Output:
-{10, 20, 30, 40}
+                    1. Union of Sets
+                        Union combines all unique elements from two sets.
 
-* update(iterable): Adds multiple elements to the set.
+                        Syntax:  set1.union(set2)    or    set1 | set2 
 
-Example:
-set1 = {10, 20, 30}
-set1.update([40, 50, 60])
-print(set1)
+                        Example:
+                            set1 = {1, 2, 3, 4}
+                            set2 = {3, 4, 5, 6}
+                            print(set1.union(set2))
 
-Output:
-{10, 20, 30, 40, 50, 60}
+                        Output:
+                            {1, 2, 3, 4, 5, 6}
 
-17. Set Methods for Removing Elements
+                        Using | operator:  print(set1 | set2)
 
-* remove(value): Removes the specified element from the set. If the element does not exist, it raises a KeyError.
+                    2. Intersection of Sets
+                        Intersection returns only the elements that are common in both sets.
 
-Example:
-set1 = {10, 20, 30, 40}
-set1.remove(30)
-print(set1)
+                        Syntax:    set1.intersection(set2)    or    set1 & set2
 
-Output:
-{10, 20, 40}
+                        Example:
+                            set1 = {1, 2, 3, 4}
+                            set2 = {3, 4, 5, 6}
+                            print(set1.intersection(set2))
 
-* discard(value): Removes the specified element from the set. If the element does not exist, it does not raise an error.
+                        Output:
+                            {3, 4}
 
-Example:
-set1 = {10, 20, 30}
-set1.discard(50)
-print(set1)
+                    3. Difference of Sets
+                        Difference returns the elements that are present in the first set but not in the second set.
 
-Output:
-{10, 20, 30}
+                        Syntax: set1.difference(set2)    or    set1 - set2
 
-* pop(): Removes and returns an arbitrary element from the set.
+                        Example:
+                            set1 = {1, 2, 3, 4}
+                            set2 = {3, 4, 5, 6}
+                            print(set1.difference(set2))
 
-Example:
-set1 = {10, 20, 30}
-removed = set1.pop()
-print(removed)
-print(set1)
+                        Output:
+                            {1, 2}
 
-Note:
-Because a set is unordered, you should not assume which element pop() will remove.
+                        Important:
+                            set1 - set2 and set2 - set1 can give different results.
 
-* clear(): Removes all elements from the set.
+                    4. Symmetric Difference
+                        Symmetric difference returns the elements that are present in either set but not in both sets.
 
-Example:
-set1 = {10, 20, 30}
-set1.clear()
-print(set1)
+                        Syntax: set1.symmetric_difference(set2)    or    set1 ^ set2
 
-Output:
-set()
+                        Example:
+                            set1 = {1, 2, 3, 4}
+                            set2 = {3, 4, 5, 6}
+                            print(set1.symmetric_difference(set2))
 
-18. Set Copy Method
+                        Output:
+                            {1, 2, 5, 6}
 
-* copy(): Creates a shallow copy of the set.
+                9. Set Relationship Methods:-
 
-Example:
-set1 = {10, 20, 30}
-set2 = set1.copy()
-print(set2)
+                    1. issubset(): Checks whether all elements of one set are present in another set.
+                        Example:
+                            set1 = {1, 2}
+                            set2 = {1, 2, 3, 4}
+                            print(set1.issubset(set2))
 
-Output:
-{10, 20, 30}
+                        Output:
+                            True
 
-19. Set Mathematical Operations
+                    2. issuperset(): Checks whether a set contains all elements of another set.
+                        Example:
+                            print(set2.issuperset(set1))
 
-Sets support mathematical operations such as:
+                        Output:
+                            True
 
-* Union
-* Intersection
-* Difference
-* Symmetric Difference
+                    3. isdisjoint(): Checks whether two sets have no common elements.
+                        Example:
+                            set1 = {1, 2}
+                            set2 = {3, 4}
+                            print(set1.isdisjoint(set2))
 
-20. Union of Sets
+                        Output:
+                            True
 
-Union combines all unique elements from two sets.
+                10. Difference Between remove() and discard()
 
-Syntax:
-set1.union(set2)
+                    | Feature                    | remove()                    | discard()                   |
+                    |----------------------------|-----------------------------|-----------------------------|
+                    | **Purpose**                | Removes a specified element | Removes a specified element |
+                    | **Element Exists**         | Removes the element         | Removes the element         |
+                    | **Element Does Not Exist** | Raises KeyError             | Does not raise an error     |
+                    | **Example**                | set1.remove(10)             | set1.discard(10)            |
 
-or
+            4. Introduction to Frozenset
 
-set1 | set2
+                Definition:-
+                    A Frozenset is an immutable version of a set.
+                Syntax: frozenset(iterable)
+                    Frozenset does not allow duplicate elements.
+                    Frozenset is unordered.
+                    Frozenset cannot be modified after creation.
+                    Elements cannot be added or removed from a frozenset.
+                    Frozensets can be used as dictionary keys because they are immutable and hashable.
 
-Example:
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-print(set1.union(set2))
+                1. Creating a Frozenset
+                    Example:
+                        fs = frozenset([10, 20, 30, 40])
+                        print(fs)
 
-Output:
-{1, 2, 3, 4, 5, 6}
+                    Output:
+                        frozenset({10, 20, 30, 40})
 
-Using | operator:
+                    Duplicate values are automatically removed.
 
-print(set1 | set2)
+                    Example:
+                        fs = frozenset([10, 20, 10, 30, 20])
+                        print(fs)
 
-21. Intersection of Sets
+                    Output:
+                        frozenset({10, 20, 30})
 
-Intersection returns only the elements that are common in both sets.
+                2. Frozenset Functions
+                    * len(): Returns the number of elements.
+                        Example:
+                            fs = frozenset([10, 20, 30, 40])
+                            print(len(fs))
 
-Syntax:
-set1.intersection(set2)
+                        Output:
+                            4
 
-or
+                    2. max(): Returns the largest element.
+                        Example:
+                            print(max(fs))
 
-set1 & set2
+                        Output:
+                            40
 
-Example:
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-print(set1.intersection(set2))
+                    3. min(): Returns the smallest element.
+                        Example:
+                            print(min(fs))
 
-Output:
-{3, 4}
+                        Output:
+                            10
 
-22. Difference of Sets
+                    4. sum(): Returns the sum of numeric elements.
+                        Example:-
+                            print(sum(fs))
 
-Difference returns the elements that are present in the first set but not in the second set.
+                        Output:
+                            100
 
-Syntax:
-set1.difference(set2)
+                    5. type(): Returns the type of the object.
+                        Example:
+                            print(type(fs))
 
-or
+                        Output:
+                            <class 'frozenset'>
 
-set1 - set2
+                3. Frozenset Methods:-
 
-Example:
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-print(set1.difference(set2))
+                    A frozenset cannot be changed, so methods that modify a set such as add(), remove(), discard(), pop(), clear(), and update() are not available.
+                    Frozenset supports methods used for non-modifying set operations.
 
-Output:
-{1, 2}
+                    1. union(): Returns the union of two sets or frozensets.
+                        Example:
+                            fs1 = frozenset([1, 2, 3])
+                            fs2 = frozenset([3, 4, 5])
+                            print(fs1.union(fs2))
 
-Important:
-set1 - set2 and set2 - set1 can give different results.
+                        Output:
+                            frozenset({1, 2, 3, 4, 5})
 
-23. Symmetric Difference
+                    2. intersection(): Returns common elements.
+                        Example:
+                            print(fs1.intersection(fs2))
 
-Symmetric difference returns the elements that are present in either set but not in both sets.
+                        Output:
+                            frozenset({3})
 
-Syntax:
-set1.symmetric_difference(set2)
+                    3. difference(): Returns elements present in the first frozenset but not the second.
+                        Example:
+                            print(fs1.difference(fs2))
 
-or
+                        Output:
+                            frozenset({1, 2})
 
-set1 ^ set2
+                    4. symmetric_difference(): Returns elements present in either frozenset but not both.
+                        Example:
+                            print(fs1.symmetric_difference(fs2))
 
-Example:
-set1 = {1, 2, 3, 4}
-set2 = {3, 4, 5, 6}
-print(set1.symmetric_difference(set2))
+                        Output:
+                            frozenset({1, 2, 4, 5})
 
-Output:
-{1, 2, 5, 6}
+                    5. issubset(): Checks whether one frozenset is a subset of another.
+                        Example:
+                            fs1 = frozenset([1, 2])
+                            fs2 = frozenset([1, 2, 3, 4])
+                            print(fs1.issubset(fs2))
 
-24. Set Relationship Methods
+                        Output:
+                            True
 
-* issubset(): Checks whether all elements of one set are present in another set.
+                    6. issuperset(): Checks whether one frozenset contains all elements of another.
+                        Example:
+                            print(fs2.issuperset(fs1))
 
-Example:
-set1 = {1, 2}
-set2 = {1, 2, 3, 4}
-print(set1.issubset(set2))
+                        Output:
+                            True
 
-Output:
-True
+                    7. isdisjoint(): Checks whether two frozensets have no common elements.
+                        Example:
+                            fs1 = frozenset([1, 2])
+                            fs2 = frozenset([3, 4])
+                            print(fs1.isdisjoint(fs2))
 
-* issuperset(): Checks whether a set contains all elements of another set.
+                        Output:
+                            True
 
-Example:
-print(set2.issuperset(set1))
+            5. Difference Between Set and Frozenset
 
-Output:
-True
+                | Feature                           | Set                                       | Frozenset                         |
+                |-----------------------------------|-------------------------------------------|-----------------------------------|
+                | **Mutability**                    | Mutable                                   | Immutable                         |
+                | **Syntax**                        | {1, 2, 3}                                 | frozenset([1, 2, 3])              |
+                | **Duplicate Values**              | Not allowed                               | Not allowed                       |
+                | **Indexing**                      | Not supported                             | Not supported                     |
+                | **Adding Elements**               | Supported using add()                     | Not supported                     |
+                | **Removing Elements**             | Supported using remove(), discard(), etc. | Not supported                     |
+                | **Set Operations**                | Supported                                 | Supported                         |
+                | **Hashable**                      | No                                        | Yes                               |
+                | **Can Be Dictionary Key**         | No                                        | Yes                               |
+                | **Can Be Element of Another Set** | No                                        | Yes                               |
+                | **Use**                           | When the collection needs to be modified  | When an immutable set is required |
 
-* isdisjoint(): Checks whether two sets have no common elements.
+            6. Difference Between Tuple, Set and Frozenset
 
-Example:
-set1 = {1, 2}
-set2 = {3, 4}
-print(set1.isdisjoint(set2))
+                | Feature             | Tuple                                     | Set                               | Frozenset                                |
+                |---------------------|-------------------------------------------|-----------------------------------|------------------------------------------|
+                | **Order**           | Ordered                                   | Unordered                         | Unordered                                |
+                | **Mutable**         | No                                        | Yes                               | No                                       |
+                | **Duplicates**      | Allowed                                   | Not allowed                       | Not allowed                              |
+                | **Indexing**        | Supported                                 | Not supported                     | Not supported                            |
+                | **Slicing**         | Supported                                 | Not supported                     | Not supported                            |
+                | **Syntax**          | (1, 2, 3)                                 | {1, 2, 3}                         | frozenset([1, 2, 3])                     |
+                | **Add Elements**    | No                                        | Yes                               | No                                       |
+                | **Remove Elements** | No                                        | Yes                               | No                                       |
+                | **Main Use**        | Store ordered data that should not change | Store unique data that may change | Store unique data that should not change |
+                | **Hashable**        | Yes, if all elements are hashable         | No                                | Yes, if its elements are hashable        |
 
-Output:
-True
+            6. Important Points for Day 10
 
-25. Difference Between remove() and discard()
+                * Tuple is an ordered and immutable collection.
+                * Tuple allows duplicate values.
+                * Tuple supports indexing and slicing.
+                * Tuple has two main methods: count() and index().
+                * Set is an unordered and mutable collection.
+                * Set stores only unique elements.
+                * Set does not support indexing or slicing.
+                * add() adds one element to a set.
+                * update() adds multiple elements to a set.
+                * remove() raises an error if the element is not found.
+                * discard() does not raise an error if the element is not found.
+                * pop() removes an arbitrary element from a set.
+                * Frozenset is an immutable version of a set.
+                * Frozenset does not support methods that modify the collection.
+                * Set and frozenset support operations such as union, intersection, difference, and symmetric difference.
+                * An empty set is created using set(), not {}.
+                * {} creates an empty dictionary.
 
-| Feature | remove() | discard() |
-|---|---|---|
-| **Purpose** | Removes a specified element | Removes a specified element |
-| **Element Exists** | Removes the element | Removes the element |
-| **Element Does Not Exist** | Raises KeyError | Does not raise an error |
-| **Example** | set1.remove(10) | set1.discard(10) |
+            7. Quick Revision
 
-26. Introduction to Frozenset
+                | Collection| Ordered | Mutable | Duplicates  | Indexing | Main Purpose                |
+                |-----------|---------|---------|-------------|----------|-----------------------------|
+                | Tuple     | Yes     | No      | Allowed     | Yes      | Store fixed ordered data    |
+                | Set       | No      | Yes     | Not allowed | No       | Store unique data           |
+                | Frozenset | No      | No      | Not allowed | No       | Store unique immutable data |
 
-* Definition: A Frozenset is an immutable version of a set.
-* Syntax: frozenset(iterable)
-* Frozenset does not allow duplicate elements.
-* Frozenset is unordered.
-* Frozenset cannot be modified after creation.
-* Elements cannot be added or removed from a frozenset.
-* Frozensets can be used as dictionary keys because they are immutable and hashable.
+            8. Common Methods Quick Revision
 
-27. Creating a Frozenset
+                | Collection       | Important Methods |
+                |------------------|-------------------------------------------------------------------------------------------------------|
+                | Tuple            | count(), index()                                                                                      |
+                | Set              | add(), update(), remove(), discard(), pop(), clear(), copy()                                          |
+                | Set Operations   | union(), intersection(), difference(), symmetric_difference()                                         |
+                | Set Relationship | issubset(), issuperset(), isdisjoint()                                                                |
+                | Frozenset        | union(), intersection(), difference(), symmetric_difference(), issubset(), issuperset(), isdisjoint() |
 
-Example:
-fs = frozenset([10, 20, 30, 40])
-print(fs)
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-Output:
-frozenset({10, 20, 30, 40})
+    Internship Day 12(15/9/26):-
 
-Duplicate values are automatically removed.
+        Python Notes: Day 11 - Conditional Statements
 
-Example:
-fs = frozenset([10, 20, 10, 30, 20])
-print(fs)
+            1. Introduction to Conditional Statements:-
+                Definition:-
+                    Conditional statements are used to make decisions in a Python program based on whether a given condition is True or False.
+                    They allow the program to execute different blocks of code depending on the condition.
+                
+                Python mainly provides the following conditional statements:
+                    1. if statement
+                    2. if-else statement
+                    3. if-elif-else statement
+                    4. Ternary statement
 
-Output:
-frozenset({10, 20, 30})
+                    1. if Statement:-
+                        The if statement is used when we want to execute a block of code only when a particular condition is True.
 
-28. Frozenset Functions
+                        Syntax:-
 
-* len(): Returns the number of elements.
+                            if condition:
+                                statement
 
-Example:
-fs = frozenset([10, 20, 30, 40])
-print(len(fs))
+                        Example:
+                            age = int(input("Enter your age: "))
 
-Output:
-4
+                            if age > 18:
+                                print("Your age is", age, "& you are eligible to buy a ticket")
 
-* max(): Returns the largest element.
+                        Explanation:
+                            * The user enters their age.
+                            * The condition age > 18 is checked.
+                            * If the condition is True, the print statement is executed.
+                            * If the condition is False, the program skips the if block.
 
-Example:
-print(max(fs))
+                    3. if-else Statement
+                        The if-else statement is used when we want to execute one block of code if the condition is True and another block if the condition is False.
 
-Output:
-40
+                        Syntax:
+                            if condition:
+                                statement_if_true
+                            else:
+                                statement_if_false
 
-* min(): Returns the smallest element.
+                        Example:
+                            age = int(input("Enter your age: "))
 
-Example:
-print(min(fs))
+                            if age > 18:
+                                print("Your age is", age, "& you are eligible to buy a ticket")
+                            else:
+                                print("Your age is", age, "& you are not eligible to buy a ticket")
 
-Output:
-10
+                        Explanation:
+                            * If age is greater than 18, the if block is executed.
+                            * If age is 18 or less, the else block is executed.
+                            * Only one of the two blocks is executed.
 
-* sum(): Returns the sum of numeric elements.
+                    4. if-elif-else Statement
+                        The if-elif-else statement is used when we need to check multiple conditions.
 
-Example:
-print(sum(fs))
+                        * if checks the first condition.
+                        * elif checks another condition if the previous condition is False.
+                        * Multiple elif statements can be used.
+                        * else executes when none of the conditions are True.
 
-Output:
-100
+                        Syntax:
+                            if condition1:
+                                statement1
+                            elif condition2:
+                                statement2
+                            elif condition3:
+                                statement3
+                            else:
+                                statement4
 
-* type(): Returns the type of the object.
+                        Example:
+                            marks = int(input("Enter your Marks: "))
 
-Example:
-print(type(fs))
+                            if marks > 70:
+                                print("Grade A")
+                            elif marks > 50:
+                                print("Grade B")
+                            elif marks > 35:
+                                print("Grade C")
+                            else:
+                                print("Failed")
 
-Output:
-<class 'frozenset'>
+                        Explanation:
+                            * If marks are greater than 70, Grade A is displayed.
+                            * If the first condition is False and marks are greater than 50, Grade B is displayed.
+                            * If the previous conditions are False and marks are greater than 35, Grade C is displayed.
+                            * If all conditions are False, Failed is displayed.
 
-29. Frozenset Methods
+                    5. Important Point About if-elif-else
+                        Python checks the conditions from top to bottom.
+                        Once a condition becomes True, its corresponding block is executed and the remaining elif and else blocks are skipped.
 
-A frozenset cannot be changed, so methods that modify a set such as add(), remove(), discard(), pop(), clear(), and update() are not available.
+                        Example:
 
-Frozenset supports methods used for non-modifying set operations.
+                            marks = 80
 
-* union(): Returns the union of two sets or frozensets.
+                            if marks > 70:
+                                print("Grade A")
+                            elif marks > 50:
+                                print("Grade B")
+                            elif marks > 35:
+                                print("Grade C")
+                            else:
+                                print("Failed")
 
-Example:
-fs1 = frozenset([1, 2, 3])
-fs2 = frozenset([3, 4, 5])
-print(fs1.union(fs2))
+                        Output:
 
-Output:
-frozenset({1, 2, 3, 4, 5})
+                            Grade A
 
-* intersection(): Returns common elements.
+                        Even though 80 is also greater than 50 and 35, Python executes only the first True condition.
 
-Example:
-print(fs1.intersection(fs2))
+                    6. Ternary Statement
+                        A Ternary Statement is a short and simple way of writing an if-else statement in a single line.
 
-Output:
-frozenset({3})
+                        Syntax:
+                            value_if_true if condition else value_if_false
 
-* difference(): Returns elements present in the first frozenset but not the second.
+                        Example:
+                            age = int(input("Enter your Age: "))
+                            res = "valid" if age > 18 else "invalid"
+                            print(res)
 
-Example:
-print(fs1.difference(fs2))
+                        Explanation:
+                            * If age > 18 is True, res receives "valid".
+                            * If age > 18 is False, res receives "invalid".
+                            * The complete if-else logic is written in one line.
 
-Output:
-frozenset({1, 2})
+                        Another Example:
+                            age = 20
+                            result = "Adult" if age >= 18 else "Child"
+                            print(result)
 
-* symmetric_difference(): Returns elements present in either frozenset but not both.
+                        Output:
+                            Adult
 
-Example:
-print(fs1.symmetric_difference(fs2))
+            2. Difference Between if, if-else, if-elif-else and Ternary Statement:-
 
-Output:
-frozenset({1, 2, 4, 5})
+                | Type         | Purpose                                | Number of Conditions | else Required | Format         |
+                |--------------|----------------------------------------|----------------------|---------------|----------------|
+                | if           | Executes code when a condition is True | One or more          | No            | Multiple lines |
+                | if-else      | Chooses between two blocks             | One                  | Yes           | Multiple lines |
+                | if-elif-else | Chooses between multiple conditions    | Multiple             | Optional      | Multiple lines |
+                | Ternary      | Short form of if-else                  | One                  | Yes           | Single line    |
 
-* issubset(): Checks whether one frozenset is a subset of another.
+            3. Comparison of Conditional Statements:-
 
-Example:
-fs1 = frozenset([1, 2])
-fs2 = frozenset([1, 2, 3, 4])
-print(fs1.issubset(fs2))
+                1. if:
 
-Output:
-True
+                    if age > 18:
+                        print("Adult")
 
-* issuperset(): Checks whether one frozenset contains all elements of another.
+                    Use when you only need to perform an action when a condition is True.
 
-Example:
-print(fs2.issuperset(fs1))
+                2. if-else:
 
-Output:
-True
+                    if age > 18:
+                        print("Adult")
+                    else:
+                        print("Child")
 
-* isdisjoint(): Checks whether two frozensets have no common elements.
+                    Use when there are two possible outcomes.
 
-Example:
-fs1 = frozenset([1, 2])
-fs2 = frozenset([3, 4])
-print(fs1.isdisjoint(fs2))
+                3. if-elif-else:
 
-Output:
-True
+                    if marks > 70:
+                        print("Grade A")
+                    elif marks > 50:
+                        print("Grade B")
+                    else:
+                        print("Failed")
 
-30. Difference Between Set and Frozenset
+                    Use when there are multiple possible conditions or outcomes.
 
-| Feature | Set | Frozenset |
-|---|---|---|
-| **Mutability** | Mutable | Immutable |
-| **Syntax** | {1, 2, 3} | frozenset([1, 2, 3]) |
-| **Duplicate Values** | Not allowed | Not allowed |
-| **Indexing** | Not supported | Not supported |
-| **Adding Elements** | Supported using add() | Not supported |
-| **Removing Elements** | Supported using remove(), discard(), etc. | Not supported |
-| **Set Operations** | Supported | Supported |
-| **Hashable** | No | Yes |
-| **Can Be Dictionary Key** | No | Yes |
-| **Can Be Element of Another Set** | No | Yes |
-| **Use** | When the collection needs to be modified | When an immutable set is required |
+                4. Ternary:
 
-31. Difference Between Tuple, Set and Frozenset
+                    result = "Adult" if age > 18 else "Child"
 
-| Feature | Tuple | Set | Frozenset |
-|---|---|---|---|
-| **Order** | Ordered | Unordered | Unordered |
-| **Mutable** | No | Yes | No |
-| **Duplicates** | Allowed | Not allowed | Not allowed |
-| **Indexing** | Supported | Not supported | Not supported |
-| **Slicing** | Supported | Not supported | Not supported |
-| **Syntax** | (1, 2, 3) | {1, 2, 3} | frozenset([1, 2, 3]) |
-| **Add Elements** | No | Yes | No |
-| **Remove Elements** | No | Yes | No |
-| **Main Use** | Store ordered data that should not change | Store unique data that may change | Store unique data that should not change |
-| **Hashable** | Yes, if all elements are hashable | No | Yes, if its elements are hashable |
+                    Use when a simple if-else decision can be written clearly in one line.
 
-32. Important Points for Day 10
+            4. Indentation in Conditional Statements:-
+                Indentation is very important in Python because it defines the block of code that belongs to a condition.
 
-* Tuple is an ordered and immutable collection.
-* Tuple allows duplicate values.
-* Tuple supports indexing and slicing.
-* Tuple has two main methods: count() and index().
-* Set is an unordered and mutable collection.
-* Set stores only unique elements.
-* Set does not support indexing or slicing.
-* add() adds one element to a set.
-* update() adds multiple elements to a set.
-* remove() raises an error if the element is not found.
-* discard() does not raise an error if the element is not found.
-* pop() removes an arbitrary element from a set.
-* Frozenset is an immutable version of a set.
-* Frozenset does not support methods that modify the collection.
-* Set and frozenset support operations such as union, intersection, difference, and symmetric difference.
-* An empty set is created using set(), not {}.
-* {} creates an empty dictionary.
+                Example:
+                    if age > 18:
+                        print("Eligible")
+                        print("You can watch the movie")
 
-33. Quick Revision
+                Both print statements belong to the if block because they have the same indentation.
+                Incorrect indentation can result in an IndentationError.
 
-| Collection | Ordered | Mutable | Duplicates | Indexing | Main Purpose |
-|---|---|---|---|---|---|
-| Tuple | Yes | No | Allowed | Yes | Store fixed ordered data |
-| Set | No | Yes | Not allowed | No | Store unique data |
-| Frozenset | No | No | Not allowed | No | Store unique immutable data |
+            5. Nested Conditional Statement:-
+                A nested conditional statement means using one conditional statement inside another conditional statement.
 
-34. Common Methods Quick Revision
+                Example:
+                    age = int(input("Enter your age: "))
 
-| Collection | Important Methods |
-|---|---|
-| Tuple | count(), index() |
-| Set | add(), update(), remove(), discard(), pop(), clear(), copy() |
-| Set Operations | union(), intersection(), difference(), symmetric_difference() |
-| Set Relationship | issubset(), issuperset(), isdisjoint() |
-| Frozenset | union(), intersection(), difference(), symmetric_difference(), issubset(), issuperset(), isdisjoint() |
+                    if age > 18:
+                        print("You are an adult")
+
+                        if age >= 60:
+                            print("You are a senior citizen")
+
+                Explanation:
+                    * First, Python checks whether age is greater than 18.
+                    * If the condition is True, the inner if condition is checked.
+                    * The inner if statement is called a nested conditional statement.
+
+            6. Practical Example - PVR Ticket Booking:-
+                The following program uses conditional statements to create a simple movie ticket booking system.
+
+                    print("========= PVR =========")
+
+                    age = int(input("Enter your Age: "))
+
+                    if age > 18:
+                        print("Eligible to watch movie")
+                    else:
+                        print("Not eligible")
+
+                    print("""
+                    Select Eligibility:
+                        1. adult
+                        2. child
+                    """)
+
+                    chec = input("Enter your Eligibility: ")
+
+                    if chec == "adult":
+                        print("You are eligible")
+                    else:
+                        print("Not Eligible")
+
+                    print("""
+                    Select your sitting plan here:
+                        Sitting Row 1 : 1000
+                        Sitting Row 2 : 500
+                        Sitting Last Row : 250
+                    """)
+
+                    sitting_choice = int(input("Enter Your Choice For Sitting: "))
+
+                    if sitting_choice == 1:
+                        print("Your Row 1 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+                    elif sitting_choice == 2:
+                        print("Your Row 2 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+                    else:
+                        print("Your Row 3 Seat is Booked...")
+                        print("Your Ticket Is Successfully Booked.")
+                        print("Thank You For Booking Ticket At PVR")
+
+            7. Conditional Operators Commonly Used:-
+
+                Conditional statements commonly use comparison operators to check conditions.
+
+                | Operator | Meaning                  | Example  | Result |
+                |----------|--------------------------|----------|--------|
+                | ==       | Equal to                 | 10 == 10 | True   |
+                | !=       | Not equal to             | 10 != 5  | True   |
+                | >        | Greater than             | 10 > 5   | True   |
+                | <        | Less than                | 5 < 10   | True   |
+                | >=       | Greater than or equal to | 10 >= 10 | True   |
+                | <=       | Less than or equal to    | 5 <= 10  | True   |
+
+            8. Logical Operators with Conditional Statements:-
+                Logical operators can be used to combine multiple conditions.
+
+                    * and: Returns True when both conditions are True.
+                    * or: Returns True when at least one condition is True.
+                    * not: Reverses the result of a condition.
+
+                Example:
+                    age = 25
+
+                    if age >= 18 and age <= 60:
+                        print("Eligible")
+
+                Output:
+                    Eligible
+
+            9. Important Points for Day 11
+
+                * Conditional statements are used for decision-making in Python.
+                * The if statement executes code only when its condition is True.
+                * The if-else statement provides two possible outcomes.
+                * The if-elif-else statement is used to check multiple conditions.
+                * Multiple elif statements can be used.
+                * The else block executes when all previous conditions are False.
+                * Ternary statements are a short form of if-else.
+                * A ternary statement is generally written in a single line.
+                * Indentation is mandatory for defining conditional blocks in Python.
+                * Conditions normally use comparison and logical operators.
+                * Python checks if-elif conditions from top to bottom.
+                * Once a condition is True, the remaining elif and else blocks are skipped.
+
+            10. Quick Revision:-
+
+                | Statement    | Simple Meaning                                     |
+                |--------------|----------------------------------------------------|
+                | if           | Execute code when a condition is True              |
+                | if-else      | Choose between two outcomes                        |
+                | if-elif-else | Choose between multiple outcomes                   |
+                | Ternary      | Write a simple if-else in one line                 |
+                | Nested if    | Write one conditional statement inside another     |
+                | Indentation  | Defines the block of code belonging to a condition |
+        
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 13(16/9/26):-
+
+        Python Internship Notes: Day 12 - Loops & For Loop
+
+        1. Introduction to Loops:-
+
+            Definition: Loops are used to repeat a block of code multiple times.
+            Loops help us execute the same set of statements repeatedly without writing the same code again and again.
+            Python has two main types of loops:
+            1. for loop
+            2. while loop
+
+        2. Types of Loops in Python:-
+
+            * for loop: Used to iterate over a sequence such as a list, tuple, string, dictionary, or set.
+            * while loop: Used to repeat a block of code as long as a condition is True.
+
+            1. For Loop:-
+                The for loop is used to iterate over a sequence or a range of values and execute a block of code for each value.
+
+                Syntax:
+                for variable in sequence:
+                    statement
+
+                Example:
+                for i in range(10):
+                    print(i)
+
+                Output:
+                0
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+
+                Explanation:
+                * i is the loop variable.
+                * range(10) generates numbers from 0 to 9.
+                * The print statement executes once for each value.
+                * Therefore, the loop executes 10 times.
+
+            2. Using range() with For Loop:-
+                The range() function is commonly used with a for loop to generate a sequence of numbers.
+
+                Syntax:
+                range(stop)
+
+                The stop value is excluded.
+
+                Example:
+                for i in range(5):
+                    print(i)
+
+                Output:
+                0
+                1
+                2
+                3
+                4
+
+            3. range(start, stop):-
+                The range() function can also take a starting value and a stopping value.
+
+                Syntax:
+                range(start, stop)
+
+                * start: Starting value and it is included.
+                * stop: Ending value and it is excluded.
+
+                Example:
+                for i in range(1, 11):
+                    print(i, end=" ")
+
+                Output:
+                1 2 3 4 5 6 7 8 9 10
+
+                Explanation:
+                * The loop starts from 1.
+                * The loop stops before 11.
+                * Therefore, the numbers from 1 to 10 are printed.
+
+            4. range(start, stop, step):-
+                The range() function can take three values.
+
+                Syntax:
+                range(start, stop, step)
+
+                * start: Starting value.
+                * stop: Ending value, which is excluded.
+                * step: Number of positions to move after each iteration.
+
+                Example:
+                for i in range(1, 10, 2):
+                    print(i, end=" ")
+
+                Output:
+                1 3 5 7 9
+
+                Explanation:
+                * The loop starts from 1.
+                * The loop stops before 10.
+                * The value increases by 2 after every iteration.
+
+            5. Step Value in range():-
+                The step value determines how much the loop variable changes after every iteration.
+
+                Example:
+                for i in range(2, 11, 2):
+                    print(i, end=" ")
+
+                Output:
+                2 4 6 8 10
+
+                Here, the step value is 2, so the loop moves forward by 2 each time.
+
+            6. Reverse Loop Using range():-
+                A negative step value can be used to move backward through a range.
+
+                Example:
+                for i in range(6, 0, -1):
+                    print(i, end=" ")
+
+                Output:
+                6 5 4 3 2 1
+
+                Explanation:
+                * The loop starts from 6.
+                * The loop stops before 0.
+                * The value decreases by 1 each time.
+                * -1 is used as the step value.
+
+            7. Difference Between range() Forms:-
+
+                | Syntax                   | Meaning                                 | Example Output              |
+                |--------------------------|-----------------------------------------|-----------------------------|
+                | range(stop)              | Starts from 0 and stops before stop     | range(5) → 0 1 2 3 4        |
+                | range(start, stop)       | Starts from start and stops before stop | range(1, 5) → 1 2 3 4       |
+                | range(start, stop, step) | Starts from start and changes by step   | range(1, 10, 2) → 1 3 5 7 9 |
+
+            8. end Parameter in print():-
+                The end parameter is used to specify what should be printed after each print() statement.
+                By default, print() moves to a new line.
+
+                Example:
+                for i in range(1, 6):
+                    print(i, end=" ")
+
+                Output:
+                1 2 3 4 5
+
+                Here, end=" " prints a space instead of moving to a new line.
+
+            9. Iterating Over a List Using For Loop:-
+                A for loop can be used to access each element of a list one by one.
+
+                Example:
+                numbers = [10, 20, 30, 40, 50]
+
+                for i in numbers:
+                    print(i)
+
+                Output:
+                10
+                20
+                30
+                40
+                50
+
+                Explanation:
+                * The for loop takes one element at a time from the list.
+                * The variable i stores the current element.
+                * The loop continues until all elements are processed.
+
+            10. Iterating Over a Tuple Using For Loop:-
+                A for loop can also be used to iterate through a tuple.
+
+                Example:
+                numbers = (10, 20, 30, 40)
+
+                for i in numbers:
+                    print(i)
+
+                Output:
+                10
+                20
+                30
+                40
+
+            11. Iterating Over a String Using For Loop:-
+                A string is a sequence of characters, so a for loop can be used to access each character individually.
+
+                Example:
+                name = "Anuj"
+
+                for i in name:
+                    print(i)
+
+                Output:
+                A
+                n
+                u
+                j
+
+            12. Factorial of a Number:-
+                Factorial is the multiplication of all positive integers from 1 up to a given number.
+                Factorial is represented using the symbol !.
+
+                Examples:
+                2! = 1 × 2 = 2
+
+                3! = 1 × 2 × 3 = 6
+
+                4! = 1 × 2 × 3 × 4 = 24
+
+                5! = 1 × 2 × 3 × 4 × 5 = 120
+
+            13. Factorial Using For Loop:-
+                A for loop can be used to calculate the factorial of a number.
+
+                Example:
+                num = int(input("Enter a number: "))
+                fact = 1
+
+                for i in range(1, num + 1):
+                    fact = fact * i
+
+                print("Factorial of", num, "is", fact)
+
+                Example Input:
+                Enter a number: 5
+
+                Output:
+                Factorial of 5 is 120
+
+                Explanation:
+                For num = 5:
+
+                Initial:
+                fact = 1
+
+                First iteration:
+                fact = 1 × 1 = 1
+
+                Second iteration:
+                fact = 1 × 2 = 2
+
+                Third iteration:
+                fact = 2 × 3 = 6
+
+                Fourth iteration:
+                fact = 6 × 4 = 24
+
+                Fifth iteration:
+                fact = 24 × 5 = 120
+
+                Therefore:
+
+                5! = 120
+
+            14. Why is fact = 1 Used?:-
+                The factorial calculation uses multiplication, so the initial value of fact is set to 1.
+
+                Example:
+                fact = 1
+
+                If we started with fact = 0, every multiplication would result in 0.
+
+                Example:
+                0 × 1 = 0
+                0 × 2 = 0
+                0 × 3 = 0
+
+                Therefore, fact is initialized with 1.
+
+            17. Nested For Loop:-
+                A nested loop means a loop inside another loop.
+
+                * Outer loop: Controls the main iterations.
+                * Inner loop: Executes completely for each iteration of the outer loop.
+
+                Syntax:
+                for i in range():
+                    for j in range():
+                        statement
+
+            18. Nested For Loop Example:-
+                Example:
+                for i in range(6, 0, -1):
+                    for j in range(i):
+                        print("*", end=" ")
+                    print()
+
+                Output:
+                * * * * * *
+                * * * * *
+                * * * *
+                * * *
+                * *
+                *
+
+                Explanation:
+                * The outer loop controls the number of rows.
+                * The inner loop prints the stars for each row.
+                * The value of i decreases from 6 to 1.
+                * The inner loop runs i times for each outer-loop iteration.
+                * print() after the inner loop moves the cursor to the next line.
+
+        3. Difference Between For Loop and Nested For Loop:-
+
+            | Feature             | For Loop                                            | Nested For Loop                                              |
+            |---------------------|-----------------------------------------------------|--------------------------------------------------------------|
+            | **Definition**      | A single loop used to repeat or iterate over values | A loop placed inside another loop                            |
+            | **Number of Loops** | One loop                                            | Two or more loops                                            |
+            | **Use**             | Iterating through a sequence or range               | Working with multiple levels of repetition                   |
+            | **Example**         | for i in range(5):                                  | for i in range(5): followed by another for loop              |
+            | **Execution**       | Executes the loop body for each iteration           | Inner loop executes completely for each outer-loop iteration |
+
+        4. Important Points for Day 12:-
+
+            * Loops are used to repeat a block of code multiple times.
+            * Python has two main types of loops: for loop and while loop.
+            * Today we learned the for loop.
+            * A for loop can iterate over sequences such as lists, tuples, strings, dictionaries, and sets.
+            * range() is commonly used with a for loop to generate a sequence of numbers.
+            * range() does not include the stop value.
+            * range(start, stop) starts from start and stops before stop.
+            * range(start, stop, step) allows us to specify the step value.
+            * A negative step value can be used for reverse iteration.
+            * end=" " can be used to print values on the same line.
+            * Factorial can be calculated using a for loop.
+            * A nested loop is a loop inside another loop.
+            * In a nested loop, the inner loop executes completely for every iteration of the outer loop.
+
+        5. Quick Revision:-
+
+        | Concept       | Key Point                                     |
+        |---------------|-----------------------------------------------|
+        | Loop          | Repeats a block of code                       |
+        | For Loop      | Iterates over a sequence or range             |
+        | range()       | Generates a sequence of numbers               |
+        | start         | Starting value of range                       |
+        | stop          | Ending limit, which is excluded               |
+        | step          | Controls the increment or decrement           |
+        | Negative Step | Used for reverse iteration                    |
+        | Factorial     | Product of numbers from 1 to the given number |
+        | Nested Loop   | Loop inside another loop                      |
+        | end=" "       | Prints output on the same line                |

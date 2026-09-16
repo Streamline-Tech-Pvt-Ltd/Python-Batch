@@ -1159,3 +1159,1097 @@ And:
 sort()    → Sorts
 reverse() → Reverses
 ```
+
+# 🐍 Python Interview Questions & Answers
+
+## 📚 Topics Covered
+
+* List Properties
+* List Slicing
+* String
+* String Methods
+* Dictionary
+* Tuple
+* Set
+* `if`, `elif`, `else`
+
+---
+
+# 1. List Interview Questions
+
+### Q1. What is a List in Python?
+
+**Answer:**
+
+A list is an ordered and mutable collection of elements in Python. It is used to store multiple values in a single variable.
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits)
+```
+
+**Output:**
+
+```text
+['Apple', 'Banana', 'Mango']
+```
+
+---
+
+### Q2. What are the properties of a List?
+
+**Answer:**
+
+The main properties of a list are:
+
+1. List is ordered.
+2. List is mutable.
+3. List allows duplicate values.
+4. List supports indexing.
+5. List supports slicing.
+6. List can contain different data types.
+7. List can contain another list.
+
+```python
+data = [10, "Python", 20.5, True, 10]
+
+print(data)
+```
+
+---
+
+### Q3. Is a List mutable or immutable?
+
+**Answer:**
+
+A list is **mutable**, which means we can change, add, or remove elements after creating the list.
+
+```python
+numbers = [10, 20, 30]
+
+numbers[1] = 50
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+[10, 50, 30]
+```
+
+---
+
+### Q4. Does a List allow duplicate values?
+
+**Answer:**
+
+Yes, a list allows duplicate values.
+
+```python
+numbers = [10, 20, 10, 30, 20]
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+[10, 20, 10, 30, 20]
+```
+
+---
+
+### Q5. What is List indexing?
+
+**Answer:**
+
+Indexing is used to access individual elements from a list.
+
+Python uses **zero-based indexing**, so the first element has index `0`.
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits[0])
+print(fruits[2])
+```
+
+**Output:**
+
+```text
+Apple
+Mango
+```
+
+---
+
+# 2. List Slicing Interview Questions
+
+### Q6. What is slicing in Python?
+
+**Answer:**
+
+Slicing is used to extract a specific portion of a sequence such as a list, tuple, or string.
+
+### Syntax
+
+```python
+sequence[start:stop:step]
+```
+
+The `stop` index is not included.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+```
+
+**Output:**
+
+```text
+[20, 30, 40]
+```
+
+---
+
+### Q7. What is the difference between indexing and slicing?
+
+**Answer:**
+
+**Indexing** accesses a single element, while **slicing** accesses multiple elements.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2])      # Indexing
+print(numbers[1:4])    # Slicing
+```
+
+**Output:**
+
+```text
+30
+[20, 30, 40]
+```
+
+---
+
+### Q8. How do you reverse a list using slicing?
+
+**Answer:**
+
+We can use `[::-1]` to reverse a list.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[::-1])
+```
+
+**Output:**
+
+```text
+[50, 40, 30, 20, 10]
+```
+
+---
+
+# 3. String Interview Questions
+
+### Q9. What is a String in Python?
+
+**Answer:**
+
+A string is a sequence of characters enclosed inside single quotes, double quotes, or triple quotes.
+
+```python
+name = "Shivani"
+
+print(name)
+```
+
+---
+
+### Q10. Is a String mutable or immutable?
+
+**Answer:**
+
+A string is **immutable**. This means we cannot directly change an existing character in a string.
+
+```python
+text = "Python"
+
+# text[0] = "J"   # TypeError
+```
+
+Instead, we create a new string.
+
+```python
+text = "Jython"
+```
+
+---
+
+### Q11. Does a String support indexing and slicing?
+
+**Answer:**
+
+Yes. Strings support both indexing and slicing.
+
+```python
+text = "Python"
+
+print(text[0])
+print(text[1:4])
+```
+
+**Output:**
+
+```text
+P
+yth
+```
+
+---
+
+### Q12. What is negative indexing?
+
+**Answer:**
+
+Negative indexing is used to access elements from the end of a sequence.
+
+```python
+text = "Python"
+
+print(text[-1])
+print(text[-2])
+```
+
+**Output:**
+
+```text
+n
+o
+```
+
+---
+
+# 4. String Methods Interview Questions
+
+### Q13. What is `upper()`?
+
+**Answer:**
+
+`upper()` converts all characters of a string into uppercase.
+
+```python
+text = "python"
+
+print(text.upper())
+```
+
+**Output:**
+
+```text
+PYTHON
+```
+
+---
+
+### Q14. What is `lower()`?
+
+**Answer:**
+
+`lower()` converts all characters of a string into lowercase.
+
+```python
+text = "PYTHON"
+
+print(text.lower())
+```
+
+**Output:**
+
+```text
+python
+```
+
+---
+
+### Q15. What is `capitalize()`?
+
+**Answer:**
+
+`capitalize()` converts the first character of a string to uppercase and the remaining characters to lowercase.
+
+```python
+text = "python programming"
+
+print(text.capitalize())
+```
+
+**Output:**
+
+```text
+Python programming
+```
+
+---
+
+### Q16. What is `title()`?
+
+**Answer:**
+
+`title()` converts the first character of each word into uppercase.
+
+```python
+text = "python programming language"
+
+print(text.title())
+```
+
+**Output:**
+
+```text
+Python Programming Language
+```
+
+---
+
+### Q17. What is `strip()`?
+
+**Answer:**
+
+`strip()` removes leading and trailing whitespace from a string.
+
+```python
+text = "  Python  "
+
+print(text.strip())
+```
+
+**Output:**
+
+```text
+Python
+```
+
+---
+
+### Q18. What is `replace()`?
+
+**Answer:**
+
+`replace()` is used to replace one substring with another substring.
+
+```python
+text = "I like Java"
+
+print(text.replace("Java", "Python"))
+```
+
+**Output:**
+
+```text
+I like Python
+```
+
+---
+
+### Q19. What is `split()`?
+
+**Answer:**
+
+`split()` divides a string into a list.
+
+```python
+text = "Python SQL Java"
+
+print(text.split())
+```
+
+**Output:**
+
+```text
+['Python', 'SQL', 'Java']
+```
+
+---
+
+### Q20. What is `join()`?
+
+**Answer:**
+
+`join()` combines multiple strings into a single string using a specified separator.
+
+```python
+courses = ["Python", "SQL", "Java"]
+
+print(" - ".join(courses))
+```
+
+**Output:**
+
+```text
+Python - SQL - Java
+```
+
+---
+
+### Q21. What is `find()`?
+
+**Answer:**
+
+`find()` returns the index of the first occurrence of a specified substring. If the substring is not found, it returns `-1`.
+
+```python
+text = "Python Programming"
+
+print(text.find("Python"))
+```
+
+**Output:**
+
+```text
+0
+```
+
+---
+
+### Q22. What is `count()`?
+
+**Answer:**
+
+`count()` returns the number of times a specified substring occurs in a string.
+
+```python
+text = "banana"
+
+print(text.count("a"))
+```
+
+**Output:**
+
+```text
+3
+```
+
+---
+
+### Q23. What is the difference between `isalpha()` and `isdigit()`?
+
+**Answer:**
+
+* `isalpha()` checks whether all characters are alphabets.
+* `isdigit()` checks whether all characters are digits.
+
+```python
+print("Python".isalpha())
+print("12345".isdigit())
+```
+
+**Output:**
+
+```text
+True
+True
+```
+
+---
+
+# 5. Dictionary Interview Questions
+
+### Q24. What is a Dictionary in Python?
+
+**Answer:**
+
+A dictionary is a mutable collection that stores data in **key-value pairs**.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21,
+    "course": "Python"
+}
+
+print(student)
+```
+
+---
+
+### Q25. What are the properties of a Dictionary?
+
+**Answer:**
+
+1. Dictionary stores key-value pairs.
+2. Dictionary is mutable.
+3. Keys must be unique.
+4. Duplicate values are allowed.
+5. Dictionary is accessed using keys.
+6. Dictionary can contain different data types.
+7. Dictionary can contain nested dictionaries.
+
+---
+
+### Q26. Are duplicate keys allowed in a Dictionary?
+
+**Answer:**
+
+No. Dictionary keys must be unique.
+
+If the same key is used more than once, the latest value replaces the previous value.
+
+```python
+student = {
+    "name": "Shivani",
+    "name": "Sneha"
+}
+
+print(student)
+```
+
+**Output:**
+
+```text
+{'name': 'Sneha'}
+```
+
+---
+
+### Q27. Are duplicate values allowed in a Dictionary?
+
+**Answer:**
+
+Yes. Duplicate values are allowed.
+
+```python
+student = {
+    "math": 90,
+    "python": 90
+}
+
+print(student)
+```
+
+---
+
+### Q28. How do you access a Dictionary value?
+
+**Answer:**
+
+We can access a value using its key.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student["name"])
+```
+
+**Output:**
+
+```text
+Shivani
+```
+
+---
+
+### Q29. What is the use of `get()`?
+
+**Answer:**
+
+`get()` is used to retrieve the value associated with a key.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student.get("name"))
+```
+
+**Output:**
+
+```text
+Shivani
+```
+
+---
+
+### Q30. What are common Dictionary methods?
+
+**Answer:**
+
+Common dictionary methods include:
+
+```text
+keys()
+values()
+items()
+get()
+update()
+pop()
+popitem()
+copy()
+clear()
+```
+
+Example:
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student.keys())
+print(student.values())
+print(student.items())
+```
+
+---
+
+# 6. Tuple Interview Questions
+
+### Q31. What is a Tuple in Python?
+
+**Answer:**
+
+A tuple is an ordered and immutable collection of elements.
+
+Tuples are generally written using parentheses `()`.
+
+```python
+student = ("Shivani", 21, "Python")
+
+print(student)
+```
+
+---
+
+### Q32. Is a Tuple mutable or immutable?
+
+**Answer:**
+
+A tuple is **immutable**, which means its elements cannot be changed after creation.
+
+```python
+numbers = (10, 20, 30)
+
+# numbers[0] = 50   # TypeError
+```
+
+---
+
+### Q33. Does a Tuple allow duplicate values?
+
+**Answer:**
+
+Yes. A tuple allows duplicate values.
+
+```python
+numbers = (10, 20, 10, 30)
+
+print(numbers)
+```
+
+---
+
+### Q34. What are the main Tuple methods?
+
+**Answer:**
+
+Tuple has two main methods:
+
+* `count()`
+* `index()`
+
+```python
+numbers = (10, 20, 10, 30)
+
+print(numbers.count(10))
+print(numbers.index(20))
+```
+
+---
+
+### Q35. What is Tuple packing?
+
+**Answer:**
+
+Tuple packing means putting multiple values into a single tuple.
+
+```python
+student = "Shivani", 21, "Python"
+
+print(student)
+```
+
+---
+
+### Q36. What is Tuple unpacking?
+
+**Answer:**
+
+Tuple unpacking means assigning tuple elements to separate variables.
+
+```python
+student = ("Shivani", 21, "Python")
+
+name, age, course = student
+
+print(name)
+print(age)
+print(course)
+```
+
+---
+
+# 7. Set Interview Questions
+
+### Q37. What is a Set in Python?
+
+**Answer:**
+
+A set is an unordered and mutable collection of unique elements.
+
+```python
+numbers = {10, 20, 30}
+
+print(numbers)
+```
+
+---
+
+### Q38. Does a Set allow duplicate values?
+
+**Answer:**
+
+No. A set automatically removes duplicate values.
+
+```python
+numbers = {10, 20, 10, 30, 20}
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+{10, 20, 30}
+```
+
+---
+
+### Q39. Does a Set support indexing?
+
+**Answer:**
+
+No. A set does not support indexing because it is unordered.
+
+```python
+numbers = {10, 20, 30}
+
+# print(numbers[0])   # TypeError
+```
+
+---
+
+### Q40. What is the use of `add()`?
+
+**Answer:**
+
+`add()` is used to add one element to a set.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.add(40)
+
+print(numbers)
+```
+
+---
+
+### Q41. What is the difference between `remove()` and `discard()`?
+
+**Answer:**
+
+Both methods remove an element from a set.
+
+* `remove()` raises an error if the element does not exist.
+* `discard()` does not raise an error if the element does not exist.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.remove(20)
+numbers.discard(100)
+```
+
+---
+
+### Q42. What is Set Union?
+
+**Answer:**
+
+Union combines all unique elements from two sets.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)
+```
+
+**Output:**
+
+```text
+{1, 2, 3, 4, 5}
+```
+
+---
+
+### Q43. What is Set Intersection?
+
+**Answer:**
+
+Intersection returns the common elements from two sets.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a & b)
+```
+
+**Output:**
+
+```text
+{3}
+```
+
+---
+
+# 8. if, elif, else Interview Questions
+
+### Q44. What is a Conditional Statement?
+
+**Answer:**
+
+A conditional statement is used to execute different blocks of code based on whether a condition is `True` or `False`.
+
+Python provides:
+
+```text
+if
+elif
+else
+```
+
+---
+
+### Q45. What is the use of `if`?
+
+**Answer:**
+
+`if` is used to execute a block of code when a condition is true.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible to vote")
+```
+
+---
+
+### Q46. What is the use of `else`?
+
+**Answer:**
+
+`else` executes when the `if` condition is false.
+
+```python
+age = 16
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+
+---
+
+### Q47. What is the use of `elif`?
+
+**Answer:**
+
+`elif` means **else if**. It is used to check another condition when the previous condition is false.
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("A+")
+elif marks >= 75:
+    print("A")
+else:
+    print("B")
+```
+
+**Output:**
+
+```text
+A
+```
+
+---
+
+### Q48. Is `else` compulsory with `if`?
+
+**Answer:**
+
+No. The `else` block is optional.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+### Q49. Can we use multiple `elif` statements?
+
+**Answer:**
+
+Yes. We can use multiple `elif` statements.
+
+```python
+marks = 65
+
+if marks >= 90:
+    print("A+")
+elif marks >= 75:
+    print("A")
+elif marks >= 60:
+    print("B")
+elif marks >= 40:
+    print("C")
+else:
+    print("Fail")
+```
+
+---
+
+### Q50. What is Nested `if`?
+
+**Answer:**
+
+An `if` statement inside another `if` statement is called a **nested if**.
+
+```python
+age = 22
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+```
+
+---
+
+# ⭐ Most Important Comparison Questions
+
+## Q51. Difference between List and Tuple?
+
+| List              | Tuple             |
+| ----------------- | ----------------- |
+| Mutable           | Immutable         |
+| Uses `[]`         | Uses `()`         |
+| Can be changed    | Cannot be changed |
+| Supports indexing | Supports indexing |
+| Supports slicing  | Supports slicing  |
+
+---
+
+## Q52. Difference between List and Set?
+
+| List              | Set                       |
+| ----------------- | ------------------------- |
+| Ordered           | Unordered                 |
+| Allows duplicates | Does not allow duplicates |
+| Supports indexing | Does not support indexing |
+| Mutable           | Mutable                   |
+| Uses `[]`         | Uses `{}`                 |
+
+---
+
+## Q53. Difference between Tuple and Set?
+
+| Tuple             | Set           |
+| ----------------- | ------------- |
+| Ordered           | Unordered     |
+| Immutable         | Mutable       |
+| Allows duplicates | No duplicates |
+| Supports indexing | No indexing   |
+| Uses `()`         | Uses `{}`     |
+
+---
+
+## Q54. Difference between String and List?
+
+| String                 | List                   |
+| ---------------------- | ---------------------- |
+| Sequence of characters | Collection of elements |
+| Immutable              | Mutable                |
+| Uses quotes            | Uses `[]`              |
+| Supports indexing      | Supports indexing      |
+| Supports slicing       | Supports slicing       |
+
+---
+
+# 🔥 Quick Interview Revision
+
+| Topic      | Key Point                          |
+| ---------- | ---------------------------------- |
+| List       | Ordered + Mutable + Duplicates     |
+| Tuple      | Ordered + Immutable + Duplicates   |
+| Set        | Unordered + Unique                 |
+| Dictionary | Key-Value pairs                    |
+| String     | Immutable sequence of characters   |
+| Indexing   | Access single element              |
+| Slicing    | Access multiple elements           |
+| `if`       | Checks a condition                 |
+| `elif`     | Checks another condition           |
+| `else`     | Executes when conditions are false |
+
+---
+
+#  One-Line Interview Answers
+
+**List:** A list is an ordered and mutable collection that allows duplicate values.
+
+**Tuple:** A tuple is an ordered and immutable collection that allows duplicate values.
+
+**Set:** A set is an unordered collection of unique elements.
+
+**Dictionary:** A dictionary is a mutable collection of key-value pairs with unique keys.
+
+**String:** A string is an immutable sequence of characters.
+
+**Slicing:** Slicing is used to extract a portion of a sequence using `start:stop:step`.
+
+**if:** `if` executes code when a condition is true.
+
+**elif:** `elif` checks another condition when the previous condition is false.
+
+**else:** `else` executes when all preceding conditions are false.

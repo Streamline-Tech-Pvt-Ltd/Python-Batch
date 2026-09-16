@@ -28,13 +28,92 @@
         let marks2 = [85, 90, 89, 70, 90];
         let b = 0;
         do {
+            console.log(student2[b] + " : " + marks2[b]);
+            i++;
+        } while (b < student.length);
 
-    console.log(student2[b] + " : " + marks2[b]);
+        // 4.Write a program using a for loop to print all even numbers from 1 to 20.
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
 
-    i++;
+        // 5.Write a program using a while loop to calculate the sum of numbers from 1 to 5.
+        let x = 1;
+        let sum = 0;
+        while (x <= 5) {
+            sum = sum + x;
+            x++;
+        }
+        console.log("Sum =", sum);
 
-} while (i < student.length);
+        // 6.Write a program using a do...while loop that prints numbers from 1 to 10, but stops when the number becomes 6.
+        let d = 1;
+        do {
+            console.log(d);
+            if (d === 6) {
+                break;
+            }
+            d++;
+        } while (d <= 10);
 
+        // 7.Write a program using a loop that prints numbers from 1 to 10, but skips number 5 using continue.
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5) {
+                continue;
+            }
+            console.log(i);
+        }
+
+        // 8.Write a program using a while loop to find the factorial of a number.
+        let num1 = 5;
+        let factorial = 1;
+        let a1 = 1;
+        while (a1 <= num1) {
+            factorial = factorial * a1;
+            a1++;
+        }
+        console.log("Factorial =", factorial);
+
+        // 9.Print the table of 2 using do...while loop.
+        let i1 = 1;
+        do {
+            console.log("2 × " + i1 + " = " + (2 * i1));
+            i1++;
+        } while (i1 <= 10);
+
+        // 10.Check number is palindrome or not.
+        let number = 121;
+        let original = number;
+        let reverse = 0;
+        while (number > 0) {
+            let digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number = Math.floor(number / 10);
+        }
+        if (original === reverse) {
+            console.log("Palindrome");
+        } else {
+            console.log("Not Palindrome");
+        }
+
+        // 11.Check whether a number is prime or not.
+        let num = 7;
+        let i = 2;
+        let isPrime = true;
+        while (i < num) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+            i++;
+        }
+        if (isPrime && num > 1) {
+            console.log("Prime Number");
+        } else {
+            console.log("Not a Prime Number");
+        }
 
 
 
