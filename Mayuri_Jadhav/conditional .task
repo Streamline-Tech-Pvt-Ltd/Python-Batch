@@ -1,41 +1,41 @@
-# # Q1.print a maximum of 3 number using elif statement
+# Q1.print a maximum of 3 number using elif statement
 
-# a=int(input("Enter the number:"))
-# b=int(input("Enter the number:"))
-# c=int(input("Enter the number:"))
-# if a>=b & a>=c:
-#     print("Maximum=,a")
-# elif b>=a &b>=c:
-#     print("Maximum=,b")
-# else:
-#     print("Maximum=,C")
-
-
-# # Q2.check a Number is even oer odd
-# num=int(input("Enter number:"))
-# if num % 2 ==0:
-#  print("is even number")
-# else:
-#  print("is odd number")
+a=int(input("Enter the number:"))
+b=int(input("Enter the number:"))
+c=int(input("Enter the number:"))
+if a>=b & a>=c:
+    print("Maximum=,a")
+elif b>=a &b>=c:
+    print("Maximum=,b")
+else:
+    print("Maximum=,C")
 
 
-# # Q3.print natural number/not
-# num=int(input("Enter the number"))
-# if num>=1:
-#     print("the Number is Natural  ")
-# else:
-#     print("the number is not natural number")
+# Q2.check a Number is even oer odd
+num=int(input("Enter number:"))
+if num % 2 ==0:
+ print("is even number")
+else:
+ print("is odd number")
 
-    #Nested if-else
-# percentage=float(input("Enter the percentage:"))
-# entrance_exam_marks=int(input("Enter the marks:"))
-# if percentage>=60:
-#       if entrance_exam_marks>=70:
-#         print("Admission Garented")
-#       else:
-#           print("Entrance Marks Too low")
-# else:
-#        print("Not Eligible")
+
+# Q3.print natural number/not
+num=int(input("Enter the number"))
+if num>=1:
+    print("the Number is Natural  ")
+else:
+    print("the number is not natural number")
+
+    Nested if-else
+percentage=float(input("Enter the percentage:"))
+entrance_exam_marks=int(input("Enter the marks:"))
+if percentage>=60:
+      if entrance_exam_marks>=70:
+        print("Admission Garented")
+      else:
+          print("Entrance Marks Too low")
+else:
+       print("Not Eligible")
  
 
     #Q2.Login system
@@ -45,6 +45,6 @@ if username =="Mayuri":
     if password == "Mayuri@123":
         print ("Login Sucessful")
     else:
-        print("username is invalid")
+        print("password is invalid")
 else:
-        print("Password is invalid")
+        print("username is invalid")
