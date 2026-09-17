@@ -91,7 +91,7 @@ password = input("Enter your password:-")
 if username == "Admin" and password == "Pass@123":
     print("Login Successful.")
 elif username != "Admin" and password == "Pass@123":
-    print("Invalid Usename.")
+    print("Invalid Username.")
 elif username == "Admin" and password != "Pass@123":
     print("Invalid Password.")
 else:
