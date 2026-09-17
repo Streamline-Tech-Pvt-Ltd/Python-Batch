@@ -988,7 +988,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 11(11/9/26):-
+    Internship Day 12(11/9/26):-
 
         Python Internship Notes: Day 10 - Tuple, Set & Frozenset
 
@@ -1647,7 +1647,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 12(15/9/26):-
+    Internship Day 13(15/9/26):-
 
         Python Notes: Day 11 - Conditional Statements
 
@@ -1963,7 +1963,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
         
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 13(16/9/26):-
+    Internship Day 14(16/9/26):-
 
         Python Internship Notes: Day 12 - Loops & For Loop
 
