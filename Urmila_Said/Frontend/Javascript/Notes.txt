@@ -569,6 +569,7 @@ Ex: function greet(){
  greet()
  greet()
 
+--------------------------------------------------------------------------------------------------------------------
 
 # Parameters :
 A parameter is a variable written inside the function definition. 
@@ -587,6 +588,8 @@ Ex: add(10, 20);
 * Easy Way :
 Parameter → Function बनवताना / defining time
 Argument → Function call करताना / calling time
+
+--------------------------------------------------------------------------------------------------------------------------------
 
 # Global Variable :
 A variable declared outside a function or block is generally called a global variable. 
@@ -615,6 +618,7 @@ console.log(marks);
 | Available for a larger part of the program | Available for a smaller part of the program |
 | Example: `let name = "Urmila";`            | Example: `let marks = 85;`                  |
 
+--------------------------------------------------------------------------------------------------------------------
 
 # Arrow Function :
 An Arrow Function is a shorter and simpler way to write a function in JavaScript.
@@ -624,5 +628,132 @@ console.log(add(10, 20));
 
 If the function has only one statement that returns a value, we can remove {} and return.
 
+----------------------------------------------------------------------------------------------------------------------------
 
+# This keyword :
+this is a special keyword in JavaScript that refers to the object/context in which the current function is being executed.
+The value of this is not fixed. It depends mainly on how a function is called.
+
+1. this inside an Object
+When a function is called as an object method, this refers to the object itself.
+Ex: 
+const student = {
+    name: "Urmila",
+    age: 22,
+
+    display: function() {
+        console.log(this.name);
+        console.log(this.age);
+    }
+};
+student.display();
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# Array : An Array is a data structure used to store multiple values in a single variable.
+
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+console.log(fruits);
+
+# Array Methods :
+
+1. length: length returns the number of elements in an array.
+Ex : const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let count = fruits.length;
+console.log(count);
+
+
+2. pop() :removes the last element from an array.
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let removed = fruits.pop();
+console.log(fruits);
+console.log(removed);
+
+3. push() :adds one or more elements to the end of an array.
+Ex :const fruits = ["Apple", "Banana", "Orange"];
+let result = fruits.push("Kiwi");
+console.log(fruits);
+console.log(result);
+
+*push() returns the new length, not the new array.
+
+4. unshift() : adds an element to the beginning of an array.
+Ex: const fruits = ["Apple", "Banana", "Orange"];
+let result = fruits.unshift("Kiwi");
+console.log(fruits);
+console.log(result);
+
+* Remember:
+push()    → add at END
+unshift() → add at BEGINNING
+
+5. shift() : removes the first element.
+Ex: const fruits = ["Apple", "Banana", "Orange"];
+let removed = fruits.shift();
+console.log(fruits);
+console.log(removed);
+
+6. join() :converts an array into a string.
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let result = fruits.join("-");
+console.log(result);
+
+7. sort() :sorts the elements.
+Ex: const fruits = ["Mango", "Apple", "Orange", "Banana"];
+fruits.sort();
+console.log(fruits);
+
+8. reverse(): reverses the order of the array.
+Ex: const fruits = ["Apple", "Banana", "Orange", "Mango"];
+fruits.reverse();
+console.log(fruits);
+
+9. sort() + reverse()
+Ex: fruit = fruits.sort();
+fruit = fruits.reverse();
+console.log(fruits);
+
+10. filter() : 
+const num = [21, 65, 34, 18, 15, 10, 66];
+const age = num.filter(myfunction);
+function myfunction(value) {
+    return value >= 18;
+}
+console.log(age);
+
+# Easy :
+push()      → add at end
+pop()       → remove from end
+
+unshift()   → add at beginning
+shift()     → remove from beginning
+
+map()       → transform
+filter()    → select
+
+delete()    → delete one Map entry
+clear()     → delete all Map entries
+----------------------------------------------------------------------------------------------------------------------------
+
+# Map : A Map is a JavaScript data structure used to store data in key-value pairs.
+
+Ex: const student = new Map();
+student.set("name", "Urmila");
+student.set("age", 22);
+student.set("course", "B.Sc CS");
+console.log(student);
+
+1. set(key, value) :Adds a new key-value pair.
+Ex: student.set("city", "Pune");
+
+2. get(key): Gets the value of a key.
+Ex: console.log(student.get("name"));
+
+3. delete(key): Deletes one key-value pair.
+Ex: student.delete("age");
+console.log(student);
+
+4. clear(): Deletes all key-value pairs
+Ex: student.clear();
+console.log(student);
 
