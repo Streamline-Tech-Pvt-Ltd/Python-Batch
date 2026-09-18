@@ -2303,15 +2303,175 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
         5. Quick Revision:-
 
-        | Concept       | Key Point                                     |
-        |---------------|-----------------------------------------------|
-        | Loop          | Repeats a block of code                       |
-        | For Loop      | Iterates over a sequence or range             |
-        | range()       | Generates a sequence of numbers               |
-        | start         | Starting value of range                       |
-        | stop          | Ending limit, which is excluded               |
-        | step          | Controls the increment or decrement           |
-        | Negative Step | Used for reverse iteration                    |
-        | Factorial     | Product of numbers from 1 to the given number |
-        | Nested Loop   | Loop inside another loop                      |
-        | end=" "       | Prints output on the same line                |
+            | Concept       | Key Point                                     |
+            |---------------|-----------------------------------------------|
+            | Loop          | Repeats a block of code                       |
+            | For Loop      | Iterates over a sequence or range             |
+            | range()       | Generates a sequence of numbers               |
+            | start         | Starting value of range                       |
+            | stop          | Ending limit, which is excluded               |
+            | step          | Controls the increment or decrement           |
+            | Negative Step | Used for reverse iteration                    |
+            | Factorial     | Product of numbers from 1 to the given number |
+            | Nested Loop   | Loop inside another loop                      |
+            | end=" "       | Prints output on the same line                |
+    
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 15(17/9/26):-
+
+        Python Internship Notes: Day 13 - While Loop & Loop Control Statements
+
+            1. While Loop:-
+
+                Definition: A while loop is used to repeatedly execute a block of code as long as a given condition is True.
+                The loop stops when the condition becomes False.
+
+                Syntax:
+                    while condition:
+                        statement
+                        update
+
+                Example:
+                    i = 1
+                    while i <= 10:
+                        print(i)
+                        i = i + 1
+
+                Output:
+                    1
+                    2
+                    3
+                    4
+                    5
+                    6
+                    7
+                    8
+                    9
+                    10
+
+                2. Factorial Using While Loop
+
+                    Example:
+                        num = int(input("Enter a number: "))
+                        i = 1
+                        fact = 1
+
+                        while i <= num:
+                            fact = fact * i
+                            i = i + 1
+
+                        print("Factorial =", fact)
+
+                    Example:
+                        Enter a number: 5
+
+                    Output:
+                        Factorial = 120
+
+                3. Multiplication Table Using While Loop
+
+                    Example:
+                        i = 1
+
+                        while i <= 10:
+                            print("2 x", i, "=", 2 * i)
+                            i = i + 1
+
+                    Output:
+                        2 x 1 = 2
+                        2 x 2 = 4
+                        2 x 3 = 6
+                        2 x 4 = 8
+                        2 x 5 = 10
+                        2 x 6 = 12
+                        2 x 7 = 14
+                        2 x 8 = 16
+                        2 x 9 = 18
+                        2 x 10 = 20
+
+                4. Printing Even Numbers Using While Loop
+                    Example:
+                        i = 2
+
+                        while i <= 20:
+                            print(i, end=" ")
+                            i = i + 2
+
+                    Output:
+                        2 4 6 8 10 12 14 16 18 20
+
+            2. Loop Control Statements:-
+                Python provides three important loop control statements:
+
+                1. break
+                2. continue
+                3. pass
+
+                1. break Statement
+                    The break statement is used to immediately stop the loop, even if the loop condition is still True.
+
+                    Example:
+
+                    for i in range(10):
+                        if i == 5:
+                            break
+                        print(i)
+
+                    Output:
+                    0
+                    1
+                    2
+                    3
+                    4
+
+                2. continue Statement
+                    The continue statement skips the current iteration and moves to the next iteration of the loop.
+
+                    Example:
+
+                    for i in range(10):
+                        if i == 5:
+                            continue
+                        print(i)
+
+                    Output:
+                    0
+                    1
+                    2
+                    3
+                    4
+                    6
+                    7
+                    8
+                    9
+
+                3. pass Statement
+                    The pass statement does nothing. It is used as a placeholder when a statement is required syntactically but no action needs to be performed.
+
+                    Example:
+
+                    i = 1
+
+                    while i <= 10:
+                        pass
+
+                    Note:
+                    pass does not stop or skip the loop. It simply does nothing.
+
+            3. Difference Between break, continue and pass:-
+
+                | Statement| Purpose                 | Effect                      |
+                |----------|-------------------------|-----------------------------|
+                | break    | Stops the loop          | Exits the loop completely   |
+                | continue | Skips current iteration | Moves to the next iteration |
+                | pass     | Does nothing            | Acts as a placeholder       |
+
+            4. Important Points for Day 13:-
+
+                while loop runs as long as its condition is True.
+                The loop variable should be updated to avoid an infinite loop.
+                break completely stops the loop.
+                continue skips the current iteration.
+                pass does nothing and is used as a placeholder.
+                while loop can be used for factorial, multiplication tables, and number sequences.
