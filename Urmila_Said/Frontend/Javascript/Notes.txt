@@ -620,13 +620,53 @@ console.log(marks);
 
 --------------------------------------------------------------------------------------------------------------------
 
-# Arrow Function :
+# Function Types:
+
+1. Arrow Function :
 An Arrow Function is a shorter and simpler way to write a function in JavaScript.
 
 EX :const add = (a, b) => a + b;
 console.log(add(10, 20));
 
 If the function has only one statement that returns a value, we can remove {} and return.
+
+2. Anonymous Function : A function without a name is called an anonymous function.
+Ex: function() {
+    console.log("Hello");
+}
+
+* Normally 
+const greet = function() {
+    console.log("Hello");
+};
+greet();
+
+
+3.Callback Function : A function passed as an argument to another function is called a callback function.
+Ex: function greet(name) {
+    console.log("Hello " + name);
+}
+function processUser(callback) {
+    callback("Urmila");
+}
+processUser(greet);
+
+4. Higher-Order Function
+A function that takes another function as an argument OR returns a function is called a Higher-Order Function.
+Ex: function calculate(a, b, operation) {
+    return operation(a, b);
+}
+function add(x, y) {
+    return x + y;
+}
+console.log(calculate(10, 20, add));
+
+5.Function Hoisting: Function declarations can be called before they are written.
+Ex: greet();
+function greet() {
+    console.log("Hello");
+}
+
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -757,3 +797,30 @@ console.log(student);
 Ex: student.clear();
 console.log(student);
 
+------------------------------------------------------------------------------------------------------------------------------------
+
+# Pop- up Methods :
+
+1. alert() : Displays a message to the user.
+Ex : alert("Welcome to JavaScript!");
+
+2. confirm() :Displays a message with OK and Cancel buttons.
+Ex : let result = confirm("Do you want to continue?");
+     console.log(result);
+
+OK → true
+Cancel → false
+
+
+3. prompt(): Used to take input from the user.
+EX : let age = prompt("Enter your age:");
+console.log(age);
+
+
+# Short Difference
+
+| Method      | Purpose              | Buttons/Input       |
+| ----------- | -------------------- | ------------------- |
+| `alert()`   | Show message         | OK                  |
+| `confirm()` | Ask for confirmation | OK / Cancel         |
+| `prompt()`  | Take input           | Input + OK / Cancel |
