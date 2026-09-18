@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.	Create a function to find the square of a number.
+        function square(num) {
+            return num * num;
+        }
+        let result = square(5);
+        console.log("square=",result);
+
+        // 2.	Create an arrow function to check if a number is even or odd.
+        let checkevenodd = (num) => num % 2 == 0 ? "Even" : "Odd";
+        console.log(checkevenodd(10));
+
+        // 3.	Create an arrow function to find the maximum of two numbers.
+        const max =(a,b) => a >= b ? a : b;
+        console.log(max(20,30));
+
+        // 4.	Create a function to print all even numbers between 1 to 50.
+        function EvenNumbers() {
+            for (let i = 1; i <= 50; i++) {
+                if (i % 2 === 0) {
+                    console.log(i);
+                }
+            }
+        }
+        EvenNumbers();
+
+        // 5.	Write a function to find the sum of numbers from 1 to N.
+        function Sum(n) {
+            let sum = 0;
+            for (let i = 1; i <= n; i++) {
+                sum = sum + i;
+            }
+            return sum;
+        }
+        let a = Sum(10);
+        console.log("Sum =", a);
+
+    </script>
+    
+</body>
+</html>

@@ -74,7 +74,7 @@ n = int(input("Enter the no n:"))
 i = 1
 while(i <= 10):
      print(n * i)
-    i += 1
+     i += 1
 
 
 # 4. Take a number n and print squares of numbers from 1 to n.
@@ -136,7 +136,7 @@ else:
 
 # 8. Write a program to take a user input and find a odd and even number using for and while loop
 # For Loop
- n = int(input("Enter the no n:"))
+n = int(input("Enter the no n:"))
 for i in range(1):
          if n % 2 == 0:
                  print("Even Number:")

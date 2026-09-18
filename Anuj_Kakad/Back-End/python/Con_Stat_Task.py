@@ -2,6 +2,7 @@
 
 print("========= PVR =========")
 
+print("Provide Your age correctly to check your eligibility to Buy ticket:-")
 age = int(input("Enter your Age: "))
 
 if age > 18:
@@ -45,8 +46,10 @@ else:
     print("Thank You For Booking Ticket At PVR")
 
 
+print()
 # 2. Wheather Check:-
 
+print("Enter Your area Temperature:-")
 temp = int(input("Enter the temperature: "))
 
 if temp >= 35:
@@ -58,6 +61,8 @@ elif temp >= 15:
 else:
     print("It's cold")
 
+
+print()
 # 3. Program for checking addmision eligibility of a student based on their marks:-
 
 # take percentage and entrance marks:-
@@ -66,6 +71,7 @@ else:
 # otherwise :- Marks are not sufficient for addmission
 # percentage < 60 :- not eligible for addmission
 
+print("Privoid the Marks To check eligibility for addmission:-")
 per = float(input("Enter your percentage:- "))
 entrance_marks = float(input("Enter your entrance marks:-"))
 
@@ -77,6 +83,8 @@ elif per >= 60 and entrance_marks < 70:
 else:
     print("Not eligible for addmission")
 
+
+print()
 # 4. Program for login system:-
 
 # take username and password from user
@@ -85,18 +93,21 @@ else:
 # otherwise :- invalid username
 # otherwise :- invalid password
 
+print("Enter Username And Password:-")
 username = input("Enter your username:- ")
 password = input("Enter your password:-")
 
 if username == "Admin" and password == "Pass@123":
     print("Login Successful.")
 elif username != "Admin" and password == "Pass@123":
-    print("Invalid Usename.")
+    print("Invalid Username.")
 elif username == "Admin" and password != "Pass@123":
     print("Invalid Password.")
 else:
     print("Invalid Username and Password")
 
+
+print()
 # 5. Printing Maximum of three numbers:-
 
 # take 3 numbers from user
@@ -115,6 +126,8 @@ elif num2 > num1 and num2 > num3:
 else:
     print("The Number",num3,"Is Greater")
 
+
+print()
 # 6. Program To check the no. is Even or Odd:-
 
 # take a no. from user
@@ -122,7 +135,7 @@ else:
 # if no is odd :- The no. is odd
 # if the no is even :- the no. is Even
 
-print("Provide a Number To Check:-")
+print("Provide a Number To Check if it is Even Or Odd:-")
 
 num = int(input("Enter a number:-"))
 
@@ -130,3 +143,45 @@ if num % 2 == 0:
     print("The Number Is Even.")
 else:
     print("The Number Is Odd.")
+
+
+print()
+# 3. Progarm to print natural number/not:-
+
+# Teke a no. from user.
+# Conditions:-
+# check the no.
+# If Natural :- Print the no is natural.
+# if Not:- Print the no is not natural.
+
+print("Enter a no to check Wheather it is natural no or not:-")
+num = int(input("Enter a number: "))
+
+if num >= 1:
+    print("Natural number")
+else:
+    print("Not a natural number")
+
+
+print()
+# 4. Program to print sum of natural number using if-else (for and while loop):-
+
+# take a no. from user
+# conditions:-
+# addition of no provided by user
+# if not natural no :- print not natural no.
+
+print("Provide a natural no. to print sum:-")
+
+num = int(input("Enter a number:-"))
+
+if num >= 1:
+    sum = 0
+
+    for i in range(1, num + 1):
+        sum = sum + i
+
+    print("The Sum of Natural Numbers:-",sum)
+
+else:
+    print("The Number is not natural number")
