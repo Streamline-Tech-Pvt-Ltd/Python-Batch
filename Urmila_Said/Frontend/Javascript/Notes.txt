@@ -799,7 +799,7 @@ console.log(student);
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-# Pop- up Methods :
+# Pop - up Methods :
 
 1. alert() : Displays a message to the user.
 Ex : alert("Welcome to JavaScript!");
@@ -824,3 +824,193 @@ console.log(age);
 | `alert()`   | Show message         | OK                  |
 | `confirm()` | Ask for confirmation | OK / Cancel         |
 | `prompt()`  | Take input           | Input + OK / Cancel |
+
+---------------------------------------------------------------------------------------------------------------------
+
+# HTML DOM 
+The HTML DOM is a programming interface that represents an HTML document as a tree of objects,
+allowing JavaScript to access and manipulate HTML elements, content, attributes, styles, and events.
+
+EX: <!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1 id="title">Hello</h1>
+    <p>Welcome to JavaScript</p>
+</body>
+</html>
+
+# The browser creates a DOM tree like:
+Document
+   |
+   └── html
+       |
+       ├── head
+       |    └── title
+       |
+       └── body
+            |
+            ├── h1
+            |   └── "Hello"
+            |
+            └── p
+                └── "Welcome to JavaScript"
+
+
+# Why do we use DOM?
+JavaScript uses the DOM to perform many operations on a webpage.
+
+1. Access HTML elements
+Ex: document.getElementById("demo");
+
+2. Change HTML content
+Ex: document.getElementById("demo").innerHTML = "Hello";
+
+3. Change HTML attributes
+For example, changing an image:
+document.getElementById("myImage").src = "image.jpg";
+
+4. Change CSS styles
+Ex: document.getElementById("demo").style.color = "red";
+
+5. Add HTML elements
+Ex: const p = document.createElement("p");
+
+6. Remove HTML elements
+Ex: element.remove();
+
+7. Handle events
+Ex: button.addEventListener("click", function() {
+    alert("Button clicked");
+});
+
+8. Create dynamic web pages
+Ex : User clicks button
+        ↓
+JavaScript executes
+        ↓
+DOM changes
+        ↓
+Page content changes
+
+
+# DOM API 
+API = Application Programming Interface
+
+DOM API is a collection of methods and properties provided by the browser that allows JavaScript 
+to interact with HTML documents.
+* It allows JavaScript to:
+Find elements
+Change content
+Change attributes
+Change styles
+Create elements
+Delete elements
+Handle events
+
+
+# DOM Method vs DOM Property
+This is an important interview concept.
+
+* Method: A method performs an action.
+EX: document.getElementById("demo");
+
+* Property: A property represents or accesses a value.
+EX: element.innerHTML
+
+
+# Easy way to remember
+
+| Method               | Property                    |
+| -------------------- | --------------------------- |
+| Performs an action   | Represents/accesses a value |
+| `getElementById()`   | `innerHTML`                 |
+| `querySelector()`    | `style`                     |
+| `createElement()`    | `value`                     |
+| `addEventListener()` | `id`                        |
+
+
+# Accessing HTML Elements
+There are several common ways to select HTML elements.
+Main methods:
+1.getElementById()
+2.getElementsByTagName()
+3.getElementsByClassName()
+4.querySelector()
+5.querySelectorAll()
+
+
+1. getElementById(): This method finds an HTML element using its id.
+Syntax: document.getElementById("id");
+Ex: <p id="demo">Hello</p>
+<script>
+const element = document.getElementById("demo");
+console.log(element);
+</script>
+
+2. getElementsByTagName(): This method finds HTML elements using their tag name.
+Syntax: document.getElementsByTagName("tagname");
+Ex: <p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Third Paragraph</p>
+<script>
+const elements = document.getElementsByTagName("p");
+console.log(elements);
+</script>
+
+3. getElementsByClassName(): This method finds HTML elements using their class name.
+Syntax: document.getElementsByClassName("classname");
+Ex: <p class="intro">Hello World</p>
+<div class="intro">JavaScript</div>
+
+4. querySelector(): querySelector() is a very important DOM method.
+It finds the first element that matches a CSS selector.
+Syntax :document.querySelector("CSS selector");
+
+5. Selecting by Class using querySelector() :
+
+6. querySelector() selects only the first matching element
+Ex: const x = document.querySelector(".demo");
+x.innerHTML = "Hello";
+
+# Why is querySelector() powerful?
+Because it accepts CSS selectors.
+
+
+7. querySelectorAll(): querySelectorAll() finds all elements that match a CSS selector.
+Syntax : document.querySelectorAll("CSS selector");
+
+
+8. Changing an element using querySelectorAll() 
+Ex: const myItems = document.querySelectorAll(".demo");
+myItems[0].innerHTML = "First";
+
+9. Changing ALL elements with querySelectorAll(): If you want to change all matching elements, use a loop.
+Ex: const items = document.querySelectorAll(".demo");
+items.forEach(function(item) {
+    item.innerHTML = "Hello";
+});
+
+
+#  querySelector() vs querySelectorAll()
+| `querySelector()`              | `querySelectorAll()`          |
+| ------------------------------ | ----------------------------- |
+| Returns first matching element | Returns all matching elements |
+| One element                    | Multiple elements             |
+| Uses CSS selector              | Uses CSS selector             |
+| No indexing normally required  | Can use indexing              |
+| `querySelector(".demo")`       | `querySelectorAll(".demo")`   |
+
+
+# All DOM Selection Methods — Quick Chart
+| Method                     | Selects by   | Result                 |
+| -------------------------- | ------------ | ---------------------- |
+| `getElementById()`         | ID           | Single element         |
+| `getElementsByTagName()`   | Tag          | Collection             |
+| `getElementsByClassName()` | Class        | Collection             |
+| `querySelector()`          | CSS selector | First matching element |
+| `querySelectorAll()`       | CSS selector | All matching elements  |
+
+
