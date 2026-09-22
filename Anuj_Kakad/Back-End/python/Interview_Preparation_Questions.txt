@@ -2478,7 +2478,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 16(21/9/26):-
+    Internship Day 16(21/9/26) :-
 
         Python Internship Notes: Day 14 - Functions
 
