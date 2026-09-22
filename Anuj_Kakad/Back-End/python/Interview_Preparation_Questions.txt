@@ -990,7 +990,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 12(11/9/26):-
 
-        Python Internship Notes: Day 10 - Tuple, Set & Frozenset
+        Python Notes: Day 10 - Tuple, Set & Frozenset
 
             1. Introduction to Tuple
 
@@ -1965,7 +1965,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 14(16/9/26):-
 
-        Python Internship Notes: Day 12 - Loops & For Loop
+        Python Notes: Day 12 - Loops & For Loop
 
         1. Introduction to Loops:-
 
@@ -2320,7 +2320,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 15(17/9/26):-
 
-        Python Internship Notes: Day 13 - While Loop & Loop Control Statements
+        Python Notes: Day 13 - While Loop & Loop Control Statements
 
             1. While Loop:-
 
@@ -2478,9 +2478,9 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 16(21/9/26) :-
+    Internship Day 16(21/9/26):-
 
-        Python Internship Notes: Day 14 - Functions
+        Python Notes: Day 14 - Functions
 
             1. Introduction to Functions:-
 
@@ -2731,5 +2731,265 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 | print()       | Displays a value                  |
                 | *args         | Multiple positional arguments     |
                 | **kwargs      | Multiple keyword arguments        |
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 17(22/9/26):-
+
+        Python Notes: Day 15 - Types of Programming Languages & Functions
+
+            1. Types of Programming Languages:-
+                Programming languages can be categorized based on the way programs are structured and executed.
+
+                The main types learned today are:
+                1. Sequential Programming
+                2. Functional Programming
+                3. Object-Oriented Programming (OOP)
+
+                1. Sequential Programming:-
+                    Sequential programming means executing statements one after another in a specific order.
+
+                    Example:
+                        a = 10
+                        b = 20
+                        c = a + b
+                        print(c)
+
+                    Output:
+                        30
+
+                    The statements are executed from top to bottom.
+
+                2. Functional Programming:-
+                    Functional programming is a programming approach where programs are organized around functions.
+                    Functions are used to perform operations on data and produce results.
+
+                    Example:
+                        def add(a, b):
+                            return a + b
+
+                        result = add(10, 20)
+                        print(result)
+
+                    Output:
+                        30
+
+                3. Object-Oriented Programming (OOP)
+                    OOP is a programming approach based on objects and classes.
+                    Objects contain data and functions that work with that data.
+
+                    Example:
+                        class Student:
+                            def display(self):
+                                print("Student")
+
+                        student1 = Student()
+                        student1.display()
+
+                    Output:
+                        Student
+
+            2. Types of Functions in Python:-
+
+                The main types of functions learned are:
+                1. Built-in Functions
+                2. User-Defined Functions
+                3. Lambda Functions
+                4. Recursive Functions
+                5. Higher-Order Functions
+
+                1. Built-in Functions:-
+                    Built-in functions are functions that are already provided by Python.
+                    We can use them directly without defining them ourselves.
+
+                    Examples:
+                        print("Hello")
+                        len("Python")
+                        max(10, 20, 30)
+                        min(10, 20, 30)
+                        sum([10, 20, 30])
+
+                    Some commonly used built-in functions are:
+
+                        * print()
+                        * len()
+                        * type()
+                        * max()
+                        * min()
+                        * sum()
+                        * input()
+                        * range()
+
+                2. User-Defined Functions:-
+                    User-defined functions are functions created by the programmer to perform a specific task.
+                    The def keyword is used to define a user-defined function.
+
+                    Example:
+                        def check_number(num):
+                            if num % 2 == 0:
+                                print("No. Is Even")
+                            else:
+                                print("No. Is Odd")
+
+                        number = int(input("Enter a number: "))
+                        check_number(number)
+
+                    Example Input:
+                        Enter a number: 10
+
+                    Output:
+                    No. Is Even
+
+                3. Lambda Functions:-
+                    A lambda function is a small and anonymous function.
+
+                    * Lambda functions are generally used for short operations.
+                    * They are written using the lambda keyword.
+                    * A lambda function does not require a function name.
+                    * The expression automatically returns its result.
+
+                    Syntax:-
+                        lambda arguments: expression
+
+                    1. Lambda Function Example:-
+
+                        Example:
+                            num = int(input("Enter a number: "))
+
+                            res = lambda num: "Even" if num % 2 == 0 else "Odd"
+
+                            print(res(num))
+
+                        Example Input:
+                            Enter a number: 10
+
+                        Output:
+                            Even
+
+                        Example Input:
+                            Enter a number: 7
+
+                        Output:
+                            Odd
+
+                    2. Difference Between User-Defined Function and Lambda Function:-
+
+                        | Feature        | User-Defined Function             | Lambda Function                                |
+                        |----------------|-----------------------------------|------------------------------------------------|
+                        | Definition     | Created using def                 | Created using lambda                           |
+                        | Function Name  | Usually has a name                | Anonymous                                      |
+                        | Code           | Can contain multiple statements   | Generally used for a single expression         |
+                        | return Keyword | Can use return                    | Result of expression is returned automatically |
+                        | Use            | Used for larger or reusable tasks | Used for small and simple operations           |
+
+                4. Recursive Functions:-
+                    A recursive function is a function that calls itself.
+
+                    Basic Example:-
+                        def countdown(n):
+                            if n > 0:
+                                print(n)
+                                countdown(n - 1)
+
+                        countdown(5)
+
+                    Output:
+                        5
+                        4
+                        3
+                        2
+                        1
+
+                    Note:
+                        A recursive function normally needs a condition that stops the recursion.
+
+                5. Higher-Order Functions:-
+                    A higher-order function is a function that works with other functions.
+                    It can take a function as an argument or return a function.
+
+                    Common higher-order functions in Python include:
+                        * map()
+                        * filter()
+                        * reduce()
+
+                    1. map():-
+                        The map() function applies a function to each element of an iterable.
+
+                        Example:
+                            numbers = [1, 2, 3, 4]
+
+                            result = map(lambda x: x * 2, numbers)
+
+                            print(list(result))
+
+                        Output:
+                            [2, 4, 6, 8]
+
+                    2. filter():-
+                        The filter() function selects elements from an iterable based on a condition.
+
+                        Example:
+                            numbers = [1, 2, 3, 4, 5, 6]
+
+                            result = filter(lambda x: x % 2 == 0, numbers)
+
+                            print(list(result))
+
+                        Output:
+                            [2, 4, 6]
+
+                    3. reduce()
+                        The reduce() function applies a function repeatedly to the elements of an iterable and produces a single result.
+                        reduce() is available in the functools module.
+
+                        Example:
+                            from functools import reduce
+
+                            numbers = [1, 2, 3, 4]
+
+                            result = reduce(lambda x, y: x + y, numbers)
+
+                            print(result)
+
+                        Output:
+                            10
+
+                    4. Difference Between map(), filter() and reduce():-
+
+                        | Function | Purpose                               | Result               |
+                        |----------|---------------------------------------|----------------------|
+                        | map()    | Applies a function to every element   | Transformed elements |
+                        | filter() | Selects elements based on a condition | Filtered elements    |
+                        | reduce() | Combines elements into one result     | Single value         |
+
+            3. Important Points for Day 15:-
+
+                * Sequential programming executes statements one after another.
+                * Functional programming is based mainly around functions.
+                * OOP organizes programs using classes and objects.
+                * Built-in functions are already provided by Python.
+                * User-defined functions are created by the programmer using def.
+                * Lambda functions are small and anonymous functions.
+                * Lambda functions are useful for simple operations.
+                * Recursive functions call themselves.
+                * Higher-order functions work with other functions.
+                * map(), filter(), and reduce() are commonly used higher-order functions.
+                * reduce() is available through the functools module.
+
+            8. Quick Revision:-
+
+                | Concept               | Key Point                                  |
+                |-----------------------|--------------------------------------------|
+                | Sequential            | Executes statements in order               |
+                | Functional            | Uses functions as the main building blocks |
+                | OOP                   | Uses classes and objects                   |
+                | Built-in Function     | Already provided by Python                 |
+                | User-Defined Function | Created by the programmer                  |
+                | Lambda Function       | Small anonymous function                   |
+                | Recursive Function    | Function that calls itself                 |
+                | Higher-Order Function | Works with other functions                 |
+                | map()                 | Transforms elements                        |
+                | filter()              | Selects elements                           |
+                | reduce()              | Produces a single result                   |
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
