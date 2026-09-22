@@ -2478,279 +2478,258 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-Internship Day 16(21/9/26):-
+    Internship Day 16(21/9/26):-
 
-Python Internship Notes: Day 14 - Functions
+        Python Internship Notes: Day 14 - Functions
 
-1. Introduction to Functions
+            1. Introduction to Functions:-
 
-* Definition: A function is a reusable block of code used to perform a specific task.
-* A function is a collection of statements that can be executed whenever the function is called.
-* Functions help reduce code repetition and make programs easier to organize.
+                * Definition: A function is a reusable block of code used to perform a specific task.
+                * A function is a collection of statements that can be executed whenever the function is called.
+                * Functions help reduce code repetition and make programs easier to organize.
 
-2. Defining a Function
+                1. Defining a Function:-
 
-Syntax:
+                    Syntax:
+                        def function_name(parameters):
+                            statements
 
-def function_name(parameters):
-    statements
+                        Example:
+                            def greet():
+                                print("Good morning")
 
-Example:
+                2. Calling a Function:-
+                    A function is executed by calling its name followed by parentheses.
 
-def greet():
-    print("Good morning")
+                    Example:
+                        def greet():
+                            print("Good morning")
 
-3. Calling a Function
+                        greet()
+                        greet()
 
-A function is executed by calling its name followed by parentheses.
+                    Output:
+                        Good morning
+                        Good morning
 
-Example:
+                3. Parameters and Arguments:-
+                    * Parameter: A variable written inside the function definition that receives a value.
+                    * Argument: The actual value passed to a function when calling it.
 
-def greet():
-    print("Good morning")
+                    Example:
+                        def greet(name):
+                            print("Hello", name)
 
-greet()
-greet()
+                        greet("Pallavi")
 
-Output:
-Good morning
-Good morning
+                    Here:
+                        * name is the parameter.
+                        * "Pallavi" is the argument.
 
-4. Parameters and Arguments
+                4. Return Statement:-
+                    The return statement is used to send a value back from a function to the place where the function was called.
 
-* Parameter: A variable written inside the function definition that receives a value.
-* Argument: The actual value passed to a function when calling it.
+                    Example:
+                        def add(a, b):
+                            return a + b
 
-Example:
+                        result = add(10, 20)
+                        print(result)
 
-def greet(name):
-    print("Hello", name)
+                    Output:
+                        30
 
-greet("Pallavi")
+                    Here:
+                        * a and b are parameters.
+                        * 10 and 20 are arguments.
+                        * return a + b sends the result back.
+                        * result stores the returned value.
 
-Here:
-* name is the parameter.
-* "Pallavi" is the argument.
+                6. Difference Between print() and return
 
-5. Return Statement
+                    | Feature                 | print()                        | return                             |
+                    |-------------------------|--------------------------------|------------------------------------|
+                    | Purpose                 | Displays a value on the screen | Sends a value back from a function |
+                    | Can store result        | No                             | Yes                                |
+                    | Used inside function    | Yes                            | Yes                                |
+                    | Ends function execution | No                             | Yes                                |
+                    | Example                 | print(a + b)                   | return a + b                       |
 
-The return statement is used to send a value back from a function to the place where the function was called.
+                    Example using print():
+                        def add(a, b):
+                            print(a + b)
 
-Example:
+                        result = add(10, 20)
+                        print(result)
 
-def add(a, b):
-    return a + b
+                        Output:
+                            30
+                            None
 
-result = add(10, 20)
-print(result)
+                    Example using return():
+                        def add(a, b):
+                            return a + b
 
-Output:
-30
+                        result = add(10, 20)
+                        print(result)
 
-Here:
-* a and b are parameters.
-* 10 and 20 are arguments.
-* return a + b sends the result back.
-* result stores the returned value.
+                        Output:
+                            30
 
-6. Difference Between print() and return
+            2. Types of Function Arguments:-
+                There are five main types of function arguments:
 
-| Feature | print() | return |
-|---|---|---|
-| Purpose | Displays a value on the screen | Sends a value back from a function |
-| Can store result | No | Yes |
-| Used inside function | Yes | Yes |
-| Ends function execution | No | Yes |
-| Example | print(a + b) | return a + b |
+                1. Positional / Required Arguments
+                2. Default Arguments
+                3. Keyword Arguments
+                4. Arbitrary / Variable-Length Arguments (*args)
+                5. Keyword Arbitrary / Variable-Length Keyword Arguments (**kwargs)
 
-Example using print():
+                1. Positional / Required Arguments:-
+                    In positional arguments, values are passed according to the position of the parameters.
 
-def add(a, b):
-    print(a + b)
+                    Example:
+                        def students(name, age, city):
+                            print("Name:", name)
+                            print("Age:", age)
+                            print("City:", city)
 
-result = add(10, 20)
-print(result)
+                        students("Gayatri", 22, "Nashik")
 
-Output:
-30
-None
+                    Output:
+                        Name: Gayatri
+                        Age: 22
+                        City: Nashik
 
-Example using return():
+                    Here:
+                    * "Gayatri" is passed to name.
+                    * 22 is passed to age.
+                    * "Nashik" is passed to city.
 
-def add(a, b):
-    return a + b
+                    The order of the arguments is important.
 
-result = add(10, 20)
-print(result)
+                2. Default Arguments:-
+                    A default argument has a default value assigned to the parameter in the function definition.
 
-Output:
-30
+                    Example:
+                        def greet(name="Sakshi"):
+                            print("Hello", name)
 
-7. Types of Function Arguments
+                        greet()
 
-There are five main types of function arguments:
+                    Output:
+                        Hello Sakshi
 
-1. Positional / Required Arguments
-2. Default Arguments
-3. Keyword Arguments
-4. Arbitrary / Variable-Length Arguments (*args)
-5. Keyword Arbitrary / Variable-Length Keyword Arguments (**kwargs)
+                    If a value is provided, the provided value is used.
 
-8. Positional / Required Arguments
+                    Example:
+                        greet("Pallavi")
 
-In positional arguments, values are passed according to the position of the parameters.
+                    Output:
+                        Hello Pallavi
 
-Example:
+                3. Keyword Arguments:-
+                    In keyword arguments, values are passed using the parameter names.
 
-def students(name, age, city):
-    print("Name:", name)
-    print("Age:", age)
-    print("City:", city)
+                    Example:
+                        def stud(name, city):
+                            print("Name:", name)
+                            print("City:", city)
 
-students("Gayatri", 22, "Nashik")
+                        stud(name="Sayali", city="Pune")
 
-Output:
-Name: Gayatri
-Age: 22
-City: Nashik
+                    Output:
+                        Name: Sayali
+                        City: Pune
 
-Here:
-* "Gayatri" is passed to name.
-* 22 is passed to age.
-* "Nashik" is passed to city.
+                    The order of keyword arguments does not need to match the parameter order.
 
-The order of the arguments is important.
+                4. Arbitrary Arguments (*args):-
+                    *args is used when we do not know in advance how many positional arguments will be passed to a function.
 
-9. Default Arguments
+                    Example:
+                        def num(*args):
+                            print(*args)
 
-A default argument has a default value assigned to the parameter in the function definition.
+                        num(10, 20, 30, 40)
 
-Example:
+                    Output:
+                        10 20 30 40
 
-def greet(name="Sakshi"):
-    print("Hello", name)
+                    * args collects multiple positional arguments.
+                    * Inside the function, args is stored as a tuple.
 
-greet()
+                    Example:
+                        def num(*args):
+                            print(args)
 
-Output:
-Hello Sakshi
+                        num(10, 20, 30, 40)
 
-If a value is provided, the provided value is used.
+                    Output:
+                        (10, 20, 30, 40)
 
-Example:
+                5. Keyword Arbitrary Arguments (**kwargs):-
+                    **kwargs is used when we do not know in advance how many keyword arguments will be passed to a function.
 
-greet("Pallavi")
+                    Example:
+                        def stud(**details):
+                            return details
 
-Output:
-Hello Pallavi
+                        data = stud(name="Om", age=21, city="Nagar", roll="01")
+                        print(data)
 
-10. Keyword Arguments
+                    Output:
 
-In keyword arguments, values are passed using the parameter names.
+                        {'name': 'Om', 'age': 21, 'city': 'Nagar', 'roll': '01'}
 
-Example:
+                    * kwargs collects multiple keyword arguments.
+                    * Inside the function, kwargs is stored as a dictionary.
 
-def stud(name, city):
-    print("Name:", name)
-    print("City:", city)
+            3. Difference Between *args and **kwargs:-
 
-stud(name="Sayali", city="Pune")
+                | Feature        | *args                                     | **kwargs                               |
+                |----------------|-------------------------------------------|----------------------------------------|
+                | Argument Type  | Positional arguments                      | Keyword arguments                      |
+                | Symbol         | *                                         | **                                     |
+                | Stores Data As | Tuple                                     | Dictionary                             |
+                | Example        | func(10, 20, 30)                          | func(name="Om", age=21)                |
+                | Used When      | Number of positional arguments is unknown | Number of keyword arguments is unknown |
 
-Output:
-Name: Sayali
-City: Pune
+            4. Difference Between Positional, Default and Keyword Arguments:-
 
-The order of keyword arguments does not need to match the parameter order.
+                | Type       | How Value is Passed                           | Example                          |
+                |------------|-----------------------------------------------|----------------------------------|
+                | Positional | According to parameter position               | stud("Sayali", "Pune")           |
+                | Default    | Uses predefined value if no value is provided | greet()                          |
+                | Keyword    | Using parameter name                          | stud(name="Sayali", city="Pune") |
 
-11. Arbitrary Arguments (*args)
+            5. Important Points for Day 14:-
 
-*args is used when we do not know in advance how many positional arguments will be passed to a function.
+                * A function is a reusable block of code.
+                * def is used to define a function.
+                * A function is executed by calling it.
+                * Parameters are variables defined in the function.
+                * Arguments are values passed during the function call.
+                * return sends a value back from a function.
+                * print() displays a value but does not return it.
+                * Positional arguments depend on the order of values.
+                * Default arguments have predefined values.
+                * Keyword arguments use parameter names.
+                * *args accepts multiple positional arguments and stores them as a tuple.
+                * **kwargs accepts multiple keyword arguments and stores them as a dictionary.
 
-Example:
+            6. Quick Revision
 
-def num(*args):
-    print(*args)
+                | Concept       | Key Point                         |
+                |---------------|-----------------------------------|
+                | Function      | Reusable block of code            |
+                | def           | Used to define a function         |
+                | Function Call | Executes the function             |
+                | Parameter     | Variable in function definition   |
+                | Argument      | Value passed during function call |
+                | return        | Sends a value back                |
+                | print()       | Displays a value                  |
+                | *args         | Multiple positional arguments     |
+                | **kwargs      | Multiple keyword arguments        |
 
-num(10, 20, 30, 40)
-
-Output:
-10 20 30 40
-
-* args collects multiple positional arguments.
-* Inside the function, args is stored as a tuple.
-
-Example:
-
-def num(*args):
-    print(args)
-
-num(10, 20, 30, 40)
-
-Output:
-(10, 20, 30, 40)
-
-12. Keyword Arbitrary Arguments (**kwargs)
-
-**kwargs is used when we do not know in advance how many keyword arguments will be passed to a function.
-
-Example:
-
-def stud(**details):
-    return details
-
-data = stud(name="Om", age=21, city="Nagar", roll="01")
-print(data)
-
-Output:
-
-{'name': 'Om', 'age': 21, 'city': 'Nagar', 'roll': '01'}
-
-* kwargs collects multiple keyword arguments.
-* Inside the function, kwargs is stored as a dictionary.
-
-13. Difference Between *args and **kwargs
-
-| Feature | *args | **kwargs |
-|---|---|---|
-| Argument Type | Positional arguments | Keyword arguments |
-| Symbol | * | ** |
-| Stores Data As | Tuple | Dictionary |
-| Example | func(10, 20, 30) | func(name="Om", age=21) |
-| Used When | Number of positional arguments is unknown | Number of keyword arguments is unknown |
-
-14. Difference Between Positional, Default and Keyword Arguments
-
-| Type | How Value is Passed | Example |
-|---|---|---|
-| Positional | According to parameter position | stud("Sayali", "Pune") |
-| Default | Uses predefined value if no value is provided | greet() |
-| Keyword | Using parameter name | stud(name="Sayali", city="Pune") |
-
-15. Important Points for Day 14
-
-* A function is a reusable block of code.
-* def is used to define a function.
-* A function is executed by calling it.
-* Parameters are variables defined in the function.
-* Arguments are values passed during the function call.
-* return sends a value back from a function.
-* print() displays a value but does not return it.
-* Positional arguments depend on the order of values.
-* Default arguments have predefined values.
-* Keyword arguments use parameter names.
-* *args accepts multiple positional arguments and stores them as a tuple.
-* **kwargs accepts multiple keyword arguments and stores them as a dictionary.
-
-16. Quick Revision
-
-| Concept | Key Point |
-|---|---|
-| Function | Reusable block of code |
-| def | Used to define a function |
-| Function Call | Executes the function |
-| Parameter | Variable in function definition |
-| Argument | Value passed during function call |
-| return | Sends a value back |
-| print() | Displays a value |
-| *args | Multiple positional arguments |
-| **kwargs | Multiple keyword arguments |
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
