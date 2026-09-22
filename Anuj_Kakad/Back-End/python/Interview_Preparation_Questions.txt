@@ -652,14 +652,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
                             3. String Indexing & Slicing Examples
 
-                            Given: str = "india is my country"
+                                Given: str = "india is my country"
 
-                            * str[1:8] -> Slices from index 1 to 7: outputs "ndia is"
-                            * str[2:15:2] -> Slices from index 2 to 14, stepping by 2: outputs "dasi yc"
-                            * str[::] -> Copies the entire string: outputs "india is my country"
-                            * str[::-1] -> Reverses the entire string: outputs "yrtnuoc ym si aidni"
-                            * str[-1] -> Gets the last character: outputs "y"
-                            * str[:-1] -> Slices from start up to (but excluding) the last character: outputs "india is my countr"
+                                * str[1:8] -> Slices from index 1 to 7: outputs "ndia is"
+                                * str[2:15:2] -> Slices from index 2 to 14, stepping by 2: outputs "dasi yc"
+                                * str[::] -> Copies the entire string: outputs "india is my country"
+                                * str[::-1] -> Reverses the entire string: outputs "yrtnuoc ym si aidni"
+                                * str[-1] -> Gets the last character: outputs "y"
+                                * str[:-1] -> Slices from start up to (but excluding) the last character: outputs "india is my countr"
                 
                 4. Boolean (`bool`):-
                     Generates Output in the form of "Truth Values" i.e., "True" OR "False".
@@ -787,6 +787,172 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     print("Total fruits:", len(fruits))
                     print("Final list:", fruits)
 
+        Interview Questions on day 6, 7 & 8:-
+        
+            1. What are data types in Python?
+                Data types define what kind of data a variable stores, 
+                such as integer, float, string, Boolean, list, tuple, set, or dictionary.
+
+            2. What are the primary data types in Python?
+                The primary data types covered in your learning are:
+
+                int
+                float
+                str
+                bool
+                complex
+
+            3. What are collective data types in Python?
+                Collective data types are used to store multiple values together. 
+                They include list, tuple, set, and dictionary.
+
+            4. What is a list in Python?
+                A list is an ordered and mutable collection used to store multiple values in a single variable. It is written using square brackets [].
+
+                Example:
+
+                numbers = [10, 20, 30, 40]
+
+            5. What does mutable mean in a list?
+                Mutable means that we can change, add, or remove elements from the list after it has been created.
+
+            6. Does a list allow duplicate values?
+                Yes. A list can contain duplicate values.
+
+                numbers = [10, 20, 10, 30]
+
+            7. What is indexing in Python?
+                Indexing is used to access an individual element from a sequence. 
+                Positive indexing starts from 0, while negative indexing starts from -1.
+
+            8. What is negative indexing?
+                Negative indexing accesses elements from right to left. 
+                -1 represents the last element, -2 represents the second-last element, and so on.
+
+            9. What is slicing?
+                Slicing is used to access a range of elements from a sequence.
+
+                Syntax:
+                    list[start:stop]
+
+                The start index is included, while the stop index is excluded.
+
+            10. What is the difference between indexing and slicing?
+                Indexing accesses one element, while slicing accesses multiple elements or a range of elements.
+
+                numbers = [10, 20, 30, 40, 50]
+
+                print(numbers[2])     # 30
+                print(numbers[1:4])   # [20, 30, 40]
+
+            11. What is the use of append() and extend()?
+                append() adds one element to the end of a list, while extend() adds multiple elements from another iterable.
+
+            12. What is the difference between remove() and pop()?
+                remove() removes an element based on its value, 
+                while pop() removes an element based on its index and returns the removed element.
+
+            13. What is a string in Python?
+                A string is an immutable sequence of characters used to store text. 
+                Strings can be written using single quotes or double quotes.
+
+                name = "Anuj"
+
+            14. What does immutable mean in a string?
+                Immutable means that the original string cannot be changed directly after it is created. 
+                Any modification creates a new string.
+
+            15. What is the difference between a list and a string?
+                A list is mutable and can contain different types of elements, 
+                while a string is an immutable sequence of characters.
+
+            16. What is the difference between find() and index()?
+                Both return the position of the first occurrence of a specified value. 
+                The difference is that find() returns -1 if the value is not found, while index() raises a ValueError.
+
+            17. What does isalpha() do?
+                isalpha() returns True if all characters in the string are alphabets. 
+                It returns False if the string contains numbers, spaces, or special characters.
+
+                print("Anuj".isalpha())       # True
+                print("Anuj123".isalpha())    # False
+
+            18. What is the difference between isalpha() and isalnum()?
+                isalpha() accepts only alphabets, whereas isalnum() accepts alphabets and numbers, 
+                but not spaces or special characters.
+
+            19. What does capitalize() do?
+                capitalize() converts the first character of a string to uppercase and the remaining characters to lowercase.
+
+                print("india is my country".capitalize())
+
+                Output:
+
+                India is my country
+
+            20. What does casefold() do?
+                casefold() converts a string to lowercase and is useful for case-insensitive string comparisons.
+
+                print("INDIA".casefold())
+
+                Output:
+
+                india
+
+            21. What do startswith() and endswith() do?
+                startswith() checks whether a string begins with a specified value, 
+                while endswith() checks whether it ends with a specified value. They return True or False.
+
+            22. What is the use of count() in a string?
+                count() returns the number of times a specified substring occurs in a string.
+
+                text = "StreamlineTech"
+                print(text.count("e"))
+
+            23. What does center() do?
+                center() centers a string within a specified width and can use a specified character for padding.
+
+                text = "Python"
+                print(text.center(10, "*"))
+
+            24. What does zfill() do?
+                zfill() adds zeros to the left side of a string until it reaches the specified width.
+
+                text = "123"
+                print(text.zfill(6))
+
+                Output:
+
+                000123
+
+            25. How can you reverse a list or string using slicing?
+                We can use [::-1].
+
+                text = "Python"
+                print(text[::-1])
+
+                Output:
+
+                nohtyP
+
+                The same technique can be used with a list.
+
+            ⭐ Most Important Questions to Prepare First:-
+
+                If your trainer/interviewer asks only a few questions, make sure you can confidently answer these:
+
+                    What are primary and collective data types in Python?
+                    What is a list and why is it called mutable?
+                    What is the difference between positive and negative indexing?
+                    What is slicing?
+                    Difference between append() and extend()?
+                    Difference between remove() and pop()?
+                    What is a string and why is it immutable?
+                    Difference between a list and a string?
+                    Difference between find() and index()?
+                    Difference between isalpha() and isalnum()?
+                    What is the use of startswith() and endswith()?
+                    How do you reverse a string or list using slicing?
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
     Internship Day 11(10/9/26):-
