@@ -35,6 +35,7 @@
 # 2. User-defined function : Created by user.
 # 3. Lambda function : one line function.
 # 4. Recursive function : These are function that call themselves within their definition.
+                        #   A recursive function is a function that calls itself.
 
 # 1. Built-in function :
 
@@ -189,3 +190,4 @@
 #         return 1
 #     return a * power(a, b - 1)
 # print(power(5,5))
+
