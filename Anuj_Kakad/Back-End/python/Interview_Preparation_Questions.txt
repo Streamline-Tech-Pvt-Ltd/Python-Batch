@@ -3658,7 +3658,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 19(23/9/26):-
+    Internship Day 18(23/9/26):-
 
         Python Notes: Day 16 - Higher-Order Functions
 
@@ -3915,7 +3915,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 20(24/9/26):-
+    Internship Day 19(24/9/26):-
 
         Python Notes Day 17:- Recursive Function
 
