@@ -331,3 +331,1151 @@ let result = age >= 18 ? "Adult" : "Minor";
 console.log(result);
 
 --------------------------------------------------------------------------------------------------------------------
+
+# Loops:
+A loop in JavaScript is used to execute the same block of code repeatedly until a particular condition becomes false.
+
+1. for Loop
+The for loop is used when we know how many times we want to execute the code.
+
+* Syntax :
+ for (initialization; condition; increment/decrement) {
+    // code
+}
+
+* Ex: Print 1 to 10
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+* How it works
+let i = 1       → Initialization
+i <= 10         → Condition
+console.log(i)  → Code execution
+i++             → Increment
+
+2. while Loop
+The while loop executes the code as long as the condition is true.
+
+* Syntax :
+while (condition) {
+    // code
+}
+
+* Ex: 
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+3. do...while Loop
+The do...while loop executes the code at least once, even if the condition is false.
+
+* Syntax
+do {
+    // code
+} while (condition);
+
+* EX: 
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+
+# Important Difference
+
+> while checks the condition before execution.
+> do...while checks the condition after execution.
+
+
+# Loop Comparison
+
+| Loop         | Condition Check  | Best Used For                   |
+| ------------ | ---------------- | ------------------------------- |
+| `for`        | Before execution | Known number of repetitions     |
+| `while`      | Before execution | Condition-based repetition      |
+| `do...while` | After execution  | Code must execute at least once |
+
+--------------------------------------------------------------------------------------------------------
+# The Break Statement
+The break statement "jumps out" of loops and switches.
+The break statement terminates the execution of a loop or a switch statement.
+No more loop iterations are executed.
+for (let i = 0; i < 10; i++) {
+  if (i === 3) { 
+break; 
+}
+  text = "The number is " + i + "\n";
+}
+
+# Break in a Switch statement:
+In a switch statement, a break statement will exit the switch block after a matching case is executed.
+Ex-
+let dayNumber = 3;
+let dayName;
+switch (dayNumber) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+console.log(dayName);
+
+
+# The Continue Statement
+The continue statement skips the current iteration in a loop.
+The remaining code in the iteration is skipped and processing moves to the next iteration.
+Ex-
+for (let i = 1; i < 10; i++) {
+  if (i === 3) { 
+continue; 
+}
+  text += "The number is " + i + "\n";
+}
+-------------------------------------------------------------------------------------------------------------------
+
+# String :
+A String is a sequence of characters (letters, numbers, symbols, or spaces) written inside quotes.
+Ex:let name1 = "Urmila";
+let name2 = 'Urmila';
+let name3 = `Urmila`;
+
+1.String Length: The .length property tells us how many characters are present in a string.
+Ex: let name = "Urmila";
+console.log(name.length);
+
+2.string charAt() : charAt() returns the character at a particular index.
+Ex: let name = "Urmila";
+console.log(name.charAt(0));
+
+3.String concat()
+concat() joins two or more strings:
+Ex: 
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+console.log(text3);
+
+4.String slice()
+slice() extracts a part of a string and returns the extracted part in a new string.
+The method takes 2 parameters: start position, and end position (end not included).
+Ex:
+let text = "Apple,Banana,Kiwi";
+let part = text.slice(6,12);
+console.log(part); 
+
+5. Converting to Upper and Lower Case
+A string is converted to upper case with toUpperCase():
+A string is converted to lower case with toLowerCase():
+JavaScript String toUpperCase()
+Ex: 
+let text1 = "Hello World!";
+let text2 = text1.toUpperCase();
+console.log(text2);
+
+JavaScript String toLowerCase()
+let text1 = "Hello World!";       
+ let text2 = text1.toLowerCase();
+console.log(text2);
+
+JavaScript String trim()
+The trim() method removes whitespace from both sides of a string:
+Ex: 
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+console.log(text2);
+
+6.Replace method:
+The replace() method replaces a specified value with another value in a string:
+Ex: 
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "Amazon");
+console.log(newText);
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work.
+
+7. ReplaceAll()
+In 2021, JavaScript introduced the string method replaceAll():
+Ex: 
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+console.log(text);
+
+
+# JavaScript String Methods – Short Chart
+| Method          | Easy Meaning                 | Example                         |
+| --------------- | ---------------------------- | ------------------------------- |
+| `length`        | Count characters             | `text.length`                   |
+| `toUpperCase()` | Convert to CAPITAL letters   | `text.toUpperCase()`            |
+| `toLowerCase()` | Convert to small letters     | `text.toLowerCase()`            |
+| `charAt()`      | Get character at index       | `text.charAt(2)`                |
+| `at()`          | Get character at index       | `text.at(2)`                    |
+| `includes()`    | Check if text exists         | `text.includes("Hi")`           |
+| `startsWith()`  | Check starting text          | `text.startsWith("Hi")`         |
+| `endsWith()`    | Check ending text            | `text.endsWith("Hi")`           |
+| `indexOf()`     | Find first position          | `text.indexOf("a")`             |
+| `lastIndexOf()` | Find last position           | `text.lastIndexOf("a")`         |
+| `slice()`       | Extract part of string       | `text.slice(0, 3)`              |
+| `substring()`   | Extract part of string       | `text.substring(0, 3)`          |
+| `replace()`     | Replace text                 | `text.replace("Hi","Hello")`    |
+| `replaceAll()`  | Replace all matching text    | `text.replaceAll("Hi","Hello")` |
+| `trim()`        | Remove spaces from both ends | `text.trim()`                   |
+| `trimStart()`   | Remove starting spaces       | `text.trimStart()`              |
+| `trimEnd()`     | Remove ending spaces         | `text.trimEnd()`                |
+| `concat()`      | Join strings                 | `text.concat(" World")`         |
+| `split()`       | String → Array               | `text.split(" ")`               |
+| `repeat()`      | Repeat string                | `text.repeat(3)`                |
+| `charCodeAt()`  | Get character Unicode value  | `text.charCodeAt(0)`            |
+
+-------------------------------------------------------------------------------------------------------------------
+# Functions :
+A function in JavaScript is a block of code that performs a specific task.
+We write the function once and can reuse it many times.
+
+Syntax: function functionName() {
+    // code
+}
+
+To run / Call the function :
+functionName();
+
+Ex: function greet(){
+    console.log("Hello World");
+ }
+ greet()
+ greet()
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Parameters :
+A parameter is a variable written inside the function definition. 
+It receives a value when the function is called.
+
+EX: function add(a, b) {
+    return a + b;
+}
+Here, a and b are parameters.
+
+# Arguments :
+An argument is the actual value that we pass to the function when calling it.
+Ex: add(10, 20);
+ Here, 10 & 20 are argument
+
+* Easy Way :
+Parameter → Function बनवताना / defining time
+Argument → Function call करताना / calling time
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+# Global Variable :
+A variable declared outside a function or block is generally called a global variable. 
+It can be accessed from different parts of the program.
+
+EX : let name = "Urmila";
+function greet() {
+    console.log(name);
+}
+greet();
+console.log(name);
+
+# Local Variable
+A variable declared inside a function is called a local variable. It can be accessed only inside that function.
+
+EX :function student() {
+    let marks = 85;
+}
+console.log(marks);
+
+# Difference
+| Global Variable                            | Local Variable                              |
+| ------------------------------------------ | ------------------------------------------- |
+| Declared outside a function                | Declared inside a function                  |
+| Can be accessed from many places           | Accessible only within its scope            |
+| Available for a larger part of the program | Available for a smaller part of the program |
+| Example: `let name = "Urmila";`            | Example: `let marks = 85;`                  |
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Function Types:
+
+1. Arrow Function :
+An Arrow Function is a shorter and simpler way to write a function in JavaScript.
+
+EX :const add = (a, b) => a + b;
+console.log(add(10, 20));
+
+If the function has only one statement that returns a value, we can remove {} and return.
+
+2. Anonymous Function : A function without a name is called an anonymous function.
+Ex: function() {
+    console.log("Hello");
+}
+
+* Normally 
+const greet = function() {
+    console.log("Hello");
+};
+greet();
+
+
+3.Callback Function : A function passed as an argument to another function is called a callback function.
+Ex: function greet(name) {
+    console.log("Hello " + name);
+}
+function processUser(callback) {
+    callback("Urmila");
+}
+processUser(greet);
+
+4. Higher-Order Function
+A function that takes another function as an argument OR returns a function is called a Higher-Order Function.
+Ex: function calculate(a, b, operation) {
+    return operation(a, b);
+}
+function add(x, y) {
+    return x + y;
+}
+console.log(calculate(10, 20, add));
+
+5.Function Hoisting: Function declarations can be called before they are written.
+Ex: greet();
+function greet() {
+    console.log("Hello");
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+# This keyword :
+this is a special keyword in JavaScript that refers to the object/context in which the current function is being executed.
+The value of this is not fixed. It depends mainly on how a function is called.
+
+1. this inside an Object
+When a function is called as an object method, this refers to the object itself.
+Ex: 
+const student = {
+    name: "Urmila",
+    age: 22,
+
+    display: function() {
+        console.log(this.name);
+        console.log(this.age);
+    }
+};
+student.display();
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# Array : An Array is a data structure used to store multiple values in a single variable.
+
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+console.log(fruits);
+
+# Array Methods :
+
+1. length: length returns the number of elements in an array.
+Ex : const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let count = fruits.length;
+console.log(count);
+
+
+2. pop() :removes the last element from an array.
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let removed = fruits.pop();
+console.log(fruits);
+console.log(removed);
+
+3. push() :adds one or more elements to the end of an array.
+Ex :const fruits = ["Apple", "Banana", "Orange"];
+let result = fruits.push("Kiwi");
+console.log(fruits);
+console.log(result);
+
+*push() returns the new length, not the new array.
+
+4. unshift() : adds an element to the beginning of an array.
+Ex: const fruits = ["Apple", "Banana", "Orange"];
+let result = fruits.unshift("Kiwi");
+console.log(fruits);
+console.log(result);
+
+* Remember:
+push()    → add at END
+unshift() → add at BEGINNING
+
+5. shift() : removes the first element.
+Ex: const fruits = ["Apple", "Banana", "Orange"];
+let removed = fruits.shift();
+console.log(fruits);
+console.log(removed);
+
+6. join() :converts an array into a string.
+Ex :const fruits = ["Apple", "Banana", "Orange", "Mango"];
+let result = fruits.join("-");
+console.log(result);
+
+7. sort() :sorts the elements.
+Ex: const fruits = ["Mango", "Apple", "Orange", "Banana"];
+fruits.sort();
+console.log(fruits);
+
+8. reverse(): reverses the order of the array.
+Ex: const fruits = ["Apple", "Banana", "Orange", "Mango"];
+fruits.reverse();
+console.log(fruits);
+
+9. sort() + reverse()
+Ex: fruit = fruits.sort();
+fruit = fruits.reverse();
+console.log(fruits);
+
+10. filter() : 
+const num = [21, 65, 34, 18, 15, 10, 66];
+const age = num.filter(myfunction);
+function myfunction(value) {
+    return value >= 18;
+}
+console.log(age);
+
+# Easy :
+push()      → add at end
+pop()       → remove from end
+
+unshift()   → add at beginning
+shift()     → remove from beginning
+
+map()       → transform
+filter()    → select
+
+delete()    → delete one Map entry
+clear()     → delete all Map entries
+----------------------------------------------------------------------------------------------------------------------------
+
+# Map : A Map is a JavaScript data structure used to store data in key-value pairs.
+
+Ex: const student = new Map();
+student.set("name", "Urmila");
+student.set("age", 22);
+student.set("course", "B.Sc CS");
+console.log(student);
+
+1. set(key, value) :Adds a new key-value pair.
+Ex: student.set("city", "Pune");
+
+2. get(key): Gets the value of a key.
+Ex: console.log(student.get("name"));
+
+3. delete(key): Deletes one key-value pair.
+Ex: student.delete("age");
+console.log(student);
+
+4. clear(): Deletes all key-value pairs
+Ex: student.clear();
+console.log(student);
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+# Pop - up Methods :
+
+1. alert() : Displays a message to the user.
+Ex : alert("Welcome to JavaScript!");
+
+2. confirm() :Displays a message with OK and Cancel buttons.
+Ex : let result = confirm("Do you want to continue?");
+     console.log(result);
+
+OK → true
+Cancel → false
+
+
+3. prompt(): Used to take input from the user.
+EX : let age = prompt("Enter your age:");
+console.log(age);
+
+
+# Short Difference
+
+| Method      | Purpose              | Buttons/Input       |
+| ----------- | -------------------- | ------------------- |
+| `alert()`   | Show message         | OK                  |
+| `confirm()` | Ask for confirmation | OK / Cancel         |
+| `prompt()`  | Take input           | Input + OK / Cancel |
+
+---------------------------------------------------------------------------------------------------------------------
+
+# HTML DOM 
+The HTML DOM is a programming interface that represents an HTML document as a tree of objects,
+allowing JavaScript to access and manipulate HTML elements, content, attributes, styles, and events.
+
+EX: <!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1 id="title">Hello</h1>
+    <p>Welcome to JavaScript</p>
+</body>
+</html>
+
+# The browser creates a DOM tree like:
+Document
+   |
+   └── html
+       |
+       ├── head
+       |    └── title
+       |
+       └── body
+            |
+            ├── h1
+            |   └── "Hello"
+            |
+            └── p
+                └── "Welcome to JavaScript"
+
+
+# Why do we use DOM?
+JavaScript uses the DOM to perform many operations on a webpage.
+
+1. Access HTML elements
+Ex: document.getElementById("demo");
+
+2. Change HTML content
+Ex: document.getElementById("demo").innerHTML = "Hello";
+
+3. Change HTML attributes
+For example, changing an image:
+document.getElementById("myImage").src = "image.jpg";
+
+4. Change CSS styles
+Ex: document.getElementById("demo").style.color = "red";
+
+5. Add HTML elements
+Ex: const p = document.createElement("p");
+
+6. Remove HTML elements
+Ex: element.remove();
+
+7. Handle events
+Ex: button.addEventListener("click", function() {
+    alert("Button clicked");
+});
+
+8. Create dynamic web pages
+Ex : User clicks button
+        ↓
+JavaScript executes
+        ↓
+DOM changes
+        ↓
+Page content changes
+
+
+# DOM API 
+API = Application Programming Interface
+
+DOM API is a collection of methods and properties provided by the browser that allows JavaScript 
+to interact with HTML documents.
+* It allows JavaScript to:
+Find elements
+Change content
+Change attributes
+Change styles
+Create elements
+Delete elements
+Handle events
+
+
+# DOM Method vs DOM Property
+This is an important interview concept.
+
+* Method: A method performs an action.
+EX: document.getElementById("demo");
+
+* Property: A property represents or accesses a value.
+EX: element.innerHTML
+
+
+# Easy way to remember
+
+| Method               | Property                    |
+| -------------------- | --------------------------- |
+| Performs an action   | Represents/accesses a value |
+| `getElementById()`   | `innerHTML`                 |
+| `querySelector()`    | `style`                     |
+| `createElement()`    | `value`                     |
+| `addEventListener()` | `id`                        |
+
+
+# Accessing HTML Elements
+There are several common ways to select HTML elements.
+Main methods:
+1.getElementById()
+2.getElementsByTagName()
+3.getElementsByClassName()
+4.querySelector()
+5.querySelectorAll()
+
+
+1. getElementById(): This method finds an HTML element using its id.
+Syntax: document.getElementById("id");
+Ex: <p id="demo">Hello</p>
+<script>
+const element = document.getElementById("demo");
+console.log(element);
+</script>
+
+2. getElementsByTagName(): This method finds HTML elements using their tag name.
+Syntax: document.getElementsByTagName("tagname");
+Ex: <p>First Paragraph</p>
+<p>Second Paragraph</p>
+<p>Third Paragraph</p>
+<script>
+const elements = document.getElementsByTagName("p");
+console.log(elements);
+</script>
+
+3. getElementsByClassName(): This method finds HTML elements using their class name.
+Syntax: document.getElementsByClassName("classname");
+Ex: <p class="intro">Hello World</p>
+<div class="intro">JavaScript</div>
+
+4. querySelector(): querySelector() is a very important DOM method.
+It finds the first element that matches a CSS selector.
+Syntax :document.querySelector("CSS selector");
+
+5. Selecting by Class using querySelector() :
+
+6. querySelector() selects only the first matching element
+Ex: const x = document.querySelector(".demo");
+x.innerHTML = "Hello";
+
+# Why is querySelector() powerful?
+Because it accepts CSS selectors.
+
+
+7. querySelectorAll(): querySelectorAll() finds all elements that match a CSS selector.
+Syntax : document.querySelectorAll("CSS selector");
+
+
+8. Changing an element using querySelectorAll() 
+Ex: const myItems = document.querySelectorAll(".demo");
+myItems[0].innerHTML = "First";
+
+9. Changing ALL elements with querySelectorAll(): If you want to change all matching elements, use a loop.
+Ex: const items = document.querySelectorAll(".demo");
+items.forEach(function(item) {
+    item.innerHTML = "Hello";
+});
+
+
+#  querySelector() vs querySelectorAll()
+| `querySelector()`              | `querySelectorAll()`          |
+| ------------------------------ | ----------------------------- |
+| Returns first matching element | Returns all matching elements |
+| One element                    | Multiple elements             |
+| Uses CSS selector              | Uses CSS selector             |
+| No indexing normally required  | Can use indexing              |
+| `querySelector(".demo")`       | `querySelectorAll(".demo")`   |
+
+
+# All DOM Selection Methods — Quick Chart
+| Method                     | Selects by   | Result                 |
+| -------------------------- | ------------ | ---------------------- |
+| `getElementById()`         | ID           | Single element         |
+| `getElementsByTagName()`   | Tag          | Collection             |
+| `getElementsByClassName()` | Class        | Collection             |
+| `querySelector()`          | CSS selector | First matching element |
+| `querySelectorAll()`       | CSS selector | All matching elements  |
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+# Changing an attribute 
+Method	Purpose
+getAttribute()	    Get an attribute value
+setAttribute()	    Add/change an attribute
+removeAttribute()	Remove an attribute
+
+
+# Common HTML Attributes
+id
+class
+src
+href
+alt
+title
+value
+placeholder
+type
+disabled
+checked
+
+Changing an Attribute:
+To change the value of an HTML attribute, use this syntax:
+document.getElementById(id).attribute = new value
+Ex-
+Changes the value of the src attribute of an <img> element:
+
+<img id="myImage" src="google.png">
+
+<script>
+document.getElementById("myImage").src = "image_1.jpg";
+</script>
+
+
+1. Changing href : We can change the destination of a link.
+Ex :
+<a id="myLink" href="https://google.com">
+    Open Website
+</a>
+
+<script>
+const link = document.getElementById("myLink");
+link.href = "https://example.com";
+</script>
+
+2. getAttribute()
+The getAttribute() method is used to get the value of an HTML attribute.
+Syntax :
+element.getAttribute("attribute");
+Example
+<img id="photo" src="image.jpg">
+
+<script>
+
+const image = document.getElementById("photo");
+
+console.log(image.getAttribute("src"));
+
+</script>
+
+3. removeAttribute()
+The removeAttribute() method removes an attribute.
+Syntax:
+element.removeAttribute("attribute");
+Ex:
+<input id="username" type="text" disabled>
+
+<script>
+
+const input = document.getElementById("username");
+
+input.removeAttribute("disabled");
+
+</script>
+
+------------------------------------------------------------------------------------------------------------------------
+# HTML DOM - Changing CSS
+
+The HTML DOM allows JavaScript to change the style of HTML elements.
+To change the style of an HTML element, use this 
+syntax: document.getElementById(id).style.property= new style
+
+ex –
+<p id="demo">Hello World!</p>
+
+<script>
+document.getElementById("demo").style.color = "blue";
+</script>
+
+
+# Changing Multiple Styles
+const element = document.getElementById("demo");
+
+element.style.color = "white";
+element.style.backgroundColor = "blue";
+element.style.fontSize = "30px";
+element.style.padding = "20px";
+element.style.borderRadius = "10px";
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# Classlist
+classList is a very important DOM property used to work with the class attribute of an HTML element.
+
+It allows us to:
+Add a class
+Remove a class
+Toggle a class
+Check whether a class exists
+Replace one class with another
+
+Main methods:
+1. add() : add() is used to add a CSS class to an HTML element.
+Syntax: 
+<script>
+element.classList.add("active");
+</script>
+
+2. remove() : remove() is used to remove a CSS class from an HTML element.
+Syntax:
+<script>
+element.classList.remove("active");
+</script>
+
+3. toggle() : toggle() works like an ON/OFF switch.
+              If class exists → it removes the class. 
+              If class does not exist → it adds the class.
+
+Syntax:
+<script>
+element.classList.toggle("active");
+</script>
+
+
+4. contains() : contains() checks whether an element has a particular CSS class.
+Syntax: 
+<script>
+element.classList.contains("active");
+</script>
+
+
+* Example of addclass-
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="text">Hello Students</p>
+
+<button onclick="addClass()">Add Class</button>
+
+<script>
+function addClass() {
+    const text = document.getElementById("text");
+
+    text.classList.add("highlight");
+}
+</script>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Creating HTML Elements
+The document.createElement() method is used to create a new HTML element using JavaScript.
+Syntax: 
+document.createElement("elementName");
+
+<div id="container"></div>
+<script>
+
+const paragraph = document.createElement("p");
+paragraph.textContent = "Hello Students";
+console.log(paragraph);
+
+</script>
+
+
+1.appendChild(): appendChild() adds a newly created element as the last child of another element.
+Ex: 
+<div id="container"></div>
+<script>
+const paragraph = document.createElement("p");
+paragraph.textContent = "Hello Students";
+const container = document.getElementById("container");
+container.appendChild(paragraph);
+</script>
+
+
+2. append(): append() is used to add content or elements at the end of an element.
+It can add:
+•	HTML elements 
+•	Text 
+•	Multiple values
+
+Ex: 
+const container = document.getElementById("container");
+const p = document.createElement("p");
+p.textContent = "Hello";
+container.append(p);
+
+
+3. prepend(): prepend() adds content at the beginning of an element.
+Ex: 
+const p = document.createElement("p");
+p.textContent = "First Student";
+container.prepend(p);
+
+
+4. remove() :remove() removes an element from the DOM.
+Ex: 
+<p id="text">Hello Students</p>
+<button onclick="removeText()">Remove</button>
+<script>
+function removeText() {
+   const text = document.getElementById("text");
+    text.remove();
+}
+</script>
+
+
+5. removeChild()
+removeChild() removes a child element from its parent.
+Ex: 
+<ul id="list">
+    <li id="item">Apple</li>
+</ul>
+<script>
+const list = document.getElementById("list");
+const item = document.getElementById("item");
+list.removeChild(item);
+</script>
+
+----------------------------------------------------------------------------------------------------------------------
+
+# DOM Traversing / Navigation
+
+What is DOM Traversing?
+DOM Traversing is the process of finding and navigating between parent, child, and sibling elements.
+
+1. parentElement: parentElement returns the parent HTML element.
+Ex: 
+<div id="container">
+    <p id="text">Hello</p>
+</div>
+
+<script>
+const text = document.getElementById("text");
+console.log(text.parentElement);
+</script>
+
+2. Children: children returns all child elements of an element.
+Ex: 
+<div id="container">
+    <p>One</p>
+    <p>Two</p>
+    <button>Click</button>
+</div>
+
+<script>
+const container = document.getElementById("container");
+console.log(container.children);
+</script>
+
+3.firstElementChild: Returns the first child element.
+Ex: 
+const container = document.getElementById("container"); 
+console.log(container.firstElementChild);
+
+4. lastElementChild: Returns the last child element.
+console.log(container.lastElementChild);
+
+5.nextElementSibling : Returns the next sibling element.
+Ex: 
+<div>
+    <p id="first">One</p>
+    <p id="second">Two</p>
+    <p>Three</p>
+</div>
+const first = document.getElementById("first");
+console.log(first.nextElementSibling);
+
+6.previousElementSibling : Returns the previous sibling element.
+const second = document.getElementById("second"); console.log(second.previousElementSibling);
+
+--------------------------------------------------------------------------------------------------------------------
+
+# JavaScript Events
+An event is an action that happens in the browser(HTML element).
+
+Examples of events:
+•	An HTML button is clicked
+•	The mouse moves over an element
+•	A keyboard key is pressed
+
+
+# HTML Event Attribute
+
+onclick - The user clicks an HTML element
+onmouseover - The user moves the mouse over an HTML element
+onmouseout -	The user moves the mouse away from an HTML element
+onkeydown - The user pushes a keyboard key
+onload	 - The browser has finished loading the page
+onchange - An HTML element has been changed
+
+# Ways to Add Events
+1.	Inline Event
+Ex: 
+<button onclick="showMsg()">Click Me</button>
+<script>
+    function showMsg() {
+  alert("Button clicked!");
+}
+</script>
+
+2. Using DOM Property
+Ex:
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").onclick = function() {
+  alert("Clicked!");
+};
+</script>
+
+3. addEventListener 
+Ex-
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</script>
+
+
+# Common HTML Events
+
+1.Mouse Events
+Mouse Events happen when the user interacts with the mouse.
+Common Mouse Events:
+•	click
+•	dblclick
+•	mouseover / mouseout
+•	mousemove
+•	mousedown / mouseup
+ex –
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</script>
+
+•	Ex - mouseover / mouseout
+
+<style>
+#box {
+width:200px;
+height:100px;
+padding:16px;
+border:1px solid #000
+}
+</style>
+<body>
+<div id="box">
+Move mouse over this box
+</div>
+
+<script>
+const box = document.getElementById("box");
+
+// Let box listen for mouseover
+box.addEventListener("mouseover", function () {
+  box.innerHTML = "Mouse is over me!";
+});
+
+// Let box listen for mouseout
+box.addEventListener("mouseout", function () {
+  box.innerHTML = "Move is out!";
+});
+</script>
+
+
+2.Keyboard Events
+Keyboard Events happen when the user presses a key on the keyboard:
+•	keydown (key is pressed down)
+•	keyup (key is released)
+
+The keydown Event
+Using event.key
+Example
+Show which key was pressed:
+
+<input id="k" type="text" placeholder="Press a key">
+
+<p id="demo"></p>
+
+<script>
+const k = document.getElementById("k");
+
+// Let k listen for keydown
+k.addEventListener("keydown", function (event) {
+
+// Then display the event.key
+  document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+});
+</script>
+
+Ex – keyup
+  <input id="name" type="text" placeholder="Type something">
+<p id="demo"></p>
+
+<script>
+
+    
+const input = document.getElementById("name");
+
+input.addEventListener("keyup", function() {
+  document.getElementById("demo").innerHTML = input.value;
+});
+</script>
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

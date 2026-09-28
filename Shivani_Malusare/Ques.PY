@@ -1159,3 +1159,2146 @@ And:
 sort()    → Sorts
 reverse() → Reverses
 ```
+
+# 🐍 Python Interview Questions & Answers
+
+## 📚 Topics Covered
+
+* List Properties
+* List Slicing
+* String
+* String Methods
+* Dictionary
+* Tuple
+* Set
+* `if`, `elif`, `else`
+
+---
+
+# 1. List Interview Questions
+
+### Q1. What is a List in Python?
+
+**Answer:**
+
+A list is an ordered and mutable collection of elements in Python. It is used to store multiple values in a single variable.
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits)
+```
+
+**Output:**
+
+```text
+['Apple', 'Banana', 'Mango']
+```
+
+---
+
+### Q2. What are the properties of a List?
+
+**Answer:**
+
+The main properties of a list are:
+
+1. List is ordered.
+2. List is mutable.
+3. List allows duplicate values.
+4. List supports indexing.
+5. List supports slicing.
+6. List can contain different data types.
+7. List can contain another list.
+
+```python
+data = [10, "Python", 20.5, True, 10]
+
+print(data)
+```
+
+---
+
+### Q3. Is a List mutable or immutable?
+
+**Answer:**
+
+A list is **mutable**, which means we can change, add, or remove elements after creating the list.
+
+```python
+numbers = [10, 20, 30]
+
+numbers[1] = 50
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+[10, 50, 30]
+```
+
+---
+
+### Q4. Does a List allow duplicate values?
+
+**Answer:**
+
+Yes, a list allows duplicate values.
+
+```python
+numbers = [10, 20, 10, 30, 20]
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+[10, 20, 10, 30, 20]
+```
+
+---
+
+### Q5. What is List indexing?
+
+**Answer:**
+
+Indexing is used to access individual elements from a list.
+
+Python uses **zero-based indexing**, so the first element has index `0`.
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits[0])
+print(fruits[2])
+```
+
+**Output:**
+
+```text
+Apple
+Mango
+```
+
+---
+
+# 2. List Slicing Interview Questions
+
+### Q6. What is slicing in Python?
+
+**Answer:**
+
+Slicing is used to extract a specific portion of a sequence such as a list, tuple, or string.
+
+### Syntax
+
+```python
+sequence[start:stop:step]
+```
+
+The `stop` index is not included.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+```
+
+**Output:**
+
+```text
+[20, 30, 40]
+```
+
+---
+
+### Q7. What is the difference between indexing and slicing?
+
+**Answer:**
+
+**Indexing** accesses a single element, while **slicing** accesses multiple elements.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[2])      # Indexing
+print(numbers[1:4])    # Slicing
+```
+
+**Output:**
+
+```text
+30
+[20, 30, 40]
+```
+
+---
+
+### Q8. How do you reverse a list using slicing?
+
+**Answer:**
+
+We can use `[::-1]` to reverse a list.
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[::-1])
+```
+
+**Output:**
+
+```text
+[50, 40, 30, 20, 10]
+```
+
+---
+
+# 3. String Interview Questions
+
+### Q9. What is a String in Python?
+
+**Answer:**
+
+A string is a sequence of characters enclosed inside single quotes, double quotes, or triple quotes.
+
+```python
+name = "Shivani"
+
+print(name)
+```
+
+---
+
+### Q10. Is a String mutable or immutable?
+
+**Answer:**
+
+A string is **immutable**. This means we cannot directly change an existing character in a string.
+
+```python
+text = "Python"
+
+# text[0] = "J"   # TypeError
+```
+
+Instead, we create a new string.
+
+```python
+text = "Jython"
+```
+
+---
+
+### Q11. Does a String support indexing and slicing?
+
+**Answer:**
+
+Yes. Strings support both indexing and slicing.
+
+```python
+text = "Python"
+
+print(text[0])
+print(text[1:4])
+```
+
+**Output:**
+
+```text
+P
+yth
+```
+
+---
+
+### Q12. What is negative indexing?
+
+**Answer:**
+
+Negative indexing is used to access elements from the end of a sequence.
+
+```python
+text = "Python"
+
+print(text[-1])
+print(text[-2])
+```
+
+**Output:**
+
+```text
+n
+o
+```
+
+---
+
+# 4. String Methods Interview Questions
+
+### Q13. What is `upper()`?
+
+**Answer:**
+
+`upper()` converts all characters of a string into uppercase.
+
+```python
+text = "python"
+
+print(text.upper())
+```
+
+**Output:**
+
+```text
+PYTHON
+```
+
+---
+
+### Q14. What is `lower()`?
+
+**Answer:**
+
+`lower()` converts all characters of a string into lowercase.
+
+```python
+text = "PYTHON"
+
+print(text.lower())
+```
+
+**Output:**
+
+```text
+python
+```
+
+---
+
+### Q15. What is `capitalize()`?
+
+**Answer:**
+
+`capitalize()` converts the first character of a string to uppercase and the remaining characters to lowercase.
+
+```python
+text = "python programming"
+
+print(text.capitalize())
+```
+
+**Output:**
+
+```text
+Python programming
+```
+
+---
+
+### Q16. What is `title()`?
+
+**Answer:**
+
+`title()` converts the first character of each word into uppercase.
+
+```python
+text = "python programming language"
+
+print(text.title())
+```
+
+**Output:**
+
+```text
+Python Programming Language
+```
+
+---
+
+### Q17. What is `strip()`?
+
+**Answer:**
+
+`strip()` removes leading and trailing whitespace from a string.
+
+```python
+text = "  Python  "
+
+print(text.strip())
+```
+
+**Output:**
+
+```text
+Python
+```
+
+---
+
+### Q18. What is `replace()`?
+
+**Answer:**
+
+`replace()` is used to replace one substring with another substring.
+
+```python
+text = "I like Java"
+
+print(text.replace("Java", "Python"))
+```
+
+**Output:**
+
+```text
+I like Python
+```
+
+---
+
+### Q19. What is `split()`?
+
+**Answer:**
+
+`split()` divides a string into a list.
+
+```python
+text = "Python SQL Java"
+
+print(text.split())
+```
+
+**Output:**
+
+```text
+['Python', 'SQL', 'Java']
+```
+
+---
+
+### Q20. What is `join()`?
+
+**Answer:**
+
+`join()` combines multiple strings into a single string using a specified separator.
+
+```python
+courses = ["Python", "SQL", "Java"]
+
+print(" - ".join(courses))
+```
+
+**Output:**
+
+```text
+Python - SQL - Java
+```
+
+---
+
+### Q21. What is `find()`?
+
+**Answer:**
+
+`find()` returns the index of the first occurrence of a specified substring. If the substring is not found, it returns `-1`.
+
+```python
+text = "Python Programming"
+
+print(text.find("Python"))
+```
+
+**Output:**
+
+```text
+0
+```
+
+---
+
+### Q22. What is `count()`?
+
+**Answer:**
+
+`count()` returns the number of times a specified substring occurs in a string.
+
+```python
+text = "banana"
+
+print(text.count("a"))
+```
+
+**Output:**
+
+```text
+3
+```
+
+---
+
+### Q23. What is the difference between `isalpha()` and `isdigit()`?
+
+**Answer:**
+
+* `isalpha()` checks whether all characters are alphabets.
+* `isdigit()` checks whether all characters are digits.
+
+```python
+print("Python".isalpha())
+print("12345".isdigit())
+```
+
+**Output:**
+
+```text
+True
+True
+```
+
+---
+
+# 5. Dictionary Interview Questions
+
+### Q24. What is a Dictionary in Python?
+
+**Answer:**
+
+A dictionary is a mutable collection that stores data in **key-value pairs**.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21,
+    "course": "Python"
+}
+
+print(student)
+```
+
+---
+
+### Q25. What are the properties of a Dictionary?
+
+**Answer:**
+
+1. Dictionary stores key-value pairs.
+2. Dictionary is mutable.
+3. Keys must be unique.
+4. Duplicate values are allowed.
+5. Dictionary is accessed using keys.
+6. Dictionary can contain different data types.
+7. Dictionary can contain nested dictionaries.
+
+---
+
+### Q26. Are duplicate keys allowed in a Dictionary?
+
+**Answer:**
+
+No. Dictionary keys must be unique.
+
+If the same key is used more than once, the latest value replaces the previous value.
+
+```python
+student = {
+    "name": "Shivani",
+    "name": "Sneha"
+}
+
+print(student)
+```
+
+**Output:**
+
+```text
+{'name': 'Sneha'}
+```
+
+---
+
+### Q27. Are duplicate values allowed in a Dictionary?
+
+**Answer:**
+
+Yes. Duplicate values are allowed.
+
+```python
+student = {
+    "math": 90,
+    "python": 90
+}
+
+print(student)
+```
+
+---
+
+### Q28. How do you access a Dictionary value?
+
+**Answer:**
+
+We can access a value using its key.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student["name"])
+```
+
+**Output:**
+
+```text
+Shivani
+```
+
+---
+
+### Q29. What is the use of `get()`?
+
+**Answer:**
+
+`get()` is used to retrieve the value associated with a key.
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student.get("name"))
+```
+
+**Output:**
+
+```text
+Shivani
+```
+
+---
+
+### Q30. What are common Dictionary methods?
+
+**Answer:**
+
+Common dictionary methods include:
+
+```text
+keys()
+values()
+items()
+get()
+update()
+pop()
+popitem()
+copy()
+clear()
+```
+
+Example:
+
+```python
+student = {
+    "name": "Shivani",
+    "age": 21
+}
+
+print(student.keys())
+print(student.values())
+print(student.items())
+```
+
+---
+
+# 6. Tuple Interview Questions
+
+### Q31. What is a Tuple in Python?
+
+**Answer:**
+
+A tuple is an ordered and immutable collection of elements.
+
+Tuples are generally written using parentheses `()`.
+
+```python
+student = ("Shivani", 21, "Python")
+
+print(student)
+```
+
+---
+
+### Q32. Is a Tuple mutable or immutable?
+
+**Answer:**
+
+A tuple is **immutable**, which means its elements cannot be changed after creation.
+
+```python
+numbers = (10, 20, 30)
+
+# numbers[0] = 50   # TypeError
+```
+
+---
+
+### Q33. Does a Tuple allow duplicate values?
+
+**Answer:**
+
+Yes. A tuple allows duplicate values.
+
+```python
+numbers = (10, 20, 10, 30)
+
+print(numbers)
+```
+
+---
+
+### Q34. What are the main Tuple methods?
+
+**Answer:**
+
+Tuple has two main methods:
+
+* `count()`
+* `index()`
+
+```python
+numbers = (10, 20, 10, 30)
+
+print(numbers.count(10))
+print(numbers.index(20))
+```
+
+---
+
+### Q35. What is Tuple packing?
+
+**Answer:**
+
+Tuple packing means putting multiple values into a single tuple.
+
+```python
+student = "Shivani", 21, "Python"
+
+print(student)
+```
+
+---
+
+### Q36. What is Tuple unpacking?
+
+**Answer:**
+
+Tuple unpacking means assigning tuple elements to separate variables.
+
+```python
+student = ("Shivani", 21, "Python")
+
+name, age, course = student
+
+print(name)
+print(age)
+print(course)
+```
+
+---
+
+# 7. Set Interview Questions
+
+### Q37. What is a Set in Python?
+
+**Answer:**
+
+A set is an unordered and mutable collection of unique elements.
+
+```python
+numbers = {10, 20, 30}
+
+print(numbers)
+```
+
+---
+
+### Q38. Does a Set allow duplicate values?
+
+**Answer:**
+
+No. A set automatically removes duplicate values.
+
+```python
+numbers = {10, 20, 10, 30, 20}
+
+print(numbers)
+```
+
+**Output:**
+
+```text
+{10, 20, 30}
+```
+
+---
+
+### Q39. Does a Set support indexing?
+
+**Answer:**
+
+No. A set does not support indexing because it is unordered.
+
+```python
+numbers = {10, 20, 30}
+
+# print(numbers[0])   # TypeError
+```
+
+---
+
+### Q40. What is the use of `add()`?
+
+**Answer:**
+
+`add()` is used to add one element to a set.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.add(40)
+
+print(numbers)
+```
+
+---
+
+### Q41. What is the difference between `remove()` and `discard()`?
+
+**Answer:**
+
+Both methods remove an element from a set.
+
+* `remove()` raises an error if the element does not exist.
+* `discard()` does not raise an error if the element does not exist.
+
+```python
+numbers = {10, 20, 30}
+
+numbers.remove(20)
+numbers.discard(100)
+```
+
+---
+
+### Q42. What is Set Union?
+
+**Answer:**
+
+Union combines all unique elements from two sets.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)
+```
+
+**Output:**
+
+```text
+{1, 2, 3, 4, 5}
+```
+
+---
+
+### Q43. What is Set Intersection?
+
+**Answer:**
+
+Intersection returns the common elements from two sets.
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a & b)
+```
+
+**Output:**
+
+```text
+{3}
+```
+
+---
+
+# 8. if, elif, else Interview Questions
+
+### Q44. What is a Conditional Statement?
+
+**Answer:**
+
+A conditional statement is used to execute different blocks of code based on whether a condition is `True` or `False`.
+
+Python provides:
+
+```text
+if
+elif
+else
+```
+
+---
+
+### Q45. What is the use of `if`?
+
+**Answer:**
+
+`if` is used to execute a block of code when a condition is true.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible to vote")
+```
+
+---
+
+### Q46. What is the use of `else`?
+
+**Answer:**
+
+`else` executes when the `if` condition is false.
+
+```python
+age = 16
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+
+---
+
+### Q47. What is the use of `elif`?
+
+**Answer:**
+
+`elif` means **else if**. It is used to check another condition when the previous condition is false.
+
+```python
+marks = 75
+
+if marks >= 90:
+    print("A+")
+elif marks >= 75:
+    print("A")
+else:
+    print("B")
+```
+
+**Output:**
+
+```text
+A
+```
+
+---
+
+### Q48. Is `else` compulsory with `if`?
+
+**Answer:**
+
+No. The `else` block is optional.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+### Q49. Can we use multiple `elif` statements?
+
+**Answer:**
+
+Yes. We can use multiple `elif` statements.
+
+```python
+marks = 65
+
+if marks >= 90:
+    print("A+")
+elif marks >= 75:
+    print("A")
+elif marks >= 60:
+    print("B")
+elif marks >= 40:
+    print("C")
+else:
+    print("Fail")
+```
+
+---
+
+### Q50. What is Nested `if`?
+
+**Answer:**
+
+An `if` statement inside another `if` statement is called a **nested if**.
+
+```python
+age = 22
+has_id = True
+
+if age >= 18:
+    if has_id:
+        print("Entry allowed")
+```
+
+---
+
+# ⭐ Most Important Comparison Questions
+
+## Q51. Difference between List and Tuple?
+
+| List              | Tuple             |
+| ----------------- | ----------------- |
+| Mutable           | Immutable         |
+| Uses `[]`         | Uses `()`         |
+| Can be changed    | Cannot be changed |
+| Supports indexing | Supports indexing |
+| Supports slicing  | Supports slicing  |
+
+---
+
+## Q52. Difference between List and Set?
+
+| List              | Set                       |
+| ----------------- | ------------------------- |
+| Ordered           | Unordered                 |
+| Allows duplicates | Does not allow duplicates |
+| Supports indexing | Does not support indexing |
+| Mutable           | Mutable                   |
+| Uses `[]`         | Uses `{}`                 |
+
+---
+
+## Q53. Difference between Tuple and Set?
+
+| Tuple             | Set           |
+| ----------------- | ------------- |
+| Ordered           | Unordered     |
+| Immutable         | Mutable       |
+| Allows duplicates | No duplicates |
+| Supports indexing | No indexing   |
+| Uses `()`         | Uses `{}`     |
+
+---
+
+## Q54. Difference between String and List?
+
+| String                 | List                   |
+| ---------------------- | ---------------------- |
+| Sequence of characters | Collection of elements |
+| Immutable              | Mutable                |
+| Uses quotes            | Uses `[]`              |
+| Supports indexing      | Supports indexing      |
+| Supports slicing       | Supports slicing       |
+
+---
+
+# 🔥 Quick Interview Revision
+
+| Topic      | Key Point                          |
+| ---------- | ---------------------------------- |
+| List       | Ordered + Mutable + Duplicates     |
+| Tuple      | Ordered + Immutable + Duplicates   |
+| Set        | Unordered + Unique                 |
+| Dictionary | Key-Value pairs                    |
+| String     | Immutable sequence of characters   |
+| Indexing   | Access single element              |
+| Slicing    | Access multiple elements           |
+| `if`       | Checks a condition                 |
+| `elif`     | Checks another condition           |
+| `else`     | Executes when conditions are false |
+
+---
+
+#  One-Line Interview Answers
+
+**List:** A list is an ordered and mutable collection that allows duplicate values.
+
+**Tuple:** A tuple is an ordered and immutable collection that allows duplicate values.
+
+**Set:** A set is an unordered collection of unique elements.
+
+**Dictionary:** A dictionary is a mutable collection of key-value pairs with unique keys.
+
+**String:** A string is an immutable sequence of characters.
+
+**Slicing:** Slicing is used to extract a portion of a sequence using `start:stop:step`.
+
+**if:** `if` executes code when a condition is true.
+
+**elif:** `elif` checks another condition when the previous condition is false.
+
+**else:** `else` executes when all preceding conditions are false.
+
+---
+
+# 1. Nested `if`
+
+## Definition
+
+A **nested `if`** is an `if` statement written inside another `if` statement.
+
+## Syntax
+
+```python
+if condition1:
+    if condition2:
+        statement
+```
+
+## Example
+
+```python
+age = 20
+citizen = True
+
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
+```
+
+## Interview Answer
+
+> A nested if is an if statement inside another if statement. It is used to check dependent conditions.
+
+---
+
+# 2. Loops
+
+## Definition
+
+A **loop** is used to execute a block of code repeatedly.
+
+## Types of Loops in Python
+
+1. `for` loop
+2. `while` loop
+
+---
+
+# 3. `for` Loop
+
+## Definition
+
+A `for` loop is used to iterate over a sequence or a range of values.
+
+## Syntax
+
+```python
+for variable in sequence:
+    statement
+```
+
+## Example
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## `range()` Function
+
+### Syntax
+
+```python
+range(start, stop, step)
+```
+
+### Example
+
+```python
+for i in range(2, 11, 2):
+    print(i)
+```
+
+### Output
+
+```text
+2
+4
+6
+8
+10
+```
+
+### Important
+
+The `stop` value is not included.
+
+```python
+range(1, 6)
+```
+
+gives:
+
+```text
+1 2 3 4 5
+```
+
+## Interview Answer
+
+> A for loop is used to iterate over a sequence or range of values.
+
+---
+
+# 4. `while` Loop
+
+## Definition
+
+A `while` loop executes a block of code as long as the given condition is `True`.
+
+## Syntax
+
+```python
+while condition:
+    statement
+```
+
+## Example
+
+```python
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Important
+
+The variable should be updated inside the loop.
+
+```python
+i += 1
+```
+
+Otherwise, the loop may become an **infinite loop**.
+
+## Interview Answer
+
+> A while loop repeatedly executes a block of code as long as the given condition is true.
+
+---
+
+# 5. `for` Loop vs `while` Loop
+
+| `for` Loop                               | `while` Loop                                     |
+| ---------------------------------------- | ------------------------------------------------ |
+| Used to iterate over a sequence or range | Used based on a condition                        |
+| Generally used when iteration is known   | Generally used when condition controls iteration |
+| Uses `for` keyword                       | Uses `while` keyword                             |
+| Example: `for i in range(5)`             | Example: `while i < 5`                           |
+
+## Interview Answer
+
+> We generally use a for loop when iterating over a sequence or known range, and a while loop when execution depends on a condition.
+
+---
+
+# 6. Reverse a Number
+
+## Definition
+
+Reversing a number means arranging its digits from last to first.
+
+### Example
+
+```text
+Input  : 12345
+Output : 54321
+```
+
+## Program
+
+```python
+num = 12345
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+print(reverse)
+```
+
+### Output
+
+```text
+54321
+```
+
+## Logic
+
+```text
+% 10  → Gets the last digit
+// 10 → Removes the last digit
+```
+
+### Example
+
+```text
+12345 % 10 = 5
+1234  % 10 = 4
+123   % 10 = 3
+12    % 10 = 2
+1     % 10 = 1
+```
+
+## Interview Answer
+
+> To reverse a number, I extract the last digit using `% 10` and remove the last digit using `// 10`.
+
+---
+
+# 7. Reverse a String
+
+## Example
+
+```python
+text = "python"
+
+reverse = text[::-1]
+
+print(reverse)
+```
+
+### Output
+
+```text
+nohtyp
+```
+
+## String Slicing
+
+```python
+string[start:stop:step]
+```
+
+For:
+
+```python
+text[::-1]
+```
+
+the step is `-1`, so the string is read from right to left.
+
+## Interview Answer
+
+> We can reverse a string using slicing with a step of `-1`.
+
+---
+
+# 8. Factorial Number
+
+## Definition
+
+The **factorial of a number `n`** is the product of all positive integers from `1` to `n`.
+
+## Formula
+
+```text
+n! = n × (n-1) × (n-2) × ... × 1
+```
+
+### Example
+
+```text
+5! = 5 × 4 × 3 × 2 × 1
+   = 120
+```
+
+### Special Case
+
+```text
+0! = 1
+```
+
+---
+
+## Factorial Using `for` Loop
+
+```python
+num = 5
+fact = 1
+
+for i in range(1, num + 1):
+    fact = fact * i
+
+print(fact)
+```
+
+### Output
+
+```text
+120
+```
+
+---
+
+## Factorial Using `while` Loop
+
+```python
+num = 5
+fact = 1
+i = 1
+
+while i <= num:
+    fact = fact * i
+    i += 1
+
+print(fact)
+```
+
+### Output
+
+```text
+120
+```
+
+## Why `fact = 1`?
+
+Factorial uses multiplication.
+
+If we write:
+
+```python
+fact = 0
+```
+
+then:
+
+```text
+0 × any number = 0
+```
+
+So the result will always be `0`.
+
+## Interview Answer
+
+> Factorial is the product of all positive integers from 1 to a given number. For example, 5 factorial is 120.
+
+---
+
+# 9. Loop Control Statements
+
+Loop control statements change the normal execution of a loop.
+
+## Types
+
+1. `break`
+2. `continue`
+3. `pass`
+
+---
+
+# 10. `break`
+
+## Definition
+
+`break` is used to immediately terminate the loop.
+
+## Example
+
+```python
+for i in range(1, 10):
+
+    if i == 5:
+        break
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+```
+
+When `i` becomes `5`, the loop stops.
+
+## Interview Answer
+
+> Break is used to immediately terminate the loop.
+
+---
+
+# 11. `continue`
+
+## Definition
+
+`continue` skips the current iteration and moves to the next iteration.
+
+## Example
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+4
+5
+```
+
+Here, `3` is skipped.
+
+## Interview Answer
+
+> Continue skips the current iteration and moves to the next iteration.
+
+---
+
+# 12. `pass`
+
+## Definition
+
+`pass` is a null statement. It does nothing.
+
+## Example
+
+```python
+for i in range(5):
+    pass
+```
+
+## Use
+
+`pass` is mainly used as a **placeholder** when code will be written later.
+
+## Interview Answer
+
+> Pass is a null statement used as a placeholder. It does nothing when executed.
+
+---
+
+# 13. `break` vs `continue` vs `pass`
+
+| Statement  | Meaning                     |
+| ---------- | --------------------------- |
+| `break`    | Stops the complete loop     |
+| `continue` | Skips the current iteration |
+| `pass`     | Does nothing                |
+
+### Easy Memory Trick
+
+```text
+break     → STOP
+continue  → SKIP
+pass      → DO NOTHING
+```
+
+---
+
+# 14. Function
+
+## Definition
+
+A **function** is a reusable block of code designed to perform a specific task.
+
+## Syntax
+
+```python
+def function_name():
+    statement
+```
+
+## Example
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+```
+
+### Output
+
+```text
+Hello
+```
+
+## Advantages of Functions
+
+* Code reusability
+* Avoids code repetition
+* Easy debugging
+* Better code organization
+* Improves readability
+
+## Interview Answer
+
+> A function is a reusable block of code that performs a specific task.
+
+---
+
+# 15. Function with Parameters
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```text
+a, b   → Parameters
+10, 20 → Arguments
+```
+
+---
+
+# 16. Parameter vs Argument
+
+## Parameter
+
+A parameter is a variable defined in the function definition.
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+Here:
+
+```text
+a and b → Parameters
+```
+
+## Argument
+
+An argument is the actual value passed during the function call.
+
+```python
+add(10, 20)
+```
+
+Here:
+
+```text
+10 and 20 → Arguments
+```
+
+## Interview Answer
+
+> A parameter is a variable defined in the function definition, while an argument is the actual value passed during the function call.
+
+---
+
+# 17. Five Types of Function Arguments
+
+Python commonly has five types of function arguments:
+
+1. Positional Arguments
+2. Keyword Arguments
+3. Default Arguments
+4. Variable-Length Positional Arguments
+5. Variable-Length Keyword Arguments
+
+---
+
+# 18. Positional Arguments
+
+## Definition
+
+Arguments are passed according to the position of parameters.
+
+## Example
+
+```python
+def student(name, age):
+    print(name)
+    print(age)
+
+student("Shivani", 22)
+```
+
+Here:
+
+```text
+name = Shivani
+age  = 22
+```
+
+The position matters.
+
+## Interview Answer
+
+> Positional arguments are passed according to the position of the parameters.
+
+---
+
+# 19. Keyword Arguments
+
+## Definition
+
+Arguments are passed using parameter names.
+
+## Example
+
+```python
+def student(name, age):
+    print(name)
+    print(age)
+
+student(age=22, name="Shivani")
+```
+
+The order does not matter because parameter names are specified.
+
+## Interview Answer
+
+> Keyword arguments are passed using parameter names.
+
+---
+
+# 20. Default Arguments
+
+## Definition
+
+A default argument has a predefined value.
+
+## Example
+
+```python
+def student(name, city="Pune"):
+    print(name)
+    print(city)
+
+student("Shivani")
+```
+
+### Output
+
+```text
+Shivani
+Pune
+```
+
+If we provide a value:
+
+```python
+student("Shivani", "Mumbai")
+```
+
+### Output
+
+```text
+Shivani
+Mumbai
+```
+
+## Interview Answer
+
+> A default argument has a predefined value that is used when the caller does not provide a value.
+
+---
+
+# 21. Variable-Length Positional Arguments — `*args`
+
+## Definition
+
+`*args` allows a function to accept any number of positional arguments.
+
+## Example
+
+```python
+def add(*numbers):
+    total = 0
+
+    for i in numbers:
+        total = total + i
+
+    return total
+
+print(add(10, 20, 30, 40))
+```
+
+### Output
+
+```text
+100
+```
+
+## Important
+
+```text
+*args → Tuple
+```
+
+## Interview Answer
+
+> `*args` allows a function to accept multiple positional arguments. These arguments are stored as a tuple.
+
+---
+
+# 22. Variable-Length Keyword Arguments — `**kwargs`
+
+## Definition
+
+`**kwargs` allows a function to accept any number of keyword arguments.
+
+## Example
+
+```python
+def student(**details):
+    print(details)
+
+student(name="Shivani", age=22, city="Pune")
+```
+
+### Output
+
+```text
+{'name': 'Shivani', 'age': 22, 'city': 'Pune'}
+```
+
+## Important
+
+```text
+**kwargs → Dictionary
+```
+
+## Interview Answer
+
+> `**kwargs` allows a function to accept multiple keyword arguments. These arguments are stored as a dictionary.
+
+---
+
+# 23. `*args` vs `**kwargs`
+
+| `*args`                       | `**kwargs`                 |
+| ----------------------------- | -------------------------- |
+| Multiple positional arguments | Multiple keyword arguments |
+| Stored as tuple               | Stored as dictionary       |
+| Uses `*`                      | Uses `**`                  |
+
+### Example
+
+```python
+def fun(*args):
+    print(args)
+
+fun(10, 20, 30)
+```
+
+```python
+def fun(**kwargs):
+    print(kwargs)
+
+fun(name="Shivani", age=22)
+```
+
+---
+
+# 24. Python Function Types
+
+## 24.1 Built-in Functions
+
+Built-in functions are functions already provided by Python.
+
+### Examples
+
+```python
+print()
+len()
+type()
+sum()
+max()
+min()
+```
+
+### Example
+
+```python
+numbers = [10, 20, 30]
+
+print(len(numbers))
+```
+
+---
+
+# 25. User-Defined Functions
+
+A user-defined function is created by the programmer using `def`.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+print(add(10, 20))
+```
+
+### Interview Answer
+
+> A user-defined function is a function created by the programmer to perform a specific task.
+
+---
+
+# 26. Lambda Function
+
+## Definition
+
+A lambda function is a small anonymous function created using the `lambda` keyword.
+
+## Syntax
+
+```python
+lambda arguments: expression
+```
+
+## Example
+
+```python
+square = lambda x: x * x
+
+print(square(5))
+```
+
+### Output
+
+```text
+25
+```
+
+## Interview Answer
+
+> A lambda function is a small anonymous function written using the `lambda` keyword.
+
+---
+
+# 27. Recursive Function
+
+## Definition
+
+A recursive function is a function that calls itself.
+
+## Example
+
+```python
+def factorial(n):
+
+    if n == 0:
+        return 1
+
+    return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+### Output
+
+```text
+120
+```
+
+## Important
+
+A recursive function must have a **base condition** to stop recursion.
+
+```python
+if n == 0:
+    return 1
+```
+
+## Interview Answer
+
+> A recursive function is a function that calls itself until a base condition is reached.
+
+---
+
+# 28. Higher-Order Function
+
+## Definition
+
+A higher-order function is a function that takes another function as an argument or returns another function.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+def calculate(fun, a, b):
+    return fun(a, b)
+
+result = calculate(add, 10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```text
+add       → Function passed as argument
+calculate → Higher-order function
+```
+
+## Interview Answer
+
+> A higher-order function is a function that accepts another function as an argument or returns another function.
+
+---
+
+# 29. Function Types Based on Arguments and Return Value
+
+There are four common categories.
+
+## 1. No Argument and No Return Value
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+```
+
+---
+
+## 2. Argument and No Return Value
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+---
+
+## 3. No Argument and With Return Value
+
+```python
+def number():
+    return 10
+
+x = number()
+
+print(x)
+```
+
+---
+
+## 4. Argument and With Return Value
+
+```python
+def add(a, b):
+    return a + b
+
+x = add(10, 20)
+
+print(x)
+```
+
+### Output
+
+```text
+30
+```
+
+---
+
+# 30. `return` Statement
+
+## Definition
+
+`return` is used to send a value from a function back to the caller.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+## `print()` vs `return`
+
+| `print()`                                                | `return`                                   |
+| -------------------------------------------------------- | ------------------------------------------ |
+| Displays the result                                      | Sends the result back                      |
+| Used for output                                          | Used to return a value                     |
+| Cannot normally be used by caller as the returned result | Returned value can be stored in a variable |
+
+---
+

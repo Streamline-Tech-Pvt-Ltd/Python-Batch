@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3.To Check Number is even or odd
+        let num = 3;
+        if (num % 2 == 0){
+            console.log("Number is Even")
+            }
+        else{
+            console.log("Number is Odd");
+        }
+
+        // 2.To Fine largest Number between a and b
+         let a = 20;
+         let b = 30;
+         if (a > b){
+            console.log("largest Number is : "+a);
+         }
+         else if(b > a){
+             console.log("Largest Number is :"+b);
+         }
+         else{
+            console.log("Both Numbers are same");
+         }
+
+         //3.  Grade beased Conditions
+         let marks = 81;
+         if(marks => 80 ){
+            console.log("Grade A");
+         }
+         else if(marks =>60 && marks <=79){
+            console.log("Grade B");
+         }        
+         else if(marks =>40 && marks <=59){
+            console.log("Grade C");
+         }
+         else if(marks < 35){
+            console.log("Fail");
+         }
+         else{
+            console.log("Also Pass");
+         }
+         // To Check login Credential
+         let username = "admin";
+         let password = "1234";
+         if(password === "1234" && username === "admin"){
+            console.log("Login Succesfuly");
+         }
+         else{
+            console.log("Invalid credentials")
+         }
+         // Compares two number x  and y using ternary
+         let x = 2;
+         let y = 3;
+         let compare=(x>y) ? "x is Greater" : (y > x) ? "y is greater":"Both are same";
+         console.log(compare);
+         
+// Outputs : 
+// 1.Number is Odd
+// 1.html:26 Largest Number is :30
+// 1.html:35 Grade A
+// 1.html:53 Login Succesfuly
+// 1.html:62 y is greater
+    </script>
+</body>
+</html>
+
