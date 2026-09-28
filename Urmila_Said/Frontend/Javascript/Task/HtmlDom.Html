@@ -5,6 +5,26 @@
     <title>JavaScript DOM Practice</title>
 </head>
 
+<style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .active {
+        background-color: green;
+        color: white;
+        padding: 20px;
+    }
+
+        
+        
+</style>
+
+
+
 <body>
 
     <!-- <h1 id="heading">Hello</h1>
@@ -32,13 +52,56 @@
 
     <!-- <p id="Paragraph">Hello, I am learning JavaScript!</p> -->
     
-    <div class ="container">
+    
 
-        <p id="p">Hello World</p>
+    <!-- classList -->
+    
+    <!-- <p id="text">Hello World</p>
+
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button> -->
+
+    <!-- <p id="text">Hello Students</p>
+    <button onclick="toggleClass()">Toggle</button> -->
+
+    <!-- document.createElement("elementName");
+    <div id="container"></div> -->
+
+    <!-- <div id="container"></div> -->
+
+    <!-- <p id="text">Hello Students</p>
+<button onclick="removeText()">Remove</button> -->
+
+<!-- <ul id="list">
+    <li id="item">Apple</li>
+</ul> -->
 
 
-    </div>
-     
+<!-- <div id="container">
+    <p id="text">Hello</p>
+</div> -->
+
+<!-- <div id="container">
+    <p>One</p>
+    <p>Two</p>
+    <button>Click</button>
+</div> -->
+
+<!-- <div>
+    <p id="first">One</p>
+    <p id="second">Two</p>
+    <p>Three</p>
+</div> -->
+
+<!-- <button onclick="showMsg()">Click Me</button> -->
+
+
+<!-- <button id="btn">Click</button> -->
+
+<!-- <button id="btn">Click</button> -->
+
+<button id="btn">Click</button>
+
 
     <script>
 
@@ -110,12 +173,139 @@
         // Paragraph.style.padding = "20px";
         // Paragraph.style.borderRadius = "10px";
 
+        // class list
+        // 1.addClass
+        // function addClass() {
+        // const text = document.getElementById("text");
 
-        const p = document.getElementById("p")
-        p.textContent = "First Student";
-        container.appendChild(p);
+        // text.classList.add("highlight");
+        // }
+
+        // 2.removeclass
+        // function removeclass() {
+        // const text = document.getElementById("text");
+    
+        // text.classList.remove("highlight");
+        // }
+
+
+        // 3.toggleclass:
+        // function toggleClass() {
+        //     const text = document.getElementById("text");
+        //     text.classList.toggle("active");
+        // }
+
+        // Creating HTML Elements
+        // const paragraph = document.createElement("p");
+        // paragraph.textContent = "Hello Students";
+        // console.log(paragraph);
+
+        // 1.Appendchild
+        // const paragraph = document.createElement("p");
+        // paragraph.textContent = "Hello Students";
+        // const container = document.getElementById("container");
+        // container.appendChild(paragraph);
+
+        // 2.append
+        // const container = document.getElementById("container");
+        // const p = document.createElement("p");
+        // p.textContent = "Hello";
+        // container.append(p);
+
+        // 3. prepend()
+        //  const p = document.createElement("p");
+        //  p.textContent = "First Student";
+        //  container.prepend(p);
+
+        // 4.remove
+        // function removeText() {
+        //     const text = document.getElementById("text");
+        //     text.remove();
+        // }
+
+        // 5. removeChild()
+        // const list = document.getElementById("list");
+        // const item = document.getElementById("item");
+        // list.removeChild(item);
+
+        // DOM Traversing / Navigation
+
+        // 1.parentElement
+        // const text = document.getElementById("text");
+        // console.log(text.parentElement);
+
+        // 2.children
+        // const container = document.getElementById("container");
+        // console.log(container.children);
+
+
+        // 3.firstElementChild
+        // const container = document.getElementById("container");
+        //  console.log(container.firstElementChild);
+
+        // 4.lastElementChild:
+        // const container = document.getElementById("container");
+        // console.log(container.lastElementChild);
+
+        // 5.nextElementSibling
+        // const first = document.getElementById("first");
+        // console.log(first.nextElementSibling);
+
+        // 6.previousElementSibling 
+        // const second = document.getElementById("second");
+        // console.log(second.previousElementSibling);
+
+
+        // JavaScript Events
+
+        // 1.	Inline Event
+            // function showMsg() {
+            //     alert("Button clicked!");
+            // }
+
+        // 2. Using DOM Property
+        // document.getElementById("btn").onclick = function() {
+        //     alert("Clicked!");
+        // };
+
+
+        // 3. addEventListener 
+        // document.getElementById("btn").addEventListener("click", function() {
+        //     alert("Button clicked!");
+        // });
+
+        // Common HTML Events
+         
+        // 1.Mouse Events
+        // document.getElementById("btn").addEventListener("click", function() {
+        //     alert("Button clicked!");
+        // });
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
+
+
+
+        
 
 
 
