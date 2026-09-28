@@ -4086,239 +4086,319 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-Internship Day 20:-
+    Internship Day 20(28/9/26):-
 
-    Python Internship Notes: OOP – Class, Object, Constructor & OOP Pillars
+        Python Internship Notes Day 18:- OOP – Class, Object, Constructor & OOP Pillars
 
-        1. Object:-
-            An object is an **instance of a class**.
+            1. Object:-
+                An object is an **instance of a class**.
 
-            An object can communicate with:
-            - Attributes → Data/Properties
-            - Methods → Functions/Behaviour
-
-            Example:
-                l1 = Laptop()
-
-            Here, `l1` is an object of the `Laptop` class.
-
-        2. Class:-
-            A class is a **blueprint for creating objects**.
-
-            A class contains:
-            - Attributes → Data/Properties
-            - Methods → Functions/Behaviour
-
-            Example:
-                class Laptop:
-                    name = "HP"
-                    color = "Black"
-                    shape = "Rectangle"
-
-                    def Programming(self):
-                        return "Demo"
-
-                    def Gaming(self):
-                        return None
-
-            Here:
-                - `Laptop` → Class
-                - `name`, `color`, `shape` → Attributes
-                - `Programming()`, `Gaming()` → Methods
-
-        3. Class and Object Example:-
-
-            Ex:-
-                class Laptop:
-                    name = "HP"
-                    color = "Black"
-                    shape = "Rectangle"
-
-                    def Programming(self):
-                        return "Demo"
-
-                    def Gaming(self):
-                        return None
-
-                l1 = Laptop()
-
-                print(l1.name)
-                print(l1.Programming())
-
-            Output:
-                HP
-                Demo
-
-        4. Object Reference:-
-            When an object is created, a variable can be used to **refer to that object**.
-
-            Example:
-                l1 = Laptop()
-
-            Here:
-                - `Laptop()` → Creates an object
-                - `l1` → Reference to that object
-
-        5. Constructor:-
-            A constructor is a **special method** that is called automatically when an object is created.
-
-            Python uses:
-                __init__()
-
-            Its main purpose is to **initialize object attributes**.
-
-            Syntax:
-                def __init__(self):
-                    # Initialization
-
-        6. Constructor with Parameter:-
-            A constructor can accept parameters to initialize object data.
-
-            Example:
-                class Laptop:
-                    def __init__(self, name):
-                        self.name = name
-
-                    def Programming(self):
-                        return f"My name is {self.name}"
-
-                    def Gaming(self):
-                        return None
-
-                l1 = Laptop("Raj")
-
-                print(l1.Programming())
-
-            Output:
-                My name is Raj
-
-            Here:
-                - `__init__()` → Constructor
-                - `name` → Parameter
-                - `self.name` → Object attribute
-                - `"Raj"` → Argument
-                - `l1` → Object/reference
-
-        7. self Parameter:-
-            `self` refers to the **current object**.
-
-            It is used to access the attributes and methods of the current object.
-
-            Example:
-                class Laptop:
-                    def __init__(self, name):
-                        self.name = name
-
-                    def Programming(self):
-                        return f"My name is {self.name}"
-
-                l1 = Laptop("Raj")
-
-            Here:
-                `self.name` → Refers to the `name` of the current object.
-
-        8. Instance Attribute:-
-            An attribute created using `self` is called an **instance attribute**.
-
-            Example:
-                class Laptop:
-                    def __init__(self, name):
-                        self.name = name
-
-                l1 = Laptop("Raj")
-                l2 = Laptop("Anuj")
-
-            Here:
-                - `l1.name` → Raj
-                - `l2.name` → Anuj
-
-            Each object has its own value.
-
-        9. Four Major Pillars of OOP:-
-            The four major pillars of Object-Oriented Programming are:
-
-            1. Inheritance
-            2. Abstraction
-            3. Polymorphism
-            4. Encapsulation
-
-            1. Inheritance
-                Inheritance allows one class to **inherit properties and methods from another class**.
-
-                It helps in code reusability.
-
-                Basic example:
-                    class Parent:
-                        def show(self):
-                            print("Parent")
-
-                    class Child(Parent):
-                        pass
-
-                    c1 = Child()
-                    c1.show()
-
-            2. Abstraction
-                Abstraction means **hiding unnecessary implementation details** and showing only the required information.
+                An object can communicate with:
+                - Attributes → Data/Properties
+                - Methods → Functions/Behaviour
 
                 Example:
-                When we use a mobile phone, we use buttons/apps without knowing the complete internal working.
+                    l1 = Laptop()
 
-            3. Encapsulation
-                Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+                Here, `l1` is an object of the `Laptop` class.
+
+            2. Class:-
+                A class is a **blueprint for creating objects**.
+
+                A class contains:
+                - Attributes → Data/Properties
+                - Methods → Functions/Behaviour
 
                 Example:
-                    class Student:
+                    class Laptop:
+                        name = "HP"
+                        color = "Black"
+                        shape = "Rectangle"
+
+                        def Programming(self):
+                            return "Demo"
+
+                        def Gaming(self):
+                            return None
+
+                Here:
+                    - `Laptop` → Class
+                    - `name`, `color`, `shape` → Attributes
+                    - `Programming()`, `Gaming()` → Methods
+
+            3. Class and Object Example:-
+
+                Ex:-
+                    class Laptop:
+                        name = "HP"
+                        color = "Black"
+                        shape = "Rectangle"
+
+                        def Programming(self):
+                            return "Demo"
+
+                        def Gaming(self):
+                            return None
+
+                    l1 = Laptop()
+
+                    print(l1.name)
+                    print(l1.Programming())
+
+                Output:
+                    HP
+                    Demo
+
+            4. Object Reference:-
+                When an object is created, a variable can be used to **refer to that object**.
+
+                Example:
+                    l1 = Laptop()
+
+                Here:
+                    - `Laptop()` → Creates an object
+                    - `l1` → Reference to that object
+
+            5. Constructor:-
+                A constructor is a **special method** that is called automatically when an object is created.
+
+                Python uses:
+                    __init__()
+
+                Its main purpose is to **initialize object attributes**.
+
+                Syntax:
+                    def __init__(self):
+                        # Initialization
+
+            6. Constructor with Parameter:-
+                A constructor can accept parameters to initialize object data.
+
+                Example:
+                    class Laptop:
                         def __init__(self, name):
                             self.name = name
 
-                Here, data and methods can be grouped inside the class.
+                        def Programming(self):
+                            return f"My name is {self.name}"
 
-            4. Polymorphism
-                Polymorphism means **one name/interface can have different behaviours** depending on the object or situation.
+                        def Gaming(self):
+                            return None
+
+                    l1 = Laptop("Raj")
+
+                    print(l1.Programming())
+
+                Output:
+                    My name is Raj
+
+                Here:
+                    - `__init__()` → Constructor
+                    - `name` → Parameter
+                    - `self.name` → Object attribute
+                    - `"Raj"` → Argument
+                    - `l1` → Object/reference
+
+            7. self Parameter:-
+                `self` refers to the **current object**.
+
+                It is used to access the attributes and methods of the current object.
 
                 Example:
-                The same method name can perform different operations in different classes.
+                    class Laptop:
+                        def __init__(self, name):
+                            self.name = name
 
-            5. Encryption
-                Encryption is the process of converting readable data into an **unreadable form** to protect information.
+                        def Programming(self):
+                            return f"My name is {self.name}"
+
+                    l1 = Laptop("Raj")
+
+                Here:
+                    `self.name` → Refers to the `name` of the current object.
+
+            8. Instance Attribute:-
+                An attribute created using `self` is called an **instance attribute**.
 
                 Example:
-                    Original:
-                    Admin@123
+                    class Laptop:
+                        def __init__(self, name):
+                            self.name = name
 
-                    Encrypted:
-                    hfbmnjhfgd456795tyh
+                    l1 = Laptop("Raj")
+                    l2 = Laptop("Anuj")
 
-                Decryption converts the encrypted data back into the original readable form.
+                Here:
+                    - `l1.name` → Raj
+                    - `l2.name` → Anuj
 
-                    Encrypted:
-                    hfbmnjhfgd456795tyh
+                Each object has its own value.
 
-                    Decrypted:
-                    Admin@123
+            9. Four Major Pillars of OOP:-
+                The four major pillars of Object-Oriented Programming are:
 
-        10. f-string:-
-            An f-string is used to insert variables directly inside a string.
+                1. Inheritance
+                2. Abstraction
+                3. Polymorphism
+                4. Encapsulation
 
-            Example:
-                name = "Streamline Tech"
+                1. Inheritance
+                    Inheritance allows one class to **inherit properties and methods from another class**.
 
-                print(f"My company name is: {name}")
+                    It helps in code reusability.
 
-            Output:
-                My company name is: Streamline Tech
+                    Basic example:
+                        class Parent:
+                            def show(self):
+                                print("Parent")
 
-        Quick Revision:-
-            Class → Blueprint for creating objects
-            Object → Instance of a class
-            Object Reference → Variable referring to an object
-            Attribute → Data/Property of an object
-            Method → Function inside a class
-            Constructor → __init__()
-            self → Refers to the current object
-            Inheritance → Code reusability
-            Abstraction → Hides unnecessary details
-            Encapsulation → Binds and controls data
-            Polymorphism → Different behaviours
-            Encryption → Converts readable data into protected/unreadable form
+                        class Child(Parent):
+                            pass
+
+                        c1 = Child()
+                        c1.show()
+
+                2. Abstraction
+                    Abstraction means **hiding unnecessary implementation details** and showing only the required information.
+
+                    Example:
+                    When we use a mobile phone, we use buttons/apps without knowing the complete internal working.
+
+                3. Encapsulation
+                    Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+
+                    Example:
+                        class Student:
+                            def __init__(self, name):
+                                self.name = name
+
+                    Here, data and methods can be grouped inside the class.
+
+                4. Polymorphism
+                    Polymorphism means **one name/interface can have different behaviours** depending on the object or situation.
+
+                    Example:
+                    The same method name can perform different operations in different classes.
+
+                5. Encryption
+                    Encryption is the process of converting readable data into an **unreadable form** to protect information.
+
+                    Example:
+                        Original:
+                        Admin@123
+
+                        Encrypted:
+                        hfbmnjhfgd456795tyh
+
+                    Decryption converts the encrypted data back into the original readable form.
+
+                        Encrypted:
+                        hfbmnjhfgd456795tyh
+
+                        Decrypted:
+                        Admin@123
+
+            10. f-string:-
+                An f-string is used to insert variables directly inside a string.
+
+                Example:
+                    name = "Streamline Tech"
+
+                    print(f"My company name is: {name}")
+
+                Output:
+                    My company name is: Streamline Tech
+
+            Quick Revision:-
+                Class → Blueprint for creating objects
+                Object → Instance of a class
+                Object Reference → Variable referring to an object
+                Attribute → Data/Property of an object
+                Method → Function inside a class
+                Constructor → __init__()
+                self → Refers to the current object
+                Inheritance → Code reusability
+                Abstraction → Hides unnecessary details
+                Encapsulation → Binds and controls data
+                Polymorphism → Different behaviours
+                Encryption → Converts readable data into protected/unreadable form
+
+        Interview Questions On Day 18:- Class, Object, Object Reference, Constructor, self & OOP Pillars
+
+            1. What is OOP?
+                OOP stands for Object-Oriented Programming. It is a programming approach based on classes and objects.
+
+            2. What is a Class?
+                A class is a blueprint for creating objects. It contains attributes and methods.
+
+            3. What is an Object?
+                An object is an instance of a class.
+
+            4. What is the difference between Class and Object?
+                Class → Blueprint.
+                Object → Instance created from that blueprint.
+
+            5. What are Attributes and Methods?
+                Attributes → Data/properties of an object.
+                Methods → Functions/behaviour of an object.
+
+            6. What is an Object Reference?
+                An object reference is a variable that refers to an object.
+
+                l1 = Laptop()
+
+                Here, l1 is the reference to the Laptop object.
+
+            7. What is a Constructor in Python?
+                A constructor is a special method that is automatically called when an object is created.
+
+                def __init__(self):
+                    pass
+
+            8. Why is __init__() used?
+                It is mainly used to initialize the attributes of an object when the object is created.
+
+            9. What is self in Python?
+                self refers to the current object. It is used to access the object's attributes and methods.
+
+            10. What is the difference between name and self.name?
+                name → Usually a local parameter/variable.
+                self.name → Attribute belonging to the current object.
+
+            11. What are the four major pillars of OOP?
+                The four pillars are:
+                Inheritance
+                Abstraction
+                Polymorphism
+                Encapsulation
+
+            12. What is Inheritance?
+                Inheritance allows a child class to use properties and methods of a parent class. It helps with code reusability.
+
+            13. What is Encapsulation?
+                Encapsulation means binding data and methods together inside a class and controlling access to the data.
+
+            14. What is Abstraction?
+                Abstraction means hiding unnecessary implementation details and showing only the required information.
+
+            15. What is Polymorphism?
+                Polymorphism means one interface/name can have different behaviours depending on the object or situation.
+
+            16. What is the difference between Encapsulation and Abstraction?
+                Encapsulation → Focuses on bundling and controlling data.
+                Abstraction → Focuses on hiding unnecessary details.
+
+            17. Can a class have multiple objects?
+                Yes. We can create multiple objects from the same class, and each object can have different attribute values.
+
+            18. What is an Instance Attribute?
+                An attribute created using self is called an instance attribute.
+                self.name = name
+
+            19. What happens when we create an object?
+                Python creates the object and automatically calls the __init__() constructor if it is defined.
+
+            20.What is Encryption?
+                Encryption converts readable data into an unreadable/protected form to protect information. Decryption converts it back.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
