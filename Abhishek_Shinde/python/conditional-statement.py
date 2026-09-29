@@ -185,3 +185,11 @@ if num >= 1:
 
 else:
     print("The Number is not natural number")
+
+
+    class math:
+        @statimethod
+        def add(a,b):
+            return a+b
+        print (math.add(2,3))
+    
