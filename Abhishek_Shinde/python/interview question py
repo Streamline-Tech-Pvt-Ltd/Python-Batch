@@ -2615,7 +2615,7 @@ print(deep)     # [[1, 2], [3, 4]]
                         def greet(name):
                             print("Hello", name)
 
-                        greet("Pallavi")
+                        greet("Pallavi
 
                     Here:
                         * name is the parameter.
@@ -2817,3 +2817,202 @@ print(deep)     # [[1, 2], [3, 4]]
 
                 | Concept       | Key Point                         |
   
+
+  Python Internship Notes: Types of Attributes, Methods & Decorators
+
+            1. Types of Attributes
+            Attributes are variables that store data related to a class or object.
+
+            There are mainly 3 types:
+            1. Instance Attribute
+            2. Class Attribute
+            3. Local Attribute
+
+            2. Instance Attribute
+            An instance attribute belongs to a particular object.
+
+            It is usually created using `self` inside the `__init__()` method.
+
+            Example:
+            class Intern:
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
+
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+            print(i1.name)
+
+            Here:
+            - `self.name`
+            - `self.domain`
+            - `self.email`
+
+            are instance attributes.
+
+            Each object can have different values.
+
+            3. Class Attribute
+            A class attribute belongs to the class and is shared by its objects.
+
+            Example:
+            class Intern:
+                password = "Admin@123"
+
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
+
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+            print(i1.password)
+
+            Here, `password` is a class attribute.
+
+            4. Local Attribute
+            A local variable/attribute is created inside a method and is available only within that method.
+
+            Example:
+            class Intern:
+                name = "streamlinetech"
+
+                def registration(self):
+                    return f"{self.name} It is an IT company"
+
+            i1 = Intern()
+            print(i1.registration())
+
+            5. Difference Between Instance and Class Attribute
+
+            | Instance Attribute | Class Attribute |
+            |---|---|
+            | Belongs to an object | Belongs to the class |
+            | Created using `self` | Created directly inside class |
+            | Can have different values for each object | Common/shared value |
+            | Example: `self.name` | Example: `password` |
+
+            6. Types of Methods
+            There are mainly 3 types of methods:
+
+            1. Instance Method
+            2. Class Method
+            3. Static Method
+
+            7. Instance Method
+            An instance method works with the data of an object.
+
+            It uses `self` as the first parameter.
+
+            Example:
+            class Intern:
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
+
+                def registration(self):
+                    return f"My domain is {self.domain}"
+
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+            print(i1.registration())
+
+            Here, `registration()` is an instance method.
+
+            8. Class Method
+            A class method works with class-level data.
+
+            It uses `cls` as the first parameter and uses the `@classmethod` decorator.
+
+            Example:
+            class Car:
+                total_cars = 0
+
+                def __init__(self, model):
+                    self.model = model
+                    Car.total_cars += 1
+
+                @classmethod
+                def car_count(cls):
+                    return f"Total cars = {cls.total_cars}"
+
+            print(Car.car_count())
+
+            9. Static Method
+            A static method does not need `self` or `cls`.
+
+            It is defined using the `@staticmethod` decorator.
+
+            Example:
+            class Math:
+                @staticmethod
+                def add(a, b):
+                    return a + b
+
+            print(Math.add(2, 4))
+
+            Output:
+            6
+
+            10. Difference Between Types of Methods
+
+            | Instance Method | Class Method | Static Method |
+            |---|---|---|
+            | Uses `self` | Uses `cls` | No `self` or `cls` |
+            | Works with object data | Works with class data | Independent of object/class data |
+            | Uses object | Uses class | Can be called using class |
+            | No special decorator required | Uses `@classmethod` | Uses `@staticmethod` |
+
+            11. Decorator
+            A decorator is used with `@` before a function or method.
+
+            Decorators can modify or provide special behaviour to a function/method.
+
+            In today's OOP topic, we used:
+
+            @classmethod
+            @staticmethod
+
+            12. @classmethod Decorator
+            `@classmethod` converts a method into a class method.
+
+            It receives `cls` as the first parameter.
+
+            Example:
+            class Car:
+                total_cars = 0
+
+                @classmethod
+                def car_count(cls):
+                    return cls.total_cars
+
+            13. @staticmethod Decorator
+            `@staticmethod` converts a method into a static method.
+
+            It does not require `self` or `cls`.
+
+            Example:
+            class Math:
+                @staticmethod
+                def add(a, b):
+                    return a + b
+
+            print(Math.add(2, 4))
+
+            14. Quick Revision
+
+            Attributes:
+            Instance Attribute → Belongs to object
+            Class Attribute → Belongs to class
+            Local Attribute → Used inside method/local scope
+
+            Methods:
+            Instance Method → Uses `self`
+            Class Method → Uses `cls`
+            Static Method → Uses neither `self` nor `cls`
+
+            Decorators:
+            `@classmethod` → Creates a class method
+            `@staticmethod` → Creates a static method
