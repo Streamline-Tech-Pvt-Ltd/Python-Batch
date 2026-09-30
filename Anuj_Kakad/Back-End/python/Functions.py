@@ -29,7 +29,6 @@ number = input("Enter a no:- ")
 check_natural(number)
 
 
-
 # Example using user defined function:-
 
 def check_number(num):
@@ -47,3 +46,45 @@ check_number(number)
 num = number = int(input("Enter a number:-"))
 res = lambda num : "Even" if num % 2 == 0 else "Odd"
 print(res(num))
+
+cities = ["Mumbai","Chennai","Delhi","Bangalore","Kerala"]
+heros = ["Iron Man","Cap. America","Thor","Spidy","Hulk"]
+
+print(cities[0:6:2])
+
+# WAF to print length Of list:-
+def print_len(list):
+    print(len(list))
+
+print_len(cities)
+print_len(heros)
+
+
+# WAF to Print items of list in single line:-
+def print_list(list):
+    for i in list:
+        print(i,end=" ")
+
+print_list(cities)
+print()
+print_list(heros)
+
+# WAF to print Factorial of number:-
+
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1
+    return num * factorial(num - 1)
+
+n = int(input("Enter a number:-"))
+
+print(factorial(n))
+
+# WAF to convert USD into INR:
+
+def usd_inr(n):
+    x = n * 95.96
+    print(n,"USD =",x,"INR")
+
+y = int(input("Enter a Number:- "))
+usd_inr(y)
