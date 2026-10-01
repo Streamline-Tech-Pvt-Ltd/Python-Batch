@@ -4727,7 +4727,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     Here:
                     `__init__(self)` → Non-parameterized constructor
 
-                4. Parameterized Constructor:-
+                2. Parameterized Constructor:-
                     A constructor that accepts parameters to initialize object attributes is called a parameterized constructor.
 
                     Example:
@@ -4753,7 +4753,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     - `"ABC"`, `"PYTHON"`, `"abc@gmail.com"` → Arguments
                     - `self.name`, `self.domain`, `self.email` → Instance attributes
 
-                5. Constructor with Default Parameters:-
+                3. Constructor with Default Parameters:-
                     A constructor can have parameters with default values.
                     If a value is not provided, Python uses the default value.
 
