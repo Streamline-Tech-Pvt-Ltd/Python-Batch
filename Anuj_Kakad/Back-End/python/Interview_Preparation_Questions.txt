@@ -4952,3 +4952,229 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 self → Current object
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 23(1/10/26):-
+
+        Python Notes: Day 21 - Inheritance & Its Types
+
+            1. Inheritance
+                Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.
+
+                It helps in:
+                - Code reusability
+                - Reducing duplicate code
+                - Creating relationships between classes
+
+                Basic Example:
+                    class Parent:
+                        def show(self):
+                            print("This is Parent")
+
+                    class Child(Parent):
+                        pass
+
+                    c1 = Child()
+                    c1.show()
+
+                Output:
+                    This is Parent
+
+                Here:
+                - `Parent` → Parent/Base/Super class
+                - `Child` → Child/Derived/Sub class
+                - `Child(Parent)` → Child inherits from Parent
+
+            2. Parent Class
+                The class whose properties and methods are inherited by another class is called the **Parent class**.
+
+                Other names:
+                - Base class
+                - Super class
+
+            3. Child Class
+                The class that inherits properties and methods from another class is called the **Child class**.
+
+                Other names:
+                - Derived class
+                - Sub class
+
+            4. Types of Inheritance
+                There are mainly 5 types of inheritance:
+
+                1. Single Inheritance
+                2. Multiple Inheritance
+                3. Multilevel Inheritance
+                4. Hierarchical Inheritance
+                5. Hybrid Inheritance
+
+                1. Single Inheritance:-
+                    When **one child class inherits from one parent class**, it is called Single Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child(Parent):
+                            def child_method(self):
+                                print("Child Method")
+
+                        c1 = Child()
+                        c1.parent_method()
+                        c1.child_method()
+
+                    Output:
+                        Parent Method
+                        Child Method
+
+                    Structure:
+                        Parent
+                        ↓
+                        Child
+
+                2. Multiple Inheritance:-
+                    When **one child class inherits from more than one parent class**, it is called Multiple Inheritance.
+
+                    Example:
+                        class Father:
+                            def father_method(self):
+                                print("Father Method")
+
+                        class Mother:
+                            def mother_method(self):
+                                print("Mother Method")
+
+                        class Child(Father, Mother):
+                            pass
+
+                        c1 = Child()
+                        c1.father_method()
+                        c1.mother_method()
+
+                    Output:
+                        Father Method
+                        Mother Method
+
+                    Structure:
+                        Father ──┐
+                                ↓
+                            Child
+                                ↑
+                        Mother ──┘
+
+                3. Multilevel Inheritance:-
+                    When a class inherits from another child class, forming a **chain of inheritance**, it is called Multilevel Inheritance.
+
+                    Example:
+                        class Grandfather:
+                            def grandfather_method(self):
+                                print("Grandfather")
+
+                        class Father(Grandfather):
+                            def father_method(self):
+                                print("Father")
+
+                        class Child(Father):
+                            def child_method(self):
+                                print("Child")
+
+                        c1 = Child()
+
+                        c1.grandfather_method()
+                        c1.father_method()
+                        c1.child_method()
+
+                    Output:
+                        Grandfather
+                        Father
+                        Child
+
+                    Structure:
+                        Grandfather
+                            ↓
+                        Father
+                            ↓
+                        Child
+
+                4. Hierarchical Inheritance:-
+                    When **multiple child classes inherit from the same parent class**, it is called Hierarchical Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child1(Parent):
+                            pass
+
+                        class Child2(Parent):
+                            pass
+
+                        c1 = Child1()
+                        c2 = Child2()
+
+                        c1.parent_method()
+                        c2.parent_method()
+
+                    Output:
+                        Parent Method
+                        Parent Method
+
+                    Structure:
+                             Parent
+                            /      \
+                        Child1    Child2
+
+                5. Hybrid Inheritance:-
+                    Hybrid inheritance is a **combination of two or more types of inheritance**.
+
+                    Example:
+                        class A:
+                            def show_a(self):
+                                print("A")
+
+                        class B(A):
+                            def show_b(self):
+                                print("B")
+
+                        class C(A):
+                            def show_c(self):
+                                print("C")
+
+                        class D(B, C):
+                            def show_d(self):
+                                print("D")
+
+                    Here, different inheritance types are combined, so it is called Hybrid Inheritance.
+
+            5. Quick Difference
+
+                | Type         | Meaning                          |
+                |--------------|----------------------------------|
+                | Single       | One Parent → One Child           |
+                | Multiple     | Multiple Parents → One Child     |
+                | Multilevel   | Grandparent → Parent → Child     |
+                | Hierarchical | One Parent → Multiple Children   |
+                | Hybrid       | Combination of two or more types |
+
+            6. Advantages of Inheritance
+                - Code reusability
+                - Reduces code duplication
+                - Makes code easier to maintain
+                - Creates a relationship between classes
+                - Child classes can reuse parent methods
+
+            Quick Revision:
+
+                Inheritance → Child class gets properties/methods from Parent
+
+                Parent Class → Class being inherited
+                Child Class → Class that inherits
+
+                Single → 1 Parent → 1 Child
+                Multiple → Multiple Parents → 1 Child
+                Multilevel → Grandparent → Parent → Child
+                Hierarchical → 1 Parent → Multiple Children
+                Hybrid → Combination of inheritance types
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
