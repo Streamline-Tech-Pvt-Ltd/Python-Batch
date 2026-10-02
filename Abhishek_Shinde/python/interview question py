@@ -3018,7 +3018,8 @@ print(deep)     # [[1, 2], [3, 4]]
             `@staticmethod` → Creates a static method
 
 
-            Python Notes: Day 21 - Inheritance & Its Types
+
+          Python Notes: Day 21 - Inheritance & Its Types
 
             1. Inheritance
                 Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.

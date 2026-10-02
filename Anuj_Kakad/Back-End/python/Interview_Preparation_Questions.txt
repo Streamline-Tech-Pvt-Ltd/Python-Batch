@@ -2,7 +2,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 01(24/8/26):- Complete Guide to Git, GitHub, Git And GitHub Configuration, VS Code, Work Environment Setup.
 
-    Internship Day 02(25/8/26):- Complete LinkedIn And Noukri Optimization.
+    Internship Day 02(25/8/26):- Complete LinkedIn And Naukri Optimization.
 
     Internship Day 03(31/8/26):-
 
@@ -4405,201 +4405,776 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Intenship Day 21(29/9/26):-
 
-        Python Internship Notes: Types of Attributes, Methods & Decorators
+        Python Notes Day 19:- Types of Attributes, Methods & Decorators
 
-            1. Types of Attributes
-            Attributes are variables that store data related to a class or object.
+            1. Types of Attributes:-
+                Attributes are variables that store data related to a class or object.
 
-            There are mainly 3 types:
-            1. Instance Attribute
-            2. Class Attribute
-            3. Local Attribute
+                There are mainly 3 types:
+                1. Instance Attribute
+                2. Class Attribute
+                3. Local Attribute
 
-            2. Instance Attribute
-            An instance attribute belongs to a particular object.
+                1. Instance Attribute:-
+                    An instance attribute belongs to a particular object.
+                    It is usually created using `self` inside the `__init__()` method.
 
-            It is usually created using `self` inside the `__init__()` method.
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
 
-            Example:
-            class Intern:
-                def __init__(self, name, domain, email):
-                    self.name = name
-                    self.domain = domain
-                    self.email = email
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
 
-            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+                        print(i1.name)
 
-            print(i1.name)
+                    Here:
+                    - `self.name`
+                    - `self.domain`
+                    - `self.email`
 
-            Here:
-            - `self.name`
-            - `self.domain`
-            - `self.email`
+                    are instance attributes.
 
-            are instance attributes.
+                    Each object can have different values.
 
-            Each object can have different values.
+                2. Class Attribute:-
+                    A class attribute belongs to the class and is shared by its objects.
 
-            3. Class Attribute
-            A class attribute belongs to the class and is shared by its objects.
+                    Example:
+                        class Intern:
+                            password = "Admin@123"
 
-            Example:
-            class Intern:
-                password = "Admin@123"
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
 
-                def __init__(self, name, domain, email):
-                    self.name = name
-                    self.domain = domain
-                    self.email = email
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
 
-            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+                        print(i1.password)
 
-            print(i1.password)
+                    Here, `password` is a class attribute.
 
-            Here, `password` is a class attribute.
+                3. Local Attribute:-
+                    A local variable/attribute is created inside a method and is available only within that method.
 
-            4. Local Attribute
-            A local variable/attribute is created inside a method and is available only within that method.
+                    Example:
+                        class Intern:
+                            name = "streamlinetech"
 
-            Example:
-            class Intern:
-                name = "streamlinetech"
+                            def registration(self):
+                                return f"{self.name} It is an IT company"
 
-                def registration(self):
-                    return f"{self.name} It is an IT company"
+                        i1 = Intern()
+                    print(i1.registration())
 
-            i1 = Intern()
-            print(i1.registration())
+                5. Difference Between Instance and Class Attribute:-
 
-            5. Difference Between Instance and Class Attribute
+                    | Instance Attribute                        | Class Attribute               |
+                    |-------------------------------------------|-------------------------------|
+                    | Belongs to an object                      | Belongs to the class          |
+                    | Created using `self`                      | Created directly inside class |
+                    | Can have different values for each object | Common/shared value           |
+                    | Example: `self.name`                      | Example: `password`           |
 
-            | Instance Attribute | Class Attribute |
-            |---|---|
-            | Belongs to an object | Belongs to the class |
-            | Created using `self` | Created directly inside class |
-            | Can have different values for each object | Common/shared value |
-            | Example: `self.name` | Example: `password` |
+            2. Types of Methods:-
+                There are mainly 3 types of methods:
 
-            6. Types of Methods
-            There are mainly 3 types of methods:
+                1. Instance Method
+                2. Class Method
+                3. Static Method
 
-            1. Instance Method
-            2. Class Method
-            3. Static Method
+                1. Instance Method:-
+                    An instance method works with the data of an object.
+                    It uses `self` as the first parameter.
 
-            7. Instance Method
-            An instance method works with the data of an object.
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
 
-            It uses `self` as the first parameter.
+                            def registration(self):
+                                return f"My domain is {self.domain}"
 
-            Example:
-            class Intern:
-                def __init__(self, name, domain, email):
-                    self.name = name
-                    self.domain = domain
-                    self.email = email
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
 
-                def registration(self):
-                    return f"My domain is {self.domain}"
+                        print(i1.registration())
 
-            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+                    Here, `registration()` is an instance method.
 
-            print(i1.registration())
+                2. Class Method:-
+                    A class method works with class-level data.
+                    It uses `cls` as the first parameter and uses the `@classmethod` decorator.
 
-            Here, `registration()` is an instance method.
+                    Example:
+                        class Car:
+                            total_cars = 0
 
-            8. Class Method
-            A class method works with class-level data.
+                            def __init__(self, model):
+                                self.model = model
+                                Car.total_cars += 1
 
-            It uses `cls` as the first parameter and uses the `@classmethod` decorator.
+                            @classmethod
+                            def car_count(cls):
+                                return f"Total cars = {cls.total_cars}"
 
-            Example:
-            class Car:
-                total_cars = 0
+                        print(Car.car_count())
 
-                def __init__(self, model):
-                    self.model = model
-                    Car.total_cars += 1
+                3. Static Method:-
+                    A static method does not need `self` or `cls`.
+                    It is defined using the `@staticmethod` decorator.
 
-                @classmethod
-                def car_count(cls):
-                    return f"Total cars = {cls.total_cars}"
+                    Example:
+                        class Math:
+                            @staticmethod
+                            def add(a, b):
+                                return a + b
 
-            print(Car.car_count())
+                        print(Math.add(2, 4))
 
-            9. Static Method
-            A static method does not need `self` or `cls`.
+                    Output:
+                        6
 
-            It is defined using the `@staticmethod` decorator.
+                4. Difference Between Types of Methods:-
 
-            Example:
-            class Math:
-                @staticmethod
-                def add(a, b):
-                    return a + b
+                    | Instance Method               | Class Method          | Static Method                    |
+                    |-------------------------------|-----------------------|----------------------------------|
+                    | Uses `self`                   | Uses `cls`            | No `self` or `cls`               |
+                    | Works with object data        | Works with class data | Independent of object/class data |
+                    | Uses object                   | Uses class            | Can be called using class        |
+                    | No special decorator required | Uses `@classmethod`   | Uses `@staticmethod`             |
 
-            print(Math.add(2, 4))
+            3. Decorator
+                A decorator is used with `@` before a function or method.
+                Decorators can modify or provide special behaviour to a function/method.
 
-            Output:
-            6
-
-            10. Difference Between Types of Methods
-
-            | Instance Method | Class Method | Static Method |
-            |---|---|---|
-            | Uses `self` | Uses `cls` | No `self` or `cls` |
-            | Works with object data | Works with class data | Independent of object/class data |
-            | Uses object | Uses class | Can be called using class |
-            | No special decorator required | Uses `@classmethod` | Uses `@staticmethod` |
-
-            11. Decorator
-            A decorator is used with `@` before a function or method.
-
-            Decorators can modify or provide special behaviour to a function/method.
-
-            In today's OOP topic, we used:
-
-            @classmethod
-            @staticmethod
-
-            12. @classmethod Decorator
-            `@classmethod` converts a method into a class method.
-
-            It receives `cls` as the first parameter.
-
-            Example:
-            class Car:
-                total_cars = 0
+                In today's OOP topic, we used:
 
                 @classmethod
-                def car_count(cls):
-                    return cls.total_cars
-
-            13. @staticmethod Decorator
-            `@staticmethod` converts a method into a static method.
-
-            It does not require `self` or `cls`.
-
-            Example:
-            class Math:
                 @staticmethod
-                def add(a, b):
-                    return a + b
 
-            print(Math.add(2, 4))
+                1. @classmethod Decorator
+                    `@classmethod` converts a method into a class method.
+                    It receives `cls` as the first parameter.
 
-            14. Quick Revision
+                    Example:
+                        class Car:
+                            total_cars = 0
 
-            Attributes:
-            Instance Attribute → Belongs to object
-            Class Attribute → Belongs to class
-            Local Attribute → Used inside method/local scope
+                            @classmethod
+                            def car_count(cls):
+                                return cls.total_cars
 
-            Methods:
-            Instance Method → Uses `self`
-            Class Method → Uses `cls`
-            Static Method → Uses neither `self` nor `cls`
+                13. @staticmethod Decorator
+                    `@staticmethod` converts a method into a static method.
+                    It does not require `self` or `cls`.
 
-            Decorators:
-            `@classmethod` → Creates a class method
-            `@staticmethod` → Creates a static method
+                    Example:
+                        class Math:
+                            @staticmethod
+                            def add(a, b):
+                                return a + b
+
+                        print(Math.add(2, 4))
+
+            4. Quick Revision:-
+
+                Attributes:
+                    Instance Attribute → Belongs to object
+                    Class Attribute → Belongs to class
+                    Local Attribute → Used inside method/local scope
+
+                Methods:
+                    Instance Method → Uses `self`
+                    Class Method → Uses `cls`
+                    Static Method → Uses neither `self` nor `cls`
+
+                Decorators:
+                    `@classmethod` → Creates a class method
+                    `@staticmethod` → Creates a static method
+
+        Interview Questions On Day 19:-
+
+            1. What is an Attribute in Python?
+                An attribute is a variable that stores data related to a class or object.
+                
+            2. What are the types of Attributes?
+                The three types covered are:
+                Instance Attribute
+                Class Attribute
+                Local Attribute
+
+            3. What is an Instance Attribute?
+                An instance attribute belongs to a particular object and is usually created using self.
+
+                self.name = name
+
+            4. What is a Class Attribute?
+                A class attribute belongs to the class and can be shared by its objects.
+
+                class Intern:
+                    password = "Admin@123"
+            
+            5. What is a Local Attribute?
+                A local variable is created inside a method and is used within that method.
+                
+            6. What are the types of Methods in Python OOP?
+                The three types are:
+                Instance Method
+                Class Method
+                Static Method
+
+            7. What is an Instance Method?
+                An instance method works with object data and uses self as its first parameter.
+
+                def registration(self):
+                    return self.domain
+
+            8. What is a Class Method?
+                A class method works with class-level data and uses cls as its first parameter.
+
+                It is created using the @classmethod decorator.
+
+                Ex:-
+                    @classmethod
+                    def car_count(cls):
+                        return cls.total_cars
+
+            9. What is a Static Method?
+                A static method does not require self or cls. It is created using @staticmethod.
+
+                Ex:-
+                    @staticmethod
+                    def add(a, b):
+                        return a + b
+
+            10. What is a Decorator?
+                A decorator is used to modify or provide special behaviour to a function or method.
+
+                In today's topic, we use:
+
+                @classmethod
+                @staticmethod
+
+            11. What is the difference between @classmethod and @staticmethod?
+                @classmethod → Uses cls and works with class-level data.
+                @staticmethod → Does not use self or cls.
+
+            12. What is the difference between Instance, Class and Static Methods?
+
+                Instance Method  	    Class Method	           Static Method
+                Uses self       	    Uses cls	               Uses neither
+                Works with object data	Works with class data  	   Independent of object/class data
+                Called using object	    Can be called using class  Can be called using class
+            
+            ⭐ Must Prepare First
+
+                Focus especially on these:
+
+                Instance Attribute → Class Attribute → Local Attribute
+                Instance Method → Class Method → Static Method
+                self → cls → no self/cls
+                @classmethod → @staticmethod
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 22(30/9/26):-
+
+        Python Notes: Day 20 - Types of Constructors
+
+            1. Constructor:-
+                A constructor is a special method used to initialize an object.
+                In Python, `__init__()` is commonly called the constructor.
+
+                It is automatically called when an object is created.
+
+                Example:
+                    class Student:
+                        def __init__(self):
+                            print("Constructor is called when object is created")
+
+                    student1 = Student()
+
+                Output:
+                    Constructor is called when object is created
+
+            2. Types of Constructors:-
+                Commonly, we study these types:
+
+                1. Non-Parameterized Constructor
+                2. Parameterized Constructor
+                3. Constructor with Default Parameters
+
+                1. Non-Parameterized Constructor:-
+                    A constructor that does not take any parameter other than `self` is called a non-parameterized constructor.
+
+                    Example:
+                        class Student:
+                            def __init__(self):
+                                print("Constructor is called when object is created")
+
+                        student1 = Student()
+                        student2 = Student()
+
+                    Output:
+                        Constructor is called when object is created
+                        Constructor is called when object is created
+
+                    Here:
+                    `__init__(self)` → Non-parameterized constructor
+
+                2. Parameterized Constructor:-
+                    A constructor that accepts parameters to initialize object attributes is called a parameterized constructor.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
+
+                        i1 = Intern("ABC", "PYTHON", "abc@gmail.com")
+
+                        print(i1.name)
+                        print(i1.domain)
+                        print(i1.email)
+
+                    Output:
+                        ABC
+                        PYTHON
+                        abc@gmail.com
+
+                    Here:
+                    - `name`, `domain`, `email` → Parameters
+                    - `"ABC"`, `"PYTHON"`, `"abc@gmail.com"` → Arguments
+                    - `self.name`, `self.domain`, `self.email` → Instance attributes
+
+                3. Constructor with Default Parameters:-
+                    A constructor can have parameters with default values.
+                    If a value is not provided, Python uses the default value.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name="Anuj", age=21):
+                                self.name = name
+                                self.age = age
+
+                        i1 = Intern("Anuj", 23)
+
+                        print(i1.name)
+                        print(i1.age)
+
+                    Output:
+                        Anuj
+                        23
+
+                    Another example:
+                        i2 = Intern()
+
+                        print(i2.name)
+                        print(i2.age)
+
+                    Output:
+                        Anuj
+                        21
+
+                    Here:
+                    - `name="Anuj"` → Default value
+                    - `age=21` → Default value
+
+                    Important:
+                        This is technically a parameterized constructor with default parameter values,
+                        not a separate constructor type in Python.
+
+            3. Real-World Example: Bank Account
+
+                Ex:-
+                    class BankAccount:
+                        def __init__(self, name, acc_no, balance, ifsc="MAHB00043"):
+                            self.name = name
+                            self.acc_no = acc_no
+                            self.balance = balance
+                            self.ifsc = ifsc
+
+                        def show_user(self):
+                            print("=========================")
+                            print("user_name:", self.name)
+                            print("user_acc_no:", self.acc_no)
+                            print("user credential displayed successfully")
+
+                    b1 = BankAccount("Urmila", "ACC123789", 50000, "MAHB000023")
+
+                    print(b1.name)
+                    print(b1.acc_no)
+                    print(b1.balance)
+                    print(b1.ifsc)
+
+                    b1.show_user()
+
+                Here:
+                - `BankAccount` → Class
+                - `__init__()` → Constructor
+                - `name`, `acc_no`, `balance`, `ifsc` → Instance attributes
+                - `show_user()` → Instance method
+                - `"Urmila"`, `"ACC123789"`, `50000` → Arguments
+                - `"MAHB000023"` → Argument that replaces the default IFSC value
+
+            4. Default Value in Constructor:-
+                If an argument is not passed, the default value is used.
+
+                Example:
+                    class BankAccount:
+                        def __init__(self, name, balance, ifsc="MAHB00043"):
+                            self.name = name
+                            self.balance = balance
+                            self.ifsc = ifsc
+
+                    b1 = BankAccount("Anuj", 50000)
+
+                    print(b1.ifsc)
+
+                Output:
+                    MAHB00043
+
+            5. Important Points:-
+                - `__init__()` is automatically called when an object is created.
+                - `self` refers to the current object.
+                - Constructors are mainly used to initialize object attributes.
+                - A parameterized constructor accepts values from the user/program.
+                - A non-parameterized constructor does not accept additional parameters.
+                - Default parameters allow us to use a value when no argument is provided.
+                - Python does not support multiple constructors with the same name like some other languages.
+                - A class can have only one `__init__()` definition; if defined again, the later definition replaces the earlier one.
+
+            6. Difference Between Constructor Types:-
+
+                | Non-Parameterized             | Parameterized                  | Default Parameters                   |
+                |-------------------------------|--------------------------------|--------------------------------------|
+                | Takes only `self`             | Takes additional parameters    | Takes parameters with default values |
+                | No values are passed          | Values are passed              | Values may or may not be passed      |
+                | `__init__(self)`              | `__init__(self, name)`         | `__init__(self, name="Anuj")`        |
+                | Used for fixed initialization | Used for custom initialization | Used for flexible initialization     |
+
+            Quick Revision:-
+                Constructor → Initializes an object
+                `__init__()` → Commonly called constructor in Python
+                Non-Parameterized → Only `self`
+                Parameterized → Accepts parameters
+                Default Parameters → Parameters have default values
+                `self` → Current object
+                Constructor → Automatically called when object is created
+
+        Interview Questions On Day 20:-
+
+            1. What is a Constructor in Python?
+                A constructor is a special method used to initialize an object. In Python, __init__() is commonly called the constructor.
+
+            2. When is a Constructor called?
+                It is called automatically when an object is created.
+
+                Ex:-
+                    student1 = Student()
+                
+            3. What is __init__()?
+                __init__() is a special method used to initialize the attributes of an object.
+
+            4. What is a Non-Parameterized Constructor?
+                A constructor that takes only self and no additional parameters is called a non-parameterized constructor.
+
+                Ex:-
+                    class Student:
+                        def __init__(self):
+                            print("Constructor called")
+
+            5. What is a Parameterized Constructor?
+                A constructor that accepts parameters to initialize object data is called a parameterized constructor.
+
+                Ex:-
+                    class Student:
+                        def __init__(self, name, age):
+                            self.name = name
+                            self.age = age
+
+            6. What is a Constructor with Default Parameters?
+                A constructor in which parameters have default values.
+
+                Ex:-
+                    class Student:
+                        def __init__(self, name="Anuj", age=21):
+                            self.name = name
+                            self.age = age
+
+            7. What happens if we don't pass an argument for a default parameter?
+                Python uses the default value.
+
+                Ex:-
+                    s1 = Student()
+
+                Here, name will be "Anuj" and age will be 21.
+
+            8. What is the difference between Parameterized and Non-Parameterized Constructors?
+
+                Non-Parameterized	    Parameterized
+                Takes only self	        Takes additional parameters
+                No values are passed	Values are passed
+                __init__(self)	        __init__(self, name)
+            
+            9. What is the difference between Parameterized Constructor and Default Parameter Constructor?
+                Parameterized → Values are generally expected to be passed.
+                Default parameter → Values may be passed, otherwise default values are used.
+
+            10. What is the purpose of self in a Constructor?
+                self refers to the current object and is used to store/access its attributes.
+
+                Ex:-
+                    self.name = name
+                
+            11. Can we create multiple constructors in one Python class?
+                Python does not support multiple __init__() methods with the same name. If we define another __init__(), it replaces the previous one.
+                
+            12. What is the main purpose of a Constructor?
+                Its main purpose is to initialize object data when the object is created.
+                
+            ⭐ Must Prepare First
+
+                Constructor → __init__() → Automatically called → Initializes object
+
+                Non-Parameterized → Only self
+
+                Parameterized → Takes values
+
+                Default Parameters → Values have default values
+
+                self → Current object
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 23(1/10/26):-
+
+        Python Notes: Day 21 - Inheritance & Its Types
+
+            1. Inheritance
+                Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.
+
+                It helps in:
+                - Code reusability
+                - Reducing duplicate code
+                - Creating relationships between classes
+
+                Basic Example:
+                    class Parent:
+                        def show(self):
+                            print("This is Parent")
+
+                    class Child(Parent):
+                        pass
+
+                    c1 = Child()
+                    c1.show()
+
+                Output:
+                    This is Parent
+
+                Here:
+                - `Parent` → Parent/Base/Super class
+                - `Child` → Child/Derived/Sub class
+                - `Child(Parent)` → Child inherits from Parent
+
+            2. Parent Class
+                The class whose properties and methods are inherited by another class is called the **Parent class**.
+
+                Other names:
+                - Base class
+                - Super class
+
+            3. Child Class
+                The class that inherits properties and methods from another class is called the **Child class**.
+
+                Other names:
+                - Derived class
+                - Sub class
+
+            4. Types of Inheritance
+                There are mainly 5 types of inheritance:
+
+                1. Single Inheritance
+                2. Multiple Inheritance
+                3. Multilevel Inheritance
+                4. Hierarchical Inheritance
+                5. Hybrid Inheritance
+
+                1. Single Inheritance:-
+                    When **one child class inherits from one parent class**, it is called Single Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child(Parent):
+                            def child_method(self):
+                                print("Child Method")
+
+                        c1 = Child()
+                        c1.parent_method()
+                        c1.child_method()
+
+                    Output:
+                        Parent Method
+                        Child Method
+
+                    Structure:
+                        Parent
+                        ↓
+                        Child
+
+                2. Multiple Inheritance:-
+                    When **one child class inherits from more than one parent class**, it is called Multiple Inheritance.
+
+                    Example:
+                        class Father:
+                            def father_method(self):
+                                print("Father Method")
+
+                        class Mother:
+                            def mother_method(self):
+                                print("Mother Method")
+
+                        class Child(Father, Mother):
+                            pass
+
+                        c1 = Child()
+                        c1.father_method()
+                        c1.mother_method()
+
+                    Output:
+                        Father Method
+                        Mother Method
+
+                    Structure:
+                        Father ──┐
+                                ↓
+                            Child
+                                ↑
+                        Mother ──┘
+
+                3. Multilevel Inheritance:-
+                    When a class inherits from another child class, forming a **chain of inheritance**, it is called Multilevel Inheritance.
+
+                    Example:
+                        class Grandfather:
+                            def grandfather_method(self):
+                                print("Grandfather")
+
+                        class Father(Grandfather):
+                            def father_method(self):
+                                print("Father")
+
+                        class Child(Father):
+                            def child_method(self):
+                                print("Child")
+
+                        c1 = Child()
+
+                        c1.grandfather_method()
+                        c1.father_method()
+                        c1.child_method()
+
+                    Output:
+                        Grandfather
+                        Father
+                        Child
+
+                    Structure:
+                        Grandfather
+                            ↓
+                        Father
+                            ↓
+                        Child
+
+                4. Hierarchical Inheritance:-
+                    When **multiple child classes inherit from the same parent class**, it is called Hierarchical Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child1(Parent):
+                            pass
+
+                        class Child2(Parent):
+                            pass
+
+                        c1 = Child1()
+                        c2 = Child2()
+
+                        c1.parent_method()
+                        c2.parent_method()
+
+                    Output:
+                        Parent Method
+                        Parent Method
+
+                    Structure:
+                             Parent
+                            /      \
+                        Child1    Child2
+
+                5. Hybrid Inheritance:-
+                    Hybrid inheritance is a **combination of two or more types of inheritance**.
+
+                    Example:
+                        class A:
+                            def show_a(self):
+                                print("A")
+
+                        class B(A):
+                            def show_b(self):
+                                print("B")
+
+                        class C(A):
+                            def show_c(self):
+                                print("C")
+
+                        class D(B, C):
+                            def show_d(self):
+                                print("D")
+
+                    Here, different inheritance types are combined, so it is called Hybrid Inheritance.
+
+            5. Quick Difference
+
+                | Type         | Meaning                          |
+                |--------------|----------------------------------|
+                | Single       | One Parent → One Child           |
+                | Multiple     | Multiple Parents → One Child     |
+                | Multilevel   | Grandparent → Parent → Child     |
+                | Hierarchical | One Parent → Multiple Children   |
+                | Hybrid       | Combination of two or more types |
+
+            6. Advantages of Inheritance
+                - Code reusability
+                - Reduces code duplication
+                - Makes code easier to maintain
+                - Creates a relationship between classes
+                - Child classes can reuse parent methods
+
+            Quick Revision:
+
+                Inheritance → Child class gets properties/methods from Parent
+
+                Parent Class → Class being inherited
+                Child Class → Class that inherits
+
+                Single → 1 Parent → 1 Child
+                Multiple → Multiple Parents → 1 Child
+                Multilevel → Grandparent → Parent → Child
+                Hierarchical → 1 Parent → Multiple Children
+                Hybrid → Combination of inheritance types
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-

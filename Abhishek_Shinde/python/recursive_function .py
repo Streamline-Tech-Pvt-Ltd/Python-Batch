@@ -61,6 +61,7 @@ def fibonacci(n):
     else:
         return fibonacci(n-1) + fibonacci(n-2)
 
+
 a = int(input("Enter number of terms:- "))
 
 for i in range(a):
