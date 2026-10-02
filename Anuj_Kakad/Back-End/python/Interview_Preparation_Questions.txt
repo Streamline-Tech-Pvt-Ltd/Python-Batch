@@ -2,7 +2,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 01(24/8/26):- Complete Guide to Git, GitHub, Git And GitHub Configuration, VS Code, Work Environment Setup.
 
-    Internship Day 02(25/8/26):- Complete LinkedIn And Noukri Optimization.
+    Internship Day 02(25/8/26):- Complete LinkedIn And Naukri Optimization.
 
     Internship Day 03(31/8/26):-
 
