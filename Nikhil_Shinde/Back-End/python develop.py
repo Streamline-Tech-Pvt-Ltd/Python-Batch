@@ -1,1 +1,0 @@
-# Pyhton was created by Guido van Rossum in 1989 and first released in 1991.
