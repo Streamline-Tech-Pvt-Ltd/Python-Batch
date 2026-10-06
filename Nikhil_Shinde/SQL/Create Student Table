@@ -1,0 +1,197 @@
+mysql> create database python_ninja
+    -> use python_ninja
+    -> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'use python_ninja
+show databases' at line 2
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| comapny            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| school             |
+| sports             |
+| sys                |
+| world              |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE python_ninja;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| comapny            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| python_ninja       |
+| sakila             |
+| school             |
+| sports             |
+| sys                |
+| world              |
++--------------------+
+10 rows in set (0.00 sec)
+
+mysql> use python_ninja;
+Database changed
+mysql> create table student;
+ERROR 4028 (HY000): A table must have at least one visible column.
+mysql> create table student(
+    -> id int auto_increment primary key,
+    -> name varchar(50) not null,
+    -> age int,
+    -> city varchar(30));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Nikhil',21,'Dindori');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Rahul',22,'Rajapur');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Prathmesh',20,'Mohadi');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Kanishk',23,'Malegaon');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Bhumii',19,'Chandwad');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Prerna',24,'Sinnar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Kapil',22,'Sambhaji Nagar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Shivam',25,'Shirdi');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Dipak',26,'Palkhed Dam');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Tanvi',20,'Zodge');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Piyush',25,'Pune');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Siddhesh',21,'Rajguru Nagar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Avdhut',28,'Pimaplgaon');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Samarth',30,'Ozar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++----+-----------+------+----------------+
+| id | name      | age  | city           |
++----+-----------+------+----------------+
+|  1 | Nikhil    |   21 | Dindori        |
+|  2 | Rahul     |   22 | Rajapur        |
+|  3 | Prathmesh |   20 | Mohadi         |
+|  4 | Kanishk   |   23 | Malegaon       |
+|  5 | Bhumii    |   19 | Chandwad       |
+|  6 | Prerna    |   24 | Sinnar         |
+|  7 | Kapil     |   22 | Sambhaji Nagar |
+|  8 | Shivam    |   25 | Shirdi         |
+|  9 | Dipak     |   26 | Palkhed Dam    |
+| 10 | Tanvi     |   20 | Zodge          |
+| 11 | Piyush    |   25 | Pune           |
+| 12 | Siddhesh  |   21 | Rajguru Nagar  |
+| 13 | Avdhut    |   28 | Pimaplgaon     |
+| 14 | Samarth   |   30 | Ozar           |
++----+-----------+------+----------------+
+14 rows in set (0.00 sec)
+
+mysql> insert into student (name,age,city)
+    -> values ('Avdhut',28,'Pimaplgaon'),
+    -> values ('Riya',29,'Pune');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'values ('Riya',29,'Pune')' at line 3
+mysql> insert into student (name,age,city)
+    -> values ('Neha',18,'Sangamner'),
+    -> ('Sahil',17,'Pachora'),
+    -> ('Siddhi',10,'Jalgaon'),
+    -> ('Prajwal',33,'Mumabai'),
+    -> ('Atish',40,'Lasalgaon'),
+    -> ('Akshay',45,'Pimpri Chinchwad'),
+    -> ('Rohit',35,'Thane');
+Query OK, 7 rows affected (0.01 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> insert into student (name,age,city)
+    -> values ('Vikas',48,'Paithan'),
+    -> ('Kailas',49,'Jalna'),
+    -> ('Parth',16,'Vinchur'),
+    -> ('Nilesh',29,'Kopargaon'),
+    -> ('Tejas',34,'Vani'),
+    -> ('Yashraj',33,'Pandharpur'),
+    -> ('Vilas',35,'Jejur'),
+    -> ('Prabhakar',50,'Bimashankar'),
+    -> ('Samruddhi',23,'Vadner'),
+    -> ('Shrutii',43,'Shirsagaon'),
+    -> ('Shrutii',43,'Shirsagaon');
+Query OK, 11 rows affected (0.01 sec)
+Records: 11  Duplicates: 0  Warnings: 0
+
+mysql> select * from student;
++----+-----------+------+------------------+
+| id | name      | age  | city             |
++----+-----------+------+------------------+
+|  1 | Nikhil    |   21 | Dindori          |
+|  2 | Rahul     |   22 | Rajapur          |
+|  3 | Prathmesh |   20 | Mohadi           |
+|  4 | Kanishk   |   23 | Malegaon         |
+|  5 | Bhumii    |   19 | Chandwad         |
+|  6 | Prerna    |   24 | Sinnar           |
+|  7 | Kapil     |   22 | Sambhaji Nagar   |
+|  8 | Shivam    |   25 | Shirdi           |
+|  9 | Dipak     |   26 | Palkhed Dam      |
+| 10 | Tanvi     |   20 | Zodge            |
+| 11 | Piyush    |   25 | Pune             |
+| 12 | Siddhesh  |   21 | Rajguru Nagar    |
+| 13 | Avdhut    |   28 | Pimaplgaon       |
+| 14 | Samarth   |   30 | Ozar             |
+| 15 | Neha      |   18 | Sangamner        |
+| 16 | Sahil     |   17 | Pachora          |
+| 17 | Siddhi    |   10 | Jalgaon          |
+| 18 | Prajwal   |   33 | Mumabai          |
+| 19 | Atish     |   40 | Lasalgaon        |
+| 20 | Akshay    |   45 | Pimpri Chinchwad |
+| 21 | Rohit     |   35 | Thane            |
+| 22 | Vikas     |   48 | Paithan          |
+| 23 | Kailas    |   49 | Jalna            |
+| 24 | Parth     |   16 | Vinchur          |
+| 25 | Nilesh    |   29 | Kopargaon        |
+| 26 | Tejas     |   34 | Vani             |
+| 27 | Yashraj   |   33 | Pandharpur       |
+| 28 | Vilas     |   35 | Jejur            |
+| 29 | Prabhakar |   50 | Bimashankar      |
+| 30 | Samruddhi |   23 | Vadner           |
+| 31 | Shrutii   |   43 | Shirsagaon       |
+| 32 | Shrutii   |   43 | Shirsagaon       |
++----+-----------+------+------------------+
+32 rows in set (0.00 sec)

@@ -1,0 +1,4 @@
+1,25/7/2026,Traval,Sihgad fort,500.0
+2,4/7/2026,Food,Mess Fees,3500.0
+3,5/7/2026,Cloths,T-shirts,700.0
+4,22/7/2026,Education,class fee,5500.0

@@ -1,0 +1,29 @@
+<form method="POST" action="{% url 'intern_list' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for intern in interns %}
+        <tr>
+            <td>{{ intern.name }}</td>
+            <td>{{ intern.email }}</td>
+            <td>{{ intern.phone }}</td>
+            <td>{{ intern.department }}</td>
+            <td>{{ intern.start_date }}</td>
+            <td>{{ intern.end_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

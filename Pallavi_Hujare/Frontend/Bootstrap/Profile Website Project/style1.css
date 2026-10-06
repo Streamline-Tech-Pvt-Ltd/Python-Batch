@@ -1,0 +1,90 @@
+.hero-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#6781c8,#01143b);
+    color:rgb(195, 166, 166);
+}
+.custom-navbar{
+    background:rgba(15,23,42,0.9);
+    backdrop-filter:blur(10px);
+    padding:15px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.navbar-brand{
+    font-size:28px;
+    color:#38BDF8 !important; 
+}
+.nav-link{
+    color:white !important;
+    margin-left:20px;
+    font-weight:500;
+    transition:0.3s;
+}
+.nav-link:hover{
+    color:#38BDF8 !important;
+}
+.image-box{
+    position:relative;
+    width:420px;
+    height:420px;
+    margin:auto;
+}
+.my-name{
+    color:#600f4e;
+}
+.gradient-text{
+    background: linear-gradient(90deg, #8565d1, #a71a61);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-text{
+    color:#cbd5e1;
+    font-size:18px;
+    line-height:1.8;
+}
+.profile-img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #022964;
+    box-shadow:0 0 30px rgba(2, 38, 111, 0.879);
+}
+.icon{
+    position:absolute;
+    font-size:40px;
+    animation:float 3s ease-in-out infinite;
+}
+.hero-img{
+    width:380px;
+    height:380px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #7ecced;
+    box-shadow:
+    0 0 30px #c4e3f0,
+    0 0 60px rgba(157, 206, 227, 0.5);
+    transition:.5s;
+}
+.social-icons a{
+    font-size:28px;
+    margin-right:18px;
+    color:white;
+    transition:.4s;
+}
+.social-icons a:hover{
+    color:#327b9b;
+    transform:translateY(-8px);
+}
+.hero-img:hover{
+    transform:scale(1.05);
+}
+.footer{
+    padding:20px 0;
+    background:#111827;
+    color:white;
+    text-align:center;
+    font-size:15px;
+}

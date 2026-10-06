@@ -1,0 +1,1285 @@
+# 🐍 Python Functions
+
+## 1. What is a Function?
+
+A **function** is a reusable block of code that performs a specific task.
+
+Instead of writing the same code again and again, we create a function once and **call** it whenever required.
+
+### Simple Example
+
+def greet():
+    print("Hello Mayuri")
+
+greet()
+```
+
+### Output
+Hello Mayuri
+```
+
+Here:
+
+* `def` → keyword used to create a function
+* `greet` → function name
+* `()` → parentheses
+* `:` → starts the function body
+* `print()` → statement inside function
+* `greet()` → function call
+
+---
+
+# 2. Why Do We Use Functions?
+
+Functions are useful because they provide:
+
+1. **Code Reusability**
+2. **Code Organization**
+3. **Less Code Duplication**
+4. **Easy Debugging**
+5. **Easy Maintenance**
+6. **Better Readability**
+
+### Without Function
+
+print("Hello")
+print("Hello")
+print("Hello")
+```
+
+### With Function
+
+def greet():
+    print("Hello")
+
+greet()
+greet()
+greet()
+
+
+# 3. Function Syntax
+
+def function_name():
+    # function body
+    statement
+```
+
+### Example
+
+def addition():
+    a = 10
+    b = 20
+    print(a + b)
+
+addition()
+```
+
+### Output
+30
+
+
+# 4. Function Definition and Function Call
+
+## Function Definition
+
+Creating a function is called **function definition**.
+
+def greet():
+    print("Hello")
+```
+
+## Function Call
+
+Using/executing a function is called a **function call**.
+
+greet()
+```
+
+### Complete Example
+
+def greet():
+    print("Hello")
+
+greet()
+
+
+# 5. Types of Functions in Python
+
+Python functions can mainly be divided into:
+Functions
+│
+├── 1. Built-in Functions
+│
+└── 2. User-defined Functions
+```
+
+User-defined functions can further be understood as:
+User-defined Functions
+│
+├── 1. Without argument and without return value
+├── 2. With argument and without return value
+├── 3. Without argument and with return value
+└── 4. With argument and with return value
+```
+
+Other important function concepts:
+├── Default Argument Function
+├── Keyword Argument Function
+├── Positional Argument Function
+├── Variable-Length Argument Function
+│   ├── *args
+│   └── **kwargs
+├── Recursive Function
+├── Lambda Function
+├── Nested Function
+└── Generator Function
+
+
+# 6. Built-in Functions
+
+Built-in functions are functions already provided by Python.
+
+We don't need to define them ourselves.
+
+### Examples
+
+print("Hello")
+len("Python")
+type(10)
+id(10)
+max(10, 20, 30)
+min(10, 20, 30)
+sum([10, 20, 30])
+```
+
+### Common Built-in Functions
+
+| Function      | Purpose              |
+| ------------- | -------------------- |
+| `print()`     | Display output       |
+| `input()`     | Take input           |
+| `len()`       | Find length          |
+| `type()`      | Find data type       |
+| `id()`        | Find object identity |
+| `sum()`       | Calculate sum        |
+| `max()`       | Find maximum         |
+| `min()`       | Find minimum         |
+| `abs()`       | Absolute value       |
+| `round()`     | Round a number       |
+| `sorted()`    | Sort data            |
+| `range()`     | Generate sequence    |
+| `enumerate()` | Get index + value    |
+| `zip()`       | Combine iterables    |
+
+### Example
+
+numbers = [10, 20, 30]
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+```
+
+### Output
+3
+30
+10
+60
+
+
+# 7. User-defined Function
+
+A function created by the programmer is called a **user-defined function**.
+
+### Syntax
+
+def function_name():
+    statements
+```
+
+### Example
+
+def welcome():
+    print("Welcome to Python")
+
+welcome()
+
+
+# 8. Function Without Argument and Without Return Value
+
+This function does not take any input and does not return any value.
+
+### Example
+
+def greet():
+    print("Hello Mayuri")
+
+greet()
+```
+
+### Output
+Hello Mayuri
+
+
+# 9. Function With Argument and Without Return Value
+
+This function accepts input through arguments but does not return a value.
+
+### Example
+
+def addition(a, b):
+    print(a + b)
+
+addition(10, 20)
+```
+
+### Output
+30
+```
+
+Here:
+
+* `a` and `b` → parameters
+* `10` and `20` → arguments
+
+---
+
+# 10. Function Without Argument and With Return Value
+
+This function does not accept arguments but returns a value.
+
+### Example
+
+def addition():
+    a = 10
+    b = 20
+    return a + b
+
+result = addition()
+
+print(result)
+```
+
+### Output
+30
+
+
+# 11. Function With Argument and With Return Value
+
+This function accepts arguments and returns a value.
+
+### Example
+
+def addition(a, b):
+    return a + b
+
+result = addition(10, 20)
+
+print(result)
+```
+
+### Output
+30
+```
+
+This is one of the most commonly used function types.
+
+---
+
+# 12. Parameter
+
+A variable written inside the function definition is called a **parameter**.
+
+def greet(name):
+    print("Hello", name)
+```
+
+Here:
+name → parameter
+
+
+# 13. Argument
+
+The actual value passed to a function during function calling is called an **argument**.
+
+greet("Mayuri")
+```
+
+Here:
+"Mayuri" → argument
+```
+
+### Difference
+
+| Parameter                      | Argument                    |
+| ------------------------------ | --------------------------- |
+| Written in function definition | Passed during function call |
+| Acts like a variable           | Actual value                |
+| Example: `name`                | Example: `"Mayuri"`         |
+
+---
+
+# 14. Positional Arguments
+
+Arguments passed according to their position are called positional arguments.
+
+### Example
+
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student("Mayuri", 22)
+```
+
+### Output
+Name: Mayuri
+Age: 22
+```
+
+Here:
+name = "Mayuri"
+age = 22
+
+
+# 15. Keyword Arguments
+
+Arguments passed using parameter names are called keyword arguments.
+
+### Example
+
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student(age=22, name="Mayuri")
+```
+
+### Output
+Name: Mayuri
+Age: 22
+```
+
+Order does not matter when using keyword arguments.
+
+---
+
+# 16. Default Arguments
+
+A parameter with a default value is called a default argument.
+
+### Example
+
+def greet(name="Mayuri"):
+    print("Hello", name)
+
+greet()
+```
+
+### Output
+Hello Mayuri
+```
+
+If we provide a value:
+
+greet("Priya")
+```
+
+Output:
+Hello Priya
+```
+
+The provided value replaces the default value.
+
+---
+
+# 17. Variable-Length Arguments
+
+When we don't know how many arguments will be passed, we can use variable-length arguments.
+
+There are two types:
+1. *args
+2. **kwargs
+
+
+# 18. *args
+
+`*args` is used to accept multiple positional arguments.
+
+### Example
+
+def addition(*numbers):
+    print(numbers)
+
+addition(10, 20, 30, 40)
+```
+
+### Output
+(10, 20, 30, 40)
+```
+
+`*args` stores the values as a **tuple**.
+
+### Example
+
+def addition(*numbers):
+    total = 0
+
+    for n in numbers:
+        total = total + n
+
+    return total
+
+print(addition(10, 20, 30))
+```
+
+### Output
+60
+
+
+# 19. **kwargs
+
+`**kwargs` is used to accept multiple keyword arguments.
+
+It stores the values as a **dictionary**.
+
+### Example
+
+def student(**details):
+    print(details)
+
+student(name="Mayuri", age=22, city="Nashik")
+```
+
+### Output
+{'name': 'Mayuri', 'age': 22, 'city': 'Nashik'}
+```
+
+### Example
+
+def student(**details):
+    for key, value in details.items():
+        print(key, "=", value)
+
+student(name="Mayuri", age=22)
+```
+
+### Output
+name = Mayuri
+age = 22
+
+
+# 20. Return Statement
+
+`return` is used to send a value back from a function.
+
+### Example
+
+def addition(a, b):
+    return a + b
+
+result = addition(10, 20)
+
+print(result)
+```
+
+### Output
+30
+
+
+# 21. print() vs return
+
+This is an important interview concept.
+
+### Using print()
+
+def addition(a, b):
+    print(a + b)
+
+result = addition(10, 20)
+
+print(result)
+```
+
+Output:
+30
+None
+```
+
+### Using return
+
+def addition(a, b):
+    return a + b
+
+result = addition(10, 20)
+
+print(result)
+```
+
+Output:
+30
+```
+
+### Difference
+
+| `print()`                                    | `return`                      |
+| -------------------------------------------- | ----------------------------- |
+| Displays value                               | Sends value back              |
+| Mainly used for output                       | Used to return result         |
+| Cannot directly store its displayed value    | Returned value can be stored  |
+| Function returns `None` if no return is used | Function can return any value |
+
+---
+
+# 22. Function Returning Multiple Values
+
+Python allows a function to return multiple values.
+
+### Example
+
+def calculation(a, b):
+    return a + b, a - b, a * b
+
+result = calculation(10, 5)
+
+print(result)
+```
+
+### Output
+(15, 5, 50)
+```
+
+Python returns them as a tuple.
+
+We can also unpack them:
+
+def calculation(a, b):
+    return a + b, a - b
+
+addition, subtraction = calculation(10, 5)
+
+print(addition)
+print(subtraction)
+
+
+# 23. Local Variable
+
+A variable created inside a function is called a local variable.
+
+def test():
+    x = 10
+    print(x)
+
+test()
+```
+
+Here `x` is a local variable.
+
+It is normally accessible only inside that function.
+
+---
+
+# 24. Global Variable
+
+A variable created outside a function is called a global variable.
+
+x = 100
+
+def test():
+    print(x)
+
+test()
+```
+
+### Output
+100
+
+
+# 25. Global Keyword
+
+The `global` keyword is used when we want to modify a global variable inside a function.
+
+### Example
+
+x = 10
+
+def change():
+    global x
+    x = 20
+
+change()
+
+print(x)
+```
+
+### Output
+20
+
+
+# 26. Scope of Function
+
+Scope means the area where a variable can be accessed.
+
+Main scopes:
+Local Scope
+Global Scope
+```
+
+Example:
+
+x = 100
+
+def test():
+    y = 200
+    print(x)
+    print(y)
+
+test()
+```
+
+Here:
+x → Global
+y → Local
+
+
+# 27. Lambda Function
+
+A **lambda function** is a small anonymous function.
+
+It is created using the `lambda` keyword.
+
+### Syntax
+
+lambda arguments: expression
+```
+
+### Example
+
+square = lambda x: x * x
+
+print(square(5))
+```
+
+### Output
+25
+```
+
+Normal function:
+
+def square(x):
+    return x * x
+```
+
+Lambda:
+
+square = lambda x: x * x
+
+
+# 28. Lambda With Multiple Arguments
+
+addition = lambda a, b: a + b
+
+print(addition(10, 20))
+```
+
+### Output
+30
+
+
+# 29. Recursive Function
+
+A function that calls itself is called a **recursive function**.
+
+### Example: Factorial
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+### Output
+120
+```
+
+Flow:
+5 × 4 × 3 × 2 × 1
+= 120
+```
+
+A recursive function must have a **base condition**, otherwise it can continue indefinitely until Python raises a recursion-related error.
+
+---
+
+# 30. Nested Function
+
+A function defined inside another function is called a nested function.
+
+### Example
+
+def outer():
+    
+    def inner():
+        print("Hello from inner function")
+
+    inner()
+
+outer()
+```
+
+### Output
+Hello from inner function
+```
+
+Here:
+outer() → outer function
+inner() → nested/inner function
+
+
+# 31. Function as an Argument
+
+Python allows us to pass a function as an argument to another function.
+
+### Example
+
+def square(x):
+    return x * x
+
+def calculate(func, number):
+    return func(number)
+
+print(calculate(square, 5))
+```
+
+### Output
+25
+
+
+# 32. Function as a Return Value
+
+A function can also return another function.
+
+### Example
+
+def outer():
+    
+    def inner():
+        print("Hello")
+
+    return inner
+
+result = outer()
+
+result()
+```
+
+### Output
+Hello
+
+
+# 33. First-Class Functions
+
+In Python, functions are treated as objects.
+
+This means functions can be:
+
+* Stored in variables
+* Passed as arguments
+* Returned from functions
+* Stored in collections
+
+### Example
+
+def greet():
+    print("Hello")
+
+x = greet
+
+x()
+```
+
+### Output
+Hello
+
+
+# 34. Generator Function
+
+A function that uses the `yield` keyword is called a generator function.
+
+### Example
+
+def numbers():
+    yield 1
+    yield 2
+    yield 3
+
+for n in numbers():
+    print(n)
+```
+
+### Output
+1
+2
+3
+```
+
+`yield` returns a value one at a time and preserves the function's state for the next iteration.
+
+---
+
+# 35. `yield` vs `return`
+
+| `return`                          | `yield`                          |
+| --------------------------------- | -------------------------------- |
+| Returns from the function         | Produces values from a generator |
+| Function execution ends           | Function can continue later      |
+| Usually returns a result directly | Produces values one by one       |
+| Used in normal functions          | Used in generator functions      |
+
+---
+
+# 36. Docstring
+
+A docstring is a description written inside a function to explain what it does.
+
+### Example
+
+def addition(a, b):
+    """This function returns the addition of two numbers."""
+    return a + b
+
+print(addition(10, 20))
+```
+
+We can access the docstring using:
+
+print(addition.__doc__)
+
+
+# 37. Type Hints
+
+Type hints tell us what type of data a function expects and/or returns.
+
+### Example
+
+def addition(a: int, b: int) -> int:
+    return a + b
+```
+
+Here:
+a: int → a should be an integer
+b: int → b should be an integer
+-> int → function is intended to return an integer
+```
+
+Type hints improve readability and tool support, but Python generally does not enforce them automatically at runtime.
+
+---
+
+# 38. Function With User Input
+
+def addition():
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    print("Addition =", a + b)
+
+addition()
+```
+
+### Sample Output
+Enter first number: 10
+Enter second number: 20
+Addition = 30
+
+
+# 39. Function to Check Even or Odd
+
+def check_even_odd(number):
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+print(check_even_odd(10))
+```
+
+### Output
+Even
+
+
+# 40. Function to Find Maximum of Three Numbers
+
+def maximum(a, b, c):
+    if a > b and a > c:
+        return a
+    elif b > c:
+        return b
+    else:
+        return c
+
+print(maximum(10, 30, 20))
+```
+
+### Output
+30
+
+
+# 41. Function for Factorial
+
+def factorial(n):
+    result = 1
+
+    for i in range(1, n + 1):
+        result = result * i
+
+    return result
+
+print(factorial(5))
+```
+
+### Output
+120
+
+
+# 42. Function for Prime Number
+
+def is_prime(n):
+
+    if n < 2:
+        return False
+
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+
+    return True
+
+print(is_prime(7))
+```
+
+### Output
+True
+
+
+# 43. Function With Default + Keyword Arguments
+
+def student(name, course="Python"):
+    print("Name:", name)
+    print("Course:", course)
+
+student(name="Mayuri")
+```
+
+### Output
+Name: Mayuri
+Course: Python
+
+
+# 44. Argument Order
+
+Python allows different types of arguments, but their order has rules.
+
+Example:
+
+def student(name, age, city="Pune"):
+    print(name, age, city)
+```
+
+Valid:
+
+student("Mayuri", 22)
+student("Mayuri", 22, "Nashik")
+student(name="Mayuri", age=22)
+```
+
+A required positional parameter generally cannot come after a default parameter:
+
+# Invalid
+def test(a=10, b):
+    pass
+
+
+# 45. `pass` in Function
+
+`pass` is used when we want to create an empty function temporarily.
+
+def test():
+    pass
+```
+
+The function does nothing.
+
+---
+
+# 46. Calling a Function Multiple Times
+
+def greet():
+    print("Hello")
+
+greet()
+greet()
+greet()
+```
+
+### Output
+Hello
+Hello
+Hello
+
+
+# 47. Function Calling Another Function
+
+def addition(a, b):
+    return a + b
+
+def result():
+    answer = addition(10, 20)
+    print(answer)
+
+result()
+```
+
+### Output
+30
+
+
+# 48. Advantages of Functions
+
+### 1. Reusability
+
+Write once and use multiple times.
+
+### 2. Readability
+
+Code becomes easier to understand.
+
+### 3. Maintainability
+
+Changes can be made in one place.
+
+### 4. Debugging
+
+Errors are easier to find.
+
+### 5. Modularity
+
+Large programs can be divided into smaller tasks.
+
+---
+
+# 49. Important Function Terms
+
+| Term       | Meaning                           |
+| ---------- | --------------------------------- |
+| `def`      | Defines a function                |
+| Function   | Reusable block of code            |
+| Parameter  | Variable in function definition   |
+| Argument   | Actual value passed to function   |
+| Call       | Executes a function               |
+| `return`   | Sends value back                  |
+| `*args`    | Multiple positional arguments     |
+| `**kwargs` | Multiple keyword arguments        |
+| `lambda`   | Anonymous function                |
+| `yield`    | Produces generator values         |
+| Recursion  | Function calling itself           |
+| Docstring  | Function documentation            |
+| Scope      | Area where variable is accessible |
+
+---
+
+# 50. Function Types – Quick Revision
+
+| Type                   | Example                    |
+| ---------------------- | -------------------------- |
+| Built-in               | `len()`, `print()`         |
+| User-defined           | `def greet():`             |
+| No argument, no return | `def greet(): print()`     |
+| Argument, no return    | `def add(a,b): print()`    |
+| No argument, return    | `def add(): return`        |
+| Argument + return      | `def add(a,b): return a+b` |
+| Default argument       | `def greet(name="Mayuri")` |
+| Positional argument    | `add(10,20)`               |
+| Keyword argument       | `add(a=10,b=20)`           |
+| Variable positional    | `*args`                    |
+| Variable keyword       | `**kwargs`                 |
+| Lambda                 | `lambda x: x*x`            |
+| Recursive              | Function calls itself      |
+| Nested                 | Function inside function   |
+| Generator              | Function using `yield`     |
+
+---
+
+# 51. Important Interview Questions
+
+### Q1. What is a function?
+
+A function is a reusable block of code designed to perform a specific task.
+
+### Q2. Which keyword is used to define a function?
+
+`def`
+
+### Q3. What is a function call?
+
+A function call is used to execute a function.
+
+greet()
+```
+
+### Q4. What is a parameter?
+
+A parameter is a variable defined in the function definition.
+
+### Q5. What is an argument?
+
+An argument is the actual value passed to a function during the function call.
+
+### Q6. What is the difference between print and return?
+
+`print()` displays a value, while `return` sends a value back from the function.
+
+### Q7. What is `*args`?
+
+`*args` allows a function to accept multiple positional arguments.
+
+### Q8. What is `**kwargs`?
+
+`**kwargs` allows a function to accept multiple keyword arguments.
+
+### Q9. What is a lambda function?
+
+A lambda function is a small anonymous function created using the `lambda` keyword.
+
+### Q10. What is recursion?
+
+Recursion is a technique where a function calls itself.
+
+### Q11. What is a local variable?
+
+A variable created inside a function is called a local variable.
+
+### Q12. What is a global variable?
+
+A variable defined outside a function is called a global variable.
+
+### Q13. What is a generator function?
+
+A function that uses `yield` to produce values is called a generator function.
+
+### Q14. Can a Python function return multiple values?
+
+Yes.
+
+def test():
+    return 10, 20, 30
+```
+
+### Q15. Can we pass a function as an argument?
+
+Yes. Python functions are first-class objects.
+
+---
+
+# 52. Complete Simple Example
+
+def student(name, age, course="Python"):
+
+    print("Name:", name)
+    print("Age:", age)
+    print("Course:", course)
+
+student("Mayuri", 22)
+```
+
+### Output
+Name: Mayuri
+Age: 22
+Course: Python
+
+
+# 53. Function Execution Flow
+Function Definition
+        ↓
+Function Call
+        ↓
+Arguments Passed
+        ↓
+Function Body Executes
+        ↓
+Return Value
+        ↓
+Result Used
+```
+
+### Example
+
+def addition(a, b):
+    return a + b
+
+result = addition(10, 20)
+
+print(result)
+```
+
+Flow:
+addition(10, 20)
+       ↓
+a = 10
+b = 20
+       ↓
+10 + 20
+       ↓
+return 30
+       ↓
+result = 30
+       ↓
+print(result)
+```
+
+# ⭐ Final Revision
+FUNCTION
+│
+├── Built-in Function
+│   ├── print()
+│   ├── len()
+│   ├── type()
+│   └── sum()
+│
+└── User-defined Function
+    │
+    ├── No Argument + No Return
+    ├── Argument + No Return
+    ├── No Argument + Return
+    ├── Argument + Return
+    │
+    ├── Positional Arguments
+    ├── Keyword Arguments
+    ├── Default Arguments
+    ├── *args
+    ├── **kwargs
+    │
+    ├── Lambda Function
+    ├── Recursive Function
+    ├── Nested Function
+    └── Generator Function
+```
+
+## One-Line Definition
+
+> **A function is a reusable block of code that performs a specific task and can accept inputs and return an output.**
+| `print()`                                        | `return`                                        |
+| ------------------------------------------------ | ----------------------------------------------- |
+| Displays the output on the screen                | Sends a value back from the function            |
+| Mainly used to show information                  | Used to get/use the result outside the function |
+| Cannot be directly stored as the function result | Can be stored in a variable                     |
+| Does **not** stop the function necessarily       | Immediately stops the function                  |
+| If no `return` is used, function returns `None`  | Can return a value                              |
+
+
+print()  → Show the result 
+return   → Give back the result 

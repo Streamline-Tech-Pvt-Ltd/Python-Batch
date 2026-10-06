@@ -1,0 +1,39 @@
+# Git commands
+1. git --version OR git -V
+Purpose:Check if Git is installed and see its version.
+
+2. git clone <-link>
+purpose:Copy a GitHub repository to your computer.
+
+3. git status
+purpose:Check the current status of your Git project OR
+        Shows which files are changed, added, or ready to be committed.
+
+4. git add .
+purpose:Adds all changed files for the next commit.
+OR git add <filename>
+purpose:Adds only the specified file for the next commit.
+
+5. git commit -m "message"
+purpose:Save your changes in Git with a short message.
+
+6. git push origin main
+purpose:Upload your committed changes to GitHub.
+-------------------------------------------------------------------------------------------------
+# Git Configuration
+  Git configuration is used to set your name and email in Git &
+  Helps Git identify who made the changes in a project.
+
+* Git Configuration Commands 
+1. git config --global user.name "Username"
+Ex:.git config --global user.name "urmilasaid07"
+
+2. git config --global user.email "user email"
+Ex:.git config --global user.email "urmilasaid07@gmail.com"
+
+3. git config --list
+   Shows all the Git settings configured on your computer, such as username, email
+   and other preferences.
+
+
+
