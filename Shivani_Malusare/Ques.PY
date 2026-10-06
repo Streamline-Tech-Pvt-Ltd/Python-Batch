@@ -2253,3 +2253,1052 @@ if age >= 18:
 **elif:** `elif` checks another condition when the previous condition is false.
 
 **else:** `else` executes when all preceding conditions are false.
+
+---
+
+# 1. Nested `if`
+
+## Definition
+
+A **nested `if`** is an `if` statement written inside another `if` statement.
+
+## Syntax
+
+```python
+if condition1:
+    if condition2:
+        statement
+```
+
+## Example
+
+```python
+age = 20
+citizen = True
+
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
+```
+
+## Interview Answer
+
+> A nested if is an if statement inside another if statement. It is used to check dependent conditions.
+
+---
+
+# 2. Loops
+
+## Definition
+
+A **loop** is used to execute a block of code repeatedly.
+
+## Types of Loops in Python
+
+1. `for` loop
+2. `while` loop
+
+---
+
+# 3. `for` Loop
+
+## Definition
+
+A `for` loop is used to iterate over a sequence or a range of values.
+
+## Syntax
+
+```python
+for variable in sequence:
+    statement
+```
+
+## Example
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## `range()` Function
+
+### Syntax
+
+```python
+range(start, stop, step)
+```
+
+### Example
+
+```python
+for i in range(2, 11, 2):
+    print(i)
+```
+
+### Output
+
+```text
+2
+4
+6
+8
+10
+```
+
+### Important
+
+The `stop` value is not included.
+
+```python
+range(1, 6)
+```
+
+gives:
+
+```text
+1 2 3 4 5
+```
+
+## Interview Answer
+
+> A for loop is used to iterate over a sequence or range of values.
+
+---
+
+# 4. `while` Loop
+
+## Definition
+
+A `while` loop executes a block of code as long as the given condition is `True`.
+
+## Syntax
+
+```python
+while condition:
+    statement
+```
+
+## Example
+
+```python
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Important
+
+The variable should be updated inside the loop.
+
+```python
+i += 1
+```
+
+Otherwise, the loop may become an **infinite loop**.
+
+## Interview Answer
+
+> A while loop repeatedly executes a block of code as long as the given condition is true.
+
+---
+
+# 5. `for` Loop vs `while` Loop
+
+| `for` Loop                               | `while` Loop                                     |
+| ---------------------------------------- | ------------------------------------------------ |
+| Used to iterate over a sequence or range | Used based on a condition                        |
+| Generally used when iteration is known   | Generally used when condition controls iteration |
+| Uses `for` keyword                       | Uses `while` keyword                             |
+| Example: `for i in range(5)`             | Example: `while i < 5`                           |
+
+## Interview Answer
+
+> We generally use a for loop when iterating over a sequence or known range, and a while loop when execution depends on a condition.
+
+---
+
+# 6. Reverse a Number
+
+## Definition
+
+Reversing a number means arranging its digits from last to first.
+
+### Example
+
+```text
+Input  : 12345
+Output : 54321
+```
+
+## Program
+
+```python
+num = 12345
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+print(reverse)
+```
+
+### Output
+
+```text
+54321
+```
+
+## Logic
+
+```text
+% 10  → Gets the last digit
+// 10 → Removes the last digit
+```
+
+### Example
+
+```text
+12345 % 10 = 5
+1234  % 10 = 4
+123   % 10 = 3
+12    % 10 = 2
+1     % 10 = 1
+```
+
+## Interview Answer
+
+> To reverse a number, I extract the last digit using `% 10` and remove the last digit using `// 10`.
+
+---
+
+# 7. Reverse a String
+
+## Example
+
+```python
+text = "python"
+
+reverse = text[::-1]
+
+print(reverse)
+```
+
+### Output
+
+```text
+nohtyp
+```
+
+## String Slicing
+
+```python
+string[start:stop:step]
+```
+
+For:
+
+```python
+text[::-1]
+```
+
+the step is `-1`, so the string is read from right to left.
+
+## Interview Answer
+
+> We can reverse a string using slicing with a step of `-1`.
+
+---
+
+# 8. Factorial Number
+
+## Definition
+
+The **factorial of a number `n`** is the product of all positive integers from `1` to `n`.
+
+## Formula
+
+```text
+n! = n × (n-1) × (n-2) × ... × 1
+```
+
+### Example
+
+```text
+5! = 5 × 4 × 3 × 2 × 1
+   = 120
+```
+
+### Special Case
+
+```text
+0! = 1
+```
+
+---
+
+## Factorial Using `for` Loop
+
+```python
+num = 5
+fact = 1
+
+for i in range(1, num + 1):
+    fact = fact * i
+
+print(fact)
+```
+
+### Output
+
+```text
+120
+```
+
+---
+
+## Factorial Using `while` Loop
+
+```python
+num = 5
+fact = 1
+i = 1
+
+while i <= num:
+    fact = fact * i
+    i += 1
+
+print(fact)
+```
+
+### Output
+
+```text
+120
+```
+
+## Why `fact = 1`?
+
+Factorial uses multiplication.
+
+If we write:
+
+```python
+fact = 0
+```
+
+then:
+
+```text
+0 × any number = 0
+```
+
+So the result will always be `0`.
+
+## Interview Answer
+
+> Factorial is the product of all positive integers from 1 to a given number. For example, 5 factorial is 120.
+
+---
+
+# 9. Loop Control Statements
+
+Loop control statements change the normal execution of a loop.
+
+## Types
+
+1. `break`
+2. `continue`
+3. `pass`
+
+---
+
+# 10. `break`
+
+## Definition
+
+`break` is used to immediately terminate the loop.
+
+## Example
+
+```python
+for i in range(1, 10):
+
+    if i == 5:
+        break
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+```
+
+When `i` becomes `5`, the loop stops.
+
+## Interview Answer
+
+> Break is used to immediately terminate the loop.
+
+---
+
+# 11. `continue`
+
+## Definition
+
+`continue` skips the current iteration and moves to the next iteration.
+
+## Example
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+4
+5
+```
+
+Here, `3` is skipped.
+
+## Interview Answer
+
+> Continue skips the current iteration and moves to the next iteration.
+
+---
+
+# 12. `pass`
+
+## Definition
+
+`pass` is a null statement. It does nothing.
+
+## Example
+
+```python
+for i in range(5):
+    pass
+```
+
+## Use
+
+`pass` is mainly used as a **placeholder** when code will be written later.
+
+## Interview Answer
+
+> Pass is a null statement used as a placeholder. It does nothing when executed.
+
+---
+
+# 13. `break` vs `continue` vs `pass`
+
+| Statement  | Meaning                     |
+| ---------- | --------------------------- |
+| `break`    | Stops the complete loop     |
+| `continue` | Skips the current iteration |
+| `pass`     | Does nothing                |
+
+### Easy Memory Trick
+
+```text
+break     → STOP
+continue  → SKIP
+pass      → DO NOTHING
+```
+
+---
+
+# 14. Function
+
+## Definition
+
+A **function** is a reusable block of code designed to perform a specific task.
+
+## Syntax
+
+```python
+def function_name():
+    statement
+```
+
+## Example
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+```
+
+### Output
+
+```text
+Hello
+```
+
+## Advantages of Functions
+
+* Code reusability
+* Avoids code repetition
+* Easy debugging
+* Better code organization
+* Improves readability
+
+## Interview Answer
+
+> A function is a reusable block of code that performs a specific task.
+
+---
+
+# 15. Function with Parameters
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```text
+a, b   → Parameters
+10, 20 → Arguments
+```
+
+---
+
+# 16. Parameter vs Argument
+
+## Parameter
+
+A parameter is a variable defined in the function definition.
+
+```python
+def add(a, b):
+    print(a + b)
+```
+
+Here:
+
+```text
+a and b → Parameters
+```
+
+## Argument
+
+An argument is the actual value passed during the function call.
+
+```python
+add(10, 20)
+```
+
+Here:
+
+```text
+10 and 20 → Arguments
+```
+
+## Interview Answer
+
+> A parameter is a variable defined in the function definition, while an argument is the actual value passed during the function call.
+
+---
+
+# 17. Five Types of Function Arguments
+
+Python commonly has five types of function arguments:
+
+1. Positional Arguments
+2. Keyword Arguments
+3. Default Arguments
+4. Variable-Length Positional Arguments
+5. Variable-Length Keyword Arguments
+
+---
+
+# 18. Positional Arguments
+
+## Definition
+
+Arguments are passed according to the position of parameters.
+
+## Example
+
+```python
+def student(name, age):
+    print(name)
+    print(age)
+
+student("Shivani", 22)
+```
+
+Here:
+
+```text
+name = Shivani
+age  = 22
+```
+
+The position matters.
+
+## Interview Answer
+
+> Positional arguments are passed according to the position of the parameters.
+
+---
+
+# 19. Keyword Arguments
+
+## Definition
+
+Arguments are passed using parameter names.
+
+## Example
+
+```python
+def student(name, age):
+    print(name)
+    print(age)
+
+student(age=22, name="Shivani")
+```
+
+The order does not matter because parameter names are specified.
+
+## Interview Answer
+
+> Keyword arguments are passed using parameter names.
+
+---
+
+# 20. Default Arguments
+
+## Definition
+
+A default argument has a predefined value.
+
+## Example
+
+```python
+def student(name, city="Pune"):
+    print(name)
+    print(city)
+
+student("Shivani")
+```
+
+### Output
+
+```text
+Shivani
+Pune
+```
+
+If we provide a value:
+
+```python
+student("Shivani", "Mumbai")
+```
+
+### Output
+
+```text
+Shivani
+Mumbai
+```
+
+## Interview Answer
+
+> A default argument has a predefined value that is used when the caller does not provide a value.
+
+---
+
+# 21. Variable-Length Positional Arguments — `*args`
+
+## Definition
+
+`*args` allows a function to accept any number of positional arguments.
+
+## Example
+
+```python
+def add(*numbers):
+    total = 0
+
+    for i in numbers:
+        total = total + i
+
+    return total
+
+print(add(10, 20, 30, 40))
+```
+
+### Output
+
+```text
+100
+```
+
+## Important
+
+```text
+*args → Tuple
+```
+
+## Interview Answer
+
+> `*args` allows a function to accept multiple positional arguments. These arguments are stored as a tuple.
+
+---
+
+# 22. Variable-Length Keyword Arguments — `**kwargs`
+
+## Definition
+
+`**kwargs` allows a function to accept any number of keyword arguments.
+
+## Example
+
+```python
+def student(**details):
+    print(details)
+
+student(name="Shivani", age=22, city="Pune")
+```
+
+### Output
+
+```text
+{'name': 'Shivani', 'age': 22, 'city': 'Pune'}
+```
+
+## Important
+
+```text
+**kwargs → Dictionary
+```
+
+## Interview Answer
+
+> `**kwargs` allows a function to accept multiple keyword arguments. These arguments are stored as a dictionary.
+
+---
+
+# 23. `*args` vs `**kwargs`
+
+| `*args`                       | `**kwargs`                 |
+| ----------------------------- | -------------------------- |
+| Multiple positional arguments | Multiple keyword arguments |
+| Stored as tuple               | Stored as dictionary       |
+| Uses `*`                      | Uses `**`                  |
+
+### Example
+
+```python
+def fun(*args):
+    print(args)
+
+fun(10, 20, 30)
+```
+
+```python
+def fun(**kwargs):
+    print(kwargs)
+
+fun(name="Shivani", age=22)
+```
+
+---
+
+# 24. Python Function Types
+
+## 24.1 Built-in Functions
+
+Built-in functions are functions already provided by Python.
+
+### Examples
+
+```python
+print()
+len()
+type()
+sum()
+max()
+min()
+```
+
+### Example
+
+```python
+numbers = [10, 20, 30]
+
+print(len(numbers))
+```
+
+---
+
+# 25. User-Defined Functions
+
+A user-defined function is created by the programmer using `def`.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+print(add(10, 20))
+```
+
+### Interview Answer
+
+> A user-defined function is a function created by the programmer to perform a specific task.
+
+---
+
+# 26. Lambda Function
+
+## Definition
+
+A lambda function is a small anonymous function created using the `lambda` keyword.
+
+## Syntax
+
+```python
+lambda arguments: expression
+```
+
+## Example
+
+```python
+square = lambda x: x * x
+
+print(square(5))
+```
+
+### Output
+
+```text
+25
+```
+
+## Interview Answer
+
+> A lambda function is a small anonymous function written using the `lambda` keyword.
+
+---
+
+# 27. Recursive Function
+
+## Definition
+
+A recursive function is a function that calls itself.
+
+## Example
+
+```python
+def factorial(n):
+
+    if n == 0:
+        return 1
+
+    return n * factorial(n - 1)
+
+print(factorial(5))
+```
+
+### Output
+
+```text
+120
+```
+
+## Important
+
+A recursive function must have a **base condition** to stop recursion.
+
+```python
+if n == 0:
+    return 1
+```
+
+## Interview Answer
+
+> A recursive function is a function that calls itself until a base condition is reached.
+
+---
+
+# 28. Higher-Order Function
+
+## Definition
+
+A higher-order function is a function that takes another function as an argument or returns another function.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+def calculate(fun, a, b):
+    return fun(a, b)
+
+result = calculate(add, 10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```text
+add       → Function passed as argument
+calculate → Higher-order function
+```
+
+## Interview Answer
+
+> A higher-order function is a function that accepts another function as an argument or returns another function.
+
+---
+
+# 29. Function Types Based on Arguments and Return Value
+
+There are four common categories.
+
+## 1. No Argument and No Return Value
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+```
+
+---
+
+## 2. Argument and No Return Value
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+---
+
+## 3. No Argument and With Return Value
+
+```python
+def number():
+    return 10
+
+x = number()
+
+print(x)
+```
+
+---
+
+## 4. Argument and With Return Value
+
+```python
+def add(a, b):
+    return a + b
+
+x = add(10, 20)
+
+print(x)
+```
+
+### Output
+
+```text
+30
+```
+
+---
+
+# 30. `return` Statement
+
+## Definition
+
+`return` is used to send a value from a function back to the caller.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+## `print()` vs `return`
+
+| `print()`                                                | `return`                                   |
+| -------------------------------------------------------- | ------------------------------------------ |
+| Displays the result                                      | Sends the result back                      |
+| Used for output                                          | Used to return a value                     |
+| Cannot normally be used by caller as the returned result | Returned value can be stored in a variable |
+
+---
+

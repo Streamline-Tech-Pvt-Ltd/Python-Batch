@@ -1013,4 +1013,469 @@ items.forEach(function(item) {
 | `querySelector()`          | CSS selector | First matching element |
 | `querySelectorAll()`       | CSS selector | All matching elements  |
 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+# Changing an attribute 
+Method	Purpose
+getAttribute()	    Get an attribute value
+setAttribute()	    Add/change an attribute
+removeAttribute()	Remove an attribute
+
+
+# Common HTML Attributes
+id
+class
+src
+href
+alt
+title
+value
+placeholder
+type
+disabled
+checked
+
+Changing an Attribute:
+To change the value of an HTML attribute, use this syntax:
+document.getElementById(id).attribute = new value
+Ex-
+Changes the value of the src attribute of an <img> element:
+
+<img id="myImage" src="google.png">
+
+<script>
+document.getElementById("myImage").src = "image_1.jpg";
+</script>
+
+
+1. Changing href : We can change the destination of a link.
+Ex :
+<a id="myLink" href="https://google.com">
+    Open Website
+</a>
+
+<script>
+const link = document.getElementById("myLink");
+link.href = "https://example.com";
+</script>
+
+2. getAttribute()
+The getAttribute() method is used to get the value of an HTML attribute.
+Syntax :
+element.getAttribute("attribute");
+Example
+<img id="photo" src="image.jpg">
+
+<script>
+
+const image = document.getElementById("photo");
+
+console.log(image.getAttribute("src"));
+
+</script>
+
+3. removeAttribute()
+The removeAttribute() method removes an attribute.
+Syntax:
+element.removeAttribute("attribute");
+Ex:
+<input id="username" type="text" disabled>
+
+<script>
+
+const input = document.getElementById("username");
+
+input.removeAttribute("disabled");
+
+</script>
+
+------------------------------------------------------------------------------------------------------------------------
+# HTML DOM - Changing CSS
+
+The HTML DOM allows JavaScript to change the style of HTML elements.
+To change the style of an HTML element, use this 
+syntax: document.getElementById(id).style.property= new style
+
+ex –
+<p id="demo">Hello World!</p>
+
+<script>
+document.getElementById("demo").style.color = "blue";
+</script>
+
+
+# Changing Multiple Styles
+const element = document.getElementById("demo");
+
+element.style.color = "white";
+element.style.backgroundColor = "blue";
+element.style.fontSize = "30px";
+element.style.padding = "20px";
+element.style.borderRadius = "10px";
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# Classlist
+classList is a very important DOM property used to work with the class attribute of an HTML element.
+
+It allows us to:
+Add a class
+Remove a class
+Toggle a class
+Check whether a class exists
+Replace one class with another
+
+Main methods:
+1. add() : add() is used to add a CSS class to an HTML element.
+Syntax: 
+<script>
+element.classList.add("active");
+</script>
+
+2. remove() : remove() is used to remove a CSS class from an HTML element.
+Syntax:
+<script>
+element.classList.remove("active");
+</script>
+
+3. toggle() : toggle() works like an ON/OFF switch.
+              If class exists → it removes the class. 
+              If class does not exist → it adds the class.
+
+Syntax:
+<script>
+element.classList.toggle("active");
+</script>
+
+
+4. contains() : contains() checks whether an element has a particular CSS class.
+Syntax: 
+<script>
+element.classList.contains("active");
+</script>
+
+
+* Example of addclass-
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .highlight {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<p id="text">Hello Students</p>
+
+<button onclick="addClass()">Add Class</button>
+
+<script>
+function addClass() {
+    const text = document.getElementById("text");
+
+    text.classList.add("highlight");
+}
+</script>
+
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Creating HTML Elements
+The document.createElement() method is used to create a new HTML element using JavaScript.
+Syntax: 
+document.createElement("elementName");
+
+<div id="container"></div>
+<script>
+
+const paragraph = document.createElement("p");
+paragraph.textContent = "Hello Students";
+console.log(paragraph);
+
+</script>
+
+
+1.appendChild(): appendChild() adds a newly created element as the last child of another element.
+Ex: 
+<div id="container"></div>
+<script>
+const paragraph = document.createElement("p");
+paragraph.textContent = "Hello Students";
+const container = document.getElementById("container");
+container.appendChild(paragraph);
+</script>
+
+
+2. append(): append() is used to add content or elements at the end of an element.
+It can add:
+•	HTML elements 
+•	Text 
+•	Multiple values
+
+Ex: 
+const container = document.getElementById("container");
+const p = document.createElement("p");
+p.textContent = "Hello";
+container.append(p);
+
+
+3. prepend(): prepend() adds content at the beginning of an element.
+Ex: 
+const p = document.createElement("p");
+p.textContent = "First Student";
+container.prepend(p);
+
+
+4. remove() :remove() removes an element from the DOM.
+Ex: 
+<p id="text">Hello Students</p>
+<button onclick="removeText()">Remove</button>
+<script>
+function removeText() {
+   const text = document.getElementById("text");
+    text.remove();
+}
+</script>
+
+
+5. removeChild()
+removeChild() removes a child element from its parent.
+Ex: 
+<ul id="list">
+    <li id="item">Apple</li>
+</ul>
+<script>
+const list = document.getElementById("list");
+const item = document.getElementById("item");
+list.removeChild(item);
+</script>
+
+----------------------------------------------------------------------------------------------------------------------
+
+# DOM Traversing / Navigation
+
+What is DOM Traversing?
+DOM Traversing is the process of finding and navigating between parent, child, and sibling elements.
+
+1. parentElement: parentElement returns the parent HTML element.
+Ex: 
+<div id="container">
+    <p id="text">Hello</p>
+</div>
+
+<script>
+const text = document.getElementById("text");
+console.log(text.parentElement);
+</script>
+
+2. Children: children returns all child elements of an element.
+Ex: 
+<div id="container">
+    <p>One</p>
+    <p>Two</p>
+    <button>Click</button>
+</div>
+
+<script>
+const container = document.getElementById("container");
+console.log(container.children);
+</script>
+
+3.firstElementChild: Returns the first child element.
+Ex: 
+const container = document.getElementById("container"); 
+console.log(container.firstElementChild);
+
+4. lastElementChild: Returns the last child element.
+console.log(container.lastElementChild);
+
+5.nextElementSibling : Returns the next sibling element.
+Ex: 
+<div>
+    <p id="first">One</p>
+    <p id="second">Two</p>
+    <p>Three</p>
+</div>
+const first = document.getElementById("first");
+console.log(first.nextElementSibling);
+
+6.previousElementSibling : Returns the previous sibling element.
+const second = document.getElementById("second"); console.log(second.previousElementSibling);
+
+--------------------------------------------------------------------------------------------------------------------
+
+# JavaScript Events
+An event is an action that happens in the browser(HTML element).
+
+Examples of events:
+•	An HTML button is clicked
+•	The mouse moves over an element
+•	A keyboard key is pressed
+
+
+# HTML Event Attribute
+
+onclick - The user clicks an HTML element
+onmouseover - The user moves the mouse over an HTML element
+onmouseout -	The user moves the mouse away from an HTML element
+onkeydown - The user pushes a keyboard key
+onload	 - The browser has finished loading the page
+onchange - An HTML element has been changed
+
+# Ways to Add Events
+1.	Inline Event
+Ex: 
+<button onclick="showMsg()">Click Me</button>
+<script>
+    function showMsg() {
+  alert("Button clicked!");
+}
+</script>
+
+2. Using DOM Property
+Ex:
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").onclick = function() {
+  alert("Clicked!");
+};
+</script>
+
+3. addEventListener 
+Ex-
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</script>
+
+
+# Common HTML Events
+
+1.Mouse Events
+Mouse Events happen when the user interacts with the mouse.
+Common Mouse Events:
+•	click
+•	dblclick
+•	mouseover / mouseout
+•	mousemove
+•	mousedown / mouseup
+ex –
+<button id="btn">Click</button>
+<script>
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button clicked!");
+});
+</script>
+
+•	Ex - mouseover / mouseout
+
+<style>
+#box {
+width:200px;
+height:100px;
+padding:16px;
+border:1px solid #000
+}
+</style>
+<body>
+<div id="box">
+Move mouse over this box
+</div>
+
+<script>
+const box = document.getElementById("box");
+
+// Let box listen for mouseover
+box.addEventListener("mouseover", function () {
+  box.innerHTML = "Mouse is over me!";
+});
+
+// Let box listen for mouseout
+box.addEventListener("mouseout", function () {
+  box.innerHTML = "Move is out!";
+});
+</script>
+
+
+2.Keyboard Events
+Keyboard Events happen when the user presses a key on the keyboard:
+•	keydown (key is pressed down)
+•	keyup (key is released)
+
+The keydown Event
+Using event.key
+Example
+Show which key was pressed:
+
+<input id="k" type="text" placeholder="Press a key">
+
+<p id="demo"></p>
+
+<script>
+const k = document.getElementById("k");
+
+// Let k listen for keydown
+k.addEventListener("keydown", function (event) {
+
+// Then display the event.key
+  document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+});
+</script>
+
+Ex – keyup
+  <input id="name" type="text" placeholder="Type something">
+<p id="demo"></p>
+
+<script>
+
+    
+const input = document.getElementById("name");
+
+input.addEventListener("keyup", function() {
+  document.getElementById("demo").innerHTML = input.value;
+});
+</script>
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

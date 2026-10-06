@@ -7,8 +7,12 @@ Dropdown menu
 Calculator
 Dynamic content
 
+1. What is JavaScript?
+JavaScript is a programming language used to add interactivity and dynamic behavior to websites. 
+It also runs outside browsers, for example with Node.js.
+
 2. Where is JavaScript used?
-Ans: JavaScript is mainly used for:
+Ans: JavaScript is mainly used for:     
 Websites
 Web applications
 Form validation
@@ -17,6 +21,14 @@ Interactive buttons
 Frontend development
 Backend development using Node.js
 
+2. What are the different data types in JavaScript?
+Primitive types: string, number, bigint, boolean, undefined, symbol, and null.
+The non-primitive type is object, which includes arrays and functions
+
+3. What is the difference between var, let, and const?
+- var is function-scoped and can be redeclared.
+- let is block-scoped and can be reassigned.
+- const is block-scoped and cannot be reassigned.
 
 3. What is the difference between HTML, CSS and JavaScript?
 | Technology | Use                   |
@@ -81,4 +93,13 @@ Increment/Decrement
 Ans: 
 == checks value.
 === checks value and data type.
+
+5. What is undefined?
+A variable has the value undefined when it has been declared but not assigned a value.
+
+9. What is an arrow function?
+An arrow function is a shorter way to write a function.
+
+11. What is an object?
+An object stores data as key-value pairs.
 

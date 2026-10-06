@@ -5273,8 +5273,8 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 This is Multilevel Inheritance.
 
             15. Can a child class use methods of its parent class?
-            Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
-            
+                Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
+                
             ⭐ Quick Revision:-
 
                 Inheritance → Code reusability
@@ -5291,7 +5291,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 24(2/10/26):-
 
-        Python Internship Notes: Day 22 - Polymorphism & Its Types
+        Python Notes: Day 22 - Polymorphism & Its Types
 
             1. Polymorphism:-
                 Polymorphism means **one name having many forms or behaviours**.
@@ -5323,10 +5323,10 @@ Python Programming Fundamentals — Notes & Study Guide:-
                         def pay(self):
                             print("I will do my payment through Cash")
 
-                Here, all classes have the same method name:
-                `pay()`
+                    Here, all classes have the same method name:
+                    `pay()`
 
-                But each class performs the payment differently.
+                    But each class performs the payment differently.
 
             2. Types of Polymorphism:-
 
@@ -5371,7 +5371,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                             Output:
                             30
 
-                            For strings:
+                        For strings:
                             print("Streamline" + " tech")
 
                         Output:
