@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //methods of array:-
+        //1.array length():
+        const cars = ["Bmw","volvo","defender"];
+        cars.length = 2;
+        console.log(cars);
+
+
+        //2.array join():
+        const fruits = ["apple","orange","kiwi"];
+        fruits.join("*");
+        console.log(fruits);
+
+        //3.array pop():
+        const flower = ["rose","hibiscus","lavender"];
+        flower.pop(2);
+        console.log(flower);
+        
+        //4. array push():
+        //let fruit = ["Banana", "Orange", "Apple", "Mango"];
+        //fruit.push("Kiwi");
+        //console.log(fruit);
+
+
+        //6.sorting array and 7.reverse :
+        let fruit = ["Banana", "Orange", "Apple", "Mango"];
+        fruit.sort();
+        console.log(fruit);
+        fruit.reverse();
+        console.log(fruit);
+
+        
+// 8.filter:
+const num = [45, 4, 9, 16, 25];
+const age = num.filter(myfunction);
+function myfunction(value) {
+    return value > 18;
+}
+console.log(age);
+
+// 9.spread:
+    const arr1=[1,2,3];
+    const arr2 =[4,5,6];
+
+    const arr3 =[...arr1,...arr2];
+
+console.log(arr3);
+
+    </script>
+</body>
+</html>

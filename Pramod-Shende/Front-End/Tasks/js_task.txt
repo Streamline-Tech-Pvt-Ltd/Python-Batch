@@ -1,0 +1,74 @@
+1.
+=> 
+<script>
+        let n = 7;
+        if (n % 2 == 0) {
+            console.log("Even");
+        }
+        else {
+            console.log("Odd");
+        }
+    </script>
+
+
+2.
+=>
+ <script>
+
+        let a = 25;
+        let b = 10;
+
+        if (a>b)
+        {
+            console.log("A is large");
+        }
+        else {
+            console.log("B is large");
+        }
+        
+
+    </script>
+
+3.
+=>
+<script>
+        let marks = 75;
+
+        if (marks >= 80) {
+            console.log("Grade A");
+        }
+        else if (marks >= 60 && marks <= 79) {
+            console.log("Grade B");
+        }
+        else if (marks >= 40 && marks <= 59) {
+            console.log("Grade C");
+        }
+        else {
+            console.log("Fail");
+        }
+        
+    </script>
+
+4.
+=>
+ <script>
+        let username = "admin";
+        let password = "1234";
+
+        if (username == "admin" && password == "1234") {
+            console.log("Login Successfully");
+        } else {
+            console.log("Invalid data");
+        }
+    </script>
+
+5.
+=>
+    <script>
+        let x = 15;
+        let y = 25;
+
+        let result = (x > y) ? "a is greater" : "b is greater";
+        console.log(result);
+
+    </script>

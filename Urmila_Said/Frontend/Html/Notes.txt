@@ -1,0 +1,133 @@
+#HTML 
+
+HTML stands for HyperText Markup Language.
+HTML provides the structure of a webpage.
+HTML is not a programming language. It is a Markup Language.
+
+HyperText means text that contains links to other web pages.
+A Markup Language uses tags to describe the structure of content.
+
+History of HTML
+•	Developed by Tim Berners-Lee 
+•	Created in 1991 
+•	Latest Version: HTML5
+
+
+HTML Structure:
+<!DOCTYPE html>   
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My First Website</title>
+
+    <meta name="description" content="This is my first HTML website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Maheshwari Maval">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <h1>Welcome Students</h1>
+</body>
+</html>
+
+<!DOCTYPE html>  ------ Document type
+<html lang="en"> ---Root Element
+<head> </head>--browser information
+<meta charset="UTF-8">---Character Encoding define 
+ <body></body>--show on browser
+
+.html extension
+
+HTML Comments:
+<!-- This is a comment -->
+
+
+1.HTML Headings
+There are six heading tags.
+h1 to h6
+
+2. Paragraph Tag
+<p>
+This is a paragraph.
+</p>
+
+3. Line Break
+Hello
+<br>
+World
+
+4. Horizontal Line
+<hr>
+
+5. Superscript
+x<sup>2</sup>
+
+6. Subscript
+H<sub>2</sub>O
+
+7. HTML Images
+<img src="image.jpg" alt="Nature">
+
+Image Attributes
+src =Image location.
+
+alt=Alternative text.
+Height, width, title
+
+Absolute Path - Uses a complete URL.
+<img src="https://example.com/image.jpg">
+
+Relative Path
+Uses the local project structure.
+<img src="images/photo.jpg">
+
+
+HTML Formatting Elements
+Formatting elements were designed to display special types of text:
+•	<b> - Bold text
+•	<strong> - Important text
+•	<i> - Italic text
+•	<em> - Emphasized text
+•	<mark> - Marked text
+•	<small> - Smaller text
+•	<del> - Deleted text
+•	<ins> - Inserted text
+•	<u> - underline text
+
+HTML Style:
+The HTML style attribute is used to add styles to an element, such as color, font, size, and more.
+
+<tagname style="property:value;">
+<p style=”color:red”>This is a paragraph</p>
+1.	background-color
+2.	Text color : color
+3.	font-family
+4.	font-size
+5.	text-align – center, left, right
+
+
+HTML Quotation and Citation Elements:
+<blockquote> : The HTML <blockquote> element defines a section that is quoted from another source.
+
+<q> : The HTML <q> tag defines a short quotation.
+
+<abbr>: The HTML <abbr> tag defines an abbreviation or an acronym
+Like HTML ,CSS
+
+<address>: The HTML <address> tag defines the contact information for the author/owner of a document or an article.
+
+<cite>: The HTML <cite> tag defines the title of a creative work 
+
+<bdo>: BDO stands for Bi-Directional Override.
+The HTML <bdo> tag is used to override the current text direction:
+Attribute dir =”rtl”, dir=”ltr” 
+

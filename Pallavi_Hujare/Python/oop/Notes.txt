@@ -1,0 +1,70 @@
+
+OOP (Object-Oriented Programming)
+ is a programming paradigm that uses classes and objects to organize code.
+ It helps make programs reusable, secure, and easier to maintain.
+
+Why Use OOP?
+Code reusability
+Better organization
+Data security (Encapsulation)
+Easy to manage large projects
+
+
+Main Concepts of OOP
+
+1. Class
+A class is a blueprint for creating objects.
+
+class Student:
+    pass
+
+Real-Life Example
+Think of a Car.
+
+Class → Car (Blueprint)
+Objects → BMW, Audi, Tata, Honda
+
+Every car has:
+Attributes → color, model, speed
+Methods → start(), stop(), drive()
+
+
+2. Object
+An object is an instance of a class.
+
+class Student:
+    pass
+
+s1 = Student()
+
+
+3. Constructor (__init__)
+A constructor is a special method that is automatically called when an object is created.
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+s1 = Student("Pallavi")
+
+
+4. self
+self refers to the current object of the class.
+
+class Student:
+    def show(self):
+        print("Hello")
+
+s = Student()
+s.show()
+
+
+## OOP vs POP
+
+OOP                                     	POP
+Uses classes and objects	            Uses functions
+Focuses on objects and data     	Focuses on procedures
+Bottom-up approach	                    Top-down approach
+More secure	                                Less secure
+Best for large projects	            Best for small projects
+

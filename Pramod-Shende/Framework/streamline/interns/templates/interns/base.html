@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn. com/bootstrap/4.3.1/css/bootstrap.min. css" />
+    <title>{% block title %}Streamline Tech Project{% endblock %}</title>
+</head>
+
+<body>
+    <header class="bg-light p-3">
+        <div class="container" >
+            <h1 class="text-dark">Streamline Tech Project</h1>
+            <nav>
+                <ul class="nav">
+                     <li class="nav-item">
+                    {% comment %}
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    {% endcomment %}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-4">{% block content %} {% endblock %}</main>
+<footer class="bg-light p-3 mt-4">
+<div class="container">
+<!-- Common footer content goes here -->
+</div>
+</footer>
+</body>
+</html>

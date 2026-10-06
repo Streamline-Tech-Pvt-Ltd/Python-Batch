@@ -1,0 +1,970 @@
+# Python List
+
+## 1. What is a List?
+
+A **List** is an **ordered and mutable collection of elements**.
+
+A list is **enclosed within square brackets `[]`**, and its elements are **comma-separated**.
+
+### Definition
+
+> **A List is an ordered and mutable collection of comma-separated elements enclosed within square brackets `[]`.**
+
+### Syntax
+list_name = [element1, element2, element3]
+
+### Example
+student = ["Mayuri", 22, "Python"]
+
+print(student)
+
+### Output
+text
+['Mayuri', 22, 'Python']
+
+# 2. List Properties
+
+| Property             | List            |
+| -------------------- | --------------- |
+| Ordered              | Yes             |
+| Mutable              | Yes             |
+| Indexed              | Yes             |
+| Slicing              | Yes             |
+| Duplicate elements   | Allowed         |
+| Different data types | Allowed         |
+| Positive indexing    | Yes             |
+| Negative indexing    | Yes             |
+| Dynamic              | Yes             |
+| Nested list          | Yes             |
+| Enclosed within      | `[]`            |
+| Elements             | Comma-separated |
+
+# 3. Creating a List
+
+## Empty List
+a = []
+
+print(a)
+
+Output:
+text
+[]
+
+## List with Elements
+a = [10, 20, 30, 40]
+
+print(a)
+
+Output:
+text
+[10, 20, 30, 40]
+
+# 4. List with Different Data Types
+
+A list can contain different types of elements.
+a = [10, 20.5, "Python", True]
+
+print(a)
+
+Output:
+text
+[10, 20.5, 'Python', True]
+
+# 5. Duplicate Elements in List
+
+List allows duplicate elements.
+a = [10, 20, 10, 30, 20]
+
+print(a)
+
+Output:
+text
+[10, 20, 10, 30, 20]
+
+# 6. List Indexing
+
+**Indexing** is used to access individual elements from a list.
+
+Index starts from `0`.
+
+### Example
+a = [10, 20, 30, 40]
+
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+
+### Output
+text
+10
+20
+30
+40
+
+### Index Position
+text
+List:      10    20    30    40
+Index:      0     1     2     3
+
+# 7. Negative Indexing
+
+Negative indexing starts from `-1` from the right side.
+a = [10, 20, 30, 40]
+
+print(a[-1])
+print(a[-2])
+print(a[-3])
+print(a[-4])
+
+### Output
+text
+40
+30
+20
+10
+
+### Negative Index Position
+text
+List:      10    20    30    40
+Index:     -4    -3    -2    -1
+
+# 8. List Slicing
+
+Slicing is used to access multiple elements from a list.
+
+### Syntax
+list[start:stop]
+
+The `stop` index is not included.
+
+### Example
+a = [10, 20, 30, 40, 50]
+
+print(a[1:4])
+
+### Output
+text
+[20, 30, 40]
+
+# 9. Slicing from Start
+a = [10, 20, 30, 40, 50]
+
+print(a[:3])
+
+Output:
+text
+[10, 20, 30]
+
+# 10. Slicing to End
+a = [10, 20, 30, 40, 50]
+
+print(a[2:])
+
+Output:
+text
+[30, 40, 50]
+
+# 11. Full List Slicing
+a = [10, 20, 30, 40, 50]
+
+print(a[:])
+
+Output:
+text
+[10, 20, 30, 40, 50]
+
+# 12. Negative Slicing
+a = [10, 20, 30, 40, 50]
+
+print(a[-4:-1])
+
+Output:
+text
+[20, 30, 40]
+
+# 13. Slicing with Step
+
+### Syntax
+list[start:stop:step]
+
+### Example
+a = [10, 20, 30, 40, 50]
+
+print(a[0:5:2])
+
+Output:
+text
+[10, 30, 50]
+
+# 14. Slicing with Step from Start
+a = [10, 20, 30, 40, 50]
+
+print(a[::2])
+
+Output:
+text
+[10, 30, 50]
+
+# 15. Reverse List Using Slicing
+a = [10, 20, 30, 40, 50]
+
+print(a[::-1])
+
+Output:
+text
+[50, 40, 30, 20, 10]
+
+# 16. List is Mutable
+
+List elements can be changed after creation.
+a = [10, 20, 30]
+
+a[0] = 100
+
+print(a)
+
+Output:
+text
+[100, 20, 30]
+
+Therefore:
+text
+List → Mutable
+
+# 17. Adding Elements
+
+## `append()`
+
+Adds **one element at the end** of the list.
+
+### Syntax
+list.append(element)
+
+### Example
+a = [10, 20, 30]
+
+a.append(40)
+
+print(a)
+
+Output:
+text
+[10, 20, 30, 40]
+
+### Append List
+a = [10, 20]
+
+a.append([30, 40])
+
+print(a)
+
+Output:
+text
+[10, 20, [30, 40]]
+
+`append()` adds the complete object as **one element**.
+
+# 18. `extend()`
+
+Adds multiple elements to the end of the list.
+
+### Example
+a = [10, 20]
+
+a.extend([30, 40])
+
+print(a)
+
+Output:
+text
+[10, 20, 30, 40]
+
+### Difference
+text
+append([30, 40])
+        ↓
+[10, 20, [30, 40]]
+
+extend([30, 40])
+        ↓
+[10, 20, 30, 40]
+
+# 19. `insert()`
+
+Inserts an element at a specific index.
+
+### Syntax
+list.insert(index, element)
+
+### Example
+a = [10, 20, 40]
+
+a.insert(2, 30)
+
+print(a)
+
+Output:
+text
+[10, 20, 30, 40]
+
+# 20. Removing Elements
+
+## `remove()`
+
+Removes the **first occurrence** of a specified value.
+a = [10, 20, 30, 20]
+
+a.remove(20)
+
+print(a)
+
+Output:
+text
+[10, 30, 20]
+
+# 21. `pop()`
+
+Removes and returns an element by index.
+
+### Without Index
+a = [10, 20, 30]
+
+x = a.pop()
+
+print(x)
+print(a)
+
+Output:
+text
+30
+[10, 20]
+
+By default, `pop()` removes the last element.
+
+### With Index
+a = [10, 20, 30]
+
+x = a.pop(1)
+
+print(x)
+print(a)
+
+Output:
+text
+20
+[10, 30]
+
+# 22. `clear()`
+
+Removes all elements from the list.
+a = [10, 20, 30]
+
+a.clear()
+
+print(a)
+
+Output:
+text
+[]
+
+# 23. Searching Methods
+
+## `index()`
+
+Returns the index of the **first occurrence** of a value.
+
+### Syntax
+list.index(value)
+
+### Example
+a = [10, 20, 30, 20]
+
+print(a.index(20))
+
+Output:
+text
+1
+
+### With Start and End
+a = [10, 20, 30, 20, 40]
+
+print(a.index(20, 2, 5))
+
+Output:
+text
+3
+
+# 24. `count()`
+
+Returns how many times a value occurs.
+a = [10, 20, 10, 30, 10]
+
+print(a.count(10))
+
+Output:
+text
+3
+
+# 25. Sorting Methods
+
+## `sort()`
+
+Sorts the original list in ascending order.
+a = [40, 10, 30, 20]
+
+a.sort()
+
+print(a)
+
+Output:
+text
+[10, 20, 30, 40]
+
+# 26. `sort(reverse=True)`
+
+Sorts the list in descending order.
+a = [10, 40, 20, 30]
+
+a.sort(reverse=True)
+
+print(a)
+
+Output:
+text
+[40, 30, 20, 10]
+
+# 27. `reverse()`
+
+Reverses the elements of the original list.
+a = [10, 20, 30, 40]
+
+a.reverse()
+
+print(a)
+
+Output:
+text
+[40, 30, 20, 10]
+
+### Difference
+text
+reverse()
+→ reverses current order
+
+sort(reverse=True)
+→ sorts from largest to smallest
+
+# 28. `copy()`
+
+Creates a shallow copy of the list.
+a = [10, 20, 30]
+
+b = a.copy()
+
+print(b)
+
+Output:
+text
+[10, 20, 30]
+
+# 29. List Concatenation
+
+Two lists can be combined using `+`.
+a = [10, 20]
+b = [30, 40]
+
+c = a + b
+
+print(c)
+
+Output:
+text
+[10, 20, 30, 40]
+
+# 30. List Repetition
+
+Use `*` to repeat a list.
+a = [10, 20]
+
+print(a * 3)
+
+Output:
+text
+[10, 20, 10, 20, 10, 20]
+
+# 31. Membership Operators
+
+Use `in` and `not in`.
+a = [10, 20, 30]
+
+print(20 in a)
+print(50 in a)
+print(50 not in a)
+
+Output:
+text
+True
+False
+True
+
+# 32. Nested List
+
+A list can contain another list.
+a = [10, 20, [30, 40], 50]
+
+print(a)
+
+Output:
+text
+[10, 20, [30, 40], 50]
+
+### Access Nested List
+a = [10, 20, [30, 40], 50]
+
+print(a[2][0])
+
+Output:
+text
+30
+
+# 33. List Assignment
+a = [10, 20, 30]
+
+a[1] = 200
+
+print(a)
+
+Output:
+text
+[10, 200, 30]
+
+# 34. Change Multiple Elements Using Slicing
+a = [10, 20, 30, 40]
+
+a[1:3] = [200, 300]
+
+print(a)
+
+Output:
+text
+[10, 200, 300, 40]
+
+# 35. Delete Using `del`
+
+`del` can delete an element using its index.
+a = [10, 20, 30, 40]
+
+del a[1]
+
+print(a)
+
+Output:
+text
+[10, 30, 40]
+
+### Delete Multiple Elements
+a = [10, 20, 30, 40, 50]
+
+del a[1:4]
+
+print(a)
+
+Output:
+text
+[10, 50]
+
+# 36. List Comprehension
+
+List comprehension is a short way to create a list.
+
+### Normal Method
+a = []
+
+for i in range(1, 6):
+    a.append(i)
+
+print(a)
+
+Output:
+text
+[1, 2, 3, 4, 5]
+
+### List Comprehension
+a = [i for i in range(1, 6)]
+
+print(a)
+
+Output:
+text
+[1, 2, 3, 4, 5]
+
+# 37. List Comprehension with Condition
+a = [i for i in range(1, 11) if i % 2 == 0]
+
+print(a)
+
+Output:
+text
+[2, 4, 6, 8, 10]
+
+# 38. Important List Methods
+
+| Method      | Purpose                           |
+| ----------- | --------------------------------- |
+| `append()`  | Adds one element at the end       |
+| `clear()`   | Removes all elements              |
+| `copy()`    | Creates a copy                    |
+| `count()`   | Counts occurrences                |
+| `extend()`  | Adds multiple elements            |
+| `index()`   | Returns index of first occurrence |
+| `insert()`  | Inserts element at an index       |
+| `pop()`     | Removes and returns element       |
+| `remove()`  | Removes first matching element    |
+| `reverse()` | Reverses the list                 |
+| `sort()`    | Sorts the list                    |
+
+# 39. List Methods with Short Examples
+
+| Method      | Example             | Result                 |
+| ----------- | ------------------- | ---------------------- |
+| `append()`  | `a.append(40)`      | Adds `40`              |
+| `extend()`  | `a.extend([40,50])` | Adds multiple elements |
+| `insert()`  | `a.insert(1,20)`    | Inserts at index `1`   |
+| `remove()`  | `a.remove(20)`      | Removes first `20`     |
+| `pop()`     | `a.pop()`           | Removes last element   |
+| `clear()`   | `a.clear()`         | Removes all            |
+| `index()`   | `a.index(20)`       | Returns index          |
+| `count()`   | `a.count(20)`       | Counts value           |
+| `sort()`    | `a.sort()`          | Ascending order        |
+| `reverse()` | `a.reverse()`       | Reverses list          |
+| `copy()`    | `b=a.copy()`        | Creates copy           |
+
+# 40. Built-in Functions Used with List
+
+## `len()`
+
+Returns the number of elements.
+a = [10, 20, 30, 40]
+
+print(len(a))
+
+Output:
+text
+4
+
+## `max()`
+
+Returns the largest value.
+a = [10, 20, 30, 40]
+
+print(max(a))
+
+Output:
+text
+40
+
+## `min()`
+
+Returns the smallest value.
+a = [10, 20, 30, 40]
+
+print(min(a))
+
+Output:
+text
+10
+
+## `sum()`
+
+Returns the sum of numeric elements.
+a = [10, 20, 30]
+
+print(sum(a))
+
+Output:
+text
+60
+
+## `sorted()`
+
+Returns a **new sorted list**.
+a = [30, 10, 20]
+
+b = sorted(a)
+
+print(b)
+
+Output:
+text
+[10, 20, 30]
+
+### `sort()` vs `sorted()`
+text
+sort()
+→ changes original list
+
+sorted()
+→ returns a new sorted list
+
+## `list()`
+
+Converts an iterable into a list.
+a = (10, 20, 30)
+
+b = list(a)
+
+print(b)
+
+Output:
+text
+[10, 20, 30]
+
+# 41. List Iteration
+
+A list can be traversed using a `for` loop.
+a = [10, 20, 30]
+
+for i in a:
+    print(i)
+
+Output:
+text
+10
+20
+30
+
+# 42. List Unpacking
+
+List values can also be unpacked into variables.
+a = [10, 20, 30]
+
+x, y, z = a
+
+print(x)
+print(y)
+print(z)
+
+Output:
+text
+10
+20
+30
+
+### Extended Unpacking
+a = [10, 20, 30, 40, 50]
+
+x, *y, z = a
+
+print(x)
+print(y)
+print(z)
+
+Output:
+text
+10
+[20, 30, 40]
+50
+
+# 43. List vs Tuple
+
+| Feature    | List            | Tuple                       |
+| ---------- | --------------- | --------------------------- |
+| Brackets   | `[]`            | `()`                        |
+| Ordered    | Yes             | Yes                         |
+| Mutable    | Yes             | No                          |
+| Indexed    | Yes             | Yes                         |
+| Slicing    | Yes             | Yes                         |
+| Duplicates | Allowed         | Allowed                     |
+| Methods    | Many            | Mainly `count()`, `index()` |
+| Elements   | Comma-separated | Comma-separated             |
+| Packing    | Possible        | Yes                         |
+| Unpacking  | Possible        | Yes                         |
+
+# 44. List vs Set
+
+| Feature       | List            | Set             |
+| ------------- | --------------- | --------------- |
+| Brackets      | `[]`            | `{}`            |
+| Ordered       | Yes             | No              |
+| Mutable       | Yes             | Yes             |
+| Indexed       | Yes             | No              |
+| Slicing       | Yes             | No              |
+| Duplicates    | Allowed         | Not allowed     |
+| Unique values | Not required    | Yes             |
+| Methods       | Many            | Many            |
+| Elements      | Comma-separated | Comma-separated |
+
+# 45. Complete List Revision
+text
+LIST
+ ↓
+Ordered
+ ↓
+Mutable
+ ↓
+Indexed
+ ↓
+Slicing supported
+ ↓
+Duplicates allowed
+ ↓
+Different data types allowed
+ ↓
+Enclosed within []
+ ↓
+Comma-separated elements
+ ↓
+Positive indexing
+ ↓
+Negative indexing
+ ↓
+append()
+ ↓
+extend()
+ ↓
+insert()
+ ↓
+remove()
+ ↓
+pop()
+ ↓
+clear()
+ ↓
+index()
+ ↓
+count()
+ ↓
+sort()
+ ↓
+reverse()
+ ↓
+copy()
+
+# 46. Interview Questions
+
+### Q1. What is a List?
+
+A List is an **ordered and mutable collection of comma-separated elements enclosed within square brackets `[]`**.
+
+### Q2. Is List mutable?
+
+Yes, List is mutable.
+
+### Q3. Does List support indexing?
+
+Yes.
+
+### Q4. Does List support negative indexing?
+
+Yes.
+
+### Q5. Does List support slicing?
+
+Yes.
+
+### Q6. Does List allow duplicate elements?
+
+Yes.
+
+### Q7. Can a List contain different data types?
+
+Yes.
+a = [10, "Python", 20.5, True]
+
+### Q8. Which method adds one element at the end?
+
+`append()`
+
+### Q9. Difference between `append()` and `extend()`?
+text
+append([30, 40])
+→ adds [30, 40] as one element
+
+extend([30, 40])
+→ adds 30 and 40 separately
+
+### Q10. Which method removes the first matching value?
+
+`remove()`
+
+### Q11. Which method removes an element using its index?
+
+`pop()`
+
+### Q12. Which method sorts a list?
+
+`sort()`
+
+### Q13. Which method reverses a list?
+
+`reverse()`
+
+### Q14. How do you create an empty list?
+a = []
+
+### Q15. How many main built-in List methods are there?
+
+Python's list type provides these standard methods:
+text
+append()
+clear()
+copy()
+count()
+extend()
+index()
+insert()
+pop()
+remove()
+reverse()
+sort()
+
+# 47. Final One-Line Definition
+
+> **A List is an ordered and mutable collection of comma-separated elements enclosed within square brackets `[]`.**
+
+# 48. Final Quick Revision
+text
+List
+├── Definition
+├── Properties
+├── Creation
+├── []
+├── Comma-separated elements
+├── Ordered
+├── Mutable
+├── Duplicates
+├── Different data types
+├── Indexing
+│   ├── Positive indexing
+│   └── Negative indexing
+├── Slicing
+│   ├── start:stop
+│   ├── :stop
+│   ├── start:
+│   ├── start:stop:step
+│   ├── Negative slicing
+│   └── Reverse [::-1]
+├── Modification
+│   ├── append()
+│   ├── extend()
+│   ├── insert()
+│   └── Assignment
+├── Removing
+│   ├── remove()
+│   ├── pop()
+│   ├── clear()
+│   └── del
+├── Searching
+│   ├── index()
+│   └── count()
+├── Ordering
+│   ├── sort()
+│   └── reverse()
+├── copy()
+├── Concatenation
+├── Repetition
+├── Membership
+├── Nested List
+├── List Comprehension
+└── List Unpacking
