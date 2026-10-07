@@ -1,28 +1,24 @@
-class vehicale:
-     def start(self):
-           print("vehicale is starting")
+class car:
+    def __init__(self):
+        self.brand = "Toyota"        # public
+        self._speed = 80             # protected
+        self.__engine_no = "E12345"  # private
 
-     def stop(self):
-           print("vehicale is stopped")
+    def show(self):
+        print("Brand:", self.brand)
+        print("Speed:", self._speed)
+        print("Engine:", self.__engine_no)
 
-     def fuel(self):
-           print("vehical needs fuel")
+    # Getter method
+    def get_engine_no(self):
+        return self.__engine_no
 
-class car(vehicale):
-     def drive(self):
-                 print ("car is driving")
+    # Setter method
+    def set_engine_no(self, engine_no):
+        self.__engine_no = engine_no
 
-     def horn(self):
-            print("car horn is sounding")
-
-
-c= car()
-
-c.start()
-c.stop()
-c.fuel()
-c.drive()
-c.horn()
-
-    
-                         
+c1 = car()
+c1.show()
+print("Old Engine:", c1.get_engine_no())
+c1.set_engine_no("E67890")
+print("New Engine:", c1.get_engine_no())
