@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ // # 1.Create a function to find the square of a number.
+function square(a) {
+    return a * a;
+}
+let result = square(10);
+console.log(result);
+
+// # 2.	Create an arrow function to check if a number is even or odd
+let EvenOdd = (num) => {
+    if (num % 2 ==0) {
+        console.log("Even")
+    } else {
+        console.log("Odd")
+    }
+};
+console.log(EvenOdd(3))
+
+// # 3.	Create an arrow function to find the maximum of two number.
+let min = (a, b) => {
+    if (a < b) {
+        return a;
+    } else {
+        return b;
+    }
+};
+console.log(min(10, 20));
+
+// # 4.	Create a function to print all even numbers between 1 to 50.
+function evenNumbers() {
+    for (let i = 1; i <= 50; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+evenNumbers();
+
+// # 5.	Write a function to find the sum of numbers from 1 to N
+function sumNumbers(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum = sum + i;
+    }
+    return sum;
+}
+let output = sumNumbers(2);
+console.log(output);
+
+    </script>
+</body>
+</html>

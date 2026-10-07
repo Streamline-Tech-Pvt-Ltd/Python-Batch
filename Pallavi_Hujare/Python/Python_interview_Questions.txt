@@ -1,0 +1,1051 @@
+Q. What is Python?
+A. Python is a simple,dynamic,high-level,interpreted,object oriented programming & general purpose programming language.
+
+   Simple :-Python is considered simple because its syntax is easy to read and write, similar to English language statements.
+   dynamic :-Python is a dynamically typed language, which means you do not need to declare the data type of a variable. Python automatically determines the type at runtime.
+   high-level language :- programming language that is easy for humans to read, write, and understand. It uses English-like syntax and hides complex hardware details from the programmer.
+   interpreted :- where code is executed line by line by an interpreter, instead of being compiled into machine code before execution.
+   OOP :- organizes code using classes and objects. It helps make programs reusable, secure, and easy to maintain.
+
+
+Q. Explain interpreter in details?
+A. An interpreter is a software program that reads, translates, and executes code line by line.
+   Python Interpreter executes your Python code and converts it into instructions that the computer can understand.
+
+Q. Explain indentation  in pyhon?
+A. defines a block of code.
+   Indentation refers to the spaces or tabs at the beginning of a line of code. In Python, indentation is used to define code blocks and is mandatory.
+   Python typically uses 4 spaces for each indentation level. Incorrect indentation results in an IndentationError.
+
+
+Q. Difference Between Static Typing and Dynamic Typing
+A.   
+    
+        Static Typing                            |      Dynamic Typing
+    ---------------------------------------------|-------------------------------------------------------------
+    Variable type must be declared before use	 |    Variable type is determined automatically at runtime
+    Type checking occurs at compile time	     |    Type checking occurs at runtime
+    Less flexible	                             |    More flexible
+    Faster execution	                         |     Slightly slower execution
+    Examples: Java, C, C++                       |  	Examples: Python, JavaScript
+
+
+Q. What is IDE give me its 3 Example
+A. IDE (Integrated Development Environment) is a software application that provides all the tools needed for programming in one place, such as:
+   Code Editor ,Compiler/Interpreter.
+  # Examples of IDEs
+        PyCharm
+        Visual Studio Code
+        Jupyter Notebook
+        Spyder
+        Eclipse
+        IDLE
+
+
+Q. Explain types of python language
+A. Sequential Programming – statements execute one after another.
+                            i.e :- loops ,operator
+
+   Functional Programming – programs are organized using functions.
+                            i.e:- argument , parameters
+   Object-Oriented Programming (OOP) – programs are built using classes and objects.
+                            
+            Pillar	              |                Meaning
+    ------------------------------|----------------------------------------
+          Encapsulation 	      |                 Data Hiding
+          Inheritance	          |                  Code Reuse
+          Polymorphism	          |                  Many Forms
+          Abstraction	          |                Hiding Complexity
+
+ 
+
+
+Q. What is a variable in Python?
+A: A variable is a name used to store data in memory.
+i.e:
+name = "Pallavi"
+
+ Q.What are the rules for naming variables?
+ A.# Rule 1: Variable name should start with A-Z, a-z, or _
+name = "Pallavi"
+print(name)
+
+_name = "Pallavi"
+print(_name)
+
+# Rule 2: Variable names are case-sensitive
+Name = "Pallavi"
+name = "Hujare"
+
+print(Name)  # Pallavi
+print(name)  # Hujare
+
+# Rule 3: Special characters are not allowed
+# Invalid:
+# @name = "Pallavi"
+# print(@name)
+
+# Rule 4: Spaces are not allowed
+# Invalid:
+# my name = "Pallavi"
+# print(my name)
+
+# Correct:
+my_name = "Pallavi"
+print(my_name)
+
+# Rule 5: Variable name cannot start with a number
+# Invalid:
+# 1Name = "Pallavi"
+
+# Correct:
+name1 = "Pallavi"
+print(name1)
+
+# Rule 6: Keywords cannot be used as variable names
+# Invalid:
+# if = "Pallavi"
+# print(if)
+
+# Correct:
+student_name = "Pallavi"
+print(student_name)
+
+Q.What is a keyword in Python?
+A: A keyword is a reserved word with a predefined meaning and cannot be used as a variable name.35 keywords.
+Examples:
+if, else, for, while, class, def
+Code:import keyword
+     print(keyword.kwlist)
+
+
+Q.What is an f-string?
+A: An f-string is used to insert variables directly inside a string.
+Example:
+name = "Pallavi"
+print(f"My name is {name}")
+Output:
+My name is Pallavi
+
+
+Q.What is the input() function?
+A: It is used to take input from the user nd always returns a string (str).
+Example:
+name = input("Enter your name: ")
+
+Q.What is type casting?
+A: Converting one data type into another.
+Example:
+
+num = "100"
+print(int(num)) 
+
+Q.Difference between input() and print()?
+A:
+   input()            	        print()
+Takes input from user	   Displays output
+Reads data	               Shows data
+
+
+Q.Difference between = and == ?
+A:
+     =	                           ==
+Assignment Operator	     Comparison Operator
+Assigns value	             Compares values
+
+
+
+Q. What is a List?
+A: A list is an ordered, mutable collection used to store multiple values.
+Example:
+l1 = [10, 20, 30, 40]
+
+
+Q. What is a Tuple?
+A: A tuple is an ordered, immutable collection used to store multiple values.
+Example:
+t1 = (10, 20, 30, 40)
+
+
+Q. What is a String?
+A: A string is a sequence of characters enclosed in single or double quotes.
+Example:
+name = "Pallavi"
+
+
+Q. What is a Boolean Data Type?
+A: A Boolean data type stores only two values: True or False.
+Example:
+is_student = True
+is_logged_in = False
+
+
+Q. Difference Between List and Tuple?
+
+      List	                                    Tuple
+Mutable (can be modified)	         Immutable (cannot be modified)
+Uses square brackets []          	Uses parentheses ()
+Has more built-in methods        	Has fewer built-in methods
+Slower compared to tuple	         Faster compared to list
+
+Example:
+l1 = [10, 20, 30]   # Can be modified
+t1 = (10, 20, 30)   # Cannot be modified
+
+
+Q. Is a List mutable or immutable?
+A: List is mutable.
+Example:
+l1 = [10, 20]
+l1.append(30)
+
+
+Q. Is a Tuple mutable or immutable?
+A: Tuple is immutable.
+Example:
+t1 = (10, 20, 30)
+
+
+Q. Is a String mutable or immutable?
+A: String is immutable.
+Example:
+name = "Python"
+
+Q. Can a List store different data types?
+A: Yes, a list can store different data types.
+Example:
+l1 = [10, "Python", 5.5, True]
+
+
+Q. Can a Tuple store different data types?
+A: Yes, a tuple can store different data types.
+Example:
+t1 = (10, "Python", 5.5, True)
+
+
+Q. What are the Boolean values in Python?
+A: The Boolean values are True and False.
+Example:
+print(True)
+print(False)
+
+Q. Difference between append() and extend()?
+A: append() adds a single item, while extend() adds multiple items.
+Example:
+l1 = [1, 2]
+l1.append(3)      # [1, 2, 3]
+l2 = [1, 2]
+l2.extend([3, 4]) # [1, 2, 3, 4]
+
+Q. Difference between remove() and pop()?
+A: remove() deletes an element by value, while pop() deletes an element by index.
+Example:
+l1 = [10, 20, 30]
+l1.remove(20)  # Removes value 20
+l1.pop(1)      # Removes element at index 1  
+
+Q. What are Tuple methods?
+A: Tuple has only two built-in methods:
+count()
+index()
+Example:
+t1 = (10, 20, 10, 30)
+print(t1.count(10))
+print(t1.index(20))
+
+Q. What is the difference between upper() and lower()?
+A: upper() converts a string to uppercase, while lower() converts a string to lowercase.
+Example:
+name = "Python"
+print(name.upper())  # PYTHON
+print(name.lower())  # python
+
+
+Q. What does split() do?
+A: split() converts a string into a list by separating words.
+Example:
+text = "Python Java SQL"
+print(text.split())
+Output:
+['Python', 'Java', 'SQL']
+
+Q. What does replace() do?
+A: replace() replaces one value with another in a string.
+Example:
+name = "Python"
+print(name.replace("Python", "Java"))
+Output:
+Java
+
+Q. Why is Tuple faster than List?
+A: Tuple is faster because it is immutable (cannot be changed), so Python uses less memory and performs operations more efficiently.
+Example:
+t1 = (10, 20, 30)
+l1 = [10, 20, 30]
+
+
+Q. What is a Set in Python?
+Answer:
+A Set is an unordered collection of unique elements. It does not allow duplicate values and is defined using curly braces {}.
+s = {10, 20, 30}
+
+
+Q. What are the characteristics of a Set?
+Answer:
+Unordered
+Mutable (can be modified)
+Does not allow duplicate values
+Does not support indexing or slicing
+
+Q. Why are Sets used in Python?
+Answer:
+Sets are used to store unique values and perform mathematical operations such as union, intersection, and difference efficiently.
+
+
+Q. What is the difference between a List and a Set?
+<<<<<<< HEAD
+List	                Set
+Ordered	            Unordered
+=======
+List	               Set
+Ordered	             Unordered
+>>>>>>> f2c7a51ad8e54c19619fb2e041caec6e4b60d6f4
+Allows duplicates	No duplicates
+Supports indexing	No indexing
+Written using []	Written using {}
+
+Q. What is the difference between remove() and discard() in a Set?
+Answer:
+remove() raises an error if the element is not present.
+discard() does not raise an error if the element is not present.
+
+Q. Can a Set contain mutable objects like Lists?
+Answer:
+No. Lists are mutable and cannot be stored inside a Set.
+# Invalid
+s = {1, 2, [3, 4]}
+
+Q. What is the difference between add() and update()?
+Answer:
+add() adds a single element.
+update() adds multiple elements.
+
+Q. Why does a Set not support indexing?
+Answer:
+Because Sets are unordered collections and do not maintain element positions.
+
+Q. What is a Frozen Set?
+Answer:
+A Frozen Set is an immutable version of a Set. Once created, it cannot be modified.
+fs = frozenset([1, 2, 3])
+
+Q. Explain Set operations in Python.
+Answer:
+Union (|) → Combines elements from both sets.
+Intersection (&) → Common elements.
+Difference (-) → Elements present in first set but not second.
+Symmetric Difference (^) → Elements present in either set but not both.
+
+
+Q. What is a Dictionary in Python?
+Answer:
+A Dictionary is a collection of data stored in key-value pairs.
+
+student = {
+    "name": "Pallavi",
+    "age": 22
+}
+
+Q. What are the characteristics of a Dictionary?
+Answer:
+Stores data in key-value pairs
+Mutable
+Keys must be unique
+Values can be duplicated
+Fast data retrieval using keys
+
+Q. What is the difference between a List and a Dictionary?
+List                   |    	Dictionary
+-----------------------|-----------------------
+Access by index	       |   Access by key
+Ordered collection	   |   Key-value pairs
+Uses []	               |    Uses {}
+
+Q. Can Dictionary keys be duplicated?
+Answer:
+No. Keys must be unique. If duplicate keys are provided, the last value overwrites the previous one.
+
+d = {"a": 1, "a": 2}
+print(d)
+# Output: {'a': 2}
+
+
+Q. Can Dictionary values be duplicated?
+Answer:
+Yes. Multiple keys can have the same value.
+
+d = {"a": 100, "b": 100}
+
+Q. What is the difference between get() and direct key access?
+Answer:
+get() returns None if the key is not found.
+Direct access raises a KeyError.
+
+Q. What is the difference between pop() and del?
+Answer:
+pop() removes an item and returns its value.
+del removes an item without returning a value.
+
+Q. What do keys(), values(), and items() methods return?
+Answer:
+keys() → All keys
+values() → All values
+items() → All key-value pairs
+
+Q. Can a Dictionary be nested?
+Answer:
+Yes. A Dictionary can contain another Dictionary.
+
+student = {
+    "name": "Pallavi",
+    "marks": {
+        "Python": 90,
+        "Java": 85
+    }
+}
+
+
+Q. Why are Dictionaries faster for searching data?
+Answer:
+Because Dictionaries use a hash table internally, allowing quick access to values using keys.
+
+
+Q. What is an operator in Python?
+Ans:An operator is a symbol that performs an operation on one
+     or more operands (values or variables).
+
+Q.What are the types of operators in Python?
+Ans:1.Arithmetic Operators
+    2.Assignment Operators
+    3.Comparison (Relational) Operators
+    4.Logical Operators
+    5.Bitwise Operators
+    6.Membership Operators
+    7.Identity Operators
+
+Q.What is the difference between = and == ?
+Ans:
+| `=`                 | `==`                |
+| ------------------- | ------------------- |
+| Assignment operator | Comparison operator |
+| Assigns value       | Compares values     |
+| `a = 10`            | `a == 10`           |
+
+Q.What are Arithmetic Operators ?
+Ans:Used for mathematical calculations.
+    +   Addition
+    -   Subtraction
+    *   Multiplication
+    /   Division
+    %   Modulus
+    **  Exponentiation
+    //  Floor Division
+
+Q.What is the difference between / and // ?
+Ans: / returns a float value, while // returns the integer quotient.
+   Ex:print(10 / 3)   # 3.3333
+      print(10 // 3)  # 3
+
+Q.What are Logical Operators ?
+Ans:and - Returns True if both conditions are True
+    or - Returns True if at least one condition is True
+    not - Reverses the result
+
+Q.What are Membership Operators ?
+Ans:Used to check whether a value exists in a sequence.
+   in
+   not in
+
+Q.What are Identity Operators?
+Ans:Used to compare object identities.
+    is
+    is not
+
+Q.What is the highest precedence operator in Python ?
+Ans:() (Parentheses) have the highest precedence because expressions
+     inside parentheses are evaluated first.
+    
+Q.What is comparison Operator ?
+Ans:Comparison Operators (Relational Operators) are used to compare two values or variables. 
+    The result of a comparison is always either True or False.
+
+    
+Q.What are Bitwise Operators?
+A:Bitwise operators perform operations on the binary representation (bits) of integers.
+Operators:
+&, |, ^, ~, <<, >>
+
+Q.What are Logical Operators in Python?
+A:Logical operators are used to combine conditional statements.
+and
+or
+not
+
+Q.What is the difference between and and &?
+A:
+     and	                                     &
+Logical Operator	               Bitwise Operator
+Works with Boolean values	        Works with bits
+Returns True/False	            Returns numeric result
+
+
+Q.What is the difference between or and |?
+A:
+
+or                              	|
+Logical OR                 	Bitwise OR
+Works on conditions	         Works on bits
+
+
+Q.What is a loop in Python?
+Answer:
+A loop is used to execute a block of code repeatedly until a condition becomes false.
+Types of loops:
+for loop
+while loop
+
+Q . What is the difference between for loop and while loop?
+          for loop	                                                   while loop
+Used when the number of iterations is known.	      Used when the number of iterations is unknown.
+Iterates over a sequence.	                                Runs based on a condition.
+
+Example:
+for i in range(5):
+    print(i)
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+
+Q. What is the purpose of the range() function?
+Answer:
+range() generates a sequence of numbers.
+range(start, stop, step)
+Example:
+for i in range(1, 6):
+    print(i)   #1 2 3 4 5
+
+
+Q . What is the use of the break statement?
+Answer:
+break terminates the loop immediately.
+
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+Output:
+1 2 3 4
+
+
+Q. What is the use of the continue statement?
+Answer:
+continue skips the current iteration and moves to the next iteration.
+
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+Output:
+1 2 4 5
+
+Q .What is a conditional statement?
+A . conditional statement allows a program to make decisions based on certain conditions (true/false).
+
+Q. Difference between if, if-else, and else if ladder?
+A.if: Executes block if condition is true
+if-else: Executes one block if true, another if false
+else if: Checks multiple conditions in sequence
+
+Q. What is a switch statement?
+Used to select one of many blocks to execute based on a variable’s value.
+
+Q.What is a function in Python?
+Answer:
+A function is a block of reusable code that performs a specific task. It helps reduce code duplication and improves readability.
+Example:
+def greet():
+    print("Hello")
+
+
+Q.
+What are function parameters?
+Answer:
+Parameters are variables listed inside the function definition.
+Example  :
+def add(a, b):
+    print(a + b)
+
+Here, a and b are parameters.
+
+Q What are arguments?
+Answer:
+Arguments are the values passed to a function when it is called.
+add(10, 20)
+Here, 10 and 20 are arguments.
+
+
+Q. What is the difference between parameters and arguments?
+    Parameters                                      Arguments
+Defined in function                     	Passed during function call
+Placeholder values                          	Actual values
+Example: a, b                                  	Example: 10, 20
+
+
+Q.Difference between print() and return()?
+    print()                                     	return()
+Displays output	                            Sends value back
+Cannot be reused                       	Can be stored and reused
+
+Q.What is the difference between built-in and user-defined functions?
+Built-in Function	                  User-defined Function
+Already available               	    Created by programmer
+len(), max(), min()	                    add(), square()
+
+
+Q.What are function arguments in Python?
+Answer:
+Arguments are the values passed to a function when it is called.
+
+def greet(name):
+    print("Hello", name)
+greet("Pallavi")
+
+Output
+Hello Pallavi
+
+
+Q.Difference between *args and **kwargs?
+
+  *args                                   	**kwargs
+Stores tuple                        	Stores dictionary
+Positional arguments	                Keyword arguments
+Uses *                                     	Uses **
+
+
+Q . How many types of arguments are there in Python?
+Answer:
+There are 4 types of arguments:
+
+Positional Arguments
+Keyword Arguments
+Default Arguments
+Variable-Length Arguments (*args and **kwargs)
+
+Q. What are Positional Arguments?
+Answer:
+Arguments are passed according to their position.
+
+def student(name, age):
+    print(name, age)
+student("Rahul", 20)
+
+Output
+Rahul 20
+
+Q. What happens if positional arguments are passed in the wrong order?
+def student(name, age):
+    print(name, age)
+student(20, "Rahul")
+
+Output
+20 Rahul
+
+Python assigns values based on position, not meaning.
+
+
+Q. What are Keyword Arguments?
+Answer
+Arguments are passed using parameter names.
+
+def student(name, age):
+    print(name, age)
+student(age=20, name="Rahul")
+Output
+Rahul 20
+
+Q. What are Default Arguments?
+Answer
+
+A default value is assigned to a parameter.
+
+def greet(name="Guest"):
+    print("Hello", name)
+greet()
+greet("Pallavi")
+
+Output
+Hello Guest
+Hello Pallavi
+
+Q. What are Variable-Length Arguments?
+Answer
+Used when the number of arguments is unknown.
+
+Using *args
+def add(*numbers):
+    print(numbers)
+add(10,20,30,40)
+Output
+(10, 20, 30, 40)
+
+
+Q. What is *args?
+Answer
+*args collects multiple positional arguments into a tuple.
+
+def total(*num):
+    print(sum(num))
+
+total(10,20,30)
+Output
+60
+
+Q. What is **kwargs?
+Answer
+**kwargs collects keyword arguments into a dictionary.
+
+def details(**info):
+    print(info)
+
+details(name="Rahul", age=20)
+Output
+{'name': 'Rahul', 'age': 20}
+
+
+Q. What is a Higher-Order Function?
+Answer:
+A Higher-Order Function is a function that accepts another function as an argument or returns another function.
+
+Q. Give examples of Higher-Order Functions in Python.
+Answer:
+map()
+filter()
+sorted()
+reduce() (from the functools module)
+
+
+Q. Why are Higher-Order Functions used?
+Answer:
+To reduce code duplication.
+
+To make code reusable.
+To write cleaner and more readable code.
+They are commonly used with lambda functions.
+
+
+Q. Is lambda a Higher-Order Function?
+Answer:
+No. A lambda is an anonymous function, not a higher-order function. It is often passed to higher-order functions such as map(), filter(), and sorted().
+
+
+Q. What is the difference between a normal function and a Higher-Order Function?
+Normal Function	Higher-Order Function
+Performs a task	Takes or returns functions
+Doesn't necessarily work with functions	Works with other functions
+Example: print(), len()
+
+Q. What is type casting in Python?
+Answer:
+Type casting is the process of converting one data type into another. Python supports two types:
+
+Implicit Type Casting (Automatic)
+Explicit Type Casting (Manual)
+
+
+Q. What is implicit type casting?
+Answer:
+Implicit type casting is the automatic conversion of one data type into another by Python during an operation.
+Example:
+a = 10
+b = 2.5
+print(a + b)
+print(type(a + b))
+
+Output
+12.5
+<class 'float'>
+
+
+Q. What is explicit type casting?
+Answer:
+Explicit type casting is the manual conversion of one data type into another using built-in functions.
+Example functions:
+
+int()
+float()
+str()
+bool()
+list()
+tuple()
+set()
+dict()
+complex()
+
+
+4. What is the difference between implicit and explicit type casting?
+
+Implicit Type Casting	                        Explicit Type Casting
+Done automatically by Python	            Done manually by the programmer
+No function is used	                    Uses functions like int(), float(), str()
+Example: 10 + 2.5	                            Example: int("10")
+
+
+Q. What is a variable scope?
+Answer:
+Scope is the area of a program where a variable can be accessed.
+
+Q. What is a local variable?
+Answer:
+A variable declared inside a function is called a local variable. It can be accessed only inside that function.
+Example:
+def show():
+    x = 10
+    print(x)
+show()
+
+Q. What is a global variable?
+Answer:
+A variable declared outside all functions is called a global variable. It can be accessed throughout the program.
+
+Example:
+x = 100
+def show():
+    print(x)
+show()
+
+4. What is the difference between local and global variables?
+Local Variable	                                  Global Variable
+Declared inside a function	                Declared outside a function
+Accessible only inside that function	    Accessible throughout the program
+Lifetime ends after the function finishes	Exists until the program ends
+
+5. What is the global keyword?
+Answer:
+The global keyword is used to modify a global variable inside a function.
+Example:
+x = 10
+def update():
+    global x
+    x = 20
+update()
+print(x)
+
+Output
+20
+
+
+OPP::
+
+Q. What is a constructor?
+Answer: A constructor is a special method (__init__) that is automatically called when an object is created. It initializes the object's attributes.
+
+Q. What is a default constructor?
+Answer: A default constructor is a constructor that takes no arguments other than self.
+
+Q. What is a parameterized constructor?
+Answer: A parameterized constructor accepts parameters to initialize object attributes with specific values.
+
+Q. What is a destructor?
+Answer: A destructor is a special method (__del__) that is automatically called when an object is destroyed or deleted, and it is used for cleanup tasks.
+
+Q. What is the difference between a constructor and a destructor?
+
+Constructor                                                	Destructor
+__init__()	                                                __del__()
+Called when an object is created	                Called when an object is destroyed
+Initializes object data                             	Cleans up resources
+Runs automatically at object creation           	Runs automatically before object destruction
+
+Q. What is OOP in Python?
+Answer:
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code using classes and objects. 
+It helps make code reusable, secure, modular, and easy to maintain.
+
+Q. What are the four pillars of OOP?
+
+Answer:
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+
+Q. What is a class?
+Answer:
+A class is a blueprint or template used to create objects. It contains attributes (variables) and methods (functions).
+Example:
+class Student:
+    pass
+
+
+Q. What is an object?
+Answer:
+An object is an instance of a class. It represents a real-world entity.
+Example:
+s1 = Student()
+5. What is a constructor?
+Answer:
+A constructor is a special method named __init__() that is automatically called when an object is created. It is used to initialize object attributes.
+
+Q. What are the types of constructors in Python?
+Answer:
+Default (Non-Parameterized) Constructor
+Parameterized Constructor
+
+Q. What is the difference between a function and a method?
+Function                                                        	Method
+Defined outside a class	                                    Defined inside a class
+Called directly	                                            Called using an object
+Independent	                                                    Belongs to a class
+
+
+Q. What is self in Python?
+Answer:
+self refers to the current object of the class. It is used to access instance variables and methods.
+Example:
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+Q. What is inheritance?
+Answer:
+Inheritance is the process of creating a new class from an existing class. The child class inherits properties and methods from the parent class.
+
+Q. What are the types of inheritance?
+Answer:
+Single Inheritance
+Multiple Inheritance
+Multilevel Inheritance
+Hierarchical Inheritance
+Hybrid Inheritance
+
+Q.What is Encapsulation?
+Encapsulation is the process of wrapping data (variables) and methods (functions) into a single unit called a class. 
+It also helps protect data by restricting direct access.
+
+In Python, encapsulation is achieved using access modifiers:
+
+Public
+Protected
+Private
+
+Real-world Example:
+
+An ATM machine hides your account details. You can only access your money using your PIN. The internal banking process is protected.
+
+Python Example:
+
+class Bank:
+    def __init__(self):
+        self.__balance = 5000
+    def deposit(self, amount):
+        self.__balance += amount
+    def get_balance(self):
+        return self.__balance
+obj = Bank()
+obj.deposit(1000)
+print(obj.get_balance())
+
+
+Q. What are access modifiers in Python?
+
+Python provides three levels of access:
+
+Modifier	              Syntax	                    Access
+Public	                   name	                    Accessible everywhere
+Protected	               _name	            Accessible within the class and subclasses (by convention)
+Private                   	__name	            Accessible only inside the class (name-mangled)
+
+Q.What is Abstraction?
+Abstraction means showing only the essential features of an object while hiding the internal implementation details.
+The user knows what an object does but does not need to know how it does it.
+Python supports abstraction using the abc module and abstract classes.
+
+Real-world Example:
+When you drive a car, you use the steering wheel, brake, and accelerator. You don't need to know how the engine works internally.
+
+Q.Difference between Encapsulation and Abstraction
+Encapsulation	                        Abstraction
+Hides data                  	    Hides implementation
+Focuses on data security            	Focuses on simplicity
+Uses access modifiers	            Uses abstract classes and methods
+Protects internal state	            Exposes only essential functionality
+
+Q.What is an Abstract Class?
+An abstract class is a class that cannot be instantiated directly. It serves as a blueprint for other classes and may contain abstract methods that child classes must implement.
+
+Example:
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def sound(self):
+        pass
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+obj = Dog()
+obj.sound()
+
+Q.What is Polymorphism?
+Polymorphism means "many forms." It allows the same method or interface to behave differently depending on the object.
+In Python, polymorphism makes code flexible and reusable.
+
+Q.What is Method Overriding?
+Method overriding occurs when a child class provides its own implementation of a method that already exists in the parent class.
+Example:
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+obj = Dog()
+obj.sound()
+
+Output
+Bark
+
+Q.What is Exception Handling?
+Answer:
+Exception handling is a mechanism in Python that allows a program to handle runtime errors gracefully without crashing.
+It helps the program continue executing even if an error occurs.
+
+Q.Explain try, except, else, and finally.
+try: Contains code that may raise an exception.
+except: Handles the exception if one occurs.
+else: Executes only if no exception occurs.
+finally: Always executes, whether an exception occurs or not. It is commonly used for cleanup tasks such as closing files.
+
+Example:
+try:
+    a = 10
+    b = 2
+    print(a / b)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+else:
+    print("Division successful")
+finally:
+    print("Program finished")
+
+
+Q.What is the purpose of the raise keyword?
+The raise keyword is used to manually generate an exception when a specific condition is met.
+
+Example:
+age = 16
+if age < 18:
+    raise Exception("Age must be 18 or above.")

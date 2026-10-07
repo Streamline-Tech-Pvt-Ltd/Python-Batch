@@ -1,0 +1,445 @@
+1. What is HTML?
+HTML stands for HyperText Markup Language. It is used to create and structure the content of web pages.
+
+Key points:
+HTML is a markup language, not a programming language.
+It defines the structure of a webpage.
+It works with CSS and JavaScript.
+
+2. HTML vs HTML5
+| HTML                       | HTML5                       |
+| -------------------------- | --------------------------- |
+| Older versions             | Latest major HTML standard  |
+| Limited multimedia support | Built-in audio/video        |
+| Fewer semantic elements    | Semantic elements           |
+| No native web storage      | localStorage/sessionStorage |
+| Older form features        | New input types             |
+
+3. Tag vs Element vs Attribute
+Tag
+A tag is markup written inside < >.
+<p>
+
+Element
+An element generally consists of opening tag, content, and closing tag.
+<p>Hello</p>
+
+Attribute
+An attribute gives additional information about an element.
+<p class="text">Hello</p>
+Here class="text" is an attribute.
+
+🧠 Trick:
+Tag = Markup | Element = Complete | Attribute = Extra Information
+
+
+4. What is <!DOCTYPE html>?
+It tells the browser that the document should be interpreted using HTML standards, and in modern HTML it declares an HTML5 document.
+<!DOCTYPE html>
+
+
+5. Basic HTML Structure
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</body>
+</html>
+Important parts:
+| Part              | Purpose                 |
+| ----------------- | ----------------------- |
+| `<!DOCTYPE html>` | Declares HTML document  |
+| `<html>`          | Root element            |
+| `<head>`          | Metadata/resources      |
+| `<title>`         | Browser tab title       |
+| `<body>`          | Visible webpage content |
+
+
+
+6. <div> vs <span>
+| `<div>`                  | `<span>`                |
+| ------------------------ | ----------------------- |
+| Block-level container    | Inline container        |
+| Usually starts new line  | Stays in same line      |
+| Used for larger sections | Used for small portions |
+
+Example:
+<div>This is a block</div>
+<span>This is inline</span>
+
+
+7. id vs class
+| `id`                            | `class`                  |
+| ------------------------------- | ------------------------ |
+| Usually unique                  | Can be reused            |
+| Identifies one specific element | Groups multiple elements |
+| `#` in CSS                      | `.` in CSS               |
+
+Example:
+<p id="name">Pallavi</p>
+<p class="student">A</p>
+<p class="student">B</p>
+
+
+8. Block vs Inline Elements
+Block elements
+Usually start on a new line.
+Examples:
+<div>
+<p>
+<h1>
+<section>
+Inline elements
+
+Usually remain within the same line.
+Examples:
+<span>
+<a>
+<strong>
+<em>
+
+9. What are Semantic Elements?
+Semantic elements clearly describe their meaning/purpose.
+Examples:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+
+Instead of:
+<div>
+    ...
+</div>
+
+we can use meaningful elements.
+Benefits:
+Better readability
+Better accessibility
+Better page structure
+Helps search engines understand content
+
+10. Why use alt in <img>?
+Example:
+
+<img src="photo.jpg" alt="Profile photo">
+alt provides alternative text for the image.
+
+It is useful when:
+Image doesn't load.
+Screen readers need to describe the image.
+It improves accessibility.
+
+11. src vs href
+| `src`                          | `href`                              |
+| ------------------------------ | ----------------------------------- |
+| Specifies source of a resource | Specifies a referenced URL/resource |
+| Used with `<img>`              | Used with `<a>`                     |
+| Used with `<script>`           | Used with `<link>`                  |
+
+Example:
+<img src="image.jpg">
+<a href="about.html">About</a>
+
+12. What is a Hyperlink?
+A hyperlink connects a webpage/resource to another location.
+<a href="https://example.com">Visit</a>
+
+Open in a new tab:
+<a href="https://example.com" target="_blank">
+    Visit
+</a>
+
+For external links, you may also see:
+rel="noopener noreferrer"
+
+13. What are HTML Forms?
+Forms collect information from users.
+
+Examples:
+
+Name
+Email
+Password
+Gender
+Address
+
+Example:
+
+<form>
+    <input type="text">
+    <input type="email">
+    <button type="submit">Submit</button>
+</form>
+
+Common form attributes:
+| `src`                          | `href`                              |
+| ------------------------------ | ----------------------------------- |
+| Specifies source of a resource | Specifies a referenced URL/resource |
+| Used with `<img>`              | Used with `<a>`                     |
+| Used with `<script>`           | Used with `<link>`                  |
+
+
+
+14. Different <input> Types
+Important types:
+
+text
+password
+email
+number
+radio
+checkbox
+date
+file
+submit
+button
+search
+tel
+url
+
+Example:
+<input type="email">
+<input type="password">
+<input type="radio">
+<input type="checkbox">
+
+
+
+⭐ 15. GET vs POST
+| GET                           | POST                                            |
+| ----------------------------- | ----------------------------------------------- |
+| Mainly retrieves data         | Mainly submits data                             |
+| Data is placed in URL         | Data is sent in request body                    |
+| Can be bookmarked             | Usually not bookmarked with submitted form data |
+| Suitable for queries/searches | Suitable for form submissions                   |
+| URL length can limit data     | Better for larger submissions                   |
+
+Example:
+<form method="GET">
+<form method="POST">
+
+
+16. disabled vs readonly vs required
+| Attribute  | Meaning                               |
+| ---------- | ------------------------------------- |
+| `disabled` | User cannot interact with the control |
+| `readonly` | User cannot edit the value            |
+| `required` | User must provide a value             |
+
+Example:
+<input disabled>
+<input readonly value="Pallavi">
+<input required>
+Important interview point:
+
+A disabled form control is generally not submitted with the form.
+
+
+17. What is <label>?
+<label> gives a name/description to a form control.
+<label for="email">Email:</label>
+<input type="email" id="email">
+
+The for value matches the input's id.
+Benefits:
+Better accessibility
+Easier to understand form
+Clicking label can focus/select the associated control
+
+🧠 LABEL = Name of Input
+
+18. <ul> vs <ol> vs <dl>
+| Tag    | Meaning          | Example            |
+| ------ | ---------------- | ------------------ |
+| `<ul>` | Unordered list   | Shopping items     |
+| `<ol>` | Ordered list     | Steps              |
+| `<dl>` | Description list | Term + description |
+
+
+Example:
+<ul>
+    <li>Python</li>
+    <li>JavaScript</li>
+</ul>
+
+
+19. How to Create a Table?
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Pallavi</td>
+        <td>20</td>
+    </tr>
+</table>
+
+
+20. <tr>, <th>, <td>
+| Tag    | Meaning      |
+| ------ | ------------ |
+| `<tr>` | Table Row    |
+| `<th>` | Table Header |
+| `<td>` | Table Data   |
+
+
+21. rowspan vs colspan
+rowspan
+Combines cells across rows.
+
+<td rowspan="2">A</td>
+colspan
+Combines cells across columns.
+<td colspan="2">A</td>
+
+
+⭐ 22. HTML5 New Features
+Important features:
+
+Semantic elements
+<header>
+<nav>
+<main>
+<section>
+<article>
+<footer>
+Multimedia
+<audio>
+<video>
+Graphics
+<canvas>
+<svg>
+Web storage
+localStorage
+sessionStorage
+New input types
+email
+date
+number
+range
+color
+url
+
+🧠 HTML5 = Structure + Media + Graphics + Storage
+
+23. Semantic Tags — Know Their Purpose
+| Tag         | Purpose                 |
+| ----------- | ----------------------- |
+| `<header>`  | Intro/header content    |
+| `<nav>`     | Navigation links        |
+| `<main>`    | Main content            |
+| `<section>` | Thematic section        |
+| `<article>` | Independent content     |
+| `<aside>`   | Related/sidebar content |
+| `<footer>`  | Footer information      |
+
+Example structure:
+<header>
+   <nav>
+</header>
+
+<main>
+   <section>
+      <article>
+      </article>
+   </section>
+
+   <aside>
+   </aside>
+</main>
+
+<footer>
+</footer>
+
+
+⭐ 24. localStorage vs sessionStorage
+| localStorage                                                    | sessionStorage                              |
+| --------------------------------------------------------------- | ------------------------------------------- |
+| Data persists until cleared                                     | Data lasts for the page session             |
+| Generally available across browser sessions for the same origin | Generally scoped to the current tab/session |
+| `localStorage.setItem()`                                        | `sessionStorage.setItem()`                  |
+
+Example:
+localStorage.setItem("name", "Pallavi");
+sessionStorage.setItem("name", "Pallavi");
+
+
+⭐ 25. What is DOM?
+DOM = Document Object Model
+The browser represents an HTML document as a tree of objects/nodes.
+
+Example:
+<body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</body>
+
+Conceptually:
+
+Document
+   |
+  html
+   |
+  body
+  /  \
+h1    p
+
+JavaScript can use the DOM to:
+
+Find HTML elements
+Change text
+Change styles
+Add/remove elements
+Respond to events
+
+Example:
+document.getElementById("name");
+
+
+26. What are void elements?
+Elements that don't have a closing tag.
+Examples:
+
+<img>
+<br>
+<hr>
+<input>
+<meta>
+<link>
+
+27. What is the difference between <strong> and <b>?
+<b> makes text visually bold.
+<strong> indicates that the text has strong importance.
+
+28. <i> vs <em>?
+<i> represents text in an alternate voice/mood, often displayed in italic.
+<em> represents emphasis.
+
+29. What is accessibility in HTML?
+Accessibility means making websites usable by people with different abilities.
+Examples:
+Proper <label>
+alt text
+Semantic HTML
+Keyboard-friendly controls
+
+30. What is the difference between HTML, CSS and JavaScript?
+| Technology | Role                 |
+| ---------- | -------------------- |
+| HTML       | Structure            |
+| CSS        | Styling              |
+| JavaScript | Behavior/interaction |
+
+Example:
+HTML → House structure
+CSS → House decoration
+JavaScript → House functionality

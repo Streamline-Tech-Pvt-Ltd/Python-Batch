@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            
+            <th>SIno</th>
+            <th>user id</th>
+            <th>username</th>
+            <th>email</th>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>city</th>
+            <th>street</th>
+            <th>street number</th>
+            <th>zipcode</th>
+            <th>latitude</th>
+            <th>longitude</th>
+            <th>phone</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.name.firstname}}</td>
+            <td>{{user.name.lastname}}</td>
+            <td>{{user.address.city}}</td>
+            <td>{{user.address.street}}</td>
+            <td>{{user.address.number}}</td>
+            <td>{{user.address.zipcode}}</td>
+            <td>{{user.address.geolocation.lat}}</td>
+            <td>{{user.address.geolocation.long}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

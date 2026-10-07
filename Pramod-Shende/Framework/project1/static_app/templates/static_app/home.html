@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'static_app/css/style.css' %}">
+
+</head>
+<body>
+    <h1>hello Django</h1>
+
+    <div class="container">
+        <img src="{% static 'static_app/images/google_logo.png' %}" alt="img1">
+    </div>
+
+    <div class="container">
+        <button class="btn" onclick="showText()">click here</button>
+    </div>
+       <script src="{% static 'static_app/js/scripts.js' %}"></script> 
+</body>
+</html>

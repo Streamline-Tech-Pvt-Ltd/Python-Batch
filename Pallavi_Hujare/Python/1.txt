@@ -1,0 +1,164 @@
+Good morning, sir. My name is Pallavi Hujare, and I'm from Nashik, Maharashtra. 
+I have completed my Bachelor's degree in Computer Science from K.K. Wagh College, Nashik, with a CGPA of 9.07.
+I am passionate about Python programming and currently learning Python Full Stack Development.
+I have a good understanding of Python, HTML, CSS, JavaScript, and SQL.
+I enjoy solving programming problems and continuously learning new technologies to improve my technical skills.
+My strengths are that I am a quick learner, self-motivated, and dedicated to achieving my goals.
+As a fresher, I am looking for an opportunity where I can apply my skills, 
+learn from experienced professionals, and contribute to the growth of the organization while building my career.
+
+
+
+Python is a simple, high-level, interpreted, dynamically typed, and object-oriented programming language. 
+It is widely used for web development, automation, data science, artificial intelligence, and scripting.
+
+Some important features of Python are
+
+Simple and Easy to Learn – Its syntax is easy to read and write.
+Interpreted Language – Code is executed line by line, making debugging easier.
+Dynamically Typed – We don't need to declare the data type of variables.
+Platform Independent – Python programs can run on Windows, Linux, and macOS with little or no changes.
+Object-Oriented – It supports classes, objects, inheritance, polymorphism, and other OOP concepts.
+Large Standard Library – It provides many built-in modules that reduce development time.
+Open Source – It is free to use and has a large developer community.
+
+
+
+| List                           | Tuple                          |
+| ------------------------------ | ------------------------------ |
+| Mutable (can be modified)      | Immutable (cannot be modified) |
+| Uses **[]** brackets           | Uses **()** parentheses        |
+| Requires more memory           | Requires less memory           |
+| Slightly slower                | Faster than lists              |
+| Suitable for data that changes | Suitable for fixed data        |
+
+
+Why is a tuple faster than a list?
+tuple is faster than a list because it is immutable. Since tuple elements cannot be added, removed,
+or modified after creation, Python doesn't need to allocate extra memory for changes or perform modification operations.
+This makes tuples more memory-efficient and slightly faster than lists.
+
+difference
+append() : adds one element to the end of the list. If you append another list, that entire list becomes a single element.
+extend() : adds each element of an iterable (such as a list, tuple, or set) individually to the existing list.
+
+== (Equality Operator): Compares the values of two objects.
+is (Identity Operator): Checks whether two variables refer to the same object in memory.
+
+*args → Positional arguments → stored as a tuple
+**kwargs → Keyword arguments → stored as a dictionary
+
+
+here are four pillars of Object-Oriented Programming (OOP):
+
+1. Encapsulation –
+ Wrapping data (variables) and methods (functions) into a single unit (class). 
+It also helps protect data using access modifiers like public, protected, and private.
+
+2. Abstraction – 
+Hiding the implementation details and showing only the essential functionality to the user.
+ In Python, abstraction can be achieved using abstract classes from the abc module.
+
+3. Inheritance – 
+A child class acquires the properties and methods of a parent class, promoting code reusability.
+ Python supports single, multiple, multilevel, hierarchical, and hybrid inheritance.
+
+4. Polymorphism – The same method or interface can behave differently depending on the object.
+ A common example is method overriding, where a child class provides its own implementation of a parent class method.
+
+Method Overloading means having multiple methods with the same name but different parameters.
+Python does not support method overloading in the traditional sense like Java or C++. However, 
+similar behavior can be achieved using default arguments or *args.
+Method Overriding means a child class provides its own implementation of a 
+method that already exists in the parent class. Python fully supports method overriding.
+
+
+| Method          | First Parameter | Decorator       | Used For               |
+| --------------- | --------------- | --------------- | ---------------------- |
+| Instance Method | `self`          | No decorator    | Instance/Object data   |
+| Class Method    | `cls`           | `@classmethod`  | Class data             |
+| Static Method   | None            | `@staticmethod` | Utility/helper methods |
+
+
+A decorator is a function that adds extra functionality to another function without modifying its original code.
+ It is commonly used for tasks such as logging, authentication, authorization, timing, and caching.
+
+
+Deep copy vs shallow copy
+| Shallow Copy                 | Deep Copy                                          |
+| ---------------------------- | -------------------------------------------------- |
+| Copies only the outer object | Copies the entire object, including nested objects |
+| Nested objects are shared    | Nested objects are copied independently            |
+| Faster                       | Slightly slower                                    |
+| Uses `copy.copy()`           | Uses `copy.deepcopy()`                             |
+
+Easy Trick to Remember
+Shallow Copy = Surface copy (shares nested objects)
+Deep Copy = Complete copy (everything is copied)
+
+
+check whether a string is a palindrome
+text = input("Enter a string: ")
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+Using string slicing
+Python slicing supports step values. We can reverse the string by taking a step value of -1.
+
+s = "GeeksforGeeks"
+rev = s[::-1]
+print(rev)
+
+
+try: Contains the code that may raise an exception.
+except: Handles the exception if one occurs.
+else: Executes only if no exception occurs in the try block.
+finally: Executes regardless of whether an exception occurs or not.
+ It is mainly used for cleanup activities like closing files or database connections.
+
+ | `raise`                                | `assert`                                          |
+| -------------------------------------- | ------------------------------------------------- |
+| Manually raises an exception           | Checks a condition for debugging                  |
+| Can raise any exception                | Raises `AssertionError` if the condition is false |
+| Used for validation and error handling | Mainly used during testing and debugging          |
+
+
+📄 Module = One Python file
+📁 Package = Folder of Python files (modules)
+
+| `import module`                  | `from module import *`                       |
+| -------------------------------- | -------------------------------------------- |
+| Imports the whole module         | Imports all public names                     |
+| Access using `module.function()` | Access functions directly                    |
+| Avoids name conflicts            | Can cause name conflicts                     |
+| Recommended in most cases        | Generally not recommended in production code |
+
+
+| Lambda Function           | Normal Function                 |
+| ------------------------- | ------------------------------- |
+| Uses `lambda` keyword     | Uses `def` keyword              |
+| Anonymous (no name)       | Has a function name             |
+| Single expression only    | Can contain multiple statements |
+| Used for short operations | Used for complex logic          |
+
+
+map(), filter(), and reduce() are higher-order functions in Python.
+map() applies a function to every element of an iterable and returns a new iterator.
+filter() selects only those elements that satisfy a given condition.
+reduce() repeatedly combines all elements into a single value. It is available in the functools module.
+
+
+GIL (Global Interpreter Lock) is a mechanism in CPython that allows only one 
+thread to execute Python bytecode at a time, even if multiple threads exist.
+ Because of the GIL, Python threads cannot achieve true parallel execution for CPU-bound tasks.
+
+ | Multithreading           | Multiprocessing          |
+| ------------------------ | ------------------------ |
+| Multiple threads         | Multiple processes       |
+| Shared memory            | Separate memory          |
+| Best for I/O-bound tasks | Best for CPU-bound tasks |
+| Affected by GIL          | Not affected by GIL      |
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            padding: 16px;
+            border: 2px solid #000
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- using inline event -->
+    <!--<button onclick="showmsg()">click me!</button>
+    <script>
+        function showmsg(){
+            alert("Button is clicked");
+        };
+    </script> -->
+    <!-- using DOM property -->
+    <!-- <button id="btn">click</button>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            alert("clicked");
+        };
+    </script> -->
+
+    <!-- add event listener -->
+    <!-- <button id="btn">Click</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            alert("Button clicked!");
+        });
+    </script> -->
+
+    <!-- mouse over  mouse out 
+    
+    <div id="box">
+        Move mouse over this box
+    </div>
+
+    <script>
+        const box = document.getElementById("box");
+
+        // Let box listen for mouseover
+        box.addEventListener("mouseover", function () {
+            box.innerHTML = "Mouse is over me!";
+        });
+
+        // Let box listen for mouseout
+        box.addEventListener("mouseout", function () {
+            box.innerHTML = "Move is out!";
+        });
+    </script> -->
+
+
+    <!-- keyboard events
+    <input id="k" type="text" placeholder="Press a key">
+
+    <p id="demo"></p>
+
+    <script>
+        const k = document.getElementById("k");
+
+        // Let k listen for keydown
+        k.addEventListener("keydown", function (event) {
+
+            // Then display the event.key
+            document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+        });
+    </script> -->
+
+
+</body>
+
+</html>
