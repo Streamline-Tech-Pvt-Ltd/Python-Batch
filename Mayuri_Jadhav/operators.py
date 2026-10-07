@@ -1,169 +1,111 @@
-## arithmetic operation using function
-# def add(a,b):
-#     print("Addition of:",a+b)
-#     print ("subtraction of:",a-b)
-#     print("Multiplication of:",a*b)
-#     print("Division of :",a/b)
-#     a=int(input("enter a number:"))
-#     b=int(input("enter a number:"))
-#     add(a,b)
+#Arithmetic operators 
 
-#     # even add number
-#     def even(a,b):
-#        if a%2==0:
-#          print("even number is :",a)
-#        else:
-#          print("odd number is :",a)
-#          even(a,b):
+a=10
+b=5
+print("Addition=",a+b)
+print("Subtraction=",a-b)
+print("Multiplication=",a*b)
+print("Divison=",a/b)
+print("Floor division=",a//b)
+print("Modulus=",a%b)
+print("Exponent=",a**b)
 
+# comparision operators
 
-         # even odd number
-# def check_number(num):
-#     if num%2==0:
-#         print("even number is :",num)
-#     else:
-#         print("odd numb er is :",num)
-# num=int(input("enter a number:"))
-# check_number(num)
- 
-
-#lambda function genral syntax
-# add=lambda a,b:a+b
-# print("Addition of:",add (10,20))
-
-## lambda funcction for addition of two numbers
-# a=int(input("enter a number:"))
-# b=int(input("enter a number:"))
-# num=lambda a,b:a+b
-# print(num(a,b))
+a=20
+b=30
+print (a==b)
+print(a!=b)
+print(a>b)
+print(a<b)
+print(a<=b)
+print(a>=b)
 
 
-#lambda function for even odd number
+#logical operators
 
-# num=int(input("enter a number:"))
-# res=lambda num:"even"if num%2==0 else "odd"
-# print(res(num))
-
-
-#postive and negative number using lambda function
-# num=int(input("enter a number:"))
-# res=lambda num:"postive number"if num>0 else "negative number"
-# print(res(num))
-
-## lambda function for maximum number
-# a=int(input("enter a number:"))
-# b=int(input("enter a number:"))
-# maximum=lambda a,b:a if a>b else b
-# print("Maximum number is:",maximum(a,b))
-
-##lambda function for age check
-# age=int(input("enter a age:"))
-# res=lambda age:"eligible for vote" if age>=18 else "not eligible for vote"
-# print(res(age))
+a=10
+b=20
+print(a>b and a<b)
+print(a>=b or a<b)
+print(not(a>b))
+print(not(a<b))
+print(a<=b or a>=b)
 
 
-##labda functuion for pass or fail
-# marks=int(input("enter a marks:"))
-# student=lambda marks:"pass"if marks>=35 else "fail"
-# print(student(marks))
+#Bitwise Operators
 
-## lambdafunction for area of circle
-# radius=int(input("enter a radius:"))
-# area=lambda radius:3.14*radius*radius
-# print("area of circle is :",area(radius))
-
-# lambda function for area of reactangle
-# length=int(input("enter a length:"))
-# breadth=int(input("enter a breadth:"))
-# area=lambda length,breadth:length*breadth
-# print("area of reactangle is :",area(length,breadth))
-
-#lambda function for area of square
-# side=int(input("enter a side:"))
-# area=lambda side:side*side
-# print("area of square is :",area(side))
-
-#lambda function for triangle
-# base=int(input("enter abase:"))
-# height=int(input("enter a height:"))
-# area=lambda base,height:0.5*base*height
-# print("area of triangle is:",area(base,height))
+a=12
+b=13
+print(a&b)
+print(a|b)
+print(a^b)
+print(a>>b)
+print(a<<b)
 
 
-#lambda fuction for minimum number
-# a=int(input("enter a number:"))
-# b=int(input("enter a number:"))
-# minimum=lambda a,b:a if a<b else b
-# print("minimum number is:",minimum(a,b))
 
-#lambda function for factorial
-# num=int(input("enter a number:"))
-# factorial=lambda num:1 if num==0 else num*factorial(num-1)
-# print("factorial of number is:",factorial(num))
+#Membership Operators
+#IN
+a=[10,20,30,40,50]
 
-#map for even number
+print(20 in a)
+print(70 in a)
 
-# list1=[1,2,3,4,5,6,7,8,9,10]
-# res=map(lambda num:num%2==0,list1)
-# print("even:",list(res))
+#NOT IN
 
-#higher order map function for square a number
-#  l1=[1,2,3,4,5,6]
-# res=map(lambda a:a*a,l1)
-# print(tuple(res))
+fruits=["mango","apple","Strawberry","banana"]
+print("pineapple" not in fruits)
+print("mango" not in fruits)
 
-#square program in sequencial program
-# l1=[1,2,3,4,5,6]
-res=[]
-# for num in l1:
-#     l1=num*num
-# res.append(l1)
-# print(res)
+# Identity OPerators
+#IS
+a=[10,20,30]
+b=[10,20,30]
+print(a is b)
+print(b is a)
 
-#even number using filter function
-# l1=[1,2,3,4,5,6]
-# res=filter(lambda num:num%2==0,l1)
-# print("even number is:",list(res))
+a=10
+b=a
+print(a is b)
+print(a is not b)
 
-#even number using sequential program
-# l1=[1,2,3,4,5,6]
-# res=[]
-# for num in l1:
-#     if num%2==0:
-#         res.append(num)
-#         print("even number is:",res)
-
-        ##reduce function for sum of numers
-# from functools import reduce
-# l1=[1,2,3,4,5,6]
-# res=reduce(lambda a,b:a+b,l1)
-# print("sum of number is:",res)
-
-# def calculation(fun,a,b):
-#     return fun(a,b)
-# def add(a,b):
-#     return a+b
-# calculation(add,10,20)
-# print(calculation(add,10,20))
-
-# def calculation1(fun,x,y):
-#     return fun(x,y)
-# def multiply(x,y):
-#     return(x*y)
-# def subtract(x,y):
-#     return(x-y)
-# calculation1(multiply,20,20)
-# calculation1(subtract,20,20)
-# print(calculation1(multiply,20,20))
-# print(calculation1(subtract,20,20))
+#IS NOT
+a=[10,20,30]
+b=[10,20,25]
+print(a is not b)
 
 
-#recersive function for factorial
-def count(num):
-    if num==0 or num ==1:
-        return 1
-        return num*count(num-1)
-print(count(10))
+#Calculator Program
+num1=eval(input("Enter first no:"))
+num2=eval(input("Enter second no:"))
+print("Addition=",num1+num2)
+print("Subtraction=",num1-num2)
+print("Multiplication=",num1*num2)
+print("Divison=",num1/num2)
 
 
-    
+
+#BITWISE OPERATORS(Left shift <<)
+a=0B1010  #binary literals =o(zero)b or 0B
+b=a<<2
+print(b)
+
+a=0b0011
+b=a<<3
+print(bin(b))
+
+ #right shift(>>)
+a=0b1110
+b=a>>2
+print(bin(b))
+
+
+a=0b1101
+b=a>>3
+print(b)
+
+#slicing
+#string
+a="Mayuri devidas jadhav"
+print(a.capitalize())
