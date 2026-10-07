@@ -1,3 +1,32 @@
+# 1. Example of Single Inheritance in Python:-
+
+class Vehicle:
+    def start(self):
+        print("Vehicle starts")
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car is driving")
+
+car = Car()
+car.start()  # Inherited from Vehicle
+car.drive()  # Defined in Car
+
+# 2. Example of Multiple Inheritance in Python:-
+        
+class Engine:
+    def start_engine(self):
+        print("Engine starts")
+
+class Car(Vehicle, Engine):
+    def __init__(self):
+        super().__init__()
+        self.engine = Engine()
+
+car = Car()
+car.start()  # Inherited from Vehicle
+car.start_engine()  # Inherited from Engine
+
 # Example of Encapsulation in Python:-
 
 class Patient:
