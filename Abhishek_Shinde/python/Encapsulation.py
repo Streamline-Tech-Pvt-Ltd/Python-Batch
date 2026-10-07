@@ -8,7 +8,7 @@ class vehicale:
      def fuel(self):
            print("vehical needs fuel")
 
-class car(vehicale):
+class car(vehical):
      def drive(self):
                  print ("car is driving")
 
