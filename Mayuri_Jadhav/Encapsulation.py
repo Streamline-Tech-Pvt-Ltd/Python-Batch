@@ -27,23 +27,30 @@ class mobile:
         self.color = "black"
         self.model = "samsung"
 
-    def set_volume(self, volume):
+    def set__volume(self, volume):
         self.volume = volume
 
-    def get_volume(self):
+    def get__volume(self):
         return self.volume
 
-    def set_brightness(self, brightness):
+    def set__brightness(self, brightness):
         self.brightness = brightness
 
-    def get_brightness(self):
+    def get__brightness(self):
         return self.brightness
 
 
 phone = mobile()
 
-phone.set_volume(80)
-print(phone.get_volume())
+phone.set__volume(80)
+print(phone.get__volume())
 
-phone.set_brightness(90)
-print(phone.get_brightness())
+phone.set__brightness(90)
+print(phone.get__brightness())
+
+#absraction  example
+from abc import ABC, abstractmethod
+class car(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
