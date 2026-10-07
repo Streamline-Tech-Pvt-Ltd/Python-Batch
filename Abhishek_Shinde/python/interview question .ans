@@ -3241,6 +3241,7 @@ print(deep)     # [[1, 2], [3, 4]]
                 Hierarchical → 1 Parent → Multiple Children
                 Hybrid → Combination of inheritance types
 
+<<<<<<< HEAD:Abhishek_Shinde/python/interview question .ans
 <<<<<<< HEAD
 <<<<<<< HEAD
     -_-_-_-_-_-_-_-_-_-_-_-_-
@@ -3533,3 +3534,7 @@ print(deep)     # [[1, 2], [3, 4]]
 =======
     -_-_-_-_-_-_-_-_-_-_-_-_-
 >>>>>>> abc509c (fixed  bug)
+=======
+    -_-_-_-_-_-_-_-_-_-_-_-_-
+    
+>>>>>>> 30243c5 (done):Abhishek_Shinde/python/interview question py
