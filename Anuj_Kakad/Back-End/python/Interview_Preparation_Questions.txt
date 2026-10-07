@@ -4957,7 +4957,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
         Python Notes: Day 21 - Inheritance & Its Types
 
-            1. Inheritance
+            1. Inheritance:-
                 Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.
 
                 It helps in:
@@ -4984,21 +4984,21 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 - `Child` → Child/Derived/Sub class
                 - `Child(Parent)` → Child inherits from Parent
 
-            2. Parent Class
+            2. Parent Class:-
                 The class whose properties and methods are inherited by another class is called the **Parent class**.
 
                 Other names:
                 - Base class
                 - Super class
 
-            3. Child Class
+            3. Child Class:-
                 The class that inherits properties and methods from another class is called the **Child class**.
 
                 Other names:
                 - Derived class
                 - Sub class
 
-            4. Types of Inheritance
+            4. Types of Inheritance:-
                 There are mainly 5 types of inheritance:
 
                 1. Single Inheritance
@@ -5147,7 +5147,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
                     Here, different inheritance types are combined, so it is called Hybrid Inheritance.
 
-            5. Quick Difference
+            5. Quick Difference:-
 
                 | Type         | Meaning                          |
                 |--------------|----------------------------------|
@@ -5157,14 +5157,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 | Hierarchical | One Parent → Multiple Children   |
                 | Hybrid       | Combination of two or more types |
 
-            6. Advantages of Inheritance
+            6. Advantages of Inheritance:-
                 - Code reusability
                 - Reduces code duplication
                 - Makes code easier to maintain
                 - Creates a relationship between classes
                 - Child classes can reuse parent methods
 
-            Quick Revision:
+            Quick Revision:-
 
                 Inheritance → Child class gets properties/methods from Parent
 
@@ -5176,5 +5176,399 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 Multilevel → Grandparent → Parent → Child
                 Hierarchical → 1 Parent → Multiple Children
                 Hybrid → Combination of inheritance types
+
+        Interview Questions on Day 21:-
+
+            1. What is Inheritance in Python?
+                Inheritance is an OOP concept where a child class inherits attributes and methods from a parent class.
+                
+            2. Why do we use Inheritance?
+                It is mainly used for code reusability and to avoid writing the same code again.
+                
+            3. What is a Parent Class?
+                A parent class is the class whose attributes and methods are inherited by another class.
+                It is also called Base Class or Super Class.
+            
+            4.What is a Child Class?
+                A child class is the class that inherits attributes and methods from a parent class.
+                It is also called Derived Class or Sub Class.
+
+            5. How do you implement Inheritance in Python?
+
+                class Parent:
+                    def show(self):
+                        print("Parent")
+
+                class Child(Parent):
+                    pass
+            
+            6. What are the types of Inheritance in Python?
+                There are five main types:
+                    Single Inheritance
+                    Multiple Inheritance
+                    Multilevel Inheritance
+                    Hierarchical Inheritance
+                    Hybrid Inheritance
+
+            7. What is Single Inheritance?
+                When one child class inherits from one parent class, it is called single inheritance.
+
+                Parent
+                |
+                Child
+
+            8. What is Multiple Inheritance?
+                When one child class inherits from multiple parent classes, it is called multiple inheritance.
+
+                Parent1    Parent2
+                    \       /
+                     Child
+
+            9. What is Multilevel Inheritance?
+                When inheritance occurs through multiple levels, it is called multilevel inheritance.
+
+                Grandparent
+                    |
+                Parent
+                    |
+                Child
+
+            10. What is Hierarchical Inheritance?
+                When multiple child classes inherit from the same parent class, it is called hierarchical inheritance.
+
+                    Parent
+                    /      \
+                Child1   Child2
+
+            11. What is Hybrid Inheritance?
+                Hybrid inheritance is a combination of two or more types of inheritance.
+
+                Example:
+
+                      A
+                    /   \
+                    B   C
+                    \   /
+                      D
+            
+            12. What is the difference between Multiple and Multilevel Inheritance?
+                Multiple → One child has multiple parents.
+                Multilevel → Inheritance happens across multiple levels.
+            
+            13. What is the difference between Hierarchical and Multiple Inheritance?
+                Hierarchical → One parent → multiple children.
+                Multiple → Multiple parents → one child.
+
+            14. Which type of inheritance is used in this example?
+
+                class A:
+                    pass
+
+                class B(A):
+                    pass
+
+                class C(B):
+                    pass
+
+                This is Multilevel Inheritance.
+
+            15. Can a child class use methods of its parent class?
+            Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
+            
+            ⭐ Quick Revision:-
+
+                Inheritance → Code reusability
+                Parent → Base / Super Class
+                Child → Derived / Sub Class
+
+                Single → 1 Parent → 1 Child
+                Multiple → Multiple Parents → 1 Child
+                Multilevel → Grandparent → Parent → Child
+                Hierarchical → 1 Parent → Multiple Children
+                Hybrid → Combination of inheritance types
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 24(2/10/26):-
+
+        Python Internship Notes: Day 22 - Polymorphism & Its Types
+
+            1. Polymorphism:-
+                Polymorphism means **one name having many forms or behaviours**.
+
+                Poly → Many
+                Morph → Forms
+
+                In Python, the same method or operator can behave differently depending on the situation.
+
+                Real-World Example:
+                Bank → pay()
+
+                Payment can be done through:
+                - UPI
+                - Credit Card
+                - Cash
+
+                1. Polymorphism Example
+
+                    class UPI:
+                        def pay(self):
+                            print("I will do my payment through UPI")
+
+                    class Credit_card:
+                        def pay(self):
+                            print("I will do my payment through Credit Card")
+
+                    class Cash:
+                        def pay(self):
+                            print("I will do my payment through Cash")
+
+                Here, all classes have the same method name:
+                `pay()`
+
+                But each class performs the payment differently.
+
+            2. Types of Polymorphism:-
+
+                The two types covered are:
+
+                    1. Compile-Time Polymorphism
+                    2. Run-Time Polymorphism
+
+                1. Compile-Time Polymorphism:-
+                    Compile-time polymorphism mainly includes:
+
+                    1. Method Overloading
+                    2. Operator Overloading
+
+                    1. Method Overloading:-
+                        Method overloading means using the **same method name with different parameters**.
+                        Python does not support traditional method overloading like some other languages.
+                        However, we can achieve similar behaviour using default parameters or variable-length arguments.
+
+                        Example:
+                            class Calculator:
+                                def add(self, a, b, c=0):
+                                    return a + b + c
+
+                            c1 = Calculator()
+
+                            print(c1.add(10, 20))
+                            print(c1.add(10, 20, 10))
+
+                        Output:
+                            30
+                            40
+
+                        Here, the same `add()` method works with different numbers of arguments.
+
+                    2. Operator Overloading:-
+                        Operator overloading means giving an operator **different behaviour depending on the operands**.
+
+                        Example:
+                            print(10 + 20)
+
+                            Output:
+                            30
+
+                            For strings:
+                            print("Streamline" + " tech")
+
+                        Output:
+                            Streamline tech
+
+                        For lists:
+                            print([1, 2, 3] + [4, 5])
+
+                        Output:
+                            [1, 2, 3, 4, 5]
+
+                        The `+` operator behaves differently for numbers, strings and lists.
+
+                    3. Operator Overloading with Class:-
+                        We can define how an operator works with our own objects using special methods.
+
+                        Example:
+                            class Student:
+                                def __init__(self, marks):
+                                    self.marks = marks
+
+                                def __add__(self, other):
+                                    return self.marks + other.marks
+
+                            s1 = Student(60)
+                            s2 = Student(90)
+
+                            print(s1 + s2)
+
+                        Output:
+                            150
+
+                        Here:
+                        `__add__()` defines the behaviour of the `+` operator for Student objects.
+
+                2. Run-Time Polymorphism:-
+                    Run-time polymorphism occurs when the method that should execute is decided **at runtime**.
+
+                    The main example is:
+
+                        1. Method Overriding
+
+                    1. Method Overriding:-
+                        Method overriding occurs when a **child class provides its own implementation of a method that already exists in the parent class**.
+
+                        Example:
+                            class Person:
+                                def work(self):
+                                    print("Streamline is an IT company")
+
+                            class Student(Person):
+                                def work(self):
+                                    super().work()
+                                    print("My work is done")
+
+                            s1 = Student()
+                            s1.work()
+
+                        Output:
+                            Streamline is an IT company
+                            My work is done
+
+                        Here:
+                        - `Person` → Parent class
+                        - `Student` → Child class
+                        - Both have `work()`
+                        - Child class provides its own implementation of `work()`
+
+                    2. super()
+                        `super()` is used to access the **parent class method or attributes** from the child class.
+
+                        Example:
+                            class Student(Person):
+                                def work(self):
+                                    super().work()
+                                    print("My work is done")
+
+                        Here:
+                            `super().work()` → Calls the `work()` method of the parent class.
+
+            3. Method Overloading vs Method Overriding
+
+                | Method Overloading                                     | Method Overriding                         |
+                |--------------------------------------------------------|-------------------------------------------|
+                | Same method name with different parameters             | Parent and child have the same method     |
+                | Different number/types of parameters                   | Child provides a different implementation |
+                | Usually associated with compile-time polymorphism      | Run-time polymorphism                     |
+                | Inheritance is not required                            | Inheritance is required                   |
+                | Occurs within the same class                           | Occurs between parent and child classes   |
+                | Python does not support traditional method overloading | Python supports method overriding         |
+
+            12. Quick Revision
+
+                Polymorphism → One name, many forms
+
+                Poly → Many
+                Morph → Forms
+
+                Compile-Time Polymorphism:
+                → Method Overloading
+                → Operator Overloading
+
+                Run-Time Polymorphism:
+                → Method Overriding
+
+                Method Overloading → Same method name, different parameters
+
+                Operator Overloading → Same operator, different behaviour
+
+                Method Overriding → Child class changes parent's method behaviour
+
+                `super()` → Accesses parent class method/attributes
+
+        Interview Questions on Day 22:-
+
+            1. What is Polymorphism?
+                Polymorphism means one name having many forms or behaviours.
+                Poly → Many, Morph → Forms.
+                
+            2. What are the main types of Polymorphism?
+                Compile-Time Polymorphism
+                Run-Time Polymorphism
+            
+            3. What is Compile-Time Polymorphism?
+                It is polymorphism where the behaviour is associated with operations such as:
+                Method Overloading
+                Operator Overloading
+
+            4. What is Method Overloading?
+                Method overloading means using the same method name with different parameters.
+
+                In Python, traditional method overloading is not directly supported, 
+                but similar behaviour can be achieved using default parameters or *args.
+
+            5. What is Operator Overloading?
+                Operator overloading means giving an operator different behaviour depending on the objects or operands.
+
+                Example:
+
+                    10 + 20
+                    "Hello" + "World"
+
+                Here, + behaves differently for numbers and strings.
+
+            6. What is the __add__() method?
+                __add__() is a special method used to define the behaviour of the + operator for objects.
+                
+            7. What is Run-Time Polymorphism?
+                Run-time polymorphism occurs when the method to execute is decided at runtime.
+                
+            8. What is Method Overriding?
+                Method overriding occurs when a child class provides its own implementation of a method already present in the parent class.
+                
+            9. Is Inheritance required for Method Overriding?
+                Yes. Method overriding occurs between a parent class and child class, so inheritance is required.
+
+            10. What is super() used for in Method Overriding?
+                super() is used to call a method of the parent class from the child class.
+
+                Ex:-
+                    class Student(Person):
+                        def work(self):
+                            super().work()
+                            print("Student work")
+            
+            11. What is the difference between Method Overloading and Method Overriding?
+                Method Overloading	                                        Method Overriding
+
+                Same method name with different parameters	                Same method in parent and child
+                Inheritance is not required	                                Inheritance is required
+                Associated with compile-time polymorphism	                Run-time polymorphism
+                Usually within the same class	                            Between parent and child classes
+                Python does not support traditional overloading directly	Python supports overriding
+
+            12. Give a real-world example of Polymorphism.
+                A pay() method can have different behaviours:
+
+                UPI → Payment through UPI
+                Credit Card → Payment through Credit Card
+                Cash → Payment through Cash
+
+                The method name is the same, but its behaviour is different.
+
+            ⭐ Quick Revision
+
+                Polymorphism → One name, many forms
+
+                Compile-Time → Method Overloading + Operator Overloading
+
+                Run-Time → Method Overriding
+
+                Overloading → Same method name, different parameters
+
+                Overriding → Child changes the parent's method behaviour
+
+                __add__() → Operator overloading for +
+
+                super() → Calls parent class method
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
