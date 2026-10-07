@@ -13,7 +13,7 @@ car.start()  # Inherited from Vehicle
 car.drive()  # Defined in Car
 
 # 2. Example of Multiple Inheritance in Python:-
-        
+
 class Engine:
     def start_engine(self):
         print("Engine starts")
