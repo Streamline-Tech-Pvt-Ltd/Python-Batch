@@ -1,0 +1,1556 @@
+# Python OOP (Object-Oriented Programming)
+
+## 1. What is OOP?
+
+**OOP stands for Object-Oriented Programming.**
+
+OOP is a programming approach where we organize a program using **classes and objects**.
+
+### Simple Definition
+
+> **OOP is a programming approach based on classes and objects.**
+
+### Why do we use OOP?
+
+OOP helps us to:
+
+- Organize code
+- Reuse code
+- Protect data
+- Reduce code duplication
+- Make large programs easier to manage
+- Make code easier to understand and maintain
+
+---
+
+# 2. Class
+
+## What is a Class?
+
+A **class** is a blueprint or template for creating objects.
+
+### Simple Definition
+
+> **A class is a blueprint for creating objects.**
+
+### Example
+
+```python
+class Car:
+
+    color = "Black"
+    model = "BMW"
+
+    def start(self):
+        print("Car started")
+```
+
+Here:
+
+- `Car` → Class
+- `color` → Attribute
+- `model` → Attribute
+- `start()` → Method
+
+### Real-life Example
+
+Think about a **house blueprint**.
+
+The blueprint is not the actual house.
+
+Similarly:
+
+```text
+Class = Blueprint
+Object = Actual thing
+```
+
+---
+
+# 3. Object
+
+## What is an Object?
+
+An **object is an instance of a class**.
+
+### Simple Definition
+
+> **An object is an instance of a class.**
+
+### Example
+
+```python
+class Car:
+
+    color = "Black"
+
+
+car1 = Car()
+```
+
+Here:
+
+- `Car` → Class
+- `car1` → Object
+
+`car1` is an object of the `Car` class.
+
+### Accessing an Attribute
+
+```python
+print(car1.color)
+```
+
+### Output
+
+```text
+Black
+```
+
+### Class vs Object
+
+| Class | Object |
+|---|---|
+| Blueprint | Actual instance |
+| Template | Real object |
+| `Car` | `car1` |
+| Used to create objects | Created from a class |
+
+### Real-life Example
+
+```text
+House Blueprint → Class
+Actual House     → Object
+```
+
+---
+
+# 4. Attributes
+
+## What is an Attribute?
+
+An **attribute** is a variable that belongs to an object or class.
+
+### Simple Definition
+
+> **An attribute is a variable that stores data or properties of an object.**
+
+### Example
+
+```python
+class Car:
+
+    color = "Black"
+    model = "BMW"
+```
+
+Here:
+
+- `color` → Attribute
+- `model` → Attribute
+
+### Real-life Example
+
+A car can have:
+
+```text
+Color = Black
+Model = BMW
+Price = 500000
+```
+
+These are properties/attributes of the car.
+
+---
+
+# 5. Methods
+
+## What is a Method?
+
+A **method is a function defined inside a class**.
+
+### Simple Definition
+
+> **A method is a function defined inside a class.**
+
+### Example
+
+```python
+class Car:
+
+    def start(self):
+        print("Car started")
+
+    def stop(self):
+        print("Car stopped")
+```
+
+Here:
+
+- `start()` → Method
+- `stop()` → Method
+
+### Calling a Method
+
+```python
+car1 = Car()
+
+car1.start()
+car1.stop()
+```
+
+### Output
+
+```text
+Car started
+Car stopped
+```
+
+### Function vs Method
+
+| Function | Method |
+|---|---|
+| Usually defined outside a class | Defined inside a class |
+| Can work independently | Usually works with class/object |
+| `def add():` | `def start(self):` |
+
+---
+
+# 6. Constructor
+
+## What is a Constructor?
+
+A **constructor is a special method that is automatically called when an object is created.**
+
+### Simple Definition
+
+> **A constructor is a special method used to initialize an object.**
+
+In Python, the constructor is:
+
+```python
+__init__()
+```
+
+### Example
+
+```python
+class Car:
+
+    def __init__(self):
+        self.color = "Black"
+        self.model = "BMW"
+
+
+car1 = Car()
+
+print(car1.color)
+print(car1.model)
+```
+
+### Output
+
+```text
+Black
+BMW
+```
+
+When this line executes:
+
+```python
+car1 = Car()
+```
+
+Python automatically calls:
+
+```python
+__init__()
+```
+
+### Why do we use a Constructor?
+
+We use a constructor to:
+
+- Initialize object data
+- Assign initial values
+- Set object properties when the object is created
+
+---
+
+# 7. `self` Keyword
+
+## What is `self`?
+
+`self` represents the **current object**.
+
+### Simple Definition
+
+> **`self` refers to the current object of the class.**
+
+### Example
+
+```python
+class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+
+s1 = Student("Mayuri", 85)
+
+print(s1.name)
+print(s1.marks)
+```
+
+### Output
+
+```text
+Mayuri
+85
+```
+
+Here:
+
+```python
+self.name
+```
+
+means the `name` of the current object.
+
+For:
+
+```python
+s1 = Student("Mayuri", 85)
+```
+
+`self` refers to `s1`.
+
+---
+
+# 8. Types of Methods
+
+There are mainly three types of methods in Python OOP:
+
+1. Instance Method
+2. Class Method
+3. Static Method
+
+---
+
+## 8.1 Instance Method
+
+An instance method works with object data.
+
+It uses `self`.
+
+### Example
+
+```python
+class Student:
+
+    def show(self):
+        print("Student information")
+
+
+s1 = Student()
+
+s1.show()
+```
+
+### Output
+
+```text
+Student information
+```
+
+### Key Point
+
+> **Instance method uses `self` and works with object data.**
+
+---
+
+# 8.2 Class Method
+
+A class method works with class-level data.
+
+It uses `cls`.
+
+We use the `@classmethod` decorator.
+
+### Example
+
+```python
+class Student:
+
+    school = "ABC School"
+
+    @classmethod
+    def show_school(cls):
+        print(cls.school)
+
+
+Student.show_school()
+```
+
+### Output
+
+```text
+ABC School
+```
+
+### Key Point
+
+> **Class method uses `cls` and works with class data.**
+
+---
+
+# 8.3 Static Method
+
+A static method does not use `self` or `cls`.
+
+It is generally used for utility/general-purpose operations.
+
+We use the `@staticmethod` decorator.
+
+### Example
+
+```python
+class Calculator:
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+
+print(Calculator.add(10, 20))
+```
+
+### Output
+
+```text
+30
+```
+
+### Method Types Comparison
+
+| Instance Method | Class Method | Static Method |
+|---|---|---|
+| Uses `self` | Uses `cls` | Does not use `self` or `cls` |
+| Works with object data | Works with class data | General utility |
+| Uses object | Uses class | Can be called using class |
+
+---
+
+# 9. Encapsulation
+
+## What is Encapsulation?
+
+Encapsulation means **wrapping data and methods together inside a single class**.
+
+It also helps us control access to data.
+
+### Simple Definition
+
+> **Encapsulation is the process of wrapping data and methods into a single unit.**
+
+### Example
+
+```python
+class Student:
+
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def show(self):
+        print(self.name)
+        print(self.marks)
+
+
+s1 = Student("Mayuri", 85)
+
+s1.show()
+```
+
+Here:
+
+- `name` → Data
+- `marks` → Data
+- `show()` → Method
+- All are inside `Student`
+
+Therefore, this is encapsulation.
+
+---
+
+# 10. Access Modifiers
+
+Python mainly uses three levels of access:
+
+1. Public
+2. Protected
+3. Private
+
+---
+
+## 10.1 Public
+
+Public members can be accessed directly.
+
+### Example
+
+```python
+class Student:
+
+    name = "Mayuri"
+
+
+s1 = Student()
+
+print(s1.name)
+```
+
+### Output
+
+```text
+Mayuri
+```
+
+---
+
+## 10.2 Protected
+
+Protected members are written using a single underscore `_`.
+
+### Example
+
+```python
+class Student:
+
+    _marks = 85
+```
+
+### Key Point
+
+> `_marks` is treated as protected by convention.
+
+Python does not strictly prevent access to it.
+
+---
+
+## 10.3 Private
+
+Private members are written using double underscores `__`.
+
+### Example
+
+```python
+class Student:
+
+    __marks = 85
+```
+
+Private members are intended to be accessed inside the class.
+
+---
+
+# 11. Getter and Setter
+
+Getter and Setter are commonly used with private data.
+
+## Getter
+
+A getter is used to **get/read data**.
+
+### Example
+
+```python
+def get_marks(self):
+    return self.__marks
+```
+
+## Setter
+
+A setter is used to **set/change data**.
+
+### Example
+
+```python
+def set_marks(self, marks):
+    self.__marks = marks
+```
+
+### Complete Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self.__marks = 0
+
+    def set_marks(self, marks):
+        self.__marks = marks
+
+    def get_marks(self):
+        return self.__marks
+
+
+s1 = Student()
+
+s1.set_marks(85)
+
+print(s1.get_marks())
+```
+
+### Output
+
+```text
+85
+```
+
+### Easy Trick
+
+```text
+Getter → Get data
+Setter → Set/change data
+```
+
+---
+
+# 12. Inheritance
+
+## What is Inheritance?
+
+Inheritance allows one class to acquire the properties and methods of another class.
+
+### Simple Definition
+
+> **Inheritance allows one class to acquire the properties and methods of another class.**
+
+### Parent and Child Class
+
+- Parent class → Base/Super class
+- Child class → Derived/Sub class
+
+### Example
+
+```python
+class Animal:
+
+    def eat(self):
+        print("Animal is eating")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog is barking")
+
+
+d1 = Dog()
+
+d1.eat()
+d1.bark()
+```
+
+### Output
+
+```text
+Animal is eating
+Dog is barking
+```
+
+Here:
+
+```text
+Animal → Parent class
+Dog    → Child class
+```
+
+`Dog` inherits `eat()` from `Animal`.
+
+---
+
+# 13. Types of Inheritance
+
+There are five main types:
+
+1. Single Inheritance
+2. Multiple Inheritance
+3. Multilevel Inheritance
+4. Hierarchical Inheritance
+5. Hybrid Inheritance
+
+---
+
+# 13.1 Single Inheritance
+
+## Definition
+
+> **Single inheritance means one child class inherits from one parent class.**
+
+### Structure
+
+```text
+Parent
+   ↓
+Child
+```
+
+### Example
+
+```python
+class Animal:
+
+    def eat(self):
+        print("Animal is eating")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog is barking")
+
+
+d1 = Dog()
+
+d1.eat()
+d1.bark()
+```
+
+### Output
+
+```text
+Animal is eating
+Dog is barking
+```
+
+### Easy Trick
+
+```text
+1 Parent + 1 Child = Single Inheritance
+```
+
+---
+
+# 13.2 Multiple Inheritance
+
+## Definition
+
+> **Multiple inheritance means one child class inherits from two or more parent classes.**
+
+### Structure
+
+```text
+Parent 1     Parent 2
+    \          /
+     \        /
+       Child
+```
+
+### Example
+
+```python
+class Father:
+
+    def skill1(self):
+        print("Father: Driving")
+
+
+class Mother:
+
+    def skill2(self):
+        print("Mother: Cooking")
+
+
+class Child(Father, Mother):
+
+    def skill3(self):
+        print("Child: Coding")
+
+
+c1 = Child()
+
+c1.skill1()
+c1.skill2()
+c1.skill3()
+```
+
+### Output
+
+```text
+Father: Driving
+Mother: Cooking
+Child: Coding
+```
+
+### Easy Trick
+
+```text
+Many Parents + One Child = Multiple Inheritance
+```
+
+---
+
+# 13.3 Multilevel Inheritance
+
+## Definition
+
+> **Multilevel inheritance means inheritance in multiple levels.**
+
+### Structure
+
+```text
+Grandparent
+     ↓
+   Parent
+     ↓
+    Child
+```
+
+### Example
+
+```python
+class Grandparent:
+
+    def house(self):
+        print("Grandparent has a house")
+
+
+class Parent(Grandparent):
+
+    def car(self):
+        print("Parent has a car")
+
+
+class Child(Parent):
+
+    def bike(self):
+        print("Child has a bike")
+
+
+c1 = Child()
+
+c1.house()
+c1.car()
+c1.bike()
+```
+
+### Output
+
+```text
+Grandparent has a house
+Parent has a car
+Child has a bike
+```
+
+### Easy Trick
+
+```text
+A → B → C = Multilevel Inheritance
+```
+
+---
+
+# 13.4 Hierarchical Inheritance
+
+## Definition
+
+> **Hierarchical inheritance means multiple child classes inherit from one parent class.**
+
+### Structure
+
+```text
+        Parent
+        /    \
+     Child1  Child2
+```
+
+### Example
+
+```python
+class Animal:
+
+    def eat(self):
+        print("Animal is eating")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog is barking")
+
+
+class Cat(Animal):
+
+    def meow(self):
+        print("Cat is meowing")
+
+
+d1 = Dog()
+c1 = Cat()
+
+d1.eat()
+d1.bark()
+
+c1.eat()
+c1.meow()
+```
+
+### Output
+
+```text
+Animal is eating
+Dog is barking
+Animal is eating
+Cat is meowing
+```
+
+### Easy Trick
+
+```text
+1 Parent + Multiple Children = Hierarchical Inheritance
+```
+
+---
+
+# 13.5 Hybrid Inheritance
+
+## Definition
+
+> **Hybrid inheritance is a combination of two or more types of inheritance.**
+
+### Example Structure
+
+```text
+          Animal
+         /      \
+       Dog      Cat
+         \      /
+          Puppy
+```
+
+Here:
+
+- Animal → Dog/Cat = Hierarchical
+- Dog + Cat → Puppy = Multiple
+
+So, this is Hybrid Inheritance.
+
+### Example
+
+```python
+class Animal:
+
+    def eat(self):
+        print("Animal is eating")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog is barking")
+
+
+class Cat(Animal):
+
+    def meow(self):
+        print("Cat is meowing")
+
+
+class Puppy(Dog, Cat):
+
+    def play(self):
+        print("Puppy is playing")
+
+
+p1 = Puppy()
+
+p1.eat()
+p1.bark()
+p1.meow()
+p1.play()
+```
+
+### Output
+
+```text
+Animal is eating
+Dog is barking
+Cat is meowing
+Puppy is playing
+```
+
+### Easy Trick
+
+```text
+Combination of inheritance types = Hybrid Inheritance
+```
+
+---
+
+# 14. Polymorphism
+
+## What is Polymorphism?
+
+The word polymorphism means **many forms**.
+
+### Simple Definition
+
+> **Polymorphism means one name, many forms.**
+
+A method with the same name can behave differently for different objects.
+
+### Example
+
+```python
+class Dog:
+
+    def sound(self):
+        print("Dog barks")
+
+
+class Cat:
+
+    def sound(self):
+        print("Cat meows")
+
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
+```
+
+### Output
+
+```text
+Dog barks
+Cat meows
+```
+
+Both classes have:
+
+```python
+sound()
+```
+
+But their behavior is different.
+
+Therefore, this is polymorphism.
+
+---
+
+# 15. Method Overloading
+
+## What is Method Overloading?
+
+Method overloading means using the same method name with different parameters.
+
+### Simple Definition
+
+> **Method overloading means having the same method name with different parameters.**
+
+### Important Point in Python
+
+Python does **not support traditional method overloading** like Java or C++.
+
+If we define the same method multiple times, the latest definition replaces the previous one.
+
+### Example
+
+```python
+class Calculator:
+
+    def add(self, a, b):
+        return a + b
+
+    def add(self, a, b, c):
+        return a + b + c
+```
+
+The second `add()` replaces the first one.
+
+Therefore, Python does not have traditional method overloading.
+
+### How to achieve similar behavior?
+
+We can use:
+
+- Default arguments
+- `*args`
+
+### Example using `*args`
+
+```python
+class Calculator:
+
+    def add(self, *numbers):
+        return sum(numbers)
+
+
+c = Calculator()
+
+print(c.add(10, 20))
+print(c.add(10, 20, 30))
+print(c.add(10, 20, 30, 40))
+```
+
+### Output
+
+```text
+30
+60
+100
+```
+
+The same `add()` method can accept different numbers of arguments.
+
+### Interview Point
+
+> **Python does not support traditional method overloading. We can achieve similar behavior using default arguments or `*args`.**
+
+---
+
+# 16. Method Overriding
+
+## What is Method Overriding?
+
+Method overriding happens when a child class provides its own implementation of a method already defined in the parent class.
+
+### Simple Definition
+
+> **Method overriding occurs when a child class provides its own implementation of a parent class method.**
+
+### Example
+
+```python
+class Animal:
+
+    def sound(self):
+        print("Animal makes a sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog barks")
+
+
+a = Animal()
+d = Dog()
+
+a.sound()
+d.sound()
+```
+
+### Output
+
+```text
+Animal makes a sound
+Dog barks
+```
+
+Both classes have:
+
+```python
+sound()
+```
+
+But `Dog` provides its own implementation.
+
+Therefore, `Dog` overrides the `sound()` method.
+
+### Easy Trick
+
+```text
+Parent → sound()
+Child  → sound()
+```
+
+Child's version replaces/overrides the inherited behavior for the child object.
+
+---
+
+# 17. Compile-time Polymorphism
+
+## What is Compile-time Polymorphism?
+
+Compile-time polymorphism means the method selection is determined at compile time.
+
+It is commonly associated with **method overloading**.
+
+### Important Python Point
+
+Python is dynamically typed and does not support traditional compile-time method overloading.
+
+However, in general OOP terminology:
+
+```text
+Compile-time Polymorphism
+          ↓
+Method Overloading
+```
+
+---
+
+# 18. Run-time Polymorphism
+
+## What is Run-time Polymorphism?
+
+Run-time polymorphism means the method that will execute is determined at run time.
+
+It is commonly achieved through **method overriding**.
+
+### Example
+
+```python
+class Animal:
+
+    def sound(self):
+        print("Animal sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog barks")
+
+
+animal = Dog()
+
+animal.sound()
+```
+
+### Output
+
+```text
+Dog barks
+```
+
+The object is created from `Dog`, so the `Dog` version of `sound()` executes.
+
+### Easy Trick
+
+```text
+Overloading → Compile-time
+Overriding  → Run-time
+```
+
+**Note:** This is the standard OOP classification. In Python, traditional compile-time method overloading is not directly supported.
+
+---
+
+# 19. Abstraction
+
+## What is Abstraction?
+
+Abstraction means **hiding unnecessary implementation details and showing only essential information**.
+
+### Simple Definition
+
+> **Abstraction means hiding implementation details and showing only essential information.**
+
+### Real-life Example
+
+When we drive a car:
+
+- We use the steering
+- We use the brake
+- We use the accelerator
+- We start the car
+
+But we do not need to know all the internal engine implementation.
+
+This is abstraction.
+
+---
+
+# 20. Abstract Class
+
+An **abstract class** is a class that contains one or more abstract methods.
+
+In Python, we use the `abc` module.
+
+### Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog barks")
+
+
+d = Dog()
+
+d.sound()
+```
+
+### Output
+
+```text
+Dog barks
+```
+
+---
+
+# 21. Abstract Method
+
+## What is an Abstract Method?
+
+An abstract method is a method that is declared in an abstract class but does not provide its implementation there.
+
+### Example
+
+```python
+@abstractmethod
+def sound(self):
+    pass
+```
+
+The child class must provide the implementation.
+
+### Example
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Dog barks")
+```
+
+Here:
+
+```text
+Animal → Abstract class
+sound() → Abstract method
+Dog → Child class
+Dog's sound() → Implementation
+```
+
+---
+
+# 22. Abstract Class vs Normal Class
+
+| Abstract Class | Normal Class |
+|---|---|
+| Can contain abstract methods | Usually contains implemented methods |
+| Uses `ABC` | Does not need `ABC` |
+| Uses `@abstractmethod` for abstract methods | Does not require it |
+| Cannot normally be instantiated if abstract methods remain unimplemented | Can be instantiated |
+| Used to define a common structure | Used to create normal objects |
+
+---
+
+# 23. Four Pillars of OOP
+
+OOP has four important pillars:
+
+## 1. Encapsulation
+
+> **Wrapping data and methods into a single unit and controlling access to data.**
+
+Example:
+
+```text
+Class → Data + Methods
+```
+
+---
+
+## 2. Inheritance
+
+> **Acquiring properties and methods from another class.**
+
+Example:
+
+```text
+Parent
+  ↓
+Child
+```
+
+---
+
+## 3. Polymorphism
+
+> **One name, many forms.**
+
+Example:
+
+```text
+sound() → Dog barks
+sound() → Cat meows
+```
+
+---
+
+## 4. Abstraction
+
+> **Hiding implementation details and showing essential information.**
+
+Example:
+
+```text
+Show → What to do
+Hide → How it works internally
+```
+
+---
+
+# 24. Four Pillars – Easy Table
+
+| Pillar | Simple Meaning | Main Concept |
+|---|---|---|
+| Encapsulation | Protect/organize data | Getter, Setter |
+| Inheritance | Reuse existing class | Parent → Child |
+| Polymorphism | One name, many forms | Overloading, Overriding |
+| Abstraction | Hide implementation details | Abstract Class, Abstract Method |
+
+---
+
+# 25. Complete OOP Flow
+
+```text
+OOP
+│
+├── Class
+│
+├── Object
+│
+├── Attributes
+│
+├── Methods
+│   ├── Instance Method
+│   ├── Class Method
+│   └── Static Method
+│
+├── Constructor
+│   └── __init__()
+│
+├── Encapsulation
+│   ├── Public
+│   ├── Protected
+│   ├── Private
+│   ├── Getter
+│   └── Setter
+│
+├── Inheritance
+│   ├── Single
+│   ├── Multiple
+│   ├── Multilevel
+│   ├── Hierarchical
+│   └── Hybrid
+│
+├── Polymorphism
+│   ├── Method Overloading
+│   ├── Method Overriding
+│   ├── Compile-time
+│   └── Run-time
+│
+└── Abstraction
+    ├── Abstract Class
+    └── Abstract Method
+```
+
+---
+
+# 26. Important OOP Keywords
+
+| Keyword | Meaning |
+|---|---|
+| `class` | Creates a class |
+| `self` | Represents current object |
+| `__init__()` | Constructor |
+| `@classmethod` | Creates a class method |
+| `@staticmethod` | Creates a static method |
+| `@abstractmethod` | Creates an abstract method |
+| `ABC` | Abstract Base Class |
+| `_variable` | Protected convention |
+| `__variable` | Private convention |
+
+---
+
+# 27. Quick Revision
+
+### Class
+
+> Blueprint for creating objects.
+
+### Object
+
+> Instance of a class.
+
+### Attribute
+
+> Variable/property belonging to an object or class.
+
+### Method
+
+> Function defined inside a class.
+
+### Constructor
+
+> Special method automatically called when an object is created.
+
+### Encapsulation
+
+> Wrapping data and methods together and controlling data access.
+
+### Inheritance
+
+> Acquiring properties and methods from another class.
+
+### Polymorphism
+
+> One name, many forms.
+
+### Abstraction
+
+> Hiding implementation details and showing essential information.
+
+### Getter
+
+> Used to get/read data.
+
+### Setter
+
+> Used to set/change data.
+
+### Method Overloading
+
+> Same method name with different parameters; traditional overloading is not directly supported in Python.
+
+### Method Overriding
+
+> Child class provides its own implementation of a parent class method.
+
+### Abstract Class
+
+> A class containing abstract methods and used as a common structure.
+
+### Abstract Method
+
+> A method declared without implementation that child classes are expected to implement.

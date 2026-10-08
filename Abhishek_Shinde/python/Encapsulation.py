@@ -4,7 +4,7 @@ class car:
         self._speed = 80             # protected
         self.__engine_no = "E12345"  # private
 
-    def show(self): 
+    def show(self):
         print("Brand:", self.brand)
         print("Speed:", self._speed)
         print("Engine:", self.__engine_no)

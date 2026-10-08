@@ -1,595 +1,145 @@
-Python Programming Fundamentals — Notes & Study Guide:-
-
-    Internship Day 01(24/8/26):- Complete Guide to Git, GitHub, Git And GitHub Configuration, VS Code, Work Environment Setup.
-
-    Internship Day 02(25/8/26):- Complete LinkedIn And Naukri Optimization.
-
-    Internship Day 03(31/8/26):-
 
-        Python Notes Day 1(31/8/26) With Interview Questions:-
+# Python Interview Questions
 
-            1. Definition of Python Programming:-
-                    Python is a high-level, interpreted, and easy-to-read programming language designed for writing clear and logical code. 
-                    It is widely used in web development, data science, automation, artificial intelligence, and scripting because of its simple and readable syntax.
+1. What is Python?
+Python is a high-level, interpreted, general-purpose programming language. It is easy to learn and widely used in web development, data science, AI, automation, etc.
 
 
-                2. Core Python Concepts:-
+2. What are the features of Python?
 
-                    1. Simple:-
-                        Python uses clean and readable syntax that closely resembles plain English, making it easy for beginners to learn.
-                    2. Dynamic:-
-                        Python is dynamically typed. You do not need to explicitly declare the data type of a variable. Python determines the type automatically at runtime.
-                    3. Interpreted:-
-                        Python programs are executed by an interpreter. Python source code is first compiled into bytecode, which is then executed by the Python Virtual Machine (PVM).
-                    4. High-Level:-
-                        Python hides complex hardware-level details such as memory management, allowing programmers to focus mainly on application logic.
-                    5. General Purpose:-
-                        Python can be used to develop many types of applications, including websites, automation scripts, desktop applications, data analysis tools, and AI/ML applications.
-                    6. Object-Oriented Programming (OOP):-
-                        Python supports object-oriented programming, where programs can be organized around objects that contain data and methods.
+Easy to learn
 
-            */*-*/*-*/*-*/*-*/*
+Interpreted language
 
-            3. Difference Between Static Typing and Dynamic Typing:-
-
-                | Feature               | Static Typing                                                                           | Dynamic Typing                                                       |
-                | --------------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-                | Type Declaration      | Data types are generally declared or determined before execution. Example: `int x = 5;` | Data types are determined automatically at runtime. Example: `x = 5` |
-                | Type Checking         | Mainly performed at compile time.                                                       | Mainly performed at runtime.                                         |
-                | Variable Reassignment | A variable is generally restricted to its declared type.                                | A variable can refer to objects of different types during execution. |
-                | Error Detection       | Many type errors can be detected before execution.                                      | Type-related errors may appear during execution.                     |
-                | Code Length           | Usually requires more type-related code.                                                | Usually requires less type-related code.                             |
-                | Flexibility           | More strict and structured.                                                             | More flexible and concise.                                           |
-                | Examples              | C, C++, Java, C#                                                                        | Python, JavaScript, Ruby                                             |
+Object-oriented
 
-            */*-*/*-*/*-*/*-*/*
+Dynamically typed
 
-            4. Indentation in Python:-
-                Indentation refers to the spaces or tabs placed at the beginning of a line of code.
-                Python uses indentation to define blocks of code instead of using curly braces {}.
+Open source
 
-                Indentation is commonly used with:
-                    if and else statements
-                    for and while loops
-                    Functions
-                    Classes
-                    Exception handling
-                
-                Example:
-                    if age >= 18:
-                    print("You are eligible to vote.")
-                
-                    Here, the print() statement is indented, which indicates that it belongs to the if block.
-                    Important: Incorrect indentation can result in an IndentationError.
+Large number of libraries
 
-            */*-*/*-*/*-*/*-*/*
 
-            5. Difference Between Compiler and Interpreter:-
 
-                | Feature         | Compiler                                                                               | Interpreter                                                                                                              |
-                | --------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-                | Translation     | Translates the program into machine code or another lower-level form before execution. | Executes the program through an interpreter/runtime environment.                                                         |
-                | Execution Speed | Generally faster after compilation.                                                    | Traditionally slower because execution involves runtime interpretation, although modern runtimes may optimize execution. |
-                | Error Reporting | Often reports errors during compilation before the program runs.                       | Errors are commonly reported when the relevant code is executed.                                                         |
-                | Output          | May generate machine code, object code, or an executable file.                         | Usually does not directly create a standalone executable file.                                                           |
-                | Memory Usage    | May require additional storage for compiled/object files.                              | Typically does not require a separate executable file for normal execution.                                              |
-                | Examples        | C, C++, Rust                                                                           | Python, Ruby                                                                                                             |
+3. What is a variable in Python?
+A variable is a name used to store a value.
 
-                Note: Python is commonly called an interpreted language, but CPython actually compiles source code into bytecode before executing it using the Python Virtual Machine (PVM).
+name = "Abhishek"
+age = 23
 
-            */*-*/*-*/*-*/*-*/*
 
-            6. What is OOP (Object-Oriented Programming)?
-                Object-Oriented Programming (OOP) is a programming approach that organizes software around objects and classes.
+4. What are Python data types?
 
-                    An object can contain:
-                        
-                        Attributes → Data or properties
-                        Methods → Functions or actions performed by the object
+int
 
-                    OOP helps make programs:
-                        Modular
-                        Reusable
-                        Organized
-                        Maintainable
-                        Scalable
+float
+str
 
-            */*-*/*-*/*-*/*-*/*
+bool
 
-            6. What is OOP (Object-Oriented Programming)?
-                OOP is a coding method that organizes software around reusable data structures called objects, which contain attributes and actions.
-                It helps keep code modular, organized, and scalable for large applications.
 
-            */*-*/*-*/*-*/*-*/*
+list
 
-            7. Meaning of "Python is a High-Level Language"
-                It means Python code is easy for humans to read and write without managing low-level computer hardware or system memory directly.
+tuple
 
-            */*-*/*-*/*-*/*-*/*
+set
 
-            8. Explanation of IDE and Examples
-                An IDE (Integrated Development Environment) is a software tool combining an editor, build tools, terminal, and debugger in one window.
-                Examples include Visual Studio Code, PyCharm, and Jupyter Notebook.
+dict
 
-            */*-*/*-*/*-*/*-*/*
 
-            9. Applications of Python
-                Python is used for:-
-                1.web development,
-                2.data analysis,
-                3. machine learning,
-                4. automated scripting,
-                5. desktop apps, and
-                6. web scraping.
 
-            */*-*/*-*/*-*/*-*/*
-
-            10. Difference Between High-Level and Low-Level Language:-
-
-            | Feature            | High-Level Language                           | Low-Level Language                              |
-            | ------------------ | --------------------------------------------- | ----------------------------------------------- |
-            | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
-            | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
-            | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
-            | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
-            | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
-            | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+5. Difference between List and Tuple?
 
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 04(1/9/26):- 
+List	Tuple
 
-        Python Notes: Day 2(1/9/26)
+Mutable	Immutable
+Uses []	Uses ()
+Can be changed	Cannot be changed
 
-            1. Programming Paradigms (Types of Programming):-
 
-                1. Sequential Programming:-
-                    Executes code step-by-step from top to bottom using variables, operators, and conditional logic (`if`, `else`).
-                2. Functional Programming:-
-                    Structures code using functions, parameters, arguments, and return values to process data cleanly.
-                3. Object-Oriented Programming (OOP):-
-                    Organizes code using classes, objects, the 4 pillars (Abstraction, Encapsulation, Inheritance, Polymorphism), along with file handling and exception handling.
 
-            */*-*/*-*/*-*/*-*/*
+6. What is a function?
+A function is a reusable block of code.
 
-            2. Python Keywords:-
+def add(a, b):
+    return a + b
 
-                Definition:-
-                    Reserved words in Python that have fixed meanings and cannot be used as variable names.
-                Checking Keywords:-
-                    Use `import keyword` followed by `keyword.kwlist` to print all keywords, or `len(keyword.kwlist)` to get the total count.
-                Verifying Words:-
-                    Use `keyword.iskeyword('word')` to check if a specific string is a reserved keyword (returns `True` or `False`).
 
-            */*-*/*-*/*-*/*-*/*
+7. What is OOP?
+OOP means Object-Oriented Programming. It is based on concepts such as class, object, inheritance, polymorphism, encapsulation and abstraction.
 
-            3. Comments in Python:-
 
-                Definition:-
-                    Explanatory notes in your code that Python ignores during execution.
-                Single-Line Comment:-
-                    Uses the hash symbol (`#`) to annotate a single line.
-                Multi-Line Comment:-
-                    Uses triple single quotes (`'''`) or triple double quotes (`"""`) to write comments spanning multiple lines.
+8. What is a class?
+A class is a blueprint for creating objects.
 
-            */*-*/*-*/*-*/*-*/*
+class Student:
+    name = "Abhishek"
 
-            4. Variables & Declaration Rules
 
-                Definition:-
-                    Dynamically typed containers used to store data without needing to explicitly declare the data type.
+9. What is an object?
+An object is an instance of a class.
 
 
-                Rule 1 (No Starting Numbers):-
-                    Names must start with a letter or an underscore, never a number (e.g., `user1`, not `1user`).
-                Rule 2 (No Special Characters):-
-                    Only letters, numbers, and underscores (`_`) are allowed; special symbols like `@`, `$`, or `-` are forbidden.
-                Rule 3 (No Keywords):-
-                    Reserved keywords like `if`, `def`, or `finally` cannot be used as variable names.
-                Rule 4 (No Spaces):-
-                    Variable names cannot contain spaces; use underscores instead (e.g., `user_name`).
-                Rule 5 (Meaningful Names):-
-                    Names should clearly describe the data they hold (e.g., `age` instead of `a`).
+10. What is inheritance?
+Inheritance allows one class to use the properties and methods of another class.
 
-            */*-*/*-*/*-*/*-*/*
 
-            5. Python Data Types:-
+11. What is __init__()?
+__init__() is a constructor method that is automatically called when an object is created.
 
-                Primary Data Types
-                
-                    String (`str`):-
-                        Text data enclosed in quotes (e.g., `name = 'Anuj Kakad'`).
-                    Integer (`int`):-
-                        Whole numbers without decimals (e.g., `number = 123456789`).
-                    Boolean (`bool`):-
-                        Logical values representing truth states (`True` or `False`).
-                    Complex (`complex`):-
-                        Numbers with a real and imaginary part (e.g., `comp = 2+2j`).
 
-                Collection Data Types
-                
-                    List:-
-                        An ordered, mutable (modifiable) sequence of items written in square brackets `[ ]`.
-                    Tuple:-
-                        An ordered, immutable (un-changeable) sequence of items written in parentheses `( )`.
-                    Dictionary:-
-                        Unordered collection of key-value pairs written in curly braces `{ key: value }`.
-                    Set:-
-                        An unordered collection of unique elements written in curly braces `{ }`.
-                    Frozenset:-
-                        An immutable (un-changeable) version of a standard set.
+12. What is the difference between == and is?
 
-        Interview Questions On Day 2(1/9/26) Topics:-
+== checks whether values are equal.
 
-            1. What are the main Programming Paradigms supported by python?
-                Python support Sequential Programming(Step-By-Step Logic), Funtional Programming (using reausable functions)
-                and Object Oriented Programming(OOP) (structuring code around objects and classes).
-                
-            */*-*/*-*/*-*/*-*/*
+is checks whether two references point to the same object.
 
-            2. What are python keywords and how do you print all the keywords and how do you check total number of keywords using code?
-                Keyword are reserved words in Python with fixed meaning that cannot be used as variables.
-                You can print all the keyword by importing the Keyword ("import keyword") and running ("Print(keyword.kwlist)).
-                You can chech the total count by running ("print(len(keyword.kwlist))").
 
-            */*-*/*-*/*-*/*-*/*
 
-            3. What are the rules for declaring Variables In Python?
-                variable names must start with a "letter" or "Underscore", it cannot start with a "number", 
-                cannot contain spaces or spacial characters except (Underscore "_") And cannot be a reserves Python "Keyword".
-
-            */*-*/*-*/*-*/*-*/*
-
-            4. Why is Python called a Dynamically Typed language?
-                Python Automatically determines the data type of a variable at "RUN TIME", 
-                means you dont need to explicitly decalre the data type (like "int" or "String") when assigning a value.
-
-            */*-*/*-*/*-*/*-*/*
-
-            5. What is the difference between Single-Line And Multi-Line Comments in Python?
-                Single-Line Comments starts with a "Hash Symbol" ("#") for short notes, 
-                While Multi-Line Comments starts with "Triple Single Or Double Quotes" ('''  ''' OR """  """) to comment out across multiple lines.
-
-            */*-*/*-*/*-*/*-*/*
-
-            6. What is the main difference bet a "List" and a "Tupple"?
-                A "list" (created with [ ]) is "Mutable", meaning its items can be changed or modified after creation.
-                A "Tuple" (created with ()) is "Immutable", meaning its items cannot be changed once created.
-
-            */*-*/*-*/*-*/*-*/*
-
-            7. How does a "Dictionary" Differ from a "Set" in Python?
-                A dictionary stores data as Key-Value Pairs in curly Braces (e.g., "{"age"=22}"),
-                Whlie a set stores only "Unique, Single Values" in curly braces (e.g., "{1, 2, 3}").
-
-            */*-*/*-*/*-*/*-*/*
-
-            8. What is a Frozen Set in Python?
-                A Frozenset is simple a immutable ("Un-Changable") version of a standard set.
-                Once created you cannot add or remove elements from it.
-
-            */*-*/*-*/*-*/*-*/*
-
-            9. What is aComplex Data Type in Python, and how it is Written?
-                A complex Data type represents numbers with "A Real Part" and "An Imaginary Part"
-                In Python it is written Using the letter "j" for the Imaginary Component (e.g., "comp = 2 + 3j").
-
-            */*-*/*-*/*-*/*-*/*
-
-            10. What is the difference between a Set and a Frozenset?
-                A standardset is "Mutable", meaning you can add or remove elements using Methods like .add() Or .remove() .
-                A Frozenset is "immutable", meaning its elements are locked and cannot change after creation.
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 05 , 06, 07(2/9/26 to 4/9/26):-
-
-        Python Notes:- Day 3,4,5 - Operators:-
-
-            1. Introduction to Operators:-
-
-                Definition:-
-                    Symbols used to perform operations on variables and values.
-                    (e.g., in `a + b`, `a` and `b` are **operands**, and `+` is the **operator**).
-
-            */*-*/*-*/*-*/*-*/*
-
-            2. Arithmetic Operators:-
-                1. Adition (`+`):- 
-                    Adds two numbers together 
-                    (e.g., `10 + 20` outputs `30`).
-
-                2. Subtraction (`-`):-
-                    Subtracts the right number from the left 
-                    (e.g., `20 - 10` outputs `10`).
-                
-                3. Multiplication (`*`):-
-                    Multiplies two numbers
-                    (e.g., `10 * 20` outputs `200`).
-                
-                4. Division (`/`):-
-                    Divides numbers and always returns a floating-point number
-                    (e.g., `10 / 20` outputs `0.5`).
-                
-                5. Modulus (`%`):-
-                    Returns the remainder left over after division
-                    (e.g., `10 % 3` outputs `1`).
-                
-                6. Floor Division (`//`):-
-                    Divides numbers and chops off decimals to return the lower whole number.
-                    (e.g., `10 // 3` outputs `3`).
-                
-                7. Exponentiation (`**`):-
-                    Raises the base number to a power.
-                    (e.g., `2 ** 3` outputs `8`).
-
-            */*-*/*-*/*-*/*-*/*
-
-            3. Assignment Operators:-
-
-                1. Assign (`=`):-
-                    Assigns a value to a variable
-                    (e.g., `x = 20`).
-                
-                2. Add and Assign (`+=`):-
-                    Adds a value and assigns result
-                    (e.g., `x += 10` sets `x` to `30`).
-                
-                3. Subtract and Assign (`-=`):-
-                    Subtracts a value and assigns result
-                    (e.g., `x -= 5` sets `x` to `15`).
-                
-                4. Multiply and Assign (`*=`):
-                    Multiplies by a value and assigns result
-                    (e.g., `x *= 2` sets `x` to `40`).
-                
-                5. Divide and Assign (`/=`):-
-                    Divides by a value and assigns result
-                    (e.g., `x /= 2` sets `x` to `10.0`).
-                
-                6. Floor Divide and Assign (`//=`):-
-                    Floor divides and assigns result
-                    (e.g., `x //= 3` sets `x` to `6`).
-                
-                7. Modulus and Assign (`%=`):-
-                    Takes modulus and assigns result
-                    (e.g., `x %= 3` sets `x` to `2`).
-                
-                8. Exponentiate and Assign (`**=`):-
-                    Raises to power and assigns result
-                    (e.g., `x **= 2` sets `x` to `400`).
-
-            */*-*/*-*/*-*/*-*/*
-
-            4. Comparison (Relational) Operators:-
-
-                1. Equal To (`==`):-
-                    Returns `True` if both values are equal
-                    (e.g., `20 == 20` outputs `True`).
-                
-                2. Not Equal To (`!=`):-
-                    Returns `True` if values are different
-                    (e.g., `25 != 20` outputs `True`).
-                
-                3. Greater Than (`>`):-
-                    Returns `True` if left value is bigger
-                    (e.g., `25 > 18` outputs `True`).
-                
-                4. Less Than (`<`):
-                    Returns `True` if left value is smaller
-                    (e.g., `15 < 18` outputs `True`).
-                
-                5. Greater Than or Equal To (`>=`):-
-                    Returns `True` if left value is bigger or equal
-                    (e.g., `18 >= 18` outputs `True`).
-                
-                6. Less Than or Equal To (`<=`):-
-                    Returns `True` if left value is smaller or equal
-                    (e.g., `15 <= 18` outputs `True`).
-
-            */*-*/*-*/*-*/*-*/*
-
-            5. Logical Operators:-
-                
-                1.`and`:-
-                    Returns `True` only if **both** conditions are true
-                    (e.g., `5 > 2 and 10 > 5` outputs `True`).
-                
-                2. `or`:-
-                    Returns `True` if **at least one** condition is true
-                    (e.g., `15 >= 18 or 10 > 5` outputs `True`).
-                
-                3. `not`:-
-                    Reverses the logical state, returning `True` for false conditions and vice versa
-                    (e.g., `not(10 > 20)` outputs `True`).
-
-            */*-*/*-*/*-*/*-*/*
-
-            6. Bitwise Operators:-
-                1. Bitwise AND (`&`):-
-                    Compares bits and sets each bit to `1` only if both corresponding bits are `1`
-                    (e.g., `5 & 3` outputs `1`).
-                
-                2. Bitwise OR (`|`):-
-                    Compares bits and sets each bit to `1` if at least one corresponding bit is `1`
-                    (e.g., `5 | 3` outputs `7`).
-                
-                3. Bitwise NOT (`~`):-
-                    Inverts all bits of a binary number
-                    (e.g., `~5` outputs `-6`).
-                
-                4. Bitwise XOR (`^`):-
-                    Sets each bit to `1` only if one of the corresponding bits is `1`
-                    (e.g., `5 ^ 3` outputs `6`).
-
-                5. Bitwise Left Shift (`<<`):-
-                    Shifts the bits of a number to the left by a specified number of positions, padding with zeros.
-                    (e.g., `5 << 1` outputs `10`).
-                
-                6. Bitwise Right Shift (`>>`):-
-                    Shifts the bits of a number to the right by a specified number of positions, discarding bits shifted off.
-                    (e.g., `5 >> 1` outputs `2`).
-
-            */*-*/*-*/*-*/*-*/*
-
-            7. Membership Operators:-
-                
-                1. `in`:-
-                    Returns `True` if a sequence/item is found inside a given object.
-                    (e.g., `'a' in 'apple'` outputs `True`).
-                
-                2. `not in`:-
-                    Returns `True` if a sequence/item is **not** present inside an object.
-                    (e.g., `10 not in [1, 2, 3]` outputs `True`).
-                
-            */*-*/*-*/*-*/*-*/*
-
-            8. Identity Operators:-
-            
-                1. `is`:-
-                        Returns `True` if both variables point to the exact same object in computer memory.
-                        (e.g., `a = 10; b = a; print(a is b)` outputs `True`).
-                2. `is not`:-
-                        Returns `True` if both variables point to different objects in memory.
-                        (e.g., `x = [1, 2]; y = [1, 2]; print(x is not y)` outputs `True`).
-
-        # Python Notes:- Input Function
-
-            1. Overview & Basic Syntax:-
-                Definition:-
-                    The "input()" function pauses program execution, asks the user to enter data from the terminal, and reads it.
-                
-                Basic Syntax:- 
-                    "variable_name = input("Prompt message to user: ")"
-                
-                Default Data Type:-
-                    The `input()` function "always returns user input as a String (`str`)*", 
-                    regardless of whether the user enters numbers, letters, or symbols.
-
-            */*-*/*-*/*-*/*-*/*
-
-            2. Type Casting Input Data"-
-                Since "input()" returns a string by default, you must explicitly convert (typecast) 
-                the input to perform mathematical or logical operations.
-
-                Converting to Integer (`int`):-
-                    Used for whole numbers (e.g., `age = int(input("Enter your age: "))`).
-                
-                Converting to Float (`float`):-
-                    Used for decimal values or prices (e.g., `price = float(input("Enter total price: "))`).
-                
-                Converting to Boolean (`bool`):-
-                    Evaluates non-empty input as `True` and empty input as `False`.
-
-            */*-*/*-*/*-*/*-*/*
-
-            3. Practical Code Examples:-
-
-            Example 1: Basic String Input:-
-                ```python
-                name = input("Enter your name: ")
-                print("Hello, " + name + "!")
-
-        Interview Questions on Day 3,4,5 Topics:-
-
-            1. What is the difference between single division ( / ) and floor division in Python?
-                Single division ( / ) always divides two numbers and always returns the "FLOAT" Decimal value (e.g., 10 / 3 gives 3.333)
-                Floor division ( // ) removes the decimal part and returns the nearest lower integer (e.g., 10 // 3 gives 3).
-
-                    मराठीमध्ये:-
-                        साधा भागाकार (/) केल्यावर उत्तर नेहमी पॉइंटमध्ये (Decimal/Float) येते. पण Floor Division (//) (पूर्णांक भागाकार (Integer Quotient)) 
-                        काय करतो, तर पॉइंटच्या नंतरचे सर्व आकडे काढून टाकतो आणि फक्त पॉइंटच्या आधीचा पूर्णांक (Whole Number) उत्तर म्हणून देतो.
-
-                        ex:-
-                            a = 10
-                            b = 3
-                            print(a / b)   # Output: 3.3333333333333335 (साधा भागाकार)
-                            print(a // b)  # Output: 3 (Floor Division)
-
-            */*-*/*-*/*-*/*-*/*
-
-            2. What is the "Modulus Operator ( '%' )" used in Python?
-                The "Modulus Operator ( '%' )" returns the "reminder" left over after dividing two numbers (e.g., 10 % 3 reeturns 1).
-                It is commonly used to check if a number is even or odd (num % 2 == 0).
-
-                    मराठीमध्ये:-
-                        मॉड्युलस ऑपरेटरचा वापर दोन संख्यांचा भागाकार केल्यानंतर शेवटी शिल्लक राहणारी बाकी (Remainder) शोधण्यासाठी होतो.
-
-                        ex:-
-                            a = 10
-                            b = 3
-                            print(a % b)  # Output: 1 (बाकी 1 उरते).
-
-            */*-*/*-*/*-*/*-*/*
-
-            3. What is the difference between the "=" and "==" operators?
-                The "single equals" (=) is an "Assignment Operator" used to "assign a value" to a variable (e.g., x = 10).
-                The "double equals" (==) is a "Comparison Operator" used to check if two "values are equal", returning "True or False".
-
-            */*-*/*-*/*-*/*-*/*
-
-            4. How does the "AND" logical operator work compared to the "OR" operator?
-                The "AND" Opertaor Returns "True" Only if "both" the conditions are "True", Othervise returns "False",
-                The "OR" Operator returns "True" if "at least one" condition is "True". Othervise returns "False".
-
-            */*-*/*-*/*-*/*-*/*
-
-            5. What do the "Membership operators" "in" and "not in" do?
-                They check if a specific value or sequence exists inside a collection (like a string, list, or tuple).
-                "in" returns "True" if the item is "found", while "not in" returns "True" if the item is "absent".
-
-            */*-*/*-*/*-*/*-*/*
-
-            6. What is the difference between the "==" comparison operator and the "is" identity operator?
-                The "==" operator checks if "two variables" hold the "same value".
-                The "is" operator checks if "two variables" point to the exact same memory location (Address).
-
-            */*-*/*-*/*-*/*-*/*
-
-            7. How do "Bitwise Left Shift (<<)" and "Right Shift (>>)" operators affect a number mathematically?
-                Bitwise Left Shift (x << n) multiplies a number by (2^n).
-                Bitwise Right Shift (x >> n) divides a number by (2^n) (floor division).
-
-            */*-*/*-*/*-*/*-*/*
-
-            8. What are "Compound Assignment Operators" in Python?
-                They combine an arithmetic operation with variable assignment into a shorter expression.
-                (e.g., x += 5 is a shorthand equivalent to x = x + 5).
-
-            */*-*/*-*/*-*/*-*/*
-
-            9. What are "Identity Operators" in Python, and how do "is" and "is not" work?
-                Identity operators "compare" the "memory locations" of "two objects" rather than their "actual values".
-                The is operator returns "True" if both variables refer to the "exact same" object in "memory"(Address),
-                while "is not" returns "True" if they point to "different" memory locations.
-
-            */*-*/*-*/*-*/*-*/*
-
-            10. How does "Bitwise NOT (~)" work on an "integer" in Python?
-                The Bitwise NOT operator (~) inverts all the binary bits of an integer (changing 1s to 0s and vice versa).
-                In Python, due to two's complement representation, "~x" mathematically evaluates to "-(x + 1)" 
-                "(for example, ~5 returns -6)".
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 08, 09 & 10(7/9/26 to 9/9/26):-
-
-        Python Notes Day 6, 7 & 8:- Data Types:- Primary And Collective Data Types:-
-
-            1 Primary Data Types:-
-                1. Interger ('int'):-
-                    Contains Whole numbers without "Decimals".
-                    (e.g., `x = 10`).
-                
-                2. Float ('float'):-
-                    Contains numbers with "floating Decimal Points".
-                    (e.g., `pi = 3.14`).
-
-                3. String (`str`):-
-                    Contains Text inside 'Single Quotes' Or "Double Quotes".
-                    (e.g., `msg = "Hello" OR msg = 'Hello'`).
-
-                    Python Internship Notes: Day 8 (9/9/26):- Strings & String Methods
+13. What is exception handling?
+It is used to handle errors without stopping the entire program.
+
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+
+14. What is a dictionary?
+A dictionary stores data in key-value pairs.
+
+student = {"name": "Abhishek", "age": 23}
+
+
+15. What is a loop?
+A loop is used to execute a block of code repeatedly. Python mainly provides for and while loops.
+
+
+
+# Frequently asked coding questions
+
+Reverse a string
+
+Check whether a number is prime
+
+Find factorial of a number
+
+Check palindrome
+
+Find largest number in a list
+
+Count vowels in a string
+
+Remove duplicates from a list
+
+Print Fibonacci series
+
+Swap two numbers
+
+Find even and odd numbers
+
+
+Python Internship Notes: Day 8 (9/9/26):- Strings & String Methods
 
                         1. Introduction to Strings:-
                             A string is an immutable sequence of characters used to store text data.
@@ -652,14 +202,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
                             3. String Indexing & Slicing Examples
 
-                                Given: str = "india is my country"
+                            Given: str = "india is my country"
 
-                                * str[1:8] -> Slices from index 1 to 7: outputs "ndia is"
-                                * str[2:15:2] -> Slices from index 2 to 14, stepping by 2: outputs "dasi yc"
-                                * str[::] -> Copies the entire string: outputs "india is my country"
-                                * str[::-1] -> Reverses the entire string: outputs "yrtnuoc ym si aidni"
-                                * str[-1] -> Gets the last character: outputs "y"
-                                * str[:-1] -> Slices from start up to (but excluding) the last character: outputs "india is my countr"
+                            * str[1:8] -> Slices from index 1 to 7: outputs "ndia is"
+                            * str[2:15:2] -> Slices from index 2 to 14, stepping by 2: outputs "dasi yc"
+                            * str[::] -> Copies the entire string: outputs "india is my country"
+                            * str[::-1] -> Reverses the entire string: outputs "yrtnuoc ym si aidni"
+                            * str[-1] -> Gets the last character: outputs "y"
+                            * str[:-1] -> Slices from start up to (but excluding) the last character: outputs "india is my countr"
                 
                 4. Boolean (`bool`):-
                     Generates Output in the form of "Truth Values" i.e., "True" OR "False".
@@ -787,9 +337,37 @@ Python Programming Fundamentals — Notes & Study Guide:-
                     print("Total fruits:", len(fruits))
                     print("Final list:", fruits)
 
-        Interview Questions on day 6, 7 & 8:-
         
-            1. What are data types in Python?
+   # Difference between shallow copy and deep copy:
+
+Shallow copy                            deep copy	
+
+
+Copies only the outer object	-   Copies the outer object and all nested objects
+Nested objects are shared       -	Nested objects are independent
+Faster                          - and uses less memory	Slower and uses more memory
+Changes to nested data affect both copies-	Changes do not affect the other copy
+
+Example
+python
+
+Collapse
+
+
+ Copy
+
+import copy
+
+original = [[1, 2], [3, 4]]
+
+shallow = copy.copy(original)
+deep = copy.deepcopy(original)
+
+original[0][0] = 100
+
+print(shallow)  # [[100, 2], [3, 4]]
+print(deep)     # [[1, 2], [3, 4]]
+1. What are data types in Python?
                 Data types define what kind of data a variable stores, 
                 such as integer, float, string, Boolean, list, tuple, set, or dictionary.
 
@@ -3037,7 +2615,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                         def greet(name):
                             print("Hello", name)
 
-                        greet("Pallavi")
+                        greet("Pallavi
 
                     Here:
                         * name is the parameter.
@@ -3238,1726 +2816,212 @@ Python Programming Fundamentals — Notes & Study Guide:-
             6. Quick Revision
 
                 | Concept       | Key Point                         |
-                |---------------|-----------------------------------|
-                | Function      | Reusable block of code            |
-                | def           | Used to define a function         |
-                | Function Call | Executes the function             |
-                | Parameter     | Variable in function definition   |
-                | Argument      | Value passed during function call |
-                | return        | Sends a value back                |
-                | print()       | Displays a value                  |
-                | *args         | Multiple positional arguments     |
-                | **kwargs      | Multiple keyword arguments        |
+  
 
-        Interview Questions On Day 15:-
+  Python Internship Notes: Types of Attributes, Methods & Decorators
 
-            1  What is a Function in Python?
-                A function is a block of reusable code that performs a specific task.
-                
-            2. Why do we use Functions?
-                Functions help to reuse code, reduce repetition, and make programs easier to understand.
+            1. Types of Attributes
+            Attributes are variables that store data related to a class or object.
 
-            3. How do you define a Function in Python?
-                We use the def keyword.
+            There are mainly 3 types:
+            1. Instance Attribute
+            2. Class Attribute
+            3. Local Attribute
 
-                Ex:-
-                    def greet():
-                        print("Hello")
+            2. Instance Attribute
+            An instance attribute belongs to a particular object.
 
-            4. How do you call a Function?
-                Write the function name followed by parentheses.
+            It is usually created using `self` inside the `__init__()` method.
 
-                Ex:-
-                    greet()
+            Example:
+            class Intern:
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
 
-            5. What is the difference between Parameter and Argument?
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
 
-                Parameter → Variable defined in the function.
-                Argument → Actual value passed to the function.
+            print(i1.name)
 
-                Ex:-
-                    def add(a, b):   # a and b are parameters
-                        print(a + b)
+            Here:
+            - `self.name`
+            - `self.domain`
+            - `self.email`
 
-                    add(10, 20)      # 10 and 20 are arguments
+            are instance attributes.
 
-            6. What is return in a Function?
-                return sends a value back from the function to the place where it was called.
+            Each object can have different values.
 
-                Ex:-
-                    def add(a, b):
-                        return a + b
-            
-            7. What is the difference between print() and return?
-                print() → Displays the result.
-                return → Sends the result back and can be stored or used further.
-            
-            8. What are the types of Function Arguments in Python?
-                Common types are:
-                Positional/Required arguments
-                Default arguments
-                Keyword arguments
-                *args
-                **kwargs
+            3. Class Attribute
+            A class attribute belongs to the class and is shared by its objects.
 
-            9. What are Default Arguments?
-                A parameter with a default value is called a default argument.
+            Example:
+            class Intern:
+                password = "Admin@123"
 
-                Ex:-
-                    def greet(name="Anuj"):
-                        print(name)
-            
-            10. What are *args and **kwargs?
-                *args → Accepts multiple positional arguments.
-                **kwargs → Accepts multiple keyword arguments.
-                
-            11. Can a Function return multiple values?
-                Yes. Python can return multiple values, usually as a tuple.
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
 
-                Ex:-
-                    def numbers():
-                        return 10, 20, 30
-            
-            12. What happens if a Function has no return statement?
-                The function returns None by default.
-                
-            ⭐ Quick Revision
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
 
-                def → Defines a function
-                Function call → Executes the function
-                Parameter → Variable in function definition
-                Argument → Value passed to function
-                return → Sends value back
-                *args → Multiple positional arguments
-                **kwargs → Multiple keyword arguments
+            print(i1.password)
 
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+            Here, `password` is a class attribute.
 
-    Internship Day 17(22/9/26):-
+            4. Local Attribute
+            A local variable/attribute is created inside a method and is available only within that method.
 
-        Python Notes: Day 15 - Types of Programming Languages & Functions
-
-            1. Types of Programming Languages:-
-                Programming languages can be categorized based on the way programs are structured and executed.
-
-                The main types learned today are:
-                1. Sequential Programming
-                2. Functional Programming
-                3. Object-Oriented Programming (OOP)
-
-                1. Sequential Programming:-
-                    Sequential programming means executing statements one after another in a specific order.
-
-                    Example:
-                        a = 10
-                        b = 20
-                        c = a + b
-                        print(c)
-
-                    Output:
-                        30
-
-                    The statements are executed from top to bottom.
-
-                2. Functional Programming:-
-                    Functional programming is a programming approach where programs are organized around functions.
-                    Functions are used to perform operations on data and produce results.
-
-                    Example:
-                        def add(a, b):
-                            return a + b
-
-                        result = add(10, 20)
-                        print(result)
-
-                    Output:
-                        30
-
-                3. Object-Oriented Programming (OOP)
-                    OOP is a programming approach based on objects and classes.
-                    Objects contain data and functions that work with that data.
-
-                    Example:
-                        class Student:
-                            def display(self):
-                                print("Student")
-
-                        student1 = Student()
-                        student1.display()
-
-                    Output:
-                        Student
-
-            2. Types of Functions in Python:-
-
-                The main types of functions learned are:
-                1. Built-in Functions
-                2. User-Defined Functions
-                3. Lambda Functions
-                4. Recursive Functions
-                5. Higher-Order Functions
-
-                1. Built-in Functions:-
-                    Built-in functions are functions that are already provided by Python.
-                    We can use them directly without defining them ourselves.
-
-                    Examples:
-                        print("Hello")
-                        len("Python")
-                        max(10, 20, 30)
-                        min(10, 20, 30)
-                        sum([10, 20, 30])
-
-                    Some commonly used built-in functions are:
-
-                        * print()
-                        * len()
-                        * type()
-                        * max()
-                        * min()
-                        * sum()
-                        * input()
-                        * range()
-
-                2. User-Defined Functions:-
-                    User-defined functions are functions created by the programmer to perform a specific task.
-                    The def keyword is used to define a user-defined function.
-
-                    Example:
-                        def check_number(num):
-                            if num % 2 == 0:
-                                print("No. Is Even")
-                            else:
-                                print("No. Is Odd")
-
-                        number = int(input("Enter a number: "))
-                        check_number(number)
-
-                    Example Input:
-                        Enter a number: 10
-
-                    Output:
-                    No. Is Even
-
-                3. Lambda Functions:-
-                    A lambda function is a small and anonymous function.
-
-                    * Lambda functions are generally used for short operations.
-                    * They are written using the lambda keyword.
-                    * A lambda function does not require a function name.
-                    * The expression automatically returns its result.
-
-                    Syntax:-
-                        lambda arguments: expression
-
-                    1. Lambda Function Example:-
-
-                        Example:
-                            num = int(input("Enter a number: "))
-
-                            res = lambda num: "Even" if num % 2 == 0 else "Odd"
-
-                            print(res(num))
-
-                        Example Input:
-                            Enter a number: 10
-
-                        Output:
-                            Even
-
-                        Example Input:
-                            Enter a number: 7
-
-                        Output:
-                            Odd
-
-                    2. Difference Between User-Defined Function and Lambda Function:-
-
-                        | Feature        | User-Defined Function             | Lambda Function                                |
-                        |----------------|-----------------------------------|------------------------------------------------|
-                        | Definition     | Created using def                 | Created using lambda                           |
-                        | Function Name  | Usually has a name                | Anonymous                                      |
-                        | Code           | Can contain multiple statements   | Generally used for a single expression         |
-                        | return Keyword | Can use return                    | Result of expression is returned automatically |
-                        | Use            | Used for larger or reusable tasks | Used for small and simple operations           |
-
-                4. Recursive Functions:-
-                    A recursive function is a function that calls itself.
-
-                    Basic Example:-
-                        def countdown(n):
-                            if n > 0:
-                                print(n)
-                                countdown(n - 1)
-
-                        countdown(5)
-
-                    Output:
-                        5
-                        4
-                        3
-                        2
-                        1
-
-                    Note:
-                        A recursive function normally needs a condition that stops the recursion.
-
-                5. Higher-Order Functions:-
-                    A higher-order function is a function that works with other functions.
-                    It can take a function as an argument or return a function.
-
-                    Common higher-order functions in Python include:
-                        * map()
-                        * filter()
-                        * reduce()
-
-                    1. map():-
-                        The map() function applies a function to each element of an iterable.
-
-                        Example:
-                            numbers = [1, 2, 3, 4]
-
-                            result = map(lambda x: x * 2, numbers)
-
-                            print(list(result))
-
-                        Output:
-                            [2, 4, 6, 8]
-
-                    2. filter():-
-                        The filter() function selects elements from an iterable based on a condition.
-
-                        Example:
-                            numbers = [1, 2, 3, 4, 5, 6]
-
-                            result = filter(lambda x: x % 2 == 0, numbers)
-
-                            print(list(result))
-
-                        Output:
-                            [2, 4, 6]
-
-                    3. reduce()
-                        The reduce() function applies a function repeatedly to the elements of an iterable and produces a single result.
-                        reduce() is available in the functools module.
-
-                        Example:
-                            from functools import reduce
-
-                            numbers = [1, 2, 3, 4]
-
-                            result = reduce(lambda x, y: x + y, numbers)
-
-                            print(result)
-
-                        Output:
-                            10
-
-                    4. Difference Between map(), filter() and reduce():-
-
-                        | Function | Purpose                               | Result               |
-                        |----------|---------------------------------------|----------------------|
-                        | map()    | Applies a function to every element   | Transformed elements |
-                        | filter() | Selects elements based on a condition | Filtered elements    |
-                        | reduce() | Combines elements into one result     | Single value         |
-
-            3. Important Points for Day 15:-
-
-                * Sequential programming executes statements one after another.
-                * Functional programming is based mainly around functions.
-                * OOP organizes programs using classes and objects.
-                * Built-in functions are already provided by Python.
-                * User-defined functions are created by the programmer using def.
-                * Lambda functions are small and anonymous functions.
-                * Lambda functions are useful for simple operations.
-                * Recursive functions call themselves.
-                * Higher-order functions work with other functions.
-                * map(), filter(), and reduce() are commonly used higher-order functions.
-                * reduce() is available through the functools module.
-
-            8. Quick Revision:-
-
-                | Concept               | Key Point                                  |
-                |-----------------------|--------------------------------------------|
-                | Sequential            | Executes statements in order               |
-                | Functional            | Uses functions as the main building blocks |
-                | OOP                   | Uses classes and objects                   |
-                | Built-in Function     | Already provided by Python                 |
-                | User-Defined Function | Created by the programmer                  |
-                | Lambda Function       | Small anonymous function                   |
-                | Recursive Function    | Function that calls itself                 |
-                | Higher-Order Function | Works with other functions                 |
-                | map()                 | Transforms elements                        |
-                | filter()              | Selects elements                           |
-                | reduce()              | Produces a single result                   |
-
-        Interview Questions On Day 15:-
-
-            1. What are the main types of programming approaches?
-                The main approaches are:
-                    Sequential Programming
-                    Functional Programming
-                    Object-Oriented Programming (OOP)
-
-            2. What is Sequential Programming?
-                It executes instructions one after another in a sequence.
-
-            3. What is Functional Programming?
-                It focuses on using functions to perform operations and process data.
-
-            4. What is Object-Oriented Programming (OOP)?
-                OOP is a programming approach based on objects and classes.
-
-            5. What is a Built-in Function?
-                A function that is already provided by Python is called a built-in function.
-                Examples: print(), len(), type(), sum().
-
-            6. What is a User-Defined Function?
-                A function created by the programmer using the def keyword is called a user-defined function.
-
-                Ex:-
-                    def add(a, b):
-                        return a + b
-
-            7. What is a Lambda Function?
-                A lambda function is a small anonymous function written using the lambda keyword.
-
-                Ex:-
-                    square = lambda x: x * x
-
-            8. What is a Recursive Function?
-                A function that calls itself is called a recursive function.
-
-            9. What is a Higher-Order Function?
-                A function that takes another function as an argument or returns a function is called a higher-order function.
-
-            10. What is the difference between Built-in and User-Defined Functions?
-                Built-in → Already provided by Python.
-                User-defined → Created by the programmer.
-
-            11. What is the difference between Normal Function and Lambda Function?
-                Normal function → Defined using def and can contain multiple statements.
-                Lambda function → Usually a short, one-line anonymous function using lambda.
-
-            12. Can a Lambda Function have multiple arguments?
-                Yes. A lambda function can accept multiple arguments but normally contains one expression.
-            
-                    Ex:-
-                        add = lambda a, b: a + b
-                    
-            ⭐ Quick Revision
-
-                Sequential → Executes step-by-step
-                Functional → Uses functions
-                OOP → Uses classes and objects
-                Built-in → Already available
-                User-defined → Created by programmer
-                Lambda → Small anonymous function
-                Recursive → Function calls itself
-                Higher-order → Takes/returns a function
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 18(23/9/26):-
-
-        Python Notes: Day 16 - Higher-Order Functions
-
-            1. Higher-Order Functions
-
-                Definition:-
-                    A higher-order function is a function that can take another function as an argument or return a function as a result.
-                
-                Common higher-order functions in Python are map(), filter(), and reduce().
-
-                1. map() Function
-
-                    Definition:
-                        map() applies a function to every element of an iterable and returns a map object.
-                    
-                    Syntax: map(function, iterable)
-
-                    Example using for loop:
-                        list1 = [1, 2, 3, 4, 5, 6, 7]
-                        res = []
-
-                        for num in list1:
-                            l1 = num * num
-                            res.append(l1)
-
-                        print(res)
-
-                    Output:
-                        [1, 4, 9, 16, 25, 36, 49]
-
-                    Same Example Using map():
-
-                        list1 = [1, 2, 3, 4, 5, 6, 7]
-                        res = map(lambda x: x * x, list1)
-                        print(tuple(res))
-
-                    Output:
-                        (1, 4, 9, 16, 25, 36, 49)
-
-                    Here:
-                    * lambda x: x * x is the function.
-                    * list1 is the iterable.
-                    * map() applies the function to every element.
-
-                2. filter() Function
-
-                    Definition:
-                        filter() is used to select elements from an iterable based on a condition.
-                    It returns only the elements for which the condition is True.
-                
-                    Syntax: filter(function, iterable)
-
-                    Example using for loop:
-                        list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                        res = []
-
-                        for num in list2:
-                            if num % 2 == 0:
-                                res.append(num)
-
-                        print(res)
-
-                    Output:
-                        [2, 4, 6, 8, 10]
-
-                    Same Example Using filter():
-                        list2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                        res = filter(lambda n: n % 2 == 0, list2)
-                        print(list(res))
-
-                    Output:
-                        [2, 4, 6, 8, 10]
-
-                    Here:
-                    * lambda n: n % 2 == 0 is the condition.
-                    * filter() keeps only the numbers for which the condition is True.
-
-                3. reduce() Function
-
-                    Definition:
-                        reduce() repeatedly applies a function to the elements of an iterable and reduces them to a single result.
-                    reduce() is available in the functools module.
-                    
-                    Syntax: reduce(function, iterable)
-
-                    Example using for loop:
-                        list3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-                        res = 0
-
-                        for num in list3:
-                            res = res + num
-
-                        print(res)
-
-                    Output:
-                        55
-
-                    Same Example Using reduce():
-                        from functools import reduce
-
-                        list3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15]
-                        res = reduce(lambda a, b: a + b, list3)
-
-                        print(res)
-
-                    Output:
-                        70
-
-                    Explanation:
-
-                        reduce() performs the operation step by step:
-
-                        1 + 2 = 3
-                        3 + 3 = 6
-                        6 + 4 = 10
-                        10 + 5 = 15
-                        15 + 6 = 21
-                        21 + 7 = 28
-                        28 + 8 = 36
-                        36 + 9 = 45
-                        45 + 10 = 55
-                        55 + 15 = 70
-
-            2. Difference Between map(), filter() and reduce()
-
-                | Function | Purpose                               | Result             |
-                |----------|---------------------------------------|--------------------|
-                | map()    | Applies a function to every element   | Transformed values |
-                | filter() | Selects elements based on a condition | Filtered values    |
-                | reduce() | Combines elements into one result     | Single value       |
-
-            3. Quick Examples
-
-                1. map():
-                    Ex:-
-                        numbers = [1, 2, 3, 4]
-                        result = map(lambda x: x + 1, numbers)
-                        print(list(result))
-
-                    Output:
-                        [2, 3, 4, 5]
-
-                2. filter():
-                    Ex:-
-                        numbers = [1, 2, 3, 4, 5]
-                        result = filter(lambda x: x > 2, numbers)
-                        print(list(result))
-
-                    Output:
-                        [3, 4, 5]
-
-                3. reduce():
-                    Ex:-
-                        from functools import reduce
-
-                        numbers = [1, 2, 3, 4]
-                        result = reduce(lambda a, b: a * b, numbers)
-                        print(result)
-
-                    Output:
-                        24
-
-            4. Important Points for Day 16
-
-                * map() transforms every element.
-                * filter() selects elements based on a condition.
-                * reduce() combines multiple elements into a single result.
-                * map() and filter() are built-in functions.
-                * reduce() must be imported from functools.
-                * Lambda functions are commonly used with map(), filter(), and reduce().
-                * map() and filter() return iterator objects, so list() or tuple() can be used to view their results.
-                * reduce() directly returns the final accumulated result.
-
-        Interview Questions On Day 16:-
-
-            1. What is a Higher-Order Function?
-                A higher-order function is a function that takes another function as an argument or returns a function.
-                
-            2. What are the common Higher-Order Functions in Python?
-                The commonly used functions are:
-                    map()
-                    filter()
-                    reduce()
-
-            3. What is map() used for?
-                map() applies a function to each element of an iterable.
-
-                Ex:-
-                    numbers = [1, 2, 3, 4]
-                    result = list(map(lambda x: x * 2, numbers))
-                    print(result)
-
-                    Output: [2, 4, 6, 8]
-
-            4. What is filter() used for?
-                filter() selects elements based on a condition.
-
-                Ex:-
-                    numbers = [1, 2, 3, 4, 5]
-                    result = list(filter(lambda x: x % 2 == 0, numbers))
-                    print(result)
-
-                    Output: [2, 4]
-
-            5. What is reduce() used for?
-                reduce() combines elements one by one and produces a single result.
-
-                Ex:-
-                    from functools import reduce
-
-                    numbers = [1, 2, 3, 4]
-                    result = reduce(lambda a, b: a + b, numbers)
-                    print(result)
-
-                    Output: 10
-
-            6. From where do we import reduce()?
-                reduce() is imported from the functools module.
-
-                    from functools import reduce
-                
-            7. What is the difference between map() and filter()?
-                map() → Transforms every element.
-                filter() → Selects elements based on a condition.
-            
-            8. What is the difference between filter() and reduce()?
-                filter() → Returns selected elements.
-                reduce() → Combines elements into one final value.
-            
-            9. Can we use a lambda function with map(), filter(), and reduce()?
-                Yes. Lambda functions are commonly used with all three.
-
-            10. What does map() return?
-                map() returns a map iterator, which can be converted into a list or tuple.
-
-                Ex:-
-                    list(map(lambda x: x * 2, [1, 2, 3]))
-                    
-            11. What does filter() return?
-                filter() returns a filter iterator, which can be converted into a list or tuple.
-                
-            12. What does reduce() return?
-                reduce() returns a single final accumulated value.
-                
-            ⭐ Quick Revision
-
-                Higher-Order Function → Takes/returns a function
-                map() → Transform each element
-                filter() → Select elements
-                reduce() → Combine elements into one result
-                map() → Map iterator
-                filter() → Filter iterator
-                reduce() → Single final value
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 19(24/9/26):-
-
-        Python Notes Day 17:- Recursive Function
-
-            1. What is a Recursive Function?
-                A recursive function is a function that **calls itself** to solve a problem.
-
-                Example:
-                    def count(n):
-                        if n == 0:
-                            return
-                        print(n)
-                        count(n-1)
-                
-                    count(5)
-
-                Output:
-                    5
-                    4
-                    3
-                    2
-                    1
-
-                1. Base Condition
-                    The condition that **stops the recursive function** is called the base condition.
-
-                    Example:
-                        def count(n):
-                            if n == 0:       # Base condition
-                                return
-                            print(n)
-                            count(n-1)
-
-                    Without a base condition, the function may call itself continuously.
-
-                2. How Recursion Works
-                    A recursive function has mainly two parts:
-                    - Base Condition → Stops the recursion
-                    - Recursive Call → Function calls itself
-
-                    Example:
-                        def test(n):
-                            if n == 0:
-                                return
-                            print(n)
-                            test(n-1)
-
-                3. Factorial Using Recursion
-                    Factorial of a number:
-                    5! = 5 × 4 × 3 × 2 × 1 = 120
-
-                    Example:
-                        def factorial(n):
-                            if n == 0 or n == 1:
-                                return 1
-                            return n * factorial(n-1)
-
-                        print(factorial(5))
-
-                    Output:
-                        120
-
-                4. Fibonacci Series Using Recursion
-                    Fibonacci series:
-                    0, 1, 1, 2, 3, 5, 8...
-
-                    Example:
-                        def fibonacci(n):
-                            if n <= 1:
-                                return n
-                            return fibonacci(n-1) + fibonacci(n-2)
-
-                        for i in range(7):
-                            print(fibonacci(i), end=" ")
-
-                    Output:
-                        0 1 1 2 3 5 8
-
-                5. Advantages of Recursion
-                    - Makes some problems easier to solve.
-                    - Useful for problems that can be divided into smaller similar problems.
-                    - Code can be shorter and simpler.
-
-                6. Disadvantages of Recursion
-                    - Uses more memory because function calls are stored.
-                    - Can be slower than loops for some problems.
-                    - Missing or incorrect base condition can cause infinite recursion.
-
-            2. Recursion vs Loop:-
-
-                | Recursion              | Loop                     |
-                |------------------------|--------------------------|
-                | Function calls itself  | Code repeats using loop  |
-                | Uses function calls    | Uses `for` or `while`    |
-                | Needs a base condition | Needs a loop condition   |
-                | Can use more memory    | Usually uses less memory |
-
-            3. Quick Revision:-
-                Recursive Function → Function calls itself
-                Base Condition → Stops recursion
-                Recursive Call → Function calling itself
-                Factorial → Common recursion example
-                Fibonacci → Common recursion example
-
-        Interview Questions On Day 17:-
-
-            1. What is a Recursive Function?
-                A recursive function is a function that calls itself to solve a problem.
-
-            2. What are the two main parts of a Recursive Function?
-                Base Condition → Stops the recursion.
-                Recursive Call → Function calls itself.
-
-            3. What is a Base Condition?
-                It is the condition that stops the recursive function. Without it, recursion may continue indefinitely.
-
-            4. What happens if there is no Base Condition?
-                The function keeps calling itself and can result in a RecursionError.
-
-            5. What is a Recursive Call?
-                When a function calls itself inside its own definition, it is called a recursive call.
-
-            6. How can you find Factorial using Recursion?
-
-                Ex:-
-                    def factorial(n):
-                        if n == 0 or n == 1:
-                            return 1
-                        return n * factorial(n-1)
-
-            7. How can you generate Fibonacci Series using Recursion?
-
-                Ex:-
-                    def fibonacci(n):
-                        if n <= 1:
-                            return n
-                        return fibonacci(n-1) + fibonacci(n-2)
-
-            8. What are the advantages of Recursion?
-                Can make some problems easier to solve.
-                Code can be shorter and simpler.
-                Useful for problems that can be divided into smaller similar problems.
-
-            9. What are the disadvantages of Recursion?
-                Can use more memory.
-                Can be slower for some problems.
-                Incorrect recursion can cause RecursionError.
-
-            10. What is the difference between Recursion and Loop?
-                Recursion → Function calls itself.
-                Loop → Uses for or while to repeat code.
-
-            11. Can a recursive function return a value?
-                Yes. A recursive function can use return to return a result.
-
-            12. Give some common examples where Recursion is used.
-                Common examples include:
-                Factorial
-                Fibonacci series
-                Problems that can be divided into smaller similar problems
-
-            ⭐ Quick Revision
-
-                Recursive Function → Function calls itself
-                Base Condition → Stops recursion
-                Recursive Call → Function calling itself
-                No Base Condition → RecursionError
-                Factorial & Fibonacci → Common examples
-                    
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 20(28/9/26):-
-
-        Python Internship Notes Day 18:- OOP – Class, Object, Constructor & OOP Pillars
-
-            1. Object:-
-                An object is an **instance of a class**.
-
-                An object can communicate with:
-                - Attributes → Data/Properties
-                - Methods → Functions/Behaviour
-
-                Example:
-                    l1 = Laptop()
-
-                Here, `l1` is an object of the `Laptop` class.
-
-            2. Class:-
-                A class is a **blueprint for creating objects**.
-
-                A class contains:
-                - Attributes → Data/Properties
-                - Methods → Functions/Behaviour
-
-                Example:
-                    class Laptop:
-                        name = "HP"
-                        color = "Black"
-                        shape = "Rectangle"
-
-                        def Programming(self):
-                            return "Demo"
-
-                        def Gaming(self):
-                            return None
-
-                Here:
-                    - `Laptop` → Class
-                    - `name`, `color`, `shape` → Attributes
-                    - `Programming()`, `Gaming()` → Methods
-
-            3. Class and Object Example:-
-
-                Ex:-
-                    class Laptop:
-                        name = "HP"
-                        color = "Black"
-                        shape = "Rectangle"
-
-                        def Programming(self):
-                            return "Demo"
-
-                        def Gaming(self):
-                            return None
-
-                    l1 = Laptop()
-
-                    print(l1.name)
-                    print(l1.Programming())
-
-                Output:
-                    HP
-                    Demo
-
-            4. Object Reference:-
-                When an object is created, a variable can be used to **refer to that object**.
-
-                Example:
-                    l1 = Laptop()
-
-                Here:
-                    - `Laptop()` → Creates an object
-                    - `l1` → Reference to that object
-
-            5. Constructor:-
-                A constructor is a **special method** that is called automatically when an object is created.
-
-                Python uses:
-                    __init__()
-
-                Its main purpose is to **initialize object attributes**.
-
-                Syntax:
-                    def __init__(self):
-                        # Initialization
-
-            6. Constructor with Parameter:-
-                A constructor can accept parameters to initialize object data.
-
-                Example:
-                    class Laptop:
-                        def __init__(self, name):
-                            self.name = name
-
-                        def Programming(self):
-                            return f"My name is {self.name}"
-
-                        def Gaming(self):
-                            return None
-
-                    l1 = Laptop("Raj")
-
-                    print(l1.Programming())
-
-                Output:
-                    My name is Raj
-
-                Here:
-                    - `__init__()` → Constructor
-                    - `name` → Parameter
-                    - `self.name` → Object attribute
-                    - `"Raj"` → Argument
-                    - `l1` → Object/reference
-
-            7. self Parameter:-
-                `self` refers to the **current object**.
-
-                It is used to access the attributes and methods of the current object.
-
-                Example:
-                    class Laptop:
-                        def __init__(self, name):
-                            self.name = name
-
-                        def Programming(self):
-                            return f"My name is {self.name}"
-
-                    l1 = Laptop("Raj")
-
-                Here:
-                    `self.name` → Refers to the `name` of the current object.
-
-            8. Instance Attribute:-
-                An attribute created using `self` is called an **instance attribute**.
-
-                Example:
-                    class Laptop:
-                        def __init__(self, name):
-                            self.name = name
-
-                    l1 = Laptop("Raj")
-                    l2 = Laptop("Anuj")
-
-                Here:
-                    - `l1.name` → Raj
-                    - `l2.name` → Anuj
-
-                Each object has its own value.
-
-            9. Four Major Pillars of OOP:-
-                The four major pillars of Object-Oriented Programming are:
-
-                1. Inheritance
-                2. Abstraction
-                3. Polymorphism
-                4. Encapsulation
-
-                1. Inheritance
-                    Inheritance allows one class to **inherit properties and methods from another class**.
-
-                    It helps in code reusability.
-
-                    Basic example:
-                        class Parent:
-                            def show(self):
-                                print("Parent")
-
-                        class Child(Parent):
-                            pass
-
-                        c1 = Child()
-                        c1.show()
-
-                2. Abstraction
-                    Abstraction means **hiding unnecessary implementation details** and showing only the required information.
-
-                    Example:
-                    When we use a mobile phone, we use buttons/apps without knowing the complete internal working.
-
-                3. Encapsulation
-                    Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
-
-                    Example:
-                        class Student:
-                            def __init__(self, name):
-                                self.name = name
-
-                    Here, data and methods can be grouped inside the class.
-
-                4. Polymorphism
-                    Polymorphism means **one name/interface can have different behaviours** depending on the object or situation.
-
-                    Example:
-                    The same method name can perform different operations in different classes.
-
-                5. Encryption
-                    Encryption is the process of converting readable data into an **unreadable form** to protect information.
-
-                    Example:
-                        Original:
-                        Admin@123
-
-                        Encrypted:
-                        hfbmnjhfgd456795tyh
-
-                    Decryption converts the encrypted data back into the original readable form.
-
-                        Encrypted:
-                        hfbmnjhfgd456795tyh
-
-                        Decrypted:
-                        Admin@123
-
-            10. f-string:-
-                An f-string is used to insert variables directly inside a string.
-
-                Example:
-                    name = "Streamline Tech"
-
-                    print(f"My company name is: {name}")
-
-                Output:
-                    My company name is: Streamline Tech
-
-            Quick Revision:-
-                Class → Blueprint for creating objects
-                Object → Instance of a class
-                Object Reference → Variable referring to an object
-                Attribute → Data/Property of an object
-                Method → Function inside a class
-                Constructor → __init__()
-                self → Refers to the current object
-                Inheritance → Code reusability
-                Abstraction → Hides unnecessary details
-                Encapsulation → Binds and controls data
-                Polymorphism → Different behaviours
-                Encryption → Converts readable data into protected/unreadable form
-
-        Interview Questions On Day 18:- Class, Object, Object Reference, Constructor, self & OOP Pillars
-
-            1. What is OOP?
-                OOP stands for Object-Oriented Programming. It is a programming approach based on classes and objects.
-
-            2. What is a Class?
-                A class is a blueprint for creating objects. It contains attributes and methods.
-
-            3. What is an Object?
-                An object is an instance of a class.
-
-            4. What is the difference between Class and Object?
-                Class → Blueprint.
-                Object → Instance created from that blueprint.
-
-            5. What are Attributes and Methods?
-                Attributes → Data/properties of an object.
-                Methods → Functions/behaviour of an object.
-
-            6. What is an Object Reference?
-                An object reference is a variable that refers to an object.
-
-                l1 = Laptop()
-
-                Here, l1 is the reference to the Laptop object.
-
-            7. What is a Constructor in Python?
-                A constructor is a special method that is automatically called when an object is created.
-
-                def __init__(self):
-                    pass
-
-            8. Why is __init__() used?
-                It is mainly used to initialize the attributes of an object when the object is created.
-
-            9. What is self in Python?
-                self refers to the current object. It is used to access the object's attributes and methods.
-
-            10. What is the difference between name and self.name?
-                name → Usually a local parameter/variable.
-                self.name → Attribute belonging to the current object.
-
-            11. What are the four major pillars of OOP?
-                The four pillars are:
-                Inheritance
-                Abstraction
-                Polymorphism
-                Encapsulation
-
-            12. What is Inheritance?
-                Inheritance allows a child class to use properties and methods of a parent class. It helps with code reusability.
-
-            13. What is Encapsulation?
-                Encapsulation means binding data and methods together inside a class and controlling access to the data.
-
-            14. What is Abstraction?
-                Abstraction means hiding unnecessary implementation details and showing only the required information.
-
-            15. What is Polymorphism?
-                Polymorphism means one interface/name can have different behaviours depending on the object or situation.
-
-            16. What is the difference between Encapsulation and Abstraction?
-                Encapsulation → Focuses on bundling and controlling data.
-                Abstraction → Focuses on hiding unnecessary details.
-
-            17. Can a class have multiple objects?
-                Yes. We can create multiple objects from the same class, and each object can have different attribute values.
-
-            18. What is an Instance Attribute?
-                An attribute created using self is called an instance attribute.
-                self.name = name
-
-            19. What happens when we create an object?
-                Python creates the object and automatically calls the __init__() constructor if it is defined.
-
-            20.What is Encryption?
-                Encryption converts readable data into an unreadable/protected form to protect information. Decryption converts it back.
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Intenship Day 21(29/9/26):-
-
-        Python Notes Day 19:- Types of Attributes, Methods & Decorators
-
-            1. Types of Attributes:-
-                Attributes are variables that store data related to a class or object.
-
-                There are mainly 3 types:
-                1. Instance Attribute
-                2. Class Attribute
-                3. Local Attribute
-
-                1. Instance Attribute:-
-                    An instance attribute belongs to a particular object.
-                    It is usually created using `self` inside the `__init__()` method.
-
-                    Example:
-                        class Intern:
-                            def __init__(self, name, domain, email):
-                                self.name = name
-                                self.domain = domain
-                                self.email = email
-
-                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
-
-                        print(i1.name)
-
-                    Here:
-                    - `self.name`
-                    - `self.domain`
-                    - `self.email`
-
-                    are instance attributes.
-
-                    Each object can have different values.
-
-                2. Class Attribute:-
-                    A class attribute belongs to the class and is shared by its objects.
-
-                    Example:
-                        class Intern:
-                            password = "Admin@123"
-
-                            def __init__(self, name, domain, email):
-                                self.name = name
-                                self.domain = domain
-                                self.email = email
-
-                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
-
-                        print(i1.password)
-
-                    Here, `password` is a class attribute.
-
-                3. Local Attribute:-
-                    A local variable/attribute is created inside a method and is available only within that method.
-
-                    Example:
-                        class Intern:
-                            name = "streamlinetech"
-
-                            def registration(self):
-                                return f"{self.name} It is an IT company"
-
-                        i1 = Intern()
-                    print(i1.registration())
-
-                5. Difference Between Instance and Class Attribute:-
-
-                    | Instance Attribute                        | Class Attribute               |
-                    |-------------------------------------------|-------------------------------|
-                    | Belongs to an object                      | Belongs to the class          |
-                    | Created using `self`                      | Created directly inside class |
-                    | Can have different values for each object | Common/shared value           |
-                    | Example: `self.name`                      | Example: `password`           |
-
-            2. Types of Methods:-
-                There are mainly 3 types of methods:
-
-                1. Instance Method
-                2. Class Method
-                3. Static Method
-
-                1. Instance Method:-
-                    An instance method works with the data of an object.
-                    It uses `self` as the first parameter.
-
-                    Example:
-                        class Intern:
-                            def __init__(self, name, domain, email):
-                                self.name = name
-                                self.domain = domain
-                                self.email = email
-
-                            def registration(self):
-                                return f"My domain is {self.domain}"
-
-                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
-
-                        print(i1.registration())
-
-                    Here, `registration()` is an instance method.
-
-                2. Class Method:-
-                    A class method works with class-level data.
-                    It uses `cls` as the first parameter and uses the `@classmethod` decorator.
-
-                    Example:
-                        class Car:
-                            total_cars = 0
-
-                            def __init__(self, model):
-                                self.model = model
-                                Car.total_cars += 1
-
-                            @classmethod
-                            def car_count(cls):
-                                return f"Total cars = {cls.total_cars}"
-
-                        print(Car.car_count())
-
-                3. Static Method:-
-                    A static method does not need `self` or `cls`.
-                    It is defined using the `@staticmethod` decorator.
-
-                    Example:
-                        class Math:
-                            @staticmethod
-                            def add(a, b):
-                                return a + b
-
-                        print(Math.add(2, 4))
-
-                    Output:
-                        6
-
-                4. Difference Between Types of Methods:-
-
-                    | Instance Method               | Class Method          | Static Method                    |
-                    |-------------------------------|-----------------------|----------------------------------|
-                    | Uses `self`                   | Uses `cls`            | No `self` or `cls`               |
-                    | Works with object data        | Works with class data | Independent of object/class data |
-                    | Uses object                   | Uses class            | Can be called using class        |
-                    | No special decorator required | Uses `@classmethod`   | Uses `@staticmethod`             |
-
-            3. Decorator
-                A decorator is used with `@` before a function or method.
-                Decorators can modify or provide special behaviour to a function/method.
-
-                In today's OOP topic, we used:
-
-                @classmethod
-                @staticmethod
-
-                1. @classmethod Decorator
-                    `@classmethod` converts a method into a class method.
-                    It receives `cls` as the first parameter.
-
-                    Example:
-                        class Car:
-                            total_cars = 0
-
-                            @classmethod
-                            def car_count(cls):
-                                return cls.total_cars
-
-                13. @staticmethod Decorator
-                    `@staticmethod` converts a method into a static method.
-                    It does not require `self` or `cls`.
-
-                    Example:
-                        class Math:
-                            @staticmethod
-                            def add(a, b):
-                                return a + b
-
-                        print(Math.add(2, 4))
-
-            4. Quick Revision:-
-
-                Attributes:
-                    Instance Attribute → Belongs to object
-                    Class Attribute → Belongs to class
-                    Local Attribute → Used inside method/local scope
-
-                Methods:
-                    Instance Method → Uses `self`
-                    Class Method → Uses `cls`
-                    Static Method → Uses neither `self` nor `cls`
-
-                Decorators:
-                    `@classmethod` → Creates a class method
-                    `@staticmethod` → Creates a static method
-
-        Interview Questions On Day 19:-
-
-            1. What is an Attribute in Python?
-                An attribute is a variable that stores data related to a class or object.
-                
-            2. What are the types of Attributes?
-                The three types covered are:
-                Instance Attribute
-                Class Attribute
-                Local Attribute
-
-            3. What is an Instance Attribute?
-                An instance attribute belongs to a particular object and is usually created using self.
-
-                self.name = name
-
-            4. What is a Class Attribute?
-                A class attribute belongs to the class and can be shared by its objects.
-
-                class Intern:
-                    password = "Admin@123"
-            
-            5. What is a Local Attribute?
-                A local variable is created inside a method and is used within that method.
-                
-            6. What are the types of Methods in Python OOP?
-                The three types are:
-                Instance Method
-                Class Method
-                Static Method
-
-            7. What is an Instance Method?
-                An instance method works with object data and uses self as its first parameter.
+            Example:
+            class Intern:
+                name = "streamlinetech"
 
                 def registration(self):
-                    return self.domain
+                    return f"{self.name} It is an IT company"
 
-            8. What is a Class Method?
-                A class method works with class-level data and uses cls as its first parameter.
+            i1 = Intern()
+            print(i1.registration())
 
-                It is created using the @classmethod decorator.
+            5. Difference Between Instance and Class Attribute
 
-                Ex:-
-                    @classmethod
-                    def car_count(cls):
-                        return cls.total_cars
+            | Instance Attribute | Class Attribute |
+            |---|---|
+            | Belongs to an object | Belongs to the class |
+            | Created using `self` | Created directly inside class |
+            | Can have different values for each object | Common/shared value |
+            | Example: `self.name` | Example: `password` |
 
-            9. What is a Static Method?
-                A static method does not require self or cls. It is created using @staticmethod.
+            6. Types of Methods
+            There are mainly 3 types of methods:
 
-                Ex:-
-                    @staticmethod
-                    def add(a, b):
-                        return a + b
+            1. Instance Method
+            2. Class Method
+            3. Static Method
 
-            10. What is a Decorator?
-                A decorator is used to modify or provide special behaviour to a function or method.
+            7. Instance Method
+            An instance method works with the data of an object.
 
-                In today's topic, we use:
+            It uses `self` as the first parameter.
+
+            Example:
+            class Intern:
+                def __init__(self, name, domain, email):
+                    self.name = name
+                    self.domain = domain
+                    self.email = email
+
+                def registration(self):
+                    return f"My domain is {self.domain}"
+
+            i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+            print(i1.registration())
+
+            Here, `registration()` is an instance method.
+
+            8. Class Method
+            A class method works with class-level data.
+
+            It uses `cls` as the first parameter and uses the `@classmethod` decorator.
+
+            Example:
+            class Car:
+                total_cars = 0
+
+                def __init__(self, model):
+                    self.model = model
+                    Car.total_cars += 1
 
                 @classmethod
+                def car_count(cls):
+                    return f"Total cars = {cls.total_cars}"
+
+            print(Car.car_count())
+
+            9. Static Method
+            A static method does not need `self` or `cls`.
+
+            It is defined using the `@staticmethod` decorator.
+
+            Example:
+            class Math:
                 @staticmethod
+                def add(a, b):
+                    return a + b
 
-            11. What is the difference between @classmethod and @staticmethod?
-                @classmethod → Uses cls and works with class-level data.
-                @staticmethod → Does not use self or cls.
+            print(Math.add(2, 4))
 
-            12. What is the difference between Instance, Class and Static Methods?
+            Output:
+            6
 
-                Instance Method  	    Class Method	           Static Method
-                Uses self       	    Uses cls	               Uses neither
-                Works with object data	Works with class data  	   Independent of object/class data
-                Called using object	    Can be called using class  Can be called using class
-            
-            ⭐ Must Prepare First
+            10. Difference Between Types of Methods
 
-                Focus especially on these:
+            | Instance Method | Class Method | Static Method |
+            |---|---|---|
+            | Uses `self` | Uses `cls` | No `self` or `cls` |
+            | Works with object data | Works with class data | Independent of object/class data |
+            | Uses object | Uses class | Can be called using class |
+            | No special decorator required | Uses `@classmethod` | Uses `@staticmethod` |
 
-                Instance Attribute → Class Attribute → Local Attribute
-                Instance Method → Class Method → Static Method
-                self → cls → no self/cls
-                @classmethod → @staticmethod
+            11. Decorator
+            A decorator is used with `@` before a function or method.
 
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+            Decorators can modify or provide special behaviour to a function/method.
 
-    Internship Day 22(30/9/26):-
+            In today's OOP topic, we used:
 
-        Python Notes: Day 20 - Types of Constructors
+            @classmethod
+            @staticmethod
 
-            1. Constructor:-
-                A constructor is a special method used to initialize an object.
-                In Python, `__init__()` is commonly called the constructor.
+            12. @classmethod Decorator
+            `@classmethod` converts a method into a class method.
 
-                It is automatically called when an object is created.
+            It receives `cls` as the first parameter.
 
-                Example:
-                    class Student:
-                        def __init__(self):
-                            print("Constructor is called when object is created")
+            Example:
+            class Car:
+                total_cars = 0
 
-                    student1 = Student()
+                @classmethod
+                def car_count(cls):
+                    return cls.total_cars
 
-                Output:
-                    Constructor is called when object is created
+            13. @staticmethod Decorator
+            `@staticmethod` converts a method into a static method.
 
-            2. Types of Constructors:-
-                Commonly, we study these types:
+            It does not require `self` or `cls`.
 
-                1. Non-Parameterized Constructor
-                2. Parameterized Constructor
-                3. Constructor with Default Parameters
+            Example:
+            class Math:
+                @staticmethod
+                def add(a, b):
+                    return a + b
 
-                1. Non-Parameterized Constructor:-
-                    A constructor that does not take any parameter other than `self` is called a non-parameterized constructor.
+            print(Math.add(2, 4))
 
-                    Example:
-                        class Student:
-                            def __init__(self):
-                                print("Constructor is called when object is created")
+            14. Quick Revision
 
-                        student1 = Student()
-                        student2 = Student()
+            Attributes:
+            Instance Attribute → Belongs to object
+            Class Attribute → Belongs to class
+            Local Attribute → Used inside method/local scope
 
-                    Output:
-                        Constructor is called when object is created
-                        Constructor is called when object is created
+            Methods:
+            Instance Method → Uses `self`
+            Class Method → Uses `cls`
+            Static Method → Uses neither `self` nor `cls`
 
-                    Here:
-                    `__init__(self)` → Non-parameterized constructor
+            Decorators:
+            `@classmethod` → Creates a class method
+            `@staticmethod` → Creates a static method
 
-                2. Parameterized Constructor:-
-                    A constructor that accepts parameters to initialize object attributes is called a parameterized constructor.
 
-                    Example:
-                        class Intern:
-                            def __init__(self, name, domain, email):
-                                self.name = name
-                                self.domain = domain
-                                self.email = email
 
-                        i1 = Intern("ABC", "PYTHON", "abc@gmail.com")
+          Python Notes: Day 21 - Inheritance & Its Types
 
-                        print(i1.name)
-                        print(i1.domain)
-                        print(i1.email)
-
-                    Output:
-                        ABC
-                        PYTHON
-                        abc@gmail.com
-
-                    Here:
-                    - `name`, `domain`, `email` → Parameters
-                    - `"ABC"`, `"PYTHON"`, `"abc@gmail.com"` → Arguments
-                    - `self.name`, `self.domain`, `self.email` → Instance attributes
-
-                3. Constructor with Default Parameters:-
-                    A constructor can have parameters with default values.
-                    If a value is not provided, Python uses the default value.
-
-                    Example:
-                        class Intern:
-                            def __init__(self, name="Anuj", age=21):
-                                self.name = name
-                                self.age = age
-
-                        i1 = Intern("Anuj", 23)
-
-                        print(i1.name)
-                        print(i1.age)
-
-                    Output:
-                        Anuj
-                        23
-
-                    Another example:
-                        i2 = Intern()
-
-                        print(i2.name)
-                        print(i2.age)
-
-                    Output:
-                        Anuj
-                        21
-
-                    Here:
-                    - `name="Anuj"` → Default value
-                    - `age=21` → Default value
-
-                    Important:
-                        This is technically a parameterized constructor with default parameter values,
-                        not a separate constructor type in Python.
-
-            3. Real-World Example: Bank Account
-
-                Ex:-
-                    class BankAccount:
-                        def __init__(self, name, acc_no, balance, ifsc="MAHB00043"):
-                            self.name = name
-                            self.acc_no = acc_no
-                            self.balance = balance
-                            self.ifsc = ifsc
-
-                        def show_user(self):
-                            print("=========================")
-                            print("user_name:", self.name)
-                            print("user_acc_no:", self.acc_no)
-                            print("user credential displayed successfully")
-
-                    b1 = BankAccount("Urmila", "ACC123789", 50000, "MAHB000023")
-
-                    print(b1.name)
-                    print(b1.acc_no)
-                    print(b1.balance)
-                    print(b1.ifsc)
-
-                    b1.show_user()
-
-                Here:
-                - `BankAccount` → Class
-                - `__init__()` → Constructor
-                - `name`, `acc_no`, `balance`, `ifsc` → Instance attributes
-                - `show_user()` → Instance method
-                - `"Urmila"`, `"ACC123789"`, `50000` → Arguments
-                - `"MAHB000023"` → Argument that replaces the default IFSC value
-
-            4. Default Value in Constructor:-
-                If an argument is not passed, the default value is used.
-
-                Example:
-                    class BankAccount:
-                        def __init__(self, name, balance, ifsc="MAHB00043"):
-                            self.name = name
-                            self.balance = balance
-                            self.ifsc = ifsc
-
-                    b1 = BankAccount("Anuj", 50000)
-
-                    print(b1.ifsc)
-
-                Output:
-                    MAHB00043
-
-            5. Important Points:-
-                - `__init__()` is automatically called when an object is created.
-                - `self` refers to the current object.
-                - Constructors are mainly used to initialize object attributes.
-                - A parameterized constructor accepts values from the user/program.
-                - A non-parameterized constructor does not accept additional parameters.
-                - Default parameters allow us to use a value when no argument is provided.
-                - Python does not support multiple constructors with the same name like some other languages.
-                - A class can have only one `__init__()` definition; if defined again, the later definition replaces the earlier one.
-
-            6. Difference Between Constructor Types:-
-
-                | Non-Parameterized             | Parameterized                  | Default Parameters                   |
-                |-------------------------------|--------------------------------|--------------------------------------|
-                | Takes only `self`             | Takes additional parameters    | Takes parameters with default values |
-                | No values are passed          | Values are passed              | Values may or may not be passed      |
-                | `__init__(self)`              | `__init__(self, name)`         | `__init__(self, name="Anuj")`        |
-                | Used for fixed initialization | Used for custom initialization | Used for flexible initialization     |
-
-            Quick Revision:-
-                Constructor → Initializes an object
-                `__init__()` → Commonly called constructor in Python
-                Non-Parameterized → Only `self`
-                Parameterized → Accepts parameters
-                Default Parameters → Parameters have default values
-                `self` → Current object
-                Constructor → Automatically called when object is created
-
-        Interview Questions On Day 20:-
-
-            1. What is a Constructor in Python?
-                A constructor is a special method used to initialize an object. In Python, __init__() is commonly called the constructor.
-
-            2. When is a Constructor called?
-                It is called automatically when an object is created.
-
-                Ex:-
-                    student1 = Student()
-                
-            3. What is __init__()?
-                __init__() is a special method used to initialize the attributes of an object.
-
-            4. What is a Non-Parameterized Constructor?
-                A constructor that takes only self and no additional parameters is called a non-parameterized constructor.
-
-                Ex:-
-                    class Student:
-                        def __init__(self):
-                            print("Constructor called")
-
-            5. What is a Parameterized Constructor?
-                A constructor that accepts parameters to initialize object data is called a parameterized constructor.
-
-                Ex:-
-                    class Student:
-                        def __init__(self, name, age):
-                            self.name = name
-                            self.age = age
-
-            6. What is a Constructor with Default Parameters?
-                A constructor in which parameters have default values.
-
-                Ex:-
-                    class Student:
-                        def __init__(self, name="Anuj", age=21):
-                            self.name = name
-                            self.age = age
-
-            7. What happens if we don't pass an argument for a default parameter?
-                Python uses the default value.
-
-                Ex:-
-                    s1 = Student()
-
-                Here, name will be "Anuj" and age will be 21.
-
-            8. What is the difference between Parameterized and Non-Parameterized Constructors?
-
-                Non-Parameterized	    Parameterized
-                Takes only self	        Takes additional parameters
-                No values are passed	Values are passed
-                __init__(self)	        __init__(self, name)
-            
-            9. What is the difference between Parameterized Constructor and Default Parameter Constructor?
-                Parameterized → Values are generally expected to be passed.
-                Default parameter → Values may be passed, otherwise default values are used.
-
-            10. What is the purpose of self in a Constructor?
-                self refers to the current object and is used to store/access its attributes.
-
-                Ex:-
-                    self.name = name
-                
-            11. Can we create multiple constructors in one Python class?
-                Python does not support multiple __init__() methods with the same name. If we define another __init__(), it replaces the previous one.
-                
-            12. What is the main purpose of a Constructor?
-                Its main purpose is to initialize object data when the object is created.
-                
-            ⭐ Must Prepare First
-
-                Constructor → __init__() → Automatically called → Initializes object
-
-                Non-Parameterized → Only self
-
-                Parameterized → Takes values
-
-                Default Parameters → Values have default values
-
-                self → Current object
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 23(1/10/26):-
-
-        Python Notes: Day 21 - Inheritance & Its Types
-
-            1. Inheritance:-
+            1. Inheritance
                 Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.
 
                 It helps in:
@@ -4984,21 +3048,21 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 - `Child` → Child/Derived/Sub class
                 - `Child(Parent)` → Child inherits from Parent
 
-            2. Parent Class:-
+            2. Parent Class
                 The class whose properties and methods are inherited by another class is called the **Parent class**.
 
                 Other names:
                 - Base class
                 - Super class
 
-            3. Child Class:-
+            3. Child Class
                 The class that inherits properties and methods from another class is called the **Child class**.
 
                 Other names:
                 - Derived class
                 - Sub class
 
-            4. Types of Inheritance:-
+            4. Types of Inheritance
                 There are mainly 5 types of inheritance:
 
                 1. Single Inheritance
@@ -5147,7 +3211,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
                     Here, different inheritance types are combined, so it is called Hybrid Inheritance.
 
-            5. Quick Difference:-
+            5. Quick Difference
 
                 | Type         | Meaning                          |
                 |--------------|----------------------------------|
@@ -5157,14 +3221,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 | Hierarchical | One Parent → Multiple Children   |
                 | Hybrid       | Combination of two or more types |
 
-            6. Advantages of Inheritance:-
+            6. Advantages of Inheritance
                 - Code reusability
                 - Reduces code duplication
                 - Makes code easier to maintain
                 - Creates a relationship between classes
                 - Child classes can reuse parent methods
 
-            Quick Revision:-
+            Quick Revision:
 
                 Inheritance → Child class gets properties/methods from Parent
 
@@ -5177,121 +3241,15 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 Hierarchical → 1 Parent → Multiple Children
                 Hybrid → Combination of inheritance types
 
-        Interview Questions on Day 21:-
+<<<<<<< HEAD:Abhishek_Shinde/python/interview question .ans
+<<<<<<< HEAD
+<<<<<<< HEAD
+    -_-_-_-_-_-_-_-_-_-_-_-_-
+    
+=======
+    -_-_-_-_-_-_-_-_-_-_-_-_-  Internship Day 24(2/10/26):-
 
-            1. What is Inheritance in Python?
-                Inheritance is an OOP concept where a child class inherits attributes and methods from a parent class.
-                
-            2. Why do we use Inheritance?
-                It is mainly used for code reusability and to avoid writing the same code again.
-                
-            3. What is a Parent Class?
-                A parent class is the class whose attributes and methods are inherited by another class.
-                It is also called Base Class or Super Class.
-            
-            4.What is a Child Class?
-                A child class is the class that inherits attributes and methods from a parent class.
-                It is also called Derived Class or Sub Class.
-
-            5. How do you implement Inheritance in Python?
-
-                class Parent:
-                    def show(self):
-                        print("Parent")
-
-                class Child(Parent):
-                    pass
-            
-            6. What are the types of Inheritance in Python?
-                There are five main types:
-                    Single Inheritance
-                    Multiple Inheritance
-                    Multilevel Inheritance
-                    Hierarchical Inheritance
-                    Hybrid Inheritance
-
-            7. What is Single Inheritance?
-                When one child class inherits from one parent class, it is called single inheritance.
-
-                Parent
-                |
-                Child
-
-            8. What is Multiple Inheritance?
-                When one child class inherits from multiple parent classes, it is called multiple inheritance.
-
-                Parent1    Parent2
-                    \       /
-                     Child
-
-            9. What is Multilevel Inheritance?
-                When inheritance occurs through multiple levels, it is called multilevel inheritance.
-
-                Grandparent
-                    |
-                Parent
-                    |
-                Child
-
-            10. What is Hierarchical Inheritance?
-                When multiple child classes inherit from the same parent class, it is called hierarchical inheritance.
-
-                    Parent
-                    /      \
-                Child1   Child2
-
-            11. What is Hybrid Inheritance?
-                Hybrid inheritance is a combination of two or more types of inheritance.
-
-                Example:
-
-                      A
-                    /   \
-                    B   C
-                    \   /
-                      D
-            
-            12. What is the difference between Multiple and Multilevel Inheritance?
-                Multiple → One child has multiple parents.
-                Multilevel → Inheritance happens across multiple levels.
-            
-            13. What is the difference between Hierarchical and Multiple Inheritance?
-                Hierarchical → One parent → multiple children.
-                Multiple → Multiple parents → one child.
-
-            14. Which type of inheritance is used in this example?
-
-                class A:
-                    pass
-
-                class B(A):
-                    pass
-
-                class C(B):
-                    pass
-
-                This is Multilevel Inheritance.
-
-            15. Can a child class use methods of its parent class?
-            Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
-            
-            ⭐ Quick Revision:-
-
-                Inheritance → Code reusability
-                Parent → Base / Super Class
-                Child → Derived / Sub Class
-
-                Single → 1 Parent → 1 Child
-                Multiple → Multiple Parents → 1 Child
-                Multilevel → Grandparent → Parent → Child
-                Hierarchical → 1 Parent → Multiple Children
-                Hybrid → Combination of inheritance types
-
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-
-    Internship Day 24(2/10/26):-
-
-        Python Internship Notes: Day 22 - Polymorphism & Its Types
+        Python Notes: Day 22 - Polymorphism & Its Types
 
             1. Polymorphism:-
                 Polymorphism means **one name having many forms or behaviours**.
@@ -5323,10 +3281,10 @@ Python Programming Fundamentals — Notes & Study Guide:-
                         def pay(self):
                             print("I will do my payment through Cash")
 
-                Here, all classes have the same method name:
-                `pay()`
+                    Here, all classes have the same method name:
+                    `pay()`
 
-                But each class performs the payment differently.
+                    But each class performs the payment differently.
 
             2. Types of Polymorphism:-
 
@@ -5371,7 +3329,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                             Output:
                             30
 
-                            For strings:
+                        For strings:
                             print("Streamline" + " tech")
 
                         Output:
@@ -5463,7 +3421,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 | Occurs within the same class                           | Occurs between parent and child classes   |
                 | Python does not support traditional method overloading | Python supports method overriding         |
 
-            12. Quick Revision
+            4. Quick Revision
 
                 Polymorphism → One name, many forms
 
@@ -5571,4 +3529,12 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
                 super() → Calls parent class method
 
-    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+>>>>>>> 9f477dc (fixed  bug)
+=======
+    -_-_-_-_-_-_-_-_-_-_-_-_-
+>>>>>>> abc509c (fixed  bug)
+=======
+    -_-_-_-_-_-_-_-_-_-_-_-_-
+    
+>>>>>>> 30243c5 (done):Abhishek_Shinde/python/interview question py
