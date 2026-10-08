@@ -35,7 +35,6 @@ A **class** is a blueprint or template for creating objects.
 
 ### Example
 
-```python
 class Car:
 
     color = "Black"
@@ -60,13 +59,8 @@ The blueprint is not the actual house.
 
 Similarly:
 
-```text
 Class = Blueprint
 Object = Actual thing
-```
-
----
-
 # 3. Object
 
 ## What is an Object?
@@ -79,7 +73,6 @@ An **object is an instance of a class**.
 
 ### Example
 
-```python
 class Car:
 
     color = "Black"
@@ -97,13 +90,11 @@ Here:
 
 ### Accessing an Attribute
 
-```python
 print(car1.color)
 ```
 
 ### Output
 
-```text
 Black
 ```
 
@@ -118,13 +109,8 @@ Black
 
 ### Real-life Example
 
-```text
 House Blueprint → Class
 Actual House     → Object
-```
-
----
-
 # 4. Attributes
 
 ## What is an Attribute?
@@ -137,7 +123,6 @@ An **attribute** is a variable that belongs to an object or class.
 
 ### Example
 
-```python
 class Car:
 
     color = "Black"
@@ -153,7 +138,6 @@ Here:
 
 A car can have:
 
-```text
 Color = Black
 Model = BMW
 Price = 500000
@@ -175,7 +159,6 @@ A **method is a function defined inside a class**.
 
 ### Example
 
-```python
 class Car:
 
     def start(self):
@@ -192,7 +175,6 @@ Here:
 
 ### Calling a Method
 
-```python
 car1 = Car()
 
 car1.start()
@@ -201,7 +183,6 @@ car1.stop()
 
 ### Output
 
-```text
 Car started
 Car stopped
 ```
@@ -228,13 +209,11 @@ A **constructor is a special method that is automatically called when an object 
 
 In Python, the constructor is:
 
-```python
 __init__()
 ```
 
 ### Example
 
-```python
 class Car:
 
     def __init__(self):
@@ -250,20 +229,17 @@ print(car1.model)
 
 ### Output
 
-```text
 Black
 BMW
 ```
 
 When this line executes:
 
-```python
 car1 = Car()
 ```
 
 Python automatically calls:
 
-```python
 __init__()
 ```
 
@@ -289,7 +265,6 @@ We use a constructor to:
 
 ### Example
 
-```python
 class Student:
 
     def __init__(self, name, marks):
@@ -305,14 +280,12 @@ print(s1.marks)
 
 ### Output
 
-```text
 Mayuri
 85
 ```
 
 Here:
 
-```python
 self.name
 ```
 
@@ -320,7 +293,6 @@ means the `name` of the current object.
 
 For:
 
-```python
 s1 = Student("Mayuri", 85)
 ```
 
@@ -346,7 +318,6 @@ It uses `self`.
 
 ### Example
 
-```python
 class Student:
 
     def show(self):
@@ -360,7 +331,6 @@ s1.show()
 
 ### Output
 
-```text
 Student information
 ```
 
@@ -380,7 +350,6 @@ We use the `@classmethod` decorator.
 
 ### Example
 
-```python
 class Student:
 
     school = "ABC School"
@@ -395,7 +364,6 @@ Student.show_school()
 
 ### Output
 
-```text
 ABC School
 ```
 
@@ -415,7 +383,6 @@ We use the `@staticmethod` decorator.
 
 ### Example
 
-```python
 class Calculator:
 
     @staticmethod
@@ -428,7 +395,6 @@ print(Calculator.add(10, 20))
 
 ### Output
 
-```text
 30
 ```
 
@@ -456,7 +422,6 @@ It also helps us control access to data.
 
 ### Example
 
-```python
 class Student:
 
     def __init__(self, name, marks):
@@ -500,7 +465,6 @@ Public members can be accessed directly.
 
 ### Example
 
-```python
 class Student:
 
     name = "Mayuri"
@@ -513,19 +477,13 @@ print(s1.name)
 
 ### Output
 
-```text
 Mayuri
-```
-
----
-
 ## 10.2 Protected
 
 Protected members are written using a single underscore `_`.
 
 ### Example
 
-```python
 class Student:
 
     _marks = 85
@@ -545,7 +503,6 @@ Private members are written using double underscores `__`.
 
 ### Example
 
-```python
 class Student:
 
     __marks = 85
@@ -565,7 +522,6 @@ A getter is used to **get/read data**.
 
 ### Example
 
-```python
 def get_marks(self):
     return self.__marks
 ```
@@ -576,14 +532,12 @@ A setter is used to **set/change data**.
 
 ### Example
 
-```python
 def set_marks(self, marks):
     self.__marks = marks
 ```
 
 ### Complete Example
 
-```python
 class Student:
 
     def __init__(self):
@@ -605,19 +559,13 @@ print(s1.get_marks())
 
 ### Output
 
-```text
 85
 ```
 
 ### Easy Trick
 
-```text
 Getter → Get data
 Setter → Set/change data
-```
-
----
-
 # 12. Inheritance
 
 ## What is Inheritance?
@@ -635,7 +583,6 @@ Inheritance allows one class to acquire the properties and methods of another cl
 
 ### Example
 
-```python
 class Animal:
 
     def eat(self):
@@ -656,14 +603,12 @@ d1.bark()
 
 ### Output
 
-```text
 Animal is eating
 Dog is barking
 ```
 
 Here:
 
-```text
 Animal → Parent class
 Dog    → Child class
 ```
@@ -692,7 +637,6 @@ There are five main types:
 
 ### Structure
 
-```text
 Parent
    ↓
 Child
@@ -700,7 +644,6 @@ Child
 
 ### Example
 
-```python
 class Animal:
 
     def eat(self):
@@ -721,19 +664,13 @@ d1.bark()
 
 ### Output
 
-```text
 Animal is eating
 Dog is barking
 ```
 
 ### Easy Trick
 
-```text
 1 Parent + 1 Child = Single Inheritance
-```
-
----
-
 # 13.2 Multiple Inheritance
 
 ## Definition
@@ -742,7 +679,6 @@ Dog is barking
 
 ### Structure
 
-```text
 Parent 1     Parent 2
     \          /
      \        /
@@ -751,7 +687,6 @@ Parent 1     Parent 2
 
 ### Example
 
-```python
 class Father:
 
     def skill1(self):
@@ -779,7 +714,6 @@ c1.skill3()
 
 ### Output
 
-```text
 Father: Driving
 Mother: Cooking
 Child: Coding
@@ -787,12 +721,7 @@ Child: Coding
 
 ### Easy Trick
 
-```text
 Many Parents + One Child = Multiple Inheritance
-```
-
----
-
 # 13.3 Multilevel Inheritance
 
 ## Definition
@@ -801,7 +730,6 @@ Many Parents + One Child = Multiple Inheritance
 
 ### Structure
 
-```text
 Grandparent
      ↓
    Parent
@@ -811,7 +739,6 @@ Grandparent
 
 ### Example
 
-```python
 class Grandparent:
 
     def house(self):
@@ -839,7 +766,6 @@ c1.bike()
 
 ### Output
 
-```text
 Grandparent has a house
 Parent has a car
 Child has a bike
@@ -847,12 +773,7 @@ Child has a bike
 
 ### Easy Trick
 
-```text
 A → B → C = Multilevel Inheritance
-```
-
----
-
 # 13.4 Hierarchical Inheritance
 
 ## Definition
@@ -861,7 +782,6 @@ A → B → C = Multilevel Inheritance
 
 ### Structure
 
-```text
         Parent
         /    \
      Child1  Child2
@@ -869,7 +789,6 @@ A → B → C = Multilevel Inheritance
 
 ### Example
 
-```python
 class Animal:
 
     def eat(self):
@@ -900,7 +819,6 @@ c1.meow()
 
 ### Output
 
-```text
 Animal is eating
 Dog is barking
 Animal is eating
@@ -909,12 +827,7 @@ Cat is meowing
 
 ### Easy Trick
 
-```text
 1 Parent + Multiple Children = Hierarchical Inheritance
-```
-
----
-
 # 13.5 Hybrid Inheritance
 
 ## Definition
@@ -923,7 +836,6 @@ Cat is meowing
 
 ### Example Structure
 
-```text
           Animal
          /      \
        Dog      Cat
@@ -940,7 +852,6 @@ So, this is Hybrid Inheritance.
 
 ### Example
 
-```python
 class Animal:
 
     def eat(self):
@@ -975,7 +886,6 @@ p1.play()
 
 ### Output
 
-```text
 Animal is eating
 Dog is barking
 Cat is meowing
@@ -984,12 +894,7 @@ Puppy is playing
 
 ### Easy Trick
 
-```text
 Combination of inheritance types = Hybrid Inheritance
-```
-
----
-
 # 14. Polymorphism
 
 ## What is Polymorphism?
@@ -1004,7 +909,6 @@ A method with the same name can behave differently for different objects.
 
 ### Example
 
-```python
 class Dog:
 
     def sound(self):
@@ -1026,14 +930,12 @@ c.sound()
 
 ### Output
 
-```text
 Dog barks
 Cat meows
 ```
 
 Both classes have:
 
-```python
 sound()
 ```
 
@@ -1061,7 +963,6 @@ If we define the same method multiple times, the latest definition replaces the 
 
 ### Example
 
-```python
 class Calculator:
 
     def add(self, a, b):
@@ -1084,7 +985,6 @@ We can use:
 
 ### Example using `*args`
 
-```python
 class Calculator:
 
     def add(self, *numbers):
@@ -1100,7 +1000,6 @@ print(c.add(10, 20, 30, 40))
 
 ### Output
 
-```text
 30
 60
 100
@@ -1126,7 +1025,6 @@ Method overriding happens when a child class provides its own implementation of 
 
 ### Example
 
-```python
 class Animal:
 
     def sound(self):
@@ -1148,14 +1046,12 @@ d.sound()
 
 ### Output
 
-```text
 Animal makes a sound
 Dog barks
 ```
 
 Both classes have:
 
-```python
 sound()
 ```
 
@@ -1165,7 +1061,6 @@ Therefore, `Dog` overrides the `sound()` method.
 
 ### Easy Trick
 
-```text
 Parent → sound()
 Child  → sound()
 ```
@@ -1188,14 +1083,9 @@ Python is dynamically typed and does not support traditional compile-time method
 
 However, in general OOP terminology:
 
-```text
 Compile-time Polymorphism
           ↓
 Method Overloading
-```
-
----
-
 # 18. Run-time Polymorphism
 
 ## What is Run-time Polymorphism?
@@ -1206,7 +1096,6 @@ It is commonly achieved through **method overriding**.
 
 ### Example
 
-```python
 class Animal:
 
     def sound(self):
@@ -1226,7 +1115,6 @@ animal.sound()
 
 ### Output
 
-```text
 Dog barks
 ```
 
@@ -1234,7 +1122,6 @@ The object is created from `Dog`, so the `Dog` version of `sound()` executes.
 
 ### Easy Trick
 
-```text
 Overloading → Compile-time
 Overriding  → Run-time
 ```
@@ -1276,7 +1163,6 @@ In Python, we use the `abc` module.
 
 ### Example
 
-```python
 from abc import ABC, abstractmethod
 
 
@@ -1300,12 +1186,7 @@ d.sound()
 
 ### Output
 
-```text
 Dog barks
-```
-
----
-
 # 21. Abstract Method
 
 ## What is an Abstract Method?
@@ -1314,7 +1195,6 @@ An abstract method is a method that is declared in an abstract class but does no
 
 ### Example
 
-```python
 @abstractmethod
 def sound(self):
     pass
@@ -1324,7 +1204,6 @@ The child class must provide the implementation.
 
 ### Example
 
-```python
 from abc import ABC, abstractmethod
 
 
@@ -1343,15 +1222,10 @@ class Dog(Animal):
 
 Here:
 
-```text
 Animal → Abstract class
 sound() → Abstract method
 Dog → Child class
 Dog's sound() → Implementation
-```
-
----
-
 # 22. Abstract Class vs Normal Class
 
 | Abstract Class | Normal Class |
@@ -1374,52 +1248,32 @@ OOP has four important pillars:
 
 Example:
 
-```text
 Class → Data + Methods
-```
-
----
-
 ## 2. Inheritance
 
 > **Acquiring properties and methods from another class.**
 
 Example:
 
-```text
 Parent
   ↓
 Child
-```
-
----
-
 ## 3. Polymorphism
 
 > **One name, many forms.**
 
 Example:
 
-```text
 sound() → Dog barks
 sound() → Cat meows
-```
-
----
-
 ## 4. Abstraction
 
 > **Hiding implementation details and showing essential information.**
 
 Example:
 
-```text
 Show → What to do
 Hide → How it works internally
-```
-
----
-
 # 24. Four Pillars – Easy Table
 
 | Pillar | Simple Meaning | Main Concept |
@@ -1433,7 +1287,6 @@ Hide → How it works internally
 
 # 25. Complete OOP Flow
 
-```text
 OOP
 │
 ├── Class
@@ -1473,10 +1326,6 @@ OOP
 └── Abstraction
     ├── Abstract Class
     └── Abstract Method
-```
-
----
-
 # 26. Important OOP Keywords
 
 | Keyword | Meaning |
