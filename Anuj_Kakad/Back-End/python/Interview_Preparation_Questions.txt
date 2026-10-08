@@ -126,14 +126,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
             10. Difference Between High-Level and Low-Level Language:-
 
-            | Feature            | High-Level Language                           | Low-Level Language                              |
-            | ------------------ | --------------------------------------------- | ----------------------------------------------- |
-            | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
-            | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
-            | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
-            | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
-            | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
-            | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+                | Feature            | High-Level Language                           | Low-Level Language                              |
+                | ------------------ | --------------------------------------------- | ----------------------------------------------- |
+                | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
+                | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
+                | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
+                | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
+                | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
+                | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
@@ -5273,8 +5273,8 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 This is Multilevel Inheritance.
 
             15. Can a child class use methods of its parent class?
-            Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
-            
+                Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
+                
             ⭐ Quick Revision:-
 
                 Inheritance → Code reusability
@@ -5570,5 +5570,449 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 __add__() → Operator overloading for +
 
                 super() → Calls parent class method
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 23(6/10/26):-
+
+        Python Internship Notes: Day 23 - Encapsulation
+
+            1. Encapsulation
+                Encapsulation is one of the **four major pillars of OOP**.
+                Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+                It helps to protect data from unwanted or direct access.
+
+            2.Access Modifiers
+                Access modifiers are used to control the **accessibility of class members**, such as attributes and methods.
+
+                Python mainly uses three types:
+
+                    1. Public
+                    2. Protected
+                    3. Private
+
+                    1. Public Access Modifier
+                        Public members can be accessed **from anywhere**.
+                        In Python, public members are created normally without `_` or `__`.
+
+                        Example:
+                            class Student:
+                                def __init__(self, name):
+                                    self.name = name
+
+                            c1 = Student("John")
+
+                            print(c1.name)
+
+                        Output:
+                            John
+
+                        Here:
+                        `self.name` → Public attribute
+
+                    2. Protected Access Modifier
+                        Protected members are intended to be accessed **within the class and its subclasses**.
+                        They are represented using a **single underscore `_`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, age):
+                                    self._age = age
+
+                            c1 = Student(20)
+
+                            print(c1._age)
+
+                        Output:
+                            20
+
+                        Important:
+                        Python does not strictly prevent access to protected members.
+                        The `_` is mainly a convention that means:
+                        "This member is intended for internal/subclass use."
+
+                    3. Private Access Modifier
+                        Private members are intended to be accessed **only within the class**.
+
+                        They are represented using **double underscores `__`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, marks):
+                                    self.__marks = marks
+
+                            c1 = Student(85)
+
+                            print(c1.__marks)
+
+                        This will raise:
+                            AttributeError
+
+                        The private attribute should not be accessed directly from outside the class.
+
+            3. Example of All Access Modifiers
+
+                class Student:
+                    def __init__(self, name, age, marks):
+                        self.name = name
+                        self._age = age
+                        self.__marks = marks
+
+                c1 = Student("John", 20, 85)
+
+                print(c1.name)    # Public
+                print(c1._age)    # Protected
+                # print(c1.__marks)  # Private - AttributeError
+
+                Here:
+                    - `name` → Public
+                    - `_age` → Protected
+                    - `__marks` → Private
+
+            4. Getter Method
+                A getter method is used to **retrieve the value of a private attribute**.
+                It provides controlled access to private data.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def get_marks(self):
+                            return self.__marks
+
+                    c1 = Student(85)
+
+                    print(c1.get_marks())
+
+                Output:
+                    85
+
+                Syntax:
+                    def get_<attribute_name>(self):
+                        return self.__attribute_name
+
+            5. Setter Method
+                A setter method is used to **set or update the value of a private attribute**.
+                It can also be used to apply validation before changing the value.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def set_marks(self, marks):
+                            self.__marks = marks
+
+                    c1 = Student(85)
+
+                    c1.set_marks(90)
+
+            6. Getter and Setter Example
+
+                Code:-
+                    class Bank:
+                        def __init__(self, balance):
+                            self.__balance = balance
+
+                        def get_balance(self):
+                            return self.__balance
+
+                        def set_balance(self, balance):
+                            if balance >= 0:
+                                self.__balance = balance
+                            else:
+                                print("Balance cannot be negative.")
+
+                    b1 = Bank(1000)
+
+                    print(b1.get_balance())
+
+                    b1.set_balance(-1500)
+
+                    print(b1.get_balance())
+
+                Output:
+                    1000
+                    Balance cannot be negative.
+                    1000
+
+                Here:
+                    - `__balance` → Private attribute
+                    - `get_balance()` → Getter
+                    - `set_balance()` → Setter
+                    - Negative balance is rejected using validation.
+
+            7. Why Do We Use Getter and Setter?
+                Getter and setter methods provide **controlled access to private data**.
+
+                For example:
+                - Getter → Read the value
+                - Setter → Update the value
+                - Setter can validate the new value before updating it.
+
+            8. Difference Between Public, Protected and Private
+
+                | Public                    | Protected                     | Private                |
+                |---------------------------|-------------------------------|------------------------|
+                | No underscore             | Single `_`                    | Double `__`            |
+                | Can be accessed normally  | Intended for class/subclasses | Intended for the class |
+                | `self.name`               | `self._age`                   | `self.__marks`         |
+                | No access restriction     | Convention-based              | Name mangling is used  |
+
+            9. Quick Revision:-
+
+                Encapsulation → Binding data and methods + controlling access
+
+                Public → `self.name`
+                Protected → `self._age`
+                Private → `self.__marks`
+
+                Getter → Reads private data
+                Setter → Updates private data
+
+                `get_marks()` → Get private value
+                `set_marks()` → Set/update private value
+
+                Important:
+                Python does not provide strict access control like some languages.
+                Protected and private members are implemented mainly through naming conventions and name mangling.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 27(8/10/26)
+
+        Python Internship Notes: Day 25 - Exception Handling & Its Ways
+
+            1. Errors:-
+                Errors are problems in a program that can cause the program to stop its execution.
+
+                Common Python Errors:
+
+                    1. ZeroDivisionError
+                        It occurs when we try to divide a number by zero.
+
+                        Example:
+                            a = 10
+                            b = 0
+                            a1 = a / b
+                            print(a1)
+
+                        Error:
+                            ZeroDivisionError
+
+                    2. SyntaxError
+                        It occurs when the Python syntax is incorrect.
+
+                        Example:
+                            i = 10
+                            if i < 5
+                                print(i)
+
+                        Error:
+                            SyntaxError
+
+                    3. IndentationError
+                        It occurs when the indentation of the code is incorrect.
+
+                        Example:
+                            a = 10
+                            if a < 5:
+                            print(a)
+
+                        Error:
+                            IndentationError
+
+                    4. ValueError
+                        It occurs when a function receives a value of the correct type but an invalid value.
+
+                        Example:
+                            num = int(input("Enter a number: "))
+                            print(num)
+
+                        If the user enters:
+                            abc
+
+                        Error:
+                            ValueError
+
+                    5. TypeError
+                        It occurs when an operation is performed between incompatible data types.
+
+                        Example:
+                            a = 10
+                            b = "abc"
+                            c = a + b
+                            print(c)
+
+                        Error:
+                            TypeError
+
+                    6. ModuleNotFoundError
+                        It occurs when Python cannot find the module that we are trying to import.
+
+                        Example:
+                            import nampy
+
+                        Error:
+                            ModuleNotFoundError
+
+            2. Exception Handling
+                Exception handling is used to **handle exceptions that occur during the execution of a program**.
+                It prevents the program from stopping suddenly and allows us to handle the error properly.
+
+                *Ways of Exception Handling:-
+                    Python provides these important keywords:
+
+                    1. try
+                    2. except
+                    3. else
+                    4. finally
+                    5. raise
+
+                    1. try
+                        The `try` block contains the code that may produce an exception.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+
+                    2. except
+                        The `except` block is used to **handle the exception** that occurs in the `try` block.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+                            except:
+                                print("Error: Division by zero is not allowed.")
+
+                        Output:
+                            Error: Division by zero is not allowed.
+
+                    3. else
+                        The `else` block executes when **no exception occurs** in the `try` block.
+
+                        Example:
+                            try:
+                                num = int(input("Enter a number: "))
+                                a = 10
+                                b = num
+                                a1 = a / b
+
+                            except:
+                                print("Error: Invalid input or division by zero is not allowed.")
+
+                            else:
+                                print("The output is:", a1)
+
+                    4. finally
+                        The `finally` block **always executes**, whether an exception occurs or not.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 2
+                                print(a / b)
+
+                            except:
+                                print("Error occurred")
+
+                            finally:
+                                print("Program execution completed")
+
+            3. Complete Exception Handling Structure
+
+                try:
+                    # Code that may cause an exception
+
+                except:
+                    # Handle the exception
+
+                else:
+                    # Executes when there is no exception
+
+                finally:
+                    # Always executes
+
+            4. raise
+                The `raise` keyword is used to **manually raise an exception** when a specific condition is not allowed.
+
+                Example:
+                    age = int(input("Enter your age: "))
+
+                    if age < 18:
+                        raise ValueError("Age less than 18 is not allowed")
+
+                    print("You are eligible to vote")
+
+                If the user enters:
+                    16
+
+                Output:
+                    ValueError: Age less than 18 is not allowed
+
+            5. ATM Example Using Exception Handling
+
+                password = 123
+                i = 0
+
+                while i < 3:
+                    try:
+                        pin = int(input("Enter a PIN: "))
+
+                        if pin == password:
+                            print("Amount Debited")
+                            break
+
+                        else:
+                            i = i + 1
+                            print("Wrong PIN. Try again")
+
+                            if i == 3:
+                                print("Your card is blocked")
+
+                    except ValueError:
+                        i = i + 1
+                        print("Please enter a valid PIN")
+
+                        if i == 3:
+                            print("Your card is blocked")
+
+                    finally:
+                        print("Thank you for using ATM")
+
+            6. Important Points
+
+                - `try` → Contains risky code
+                - `except` → Handles the exception
+                - `else` → Runs when no exception occurs
+                - `finally` → Always runs
+                - `raise` → Manually raises an exception
+                - Exception handling prevents unexpected program termination.
+                - Specific exceptions such as `ValueError` and `ZeroDivisionError` can be handled separately.
+
+            Quick Revision:
+
+                Error → Problem in a program
+
+                ZeroDivisionError → Division by zero
+                SyntaxError → Incorrect syntax
+                IndentationError → Incorrect indentation
+                ValueError → Invalid value
+                TypeError → Incompatible data types
+                ModuleNotFoundError → Module not found
+
+                Exception Handling:
+                try → Test risky code
+                except → Handle error
+                else → No error
+                finally → Always executes
+                raise → Manually raise exception
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
