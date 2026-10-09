@@ -404,9 +404,7 @@ Therefore:
 
 ```text
 Binary 1010 = Decimal 10
-```
 
----
 
 # 2. Python List
 
@@ -425,9 +423,7 @@ Output:
 
 ```text
 [10, 20, 30, 40]
-```
 
----
 
 # 3. Properties of Python List
 
@@ -529,9 +525,7 @@ Output:
 
 ```text
 [10, 20, 30]
-```
 
----
 
 # 4. Python List Methods
 
@@ -551,9 +545,7 @@ Output:
 
 ```text
 [10, 20, 30]
-```
 
----
 
 ## 2. insert()
 
@@ -571,9 +563,7 @@ Output:
 
 ```text
 [10, 15, 20, 30]
-```
 
----
 
 ## 3. extend()
 
@@ -591,9 +581,7 @@ Output:
 
 ```text
 [10, 20, 30, 40]
-```
 
----
 
 ## 4. remove()
 
@@ -611,9 +599,7 @@ Output:
 
 ```text
 [10, 30]
-```
 
----
 
 ## 5. pop()
 
@@ -637,9 +623,7 @@ If no index is provided, `pop()` removes the last element.
 
 ```python
 a.pop()
-```
 
----
 
 ## 6. clear()
 
@@ -657,9 +641,7 @@ Output:
 
 ```text
 []
-```
 
----
 
 ## 7. index()
 
@@ -675,9 +657,7 @@ Output:
 
 ```text
 1
-```
 
----
 
 ## 8. count()
 
@@ -693,9 +673,7 @@ Output:
 
 ```text
 3
-```
 
----
 
 ## 9. sort()
 
@@ -725,9 +703,7 @@ Output:
 
 ```text
 [30, 20, 10]
-```
 
----
 
 ## 10. reverse()
 
@@ -767,9 +743,7 @@ Output:
 
 ```text
 [10, 20, 30]
-```
 
----
 
 # 5. Python List Slicing
 
@@ -803,9 +777,7 @@ Output:
 
 ```text
 [20, 30, 40]
-```
 
----
 
 ## Example 2: `a[:3]`
 
@@ -865,9 +837,7 @@ Output:
 
 ```text
 [50, 40, 30, 20, 10]
-```
 
----
 
 # 6. Negative Indexing
 
@@ -895,9 +865,7 @@ Output:
 
 ```text
 50
-```
 
----
 
 # 7. Important Interview Questions
 
@@ -917,9 +885,7 @@ Output:
 
 ```text
 [100, 20, 30]
-```
 
----
 
 ## Q2. Can a List contain duplicate values?
 
@@ -927,9 +893,7 @@ Output:
 
 ```python
 a = [10, 20, 10, 30]
-```
 
----
 
 ## Q3. Can a List contain different data types?
 
@@ -937,9 +901,7 @@ a = [10, 20, 10, 30]
 
 ```python
 a = [10, "Python", 20.5, True]
-```
 
----
 
 ## Q4. What is the difference between `append()` and `extend()`?
 
@@ -977,9 +939,7 @@ Output:
 
 ```text
 [1, 2, 3, 4]
-```
 
----
 
 ## Q5. Difference between `remove()` and `pop()`?
 
@@ -1040,9 +1000,7 @@ Output:
 
 ```text
 [20, 10, 30]
-```
 
----
 
 # 8. Tricky Interview Questions
 
@@ -1060,9 +1018,7 @@ print(a[-1])
 
 ```text
 5
-```
 
----
 
 ### Question 2
 
@@ -1078,9 +1034,7 @@ print(a[-3:])
 
 ```text
 [3, 4, 5]
-```
 
----
 
 ### Question 3
 
@@ -1096,9 +1050,7 @@ print(a[::-1])
 
 ```text
 [5, 4, 3, 2, 1]
-```
 
----
 
 ### Question 4
 
@@ -1114,9 +1066,7 @@ print(a[1:5:2])
 
 ```text
 [20, 40]
-```
 
----
 
 # Quick Revision
 
@@ -1193,9 +1143,7 @@ print(fruits)
 
 ```text
 ['Apple', 'Banana', 'Mango']
-```
 
----
 
 ### Q2. What are the properties of a List?
 
@@ -1215,9 +1163,7 @@ The main properties of a list are:
 data = [10, "Python", 20.5, True, 10]
 
 print(data)
-```
 
----
 
 ### Q3. Is a List mutable or immutable?
 
@@ -1237,9 +1183,7 @@ print(numbers)
 
 ```text
 [10, 50, 30]
-```
 
----
 
 ### Q4. Does a List allow duplicate values?
 
@@ -1257,9 +1201,7 @@ print(numbers)
 
 ```text
 [10, 20, 10, 30, 20]
-```
 
----
 
 ### Q5. What is List indexing?
 
@@ -1281,9 +1223,7 @@ print(fruits[2])
 ```text
 Apple
 Mango
-```
 
----
 
 # 2. List Slicing Interview Questions
 
@@ -1311,9 +1251,7 @@ print(numbers[1:4])
 
 ```text
 [20, 30, 40]
-```
 
----
 
 ### Q7. What is the difference between indexing and slicing?
 
@@ -1333,9 +1271,7 @@ print(numbers[1:4])    # Slicing
 ```text
 30
 [20, 30, 40]
-```
 
----
 
 ### Q8. How do you reverse a list using slicing?
 
@@ -1353,9 +1289,7 @@ print(numbers[::-1])
 
 ```text
 [50, 40, 30, 20, 10]
-```
 
----
 
 # 3. String Interview Questions
 
@@ -1369,9 +1303,7 @@ A string is a sequence of characters enclosed inside single quotes, double quote
 name = "Shivani"
 
 print(name)
-```
 
----
 
 ### Q10. Is a String mutable or immutable?
 
@@ -1389,9 +1321,7 @@ Instead, we create a new string.
 
 ```python
 text = "Jython"
-```
 
----
 
 ### Q11. Does a String support indexing and slicing?
 
@@ -1411,9 +1341,7 @@ print(text[1:4])
 ```text
 P
 yth
-```
 
----
 
 ### Q12. What is negative indexing?
 
@@ -1433,9 +1361,7 @@ print(text[-2])
 ```text
 n
 o
-```
 
----
 
 # 4. String Methods Interview Questions
 
@@ -1455,9 +1381,7 @@ print(text.upper())
 
 ```text
 PYTHON
-```
 
----
 
 ### Q14. What is `lower()`?
 
@@ -1475,9 +1399,7 @@ print(text.lower())
 
 ```text
 python
-```
 
----
 
 ### Q15. What is `capitalize()`?
 
@@ -1495,9 +1417,7 @@ print(text.capitalize())
 
 ```text
 Python programming
-```
 
----
 
 ### Q16. What is `title()`?
 
@@ -1515,9 +1435,7 @@ print(text.title())
 
 ```text
 Python Programming Language
-```
 
----
 
 ### Q17. What is `strip()`?
 
@@ -1535,9 +1453,7 @@ print(text.strip())
 
 ```text
 Python
-```
 
----
 
 ### Q18. What is `replace()`?
 
@@ -1555,9 +1471,7 @@ print(text.replace("Java", "Python"))
 
 ```text
 I like Python
-```
 
----
 
 ### Q19. What is `split()`?
 
@@ -1575,9 +1489,7 @@ print(text.split())
 
 ```text
 ['Python', 'SQL', 'Java']
-```
 
----
 
 ### Q20. What is `join()`?
 
@@ -1595,9 +1507,7 @@ print(" - ".join(courses))
 
 ```text
 Python - SQL - Java
-```
 
----
 
 ### Q21. What is `find()`?
 
@@ -1615,9 +1525,7 @@ print(text.find("Python"))
 
 ```text
 0
-```
 
----
 
 ### Q22. What is `count()`?
 
@@ -1635,9 +1543,7 @@ print(text.count("a"))
 
 ```text
 3
-```
 
----
 
 ### Q23. What is the difference between `isalpha()` and `isdigit()`?
 
@@ -1656,9 +1562,7 @@ print("12345".isdigit())
 ```text
 True
 True
-```
 
----
 
 # 5. Dictionary Interview Questions
 
@@ -1676,9 +1580,7 @@ student = {
 }
 
 print(student)
-```
 
----
 
 ### Q25. What are the properties of a Dictionary?
 
@@ -1715,9 +1617,7 @@ print(student)
 
 ```text
 {'name': 'Sneha'}
-```
 
----
 
 ### Q27. Are duplicate values allowed in a Dictionary?
 
@@ -1732,9 +1632,7 @@ student = {
 }
 
 print(student)
-```
 
----
 
 ### Q28. How do you access a Dictionary value?
 
@@ -1755,9 +1653,7 @@ print(student["name"])
 
 ```text
 Shivani
-```
 
----
 
 ### Q29. What is the use of `get()`?
 
@@ -1778,9 +1674,7 @@ print(student.get("name"))
 
 ```text
 Shivani
-```
 
----
 
 ### Q30. What are common Dictionary methods?
 
@@ -1811,9 +1705,7 @@ student = {
 print(student.keys())
 print(student.values())
 print(student.items())
-```
 
----
 
 # 6. Tuple Interview Questions
 
@@ -1829,9 +1721,7 @@ Tuples are generally written using parentheses `()`.
 student = ("Shivani", 21, "Python")
 
 print(student)
-```
 
----
 
 ### Q32. Is a Tuple mutable or immutable?
 
@@ -1843,9 +1733,7 @@ A tuple is **immutable**, which means its elements cannot be changed after creat
 numbers = (10, 20, 30)
 
 # numbers[0] = 50   # TypeError
-```
 
----
 
 ### Q33. Does a Tuple allow duplicate values?
 
@@ -1857,9 +1745,7 @@ Yes. A tuple allows duplicate values.
 numbers = (10, 20, 10, 30)
 
 print(numbers)
-```
 
----
 
 ### Q34. What are the main Tuple methods?
 
@@ -1875,9 +1761,7 @@ numbers = (10, 20, 10, 30)
 
 print(numbers.count(10))
 print(numbers.index(20))
-```
 
----
 
 ### Q35. What is Tuple packing?
 
@@ -1889,9 +1773,7 @@ Tuple packing means putting multiple values into a single tuple.
 student = "Shivani", 21, "Python"
 
 print(student)
-```
 
----
 
 ### Q36. What is Tuple unpacking?
 
@@ -1907,9 +1789,7 @@ name, age, course = student
 print(name)
 print(age)
 print(course)
-```
 
----
 
 # 7. Set Interview Questions
 
@@ -1923,9 +1803,7 @@ A set is an unordered and mutable collection of unique elements.
 numbers = {10, 20, 30}
 
 print(numbers)
-```
 
----
 
 ### Q38. Does a Set allow duplicate values?
 
@@ -1943,9 +1821,7 @@ print(numbers)
 
 ```text
 {10, 20, 30}
-```
 
----
 
 ### Q39. Does a Set support indexing?
 
@@ -1957,9 +1833,7 @@ No. A set does not support indexing because it is unordered.
 numbers = {10, 20, 30}
 
 # print(numbers[0])   # TypeError
-```
 
----
 
 ### Q40. What is the use of `add()`?
 
@@ -1973,9 +1847,7 @@ numbers = {10, 20, 30}
 numbers.add(40)
 
 print(numbers)
-```
 
----
 
 ### Q41. What is the difference between `remove()` and `discard()`?
 
@@ -1991,9 +1863,7 @@ numbers = {10, 20, 30}
 
 numbers.remove(20)
 numbers.discard(100)
-```
 
----
 
 ### Q42. What is Set Union?
 
@@ -2012,9 +1882,7 @@ print(a | b)
 
 ```text
 {1, 2, 3, 4, 5}
-```
 
----
 
 ### Q43. What is Set Intersection?
 
@@ -2033,9 +1901,7 @@ print(a & b)
 
 ```text
 {3}
-```
 
----
 
 # 8. if, elif, else Interview Questions
 
@@ -2051,9 +1917,7 @@ Python provides:
 if
 elif
 else
-```
 
----
 
 ### Q45. What is the use of `if`?
 
@@ -2066,9 +1930,7 @@ age = 20
 
 if age >= 18:
     print("Eligible to vote")
-```
 
----
 
 ### Q46. What is the use of `else`?
 
@@ -2083,9 +1945,7 @@ if age >= 18:
     print("Eligible")
 else:
     print("Not Eligible")
-```
 
----
 
 ### Q47. What is the use of `elif`?
 
@@ -2108,9 +1968,7 @@ else:
 
 ```text
 A
-```
 
----
 
 ### Q48. Is `else` compulsory with `if`?
 
@@ -2123,9 +1981,7 @@ age = 20
 
 if age >= 18:
     print("Eligible")
-```
 
----
 
 ### Q49. Can we use multiple `elif` statements?
 
@@ -2146,9 +2002,7 @@ elif marks >= 40:
     print("C")
 else:
     print("Fail")
-```
 
----
 
 ### Q50. What is Nested `if`?
 
@@ -2163,9 +2017,7 @@ has_id = True
 if age >= 18:
     if has_id:
         print("Entry allowed")
-```
 
----
 
 # ⭐ Most Important Comparison Questions
 
@@ -2556,9 +2408,7 @@ n! = n × (n-1) × (n-2) × ... × 1
 
 ```text
 0! = 1
-```
 
----
 
 ## Factorial Using `for` Loop
 
@@ -2576,9 +2426,7 @@ print(fact)
 
 ```text
 120
-```
 
----
 
 ## Factorial Using `while` Loop
 
@@ -2741,9 +2589,7 @@ for i in range(5):
 break     → STOP
 continue  → SKIP
 pass      → DO NOTHING
-```
 
----
 
 # 14. Function
 
@@ -2807,9 +2653,7 @@ Here:
 ```text
 a, b   → Parameters
 10, 20 → Arguments
-```
 
----
 
 # 16. Parameter vs Argument
 
@@ -3050,9 +2894,7 @@ def fun(**kwargs):
     print(kwargs)
 
 fun(name="Shivani", age=22)
-```
 
----
 
 # 24. Python Function Types
 
@@ -3077,9 +2919,7 @@ min()
 numbers = [10, 20, 30]
 
 print(len(numbers))
-```
 
----
 
 # 25. User-Defined Functions
 
@@ -3222,9 +3062,7 @@ def greet():
     print("Hello")
 
 greet()
-```
 
----
 
 ## 2. Argument and No Return Value
 
@@ -3233,9 +3071,7 @@ def add(a, b):
     print(a + b)
 
 add(10, 20)
-```
 
----
 
 ## 3. No Argument and With Return Value
 
@@ -3246,9 +3082,7 @@ def number():
 x = number()
 
 print(x)
-```
 
----
 
 ## 4. Argument and With Return Value
 
@@ -3265,9 +3099,7 @@ print(x)
 
 ```text
 30
-```
 
----
 
 # 30. `return` Statement
 

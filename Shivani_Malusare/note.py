@@ -2077,3 +2077,1207 @@ Once Python finds a **True condition**, it executes that block and skips the rem
 * Conditions are checked from top to bottom.
 * Python executes the first matching `True` condition.
 * Proper indentation is required.
+
+# Python Control Flow & Functions
+
+Complete beginner-to-intermediate revision notes covering:
+
+* Nested `if`
+* Loops
+* `for` loop
+* Reverse loop
+* `while` loop
+* Factorial
+* Loop control statements
+* `break`
+* `continue`
+* `pass`
+* Functions
+* Five types of arguments
+* Python function types
+* Built-in functions
+* User-defined functions
+* Lambda functions
+* Recursive functions
+* Higher-order functions
+* `map()`, `filter()`, `reduce()`
+
+---
+
+# 1. Nested If
+
+## Definition
+
+A **nested if** means writing one `if` statement inside another `if` statement.
+
+## Syntax
+
+```python
+if condition1:
+    if condition2:
+        statement
+```
+
+## Example
+
+```python
+age = 22
+qualification = "BE"
+
+if age >= 18:
+    if qualification == "BE":
+        print("Eligible for job")
+```
+
+### Output
+
+```text
+Eligible for job
+```
+
+### Explanation
+
+First, Python checks:
+
+```python
+age >= 18
+```
+
+If it is `True`, Python checks the second condition:
+
+```python
+qualification == "BE"
+```
+
+If both conditions are `True`, the statement executes.
+
+---
+
+# 2. Loops
+
+## Definition
+
+A **loop** is used to execute a block of code repeatedly.
+
+Instead of writing:
+
+```python
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
+print("Hello")
+```
+
+We can use:
+
+```python
+for i in range(5):
+    print("Hello")
+```
+
+## Types of Loops
+
+Python mainly provides two types of loops:
+
+1. `for` loop
+2. `while` loop
+
+---
+
+# 3. For Loop
+
+## Definition
+
+A `for` loop is used to iterate over a sequence or range of values.
+
+## Syntax
+
+```python
+for variable in sequence:
+    statement
+```
+
+## Example
+
+```python
+for i in range(1, 6):
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## range()
+
+```python
+range(start, stop, step)
+```
+
+Example:
+
+```python
+range(1, 6)
+```
+
+Here:
+
+```text
+Start = 1
+Stop = 6
+```
+
+The stop value is not included.
+
+So the output is:
+
+```text
+1 2 3 4 5
+```
+
+---
+
+# 4. For Loop with List
+
+```python
+fruits = ["Apple", "Mango", "Banana"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+### Output
+
+```text
+Apple
+Mango
+Banana
+```
+
+---
+
+# 5. Reverse Loop
+
+## Definition
+
+A reverse loop executes from a larger value to a smaller value.
+
+## Example
+
+```python
+for i in range(5, 0, -1):
+    print(i)
+```
+
+### Output
+
+```text
+5
+4
+3
+2
+1
+```
+
+## Explanation
+
+```python
+range(5, 0, -1)
+```
+
+Means:
+
+```text
+Start = 5
+Stop = 0
+Step = -1
+```
+
+`0` is not included.
+
+---
+
+# 6. Reverse Loop with Step
+
+```python
+for i in range(10, 0, -2):
+    print(i)
+```
+
+### Output
+
+```text
+10
+8
+6
+4
+2
+```
+
+---
+
+# 7. While Loop
+
+## Definition
+
+A `while` loop executes a block of code as long as the condition is `True`.
+
+## Syntax
+
+```python
+while condition:
+    statement
+```
+
+## Example
+
+```python
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+## Working
+
+```text
+i = 1
+1 <= 5 → True → print 1
+i = 2
+
+2 <= 5 → True → print 2
+i = 3
+
+3 <= 5 → True → print 3
+i = 4
+
+4 <= 5 → True → print 4
+i = 5
+
+5 <= 5 → True → print 5
+i = 6
+
+6 <= 5 → False
+Loop stops
+```
+
+> **Important:** In a `while` loop, update the variable when required. Otherwise, an infinite loop may occur.
+
+---
+
+# 8. Factorial Number
+
+## Definition
+
+The factorial of a positive integer `n` is the multiplication of all positive integers from `1` to `n`.
+
+It is represented as:
+
+```text
+n!
+```
+
+Example:
+
+```text
+5! = 5 × 4 × 3 × 2 × 1
+   = 120
+```
+
+---
+
+# 9. Factorial Using For Loop
+
+```python
+num = 5
+fact = 1
+
+for i in range(1, num + 1):
+    fact = fact * i
+
+print("Factorial =", fact)
+```
+
+### Output
+
+```text
+Factorial = 120
+```
+
+## Logic
+
+```text
+fact = 1
+
+i = 1 → 1 × 1 = 1
+i = 2 → 1 × 2 = 2
+i = 3 → 2 × 3 = 6
+i = 4 → 6 × 4 = 24
+i = 5 → 24 × 5 = 120
+```
+
+---
+
+# 10. Factorial Using While Loop
+
+```python
+num = 5
+fact = 1
+i = 1
+
+while i <= num:
+    fact = fact * i
+    i += 1
+
+print("Factorial =", fact)
+```
+
+### Output
+
+```text
+Factorial = 120
+```
+
+---
+
+# 11. Loop Control Statements
+
+Loop control statements are used to change the normal execution of a loop.
+
+There are three important loop control statements:
+
+1. `break`
+2. `continue`
+3. `pass`
+
+---
+
+# 12. Break
+
+## Definition
+
+`break` is used to immediately stop a loop.
+
+## Example
+
+```python
+for i in range(1, 11):
+
+    if i == 5:
+        break
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+```
+
+When `i == 5`, the `break` statement terminates the loop.
+
+---
+
+# 13. Continue
+
+## Definition
+
+`continue` skips the current iteration and moves to the next iteration.
+
+## Example
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        continue
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+4
+5
+```
+
+When `i == 3`, Python skips that iteration.
+
+---
+
+# 14. Pass
+
+## Definition
+
+`pass` is a null statement. It does nothing.
+
+It is useful when we want to create a block of code but implement it later.
+
+## Example
+
+```python
+for i in range(1, 6):
+
+    if i == 3:
+        pass
+
+    print(i)
+```
+
+### Output
+
+```text
+1
+2
+3
+4
+5
+```
+
+---
+
+# 15. Break vs Continue vs Pass
+
+| Statement  | Purpose                     |
+| ---------- | --------------------------- |
+| `break`    | Stops the loop completely   |
+| `continue` | Skips the current iteration |
+| `pass`     | Does nothing                |
+
+---
+
+# 16. Function
+
+## Definition
+
+A **function** is a reusable block of code that performs a specific task.
+
+## Syntax
+
+```python
+def function_name():
+    statements
+```
+
+## Example
+
+```python
+def greet():
+    print("Hello Shivani")
+
+greet()
+```
+
+### Output
+
+```text
+Hello Shivani
+```
+
+Here:
+
+```python
+def greet():
+```
+
+defines the function.
+
+```python
+greet()
+```
+
+calls the function.
+
+---
+
+# 17. Function with Parameters
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```text
+a, b → Parameters
+10, 20 → Arguments
+```
+
+---
+
+# 18. Function with Return
+
+The `return` statement sends a value back to the caller.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+## print vs return
+
+| `print()`                            | `return`                 |
+| ------------------------------------ | ------------------------ |
+| Displays a value                     | Sends a value back       |
+| Mainly used for output               | Used to return result    |
+| Does not return the result to caller | Returns result to caller |
+
+---
+
+# 19. Five Types of Function Arguments
+
+Python commonly uses five types of arguments:
+
+1. Positional arguments
+2. Default arguments
+3. Keyword arguments
+4. Arbitrary positional arguments - `*args`
+5. Arbitrary keyword arguments - `**kwargs`
+
+---
+
+# 20. Positional Arguments
+
+## Definition
+
+Positional arguments are passed according to their position or order.
+
+## Example
+
+```python
+def employee(name, salary):
+    print(name)
+    print(salary)
+
+employee("Shivani", 50000)
+```
+
+### Output
+
+```text
+Shivani
+50000
+```
+
+Here:
+
+```text
+"Shivani" → name
+50000 → salary
+```
+
+### Interview Definition
+
+> Positional arguments are arguments passed to a function based on their position or order.
+
+---
+
+# 21. Default Arguments
+
+## Definition
+
+A default argument has a predefined value that is used when the caller does not provide a value.
+
+## Example
+
+```python
+def employee(name, city="Pune"):
+    print(name)
+    print(city)
+
+employee("Shivani")
+```
+
+### Output
+
+```text
+Shivani
+Pune
+```
+
+Here:
+
+```python
+city="Pune"
+```
+
+is the default value.
+
+We can also provide another value:
+
+```python
+employee("Shivani", "Mumbai")
+```
+
+Output:
+
+```text
+Shivani
+Mumbai
+```
+
+---
+
+# 22. Keyword Arguments
+
+## Definition
+
+Keyword arguments are passed using the parameter name.
+
+## Example
+
+```python
+def employee(name, salary):
+    print(name)
+    print(salary)
+
+employee(salary=50000, name="Shivani")
+```
+
+### Output
+
+```text
+Shivani
+50000
+```
+
+The order does not matter because we specify the parameter names.
+
+### Interview Definition
+
+> Keyword arguments are arguments passed using the parameter name.
+
+---
+
+# 23. Arbitrary Positional Arguments - `*args`
+
+## Definition
+
+`*args` allows a function to accept any number of positional arguments.
+
+## Example
+
+```python
+def total(*numbers):
+    print(numbers)
+
+total(10, 20, 30, 40)
+```
+
+### Output
+
+```text
+(10, 20, 30, 40)
+```
+
+`*args` stores the values as a **tuple**.
+
+## Practical Example
+
+```python
+def total(*numbers):
+
+    result = 0
+
+    for number in numbers:
+        result = result + number
+
+    return result
+
+print(total(10, 20, 30))
+```
+
+### Output
+
+```text
+60
+```
+
+We can pass any number of values:
+
+```python
+total(10)
+total(10, 20)
+total(10, 20, 30, 40)
+```
+
+---
+
+# 24. Arbitrary Keyword Arguments - `**kwargs`
+
+## Definition
+
+`**kwargs` allows a function to accept any number of keyword arguments.
+
+## Example
+
+```python
+def employee(**details):
+    print(details)
+
+employee(
+    name="Shivani",
+    city="Pune",
+    salary=50000
+)
+```
+
+### Output
+
+```text
+{'name': 'Shivani', 'city': 'Pune', 'salary': 50000}
+```
+
+`**kwargs` stores the values as a **dictionary**.
+
+## Practical Example
+
+```python
+def employee(**details):
+
+    for key, value in details.items():
+        print(key, "=", value)
+
+employee(
+    name="Shivani",
+    city="Pune",
+    skill="Python"
+)
+```
+
+### Output
+
+```text
+name = Shivani
+city = Pune
+skill = Python
+```
+
+---
+
+# 25. `*args` vs `**kwargs`
+
+| `*args`                       | `**kwargs`                 |
+| ----------------------------- | -------------------------- |
+| Multiple positional arguments | Multiple keyword arguments |
+| Stored as tuple               | Stored as dictionary       |
+| Uses `*`                      | Uses `**`                  |
+| Example: `fun(10, 20, 30)`    | Example: `fun(a=10, b=20)` |
+
+---
+
+# 26. Python Function Types
+
+Important function types:
+
+1. Built-in functions
+2. User-defined functions
+3. Lambda functions
+4. Recursive functions
+5. Higher-order functions
+
+---
+
+# 27. Built-in Functions
+
+## Definition
+
+Built-in functions are predefined functions provided by Python.
+
+We can use them directly without defining them.
+
+## Examples
+
+```python
+print()
+len()
+type()
+max()
+min()
+sum()
+range()
+input()
+int()
+str()
+list()
+```
+
+## Example
+
+```python
+numbers = [10, 20, 30, 40]
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+```
+
+### Output
+
+```text
+4
+40
+10
+100
+```
+
+---
+
+# 28. User-Defined Function
+
+## Definition
+
+A user-defined function is a function created by the programmer using the `def` keyword.
+
+## Example
+
+```python
+def square(number):
+    return number * number
+
+print(square(5))
+```
+
+### Output
+
+```text
+25
+```
+
+---
+
+# 29. Lambda Function
+
+## Definition
+
+A lambda function is a small anonymous function created using the `lambda` keyword.
+
+## Syntax
+
+```python
+lambda arguments: expression
+```
+
+## Example
+
+```python
+square = lambda x: x * x
+
+print(square(5))
+```
+
+### Output
+
+```text
+25
+```
+
+## Two Arguments
+
+```python
+add = lambda a, b: a + b
+
+print(add(10, 20))
+```
+
+### Output
+
+```text
+30
+```
+
+## Even Number
+
+```python
+check_even = lambda x: x % 2 == 0
+
+print(check_even(10))
+```
+
+### Output
+
+```text
+True
+```
+
+---
+
+# 30. Recursive Function
+
+## Definition
+
+A recursive function is a function that calls itself.
+
+A recursive function generally has:
+
+1. Base condition
+2. Recursive call
+
+## Example: Factorial
+
+```python
+def factorial(n):
+
+    if n == 0 or n == 1:
+        return 1
+
+    return n * factorial(n - 1)
+
+
+print(factorial(5))
+```
+
+### Output
+
+```text
+120
+```
+
+## Working
+
+```text
+factorial(5)
+    ↓
+5 × factorial(4)
+    ↓
+5 × 4 × factorial(3)
+    ↓
+5 × 4 × 3 × factorial(2)
+    ↓
+5 × 4 × 3 × 2 × factorial(1)
+    ↓
+factorial(1) = 1
+    ↓
+120
+```
+
+## Important
+
+The base condition prevents infinite recursive calls.
+
+### Interview Definition
+
+> A recursive function is a function that calls itself until a base condition is satisfied.
+
+---
+
+# 31. Fibonacci Using Recursion
+
+```python
+def fibonacci(n):
+
+    if n <= 1:
+        return n
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+for i in range(7):
+    print(fibonacci(i), end=" ")
+```
+
+### Output
+
+```text
+0 1 1 2 3 5 8
+```
+
+---
+
+# 32. Higher-Order Function
+
+## Definition
+
+A higher-order function is a function that:
+
+1. Takes another function as an argument, or
+2. Returns another function.
+
+## Example
+
+```python
+def add(a, b):
+    return a + b
+
+
+def calculate(operation, x, y):
+    return operation(x, y)
+
+
+result = calculate(add, 10, 20)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+Here:
+
+```python
+calculate(add, 10, 20)
+```
+
+passes the `add` function as an argument.
+
+Therefore, `calculate()` is a higher-order function.
+
+---
+
+# 33. Higher-Order Function with Lambda
+
+```python
+def calculate(operation, a, b):
+    return operation(a, b)
+
+
+result = calculate(
+    lambda x, y: x + y,
+    10,
+    20
+)
+
+print(result)
+```
+
+### Output
+
+```text
+30
+```
+
+---
+
+# 34. map()
+
+## Definition
+
+`map()` applies a function to every element of an iterable.
+
+## Example
+
+```python
+numbers = [1, 2, 3, 4, 5]
+
+result = map(lambda x: x * 2, numbers)
+
+print(list(result))
+```
+### Output
+
+```text
+[2, 4, 6, 8, 10]
+```
+# 35. filter()
+
+## Definition
+
+`filter()` selects elements that satisfy a condition.
+
+## Example
+
+```python
+numbers = [1, 2, 3, 4, 5, 6]
+
+result = filter(lambda x: x % 2 == 0, numbers)
+
+print(list(result))
+```
+### Output
+
+```text
+[2, 4, 6]
+```
+
+Only even numbers are selected.
+
+---
+
+# 36. reduce()
+
+## Definition
+
+`reduce()` repeatedly applies a function to elements and produces a single final result.
+
+It is available from the `functools` module.
+
+## Example
+
+```python
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+
+result = reduce(lambda a, b: a + b, numbers)
+
+print(result)
+```
+
+### Output
+
+```text
+15
+```
+## Logic
+
+```text
+1 + 2 = 3
+3 + 3 = 6
+6 + 4 = 10
+10 + 5 = 15
+```-
+# 37. map vs filter vs reduce
+
+| Function   | Purpose                | Result                      |
+| ---------- | ---------------------- | --------------------------- |
+| `map()`    | Transform each element | Multiple transformed values |
+| `filter()` | Select elements        | Filtered values             |
+| `reduce()` | Combine elements       | Single value                |
