@@ -5573,7 +5573,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 23(6/10/26):-
+    Internship Day 25(6/10/26):-
 
         Python Internship Notes: Day 23 - Encapsulation
 
