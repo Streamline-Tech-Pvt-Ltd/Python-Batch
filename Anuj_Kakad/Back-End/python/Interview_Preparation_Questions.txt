@@ -5778,9 +5778,333 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 Python does not provide strict access control like some languages.
                 Protected and private members are implemented mainly through naming conventions and name mangling.
 
+        Interview Questions On Day 23:-
+
+            1. What is Encapsulation in Python?
+                Encapsulation is one of the four pillars of OOP.
+                It means binding data and methods together inside a class and controlling access to the data.
+            
+            2. What are Access Modifiers in Python?
+                Access modifiers define the intended accessibility of class members. The three types are:
+                - Public
+                - Protected
+                - Private
+            
+            3. What is a Public Member?
+                A public member can be accessed normally from anywhere.
+                
+                Ex:-
+                    self.name = name
+
+            4. What is a Protected Member?
+                A protected member is intended for use within the class and its subclasses. It is written using a single underscore _.
+                
+                    Ex:-
+                        self._age = age
+                
+                Python does not strictly prevent access to protected members.
+          
+            5. What is a Private Member?
+                A private member is intended to be accessed within its class. It is written using double underscores __.
+                    
+                Ex:-
+                    self.__marks = marks
+                
+            6. What is the difference between Public, Protected and Private Members?
+            
+                | Public              | Protected                       | Private                           |
+                |---------------------|---------------------------------|-----------------------------------|
+                | No underscore       | Single _                        | Double __                         |
+                | self.name           | self._age                       | self.__marks                      |
+                | Accessible normally | Intended for class/subclass use | Intended for use within the class |
+            
+            7. Can we access a Private Attribute directly outside the class?
+                Normally, accessing it by its original name raises an AttributeError.
+                
+                Ex:-
+                    print(obj.__marks)
+                
+                Python uses name mangling for double-underscore attributes, but this is not absolute security.
+            
+            8. What is a Getter Method?
+                A getter method is used to retrieve the value of an attribute, such as a private attribute.
+                
+                Ex:-  
+                    def get_balance(self):
+                        return self.__balance
+
+            9. What is a Setter Method?
+                A setter method is used to update an attribute's value. It can validate the value before updating it.
+            
+                Ex:-
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+        
+            10. What is the difference between Getter and Setter?
+                - Getter → Reads or returns a value.
+                - Setter → Updates a value, optionally after validation.
+      
+            11. Why do we use Getter and Setter Methods?
+                They provide controlled access to data and allow us to validate values before updating them.
+          
+            12. How does Encapsulation protect a Bank Account's balance?
+                We can store the balance in a private attribute and use a setter to reject invalid values.
+            
+                Ex:-
+                class Bank:
+                    def __init__(self, balance):
+                        self.__balance = balance
+
+                    def get_balance(self):
+                        return self.__balance
+
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+                        else:
+                            print("Balance cannot be negative")
+                            
+                If the balance is 1000 and we try to set it to -1500, the setter rejects the update, so the balance remains 1000.
+          
+            ⭐ Quick Revision
+                - Encapsulation → Binding data and methods together and controlling access.
+                - Public → self.name
+                - Protected → self._age
+                - Private → self.__marks
+                - Getter → Read a value.
+                - Setter → Update and validate a value.
+                Interview tip: Be ready to explain the Bank Account example, especially how the setter prevents a negative balance.
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 27(8/10/26)
+    Internship Day 26(7/10/26):-
+
+        Python Internship Notes: Day 24 - Abstraction
+
+            1.Abstraction:-
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: While driving a car, we use the steering wheel, brakes, and accelerator without knowing all the internal working mechanisms.
+
+            2. Abstract Class:-
+                An abstract class is a class that provides a blueprint for other classes. 
+                It can define compulsory methods that child classes must implement.
+                In Python, we use the `ABC` class and `@abstractmethod` decorator from the `abc` module.
+
+            3. Important Keywords:-
+                - `ABC`: Used to create an abstract base class.
+                - `@abstractmethod`: Defines a method that child classes must implement.
+                - Abstract Method: A method declared in the abstract class that must be implemented by a concrete child class.
+                - Concrete Class: A class that implements all required abstract methods and can be used to create objects.
+
+            4. Real-World Example:- Car Abstraction
+                In the car example, the abstract class defines three compulsory methods:
+                - `chassis()`
+                - `airbag()`
+                - `body()`
+
+                Every child class must implement these three methods. 
+                It can also define additional methods according to its requirements.
+
+                Example:
+                    from abc import ABC, abstractmethod
+
+                    class Car(ABC):
+                        @abstractmethod
+                        def chassis(self):
+                            pass
+
+                        @abstractmethod
+                        def airbag(self):
+                            pass
+
+                        @abstractmethod
+                        def body(self):
+                            pass
+
+                    class TataCar(Car):
+                        def chassis(self):
+                            print("Chassis implemented")
+
+                        def airbag(self):
+                            print("Airbag implemented")
+
+                        def body(self):
+                            print("Car body implemented")
+
+                        def music_system(self):
+                            print("Music system added")
+
+                    car = TataCar()
+                    car.chassis()
+                    car.airbag()
+                    car.body()
+                    car.music_system()
+
+                Output:
+                    Chassis implemented
+                    Airbag implemented
+                    Car body implemented
+                    Music system added
+
+                Explanation:
+                    - `Car` is an abstract class.
+                    - `chassis()`, `airbag()`, and `body()` are compulsory methods.
+                    - `TataCar` implements all three methods.
+                    - `music_system()` is an additional method.
+                    - If a child class does not implement all abstract methods, Python does not allow its object to be created.
+
+            5. Rules of Abstraction:-
+                - An abstract class can contain abstract and normal methods.
+                - An abstract class cannot be instantiated while it still has unimplemented abstract methods.
+                - A concrete child class must implement all inherited abstract methods.
+                - A child class can add its own methods.
+                - Abstraction helps maintain a common structure across different classes.
+
+            6. Abstraction vs Encapsulation:-
+                Abstraction:
+                    - Hides implementation details.
+                    - Focuses on what an object does.
+                    - Example: A car provides a common structure with compulsory methods.
+
+                Encapsulation:
+                    - Combines data and methods inside a class and controls access to data.
+                    - Focuses on protecting and managing data.
+                    - Example: A bank account uses a private balance with getter and setter methods.
+
+            7. Stand-up Calls and Stand-up Meetings:-
+                A stand-up meeting is a short, regular team meeting used to share progress, plans, and blockers.
+
+                Main purposes:
+                    - Understand the progress of team members.
+                    - Identify problems early.
+                    - Coordinate work among team members.
+                    - Keep everyone updated on project status.
+
+                8. Three Common Stand-up Questions
+                    Each team member generally answers:
+                    1. What did I do yesterday?
+                    2. What will I do today?
+                    3. Am I facing any blockers or difficulties?
+
+                Example:
+                    Yesterday: I completed Python exception-handling notes.
+                    Today: I will learn abstraction and practise coding.
+                    Blocker: I need help understanding abstract methods.
+
+            9. Stand-up Call Etiquette:-
+                - Join the meeting on time.
+                - Keep updates short and clear.
+                - Explain completed and planned work.
+                - Mention blockers honestly.
+                - Listen to other team members.
+                - Avoid unrelated discussions.
+                - Discuss detailed problems separately after the meeting.
+
+            10. Benefits of Stand-up Meetings:-
+                - Improves team communication.
+                - Helps track daily progress.
+                - Identifies blockers quickly.
+                - Encourages accountability.
+                - Keeps the team aligned with project goals.
+
+            11. Quick Revision:-
+                - Abstraction hides implementation details.
+                - `ABC` is used to create an abstract base class.
+                - `@abstractmethod` defines compulsory methods.
+                - In the car example, chassis(), airbag(), and body() must be implemented.
+                - Child classes can add their own methods.
+                - An abstract class with unimplemented abstract methods cannot be instantiated.
+                - Stand-up meetings are short meetings for sharing progress, plans, and blockers.
+                - The three common stand-up questions are: What did I do yesterday? What will I do today? Are there any blockers?
+
+        Interview Queastions On Day 24:-
+
+            1. What is abstraction in Python?
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: We drive a car without knowing all the internal mechanisms of its engine.
+
+            2. What is an abstract class?
+                An abstract class is a blueprint for other classes. 
+                It defines methods that child classes must implement.
+                In Python, we use the ABC class from the abc module.
+
+            3. What is an abstract method?
+                An abstract method is a method declared using the @abstractmethod decorator. 
+                A concrete child class must implement it before its object can be created.
+                
+                Ex:-
+                    from abc import ABC, abstractmethodclass 
+                    Car(ABC):    
+                        @abstractmethod    
+                        def chassis(self):        
+                        pass
+
+            4. What is the use of the ABC class?
+                ABC stands for Abstract Base Class. It helps us create abstract classes in Python.
+
+            5. What is the use of the @abstractmethod decorator?
+                It marks a method as compulsory for concrete child classes to implement.
+
+            6. Explain abstraction using the Car example.
+                In our Car example, the abstract class contains three compulsory methods:
+                - chassis()
+                - airbag()
+                - body()
+                Every concrete child class must implement all three methods. It can also add extra methods, such as music_system() or sunroof().
+
+            7. Can we create an object of an abstract class?
+                No, not while it has unimplemented abstract methods.
+                We must implement all inherited abstract methods in a concrete child class before creating its object.
+
+            8. What happens if a child class does not implement all abstract methods?
+                Python raises a TypeError when we try to create an object of that child class.
+
+            9. Can an abstract class contain normal methods?
+                Yes. An abstract class can contain both abstract methods and normal methods with complete implementations.
+
+            10. Can a child class add its own methods in abstraction?
+                Yes. A child class must implement all inherited abstract methods,
+                but it can also define additional methods according to its requirements.
+
+            11. What is the difference between abstraction and encapsulation?
+
+                Abstraction	                    Encapsulation
+                Hides implementation details.	Bundles data and methods and controls access to data.
+                Focuses on what an object does.	Focuses on managing and protecting data.
+                Example: Abstract Car class.	Example: Private bank balance with getter/setter methods.
+
+            12. What is a stand-up meeting?
+                A stand-up meeting is a short, regular team meeting where team members share their work progress, plans, and problems.
+                Purpose: To keep the team updated and identify blockers quickly.
+
+            13. What are the three common questions asked in a stand-up meeting?
+                1. What did I do yesterday?
+                2. What will I do today?
+                3. Am I facing any blockers or difficulties?
+
+            14. What is a blocker in a stand-up meeting?
+                A blocker is a problem that prevents or delays a team member from completing their work.
+                Example: Being unable to complete a Python task because of an error or a missing requirement.
+
+            15. What are the benefits of stand-up meetings?
+                - Improve team communication.
+                - Track daily progress.
+                - Identify problems early.
+                - Coordinate tasks.
+                - Keep everyone aligned with project goals.
+
+            Quick revision for interviews
+                Focus especially on these concepts:
+                    - Abstraction: Hiding implementation details.
+                    - ABC: Used to create an abstract base class.
+                    - @abstractmethod: Defines a method that concrete child classes must implement.
+                    - Car example: chassis(), airbag(), and body() are compulsory; additional methods are allowed.
+                    - Stand-up meeting: A short meeting to discuss yesterday's work, today's plan, and blockers.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 27(8/10/26):-
 
         Python Internship Notes: Day 25 - Exception Handling & Its Ways
 
@@ -6014,5 +6338,150 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 else → No error
                 finally → Always executes
                 raise → Manually raise exception
+
+        Interview Questions On Day 25:-
+
+            1. What is exception handling in Python?
+                Exception handling is a way to handle runtime errors so that a program can continue running instead of terminating unexpectedly.
+                Example: Handling division by zero.
+            
+            2. What is the difference between an error and an exception?
+                - Error: A problem in the program, such as a syntax error.
+                - Exception: An issue that occurs during program execution and can often be handled.
+                Examples: SyntaxError, ZeroDivisionError, ValueError.
+                
+            3. What are the keywords used in exception handling?
+                Python provides five commonly used keywords:
+                - try – Contains code that may cause an exception.
+                - except – Handles the exception.
+                - else – Executes if no exception occurs in the try block.
+                - finally – Executes whether an exception occurs or not, under normal program execution.
+                - raise – Manually raises an exception.
+            
+            4. What is the use of the try and except blocks?
+                The try block contains risky code, and the except block handles an exception if one occurs.
+                    
+                Ex:-    
+                    try:    
+                        print(10 / 0)
+                    
+                    except ZeroDivisionError:    
+                        print("Cannot divide by zero")
+
+                Output:
+                    Cannot divide by zero
+
+            5. What is the use of the else block?
+                The else block executes only when no exception occurs in the try block.
+                
+                Ex:-
+                    try:    
+                        print(10 / 2)
+                    
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                    
+                    else:    
+                        print("Division successful")
+
+                Output:
+                    5.0
+                    Division successful
+
+            6. What is the use of the finally block?
+                The finally block is generally used for cleanup tasks, such as closing files or releasing resources.
+                It runs whether an exception occurs or not during normal execution.
+                
+                Ex:-    
+                    try:    
+                        print(10 / 2)
+                        
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                        
+                    finally:    
+                        print("Program completed")
+
+                Output:
+                    5.0
+                    Program completed
+
+            7. What is the difference between except and finally?
+             
+                            except	                                    finally
+                Handles an exception.	                    Performs cleanup or final actions.
+                Executes when a matching exception occurs.	Normally executes whether an exception occurs or not.
+            
+            8. What is the raise keyword?
+                The raise keyword is used to manually generate an exception when a condition is not satisfied.
+
+                Ex:-  
+                    age = 16 
+                    if age < 18:    
+                        raise ValueError("Age must be 18 or above")
+
+                Output: ValueError: 
+                    Age must be 18 or above
+
+            9. Name some common built-in exceptions in Python.
+ 
+                Exception	            When it occurs
+                ZeroDivisionError	    Dividing by zero
+                ValueError	            Correct type but invalid value
+                TypeError	            Operation uses an incompatible type
+                IndexError	            Accessing an invalid sequence index
+                KeyError	            Accessing a missing dictionary key
+                NameError	            Using an undefined variable
+                ModuleNotFoundError	    Importing a module that cannot be found
+                SyntaxError	            Invalid Python syntax
+            
+            10. What is the difference between ValueError and TypeError?
+                - ValueError: The data type is correct, but the value is invalid.
+                - TypeError: The operation or function receives an inappropriate data type.
+            
+                Examples:
+                    int("hello")      # ValueError
+                    "5" + 5           # TypeError
+
+            11. Why should we avoid using a bare except: block?
+                A bare except: can catch almost every exception, making unexpected problems difficult to identify.
+                It is better to catch specific exceptions.
+            
+                Ex:-    
+                    try:    
+                        num = int(input("Enter a number: "))
+                        
+                    except ValueError:    
+                        print("Please enter a valid integer")
+
+            12. How would you write an ATM PIN program with three attempts?
+                This program allows three attempts.
+                If all attempts are incorrect, the card is blocked.
+
+                Ex:-
+                    correct_pin = "1234"
+                    
+                    for attempt in range(3):    
+                        pin = input("Enter your ATM PIN: ")    
+                        if pin == correct_pin:        
+                            print("Access granted")        
+                            break    
+                        else:        
+                        print("Incorrect PIN")
+                        
+                    else:    
+                    print("Your card is blocked")
+
+                Important concept: 
+                    The for...else block executes only if the loop finishes without encountering break.
+                    This is why the card is blocked only after all three attempts fail.
+
+            Quick revision for your interview
+                Remember these five points especially well:
+                1. try – Tests risky code.
+                2. except – Handles exceptions.
+                3. else – Runs when no exception occurs.
+                4. finally – Used for cleanup and final actions.
+                5. raise – Manually raises an exception.
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
