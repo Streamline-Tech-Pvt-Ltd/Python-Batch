@@ -2,7 +2,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     Internship Day 01(24/8/26):- Complete Guide to Git, GitHub, Git And GitHub Configuration, VS Code, Work Environment Setup.
 
-    Internship Day 02(25/8/26):- Complete LinkedIn And Noukri Optimization.
+    Internship Day 02(25/8/26):- Complete LinkedIn And Naukri Optimization.
 
     Internship Day 03(31/8/26):-
 
@@ -126,14 +126,14 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
             10. Difference Between High-Level and Low-Level Language:-
 
-            | Feature            | High-Level Language                           | Low-Level Language                              |
-            | ------------------ | --------------------------------------------- | ----------------------------------------------- |
-            | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
-            | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
-            | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
-            | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
-            | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
-            | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
+                | Feature            | High-Level Language                           | Low-Level Language                              |
+                | ------------------ | --------------------------------------------- | ----------------------------------------------- |
+                | Human Readability  | Easy for humans to read and understand.       | Difficult for humans; written in binary/hex.    |
+                | Hardware Control   | Abstracted away; managed automatically.       | Direct, manual control over CPU and memory.     |
+                | Execution Speed    | Slower due to extra translation layers.       | Extremely fast as it runs natively on hardware. |
+                | Portability        | Highly portable across different platforms.   | Machine-dependent; bound to specific hardware.  |
+                | Memory Management  | Handled automatically by garbage collection.  | Requires manual memory allocation and cleanup.  |
+                | Primary Examples   | Python, Java, C#.                             | Assembly, Machine Code.                         |
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
@@ -3658,7 +3658,7 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 19(23/9/26):-
+    Internship Day 18(23/9/26):-
 
         Python Notes: Day 16 - Higher-Order Functions
 
@@ -3913,4 +3913,2575 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 filter() → Filter iterator
                 reduce() → Single final value
 
-   -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 19(24/9/26):-
+
+        Python Notes Day 17:- Recursive Function
+
+            1. What is a Recursive Function?
+                A recursive function is a function that **calls itself** to solve a problem.
+
+                Example:
+                    def count(n):
+                        if n == 0:
+                            return
+                        print(n)
+                        count(n-1)
+                
+                    count(5)
+
+                Output:
+                    5
+                    4
+                    3
+                    2
+                    1
+
+                1. Base Condition
+                    The condition that **stops the recursive function** is called the base condition.
+
+                    Example:
+                        def count(n):
+                            if n == 0:       # Base condition
+                                return
+                            print(n)
+                            count(n-1)
+
+                    Without a base condition, the function may call itself continuously.
+
+                2. How Recursion Works
+                    A recursive function has mainly two parts:
+                    - Base Condition → Stops the recursion
+                    - Recursive Call → Function calls itself
+
+                    Example:
+                        def test(n):
+                            if n == 0:
+                                return
+                            print(n)
+                            test(n-1)
+
+                3. Factorial Using Recursion
+                    Factorial of a number:
+                    5! = 5 × 4 × 3 × 2 × 1 = 120
+
+                    Example:
+                        def factorial(n):
+                            if n == 0 or n == 1:
+                                return 1
+                            return n * factorial(n-1)
+
+                        print(factorial(5))
+
+                    Output:
+                        120
+
+                4. Fibonacci Series Using Recursion
+                    Fibonacci series:
+                    0, 1, 1, 2, 3, 5, 8...
+
+                    Example:
+                        def fibonacci(n):
+                            if n <= 1:
+                                return n
+                            return fibonacci(n-1) + fibonacci(n-2)
+
+                        for i in range(7):
+                            print(fibonacci(i), end=" ")
+
+                    Output:
+                        0 1 1 2 3 5 8
+
+                5. Advantages of Recursion
+                    - Makes some problems easier to solve.
+                    - Useful for problems that can be divided into smaller similar problems.
+                    - Code can be shorter and simpler.
+
+                6. Disadvantages of Recursion
+                    - Uses more memory because function calls are stored.
+                    - Can be slower than loops for some problems.
+                    - Missing or incorrect base condition can cause infinite recursion.
+
+            2. Recursion vs Loop:-
+
+                | Recursion              | Loop                     |
+                |------------------------|--------------------------|
+                | Function calls itself  | Code repeats using loop  |
+                | Uses function calls    | Uses `for` or `while`    |
+                | Needs a base condition | Needs a loop condition   |
+                | Can use more memory    | Usually uses less memory |
+
+            3. Quick Revision:-
+                Recursive Function → Function calls itself
+                Base Condition → Stops recursion
+                Recursive Call → Function calling itself
+                Factorial → Common recursion example
+                Fibonacci → Common recursion example
+
+        Interview Questions On Day 17:-
+
+            1. What is a Recursive Function?
+                A recursive function is a function that calls itself to solve a problem.
+
+            2. What are the two main parts of a Recursive Function?
+                Base Condition → Stops the recursion.
+                Recursive Call → Function calls itself.
+
+            3. What is a Base Condition?
+                It is the condition that stops the recursive function. Without it, recursion may continue indefinitely.
+
+            4. What happens if there is no Base Condition?
+                The function keeps calling itself and can result in a RecursionError.
+
+            5. What is a Recursive Call?
+                When a function calls itself inside its own definition, it is called a recursive call.
+
+            6. How can you find Factorial using Recursion?
+
+                Ex:-
+                    def factorial(n):
+                        if n == 0 or n == 1:
+                            return 1
+                        return n * factorial(n-1)
+
+            7. How can you generate Fibonacci Series using Recursion?
+
+                Ex:-
+                    def fibonacci(n):
+                        if n <= 1:
+                            return n
+                        return fibonacci(n-1) + fibonacci(n-2)
+
+            8. What are the advantages of Recursion?
+                Can make some problems easier to solve.
+                Code can be shorter and simpler.
+                Useful for problems that can be divided into smaller similar problems.
+
+            9. What are the disadvantages of Recursion?
+                Can use more memory.
+                Can be slower for some problems.
+                Incorrect recursion can cause RecursionError.
+
+            10. What is the difference between Recursion and Loop?
+                Recursion → Function calls itself.
+                Loop → Uses for or while to repeat code.
+
+            11. Can a recursive function return a value?
+                Yes. A recursive function can use return to return a result.
+
+            12. Give some common examples where Recursion is used.
+                Common examples include:
+                Factorial
+                Fibonacci series
+                Problems that can be divided into smaller similar problems
+
+            ⭐ Quick Revision
+
+                Recursive Function → Function calls itself
+                Base Condition → Stops recursion
+                Recursive Call → Function calling itself
+                No Base Condition → RecursionError
+                Factorial & Fibonacci → Common examples
+                    
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 20(28/9/26):-
+
+        Python Internship Notes Day 18:- OOP – Class, Object, Constructor & OOP Pillars
+
+            1. Object:-
+                An object is an **instance of a class**.
+
+                An object can communicate with:
+                - Attributes → Data/Properties
+                - Methods → Functions/Behaviour
+
+                Example:
+                    l1 = Laptop()
+
+                Here, `l1` is an object of the `Laptop` class.
+
+            2. Class:-
+                A class is a **blueprint for creating objects**.
+
+                A class contains:
+                - Attributes → Data/Properties
+                - Methods → Functions/Behaviour
+
+                Example:
+                    class Laptop:
+                        name = "HP"
+                        color = "Black"
+                        shape = "Rectangle"
+
+                        def Programming(self):
+                            return "Demo"
+
+                        def Gaming(self):
+                            return None
+
+                Here:
+                    - `Laptop` → Class
+                    - `name`, `color`, `shape` → Attributes
+                    - `Programming()`, `Gaming()` → Methods
+
+            3. Class and Object Example:-
+
+                Ex:-
+                    class Laptop:
+                        name = "HP"
+                        color = "Black"
+                        shape = "Rectangle"
+
+                        def Programming(self):
+                            return "Demo"
+
+                        def Gaming(self):
+                            return None
+
+                    l1 = Laptop()
+
+                    print(l1.name)
+                    print(l1.Programming())
+
+                Output:
+                    HP
+                    Demo
+
+            4. Object Reference:-
+                When an object is created, a variable can be used to **refer to that object**.
+
+                Example:
+                    l1 = Laptop()
+
+                Here:
+                    - `Laptop()` → Creates an object
+                    - `l1` → Reference to that object
+
+            5. Constructor:-
+                A constructor is a **special method** that is called automatically when an object is created.
+
+                Python uses:
+                    __init__()
+
+                Its main purpose is to **initialize object attributes**.
+
+                Syntax:
+                    def __init__(self):
+                        # Initialization
+
+            6. Constructor with Parameter:-
+                A constructor can accept parameters to initialize object data.
+
+                Example:
+                    class Laptop:
+                        def __init__(self, name):
+                            self.name = name
+
+                        def Programming(self):
+                            return f"My name is {self.name}"
+
+                        def Gaming(self):
+                            return None
+
+                    l1 = Laptop("Raj")
+
+                    print(l1.Programming())
+
+                Output:
+                    My name is Raj
+
+                Here:
+                    - `__init__()` → Constructor
+                    - `name` → Parameter
+                    - `self.name` → Object attribute
+                    - `"Raj"` → Argument
+                    - `l1` → Object/reference
+
+            7. self Parameter:-
+                `self` refers to the **current object**.
+
+                It is used to access the attributes and methods of the current object.
+
+                Example:
+                    class Laptop:
+                        def __init__(self, name):
+                            self.name = name
+
+                        def Programming(self):
+                            return f"My name is {self.name}"
+
+                    l1 = Laptop("Raj")
+
+                Here:
+                    `self.name` → Refers to the `name` of the current object.
+
+            8. Instance Attribute:-
+                An attribute created using `self` is called an **instance attribute**.
+
+                Example:
+                    class Laptop:
+                        def __init__(self, name):
+                            self.name = name
+
+                    l1 = Laptop("Raj")
+                    l2 = Laptop("Anuj")
+
+                Here:
+                    - `l1.name` → Raj
+                    - `l2.name` → Anuj
+
+                Each object has its own value.
+
+            9. Four Major Pillars of OOP:-
+                The four major pillars of Object-Oriented Programming are:
+
+                1. Inheritance
+                2. Abstraction
+                3. Polymorphism
+                4. Encapsulation
+
+                1. Inheritance
+                    Inheritance allows one class to **inherit properties and methods from another class**.
+
+                    It helps in code reusability.
+
+                    Basic example:
+                        class Parent:
+                            def show(self):
+                                print("Parent")
+
+                        class Child(Parent):
+                            pass
+
+                        c1 = Child()
+                        c1.show()
+
+                2. Abstraction
+                    Abstraction means **hiding unnecessary implementation details** and showing only the required information.
+
+                    Example:
+                    When we use a mobile phone, we use buttons/apps without knowing the complete internal working.
+
+                3. Encapsulation
+                    Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+
+                    Example:
+                        class Student:
+                            def __init__(self, name):
+                                self.name = name
+
+                    Here, data and methods can be grouped inside the class.
+
+                4. Polymorphism
+                    Polymorphism means **one name/interface can have different behaviours** depending on the object or situation.
+
+                    Example:
+                    The same method name can perform different operations in different classes.
+
+                5. Encryption
+                    Encryption is the process of converting readable data into an **unreadable form** to protect information.
+
+                    Example:
+                        Original:
+                        Admin@123
+
+                        Encrypted:
+                        hfbmnjhfgd456795tyh
+
+                    Decryption converts the encrypted data back into the original readable form.
+
+                        Encrypted:
+                        hfbmnjhfgd456795tyh
+
+                        Decrypted:
+                        Admin@123
+
+            10. f-string:-
+                An f-string is used to insert variables directly inside a string.
+
+                Example:
+                    name = "Streamline Tech"
+
+                    print(f"My company name is: {name}")
+
+                Output:
+                    My company name is: Streamline Tech
+
+            Quick Revision:-
+                Class → Blueprint for creating objects
+                Object → Instance of a class
+                Object Reference → Variable referring to an object
+                Attribute → Data/Property of an object
+                Method → Function inside a class
+                Constructor → __init__()
+                self → Refers to the current object
+                Inheritance → Code reusability
+                Abstraction → Hides unnecessary details
+                Encapsulation → Binds and controls data
+                Polymorphism → Different behaviours
+                Encryption → Converts readable data into protected/unreadable form
+
+        Interview Questions On Day 18:- Class, Object, Object Reference, Constructor, self & OOP Pillars
+
+            1. What is OOP?
+                OOP stands for Object-Oriented Programming. It is a programming approach based on classes and objects.
+
+            2. What is a Class?
+                A class is a blueprint for creating objects. It contains attributes and methods.
+
+            3. What is an Object?
+                An object is an instance of a class.
+
+            4. What is the difference between Class and Object?
+                Class → Blueprint.
+                Object → Instance created from that blueprint.
+
+            5. What are Attributes and Methods?
+                Attributes → Data/properties of an object.
+                Methods → Functions/behaviour of an object.
+
+            6. What is an Object Reference?
+                An object reference is a variable that refers to an object.
+
+                l1 = Laptop()
+
+                Here, l1 is the reference to the Laptop object.
+
+            7. What is a Constructor in Python?
+                A constructor is a special method that is automatically called when an object is created.
+
+                def __init__(self):
+                    pass
+
+            8. Why is __init__() used?
+                It is mainly used to initialize the attributes of an object when the object is created.
+
+            9. What is self in Python?
+                self refers to the current object. It is used to access the object's attributes and methods.
+
+            10. What is the difference between name and self.name?
+                name → Usually a local parameter/variable.
+                self.name → Attribute belonging to the current object.
+
+            11. What are the four major pillars of OOP?
+                The four pillars are:
+                Inheritance
+                Abstraction
+                Polymorphism
+                Encapsulation
+
+            12. What is Inheritance?
+                Inheritance allows a child class to use properties and methods of a parent class. It helps with code reusability.
+
+            13. What is Encapsulation?
+                Encapsulation means binding data and methods together inside a class and controlling access to the data.
+
+            14. What is Abstraction?
+                Abstraction means hiding unnecessary implementation details and showing only the required information.
+
+            15. What is Polymorphism?
+                Polymorphism means one interface/name can have different behaviours depending on the object or situation.
+
+            16. What is the difference between Encapsulation and Abstraction?
+                Encapsulation → Focuses on bundling and controlling data.
+                Abstraction → Focuses on hiding unnecessary details.
+
+            17. Can a class have multiple objects?
+                Yes. We can create multiple objects from the same class, and each object can have different attribute values.
+
+            18. What is an Instance Attribute?
+                An attribute created using self is called an instance attribute.
+                self.name = name
+
+            19. What happens when we create an object?
+                Python creates the object and automatically calls the __init__() constructor if it is defined.
+
+            20.What is Encryption?
+                Encryption converts readable data into an unreadable/protected form to protect information. Decryption converts it back.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Intenship Day 21(29/9/26):-
+
+        Python Notes Day 19:- Types of Attributes, Methods & Decorators
+
+            1. Types of Attributes:-
+                Attributes are variables that store data related to a class or object.
+
+                There are mainly 3 types:
+                1. Instance Attribute
+                2. Class Attribute
+                3. Local Attribute
+
+                1. Instance Attribute:-
+                    An instance attribute belongs to a particular object.
+                    It is usually created using `self` inside the `__init__()` method.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
+
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+                        print(i1.name)
+
+                    Here:
+                    - `self.name`
+                    - `self.domain`
+                    - `self.email`
+
+                    are instance attributes.
+
+                    Each object can have different values.
+
+                2. Class Attribute:-
+                    A class attribute belongs to the class and is shared by its objects.
+
+                    Example:
+                        class Intern:
+                            password = "Admin@123"
+
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
+
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+                        print(i1.password)
+
+                    Here, `password` is a class attribute.
+
+                3. Local Attribute:-
+                    A local variable/attribute is created inside a method and is available only within that method.
+
+                    Example:
+                        class Intern:
+                            name = "streamlinetech"
+
+                            def registration(self):
+                                return f"{self.name} It is an IT company"
+
+                        i1 = Intern()
+                    print(i1.registration())
+
+                5. Difference Between Instance and Class Attribute:-
+
+                    | Instance Attribute                        | Class Attribute               |
+                    |-------------------------------------------|-------------------------------|
+                    | Belongs to an object                      | Belongs to the class          |
+                    | Created using `self`                      | Created directly inside class |
+                    | Can have different values for each object | Common/shared value           |
+                    | Example: `self.name`                      | Example: `password`           |
+
+            2. Types of Methods:-
+                There are mainly 3 types of methods:
+
+                1. Instance Method
+                2. Class Method
+                3. Static Method
+
+                1. Instance Method:-
+                    An instance method works with the data of an object.
+                    It uses `self` as the first parameter.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
+
+                            def registration(self):
+                                return f"My domain is {self.domain}"
+
+                        i1 = Intern("Raj Patil", "FSP", "demo@email.com")
+
+                        print(i1.registration())
+
+                    Here, `registration()` is an instance method.
+
+                2. Class Method:-
+                    A class method works with class-level data.
+                    It uses `cls` as the first parameter and uses the `@classmethod` decorator.
+
+                    Example:
+                        class Car:
+                            total_cars = 0
+
+                            def __init__(self, model):
+                                self.model = model
+                                Car.total_cars += 1
+
+                            @classmethod
+                            def car_count(cls):
+                                return f"Total cars = {cls.total_cars}"
+
+                        print(Car.car_count())
+
+                3. Static Method:-
+                    A static method does not need `self` or `cls`.
+                    It is defined using the `@staticmethod` decorator.
+
+                    Example:
+                        class Math:
+                            @staticmethod
+                            def add(a, b):
+                                return a + b
+
+                        print(Math.add(2, 4))
+
+                    Output:
+                        6
+
+                4. Difference Between Types of Methods:-
+
+                    | Instance Method               | Class Method          | Static Method                    |
+                    |-------------------------------|-----------------------|----------------------------------|
+                    | Uses `self`                   | Uses `cls`            | No `self` or `cls`               |
+                    | Works with object data        | Works with class data | Independent of object/class data |
+                    | Uses object                   | Uses class            | Can be called using class        |
+                    | No special decorator required | Uses `@classmethod`   | Uses `@staticmethod`             |
+
+            3. Decorator
+                A decorator is used with `@` before a function or method.
+                Decorators can modify or provide special behaviour to a function/method.
+
+                In today's OOP topic, we used:
+
+                @classmethod
+                @staticmethod
+
+                1. @classmethod Decorator
+                    `@classmethod` converts a method into a class method.
+                    It receives `cls` as the first parameter.
+
+                    Example:
+                        class Car:
+                            total_cars = 0
+
+                            @classmethod
+                            def car_count(cls):
+                                return cls.total_cars
+
+                13. @staticmethod Decorator
+                    `@staticmethod` converts a method into a static method.
+                    It does not require `self` or `cls`.
+
+                    Example:
+                        class Math:
+                            @staticmethod
+                            def add(a, b):
+                                return a + b
+
+                        print(Math.add(2, 4))
+
+            4. Quick Revision:-
+
+                Attributes:
+                    Instance Attribute → Belongs to object
+                    Class Attribute → Belongs to class
+                    Local Attribute → Used inside method/local scope
+
+                Methods:
+                    Instance Method → Uses `self`
+                    Class Method → Uses `cls`
+                    Static Method → Uses neither `self` nor `cls`
+
+                Decorators:
+                    `@classmethod` → Creates a class method
+                    `@staticmethod` → Creates a static method
+
+        Interview Questions On Day 19:-
+
+            1. What is an Attribute in Python?
+                An attribute is a variable that stores data related to a class or object.
+                
+            2. What are the types of Attributes?
+                The three types covered are:
+                Instance Attribute
+                Class Attribute
+                Local Attribute
+
+            3. What is an Instance Attribute?
+                An instance attribute belongs to a particular object and is usually created using self.
+
+                self.name = name
+
+            4. What is a Class Attribute?
+                A class attribute belongs to the class and can be shared by its objects.
+
+                class Intern:
+                    password = "Admin@123"
+            
+            5. What is a Local Attribute?
+                A local variable is created inside a method and is used within that method.
+                
+            6. What are the types of Methods in Python OOP?
+                The three types are:
+                Instance Method
+                Class Method
+                Static Method
+
+            7. What is an Instance Method?
+                An instance method works with object data and uses self as its first parameter.
+
+                def registration(self):
+                    return self.domain
+
+            8. What is a Class Method?
+                A class method works with class-level data and uses cls as its first parameter.
+
+                It is created using the @classmethod decorator.
+
+                Ex:-
+                    @classmethod
+                    def car_count(cls):
+                        return cls.total_cars
+
+            9. What is a Static Method?
+                A static method does not require self or cls. It is created using @staticmethod.
+
+                Ex:-
+                    @staticmethod
+                    def add(a, b):
+                        return a + b
+
+            10. What is a Decorator?
+                A decorator is used to modify or provide special behaviour to a function or method.
+
+                In today's topic, we use:
+
+                @classmethod
+                @staticmethod
+
+            11. What is the difference between @classmethod and @staticmethod?
+                @classmethod → Uses cls and works with class-level data.
+                @staticmethod → Does not use self or cls.
+
+            12. What is the difference between Instance, Class and Static Methods?
+
+                Instance Method  	    Class Method	           Static Method
+                Uses self       	    Uses cls	               Uses neither
+                Works with object data	Works with class data  	   Independent of object/class data
+                Called using object	    Can be called using class  Can be called using class
+            
+            ⭐ Must Prepare First
+
+                Focus especially on these:
+
+                Instance Attribute → Class Attribute → Local Attribute
+                Instance Method → Class Method → Static Method
+                self → cls → no self/cls
+                @classmethod → @staticmethod
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 22(30/9/26):-
+
+        Python Notes: Day 20 - Types of Constructors
+
+            1. Constructor:-
+                A constructor is a special method used to initialize an object.
+                In Python, `__init__()` is commonly called the constructor.
+
+                It is automatically called when an object is created.
+
+                Example:
+                    class Student:
+                        def __init__(self):
+                            print("Constructor is called when object is created")
+
+                    student1 = Student()
+
+                Output:
+                    Constructor is called when object is created
+
+            2. Types of Constructors:-
+                Commonly, we study these types:
+
+                1. Non-Parameterized Constructor
+                2. Parameterized Constructor
+                3. Constructor with Default Parameters
+
+                1. Non-Parameterized Constructor:-
+                    A constructor that does not take any parameter other than `self` is called a non-parameterized constructor.
+
+                    Example:
+                        class Student:
+                            def __init__(self):
+                                print("Constructor is called when object is created")
+
+                        student1 = Student()
+                        student2 = Student()
+
+                    Output:
+                        Constructor is called when object is created
+                        Constructor is called when object is created
+
+                    Here:
+                    `__init__(self)` → Non-parameterized constructor
+
+                2. Parameterized Constructor:-
+                    A constructor that accepts parameters to initialize object attributes is called a parameterized constructor.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name, domain, email):
+                                self.name = name
+                                self.domain = domain
+                                self.email = email
+
+                        i1 = Intern("ABC", "PYTHON", "abc@gmail.com")
+
+                        print(i1.name)
+                        print(i1.domain)
+                        print(i1.email)
+
+                    Output:
+                        ABC
+                        PYTHON
+                        abc@gmail.com
+
+                    Here:
+                    - `name`, `domain`, `email` → Parameters
+                    - `"ABC"`, `"PYTHON"`, `"abc@gmail.com"` → Arguments
+                    - `self.name`, `self.domain`, `self.email` → Instance attributes
+
+                3. Constructor with Default Parameters:-
+                    A constructor can have parameters with default values.
+                    If a value is not provided, Python uses the default value.
+
+                    Example:
+                        class Intern:
+                            def __init__(self, name="Anuj", age=21):
+                                self.name = name
+                                self.age = age
+
+                        i1 = Intern("Anuj", 23)
+
+                        print(i1.name)
+                        print(i1.age)
+
+                    Output:
+                        Anuj
+                        23
+
+                    Another example:
+                        i2 = Intern()
+
+                        print(i2.name)
+                        print(i2.age)
+
+                    Output:
+                        Anuj
+                        21
+
+                    Here:
+                    - `name="Anuj"` → Default value
+                    - `age=21` → Default value
+
+                    Important:
+                        This is technically a parameterized constructor with default parameter values,
+                        not a separate constructor type in Python.
+
+            3. Real-World Example: Bank Account
+
+                Ex:-
+                    class BankAccount:
+                        def __init__(self, name, acc_no, balance, ifsc="MAHB00043"):
+                            self.name = name
+                            self.acc_no = acc_no
+                            self.balance = balance
+                            self.ifsc = ifsc
+
+                        def show_user(self):
+                            print("=========================")
+                            print("user_name:", self.name)
+                            print("user_acc_no:", self.acc_no)
+                            print("user credential displayed successfully")
+
+                    b1 = BankAccount("Urmila", "ACC123789", 50000, "MAHB000023")
+
+                    print(b1.name)
+                    print(b1.acc_no)
+                    print(b1.balance)
+                    print(b1.ifsc)
+
+                    b1.show_user()
+
+                Here:
+                - `BankAccount` → Class
+                - `__init__()` → Constructor
+                - `name`, `acc_no`, `balance`, `ifsc` → Instance attributes
+                - `show_user()` → Instance method
+                - `"Urmila"`, `"ACC123789"`, `50000` → Arguments
+                - `"MAHB000023"` → Argument that replaces the default IFSC value
+
+            4. Default Value in Constructor:-
+                If an argument is not passed, the default value is used.
+
+                Example:
+                    class BankAccount:
+                        def __init__(self, name, balance, ifsc="MAHB00043"):
+                            self.name = name
+                            self.balance = balance
+                            self.ifsc = ifsc
+
+                    b1 = BankAccount("Anuj", 50000)
+
+                    print(b1.ifsc)
+
+                Output:
+                    MAHB00043
+
+            5. Important Points:-
+                - `__init__()` is automatically called when an object is created.
+                - `self` refers to the current object.
+                - Constructors are mainly used to initialize object attributes.
+                - A parameterized constructor accepts values from the user/program.
+                - A non-parameterized constructor does not accept additional parameters.
+                - Default parameters allow us to use a value when no argument is provided.
+                - Python does not support multiple constructors with the same name like some other languages.
+                - A class can have only one `__init__()` definition; if defined again, the later definition replaces the earlier one.
+
+            6. Difference Between Constructor Types:-
+
+                | Non-Parameterized             | Parameterized                  | Default Parameters                   |
+                |-------------------------------|--------------------------------|--------------------------------------|
+                | Takes only `self`             | Takes additional parameters    | Takes parameters with default values |
+                | No values are passed          | Values are passed              | Values may or may not be passed      |
+                | `__init__(self)`              | `__init__(self, name)`         | `__init__(self, name="Anuj")`        |
+                | Used for fixed initialization | Used for custom initialization | Used for flexible initialization     |
+
+            Quick Revision:-
+                Constructor → Initializes an object
+                `__init__()` → Commonly called constructor in Python
+                Non-Parameterized → Only `self`
+                Parameterized → Accepts parameters
+                Default Parameters → Parameters have default values
+                `self` → Current object
+                Constructor → Automatically called when object is created
+
+        Interview Questions On Day 20:-
+
+            1. What is a Constructor in Python?
+                A constructor is a special method used to initialize an object. In Python, __init__() is commonly called the constructor.
+
+            2. When is a Constructor called?
+                It is called automatically when an object is created.
+
+                Ex:-
+                    student1 = Student()
+                
+            3. What is __init__()?
+                __init__() is a special method used to initialize the attributes of an object.
+
+            4. What is a Non-Parameterized Constructor?
+                A constructor that takes only self and no additional parameters is called a non-parameterized constructor.
+
+                Ex:-
+                    class Student:
+                        def __init__(self):
+                            print("Constructor called")
+
+            5. What is a Parameterized Constructor?
+                A constructor that accepts parameters to initialize object data is called a parameterized constructor.
+
+                Ex:-
+                    class Student:
+                        def __init__(self, name, age):
+                            self.name = name
+                            self.age = age
+
+            6. What is a Constructor with Default Parameters?
+                A constructor in which parameters have default values.
+
+                Ex:-
+                    class Student:
+                        def __init__(self, name="Anuj", age=21):
+                            self.name = name
+                            self.age = age
+
+            7. What happens if we don't pass an argument for a default parameter?
+                Python uses the default value.
+
+                Ex:-
+                    s1 = Student()
+
+                Here, name will be "Anuj" and age will be 21.
+
+            8. What is the difference between Parameterized and Non-Parameterized Constructors?
+
+                Non-Parameterized	    Parameterized
+                Takes only self	        Takes additional parameters
+                No values are passed	Values are passed
+                __init__(self)	        __init__(self, name)
+            
+            9. What is the difference between Parameterized Constructor and Default Parameter Constructor?
+                Parameterized → Values are generally expected to be passed.
+                Default parameter → Values may be passed, otherwise default values are used.
+
+            10. What is the purpose of self in a Constructor?
+                self refers to the current object and is used to store/access its attributes.
+
+                Ex:-
+                    self.name = name
+                
+            11. Can we create multiple constructors in one Python class?
+                Python does not support multiple __init__() methods with the same name. If we define another __init__(), it replaces the previous one.
+                
+            12. What is the main purpose of a Constructor?
+                Its main purpose is to initialize object data when the object is created.
+                
+            ⭐ Must Prepare First
+
+                Constructor → __init__() → Automatically called → Initializes object
+
+                Non-Parameterized → Only self
+
+                Parameterized → Takes values
+
+                Default Parameters → Values have default values
+
+                self → Current object
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 23(1/10/26):-
+
+        Python Notes: Day 21 - Inheritance & Its Types
+
+            1. Inheritance:-
+                Inheritance is an OOP concept where a **child class gets the properties and methods of a parent class**.
+
+                It helps in:
+                - Code reusability
+                - Reducing duplicate code
+                - Creating relationships between classes
+
+                Basic Example:
+                    class Parent:
+                        def show(self):
+                            print("This is Parent")
+
+                    class Child(Parent):
+                        pass
+
+                    c1 = Child()
+                    c1.show()
+
+                Output:
+                    This is Parent
+
+                Here:
+                - `Parent` → Parent/Base/Super class
+                - `Child` → Child/Derived/Sub class
+                - `Child(Parent)` → Child inherits from Parent
+
+            2. Parent Class:-
+                The class whose properties and methods are inherited by another class is called the **Parent class**.
+
+                Other names:
+                - Base class
+                - Super class
+
+            3. Child Class:-
+                The class that inherits properties and methods from another class is called the **Child class**.
+
+                Other names:
+                - Derived class
+                - Sub class
+
+            4. Types of Inheritance:-
+                There are mainly 5 types of inheritance:
+
+                1. Single Inheritance
+                2. Multiple Inheritance
+                3. Multilevel Inheritance
+                4. Hierarchical Inheritance
+                5. Hybrid Inheritance
+
+                1. Single Inheritance:-
+                    When **one child class inherits from one parent class**, it is called Single Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child(Parent):
+                            def child_method(self):
+                                print("Child Method")
+
+                        c1 = Child()
+                        c1.parent_method()
+                        c1.child_method()
+
+                    Output:
+                        Parent Method
+                        Child Method
+
+                    Structure:
+                        Parent
+                        ↓
+                        Child
+
+                2. Multiple Inheritance:-
+                    When **one child class inherits from more than one parent class**, it is called Multiple Inheritance.
+
+                    Example:
+                        class Father:
+                            def father_method(self):
+                                print("Father Method")
+
+                        class Mother:
+                            def mother_method(self):
+                                print("Mother Method")
+
+                        class Child(Father, Mother):
+                            pass
+
+                        c1 = Child()
+                        c1.father_method()
+                        c1.mother_method()
+
+                    Output:
+                        Father Method
+                        Mother Method
+
+                    Structure:
+                        Father ──┐
+                                ↓
+                            Child
+                                ↑
+                        Mother ──┘
+
+                3. Multilevel Inheritance:-
+                    When a class inherits from another child class, forming a **chain of inheritance**, it is called Multilevel Inheritance.
+
+                    Example:
+                        class Grandfather:
+                            def grandfather_method(self):
+                                print("Grandfather")
+
+                        class Father(Grandfather):
+                            def father_method(self):
+                                print("Father")
+
+                        class Child(Father):
+                            def child_method(self):
+                                print("Child")
+
+                        c1 = Child()
+
+                        c1.grandfather_method()
+                        c1.father_method()
+                        c1.child_method()
+
+                    Output:
+                        Grandfather
+                        Father
+                        Child
+
+                    Structure:
+                        Grandfather
+                            ↓
+                        Father
+                            ↓
+                        Child
+
+                4. Hierarchical Inheritance:-
+                    When **multiple child classes inherit from the same parent class**, it is called Hierarchical Inheritance.
+
+                    Example:
+                        class Parent:
+                            def parent_method(self):
+                                print("Parent Method")
+
+                        class Child1(Parent):
+                            pass
+
+                        class Child2(Parent):
+                            pass
+
+                        c1 = Child1()
+                        c2 = Child2()
+
+                        c1.parent_method()
+                        c2.parent_method()
+
+                    Output:
+                        Parent Method
+                        Parent Method
+
+                    Structure:
+                             Parent
+                            /      \
+                        Child1    Child2
+
+                5. Hybrid Inheritance:-
+                    Hybrid inheritance is a **combination of two or more types of inheritance**.
+
+                    Example:
+                        class A:
+                            def show_a(self):
+                                print("A")
+
+                        class B(A):
+                            def show_b(self):
+                                print("B")
+
+                        class C(A):
+                            def show_c(self):
+                                print("C")
+
+                        class D(B, C):
+                            def show_d(self):
+                                print("D")
+
+                    Here, different inheritance types are combined, so it is called Hybrid Inheritance.
+
+            5. Quick Difference:-
+
+                | Type         | Meaning                          |
+                |--------------|----------------------------------|
+                | Single       | One Parent → One Child           |
+                | Multiple     | Multiple Parents → One Child     |
+                | Multilevel   | Grandparent → Parent → Child     |
+                | Hierarchical | One Parent → Multiple Children   |
+                | Hybrid       | Combination of two or more types |
+
+            6. Advantages of Inheritance:-
+                - Code reusability
+                - Reduces code duplication
+                - Makes code easier to maintain
+                - Creates a relationship between classes
+                - Child classes can reuse parent methods
+
+            Quick Revision:-
+
+                Inheritance → Child class gets properties/methods from Parent
+
+                Parent Class → Class being inherited
+                Child Class → Class that inherits
+
+                Single → 1 Parent → 1 Child
+                Multiple → Multiple Parents → 1 Child
+                Multilevel → Grandparent → Parent → Child
+                Hierarchical → 1 Parent → Multiple Children
+                Hybrid → Combination of inheritance types
+
+        Interview Questions on Day 21:-
+
+            1. What is Inheritance in Python?
+                Inheritance is an OOP concept where a child class inherits attributes and methods from a parent class.
+                
+            2. Why do we use Inheritance?
+                It is mainly used for code reusability and to avoid writing the same code again.
+                
+            3. What is a Parent Class?
+                A parent class is the class whose attributes and methods are inherited by another class.
+                It is also called Base Class or Super Class.
+            
+            4.What is a Child Class?
+                A child class is the class that inherits attributes and methods from a parent class.
+                It is also called Derived Class or Sub Class.
+
+            5. How do you implement Inheritance in Python?
+
+                class Parent:
+                    def show(self):
+                        print("Parent")
+
+                class Child(Parent):
+                    pass
+            
+            6. What are the types of Inheritance in Python?
+                There are five main types:
+                    Single Inheritance
+                    Multiple Inheritance
+                    Multilevel Inheritance
+                    Hierarchical Inheritance
+                    Hybrid Inheritance
+
+            7. What is Single Inheritance?
+                When one child class inherits from one parent class, it is called single inheritance.
+
+                Parent
+                |
+                Child
+
+            8. What is Multiple Inheritance?
+                When one child class inherits from multiple parent classes, it is called multiple inheritance.
+
+                Parent1    Parent2
+                    \       /
+                     Child
+
+            9. What is Multilevel Inheritance?
+                When inheritance occurs through multiple levels, it is called multilevel inheritance.
+
+                Grandparent
+                    |
+                Parent
+                    |
+                Child
+
+            10. What is Hierarchical Inheritance?
+                When multiple child classes inherit from the same parent class, it is called hierarchical inheritance.
+
+                    Parent
+                    /      \
+                Child1   Child2
+
+            11. What is Hybrid Inheritance?
+                Hybrid inheritance is a combination of two or more types of inheritance.
+
+                Example:
+
+                      A
+                    /   \
+                    B   C
+                    \   /
+                      D
+            
+            12. What is the difference between Multiple and Multilevel Inheritance?
+                Multiple → One child has multiple parents.
+                Multilevel → Inheritance happens across multiple levels.
+            
+            13. What is the difference between Hierarchical and Multiple Inheritance?
+                Hierarchical → One parent → multiple children.
+                Multiple → Multiple parents → one child.
+
+            14. Which type of inheritance is used in this example?
+
+                class A:
+                    pass
+
+                class B(A):
+                    pass
+
+                class C(B):
+                    pass
+
+                This is Multilevel Inheritance.
+
+            15. Can a child class use methods of its parent class?
+                Yes. A child class can directly use accessible methods and attributes inherited from its parent class.
+                
+            ⭐ Quick Revision:-
+
+                Inheritance → Code reusability
+                Parent → Base / Super Class
+                Child → Derived / Sub Class
+
+                Single → 1 Parent → 1 Child
+                Multiple → Multiple Parents → 1 Child
+                Multilevel → Grandparent → Parent → Child
+                Hierarchical → 1 Parent → Multiple Children
+                Hybrid → Combination of inheritance types
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 24(2/10/26):-
+
+        Python Internship Notes: Day 22 - Polymorphism & Its Types
+
+            1. Polymorphism:-
+                Polymorphism means **one name having many forms or behaviours**.
+
+                Poly → Many
+                Morph → Forms
+
+                In Python, the same method or operator can behave differently depending on the situation.
+
+                Real-World Example:
+                Bank → pay()
+
+                Payment can be done through:
+                - UPI
+                - Credit Card
+                - Cash
+
+                1. Polymorphism Example
+
+                    class UPI:
+                        def pay(self):
+                            print("I will do my payment through UPI")
+
+                    class Credit_card:
+                        def pay(self):
+                            print("I will do my payment through Credit Card")
+
+                    class Cash:
+                        def pay(self):
+                            print("I will do my payment through Cash")
+
+                Here, all classes have the same method name:
+                `pay()`
+
+                But each class performs the payment differently.
+
+            2. Types of Polymorphism:-
+
+                The two types covered are:
+
+                    1. Compile-Time Polymorphism
+                    2. Run-Time Polymorphism
+
+                1. Compile-Time Polymorphism:-
+                    Compile-time polymorphism mainly includes:
+
+                    1. Method Overloading
+                    2. Operator Overloading
+
+                    1. Method Overloading:-
+                        Method overloading means using the **same method name with different parameters**.
+                        Python does not support traditional method overloading like some other languages.
+                        However, we can achieve similar behaviour using default parameters or variable-length arguments.
+
+                        Example:
+                            class Calculator:
+                                def add(self, a, b, c=0):
+                                    return a + b + c
+
+                            c1 = Calculator()
+
+                            print(c1.add(10, 20))
+                            print(c1.add(10, 20, 10))
+
+                        Output:
+                            30
+                            40
+
+                        Here, the same `add()` method works with different numbers of arguments.
+
+                    2. Operator Overloading:-
+                        Operator overloading means giving an operator **different behaviour depending on the operands**.
+
+                        Example:
+                            print(10 + 20)
+
+                            Output:
+                            30
+
+                            For strings:
+                            print("Streamline" + " tech")
+
+                        Output:
+                            Streamline tech
+
+                        For lists:
+                            print([1, 2, 3] + [4, 5])
+
+                        Output:
+                            [1, 2, 3, 4, 5]
+
+                        The `+` operator behaves differently for numbers, strings and lists.
+
+                    3. Operator Overloading with Class:-
+                        We can define how an operator works with our own objects using special methods.
+
+                        Example:
+                            class Student:
+                                def __init__(self, marks):
+                                    self.marks = marks
+
+                                def __add__(self, other):
+                                    return self.marks + other.marks
+
+                            s1 = Student(60)
+                            s2 = Student(90)
+
+                            print(s1 + s2)
+
+                        Output:
+                            150
+
+                        Here:
+                        `__add__()` defines the behaviour of the `+` operator for Student objects.
+
+                2. Run-Time Polymorphism:-
+                    Run-time polymorphism occurs when the method that should execute is decided **at runtime**.
+
+                    The main example is:
+
+                        1. Method Overriding
+
+                    1. Method Overriding:-
+                        Method overriding occurs when a **child class provides its own implementation of a method that already exists in the parent class**.
+
+                        Example:
+                            class Person:
+                                def work(self):
+                                    print("Streamline is an IT company")
+
+                            class Student(Person):
+                                def work(self):
+                                    super().work()
+                                    print("My work is done")
+
+                            s1 = Student()
+                            s1.work()
+
+                        Output:
+                            Streamline is an IT company
+                            My work is done
+
+                        Here:
+                        - `Person` → Parent class
+                        - `Student` → Child class
+                        - Both have `work()`
+                        - Child class provides its own implementation of `work()`
+
+                    2. super()
+                        `super()` is used to access the **parent class method or attributes** from the child class.
+
+                        Example:
+                            class Student(Person):
+                                def work(self):
+                                    super().work()
+                                    print("My work is done")
+
+                        Here:
+                            `super().work()` → Calls the `work()` method of the parent class.
+
+            3. Method Overloading vs Method Overriding
+
+                | Method Overloading                                     | Method Overriding                         |
+                |--------------------------------------------------------|-------------------------------------------|
+                | Same method name with different parameters             | Parent and child have the same method     |
+                | Different number/types of parameters                   | Child provides a different implementation |
+                | Usually associated with compile-time polymorphism      | Run-time polymorphism                     |
+                | Inheritance is not required                            | Inheritance is required                   |
+                | Occurs within the same class                           | Occurs between parent and child classes   |
+                | Python does not support traditional method overloading | Python supports method overriding         |
+
+            12. Quick Revision
+
+                Polymorphism → One name, many forms
+
+                Poly → Many
+                Morph → Forms
+
+                Compile-Time Polymorphism:
+                → Method Overloading
+                → Operator Overloading
+
+                Run-Time Polymorphism:
+                → Method Overriding
+
+                Method Overloading → Same method name, different parameters
+
+                Operator Overloading → Same operator, different behaviour
+
+                Method Overriding → Child class changes parent's method behaviour
+
+                `super()` → Accesses parent class method/attributes
+
+        Interview Questions on Day 22:-
+
+            1. What is Polymorphism?
+                Polymorphism means one name having many forms or behaviours.
+                Poly → Many, Morph → Forms.
+                
+            2. What are the main types of Polymorphism?
+                Compile-Time Polymorphism
+                Run-Time Polymorphism
+            
+            3. What is Compile-Time Polymorphism?
+                It is polymorphism where the behaviour is associated with operations such as:
+                Method Overloading
+                Operator Overloading
+
+            4. What is Method Overloading?
+                Method overloading means using the same method name with different parameters.
+
+                In Python, traditional method overloading is not directly supported, 
+                but similar behaviour can be achieved using default parameters or *args.
+
+            5. What is Operator Overloading?
+                Operator overloading means giving an operator different behaviour depending on the objects or operands.
+
+                Example:
+
+                    10 + 20
+                    "Hello" + "World"
+
+                Here, + behaves differently for numbers and strings.
+
+            6. What is the __add__() method?
+                __add__() is a special method used to define the behaviour of the + operator for objects.
+                
+            7. What is Run-Time Polymorphism?
+                Run-time polymorphism occurs when the method to execute is decided at runtime.
+                
+            8. What is Method Overriding?
+                Method overriding occurs when a child class provides its own implementation of a method already present in the parent class.
+                
+            9. Is Inheritance required for Method Overriding?
+                Yes. Method overriding occurs between a parent class and child class, so inheritance is required.
+
+            10. What is super() used for in Method Overriding?
+                super() is used to call a method of the parent class from the child class.
+
+                Ex:-
+                    class Student(Person):
+                        def work(self):
+                            super().work()
+                            print("Student work")
+            
+            11. What is the difference between Method Overloading and Method Overriding?
+                Method Overloading	                                        Method Overriding
+
+                Same method name with different parameters	                Same method in parent and child
+                Inheritance is not required	                                Inheritance is required
+                Associated with compile-time polymorphism	                Run-time polymorphism
+                Usually within the same class	                            Between parent and child classes
+                Python does not support traditional overloading directly	Python supports overriding
+
+            12. Give a real-world example of Polymorphism.
+                A pay() method can have different behaviours:
+
+                UPI → Payment through UPI
+                Credit Card → Payment through Credit Card
+                Cash → Payment through Cash
+
+                The method name is the same, but its behaviour is different.
+
+            ⭐ Quick Revision
+
+                Polymorphism → One name, many forms
+
+                Compile-Time → Method Overloading + Operator Overloading
+
+                Run-Time → Method Overriding
+
+                Overloading → Same method name, different parameters
+
+                Overriding → Child changes the parent's method behaviour
+
+                __add__() → Operator overloading for +
+
+                super() → Calls parent class method
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 25(6/10/26):-
+
+        Python Internship Notes: Day 23 - Encapsulation
+
+            1. Encapsulation
+                Encapsulation is one of the **four major pillars of OOP**.
+                Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+                It helps to protect data from unwanted or direct access.
+
+            2.Access Modifiers
+                Access modifiers are used to control the **accessibility of class members**, such as attributes and methods.
+
+                Python mainly uses three types:
+
+                    1. Public
+                    2. Protected
+                    3. Private
+
+                    1. Public Access Modifier
+                        Public members can be accessed **from anywhere**.
+                        In Python, public members are created normally without `_` or `__`.
+
+                        Example:
+                            class Student:
+                                def __init__(self, name):
+                                    self.name = name
+
+                            c1 = Student("John")
+
+                            print(c1.name)
+
+                        Output:
+                            John
+
+                        Here:
+                        `self.name` → Public attribute
+
+                    2. Protected Access Modifier
+                        Protected members are intended to be accessed **within the class and its subclasses**.
+                        They are represented using a **single underscore `_`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, age):
+                                    self._age = age
+
+                            c1 = Student(20)
+
+                            print(c1._age)
+
+                        Output:
+                            20
+
+                        Important:
+                        Python does not strictly prevent access to protected members.
+                        The `_` is mainly a convention that means:
+                        "This member is intended for internal/subclass use."
+
+                    3. Private Access Modifier
+                        Private members are intended to be accessed **only within the class**.
+
+                        They are represented using **double underscores `__`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, marks):
+                                    self.__marks = marks
+
+                            c1 = Student(85)
+
+                            print(c1.__marks)
+
+                        This will raise:
+                            AttributeError
+
+                        The private attribute should not be accessed directly from outside the class.
+
+            3. Example of All Access Modifiers
+
+                class Student:
+                    def __init__(self, name, age, marks):
+                        self.name = name
+                        self._age = age
+                        self.__marks = marks
+
+                c1 = Student("John", 20, 85)
+
+                print(c1.name)    # Public
+                print(c1._age)    # Protected
+                # print(c1.__marks)  # Private - AttributeError
+
+                Here:
+                    - `name` → Public
+                    - `_age` → Protected
+                    - `__marks` → Private
+
+            4. Getter Method
+                A getter method is used to **retrieve the value of a private attribute**.
+                It provides controlled access to private data.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def get_marks(self):
+                            return self.__marks
+
+                    c1 = Student(85)
+
+                    print(c1.get_marks())
+
+                Output:
+                    85
+
+                Syntax:
+                    def get_<attribute_name>(self):
+                        return self.__attribute_name
+
+            5. Setter Method
+                A setter method is used to **set or update the value of a private attribute**.
+                It can also be used to apply validation before changing the value.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def set_marks(self, marks):
+                            self.__marks = marks
+
+                    c1 = Student(85)
+
+                    c1.set_marks(90)
+
+            6. Getter and Setter Example
+
+                Code:-
+                    class Bank:
+                        def __init__(self, balance):
+                            self.__balance = balance
+
+                        def get_balance(self):
+                            return self.__balance
+
+                        def set_balance(self, balance):
+                            if balance >= 0:
+                                self.__balance = balance
+                            else:
+                                print("Balance cannot be negative.")
+
+                    b1 = Bank(1000)
+
+                    print(b1.get_balance())
+
+                    b1.set_balance(-1500)
+
+                    print(b1.get_balance())
+
+                Output:
+                    1000
+                    Balance cannot be negative.
+                    1000
+
+                Here:
+                    - `__balance` → Private attribute
+                    - `get_balance()` → Getter
+                    - `set_balance()` → Setter
+                    - Negative balance is rejected using validation.
+
+            7. Why Do We Use Getter and Setter?
+                Getter and setter methods provide **controlled access to private data**.
+
+                For example:
+                - Getter → Read the value
+                - Setter → Update the value
+                - Setter can validate the new value before updating it.
+
+            8. Difference Between Public, Protected and Private
+
+                | Public                    | Protected                     | Private                |
+                |---------------------------|-------------------------------|------------------------|
+                | No underscore             | Single `_`                    | Double `__`            |
+                | Can be accessed normally  | Intended for class/subclasses | Intended for the class |
+                | `self.name`               | `self._age`                   | `self.__marks`         |
+                | No access restriction     | Convention-based              | Name mangling is used  |
+
+            9. Quick Revision:-
+
+                Encapsulation → Binding data and methods + controlling access
+
+                Public → `self.name`
+                Protected → `self._age`
+                Private → `self.__marks`
+
+                Getter → Reads private data
+                Setter → Updates private data
+
+                `get_marks()` → Get private value
+                `set_marks()` → Set/update private value
+
+                Important:
+                Python does not provide strict access control like some languages.
+                Protected and private members are implemented mainly through naming conventions and name mangling.
+
+        Interview Questions On Day 23:-
+
+            1. What is Encapsulation in Python?
+                Encapsulation is one of the four pillars of OOP.
+                It means binding data and methods together inside a class and controlling access to the data.
+            
+            2. What are Access Modifiers in Python?
+                Access modifiers define the intended accessibility of class members. The three types are:
+                - Public
+                - Protected
+                - Private
+            
+            3. What is a Public Member?
+                A public member can be accessed normally from anywhere.
+                
+                Ex:-
+                    self.name = name
+
+            4. What is a Protected Member?
+                A protected member is intended for use within the class and its subclasses. It is written using a single underscore _.
+                
+                    Ex:-
+                        self._age = age
+                
+                Python does not strictly prevent access to protected members.
+          
+            5. What is a Private Member?
+                A private member is intended to be accessed within its class. It is written using double underscores __.
+                    
+                Ex:-
+                    self.__marks = marks
+                
+            6. What is the difference between Public, Protected and Private Members?
+            
+                | Public              | Protected                       | Private                           |
+                |---------------------|---------------------------------|-----------------------------------|
+                | No underscore       | Single _                        | Double __                         |
+                | self.name           | self._age                       | self.__marks                      |
+                | Accessible normally | Intended for class/subclass use | Intended for use within the class |
+            
+            7. Can we access a Private Attribute directly outside the class?
+                Normally, accessing it by its original name raises an AttributeError.
+                
+                Ex:-
+                    print(obj.__marks)
+                
+                Python uses name mangling for double-underscore attributes, but this is not absolute security.
+            
+            8. What is a Getter Method?
+                A getter method is used to retrieve the value of an attribute, such as a private attribute.
+                
+                Ex:-  
+                    def get_balance(self):
+                        return self.__balance
+
+            9. What is a Setter Method?
+                A setter method is used to update an attribute's value. It can validate the value before updating it.
+            
+                Ex:-
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+        
+            10. What is the difference between Getter and Setter?
+                - Getter → Reads or returns a value.
+                - Setter → Updates a value, optionally after validation.
+      
+            11. Why do we use Getter and Setter Methods?
+                They provide controlled access to data and allow us to validate values before updating them.
+          
+            12. How does Encapsulation protect a Bank Account's balance?
+                We can store the balance in a private attribute and use a setter to reject invalid values.
+            
+                Ex:-
+                class Bank:
+                    def __init__(self, balance):
+                        self.__balance = balance
+
+                    def get_balance(self):
+                        return self.__balance
+
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+                        else:
+                            print("Balance cannot be negative")
+                            
+                If the balance is 1000 and we try to set it to -1500, the setter rejects the update, so the balance remains 1000.
+          
+            ⭐ Quick Revision
+                - Encapsulation → Binding data and methods together and controlling access.
+                - Public → self.name
+                - Protected → self._age
+                - Private → self.__marks
+                - Getter → Read a value.
+                - Setter → Update and validate a value.
+                Interview tip: Be ready to explain the Bank Account example, especially how the setter prevents a negative balance.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 26(7/10/26):-
+
+        Python Internship Notes: Day 24 - Abstraction
+
+            1.Abstraction:-
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: While driving a car, we use the steering wheel, brakes, and accelerator without knowing all the internal working mechanisms.
+
+            2. Abstract Class:-
+                An abstract class is a class that provides a blueprint for other classes. 
+                It can define compulsory methods that child classes must implement.
+                In Python, we use the `ABC` class and `@abstractmethod` decorator from the `abc` module.
+
+            3. Important Keywords:-
+                - `ABC`: Used to create an abstract base class.
+                - `@abstractmethod`: Defines a method that child classes must implement.
+                - Abstract Method: A method declared in the abstract class that must be implemented by a concrete child class.
+                - Concrete Class: A class that implements all required abstract methods and can be used to create objects.
+
+            4. Real-World Example:- Car Abstraction
+                In the car example, the abstract class defines three compulsory methods:
+                - `chassis()`
+                - `airbag()`
+                - `body()`
+
+                Every child class must implement these three methods. 
+                It can also define additional methods according to its requirements.
+
+                Example:
+                    from abc import ABC, abstractmethod
+
+                    class Car(ABC):
+                        @abstractmethod
+                        def chassis(self):
+                            pass
+
+                        @abstractmethod
+                        def airbag(self):
+                            pass
+
+                        @abstractmethod
+                        def body(self):
+                            pass
+
+                    class TataCar(Car):
+                        def chassis(self):
+                            print("Chassis implemented")
+
+                        def airbag(self):
+                            print("Airbag implemented")
+
+                        def body(self):
+                            print("Car body implemented")
+
+                        def music_system(self):
+                            print("Music system added")
+
+                    car = TataCar()
+                    car.chassis()
+                    car.airbag()
+                    car.body()
+                    car.music_system()
+
+                Output:
+                    Chassis implemented
+                    Airbag implemented
+                    Car body implemented
+                    Music system added
+
+                Explanation:
+                    - `Car` is an abstract class.
+                    - `chassis()`, `airbag()`, and `body()` are compulsory methods.
+                    - `TataCar` implements all three methods.
+                    - `music_system()` is an additional method.
+                    - If a child class does not implement all abstract methods, Python does not allow its object to be created.
+
+            5. Rules of Abstraction:-
+                - An abstract class can contain abstract and normal methods.
+                - An abstract class cannot be instantiated while it still has unimplemented abstract methods.
+                - A concrete child class must implement all inherited abstract methods.
+                - A child class can add its own methods.
+                - Abstraction helps maintain a common structure across different classes.
+
+            6. Abstraction vs Encapsulation:-
+                Abstraction:
+                    - Hides implementation details.
+                    - Focuses on what an object does.
+                    - Example: A car provides a common structure with compulsory methods.
+
+                Encapsulation:
+                    - Combines data and methods inside a class and controls access to data.
+                    - Focuses on protecting and managing data.
+                    - Example: A bank account uses a private balance with getter and setter methods.
+
+            7. Stand-up Calls and Stand-up Meetings:-
+                A stand-up meeting is a short, regular team meeting used to share progress, plans, and blockers.
+
+                Main purposes:
+                    - Understand the progress of team members.
+                    - Identify problems early.
+                    - Coordinate work among team members.
+                    - Keep everyone updated on project status.
+
+                8. Three Common Stand-up Questions
+                    Each team member generally answers:
+                    1. What did I do yesterday?
+                    2. What will I do today?
+                    3. Am I facing any blockers or difficulties?
+
+                Example:
+                    Yesterday: I completed Python exception-handling notes.
+                    Today: I will learn abstraction and practise coding.
+                    Blocker: I need help understanding abstract methods.
+
+            9. Stand-up Call Etiquette:-
+                - Join the meeting on time.
+                - Keep updates short and clear.
+                - Explain completed and planned work.
+                - Mention blockers honestly.
+                - Listen to other team members.
+                - Avoid unrelated discussions.
+                - Discuss detailed problems separately after the meeting.
+
+            10. Benefits of Stand-up Meetings:-
+                - Improves team communication.
+                - Helps track daily progress.
+                - Identifies blockers quickly.
+                - Encourages accountability.
+                - Keeps the team aligned with project goals.
+
+            11. Quick Revision:-
+                - Abstraction hides implementation details.
+                - `ABC` is used to create an abstract base class.
+                - `@abstractmethod` defines compulsory methods.
+                - In the car example, chassis(), airbag(), and body() must be implemented.
+                - Child classes can add their own methods.
+                - An abstract class with unimplemented abstract methods cannot be instantiated.
+                - Stand-up meetings are short meetings for sharing progress, plans, and blockers.
+                - The three common stand-up questions are: What did I do yesterday? What will I do today? Are there any blockers?
+
+        Interview Queastions On Day 24:-
+
+            1. What is abstraction in Python?
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: We drive a car without knowing all the internal mechanisms of its engine.
+
+            2. What is an abstract class?
+                An abstract class is a blueprint for other classes. 
+                It defines methods that child classes must implement.
+                In Python, we use the ABC class from the abc module.
+
+            3. What is an abstract method?
+                An abstract method is a method declared using the @abstractmethod decorator. 
+                A concrete child class must implement it before its object can be created.
+                
+                Ex:-
+                    from abc import ABC, abstractmethodclass 
+                    Car(ABC):    
+                        @abstractmethod    
+                        def chassis(self):        
+                        pass
+
+            4. What is the use of the ABC class?
+                ABC stands for Abstract Base Class. It helps us create abstract classes in Python.
+
+            5. What is the use of the @abstractmethod decorator?
+                It marks a method as compulsory for concrete child classes to implement.
+
+            6. Explain abstraction using the Car example.
+                In our Car example, the abstract class contains three compulsory methods:
+                - chassis()
+                - airbag()
+                - body()
+                Every concrete child class must implement all three methods. It can also add extra methods, such as music_system() or sunroof().
+
+            7. Can we create an object of an abstract class?
+                No, not while it has unimplemented abstract methods.
+                We must implement all inherited abstract methods in a concrete child class before creating its object.
+
+            8. What happens if a child class does not implement all abstract methods?
+                Python raises a TypeError when we try to create an object of that child class.
+
+            9. Can an abstract class contain normal methods?
+                Yes. An abstract class can contain both abstract methods and normal methods with complete implementations.
+
+            10. Can a child class add its own methods in abstraction?
+                Yes. A child class must implement all inherited abstract methods,
+                but it can also define additional methods according to its requirements.
+
+            11. What is the difference between abstraction and encapsulation?
+
+                Abstraction	                    Encapsulation
+                Hides implementation details.	Bundles data and methods and controls access to data.
+                Focuses on what an object does.	Focuses on managing and protecting data.
+                Example: Abstract Car class.	Example: Private bank balance with getter/setter methods.
+
+            12. What is a stand-up meeting?
+                A stand-up meeting is a short, regular team meeting where team members share their work progress, plans, and problems.
+                Purpose: To keep the team updated and identify blockers quickly.
+
+            13. What are the three common questions asked in a stand-up meeting?
+                1. What did I do yesterday?
+                2. What will I do today?
+                3. Am I facing any blockers or difficulties?
+
+            14. What is a blocker in a stand-up meeting?
+                A blocker is a problem that prevents or delays a team member from completing their work.
+                Example: Being unable to complete a Python task because of an error or a missing requirement.
+
+            15. What are the benefits of stand-up meetings?
+                - Improve team communication.
+                - Track daily progress.
+                - Identify problems early.
+                - Coordinate tasks.
+                - Keep everyone aligned with project goals.
+
+            Quick revision for interviews
+                Focus especially on these concepts:
+                    - Abstraction: Hiding implementation details.
+                    - ABC: Used to create an abstract base class.
+                    - @abstractmethod: Defines a method that concrete child classes must implement.
+                    - Car example: chassis(), airbag(), and body() are compulsory; additional methods are allowed.
+                    - Stand-up meeting: A short meeting to discuss yesterday's work, today's plan, and blockers.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 27(8/10/26):-
+
+        Python Internship Notes: Day 25 - Exception Handling & Its Ways
+
+            1. Errors:-
+                Errors are problems in a program that can cause the program to stop its execution.
+
+                Common Python Errors:
+
+                    1. ZeroDivisionError
+                        It occurs when we try to divide a number by zero.
+
+                        Example:
+                            a = 10
+                            b = 0
+                            a1 = a / b
+                            print(a1)
+
+                        Error:
+                            ZeroDivisionError
+
+                    2. SyntaxError
+                        It occurs when the Python syntax is incorrect.
+
+                        Example:
+                            i = 10
+                            if i < 5
+                                print(i)
+
+                        Error:
+                            SyntaxError
+
+                    3. IndentationError
+                        It occurs when the indentation of the code is incorrect.
+
+                        Example:
+                            a = 10
+                            if a < 5:
+                            print(a)
+
+                        Error:
+                            IndentationError
+
+                    4. ValueError
+                        It occurs when a function receives a value of the correct type but an invalid value.
+
+                        Example:
+                            num = int(input("Enter a number: "))
+                            print(num)
+
+                        If the user enters:
+                            abc
+
+                        Error:
+                            ValueError
+
+                    5. TypeError
+                        It occurs when an operation is performed between incompatible data types.
+
+                        Example:
+                            a = 10
+                            b = "abc"
+                            c = a + b
+                            print(c)
+
+                        Error:
+                            TypeError
+
+                    6. ModuleNotFoundError
+                        It occurs when Python cannot find the module that we are trying to import.
+
+                        Example:
+                            import nampy
+
+                        Error:
+                            ModuleNotFoundError
+
+            2. Exception Handling
+                Exception handling is used to **handle exceptions that occur during the execution of a program**.
+                It prevents the program from stopping suddenly and allows us to handle the error properly.
+
+                *Ways of Exception Handling:-
+                    Python provides these important keywords:
+
+                    1. try
+                    2. except
+                    3. else
+                    4. finally
+                    5. raise
+
+                    1. try
+                        The `try` block contains the code that may produce an exception.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+
+                    2. except
+                        The `except` block is used to **handle the exception** that occurs in the `try` block.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+                            except:
+                                print("Error: Division by zero is not allowed.")
+
+                        Output:
+                            Error: Division by zero is not allowed.
+
+                    3. else
+                        The `else` block executes when **no exception occurs** in the `try` block.
+
+                        Example:
+                            try:
+                                num = int(input("Enter a number: "))
+                                a = 10
+                                b = num
+                                a1 = a / b
+
+                            except:
+                                print("Error: Invalid input or division by zero is not allowed.")
+
+                            else:
+                                print("The output is:", a1)
+
+                    4. finally
+                        The `finally` block **always executes**, whether an exception occurs or not.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 2
+                                print(a / b)
+
+                            except:
+                                print("Error occurred")
+
+                            finally:
+                                print("Program execution completed")
+
+            3. Complete Exception Handling Structure
+
+                try:
+                    # Code that may cause an exception
+
+                except:
+                    # Handle the exception
+
+                else:
+                    # Executes when there is no exception
+
+                finally:
+                    # Always executes
+
+            4. raise
+                The `raise` keyword is used to **manually raise an exception** when a specific condition is not allowed.
+
+                Example:
+                    age = int(input("Enter your age: "))
+
+                    if age < 18:
+                        raise ValueError("Age less than 18 is not allowed")
+
+                    print("You are eligible to vote")
+
+                If the user enters:
+                    16
+
+                Output:
+                    ValueError: Age less than 18 is not allowed
+
+            5. ATM Example Using Exception Handling
+
+                password = 123
+                i = 0
+
+                while i < 3:
+                    try:
+                        pin = int(input("Enter a PIN: "))
+
+                        if pin == password:
+                            print("Amount Debited")
+                            break
+
+                        else:
+                            i = i + 1
+                            print("Wrong PIN. Try again")
+
+                            if i == 3:
+                                print("Your card is blocked")
+
+                    except ValueError:
+                        i = i + 1
+                        print("Please enter a valid PIN")
+
+                        if i == 3:
+                            print("Your card is blocked")
+
+                    finally:
+                        print("Thank you for using ATM")
+
+            6. Important Points
+
+                - `try` → Contains risky code
+                - `except` → Handles the exception
+                - `else` → Runs when no exception occurs
+                - `finally` → Always runs
+                - `raise` → Manually raises an exception
+                - Exception handling prevents unexpected program termination.
+                - Specific exceptions such as `ValueError` and `ZeroDivisionError` can be handled separately.
+
+            Quick Revision:
+
+                Error → Problem in a program
+
+                ZeroDivisionError → Division by zero
+                SyntaxError → Incorrect syntax
+                IndentationError → Incorrect indentation
+                ValueError → Invalid value
+                TypeError → Incompatible data types
+                ModuleNotFoundError → Module not found
+
+                Exception Handling:
+                try → Test risky code
+                except → Handle error
+                else → No error
+                finally → Always executes
+                raise → Manually raise exception
+
+        Interview Questions On Day 25:-
+
+            1. What is exception handling in Python?
+                Exception handling is a way to handle runtime errors so that a program can continue running instead of terminating unexpectedly.
+                Example: Handling division by zero.
+            
+            2. What is the difference between an error and an exception?
+                - Error: A problem in the program, such as a syntax error.
+                - Exception: An issue that occurs during program execution and can often be handled.
+                Examples: SyntaxError, ZeroDivisionError, ValueError.
+                
+            3. What are the keywords used in exception handling?
+                Python provides five commonly used keywords:
+                - try – Contains code that may cause an exception.
+                - except – Handles the exception.
+                - else – Executes if no exception occurs in the try block.
+                - finally – Executes whether an exception occurs or not, under normal program execution.
+                - raise – Manually raises an exception.
+            
+            4. What is the use of the try and except blocks?
+                The try block contains risky code, and the except block handles an exception if one occurs.
+                    
+                Ex:-    
+                    try:    
+                        print(10 / 0)
+                    
+                    except ZeroDivisionError:    
+                        print("Cannot divide by zero")
+
+                Output:
+                    Cannot divide by zero
+
+            5. What is the use of the else block?
+                The else block executes only when no exception occurs in the try block.
+                
+                Ex:-
+                    try:    
+                        print(10 / 2)
+                    
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                    
+                    else:    
+                        print("Division successful")
+
+                Output:
+                    5.0
+                    Division successful
+
+            6. What is the use of the finally block?
+                The finally block is generally used for cleanup tasks, such as closing files or releasing resources.
+                It runs whether an exception occurs or not during normal execution.
+                
+                Ex:-    
+                    try:    
+                        print(10 / 2)
+                        
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                        
+                    finally:    
+                        print("Program completed")
+
+                Output:
+                    5.0
+                    Program completed
+
+            7. What is the difference between except and finally?
+             
+                            except	                                    finally
+                Handles an exception.	                    Performs cleanup or final actions.
+                Executes when a matching exception occurs.	Normally executes whether an exception occurs or not.
+            
+            8. What is the raise keyword?
+                The raise keyword is used to manually generate an exception when a condition is not satisfied.
+
+                Ex:-  
+                    age = 16 
+                    if age < 18:    
+                        raise ValueError("Age must be 18 or above")
+
+                Output: ValueError: 
+                    Age must be 18 or above
+
+            9. Name some common built-in exceptions in Python.
+ 
+                Exception	            When it occurs
+                ZeroDivisionError	    Dividing by zero
+                ValueError	            Correct type but invalid value
+                TypeError	            Operation uses an incompatible type
+                IndexError	            Accessing an invalid sequence index
+                KeyError	            Accessing a missing dictionary key
+                NameError	            Using an undefined variable
+                ModuleNotFoundError	    Importing a module that cannot be found
+                SyntaxError	            Invalid Python syntax
+            
+            10. What is the difference between ValueError and TypeError?
+                - ValueError: The data type is correct, but the value is invalid.
+                - TypeError: The operation or function receives an inappropriate data type.
+            
+                Examples:
+                    int("hello")      # ValueError
+                    "5" + 5           # TypeError
+
+            11. Why should we avoid using a bare except: block?
+                A bare except: can catch almost every exception, making unexpected problems difficult to identify.
+                It is better to catch specific exceptions.
+            
+                Ex:-    
+                    try:    
+                        num = int(input("Enter a number: "))
+                        
+                    except ValueError:    
+                        print("Please enter a valid integer")
+
+            12. How would you write an ATM PIN program with three attempts?
+                This program allows three attempts.
+                If all attempts are incorrect, the card is blocked.
+
+                Ex:-
+                    correct_pin = "1234"
+                    
+                    for attempt in range(3):    
+                        pin = input("Enter your ATM PIN: ")    
+                        if pin == correct_pin:        
+                            print("Access granted")        
+                            break    
+                        else:        
+                        print("Incorrect PIN")
+                        
+                    else:    
+                    print("Your card is blocked")
+
+                Important concept: 
+                    The for...else block executes only if the loop finishes without encountering break.
+                    This is why the card is blocked only after all three attempts fail.
+
+            Quick revision for your interview
+                Remember these five points especially well:
+                1. try – Tests risky code.
+                2. except – Handles exceptions.
+                3. else – Runs when no exception occurs.
+                4. finally – Used for cleanup and final actions.
+                5. raise – Manually raises an exception.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
