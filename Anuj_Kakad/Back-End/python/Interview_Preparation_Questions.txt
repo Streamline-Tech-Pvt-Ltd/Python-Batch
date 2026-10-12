@@ -6485,3 +6485,304 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 5. raise – Manually raises an exception.
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 28(12/10/26):-
+
+        Python Notes:- Day 26 - File Handling
+
+            1. File Handling:-
+                File handling is the process of creating, reading, writing, appending, and updating data in a file using Python.
+
+            2. File Opening Syntax:-
+                file = open("filename", "mode")
+                file.close()
+
+                Example:
+                    file = open("python.txt", "r")
+                    data = file.read()
+                    file.close()
+                    print(data)
+
+            3. File Opening Modes:-
+                - r  : Read an existing file. Gives an error if the file does not exist.
+                - w  : Write data. Creates a file if it does not exist; overwrites existing content.
+                - a  : Append data at the end. Creates a file if it does not exist.
+                - r+ : Read and write. The file must exist; writing starts at the current cursor position.
+                - x  : Create a new file. Gives an error if the file already exists.
+
+                1. Creating a File:-
+                    The "x" mode creates a new file.
+                    file = open("demo.txt", "x")
+                    file.close()
+                    print("File created successfully")
+
+                    Note: If demo.txt already exists, Python raises FileExistsError.
+
+                2. Writing Data into a File:-
+                    The "w" mode writes data into a file.
+                    file = open("python.txt", "w")
+                    file.write("Hello World!")
+                    file.close()
+                    print("Data written successfully")
+
+                    Note: If the file already contains data, "w" overwrites it.
+
+                3. Reading Data from a File:-
+                    The "r" mode reads the contents of a file.
+                    file = open("python.txt", "r")
+                    data = file.read()
+                    file.close()
+                    print(data)
+
+                    Output:
+                        Hello World!
+
+                4. Appending Data to a File
+                    The "a" mode adds new data at the end without removing existing content.
+                    file = open("python.txt", "a")
+                    file.write("\nGood Morning!")
+                    file.write("\nStreamline Tech")
+                    file.close()
+                    print("Data appended successfully")
+
+                5. Updating a File Using r+
+                    The "r+" mode allows both reading and writing. It does not automatically add new data at the end.
+                    file = open("python.txt", "r+")
+                    data = file.read()
+                    file.write("\nWelcome to Streamline Tech")
+                    file.close()
+                    print(data)
+                    print("Data updated successfully")
+
+                    Note: After read(), the file cursor is usually at the end, so the new text is written there. Use seek() to change the cursor position.
+
+            4. File Reading Methods:-
+                - read(): Reads the entire remaining content as a string by default.
+                - readline(): Reads one line at a time and returns a string.
+                - readlines(): Reads all remaining lines and returns a list of strings.
+
+                Example:
+                    file = open("python.txt", "r")
+                    data = file.readline()
+                    print(data)
+                    file.close()
+
+                Example of readlines():
+                    file = open("python.txt", "r")
+                    data = file.readlines()
+                    print(data)
+                    file.close()
+
+                If the file contains:
+                    Hello World!
+                    Good Morning!
+                    Streamline Tech
+
+                readline() output:
+                    Hello World!
+
+                readlines() output:
+                    ['Hello World!\n', 'Good Morning!\n', 'Streamline Tech']
+
+                Note: The '\n' character represents a newline and may be included in the returned strings.
+
+            5. Difference Between read(), readline() and readlines()
+
+                read():
+                - Reads all remaining content by default.
+                - Returns a string.
+
+                readline():
+                - Reads one line at a time.
+                - Returns a string.
+
+                readlines():
+                - Reads all remaining lines.
+                - Returns a list of strings.
+
+            6. File Cursor and seek():-
+                The file cursor indicates the current position from which reading or writing happens.
+                - tell(): Returns the current cursor position.
+                - seek(position): Moves the cursor to a specified position.
+
+                Example:
+                    file = open("python.txt", "r")
+                    print(file.tell())
+                    file.seek(0)
+                    print(file.read())
+                    file.close()
+
+            7. Using the with Statement:-
+                The with statement automatically closes the file after the block finishes, even if an exception occurs.
+
+                Example:
+                    with open("python.txt", "r") as file:
+                        data = file.read()
+                        print(data)
+
+                Advantage: No need to call file.close() manually.
+
+            8. File Handling Exceptions:-
+                - FileNotFoundError: The file does not exist when opening it for reading.
+                - FileExistsError: The file already exists when using "x" mode.
+                - PermissionError: The program does not have the required permission.
+                - IsADirectoryError: A directory is used where a file is expected.
+
+            9. Important Points to Remember:-
+                - "r" reads; "w" writes and overwrites; "a" appends; "x" creates a new file.
+                - "r+" allows reading and writing but requires an existing file.
+                - "w" and "a" create the file if it does not exist.
+                - Always close files when not using the with statement.
+                - Prefer with open() for safer and cleaner file handling.
+                - read(), readline(), and readlines() have different return types.
+                - File paths on Windows can use raw strings, such as r"D:\Streamline batch\Python_batch\python2.txt".
+
+        Interview Questions On day 26:-
+
+            1. What is file handling in Python?
+                File handling is the process of creating, reading, writing, appending, and updating data in files using Python.
+                
+            2. What are the different file opening modes in Python?
+                The important file modes are:
+                Mode	Purpose
+                r	Reads an existing file
+                w	Writes data and overwrites existing content
+                a	Appends data at the end
+                x	Creates a new file
+                r+	Allows reading and writing
+            
+            3. What is the difference between w and a modes?
+                - w: Overwrites existing file content.
+                - a: Adds new content at the end without removing existing content.
+            
+                Ex:-
+                    file = open("demo.txt", "w")
+                    file.write("Hello")
+                    file.close
+                    
+                    ()file = open("demo.txt", "a")
+                    file.write(" World")
+                    file.close()
+
+                File content: Hello World
+
+            4. What is the difference between r and r+ modes?
+                - r: Opens an existing file for reading only.
+                - r+: Opens an existing file for both reading and writing.
+                Both require the file to exist. In r+ mode, writing starts at the current cursor position.
+            
+            5. What is the difference between w and x modes?
+                - w: Creates a file if it does not exist, but overwrites it if it already exists.
+                - x: Creates a new file and raises FileExistsError if the file already exists.
+                
+            6. What is the difference between read(), readline(), and readlines()?
+                This is one of the most important interview questions from this topic.
+           
+                Method	     Purpose	                                Return type
+                
+                read()	     Reads all remaining content by default	    String
+                readline()	 Reads one line	                            String
+                readlines()	 Reads all remaining lines	                List of strings
+           
+            7. What does the readline() method do?
+                The readline() method reads one line at a time from a file.
+                
+                Ex:-
+                    with open("demo.txt", "r") as file:    
+                        print(file.readline())
+
+                It returns a string containing the line, usually including its newline character if present.
+          
+            8. What does the readlines() method do?
+                The readlines() method reads all remaining lines and returns them as a list of strings.
+                
+                Ex:-    
+                    with open("demo.txt", "r") as file:
+                        data = file.readlines()
+                        print(data)
+
+                Example output:
+                    ['Hello\n', 'Python\n', 'Welcome']
+
+            9. What is the difference between write() and writelines()?
+                - write(): Writes a single string.
+                - writelines(): Writes multiple strings from an iterable, such as a list.
+                
+                Important: writelines() does not automatically add newline characters.
+
+                Ex:-    
+                    with open("demo.txt", "w") as file:
+                        file.write("Hello\n")
+                        file.writelines(["Python\n", "Welcome"])
+
+            10. Why is the close() method used?
+                The close() method closes an opened file and releases its associated resources.
+                It helps ensure pending data is properly flushed.
+                
+                Ex:-    
+                    file = open("demo.txt", "r")
+                    print(file.read())
+                    file.close()
+
+            11. What is the with open() statement, and why is it preferred?
+                The with open() statement manages the file automatically and closes it when the block exits.
+
+                Ex:-
+                    with open("demo.txt", "r") as file:
+                        print(file.read())
+
+                Advantage: You do not need to call close() manually.
+
+            12. What is a file cursor? Explain seek() and tell().
+                The file cursor indicates the current position used for reading or writing.
+                - tell(): Returns the current cursor position.
+                - seek(position): Moves the cursor to a specified position.
+                
+                Ex:-    
+                    with open("demo.txt", "r") as file:
+                        print(file.tell())
+                        file.seek(0)
+                        print(file.read())
+
+            13. What happens if we open a nonexistent file in r mode?
+                Python raises a FileNotFoundError.
+
+                Ex:-
+                    with open("missing.txt", "r") as file:
+                        print(file.read())
+
+                If missing.txt does not exist, the program raises the exception.
+            
+            14. What is FileExistsError?
+                FileExistsError occurs when you try to create a file using x mode and that file already exists.
+
+                Ex:-    
+                    file = open("demo.txt", "x")
+
+                If demo.txt already exists, Python raises FileExistsError.
+
+            15. How can you update a file in Python?
+                You can use r+ to read and write an existing file. However, it does not automatically append new data; 
+                the cursor position determines where writing starts.
+
+                Ex:-    
+                    with open("demo.txt", "r+") as file:
+                        data = file.read()
+                        file.write("\nNew content")
+
+                Here, the new content is written at the current cursor position, which is normally the end after read().
+                For replacing specific text, you can read the content, modify the string, and write the updated content back using w mode.
+                Be careful because w truncates the file.
+
+            Quick interview revision
+                Focus on these concepts first:
+                    1. File handling and its purpose.
+                    2. Differences between r, w, a, x, and r+.
+                    3. Differences between read(), readline(), and readlines().
+                    4. Differences between write() and writelines().
+                    5. close() vs with open().
+                    6. File cursor, seek(), and tell().
+                    7. FileNotFoundError and FileExistsError.
+                    8. How to append and update file content.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
