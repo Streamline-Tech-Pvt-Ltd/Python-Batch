@@ -1,115 +1,148 @@
-# Exception Handling in Python
+# # Exception Handling in Python
 
-# Example 1: Handling Division by Zero
-password = 1234
-i = 3
+# # Example 1: Handling Division by Zero
+# password = 1234
+# i = 3
 
-for i in range(i):
-    try:
-        pin = int(input("Enter the password:- "))
+# for i in range(i):
+#     try:
+#         pin = int(input("Enter the password:- "))
 
-        if pin == password:
-            print("Access Granted")
-        else:
-            remaining = 2 - i
-            if remaining > 0:
-                print("Incorrect PIN!")
-            else:
-                print("Incorrect PIN!")
-                print("Your card has been BLOCKED.")
+#         if pin == password:
+#             print("Access Granted")
+#         else:
+#             remaining = 2 - i
+#             if remaining > 0:
+#                 print("Incorrect PIN!")
+#             else:
+#                 print("Incorrect PIN!")
+#                 print("Your card has been BLOCKED.")
     
-    except ValueError:
-        print("Invalid Password! Please enter a valid integer.")
+#     except ValueError:
+#         print("Invalid Password! Please enter a valid integer.")
 
-    # else:
-    #     print("Access Granted")
+#     # else:
+#     #     print("Access Granted")
 
-    finally:
-        print("Transaction completed.")
-
-
-# Example 2: Check age eligibility for voting
-
-age = int(input("Enter your age: "))
-if age < 18:
-    raise Exception("You are not eligible to vote. You must be at least 18 years old.")
-print("You are eligible to vote.")
-
-# Using try-except block to handle the exception:-
-
-try:
-    age = int(input("Enter your age:- "))
-    if age < 18:
-        raise Exception("You are not eligible to vote. You must be at least 18 years old.")
-    print("You are eligible to vote.")
-
-except ValueError:
-    print("Invalid input! Please enter a valid integer for age.")
-
-finally:
-    print("Thank you for using the voting eligibility checker.")
+#     finally:
+#         print("Transaction completed.")
 
 
-# Example 3: Login System with Exception Handling:
+# # Example 2: Check age eligibility for voting
 
-username = "admin"
-Password = 1234
+# age = int(input("Enter your age: "))
+# if age < 18:
+#     raise Exception("You are not eligible to vote. You must be at least 18 years old.")
+# print("You are eligible to vote.")
 
-user_input = input("Enter your username:- ")
-pass_input = int(input("Enter your password:- "))
-if username == user_input and Password == pass_input:
-    print("Login successful!")
+# # Using try-except block to handle the exception:-
 
-else:
-    raise  ValueError("Invalid username or password. Please try again.")
+# try:
+#     age = int(input("Enter your age:- "))
+#     if age < 18:
+#         raise Exception("You are not eligible to vote. You must be at least 18 years old.")
+#     print("You are eligible to vote.")
 
-# Using try-except block to handle the exception:-
+# except ValueError:
+#     print("Invalid input! Please enter a valid integer for age.")
 
-username = "admin"
-Password = 1234
-
-try:
-    user_input = input("Enter your username:- ")
-    pass_input = int(input("Enter your password:- "))
-    if username == user_input and Password == pass_input:
-        print("Login successful!")
-    else:
-        print("Invalid username or password. Please try again.")
-
-except ValueError:
-    print("Invalid input! Please enter a valid username and password.")
-
-finally:
-    print("Thank you for using the login system.")
+# finally:
+#     print("Thank you for using the voting eligibility checker.")
 
 
-# Example 4: Bank Withdrawal with Exception Handling:
+# # Example 3: Login System with Exception Handling:
 
-balance = 10000
+# username = "admin"
+# Password = 1234
 
-amount = int(input("Enter the amount to withdraw:- "))
-if amount > balance and amount <= 0:
-    raise ValueError("Invalid amount. Please enter a valid withdrawal amount.")
-print("Withdrawal successful! Your remaining balance is:", balance - amount)
+# user_input = input("Enter your username:- ")
+# pass_input = int(input("Enter your password:- "))
+# if username == user_input and Password == pass_input:
+#     print("Login successful!")
 
-# Using try-except block to handle the exception:-
+# else:
+#     raise  ValueError("Invalid username or password. Please try again.")
 
-balance = 10000
+# # Using try-except block to handle the exception:-
 
-try:
-    amount = int(input("Enter the amount to withdraw:- "))
-    if amount < balance and amount > 0:
-        print("Withdrawal successful!")
+# username = "admin"
+# Password = 1234
+
+# try:
+#     user_input = input("Enter your username:- ")
+#     pass_input = int(input("Enter your password:- "))
+#     if username == user_input and Password == pass_input:
+#         print("Login successful!")
+#     else:
+#         print("Invalid username or password. Please try again.")
+
+# except ValueError:
+#     print("Invalid input! Please enter a valid username and password.")
+
+# finally:
+#     print("Thank you for using the login system.")
+
+
+# # Example 4: Bank Withdrawal with Exception Handling:
+
+# balance = 10000
+
+# amount = int(input("Enter the amount to withdraw:- "))
+# if amount > balance and amount <= 0:
+#     raise ValueError("Invalid amount. Please enter a valid withdrawal amount.")
+# print("Withdrawal successful! Your remaining balance is:", balance - amount)
+
+# # Using try-except block to handle the exception:-
+
+# balance = 10000
+
+# try:
+#     amount = int(input("Enter the amount to withdraw:- "))
+#     if amount < balance and amount > 0:
+#         print("Withdrawal successful!")
     
-    else:
-        print("Insufficient Balance. Please enter a valid withdrawal amount.")
+#     else:
+#         print("Insufficient Balance. Please enter a valid withdrawal amount.")
     
-except ValueError:
-    print("Invalid input! Please enter a valid integer for the withdrawal amount.")
+# except ValueError:
+#     print("Invalid input! Please enter a valid integer for the withdrawal amount.")
 
-else:
-    if amount < balance and amount > 0:
-        print("Your remaining balance is:", balance - amount)
+# else:
+#     if amount < balance and amount > 0:
+#         print("Your remaining balance is:", balance - amount)
 
-finally:
-    print("Thank you for using the bank withdrawal system.")
+# finally:
+#     print("Thank you for using the bank withdrawal system.")
+
+
+
+# # Example 5:- FileExistsError: Raised when trying to create a file or directory that already exists.
+
+# # using try-except block to handle the exception:
+
+# try:
+#     file = open("Functions.py", "x")
+#     file.close()
+
+# except FileExistsError:
+#     print("File already exists. Please choose a different name or delete the existing file.")
+
+# finally:
+#     print("File operation completed.")
+
+
+
+# # Example 6:- FileNotFoundError: Raised when trying to access a file that does not exist.
+
+# try:
+#     file = open("AbcDef.txt", "r")
+#     file.close()
+
+# except FileNotFoundError:
+#     print("File not found. Please check the file name and try again.")
+
+# else:
+#     print("File opened successfully.")
+
+# finally:
+#     print("File operation completed.")
