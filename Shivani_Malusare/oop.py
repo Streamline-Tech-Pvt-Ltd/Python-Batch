@@ -3281,3 +3281,1064 @@ print(result)
 | `map()`    | Transform each element | Multiple transformed values |
 | `filter()` | Select elements        | Filtered values             |
 | `reduce()` | Combine elements       | Single value                |
+
+
+# Python OOPs – Complete Notes
+
+## 1. Object-Oriented Programming (OOP)
+
+### Definition
+Object-Oriented Programming (OOP) is a programming approach based on classes and objects. It helps organize code, reuse code, and manage data effectively.
+
+### Four Pillars of OOP
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Abstraction
+
+### Real-World Example
+Consider a mobile phone.
+
+- Class: Mobile
+- Object: Samsung mobile
+- Attributes: Brand, price, battery
+- Methods: Call, message, take_photo
+
+---
+
+## 2. Class and Object
+
+### Class
+A class is a blueprint for creating objects.
+
+### Object
+An object is an instance of a class.
+
+### Example
+
+```python
+class Mobile:
+    def __init__(self, brand, price):
+        self.brand = brand
+        self.price = price
+
+    def display(self):
+        print("Brand:", self.brand)
+        print("Price:", self.price)
+
+
+m1 = Mobile("Samsung", 20000)
+m1.display()
+```
+
+### Output
+
+```text
+Brand: Samsung
+Price: 20000
+```
+
+### Explanation
+- `class` defines a class.
+- `__init__()` initializes an object.
+- `self` refers to the current object.
+- `brand` and `price` are instance attributes.
+- `display()` is an instance method.
+- `m1` is an object.
+
+---
+
+## 3. Attributes in Python
+
+Attributes are variables associated with a class or an object.
+
+### 3.1 Instance Attributes
+
+Instance attributes belong to individual objects.
+
+```python
+class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+
+e1 = Employee("Amit", 30000)
+e2 = Employee("Priya", 40000)
+
+print(e1.name)
+print(e2.name)
+print(e1.salary)
+print(e2.salary)
+```
+
+Output:
+
+```text
+Amit
+Priya
+30000
+40000
+```
+
+### 3.2 Class Attributes
+
+Class attributes are defined inside the class but outside its methods.
+
+```python
+class Employee:
+    company = "Tech Solutions"
+
+    def __init__(self, name):
+        self.name = name
+
+
+e1 = Employee("Amit")
+e2 = Employee("Priya")
+
+print(e1.company)
+print(e2.company)
+print(Employee.company)
+```
+
+Output:
+
+```text
+Tech Solutions
+Tech Solutions
+Tech Solutions
+```
+
+### 3.3 Local Variables
+
+Local variables are defined inside a function or method.
+
+```python
+class Employee:
+    def display(self):
+        message = "Welcome to the company"
+        print(message)
+
+
+e1 = Employee()
+e1.display()
+```
+
+Output:
+
+```text
+Welcome to the company
+```
+
+### Difference Between Attributes
+
+| Instance Attribute | Class Attribute | Local Variable |
+|---|---|---|
+| Belongs to an object | Belongs to a class | Belongs to a function's scope |
+| `self.name` | `company` | `message` |
+| Usually different for each object | Shared through the class | Used within the function or method |
+
+---
+
+## 4. Methods in Python
+
+A method is a function defined inside a class.
+
+### 4.1 Instance Method
+
+An instance method uses `self` to access object attributes.
+
+```python
+class Mobile:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def show_brand(self):
+        print(self.brand)
+
+
+m1 = Mobile("Samsung")
+m1.show_brand()
+```
+
+Output:
+
+```text
+Samsung
+```
+
+### 4.2 Class Method
+
+A class method uses `cls` to access class-level data. It is declared using `@classmethod`.
+
+```python
+class Company:
+    company_name = "Tech Solutions"
+
+    @classmethod
+    def show_company(cls):
+        print(cls.company_name)
+
+
+Company.show_company()
+```
+
+Output:
+
+```text
+Tech Solutions
+```
+
+### 4.3 Static Method
+
+A static method does not automatically receive `self` or `cls`.
+
+```python
+class Calculator:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+
+print(Calculator.add(10, 20))
+```
+
+Output:
+
+```text
+30
+```
+
+### Difference Between Methods
+
+| Instance Method | Class Method | Static Method |
+|---|---|---|
+| Uses `self` | Uses `cls` | No automatic `self` or `cls` |
+| Works with object data | Works with class-level data | Performs a related utility task |
+| No special decorator required | `@classmethod` | `@staticmethod` |
+
+---
+
+## 5. Constructor in Python
+
+### Definition
+A constructor is commonly described as a special method used to initialize an object. In Python, `__init__()` initializes an object after it has been created.
+
+### 5.1 Default Constructor
+
+When a class does not define its own `__init__()`, Python can use an inherited or default initialization mechanism.
+
+```python
+class Mobile:
+    def display(self):
+        print("Mobile is ready")
+
+
+m1 = Mobile()
+m1.display()
+```
+
+Output:
+
+```text
+Mobile is ready
+```
+
+### 5.2 Non-Parameterized Constructor
+
+A custom `__init__()` that takes only `self`.
+
+```python
+class Mobile:
+    def __init__(self):
+        self.brand = "Samsung"
+        self.price = 20000
+
+    def display(self):
+        print(self.brand, self.price)
+
+
+m1 = Mobile()
+m1.display()
+```
+
+Output:
+
+```text
+Samsung 20000
+```
+
+### 5.3 Parameterized Constructor
+
+A constructor that accepts additional arguments to initialize object attributes.
+
+```python
+class Mobile:
+    def __init__(self, brand, price):
+        self.brand = brand
+        self.price = price
+
+    def display(self):
+        print(self.brand, self.price)
+
+
+m1 = Mobile("Apple", 50000)
+m1.display()
+```
+
+Output:
+
+```text
+Apple 50000
+```
+
+### Difference Between Constructor Types
+
+| Type | Description |
+|---|---|
+| Default | No custom initializer is defined in the class |
+| Non-parameterized | Custom initializer without extra arguments |
+| Parameterized | Initializer accepts extra arguments |
+
+**Note:** Python does not support traditional constructor overloading through multiple `__init__()` definitions. The last definition replaces earlier definitions.
+
+---
+
+## 6. Inheritance in Python
+
+### Definition
+Inheritance allows a child class to acquire attributes and methods from a parent class. It promotes code reusability.
+
+- Parent class: Base class or superclass
+- Child class: Derived class or subclass
+
+### Example
+
+```python
+class Company:
+    def company_info(self):
+        print("Welcome to Tech Solutions")
+
+
+class Intern(Company):
+    def intern_info(self):
+        print("I am a Data Science Intern")
+
+
+i1 = Intern()
+
+i1.company_info()
+i1.intern_info()
+```
+
+Output:
+
+```text
+Welcome to Tech Solutions
+I am a Data Science Intern
+```
+
+### Types of Inheritance
+
+#### 6.1 Single Inheritance
+
+One child inherits from one parent.
+
+```python
+class A:
+    def show(self):
+        print("Parent class")
+
+
+class B(A):
+    pass
+
+
+b = B()
+b.show()
+```
+
+#### 6.2 Multiple Inheritance
+
+One child inherits from multiple parent classes.
+
+```python
+class A:
+    def show_a(self):
+        print("Class A")
+
+
+class B:
+    def show_b(self):
+        print("Class B")
+
+
+class C(A, B):
+    pass
+
+
+c = C()
+c.show_a()
+c.show_b()
+```
+
+Output:
+
+```text
+Class A
+Class B
+```
+
+#### 6.3 Multilevel Inheritance
+
+A class inherits from another child class, forming a chain.
+
+```python
+class A:
+    def show_a(self):
+        print("Class A")
+
+
+class B(A):
+    pass
+
+
+class C(B):
+    pass
+
+
+c = C()
+c.show_a()
+```
+
+#### 6.4 Hierarchical Inheritance
+
+Multiple child classes inherit from the same parent.
+
+```python
+class Company:
+    def info(self):
+        print("Company information")
+
+
+class Developer(Company):
+    pass
+
+
+class Tester(Company):
+    pass
+
+
+d = Developer()
+t = Tester()
+
+d.info()
+t.info()
+```
+
+#### 6.5 Hybrid Inheritance
+
+A combination of two or more inheritance types.
+
+```python
+class A:
+    def show(self):
+        print("Class A")
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    pass
+
+
+class D(B, C):
+    pass
+
+
+d = D()
+d.show()
+```
+
+### The `super()` Function
+
+`super()` allows a child class to call a method from its parent according to the method resolution order (MRO).
+
+```python
+class Company:
+    def __init__(self):
+        print("Company constructor")
+
+
+class Intern(Company):
+    def __init__(self):
+        super().__init__()
+        print("Intern constructor")
+
+
+i1 = Intern()
+```
+
+Output:
+
+```text
+Company constructor
+Intern constructor
+```
+
+---
+
+## 7. Method Overloading and Method Overriding
+
+### 7.1 Method Overloading
+
+Method overloading means using the same method name with different parameter patterns.
+
+Python does not support traditional method overloading through multiple same-named method definitions in one class. Similar behavior can be achieved using default arguments or variable-length arguments.
+
+```python
+class Calculator:
+    def add(self, a, b=0, c=0):
+        return a + b + c
+
+
+c = Calculator()
+
+print(c.add(10, 20))
+print(c.add(10, 20, 30))
+print(c.add(10))
+```
+
+Output:
+
+```text
+30
+60
+10
+```
+
+### 7.2 Method Overriding
+
+Method overriding occurs when a child class provides its own implementation of an inherited method.
+
+```python
+class Notification:
+    def send(self):
+        print("Sending a general notification")
+
+
+class EmailNotification(Notification):
+    def send(self):
+        print("Sending an email")
+
+
+n1 = EmailNotification()
+n1.send()
+```
+
+Output:
+
+```text
+Sending an email
+```
+
+### Difference Between Overloading and Overriding
+
+| Method Overloading | Method Overriding |
+|---|---|
+| Same method name with different parameter patterns | Child redefines an inherited method |
+| Commonly associated with one class | Requires inheritance |
+| Python uses alternative techniques | Supported directly in Python |
+| Example: `add(2, 3)` and `add(2, 3, 4)` | Parent and child both define `send()` |
+
+---
+
+## 8. Polymorphism in Python
+
+### Definition
+Polymorphism means "many forms." It allows the same operation or method name to behave differently for different objects or data types.
+
+### Example: Method Behavior
+
+```python
+class Developer:
+    def work(self):
+        print("Developer writes code")
+
+
+class Tester:
+    def work(self):
+        print("Tester tests software")
+
+
+def perform_work(employee):
+    employee.work()
+
+
+d = Developer()
+t = Tester()
+
+perform_work(d)
+perform_work(t)
+```
+
+Output:
+
+```text
+Developer writes code
+Tester tests software
+```
+
+### Operator Overloading
+
+Operators can perform different operations depending on the data type.
+
+```python
+print(10 + 20)
+print("Hello " + "Python")
+print([1, 2] + [3, 4])
+```
+
+Output:
+
+```text
+30
+Hello Python
+[1, 2, 3, 4]
+```
+
+### Compile-Time vs Runtime Polymorphism
+
+| Compile-Time Polymorphism | Runtime Polymorphism |
+|---|---|
+| Commonly resolved during compilation | Behavior is selected during execution |
+| Often associated with traditional method overloading | Often associated with method overriding |
+| Python does not have Java-style signature-based method overloading | Python supports runtime method overriding |
+
+---
+
+## 9. Encapsulation in Python
+
+### Definition
+Encapsulation means bundling data and methods into a single unit and controlling how internal data is accessed or modified.
+
+### Example: Mobile Battery
+
+```python
+class Mobile:
+    def __init__(self, battery):
+        self.__battery = battery
+
+    def get_battery(self):
+        return self.__battery
+
+    def set_battery(self, value):
+        if 0 <= value <= 100:
+            self.__battery = value
+        else:
+            print("Invalid battery percentage")
+
+
+m1 = Mobile(70)
+
+print(m1.get_battery())
+
+m1.set_battery(85)
+print(m1.get_battery())
+
+m1.set_battery(150)
+```
+
+Output:
+
+```text
+70
+85
+Invalid battery percentage
+```
+
+### Explanation
+- `__battery` uses name mangling.
+- `get_battery()` reads the battery value.
+- `set_battery()` validates changes.
+- Invalid values are rejected.
+
+### Benefits
+1. Protects data from accidental changes.
+2. Provides controlled access to internal data.
+3. Supports validation.
+4. Improves code maintainability.
+
+---
+
+## 10. Access Modifiers in Python
+
+Access modifiers describe how attributes and methods are intended to be accessed.
+
+Python uses naming conventions rather than strict access enforcement.
+
+### 10.1 Public
+
+Public members can be accessed wherever the object or class is accessible.
+
+```python
+class Mobile:
+    def __init__(self):
+        self.brand = "Samsung"
+
+
+m1 = Mobile()
+print(m1.brand)
+```
+
+### 10.2 Protected-Style
+
+A single underscore indicates that a member is intended for internal use.
+
+```python
+class Mobile:
+    def __init__(self):
+        self._battery = 80
+
+
+m1 = Mobile()
+print(m1._battery)
+```
+
+Output:
+
+```text
+80
+```
+
+### 10.3 Private-Style
+
+A double underscore triggers name mangling.
+
+```python
+class Mobile:
+    def __init__(self):
+        self.__pin = 1234
+
+    def show_pin(self):
+        print(self.__pin)
+
+
+m1 = Mobile()
+m1.show_pin()
+```
+
+Output:
+
+```text
+1234
+```
+
+### Difference Between Access Modifiers
+
+| Type | Syntax | Meaning |
+|---|---|---|
+| Public | `name` | General access |
+| Protected-style | `_name` | Intended for internal/subclass use |
+| Private-style | `__name` | Name-mangled to reduce accidental access |
+
+**Note:** Python's private-style members are not absolutely inaccessible. Double underscores provide name mangling, not strict privacy.
+
+---
+
+## 11. Getter and Setter Methods
+
+### Definition
+A getter retrieves an attribute's value, while a setter changes the value, often after validation.
+
+### Example
+
+```python
+class Laptop:
+    def __init__(self, price):
+        self.__price = price
+
+    def get_price(self):
+        return self.__price
+
+    def set_price(self, new_price):
+        if new_price > 0:
+            self.__price = new_price
+        else:
+            print("Price must be positive")
+
+
+l1 = Laptop(45000)
+
+print(l1.get_price())
+
+l1.set_price(50000)
+print(l1.get_price())
+
+l1.set_price(-100)
+```
+
+Output:
+
+```text
+45000
+50000
+Price must be positive
+```
+
+### Getter and Setter Using `@property`
+
+```python
+class Laptop:
+    def __init__(self, price):
+        self.__price = price
+
+    @property
+    def price(self):
+        return self.__price
+
+    @price.setter
+    def price(self, value):
+        if value > 0:
+            self.__price = value
+        else:
+            raise ValueError("Price must be positive")
+
+
+l1 = Laptop(45000)
+
+print(l1.price)
+
+l1.price = 50000
+print(l1.price)
+```
+
+Output:
+
+```text
+45000
+50000
+```
+
+### Benefits
+- Provides controlled access.
+- Supports input validation.
+- Helps maintain valid object state.
+- Allows the implementation to change without changing attribute-style access.
+
+---
+
+## 12. Abstraction in Python
+
+### Definition
+Abstraction hides implementation details and shows only essential functionality to the user.
+
+Python supports abstraction using abstract classes and abstract methods from the `abc` module.
+
+### Example: Payment System
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Payment(ABC):
+    @abstractmethod
+    def pay(self, amount):
+        pass
+
+
+class UpiPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid Rs. {amount} using UPI")
+
+
+class CardPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid Rs. {amount} using Card")
+
+
+p1 = UpiPayment()
+p2 = CardPayment()
+
+p1.pay(1000)
+p2.pay(2000)
+```
+
+Output:
+
+```text
+Paid Rs. 1000 using UPI
+Paid Rs. 2000 using Card
+```
+
+### Explanation
+- `ABC` is the base class for abstract classes.
+- `@abstractmethod` declares a method that concrete subclasses must implement.
+- `Payment` defines the required interface.
+- `UpiPayment` and `CardPayment` implement the payment behavior.
+
+### Benefits
+1. Reduces complexity.
+2. Defines a common interface.
+3. Encourages consistent implementations.
+4. Makes code easier to extend.
+
+### Encapsulation vs Abstraction
+
+        Encapsulation                                     Abstraction 
+| Bundles data and methods and controls access  | Hides implementation details |
+| Focuses on managing internal state            | Focuses on essential functionality |
+| Example: validating battery percentage        | Example: using a payment interface |
+
+---
+
+## 13. Decorators in Python
+
+### Definition
+A decorator is a function that modifies or extends the behavior of another function or method without changing its original source code.
+
+### 13.1 Basic Decorator
+
+```python
+def my_decorator(func):
+    def wrapper():
+        print("Before function execution")
+        func()
+        print("After function execution")
+    return wrapper
+
+
+@my_decorator
+def greet():
+    print("Hello Python")
+
+
+greet()
+```
+
+Output:
+
+```text
+Before function execution
+Hello Python
+After function execution
+```
+
+### Explanation
+1. `my_decorator()` receives the original function.
+2. `wrapper()` adds extra behavior.
+3. `return wrapper` returns the new function.
+4. `@my_decorator` applies the decorator.
+5. Calling `greet()` executes the wrapped behavior.
+
+The following syntax is equivalent to applying the decorator:
+
+```python
+greet = my_decorator(greet)
+```
+
+### 13.2 Decorator with Arguments
+
+```python
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Function started")
+        result = func(*args, **kwargs)
+        print("Function completed")
+        return result
+    return wrapper
+
+
+@my_decorator
+def add(a, b):
+    return a + b
+
+
+print(add(10, 20))
+```
+
+Output:
+
+```text
+Function started
+Function completed
+30
+```
+
+### Explanation
+- `*args` accepts positional arguments.
+- `**kwargs` accepts keyword arguments.
+- `result` stores the returned value.
+- `return result` passes the value back to the caller.
+
+### 13.3 Important Built-In Decorators
+
+#### `@staticmethod`
+
+Defines a method that does not automatically receive `self` or `cls`.
+
+```python
+class Calculator:
+    @staticmethod
+    def square(n):
+        return n * n
+
+
+print(Calculator.square(5))
+```
+
+Output: `25`
+
+#### `@classmethod`
+
+Defines a method that receives the class as `cls`.
+
+```python
+class Company:
+    name = "Tech Solutions"
+
+    @classmethod
+    def show(cls):
+        print(cls.name)
+
+
+Company.show()
+```
+
+Output: `Tech Solutions`
+
+#### `@property`
+
+Allows a method to be accessed like an attribute.
+
+```python
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    @property
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+
+c = Circle(5)
+print(c.area)
+```
+
+Output: `78.5`
+
+#### `@abstractmethod`
+
+Declares a method that must be implemented by a concrete subclass.
+
+```python
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+
