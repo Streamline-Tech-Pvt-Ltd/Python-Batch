@@ -6802,9 +6802,9 @@ Python Programming Fundamentals — Notes & Study Guide:-
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
-    Internship Day 29(13/10/26):-
+    Internship Day 29 & 30(13/10/26 & 14/10/26):-
 
-        Python Notes:- Day 27 - Main Guard, Comprehensions, Iterators, Generators, venv, Aliases & MRO
+        Python Notes:- Day 27 & 28 - Main Guard, Comprehensions, Iterators, Generators, venv, Aliases & MRO
 
             1. if __name__ == "__main__":
                 This condition checks whether a Python file is being run directly or imported into another file.
@@ -7099,5 +7099,255 @@ Python Programming Fundamentals — Notes & Study Guide:-
                 - Alias: An alternative name referring to an existing object.
                 - MRO: Defines the order in which Python searches classes.
                 - super(): Calls the next implementation according to the MRO.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 31(15/10/26):-
+
+        Python Notes: Day 29 - Gift Shop Billing Software
+
+            1. Billing Software:-
+
+                # =====The Gift Studio====
+                # product:         Price      
+                # flower Pot        150
+                # Gift Box          100
+                # Greeting Card     50
+                # Gift Basket       200
+                # Photo Frame       120
+                # Gift Hamper       250
+                # Toy Cars          80
+
+                product = {
+                    1:"FlowerPot",
+                    2:"GiftBox",
+                    3:"GreetingCard",
+                    4:"GiftBasket",
+                    5:"PhotoFrame",
+                    6:"GiftHamper",
+                    7:"ToyCars"
+                }
+                price = {
+                    1:150,
+                    2:100,
+                    3:50,
+                    4:200,
+                    5:120,
+                    6:250,
+                    7:80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+                }
+
+                # Buckets to store the items and their quantities
+                item = []
+                quantity = []
+
+
+                print("=" * 100)
+                print(" "*35,"Welcome to The Gift Studio")
+                print("=" * 100)
+                print("|{:^10}|{:^42}|{:^44}|".format("Sr No", "Product", "Price"))
+                print("=" * 100)
+
+                for key in product:
+                    print(f"|{key:^10}| {product[key]:^40} |{price[key]:^44}|")
+                    
+                print("=" * 100)
+                print("8 to Exit")
+                print("=" * 100)
+
+                while True:
+                    choice = int(input("Enter the Product number: "))
+                    if choice == 8:
+                        print("Thank you for shopping with us!")
+                        break
+                    if choice in product:
+                        qty = int(input("Enter the quantity: "))
+                        if choice in item:
+                            index = item.index(choice)
+                            quantity[index] += qty
+                        
+                        else:
+                            item.append(choice)
+                            quantity.append(qty)
+                    print("product Added Sucessfully")
+                    print("=" * 100)
+
+                    # print(item)
+                    # print(quantity)
+                # billing layout
+
+                print("=" * 100)
+                print(" "*35,"Your Total Bill")
+                print("=" * 100)
+                print("|{:^10}|{:^20}|{:^20}|{:^20}|{:^24}|".format("Sr No", "Product", "Price","quantity","total"))
+                print("=" * 100)
+                
+                total = 0
+
+                for i in range(len(item)):
+                    print(f"|{i+1:^10}| {item[i]:^18} |{price[i+1]:^20}|{quantity[i]:^20}|{quantity[i] * price[i+1]:^24}|")
+                    total += quantity[i] * price[i+1]
+                print("=" * 100)
+                print(f"|{'Total Amount':^74}|{total:^23}|")
+                print("=" * 100)
+                print("Thank you for shopping with us!")
+                print("Visit Again!")
+                print("=" * 100)
+
+            2. Project Overview:-
+                The Gift Studio is a simple billing software developed using Python.
+                It displays products and prices, accepts customer selections and quantities, and generates the final bill.
+
+            3. Dictionaries:-
+                Two dictionaries are used to store product details and prices.
+
+                product = {1: "FlowerPot", 2: "GiftBox", 3: "GreetingCard", 4: "GiftBasket", 5: "PhotoFrame", 6: "GiftHamper", 7: "ToyCars"}
+                price = {1: 150, 2: 100, 3: 50, 4: 200, 5: 120, 6: 250, 7: 80}
+
+                - product: Stores product numbers and names.
+                - price: Stores product numbers and their prices.
+                - The same keys connect each product with its corresponding price.
+
+                Example:
+                print(product[1])  # FlowerPot
+                print(price[1])    # 150
+
+            4. Lists:-
+                Two lists store the customer's selections.
+
+                item = []
+                quantity = []
+
+                - item: Stores selected product numbers.
+                - quantity: Stores the quantity of each selected product.
+                - Both lists use matching indexes to connect products with their quantities.
+
+                Example:
+                item = [1, 3]
+                quantity = [2, 4]
+
+                This means 2 FlowerPots and 4 GreetingCards.
+
+            5. For Loop and Dictionary Traversal:-
+                A for loop displays all products and their prices.
+
+                for key in product:
+                    print(product[key], price[key])
+
+                - The loop iterates through the product dictionary keys.
+                - The same key is used to retrieve the product name and price.
+
+            6. While Loop:-
+                The while loop continuously accepts customer choices until the customer enters 8.
+
+                while True:
+                    choice = int(input("Enter the Product number: "))
+                    if choice == 8:
+                        break
+
+                - while True creates a loop that continues until stopped.
+                - break terminates the loop when the exit option is selected.
+
+            7. Conditional Statements:-
+                Conditional statements validate the customer's product selection.
+
+                if choice == 8:
+                    break
+                if choice in product:
+                    qty = int(input("Enter the quantity: "))
+
+                - if checks a condition.
+                - in checks whether a value exists among the dictionary keys.
+                - break exits the loop.
+
+                Important correction: In the original program, the success message is printed even when an invalid product number is entered. It should be printed only after a valid product has been added.
+
+            8. List Methods:-
+                The program uses important list methods.
+
+                - append(): Adds an item to a list.
+                - index(): Finds the index of an existing item.
+
+                Example:
+                item.append(choice)
+                index = item.index(choice)
+
+                The program checks whether a product has already been selected. If it has, its quantity is increased; otherwise, the product and quantity are added to their respective lists.
+
+            9. Updating Product Quantity:-
+                if choice in item:
+                    index = item.index(choice)
+                    quantity[index] += qty
+                else:
+                    item.append(choice)
+                    quantity.append(qty)
+
+                Explanation:
+                - If the product already exists, its quantity is updated.
+                - Otherwise, the product number and quantity are stored as new entries.
+                - This prevents the same product from appearing multiple times in the item list.
+
+            10. Calculating the Bill:-
+                The total price of each product is calculated by multiplying its price by its quantity.
+
+                item_total = quantity[i] * price[item[i]]
+                total += item_total
+
+                - item_total: Cost of one product entry.
+                - total: Accumulates the cost of all selected products.
+
+                Important correction: Use price[item[i]] rather than price[i+1]. The list index is not necessarily the same as the product number.
+
+            11. len() and range():-
+                The billing loop uses len() and range().
+
+                for i in range(len(item)):
+                    print(item[i], quantity[i])
+
+                - len(item): Returns the number of selected product entries.
+                - range(): Generates indexes used to access matching items and quantities.
+
+            12. Formatted Output:-
+                The program uses f-strings and the format() method to display a structured bill.
+
+                Example:
+                print(f"{'Total Amount':^20}")
+
+                - ^ centers the text within the specified width.
+                - :^20 centers text in a field of width 20.
+                - "=" * 100 prints a separator containing 100 equal signs.
+
+            13. Billing Software Workflow:-
+                1. Store product names and prices in dictionaries.
+                2. Display the product menu.
+                3. Accept a product number from the customer.
+                4. Exit the selection loop when the customer enters 8.
+                5. Ask for the quantity of a valid product.
+                6. Update the quantity if the product is already selected.
+                7. Generate the bill after the selection loop ends.
+                8. Calculate each item's cost and the total amount.
+                9. Display the final bill and thank the customer.
+
+            14. Important Improvements:-
+                - Validate product numbers before accepting quantities.
+                - Reject zero or negative quantities.
+                - Handle invalid input, such as letters entered instead of numbers, using exception handling.
+                - Use `price[item[i]]` to retrieve the correct product price.
+                - Use `with` only when working with files; it is not required for this in-memory billing program.
+                - Consider storing product selections and quantities in a dictionary to simplify the program.
+
+            15. Quick Revision:-
+                - Dictionary: Stores product names and prices using keys.
+                - List: Stores selected products and their quantities.
+                - for loop: Displays products and generates the bill.
+                - while loop: Accepts repeated customer choices.
+                - break: Exits the selection loop.
+                - if-else: Checks product selection and updates quantities.
+                - append(): Adds new selections.
+                - index(): Finds an existing product's position.
+                - len() and range(): Help iterate over selected items.
+                - Accumulator: `total += item_total` adds each item's cost to the bill.
+                - f-strings and format(): Display the bill neatly.
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
