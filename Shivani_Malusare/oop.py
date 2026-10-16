@@ -3629,8 +3629,6 @@ i1 = Intern()
 
 i1.company_info()
 i1.intern_info()
-```
-
 Output:
 
 ```text
@@ -4284,11 +4282,7 @@ class Calculator:
     @staticmethod
     def square(n):
         return n * n
-
-
 print(Calculator.square(5))
-```
-
 Output: `25`
 
 #### `@classmethod`
@@ -4305,8 +4299,6 @@ class Company:
 
 
 Company.show()
-```
-
 Output: `Tech Solutions`
 
 #### `@property`
@@ -4321,24 +4313,1539 @@ class Circle:
     @property
     def area(self):
         return 3.14 * self.radius ** 2
-
-
 c = Circle(5)
 print(c.area)
-```
-
 Output: `78.5`
 
 #### `@abstractmethod`
 
 Declares a method that must be implemented by a concrete subclass.
-
-```python
 from abc import ABC, abstractmethod
-
-
 class Vehicle(ABC):
     @abstractmethod
     def start(self):
         pass
+      
+Errors in Python
 
+An error is a problem in a program that prevents it from running correctly.
+
+Types of Errors
+
+Syntax Error: Occurs when Python syntax rules are not followed.
+
+Runtime Error: Occurs while the program is running.
+
+Logical Error: The program runs, but the output is incorrect.
+
+Example: Syntax Error
+
+if 10 > 5
+    print("Hello")
+
+Output: SyntaxError
+
+Correction:
+
+if 10 > 5:
+    print("Hello")
+
+2. Common Python Exceptions
+
+Exception
+
+Meaning
+
+ZeroDivisionError
+
+Dividing a number by zero
+
+ValueError
+
+Correct data type but invalid value
+
+TypeError
+
+Operation on incompatible data types
+
+NameError
+
+Using an undefined variable
+
+IndexError
+
+Accessing an invalid list index
+
+KeyError
+
+Accessing a missing dictionary key
+
+FileNotFoundError
+
+File does not exist
+
+AttributeError
+
+Accessing a missing attribute
+
+ImportError
+
+Importing an unavailable module or name
+
+Example: ZeroDivisionError
+
+a = 10
+b = 0
+
+print(a / b)
+
+Output:
+
+ZeroDivisionError: division by zero
+
+Example: ValueError
+
+age = int("hello")
+print(age)
+
+Output: ValueError
+
+Example: TypeError
+
+a = 10
+b = "20"
+
+print(a + b)
+
+Output: TypeError
+
+Example: IndexError
+
+numbers = [10, 20, 30]
+
+print(numbers[5])
+
+Output: IndexError
+
+3. Exception Handling
+
+Exception handling is the process of handling runtime errors so that a program can respond appropriately instead of terminating unexpectedly.
+
+try and except
+
+try: Contains code that may raise an exception.
+
+except: Handles the exception if it occurs.
+
+try:
+    a = 10
+    b = 0
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+Output:
+
+Cannot divide by zero
+
+Handling Multiple Exceptions
+
+try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+    print(result)
+
+except ValueError:
+    print("Please enter a valid number")
+
+except ZeroDivisionError:
+    print("Number cannot be zero")
+
+The else Block
+
+The else block executes when no exception occurs in the try block.
+
+try:
+    a = 10
+    b = 2
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+else:
+    print("Program executed successfully")
+
+Output:
+
+5.0
+Program executed successfully
+
+The finally Block
+
+The finally block executes whether an exception occurs or not. It is commonly used for cleanup operations.
+
+try:
+    print(10 / 2)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    print("Program completed")
+
+Output:
+
+5.0
+Program completed
+
+The raise Keyword
+
+The raise keyword is used to raise an exception manually.
+
+age = 15
+
+if age < 18:
+    raise ValueError("Age must be 18 or above")
+
+print("Eligible")
+
+Output: ValueError: Age must be 18 or above
+
+4. File Handling in Python
+
+File handling is the process of creating, reading, writing, and updating files using Python.
+
+Syntax
+
+file = open("demo.txt", "r")
+file.close()
+
+File Opening Modes
+
+Mode
+
+Description
+
+r
+
+Read an existing file
+
+w
+
+Write to a file; creates it or overwrites existing content
+
+a
+
+Append content at the end of a file
+
+x
+
+Create a new file; raises an error if it already exists
+
+r+
+
+Read and write
+
+w+
+
+Write and read; overwrites existing content
+
+a+
+
+Append and read
+
+rb
+
+Read a file in binary mode
+
+wb
+
+Write a file in binary mode
+
+Create a File
+
+file = open("demo.txt", "x")
+file.close()
+
+print("File created successfully")
+
+Note: This raises FileExistsError if the file already exists.
+
+Write to a File
+
+file = open("demo.txt", "w")
+file.write("Hello Python")
+file.close()
+
+print("Data written successfully")
+
+Read a File
+
+file = open("demo.txt", "r")
+data = file.read()
+print(data)
+file.close()
+
+Output:
+
+Hello Python
+
+Append Data to a File
+
+file = open("demo.txt", "a")
+file.write("\nWelcome to Python")
+file.close()
+
+The new text is added at the end of the file.
+
+5. File Reading Methods
+
+read()
+
+Reads the entire file or a specified number of characters.
+
+with open("demo.txt", "r") as file:
+    print(file.read())
+
+readline()
+
+Reads one line at a time.
+
+with open("demo.txt", "r") as file:
+    print(file.readline())
+
+readlines()
+
+Reads all lines and returns them as a list.
+
+with open("demo.txt", "r") as file:
+    print(file.readlines())
+
+write()
+
+Writes a string to a file.
+
+with open("demo.txt", "w") as file:
+    file.write("Python is easy to learn.")
+
+writelines()
+
+Writes multiple strings to a file. It does not automatically add newline characters.
+
+lines = ["Python\n", "Java\n", "SQL\n"]
+
+with open("demo.txt", "w") as file:
+    file.writelines(lines)
+
+6. The with open() Statement
+
+The with open() statement automatically closes the file when the block finishes, including when an exception occurs.
+
+with open("demo.txt", "r") as file:
+    data = file.read()
+    print(data)
+
+This is generally preferred over manually calling close().
+
+7. tell() and seek()
+
+tell()
+
+Returns the current position of the file cursor.
+
+with open("demo.txt", "r") as file:
+    print(file.tell())
+    file.read(5)
+    print(file.tell())
+
+seek()
+
+Moves the file cursor to a specified position.
+
+with open("demo.txt", "r") as file:
+    file.seek(0)
+    print(file.read())
+
+8. File Handling with Exception Handling
+
+try:
+    with open("demo.txt", "r") as file:
+        data = file.read()
+        print(data)
+
+except FileNotFoundError:
+    print("File does not exist")
+
+except PermissionError:
+    print("Permission denied")
+
+This prevents common file access errors from terminating the program unexpectedly.
+
+9. Real-World Example: Billing System
+
+try:
+    customer_name = input("Enter customer name: ")
+    amount = float(input("Enter bill amount: "))
+
+    if amount < 0:
+        raise ValueError("Bill amount cannot be negative")
+
+    with open("bill.txt", "a") as file:
+        file.write(
+            f"Customer: {customer_name}, Bill: {amount:.2f}\n"
+        )
+
+    print("Bill saved successfully")
+
+except ValueError as e:
+    print("Invalid input:", e)
+
+except OSError:
+    print("Unable to save the bill")
+
+finally:
+    print("Billing process completed")
+
+Concepts used:
+
+try and except
+
+raise
+
+with open()
+
+Append mode
+
+File exception handling
+
+finally
+
+10. Difference Between Errors and Exceptions
+
+Errors
+
+Exceptions
+
+Indicate problems in a program
+
+Represent conditions that can often be handled
+
+Syntax errors prevent code from being parsed
+
+Runtime exceptions may occur during execution
+
+Logical errors can produce incorrect results
+
+Exceptions can be handled using try and except
+
+
+Append new data to an existing file.
+
+Handle FileNotFoundError.
+
+Create a simple billing system using file handling.
+
+Demonstrate try, except, else, and finally.
+
+Iterators in Python
+
+What is an Iterator?
+
+An iterator is an object that returns one element at a time from a collection or sequence.
+
+An iterator remembers its current position and provides the next available element whenever we request it.
+
+Example
+
+numbers = [10, 20, 30, 40]
+
+it = iter(numbers)
+
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+
+Output:
+
+10
+20
+30
+40
+
+Explanation
+
+numbers is a list.
+
+iter(numbers) creates an iterator.
+
+next(it) returns the next element.
+
+Each call moves the iterator forward.
+
+If you request another element after the iterator is exhausted, Python raises StopIteration.
+
+numbers = [10, 20]
+
+it = iter(numbers)
+
+print(next(it))
+print(next(it))
+print(next(it))
+
+Output:
+
+10
+20
+StopIteration
+
+The third call raises the exception because no elements remain.
+
+2. Types of Iterators
+
+Python does not define a fixed set of official iterator types. However, iterators can be classified by how they are created and used.
+
+2.1 Built-in Collection Iterators
+
+These iterators are created from collections such as lists, tuples, strings, dictionaries, and sets.
+
+List Iterator
+
+numbers = [10, 20, 30]
+
+it = iter(numbers)
+
+print(next(it))
+print(next(it))
+
+Output:
+
+10
+20
+
+Tuple Iterator
+
+colors = ("red", "green", "blue")
+
+it = iter(colors)
+
+print(next(it))
+print(next(it))
+
+Output:
+
+red
+green
+
+String Iterator
+
+name = "Python"
+
+it = iter(name)
+
+print(next(it))
+print(next(it))
+
+Output:
+
+P
+y
+
+Dictionary Iterator
+
+By default, iterating over a dictionary returns its keys.
+
+employee = {
+    "name": "Shivani",
+    "role": "Developer",
+    "city": "Pune"
+}
+
+it = iter(employee)
+
+print(next(it))
+print(next(it))
+
+Output:
+
+name
+role
+
+To iterate over dictionary values:
+
+employee = {
+    "name": "Shivani",
+    "role": "Developer"
+}
+
+for value in employee.values():
+    print(value)
+
+Output:
+
+Shivani
+Developer
+
+2.2 File Iterators
+
+A file object is iterable. It returns one line at a time.
+
+with open("demo.txt", "w") as file:
+    file.write("Python\n")
+    file.write("Java\n")
+    file.write("SQL\n")
+
+with open("demo.txt", "r") as file:
+    it = iter(file)
+
+    print(next(it), end="")
+    print(next(it), end="")
+
+Output:
+
+Python
+Java
+
+2.3 Generator Iterators
+
+Generators produce values one at a time using yield.
+
+def numbers():
+    yield 10
+    yield 20
+    yield 30
+
+it = numbers()
+
+print(next(it))
+print(next(it))
+print(next(it))
+
+Output:
+
+10
+20
+30
+
+2.4 Custom Iterators
+
+We can create our own iterator by defining the __iter__() and __next__() methods.
+
+class Count:
+    def __init__(self, limit):
+        self.limit = limit
+        self.current = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current <= self.limit:
+            value = self.current
+            self.current += 1
+            return value
+        raise StopIteration
+
+
+counter = Count(3)
+
+for number in counter:
+    print(number)
+
+Output:
+
+1
+2
+3
+
+Explanation
+
+__iter__() returns the iterator object.
+
+__next__() returns the next value.
+
+StopIteration signals that iteration is complete.
+
+3. Iterable vs Iterator
+
+An iterable is an object from which an iterator can be created. An iterator is an object that produces elements one at a time.
+
+Iterable
+
+Iterator
+
+Can provide an iterator
+
+Produces the next element
+
+Supports iter()
+
+Supports next()
+
+Examples: list, tuple, string
+
+Examples: iter(list), generators
+
+Often can be iterated over repeatedly
+
+Usually gets exhausted after one complete pass
+
+Example
+
+numbers = [10, 20, 30]  # Iterable
+
+it = iter(numbers)      # Iterator
+
+print(next(it))
+print(next(it))
+
+Output:
+
+10
+20
+
+To check whether an object is an iterator:
+
+numbers = [10, 20, 30]
+it = iter(numbers)
+
+print(hasattr(numbers, "__iter__"))
+print(hasattr(numbers, "__next__"))
+
+print(hasattr(it, "__iter__"))
+print(hasattr(it, "__next__"))
+
+Output:
+
+True
+False
+True
+True
+
+4. iter() and next()
+
+iter()
+
+The iter() function returns an iterator from an iterable.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+it = iter(fruits)
+
+print(it)
+
+next()
+
+The next() function retrieves the next element from an iterator.
+
+fruits = ["Apple", "Mango", "Banana"]
+
+it = iter(fruits)
+
+print(next(it))
+print(next(it))
+print(next(it))
+
+Output:
+
+Apple
+Mango
+Banana
+
+Using a Default Value with next()
+
+You can supply a default value to avoid StopIteration when the iterator is exhausted.
+
+numbers = iter([10, 20])
+
+print(next(numbers, "Finished"))
+print(next(numbers, "Finished"))
+print(next(numbers, "Finished"))
+
+Output:
+
+10
+20
+Finished
+
+5. Generators and yield
+
+What is a Generator?
+
+A generator is a special type of iterator that produces values one at a time instead of building and returning the entire result at once.
+
+Generators are commonly created using:
+
+Generator functions with yield.
+
+Generator expressions.
+
+5.1 Generator Function
+
+def my_generator():
+    yield 10
+    yield 20
+    yield 30
+
+for value in my_generator():
+    print(value)
+
+Output:
+
+10
+20
+30
+
+Explanation
+
+Calling my_generator() creates a generator object.
+
+The function starts executing when the generator is advanced.
+
+yield returns a value and pauses the function.
+
+The next iteration resumes execution after the previous yield.
+
+5.2 Generator Expression
+
+A generator expression is similar to a list comprehension, but it produces values lazily.
+
+List Comprehension
+
+numbers = [n * n for n in range(5)]
+
+print(numbers)
+
+Output:
+
+[0, 1, 4, 9, 16]
+
+This creates a list containing all the results.
+
+Generator Expression
+
+numbers = (n * n for n in range(5))
+
+print(next(numbers))
+print(next(numbers))
+print(next(numbers))
+
+Output:
+
+0
+1
+4
+
+This calculates each result as it is requested.
+
+5.3 Real-World Example: Processing Large Data
+
+Suppose a file contains millions of records. A generator can process records one at a time rather than loading every record into a list.
+
+def read_numbers(limit):
+    for number in range(1, limit + 1):
+        yield number
+
+for number in read_numbers(5):
+    print(number)
+
+Output:
+
+1
+2
+3
+4
+5
+
+This approach is useful when working with large datasets, files, or streams.
+
+6. yield vs return
+
+yield
+
+return
+
+Produces a value and pauses the function
+
+Ends the function
+
+Preserves the function's local state
+
+Does not resume that function call
+
+Used to create generator functions
+
+Used to return a final result
+
+Can produce multiple values over time
+
+A function call returns when it reaches return
+
+Example Using return
+
+def get_number():
+    return 10
+    return 20
+
+print(get_number())
+
+Output:
+
+10
+
+The function ends at the first return.
+
+Example Using yield
+
+def get_numbers():
+    yield 10
+    yield 20
+    yield 30
+
+for number in get_numbers():
+    print(number)
+
+Output:
+
+10
+20
+30
+
+The generator pauses after each yield and resumes when the next value is requested.
+
+7. Method Resolution Order (MRO)
+
+What is MRO?
+
+Method Resolution Order (MRO) is the order in which Python searches classes for a method or attribute, particularly when inheritance involves multiple parent classes.
+
+Python uses the C3 linearization algorithm to calculate MRO for new-style classes.
+
+7.1 Single Inheritance
+
+class Parent:
+    def show(self):
+        print("Parent method")
+
+
+class Child(Parent):
+    pass
+
+
+obj = Child()
+obj.show()
+
+print(Child.mro())
+
+Output:
+
+Parent method
+[<class '__main__.Child'>, <class '__main__.Parent'>, <class 'object'>]
+
+Explanation
+
+Python searches in this order:
+
+Child
+
+Parent
+
+object
+
+Since Child does not define show(), Python finds it in Parent.
+
+7.2 Multiple Inheritance
+
+class Father:
+    def show(self):
+        print("Father method")
+
+
+class Mother:
+    def show(self):
+        print("Mother method")
+
+
+class Child(Father, Mother):
+    pass
+
+
+obj = Child()
+obj.show()
+
+print(Child.mro())
+
+Output:
+
+Father method
+[<class '__main__.Child'>, <class '__main__.Father'>, <class '__main__.Mother'>, <class 'object'>]
+
+Explanation
+
+The inheritance declaration is:
+
+class Child(Father, Mother):
+
+Python checks Child first, then Father, then Mother, then object.
+
+Because both parents define show(), the Father version is called first.
+
+Changing the parent order changes the lookup order in this example.
+
+class Child(Mother, Father):
+    pass
+
+Now Mother is searched before Father.
+
+7.3 MRO with super()
+
+The super() function calls the next implementation in the MRO. It does not always mean "call my direct parent."
+
+class A:
+    def show(self):
+        print("A")
+        
+
+class B(A):
+    def show(self):
+        print("B")
+        super().show()
+
+
+class C(A):
+    def show(self):
+        print("C")
+        super().show()
+
+
+class D(B, C):
+    def show(self):
+        print("D")
+        super().show()
+
+
+obj = D()
+obj.show()
+
+print([cls.__name__ for cls in D.mro()])
+
+Output:
+
+D
+B
+C
+A
+['D', 'B', 'C', 'A', 'object']
+
+Explanation
+
+The MRO of D is:
+
+D → B → C → A → object
+
+Each super().show() continues to the next class in this order.
+
+This coordinated behavior is especially useful in multiple inheritance.
+
+7.4 Ways to Check MRO
+
+Using mro()
+
+print(D.mro())
+
+Using __mro__
+
+print(D.__mro__)
+
+Both show the class lookup order.
+
+Interview Definition
+
+MRO is the order in which Python searches a class hierarchy for methods and attributes. Python calculates it using the C3 linearization algorithm.
+
+8. Memory Management in Python
+
+What is Memory Management?
+
+Memory management is the process of allocating, using, and releasing computer memory for objects and data while a program runs.
+
+Python manages memory automatically, so developers generally do not need to manually allocate and free memory.
+
+Python's memory management includes:
+
+Memory allocation
+
+Object references
+
+Reference counting
+
+Garbage collection
+
+Memory allocation and reuse by the Python memory manager
+
+8.1 Creating Objects
+
+name = "Shivani"
+age = 22
+numbers = [10, 20, 30]
+
+Python creates objects to represent the string, integer, and list. The variables refer to those objects.
+
+The exact internal memory layout depends on the Python implementation.
+
+8.2 Variables and References
+
+a = [10, 20, 30]
+b = a
+
+print(a)
+print(b)
+print(a is b)
+
+Output:
+
+[10, 20, 30]
+[10, 20, 30]
+True
+
+Explanation
+
+a refers to a list object.
+
+b = a makes b refer to the same list.
+
+It does not create a separate list.
+
+If you modify the list through either variable, the change is visible through both.
+
+a = [10, 20, 30]
+b = a
+
+b.append(40)
+
+print(a)
+print(b)
+
+Output:
+
+[10, 20, 30, 40]
+[10, 20, 30, 40]
+
+This is an important concept when learning Python memory management.
+
+9. Reference Counting
+
+What is Reference Counting?
+
+Reference counting is a memory-management technique that tracks how many references point to an object.
+
+In CPython, an object can often be reclaimed when its reference count reaches zero, provided no other mechanism or implementation detail keeps it alive.
+
+Example
+
+import sys
+
+numbers = [10, 20, 30]
+
+print(sys.getrefcount(numbers))
+
+sys.getrefcount() reports the reference count in CPython, but calling the function itself creates a temporary reference. Therefore, the displayed value is generally one greater than the references you might count in your source code.
+
+Example: Multiple References
+
+numbers = [10, 20, 30]
+
+other = numbers
+another = numbers
+
+print(numbers is other)
+print(numbers is another)
+
+Output:
+
+True
+True
+
+All three variables refer to the same list.
+
+Removing a Reference
+
+numbers = [10, 20, 30]
+
+other = numbers
+
+del numbers
+
+print(other)
+
+Output:
+
+[10, 20, 30]
+
+Explanation
+
+Deleting numbers removes that variable's reference. It does not delete the list because other still refers to it.
+
+Important: del removes a name or reference; it does not necessarily destroy the object immediately.
+
+10. Garbage Collection
+
+What is Garbage Collection?
+
+Garbage collection is a process that identifies and reclaims memory occupied by objects that are no longer needed.
+
+In CPython:
+
+Reference counting handles many objects when their reference counts reach zero.
+
+A cyclic garbage collector detects certain groups of objects that refer to one another but are no longer reachable from the program.
+
+10.1 Simple Example
+
+numbers = [10, 20, 30]
+
+numbers = None
+
+print(numbers)
+
+Output:
+
+None
+
+The variable now refers to None. If the original list has no other references, it can be reclaimed.
+
+10.2 Circular References
+
+Two objects can refer to each other, creating a cycle.
+
+class Item:
+    pass
+
+
+a = Item()
+b = Item()
+
+a.other = b
+b.other = a
+
+del a
+del b
+
+The objects refer to one another, even after the variables a and b are deleted.
+
+In CPython, the cyclic garbage collector can detect and reclaim unreachable cycles such as this one.
+
+10.3 The gc Module
+
+Python provides the gc module to inspect and manage cyclic garbage collection.
+
+import gc
+
+print(gc.isenabled())
+
+This reports whether automatic cyclic garbage collection is enabled.
+
+You can request a collection:
+
+import gc
+
+collected = gc.collect()
+
+print("Collected objects:", collected)
+
+gc.collect() requests a collection and returns the number of objects collected in that run. The result depends on the objects present and the Python implementation.
+
+Reference Counting vs Garbage Collection
+
+Reference Counting
+
+Garbage Collection
+
+Tracks references to objects
+
+Detects unreachable cycles
+
+Can reclaim objects when the count reaches zero
+
+Can reclaim cyclic groups that reference counting alone cannot reclaim
+
+Used by CPython as a primary mechanism
+
+Complements reference counting in CPython
+
+Often acts immediately when the last reference disappears
+
+Collection timing can vary
+
+11. Stack and Heap Memory
+
+Stack Memory
+
+The call stack tracks active function calls and their execution frames.
+
+For example, it helps Python keep track of which function is running and where to return when the function finishes.
+
+Heap Memory
+
+Python objects, such as lists, dictionaries, strings, and instances of classes, are generally allocated in managed memory on the heap.
+
+Example
+
+def display():
+    name = "Shivani"
+    numbers = [10, 20, 30]
+
+    print(name)
+    print(numbers)
+
+
+display()
+
+Output:
+
+Shivani
+[10, 20, 30]
+
+Explanation
+
+The function call creates an execution frame.
+
+The local names name and numbers belong to that frame.
+
+They refer to Python objects.
+
+When the function returns, its frame is released, but an object can remain alive if a reference to it exists elsewhere.
+
+Important Note
+
+It is an oversimplification to say that every local variable is stored directly on the stack and every object is always stored on the heap. The details depend on the Python implementation and runtime optimizations.
+
+12. Shallow Copy vs Deep Copy
+
+What is Copying?
+
+Copying creates another object based on an existing object.
+
+Python provides two common copying approaches:
+
+Shallow copy
+
+Deep copy
+
+They behave differently when the original object contains other mutable objects, such as nested lists or dictionaries.
+
+12.1 Shallow Copy
+
+A shallow copy creates a new outer object but keeps references to the original object's nested elements.
+
+For a nested list, the outer list is new, but its inner lists are shared.
+
+Example
+
+import copy
+
+original = [[10, 20], [30, 40]]
+
+shallow = copy.copy(original)
+
+print("Original:", original)
+print("Shallow:", shallow)
+print(original is shallow)
+print(original[0] is shallow[0])
+
+Output:
+
+Original: [[10, 20], [30, 40]]
+Shallow: [[10, 20], [30, 40]]
+False
+True
+
+Explanation
+
+original and shallow are different outer lists.
+
+original[0] and shallow[0] refer to the same inner list.
+
+Therefore, changing a shared inner list affects both outer lists.
+
+Example: Modifying a Nested Element
+
+import copy
+
+original = [[10, 20], [30, 40]]
+
+shallow = copy.copy(original)
+
+shallow[0].append(50)
+
+print("Original:", original)
+print("Shallow:", shallow)
+
+Output:
+
+Original: [[10, 20, 50], [30, 40]]
+Shallow: [[10, 20, 50], [30, 40]]
+
+Why Did Both Change?
+
+Because original[0] and shallow[0] refer to the same inner list.
+
+Appending 50 modifies that shared list.
+
+Another Shallow Copy Example
+
+import copy
+
+original = [10, 20, 30]
+
+shallow = copy.copy(original)
+
+shallow.append(40)
+
+print(original)
+print(shallow)
+
+Output:
+
+[10, 20, 30]
+[10, 20, 30, 40]
+
+Here, the lists are independent because their elements are immutable integers. Appending to the outer copy does not change the original outer list.
+
+12.2 Deep Copy
+
+A deep copy creates a new outer object and recursively copies nested objects as well, subject to the behavior of the objects being copied.
+
+The copy.deepcopy() function is used for deep copying.
+
+Example
+
+import copy
+
+original = [[10, 20], [30, 40]]
+
+deep = copy.deepcopy(original)
+
+print("Original:", original)
+print("Deep:", deep)
+print(original is deep)
+print(original[0] is deep[0])
+
+Output:
+
+Original: [[10, 20], [30, 40]]
+Deep: [[10, 20], [30, 40]]
+False
+False
+
+Explanation
+
+original and deep are different outer lists.
+
+Their nested lists are also separate objects.
+
+Changes to a nested list in the deep copy do not affect the original.
+
+Example: Modifying a Nested Element
+
+import copy
+
+original = [[10, 20], [30, 40]]
+
+deep = copy.deepcopy(original)
+
+deep[0].append(50)
+
+print("Original:", original)
+print("Deep:", deep)
+
+Output:
+
+Original: [[10, 20], [30, 40]]
+Deep: [[10, 20, 50], [30, 40]]
+
+Only the deep copy changes.
+
+12.3 Difference Between Shallow Copy and Deep Copy
+
+Shallow Copy
+
+Deep Copy
+
+Creates a new outer object
+
+Creates a new outer object
+
+Shares references to nested objects
+
+Recursively copies nested objects where applicable
+
+Nested mutable changes may affect both copies
+
+Nested mutable changes are generally independent
+
+Often less expensive
+
+Can use more time and memory
+
+Created using copy.copy()
+
+Created using copy.deepcopy()
+
+12.4 Copying with List Slicing
+
+For a list, slicing can create a shallow copy.
+
+original = [10, 20, 30]
+
+new_list = original[:]
+
+new_list.append(40)
+
+print(original)
+print(new_list)
+
+Output:
+
+[10, 20, 30]
+[10, 20, 30, 40]
+
+The outer lists are independent, but nested objects would still be shared.
+
+12.5 Copying with list.copy()
+
+original = [10, 20, 30]
+
+new_list = original.copy()
+
+new_list.append(40)
+
+print(original)
+print(new_list)
+
+Output:
+
+[10, 20, 30]
+[10, 20, 30, 40]
+
+The list.copy() method creates a shallow copy.
+
+12.6 Real-World Example: Employee Data
+
+import copy
+
+employee = {
+    "name": "Shivani",
+    "skills": ["Python", "SQL"]
+}
+
+shallow = copy.copy(employee)
+deep = copy.deepcopy(employee)
+
+shallow["skills"].append("Machine Learning")
+
+print("Original:", employee)
+print("Shallow:", shallow)
+print("Deep:", deep)
