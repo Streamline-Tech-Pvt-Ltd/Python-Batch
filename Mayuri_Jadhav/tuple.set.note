@@ -1,0 +1,1160 @@
+# Python Tuple and Set
+
+# 1. Tuple
+
+## What is a Tuple?
+
+A **Tuple** is an **ordered and immutable collection of elements**.
+
+A tuple is generally **enclosed in parentheses `()`** and its elements are **comma-separated**.
+
+### Syntax
+tuple_name = (element1, element2, element3)
+
+### Example
+student = ("Mayuri", 22, "Python")
+
+print(student)
+
+### Output
+text
+('Mayuri', 22, 'Python')
+
+### Important Points
+
+A Tuple:
+
+* is **ordered**
+* is **immutable**
+* is **indexed**
+* supports **slicing**
+* allows **duplicate elements**
+* allows **different data types**
+* is generally enclosed in `()`
+* contains **comma-separated elements**
+* supports **packing**
+* supports **unpacking**
+
+# 2. Tuple Creation
+
+## Using Parentheses
+a = (10, 20, 30, 40)
+
+print(a)
+
+Output:
+text
+(10, 20, 30, 40)
+
+## Without Parentheses
+
+Parentheses are optional in many tuple assignments.
+a = 10, 20, 30, 40
+
+print(a)
+
+Output:
+text
+(10, 20, 30, 40)
+
+The **comma-separated values** make it a tuple.
+
+# 3. Tuple Properties
+
+| Property             | Tuple                             |
+| -------------------- | --------------------------------- |
+| Ordered              | Yes                               |
+| Immutable            | Yes                               |
+| Mutable              | No                                |
+| Indexed              | Yes                               |
+| Slicing              | Yes                               |
+| Duplicate elements   | Allowed                           |
+| Different data types | Allowed                           |
+| Positive indexing    | Yes                               |
+| Negative indexing    | Yes                               |
+| Packing              | Yes                               |
+| Unpacking            | Yes                               |
+| Hashable             | Yes, if all elements are hashable |
+
+# 4. Tuple with Different Data Types
+
+A tuple can contain different types of data.
+a = (10, 20.5, "Python", True)
+
+print(a)
+
+Output:
+text
+(10, 20.5, 'Python', True)
+
+# 5. Duplicate Elements in Tuple
+
+Tuple allows duplicate elements.
+a = (10, 20, 10, 30, 20)
+
+print(a)
+
+Output:
+text
+(10, 20, 10, 30, 20)
+
+# 6. Single Element Tuple
+
+For a single-element tuple, the **comma is important**.
+
+## Wrong
+a = (10)
+
+print(type(a))
+
+Output:
+text
+<class 'int'>
+
+## Correct
+a = (10,)
+
+print(type(a))
+
+Output:
+text
+<class 'tuple'>
+
+### Remember
+text
+(10)   → int
+(10,)  → tuple
+
+The **comma**, not only the parentheses, makes it a tuple.
+
+# 7. Empty Tuple
+a = ()
+
+print(type(a))
+
+Output:
+text
+<class 'tuple'>
+
+# 8. Tuple Indexing
+
+**Indexing** means accessing an individual element using its position.
+
+Tuple indexing starts from `0`.
+
+### Example
+a = (10, 20, 30, 40)
+
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+
+Output:
+text
+10
+20
+30
+40
+
+### Index Positions
+text
+Tuple:       10    20    30    40
+Index:        0     1     2     3
+
+# 9. Negative Indexing
+
+Negative indexing starts from `-1` from the right side.
+a = (10, 20, 30, 40)
+
+print(a[-1])
+print(a[-2])
+print(a[-3])
+print(a[-4])
+
+Output:
+text
+40
+30
+20
+10
+
+### Negative Index Positions
+text
+Tuple:       10    20    30    40
+Index:       -4    -3    -2    -1
+
+# 10. Tuple Slicing
+
+Slicing is used to access multiple elements from a tuple.
+
+### Syntax
+tuple[start:stop]
+
+The `stop` index is **not included**.
+
+### Example
+a = (10, 20, 30, 40, 50)
+
+print(a[1:4])
+
+Output:
+text
+(20, 30, 40)
+
+# 11. Slicing from Start
+a = (10, 20, 30, 40, 50)
+
+print(a[:3])
+
+Output:
+text
+(10, 20, 30)
+
+# 12. Slicing to End
+a = (10, 20, 30, 40, 50)
+
+print(a[2:])
+
+Output:
+text
+(30, 40, 50)
+
+# 13. Negative Slicing
+a = (10, 20, 30, 40, 50)
+
+print(a[-4:-1])
+
+Output:
+text
+(20, 30, 40)
+
+# 14. Slicing with Step
+
+### Syntax
+tuple[start:stop:step]
+
+Example:
+a = (10, 20, 30, 40, 50)
+
+print(a[0:5:2])
+
+Output:
+text
+(10, 30, 50)
+
+# 15. Reverse Tuple Using Slicing
+a = (10, 20, 30, 40, 50)
+
+print(a[::-1])
+
+Output:
+text
+(50, 40, 30, 20, 10)
+
+# 16. Tuple Packing
+
+**Packing** means putting multiple values into a single tuple.
+a = 10, 20, 30, 40
+
+print(a)
+print(type(a))
+
+Output:
+text
+(10, 20, 30, 40)
+<class 'tuple'>
+
+Here:
+text
+10, 20, 30, 40
+        ↓
+      Tuple
+
+The values are **packed into one tuple**.
+
+# 17. Tuple Unpacking
+
+**Unpacking** means extracting tuple elements into separate variables.
+a = (10, 20, 30)
+
+x, y, z = a
+
+print(x)
+print(y)
+print(z)
+
+Output:
+text
+10
+20
+30
+
+### Visual Representation
+text
+(10, 20, 30)
+     ↓
+x    y    z
+↓    ↓    ↓
+10   20   30
+
+# 18. Extended Tuple Unpacking
+
+Using `*`, multiple elements can be assigned to one variable.
+a = (10, 20, 30, 40, 50)
+
+x, *y, z = a
+
+print(x)
+print(y)
+print(z)
+
+Output:
+text
+10
+[20, 30, 40]
+50
+
+# 19. Tuple Immutability
+
+Tuple elements cannot be changed after creation.
+a = (10, 20, 30)
+
+a[0] = 100
+
+Output:
+text
+TypeError: 'tuple' object does not support item assignment
+
+Therefore:
+text
+Tuple → Immutable
+
+# 20. Tuple Concatenation
+
+Two tuples can be combined using `+`.
+a = (10, 20)
+b = (30, 40)
+
+c = a + b
+
+print(c)
+
+Output:
+text
+(10, 20, 30, 40)
+
+# 21. Tuple Repetition
+
+Use `*` to repeat tuple elements.
+a = (10, 20)
+
+print(a * 3)
+
+Output:
+text
+(10, 20, 10, 20, 10, 20)
+
+# 22. Membership Operators with Tuple
+
+Use `in` and `not in`.
+a = (10, 20, 30)
+
+print(20 in a)
+print(50 in a)
+print(50 not in a)
+
+Output:
+text
+True
+False
+True
+
+# 23. Tuple Methods
+
+Tuple has **2 main specific methods**:
+
+1. `count()`
+2. `index()`
+
+## 23.1 `count()`
+
+Returns the number of occurrences of a value.
+
+### Syntax
+tuple.count(value)
+
+### Example
+a = (10, 20, 10, 30, 10)
+
+print(a.count(10))
+
+Output:
+text
+3
+
+## 23.2 `index()`
+
+Returns the index of the **first occurrence** of a value.
+
+### Syntax
+tuple.index(value)
+
+### Example
+a = (10, 20, 30, 20)
+
+print(a.index(20))
+
+Output:
+text
+1
+
+If the value does not exist:
+a = (10, 20, 30)
+
+print(a.index(50))
+
+Output:
+text
+ValueError
+
+# 24. Built-in Functions Commonly Used with Tuple
+
+## `len()`
+
+Returns the number of elements.
+a = (10, 20, 30, 40)
+
+print(len(a))
+
+Output:
+text
+4
+
+## `max()`
+
+Returns the largest value.
+a = (10, 20, 30, 40)
+
+print(max(a))
+
+Output:
+text
+40
+
+## `min()`
+
+Returns the smallest value.
+a = (10, 20, 30, 40)
+
+print(min(a))
+
+Output:
+text
+10
+
+## `sum()`
+
+Returns the sum of numeric elements.
+a = (10, 20, 30)
+
+print(sum(a))
+
+Output:
+text
+60
+
+## `sorted()`
+
+Returns a sorted **list**, not a tuple.
+a = (30, 10, 20)
+
+print(sorted(a))
+
+Output:
+text
+[10, 20, 30]
+
+## `tuple()`
+
+Converts an iterable into a tuple.
+a = [10, 20, 30]
+
+b = tuple(a)
+
+print(b)
+
+Output:
+text
+(10, 20, 30)
+
+# 25. Set
+
+## What is a Set?
+
+A **Set** is an **unordered, mutable collection of unique elements**.
+
+A set is generally represented using **curly brackets `{}`**.
+
+### Syntax
+set_name = {element1, element2, element3}
+
+### Example
+a = {10, 20, 30, 40}
+
+print(a)
+
+Output:
+text
+{10, 20, 30, 40}
+
+> Note: Since a set is unordered, the display order should not be relied upon.
+
+# 26. Set Properties
+
+| Property             | Set         |
+| -------------------- | ----------- |
+| Ordered              | No          |
+| Mutable              | Yes         |
+| Indexed              | No          |
+| Slicing              | No          |
+| Duplicate elements   | Not allowed |
+| Unique elements      | Yes         |
+| Different data types | Allowed     |
+| Positive indexing    | No          |
+| Negative indexing    | No          |
+| Hashable elements    | Required    |
+| `add()` supported    | Yes         |
+| `remove()` supported | Yes         |
+
+# 27. Set with Different Data Types
+a = {10, 20.5, "Python", True}
+
+print(a)
+
+A set can contain different data types, provided the individual elements are **hashable**.
+
+# 28. Duplicate Elements in Set
+
+Set automatically keeps only unique elements.
+a = {10, 20, 10, 30, 20}
+
+print(a)
+
+Possible output:
+text
+{10, 20, 30}
+
+Therefore:
+text
+Set → Unique elements
+
+# 29. Set Does Not Support Indexing
+
+A set has no index positions.
+a = {10, 20, 30}
+
+print(a[0])
+
+Output:
+text
+TypeError
+
+Therefore:
+text
+Set → Indexing ❌
+
+# 30. Set Does Not Support Slicing
+a = {10, 20, 30}
+
+print(a[0:2])
+
+Output:
+text
+TypeError
+
+Therefore:
+text
+Set → Slicing ❌
+
+# 31. Empty Set
+
+## Wrong
+a = {}
+
+print(type(a))
+
+Output:
+text
+<class 'dict'>
+
+`{}` creates an empty dictionary.
+
+## Correct
+a = set()
+
+print(type(a))
+
+Output:
+text
+<class 'set'>
+
+# 32. Set `add()`
+
+Adds one element to the set.
+
+### Syntax
+set.add(element)
+
+### Example
+a = {10, 20, 30}
+
+a.add(40)
+
+print(a)
+
+Output:
+text
+{10, 20, 30, 40}
+
+# 33. Set `update()`
+
+Adds multiple elements to a set.
+
+### Example
+a = {10, 20}
+
+a.update([30, 40, 50])
+
+print(a)
+
+Output:
+text
+{10, 20, 30, 40, 50}
+
+It can also update using another set:
+a = {10, 20}
+b = {30, 40}
+
+a.update(b)
+
+print(a)
+
+# 34. Set `remove()`
+
+Removes a specified element.
+a = {10, 20, 30}
+
+a.remove(20)
+
+print(a)
+
+Output:
+text
+{10, 30}
+
+If the element does not exist, `remove()` raises a `KeyError`.
+
+# 35. Set `discard()`
+
+Removes a specified element.
+a = {10, 20, 30}
+
+a.discard(20)
+
+print(a)
+
+Output:
+text
+{10, 30}
+
+If the element does not exist, `discard()` does **not** raise an error.
+a = {10, 20, 30}
+
+a.discard(50)
+
+print(a)
+
+Output:
+text
+{10, 20, 30}
+
+# 36. Difference Between `remove()` and `discard()`
+
+| Method      | Element Exists  | Element Does Not Exist |
+| ----------- | --------------- | ---------------------- |
+| `remove()`  | Removes element | Error                  |
+| `discard()` | Removes element | No error               |
+
+# 37. Set `pop()`
+
+Removes and returns an arbitrary element from the set.
+a = {10, 20, 30}
+
+x = a.pop()
+
+print(x)
+print(a)
+
+The removed element is not predictable because sets are unordered.
+
+# 38. Set `clear()`
+
+Removes all elements.
+a = {10, 20, 30}
+
+a.clear()
+
+print(a)
+
+Output:
+text
+set()
+
+# 39. Set `copy()`
+
+Creates a shallow copy of a set.
+a = {10, 20, 30}
+
+b = a.copy()
+
+print(b)
+
+Output:
+text
+{10, 20, 30}
+
+# 40. Set `union()`
+
+Returns all unique elements from both sets.
+
+### Syntax
+set1.union(set2)
+
+### Example
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.union(b))
+
+Output:
+text
+{1, 2, 3, 4, 5}
+
+### Using `|`
+print(a | b)
+
+# 41. Set `intersection()`
+
+Returns common elements.
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.intersection(b))
+
+Output:
+text
+{3}
+
+### Using `&`
+print(a & b)
+
+# 42. Set `difference()`
+
+Returns elements present in the first set but not in the second.
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.difference(b))
+
+Output:
+text
+{1, 2}
+
+### Using `-`
+print(a - b)
+
+# 43. `difference_update()`
+
+Removes elements from the first set that are also present in the second set.
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+a.difference_update(b)
+
+print(a)
+
+Output:
+text
+{1, 2}
+
+### Difference
+text
+difference()
+        ↓
+Returns a new set
+
+difference_update()
+        ↓
+Changes the original set
+
+# 44. `symmetric_difference()`
+
+Returns elements that are in either set but not in both.
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.symmetric_difference(b))
+
+Output:
+text
+{1, 2, 4, 5}
+
+### Using `^`
+print(a ^ b)
+
+# 45. `symmetric_difference_update()`
+
+Updates the original set with the symmetric difference.
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+a.symmetric_difference_update(b)
+
+print(a)
+
+Output:
+text
+{1, 2, 4, 5}
+
+# 46. `intersection_update()`
+
+Keeps only common elements in the original set.
+a = {1, 2, 3}
+b = {2, 3, 4}
+
+a.intersection_update(b)
+
+print(a)
+
+Output:
+text
+{2, 3}
+
+# 47. `isdisjoint()`
+
+Returns `True` if two sets have no common elements.
+a = {1, 2, 3}
+b = {4, 5, 6}
+
+print(a.isdisjoint(b))
+
+Output:
+text
+True
+
+Example with common element:
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.isdisjoint(b))
+
+Output:
+text
+False
+
+# 48. `issubset()`
+
+Checks whether all elements of one set are present in another set.
+a = {1, 2}
+b = {1, 2, 3, 4}
+
+print(a.issubset(b))
+
+Output:
+text
+True
+
+### Using `<=`
+print(a <= b)
+
+# 49. `issuperset()`
+
+Checks whether a set contains all elements of another set.
+a = {1, 2, 3, 4}
+b = {1, 2}
+
+print(a.issuperset(b))
+
+Output:
+text
+True
+
+### Using `>=`
+print(a >= b)
+
+# 50. Set Membership
+
+Use `in` and `not in`.
+a = {10, 20, 30}
+
+print(20 in a)
+print(50 in a)
+print(50 not in a)
+
+Output:
+text
+True
+False
+True
+
+# 51. Set Built-in Functions
+
+## `len()`
+a = {10, 20, 30}
+
+print(len(a))
+
+Output:
+text
+3
+
+## `max()`
+a = {10, 20, 30}
+
+print(max(a))
+
+Output:
+text
+30
+
+## `min()`
+a = {10, 20, 30}
+
+print(min(a))
+
+Output:
+text
+10
+
+## `sum()`
+a = {10, 20, 30}
+
+print(sum(a))
+
+Output:
+text
+60
+
+## `sorted()`
+
+`sorted()` returns a list.
+a = {30, 10, 20}
+
+print(sorted(a))
+
+Output:
+text
+[10, 20, 30]
+
+## `set()`
+
+Converts an iterable into a set.
+a = [10, 20, 20, 30]
+
+b = set(a)
+
+print(b)
+
+Output:
+text
+{10, 20, 30}
+
+# 52. Complete Set Methods List
+
+| Method                          | Purpose                                    |
+| ------------------------------- | ------------------------------------------ |
+| `add()`                         | Add one element                            |
+| `clear()`                       | Remove all elements                        |
+| `copy()`                        | Create a copy                              |
+| `difference()`                  | Return differences                         |
+| `difference_update()`           | Update with differences                    |
+| `discard()`                     | Remove element without error               |
+| `intersection()`                | Return common elements                     |
+| `intersection_update()`         | Update with common elements                |
+| `isdisjoint()`                  | Check whether sets have no common elements |
+| `issubset()`                    | Check subset                               |
+| `issuperset()`                  | Check superset                             |
+| `pop()`                         | Remove arbitrary element                   |
+| `remove()`                      | Remove specified element                   |
+| `symmetric_difference()`        | Return non-common elements                 |
+| `symmetric_difference_update()` | Update with non-common elements            |
+| `union()`                       | Combine unique elements                    |
+| `update()`                      | Add multiple elements                      |
+
+# 53. Tuple vs Set
+
+| Feature           | Tuple                        | Set                                             |
+| ----------------- | ---------------------------- | ----------------------------------------------- |
+| Definition        | Ordered immutable collection | Unordered mutable collection of unique elements |
+| Symbol            | `()`                         | `{}`                                            |
+| Ordered           | Yes                          | No                                              |
+| Mutable           | No                           | Yes                                             |
+| Immutable         | Yes                          | No                                              |
+| Indexed           | Yes                          | No                                              |
+| Slicing           | Yes                          | No                                              |
+| Duplicates        | Allowed                      | Not allowed                                     |
+| Unique elements   | Not required                 | Yes                                             |
+| Negative indexing | Yes                          | No                                              |
+| Packing           | Yes                          | Not a set-specific feature                      |
+| Unpacking         | Yes                          | Not a set-specific feature                      |
+| Main methods      | `count()`, `index()`         | Many set methods                                |
+| Empty collection  | `()`                         | `set()`                                         |
+
+# 54. Tuple Quick Revision
+text
+Tuple
+  ↓
+Ordered
+  ↓
+Immutable
+  ↓
+Indexed
+  ↓
+Slicing supported
+  ↓
+Duplicates allowed
+  ↓
+Generally enclosed in ()
+  ↓
+Elements are comma-separated
+  ↓
+Packing
+  ↓
+Unpacking
+  ↓
+count()
+  ↓
+index()
+
+# 55. Set Quick Revision
+text
+Set
+  ↓
+Unordered
+  ↓
+Mutable
+  ↓
+Unique elements
+  ↓
+No indexing
+  ↓
+No slicing
+  ↓
+add()
+  ↓
+update()
+  ↓
+remove()
+  ↓
+discard()
+  ↓
+pop()
+  ↓
+clear()
+  ↓
+copy()
+  ↓
+union()
+  ↓
+intersection()
+  ↓
+difference()
+  ↓
+symmetric_difference()
+  ↓
+issubset()
+  ↓
+issuperset()
+  ↓
+isdisjoint()
+
+# 56. Important Interview Questions
+
+### Q1. What is a Tuple?
+
+A Tuple is an **ordered and immutable collection of elements**. It is generally enclosed in `()` and its elements are comma-separated.
+
+### Q2. Why is comma important in Tuple?
+
+The comma is what defines the tuple in cases such as a single-element tuple.
+a = (10,)
+
+### Q3. Is Tuple mutable?
+
+No. Tuple is immutable.
+
+### Q4. Does Tuple allow duplicate values?
+
+Yes.
+
+### Q5. Does Tuple support indexing?
+
+Yes.
+
+### Q6. Does Tuple support slicing?
+
+Yes.
+
+### Q7. What is Packing?
+
+Packing means storing multiple values into a single tuple.
+a = 10, 20, 30
+
+### Q8. What is Unpacking?
+
+Unpacking means assigning tuple elements to separate variables.
+a = (10, 20, 30)
+x, y, z = a
+
+### Q9. How many specific methods does Tuple have?
+
+Two:
+text
+count()
+index()
+
+### Q10. What is a Set?
+
+A Set is an **unordered, mutable collection of unique elements**.
+
+### Q11. Does Set allow duplicate elements?
+
+No.
+
+### Q12. Does Set support indexing?
+
+No.
+
+### Q13. Does Set support slicing?
+
+No.
+
+### Q14. Difference between `remove()` and `discard()`?
+text
+remove()  → element not found → Error
+discard() → element not found → No Error
+
+### Q15. How do you create an empty Set?
+a = set()
+
+### Q16. What is the difference between `{}` and `set()`?
+text
+{}       → Empty dictionary
+set()    → Empty set
+
+# Final One-Line Revision
+text
+TUPLE = Ordered + Immutable + Indexed + Slicing + Duplicates + () + Comma-separated + Packing + Unpacking
+
+SET = Unordered + Mutable + Unique + No Indexing + No Slicing + {}

@@ -1,0 +1,844 @@
+# Python Exception Handling
+
+## 1. What is Exception Handling?
+
+**Exception Handling** is used to handle errors that occur while a Python program is running.
+
+### Simple Definition
+
+> **Exception handling is a way to handle runtime errors without stopping the program suddenly.**
+
+### Example
+a = 10
+b = 0
+
+print(a / b)
+```
+
+This gives:
+ZeroDivisionError
+```
+
+The program stops because we tried to divide a number by zero.
+
+With exception handling, we can handle this error properly.
+
+
+# 2. What is an Exception?
+
+An **exception** is an error that occurs during program execution.
+
+### Simple Definition
+
+> **An exception is a runtime error that interrupts the normal flow of a program.**
+
+Example:
+num = int(input("Enter a number: "))
+```
+
+If the user enters:
+abc
+```
+
+Python gives:
+ValueError
+```
+
+because `"abc"` cannot be converted into an integer.
+
+
+# 3. Why do we use Exception Handling?
+
+Exception handling helps us to:
+
+- Handle runtime errors
+- Prevent the program from stopping suddenly
+- Display user-friendly error messages
+- Continue program execution when possible
+- Make programs more reliable
+
+
+# 4. Types of Errors
+
+Python errors are commonly discussed as:
+
+1. Syntax Error
+2. Runtime Error / Exception
+3. Logical Error
+
+
+## 4.1 Syntax Error
+
+A syntax error occurs when Python code does not follow Python's syntax rules.
+
+### Example
+if 10 > 5
+    print("Yes")
+```
+
+Here, `:` is missing.
+
+Python gives:
+SyntaxError
+```
+
+### Simple Definition
+
+> **Syntax error means the code is not written according to Python syntax rules.**
+
+
+# 5. Runtime Error / Exception
+
+A runtime error occurs while the program is running.
+
+### Example
+a = 10
+b = 0
+
+print(a / b)
+```
+
+Output/Error:
+ZeroDivisionError
+```
+
+The syntax is correct, but the operation is not possible.
+
+
+# 6. Logical Error
+
+A logical error occurs when the program runs successfully but gives the wrong output.
+
+### Example
+a = 10
+b = 5
+
+print(a - b)
+```
+
+If we wanted addition, the correct code should be:
+print(a + b)
+```
+
+The program does not show an error, but the result is wrong.
+
+### Simple Definition
+
+> **Logical error means the program runs but produces an incorrect result.**
+
+
+# 7. Common Python Exceptions
+
+Some common exceptions are:
+
+| Exception | Meaning |
+|
+| `ValueError` | Invalid value |
+| `TypeError` | Wrong data type |
+| `ZeroDivisionError` | Division by zero |
+| `IndexError` | Index does not exist |
+| `KeyError` | Dictionary key does not exist |
+| `NameError` | Variable/name is not defined |
+| `FileNotFoundError` | File does not exist |
+| `AttributeError` | Object does not have the requested attribute |
+| `ImportError` | Import cannot be completed |
+
+
+# 8. ValueError
+
+A `ValueError` occurs when the value is invalid for the operation.
+
+### Example
+age = int("abc")
+```
+
+Output:
+ValueError
+```
+
+`"abc"` cannot be converted into an integer.
+
+
+# 9. TypeError
+
+A `TypeError` occurs when we perform an operation on an inappropriate data type.
+
+### Example
+a = 10
+b = "20"
+
+print(a + b)
+```
+
+Output:
+TypeError
+```
+
+We cannot directly add an integer and a string.
+
+
+# 10. ZeroDivisionError
+
+It occurs when we divide a number by zero.
+
+### Example
+a = 10
+b = 0
+
+print(a / b)
+```
+
+Output:
+ZeroDivisionError
+```
+
+
+# 11. IndexError
+
+It occurs when we try to access an index that does not exist.
+
+### Example
+numbers = [10, 20, 30]
+
+print(numbers[5])
+```
+
+The available indexes are:
+0, 1, 2
+```
+
+Index `5` does not exist.
+
+So Python gives:
+IndexError
+```
+
+
+# 12. KeyError
+
+It occurs when we try to access a dictionary key that does not exist.
+
+### Example
+student = {
+    "name": "Mayuri",
+    "age": 22
+}
+
+print(student["marks"])
+```
+
+`marks` key does not exist.
+
+So Python gives:
+KeyError
+```
+
+
+# 13. NameError
+
+It occurs when we use a variable or name that is not defined.
+
+### Example
+print(name)
+```
+
+If `name` was never created, Python gives:
+NameError
+```
+
+
+# 14. FileNotFoundError
+
+It occurs when we try to open a file that does not exist.
+
+### Example
+file = open("abc.txt", "r")
+```
+
+If `abc.txt` does not exist, Python gives:
+FileNotFoundError
+```
+
+
+# 15. `try` and `except`
+
+The basic structure of exception handling is:
+try:
+    # risky code
+except:
+    # error handling code
+```
+
+### Example
+try:
+    a = 10
+    b = 0
+
+    print(a / b)
+
+except:
+    print("Something went wrong")
+```
+
+### Output
+Something went wrong
+```
+
+### How it works?
+
+Python first executes the code inside `try`.
+
+If an exception occurs:
+try
+ ↓
+Error occurs
+ ↓
+except executes
+```
+
+
+# 16. Handling a Specific Exception
+
+It is better to specify the exception.
+
+### Example
+try:
+    a = 10
+    b = 0
+
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
+
+### Output
+Cannot divide by zero
+```
+
+This is better than using a general `except` because we know exactly which error we are handling.
+
+
+# 17. Multiple `except` Blocks
+
+We can handle different exceptions separately.
+
+### Example
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+
+    print(result)
+
+except ValueError:
+    print("Please enter numbers only")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
+
+### If user enters:
+abc
+```
+
+Output:
+Please enter numbers only
+```
+
+### If user enters:
+0
+```
+
+Output:
+Cannot divide by zero
+```
+
+
+# 18. `else` Block
+
+The `else` block runs **only when no exception occurs**.
+
+### Syntax
+try:
+    # code
+except:
+    # error
+else:
+    # no error
+```
+
+### Example
+try:
+    a = 10
+    b = 2
+
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+else:
+    print("Calculation successful")
+```
+
+### Output
+5.0
+Calculation successful
+```
+
+### Flow
+try
+ ↓
+Error?
+ ↙     ↘
+Yes     No
+ ↓       ↓
+except  else
+```
+
+
+# 19. `finally` Block
+
+The `finally` block **always executes**, whether an exception occurs or not.
+
+### Syntax
+try:
+    # code
+except:
+    # error
+finally:
+    # always executes
+```
+
+### Example
+try:
+    a = 10
+    b = 0
+
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    print("Program completed")
+```
+
+### Output
+Cannot divide by zero
+Program completed
+```
+
+Even though an error occurred, `finally` executed.
+
+
+# 20. Complete Exception Handling Structure
+
+Python allows:
+try
+except
+else
+finally
+```
+
+### Example
+try:
+    num = int(input("Enter a number: "))
+
+    result = 10 / num
+
+except ValueError:
+    print("Please enter numbers only")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+else:
+    print("Result:", result)
+
+finally:
+    print("Program execution completed")
+```
+
+### Flow
+             try
+              ↓
+        Exception occurs?
+          /          \
+        Yes           No
+         ↓             ↓
+      except         else
+          \           /
+           \         /
+            finally
+```
+
+
+# 21. `raise` Keyword
+
+The `raise` keyword is used to **manually create an exception**.
+
+### Example
+age = 15
+
+if age < 18:
+    raise ValueError("Age must be 18 or above")
+```
+
+Output:
+ValueError: Age must be 18 or above
+```
+
+### Simple Definition
+
+> **`raise` is used to manually raise an exception.**
+
+
+# 22. Custom Exception
+
+We can also create our own exception class.
+
+### Example
+class AgeError(Exception):
+    pass
+
+
+age = 15
+
+if age < 18:
+    raise AgeError("Age must be 18 or above")
+```
+
+Here:
+class AgeError(Exception):
+```
+
+creates a custom exception.
+
+
+# 23. ATM Example
+
+Exception handling can be used in an ATM program.
+
+### Example
+pin = 1234
+attempts = 0
+
+while attempts < 3:
+
+    try:
+        user_pin = int(input("Enter your ATM PIN: "))
+
+        if user_pin == pin:
+            print("Access Granted")
+            break
+        else:
+            attempts += 1
+            print("Wrong PIN")
+
+    except ValueError:
+        attempts += 1
+        print("Please enter numbers only")
+
+    finally:
+        print("Attempt completed")
+```
+
+Here:
+
+- `try` → takes PIN input
+- `except` → handles non-numeric input
+- `if` → checks PIN
+- `finally` → executes after every attempt
+- `while` → allows maximum 3 attempts
+
+> If you want to block the ATM card after 3 wrong attempts, check `attempts == 3` after the loop.
+
+
+# 24. Important Difference: `ValueError` vs `TypeError`
+
+| ValueError | TypeError |
+|
+| Value is invalid | Data type is inappropriate |
+| Type may be correct | Type is wrong for the operation |
+| `int("abc")` | `10 + "20"` |
+| Invalid value | Wrong type |
+
+### Example
+int("abc")
+```
+
+→ `ValueError`
+10 + "20"
+```
+
+→ `TypeError`
+
+
+# 25. `try` vs `except` vs `else` vs `finally`
+
+| Block | Purpose |
+|
+| `try` | Contains risky code |
+| `except` | Handles exception |
+| `else` | Runs when no exception occurs |
+| `finally` | Always runs |
+
+### Easy Trick
+try     → Try the code
+except  → Handle error
+else    → No error
+finally → Always execute
+```
+
+
+# 26. Important Rules
+
+### Rule 1
+
+`try` must be followed by `except`, `finally`, or both.
+
+### Rule 2
+
+`else` is executed only when there is no exception.
+
+### Rule 3
+
+`finally` normally executes whether an exception occurs or not.
+
+### Rule 4
+
+Use specific exceptions whenever possible.
+
+Good:
+except ValueError:
+```
+
+Less specific:
+except:
+```
+
+### Rule 5
+
+Do not use exception handling to hide every programming mistake.
+
+
+# 27. Exception Handling Syntax
+
+### Basic
+try:
+    # risky code
+except ExceptionType:
+    # handle error
+```
+
+### With else
+try:
+    # risky code
+except ExceptionType:
+    # handle error
+else:
+    # no error
+```
+
+### With finally
+try:
+    # risky code
+except ExceptionType:
+    # handle error
+finally:
+    # always executes
+```
+
+### Complete
+try:
+    # risky code
+
+except ExceptionType:
+    # handle error
+
+else:
+    # runs if no error
+
+finally:
+    # always runs
+```
+
+
+# 28. Exception Handling Quick Revision
+
+### Exception
+
+> A runtime error that interrupts the normal flow of a program.
+
+### Exception Handling
+
+> A way to handle runtime errors without stopping the program suddenly.
+
+### `try`
+
+> Contains code that may cause an exception.
+
+### `except`
+
+> Handles the exception.
+
+### `else`
+
+> Runs when there is no exception.
+
+### `finally`
+
+> Always executes.
+
+### `raise`
+
+> Manually raises an exception.
+
+
+# 29. Common Exceptions – Quick Revision
+ValueError
+    ↓
+Invalid value
+
+TypeError
+    ↓
+Wrong data type
+
+ZeroDivisionError
+    ↓
+Division by zero
+
+IndexError
+    ↓
+Invalid list/string index
+
+KeyError
+    ↓
+Dictionary key not found
+
+NameError
+    ↓
+Variable/name not defined
+
+FileNotFoundError
+    ↓
+File does not exist
+
+AttributeError
+    ↓
+Attribute does not exist for the object
+```
+
+
+# 30. Interview Questions
+
+## Q1. What is exception handling?
+
+**Answer:**
+
+> Exception handling is a mechanism used to handle runtime errors in a Python program.
+
+
+## Q2. Which keywords are used in exception handling?
+
+**Answer:**
+
+> `try`, `except`, `else`, `finally`, and `raise`.
+
+
+## Q3. What is the use of `try`?
+
+**Answer:**
+
+> `try` contains the code that may cause an exception.
+
+
+## Q4. What is the use of `except`?
+
+**Answer:**
+
+> `except` is used to handle an exception.
+
+
+## Q5. What is the use of `else`?
+
+**Answer:**
+
+> `else` executes when no exception occurs in the `try` block.
+
+
+## Q6. What is the use of `finally`?
+
+**Answer:**
+
+> `finally` executes whether an exception occurs or not.
+
+
+## Q7. What is `ValueError`?
+
+**Answer:**
+
+> `ValueError` occurs when a function receives a valid type but an inappropriate value.
+
+Example:
+int("abc")
+```
+
+
+## Q8. What is `TypeError`?
+
+**Answer:**
+
+> `TypeError` occurs when an operation is performed on an inappropriate data type.
+
+Example:
+10 + "20"
+```
+
+
+## Q9. What is `ZeroDivisionError`?
+
+**Answer:**
+
+> It occurs when we try to divide a number by zero.
+
+
+## Q10. What is the difference between error and exception?
+
+**Answer:**
+
+> An error is a problem in a program, while an exception is an event that occurs during program execution and can often be handled using `try-except`.
+
+
+# 31. Final Summary
+Exception Handling
+│
+├── Exception
+│
+├── Error Types
+│   ├── Syntax Error
+│   ├── Runtime Error / Exception
+│   └── Logical Error
+│
+├── Common Exceptions
+│   ├── ValueError
+│   ├── TypeError
+│   ├── ZeroDivisionError
+│   ├── IndexError
+│   ├── KeyError
+│   ├── NameError
+│   └── FileNotFoundError
+│
+├── try
+├── except
+├── else
+├── finally
+├── raise
+│
+└── Custom Exception
+```
+
+### Most Important Line to Remember
+
+> **`try` = risky code, `except` = handle error, `else` = no error, `finally` = always execute.**

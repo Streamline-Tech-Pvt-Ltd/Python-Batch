@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.This Keyword
+        const student = {
+            name: "Urmila",
+            age: 22,
+            display: function() {
+                console.log(this.name);
+                console.log(this.age);
+            }
+        };
+        student.display();
+
+        // 2.Array
+        const fruit = ["Apple","Banana","Mango","KIWI"];
+        console.log(fruit);
+
+ 
+        // 3.length
+        const fruits = ["Apple","Banana","Mango","KIWI"];
+        let count = fruits.length;
+        console.log(count);
+
+        // 4.pop()
+        const fruits1 = ["Apple","Banana","Mango","KIWI"];
+        let removed = fruits1.pop();
+        console.log(fruits1);
+        console.log(removed);
+
+        // 5.push()
+        const num = [24,67,98,65,98];
+        let result = num.push(100);
+        console.log(result);
+        console.log(num);
+
+        // 6.shift
+        const name = ["Urmila","Mayuri","Shivani","Pallavi"];
+        let removed1 = name.shift();
+        console.log(removed1);
+        console.log(name);
+
+        // 7.join
+        const names = ["Urmila","Mayuri","Shivani","Pallavi"];
+        let result1 = name.join("-");
+        console.log(result1);
+
+        // 8.sort
+        const intern= ["Urmila","Mayuri","Shivani","Pallavi"];
+        intern.sort;
+        console.log(intern);
+
+        // 9.filter
+        const num1 = [21, 65, 34, 18, 15, 10, 66]
+        const age = num1.filter(myfunction);
+        function myfunction(value) {
+            return value >= 18;
+        }
+        console.log(age);
+
+    </script>
+    
+</body>
+</html>

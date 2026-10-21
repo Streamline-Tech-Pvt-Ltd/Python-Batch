@@ -96,12 +96,12 @@
 # print("Factorial:",fact)
 
 
-num = int(input("Enter The Number:"))
-fact = 1
-for i in range(1,num+1):
-    fact = fact*i
+# num = int(input("Enter The Number:"))
+# fact = 1
+# for i in range(1,num+1):
+#     fact = fact*i
 
-print("Factorial:",fact)
+# print("Factorial:",fact)
 
 
 #6.Pallindrom or Not
@@ -153,14 +153,14 @@ print("Factorial:",fact)
 # print("GCD =", a)
 
 #Using for loop find the gcd of two numbers
-a = int(input("Enter First Number: "))
-b = int(input("Enter Second Number: "))
-gcd = 1
-for i in range(1, min(a, b) + 1):
-    if a % i == 0 and b % i == 0:
-        gcd = i
+# a = int(input("Enter First Number: "))
+# b = int(input("Enter Second Number: "))
+# gcd = 1
+# for i in range(1, min(a, b) + 1):
+#     if a % i == 0 and b % i == 0:
+#         gcd = i
 
-print("GCD =", gcd)
+# print("GCD =", gcd)
 
 
 #10.Find the LCM(Least common multiple) of two numbers.
@@ -201,5 +201,46 @@ print("GCD =", gcd)
 # print("Sum =",sum)
 
 
+# Function Example
+
+# def calculate(fun,a,b):
+#     return(fun(a,b))
+
+# def add(a,b):
+#     return(a+b)
+# def sub(a,b):
+#     return(a-b)
+# def mult(a,b):
+#     return(a*b)
+
+# print(calculate(add,10,20))
+# print(calculate(sub,10,20))
+# print(calculate(mult,10,20))
+
+
+def count(n):
+    if n > 5:
+        return 0
+    print(n)
+    count(n + 1)
+count(1)
+
+
+
+
+
+
+
+
+# calculate(sub,20,20)
+# print
+
+
+
+
+
+
+
+    
 
 

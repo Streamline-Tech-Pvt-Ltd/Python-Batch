@@ -1,0 +1,928 @@
+# Python Conditional Statements
+
+##  What are Conditional Statements?
+
+**Conditional statements** are used to make decisions in a Python program.
+
+They execute a block of code when a specified condition is `True`.
+
+Python provides the following conditional statements:
+
+1. `if`
+2. `if-else`
+3. `if-elif-else`
+4. Nested `if`
+5. `match-case` (Python 3.10+)
+
+# 1. `if` Statement
+
+## Definition
+
+The `if` statement executes a block of code **only when the given condition is True**.
+
+## Syntax
+if condition:
+    statement
+
+## Example
+age = 20
+
+if age >= 18:
+    print("You are eligible to vote")
+
+### Output
+You are eligible to vote
+
+### Example: False Condition
+age = 15
+
+if age >= 18:
+    print("You are eligible to vote")
+
+### Output
+No output
+
+Because the condition is `False`.
+
+# 2. `if-else` Statement
+
+## Definition
+
+The `if-else` statement executes one block when the condition is `True` and another block when the condition is `False`.
+
+## Syntax
+if condition:
+    statement
+else:
+    statement
+
+## Example
+age = 15
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+### Output
+Minor
+
+# 3. `if-elif-else` Statement
+
+## Definition
+
+The `if-elif-else` statement is used when we have **multiple conditions**.
+
+* `if` checks the first condition.
+* `elif` checks another condition if the previous condition is False.
+* `else` executes when all conditions are False.
+
+## Syntax
+if condition1:
+    statement
+
+elif condition2:
+    statement
+
+elif condition3:
+    statement
+
+else:
+    statement
+
+## Example
+marks = 75
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 75:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+
+### Output
+Grade A
+
+# 4. Multiple `elif`
+
+We can use multiple `elif` statements.
+number = 3
+
+if number == 1:
+    print("One")
+elif number == 2:
+    print("Two")
+elif number == 3:
+    print("Three")
+elif number == 4:
+    print("Four")
+else:
+    print("Invalid number")
+
+### Output
+Three
+
+# 5. `else` Statement
+
+## Definition
+
+The `else` block executes when **all previous conditions are False**.
+
+## Example
+age = 10
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Not Adult")
+
+### Output
+Not Adult
+
+### Important
+
+`else` does not have a condition.
+else:
+
+# 6. Nested `if` Statement
+
+## Definition
+
+An `if` statement written inside another `if` statement is called a **nested if statement**.
+
+## Syntax
+if condition1:
+    if condition2:
+        statement
+
+## Example
+age = 20
+citizen = True
+
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
+
+### Output
+Eligible to vote
+
+# 7. Nested `if-else`
+age = 20
+citizen = False
+
+if age >= 18:
+    if citizen:
+        print("Eligible to vote")
+    else:
+        print("Not a citizen")
+else:
+    print("Under 18")
+
+### Output
+Not a citizen
+
+# 8. Conditional Statements with Comparison Operators
+
+Conditional statements commonly use comparison operators.
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| `==`     | Equal to                 |
+| `!=`     | Not equal to             |
+| `>`      | Greater than             |
+| `<`      | Less than                |
+| `>=`     | Greater than or equal to |
+| `<=`     | Less than or equal to    |
+
+## Example
+a = 10
+b = 20
+
+if a < b:
+    print("a is smaller")
+
+### Output
+a is smaller
+
+# 9. Conditional Statements with Logical Operators
+
+Python provides three logical operators:
+
+| Operator | Meaning                             |
+| -------- | ----------------------------------- |
+| `and`    | Both conditions must be True        |
+| `or`     | At least one condition must be True |
+| `not`    | Reverses the condition              |
+
+## `and`
+age = 25
+salary = 30000
+
+if age >= 18 and salary >= 25000:
+    print("Eligible")
+
+### Output
+Eligible
+
+Both conditions are True.
+
+## `or`
+age = 17
+citizen = True
+
+if age >= 18 or citizen:
+    print("Condition satisfied")
+
+### Output
+Condition satisfied
+
+At least one condition is True.
+
+## `not`
+is_raining = False
+
+if not is_raining:
+    print("Go outside")
+
+### Output
+Go outside
+
+# 10. `if` with Membership Operator
+
+The `in` operator can be used to check whether a value exists inside a sequence.
+name = "Mayuri"
+
+if "M" in name:
+    print("M is present")
+
+### Output
+M is present
+
+# 11. `if` with `not in`
+name = "Mayuri"
+
+if "z" not in name:
+    print("z is not present")
+
+### Output
+z is not present
+
+# 12. `if` with String
+name = "Mayuri"
+
+if name == "Mayuri":
+    print("Welcome Mayuri")
+
+### Output
+Welcome Mayuri
+
+# 13. `if` with List
+numbers = [10, 20, 30, 40]
+
+if 20 in numbers:
+    print("20 is present")
+
+### Output
+20 is present
+
+# 14. `if` with Tuple
+numbers = (10, 20, 30)
+
+if 20 in numbers:
+    print("20 is present")
+
+### Output
+20 is present
+
+# 15. `if` with Set
+numbers = {10, 20, 30}
+
+if 20 in numbers:
+    print("20 is present")
+
+### Output
+20 is present
+
+# 16. `if` with Dictionary
+
+By default, `in` checks the **keys** of a dictionary.
+student = {
+    "name": "Mayuri",
+    "age": 22
+}
+
+if "name" in student:
+    print("Name key is present")
+
+### Output
+Name key is present
+
+# 17. Checking Even or Odd
+number = 10
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+### Output
+Even
+
+# 18. Positive, Negative or Zero
+number = -5
+
+if number > 0:
+    print("Positive")
+elif number < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+### Output
+Negative
+
+# 19. Find Greater Number
+a = 20
+b = 10
+
+if a > b:
+    print("a is greater")
+elif b > a:
+    print("b is greater")
+else:
+    print("Both are equal")
+
+### Output
+a is greater
+
+# 20. Check Voting Eligibility
+age = 21
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")
+
+### Output
+Eligible to vote
+
+# 21. Check Pass or Fail
+marks = 65
+
+if marks >= 35:
+    print("Pass")
+else:
+    print("Fail")
+
+### Output
+Pass
+
+# 22. Grade System
+marks = 85
+
+if marks >= 90:
+    print("A+")
+elif marks >= 80:
+    print("A")
+elif marks >= 70:
+    print("B")
+elif marks >= 60:
+    print("C")
+elif marks >= 35:
+    print("D")
+else:
+    print("Fail")
+
+### Output
+A
+
+# 23. User Input with Conditional Statement
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+### Example Input
+Enter your age: 22
+
+### Output
+Adult
+
+# 24. Important Rules of Conditional Statements
+
+### Rule 1: Colon `:`
+
+A colon is required after the condition.
+if age >= 18:
+
+### Rule 2: Indentation
+
+The code inside the condition must be indented.
+if age >= 18:
+    print("Adult")
+
+### Rule 3: `elif` must have a condition
+elif age >= 13:
+    print("Teenager")
+
+### Rule 4: `else` does not have a condition
+else:
+    print("Child")
+
+### Rule 5: `elif` and `else` cannot be used alone
+
+Incorrect:
+elif age >= 18:
+    print("Adult")
+
+Correct:
+if age >= 18:
+    print("Adult")
+elif age >= 13:
+    print("Teenager")
+
+# 25. Execution Flow
+
+Consider:
+marks = 75
+
+if marks >= 90:
+    print("A+")
+
+elif marks >= 75:
+    print("A")
+
+elif marks >= 60:
+    print("B")
+
+else:
+    print("Fail")
+
+Python checks conditions from **top to bottom**.
+90 or above? ❌
+75 or above? ✅
+
+So Python executes:
+A
+
+Once a condition is True, the remaining `elif` and `else` blocks are skipped.
+
+# 26. `if` vs `if-else` vs `if-elif-else`
+
+| Statement      | Use                                |
+| -------------- | ---------------------------------- |
+| `if`           | One condition                      |
+| `if-else`      | Two possible cases                 |
+| `if-elif-else` | Multiple conditions                |
+| Nested `if`    | Condition inside another condition |
+
+# 27. Conditional Expression / Ternary Operator
+
+Python also supports a one-line conditional expression.
+
+## Syntax
+value_if_true if condition else value_if_false
+
+## Example
+age = 20
+
+result = "Adult" if age >= 18 else "Minor"
+
+print(result)
+
+### Output
+Adult
+
+# 28. `match-case`
+
+Python 3.10+ provides `match-case`.
+
+It can be used when we want to compare a value against different patterns/cases.
+day = 2
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case _:
+        print("Invalid day")
+
+### Output
+Tuesday
+
+`case _` works like a default case.
+
+# 29. Conditional Statements vs Match-Case
+
+| Conditional Statements                  | Match-Case                        |
+| --------------------------------------- | --------------------------------- |
+| Uses `if`, `elif`, `else`               | Uses `match`, `case`              |
+| Best for conditions and ranges          | Best for matching values/patterns |
+| Supports complex Boolean conditions     | Supports pattern matching         |
+| Available in all modern Python versions | Introduced in Python 3.10         |
+
+# 30. Common Mistakes
+
+### ❌ Missing colon
+if age >= 18
+    print("Adult")
+
+### ✅ Correct
+if age >= 18:
+    print("Adult")
+
+### ❌ Wrong indentation
+if age >= 18:
+print("Adult")
+
+### ✅ Correct
+if age >= 18:
+    print("Adult")
+
+### ❌ Using `=` instead of `==`
+if age = 18:
+
+### ✅ Correct
+if age == 18:
+
+`=` → Assignment operator
+
+`==` → Comparison operator
+
+# 31. Key Points
+
+* `if`, `elif`, and `else` are called **conditional statements**.
+* `if` checks a condition.
+* `elif` checks additional conditions.
+* `else` executes when all conditions are False.
+* Multiple `elif` statements can be used.
+* Only one block of an `if-elif-else` chain executes.
+* `if` can be nested inside another `if`.
+* Conditions usually use comparison and logical operators.
+* Python uses indentation to define code blocks.
+* A colon `:` is required after `if`, `elif`, `else`, `for`, `while`, etc.
+* Python 3.10+ also supports `match-case`.
+
+# 🎯 Interview Questions & Answers
+
+## Q1. What are conditional statements in Python?
+
+**Answer:**
+
+Conditional statements are used to make decisions and execute code based on whether a condition is True or False.
+
+## Q2. What are the conditional statements in Python?
+
+**Answer:**
+
+The main conditional statements are:
+
+* `if`
+* `if-else`
+* `if-elif-else`
+* Nested `if`
+
+Python 3.10+ also provides `match-case`.
+
+## Q3. What is an `if` statement?
+
+**Answer:**
+
+The `if` statement executes a block of code when the specified condition is True.
+
+## Q4. What is the difference between `if` and `if-else`?
+
+**Answer:**
+
+`if` executes code only when the condition is True.
+
+`if-else` provides two blocks: one for True and one for False.
+
+## Q5. What is `elif`?
+
+**Answer:**
+
+`elif` means **else if**. It is used to check another condition when the previous condition is False.
+
+## Q6. Can we use multiple `elif` statements?
+
+**Answer:**
+
+Yes. We can use multiple `elif` statements.
+
+## Q7. Can `else` be used without `if`?
+
+**Answer:**
+
+No. `else` must be associated with an `if` statement.
+
+## Q8. Can `elif` be used without `if`?
+
+**Answer:**
+
+No. `elif` must come after an `if` or another `elif`.
+
+## Q9. What is nested `if`?
+
+**Answer:**
+
+An `if` statement inside another `if` statement is called a nested `if`.
+
+## Q10. What is the difference between `=` and `==`?
+
+**Answer:**
+
+`=` is an assignment operator, while `==` is a comparison operator.
+x = 10       # Assignment
+
+x == 10      # Comparison
+
+## Q11. What is the purpose of `else`?
+
+**Answer:**
+
+`else` executes when all preceding conditions are False.
+
+## Q12. What is a ternary operator in Python?
+
+**Answer:**
+
+A ternary operator is a one-line conditional expression.
+result = "Pass" if marks >= 35 else "Fail"
+
+## Q13. Does Python have a switch-case statement?
+
+**Answer:**
+
+Python does not have the traditional `switch-case` statement. Python 3.10+ provides `match-case`, which supports pattern matching.
+
+## Q14. What is indentation in Python?
+
+**Answer:**
+
+Indentation means spaces at the beginning of a line. Python uses indentation to define code blocks.
+
+Example:
+if age >= 18:
+    print("Adult")
+
+# ⭐ Short Interview Answer
+
+> **“In Python, ****`if`****, ****`elif`****, and ****`else`**** are called conditional statements. They are used to make decisions and execute different blocks of code based on conditions. ****`if`**** checks the first condition, ****`elif`**** checks additional conditions, and ****`else`**** executes when all conditions are False.”**
+
+
+# 27. Ternary Operator
+
+## Definition
+
+A **ternary operator** is a one-line conditional expression used to choose between two values based on a condition.
+
+It is also called a **conditional expression**.
+
+Instead of writing a complete `if-else` block, we can write the condition in a single line.
+
+---
+
+## Syntax
+value_if_true if condition else value_if_false
+
+---
+
+## Example 1: Simple Ternary Operator
+age = 20
+
+result = "Adult" if age >= 18 else "Minor"
+
+print(result)
+
+### Output
+text
+Adult
+
+### Explanation
+text
+age >= 18
+   ↓
+ True → "Adult"
+ False → "Minor"
+
+---
+
+# 28. Ternary Operator with `if-else`
+
+### Normal `if-else`
+age = 20
+
+if age >= 18:
+    result = "Adult"
+else:
+    result = "Minor"
+
+print(result)
+
+### Using Ternary Operator
+age = 20
+
+result = "Adult" if age >= 18 else "Minor"
+
+print(result)
+
+Both produce the same output:
+text
+Adult
+
+---
+
+# 29. Ternary Operator with Multiple Conditions (`elif` Logic)
+
+A ternary operator directly supports only **one `if` and one `else`**.
+
+We cannot write:
+# ❌ Invalid syntax
+
+result = "A" if marks >= 90 elif marks >= 75 else "B"
+
+For `elif`-type logic, we can use a **nested ternary operator**.
+
+---
+
+## Normal `if-elif-else`
+marks = 85
+
+if marks >= 90:
+    result = "A+"
+elif marks >= 75:
+    result = "A"
+elif marks >= 60:
+    result = "B"
+else:
+    result = "C"
+
+print(result)
+
+### Output
+text
+A
+
+---
+
+## Same Logic Using Nested Ternary Operator
+marks = 85
+
+result = "A+" if marks >= 90 else "A" if marks >= 75 else "B" if marks >= 60 else "C"
+
+print(result)
+
+### Output
+text
+A
+
+### Explanation
+
+The logic is:
+text
+marks >= 90
+    ↓
+  True  → A+
+  False
+    ↓
+marks >= 75
+    ↓
+  True  → A
+  False
+    ↓
+marks >= 60
+    ↓
+  True  → B
+  False  → C
+
+So, nested ternary can be used when we need `elif`-like logic.
+
+---
+
+# 30. Another Example: Positive, Negative, Zero
+
+### Normal `if-elif-else`
+number = -5
+
+if number > 0:
+    result = "Positive"
+elif number < 0:
+    result = "Negative"
+else:
+    result = "Zero"
+
+print(result)
+
+### Output
+text
+Negative
+
+### Using Ternary Operator
+number = -5
+
+result = "Positive" if number > 0 else "Negative" if number < 0 else "Zero"
+
+print(result)
+
+### Output
+text
+Negative
+
+---
+
+# 31. Another Example: Even or Odd
+number = 10
+
+result = "Even" if number % 2 == 0 else "Odd"
+
+print(result)
+
+### Output
+text
+Even
+
+---
+
+# 32. Ternary Operator with Strings
+name = "Mayuri"
+
+result = "Welcome" if name == "Mayuri" else "Unknown"
+
+print(result)
+
+### Output
+text
+Welcome
+
+---
+
+# 33. Ternary Operator with Multiple Conditions
+age = 22
+
+result = "Child" if age < 13 else "Teenager" if age < 18 else "Adult"
+
+print(result)
+
+### Output
+text
+Adult
+
+This is equivalent to:
+if age < 13:
+    result = "Child"
+elif age < 18:
+    result = "Teenager"
+else:
+    result = "Adult"
+
+---
+
+# 34. Ternary Operator vs `if-elif-else`
+
+| Ternary Operator                           | `if-elif-else`                       |
+| ------------------------------------------ | ------------------------------------ |
+| Usually one line                           | Multiple lines                       |
+| Best for simple conditions                 | Best for complex conditions          |
+| Directly supports `if-else`                | Supports multiple `elif`             |
+| Multiple conditions require nested ternary | Multiple `elif` can be used directly |
+| Less code                                  | More readable for complex logic      |
+
+---
+
+# 35. Important Point
+
+### Ternary operator has this basic structure:
+value_if_true if condition else value_if_false
+
+It does **not** have a separate `elif` keyword.
+
+For `elif`-type logic, we use:
+result = value1 if condition1 else value2 if condition2 else value3
+
+This is called a **nested ternary expression**.
+
+---
+
+# 🎯 Interview Answer
+
+### What is a ternary operator in Python?
+
+**Answer:**
+
+A ternary operator, also called a conditional expression, is a one-line way to write a simple `if-else` statement.
+result = "Pass" if marks >= 35 else "Fail"
+
+For multiple conditions, we can use a nested ternary expression, which provides `elif`-like logic.
+result = "A+" if marks >= 90 else "A" if marks >= 75 else "Fail"
+
+### Important Interview Point
+
+**“Python's ternary operator does not have a separate `elif` keyword. For multiple conditions, nested ternary expressions can be used.”**
