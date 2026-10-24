@@ -1,0 +1,621 @@
+MySQL Programming Fundamentals - Notes and Study Guide
+
+    Internship Day 32(22/10/26):-
+    
+        My SQL Day 1: MySQL – Installation & Setup
+
+            1. What is SQL?
+
+                SQL (Structured Query Language) is a standard language used to store, retrieve, insert, update, and delete data in relational databases.
+
+                **Uses of SQL:**
+
+                * Store and manage data.
+                * Retrieve specific information.
+                * Insert, update, and delete records.
+                * Create and manage databases and tables.
+                * Filter and organize data.
+
+            2. What is MySQL?
+
+                MySQL is a Relational Database Management System (RDBMS) that uses SQL to manage data stored in tables.
+
+                **Example:** A company can use MySQL to store employee details, intern records, salaries, and department information.
+
+                **SQL vs MySQL:**
+
+                * SQL: A language used to communicate with relational databases.
+                * MySQL: Database management software that understands SQL.
+
+            3. Installation & Setup
+
+                After installing MySQL Server and configuring the root password, open the MySQL Command Line Client and enter the password.
+
+                Successful connection example:
+
+                ```sql
+                Welcome to the MySQL monitor.
+                Server version: 8.0.45 MySQL Community Server
+                ```
+
+                **Important points:**
+
+                    * MySQL Server manages databases and processes SQL queries.
+                    * MySQL Command Line Client allows users to execute SQL commands.
+                    * Most SQL statements end with a semicolon (`;`).
+                    * `mysql>` is the command prompt, not part of the SQL query.
+                    * Never share your database password.
+
+            4. Database
+
+                A database is an organized collection of related data.
+
+                ### Show all databases
+
+                    ```sql
+                    SHOW DATABASES;
+                    ```
+
+                Displays the databases available on the connected MySQL server, subject to your permissions.
+
+                ### Create a database
+
+                    ```sql
+                    CREATE DATABASE demo1;
+                    ```
+
+                Creates a new database named `demo1`.
+
+                ### Error: Database already exists
+
+                    ```sql
+                    CREATE DATABASE demo;
+                    ```
+
+                Error:
+
+                    ```text
+                    ERROR 1007: Can't create database 'demo'; database exists
+                    ```
+
+                **Reason:** A database named `demo` already exists.
+
+                **Solution:**
+
+                    ```sql
+                    CREATE DATABASE IF NOT EXISTS demo;
+                    ```
+
+                Creates the database only if it does not already exist.
+
+            5. Select a Database
+
+                    ```sql
+                    USE demo1;
+                    ```
+
+                Selects `demo1` as the current database for subsequent operations.
+
+                ### Show tables
+
+                    ```sql
+                    SHOW TABLES;
+                    ```
+
+                Displays the tables in the currently selected database.
+
+                If the database is empty, the output is:
+
+                    ```text
+                    Empty set
+                    ```
+
+            6. Table
+
+                A table stores data in rows and columns.
+
+                    * **Column:** Represents an attribute, such as name or age.
+                    * **Row:** Represents one record.
+                    * **Data type:** Defines the kind of data a column can store.
+
+                ### Create a table
+
+                    ```sql
+                    CREATE TABLE streamline_data (
+                        srno INT
+                    );
+                    ```
+
+                Creates a table with one column named `srno` of integer type.
+
+                **Important:** A table must have at least one column.
+
+                ### Error: Table without columns
+
+                    ```sql
+                    CREATE TABLE streamline_data;
+                    ```
+
+                Error:
+
+                    ```text
+                    ERROR 4028: A table must have at least one visible column.
+                    ```
+
+                **Reason:** A table cannot be created without defining any columns.
+
+                ### Display all tables
+
+                    ```sql
+                    SHOW TABLES;
+                    ```
+
+                ### Display table data
+
+                    ```sql
+                    SELECT * FROM streamline_data;
+                    ```
+
+                Displays all columns and rows. If the table has no records, the result is `Empty set`.
+
+            7. SQL Data Types
+
+                Common data types used in this lecture:
+
+                    * `INT`: Stores integer values.
+                    * `VARCHAR(n)`: Stores variable-length text up to the specified character limit.
+
+                **Examples:**
+
+                    ```sql
+                    srno INT
+                    name VARCHAR(20)
+                    Domain VARCHAR(20)
+                    Duration INT
+                    ```
+
+            8. Create a Table with Multiple Columns
+
+                    ```sql
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        Domain VARCHAR(20),
+                        Duration INT
+                    );
+                    ```
+
+                **Explanation:**
+
+                * `srno`: Intern serial number.
+                * `name`: Intern name.
+                * `Domain`: Internship domain.
+                * `Duration`: Internship duration, represented as an integer.
+
+            9. INSERT Statement
+
+                The `INSERT INTO` statement adds new records to a table.
+
+                ### Insert a single record
+
+                    ```sql
+                    INSERT INTO interns (srno, name, Domain, Duration)
+                    VALUES (1, 'anuj', 'python', 6);
+                    ```
+
+                ### Insert another record
+
+                    ```sql
+                    INSERT INTO interns (srno, name, Domain, Duration)
+                    VALUES (2, 'naved', 'DA', 8);
+                    ```
+
+                **Important points:**
+
+                * Text values are written inside single quotes.
+                * Numeric values are written without quotes.
+                * The number and order of supplied values must match the specified columns.
+
+            10. SELECT Statement
+
+                The `SELECT` statement retrieves data from a table.
+
+                ### Display all columns
+
+                    ```sql
+                    SELECT * FROM interns;
+                    ```
+
+                    `*` means all columns.
+
+                ### Display selected columns
+
+                    ```sql
+                    SELECT srno, name FROM interns;
+                    ```
+
+                Displays only the `srno` and `name` columns.
+
+                    ```sql
+                    SELECT srno, name, Domain FROM interns;
+                    ```
+
+                Displays only the specified three columns.
+
+                    **Syntax:**
+
+                    ```sql
+                    SELECT column1, column2
+                    FROM table_name;
+                    ```
+
+            11. Important Commands – Quick Revision
+
+                ```sql
+                SHOW DATABASES;
+                CREATE DATABASE demo1;
+                CREATE DATABASE IF NOT EXISTS demo1;
+                USE demo1;
+                SHOW TABLES;
+                CREATE TABLE students (id INT, name VARCHAR(30));
+                INSERT INTO students (id, name) VALUES (1, 'Anuj');
+                SELECT * FROM students;
+                SELECT id, name FROM students;
+                ```
+
+            12. Important Observations from Practical
+
+                * `SHOW DATABASES;` lists databases available on the server.
+                * `CREATE DATABASE` creates a database.
+                * `USE` selects a database.
+                * `SHOW TABLES;` lists tables in the selected database.
+                * `CREATE TABLE` defines columns and their data types.
+                * `INSERT INTO` adds records.
+                * `SELECT` retrieves records.
+                * A successful `INSERT` does not automatically display the inserted data; use `SELECT` to view it.
+                * `Query OK` indicates that the command executed successfully.
+                * `Empty set` means the query returned no rows.
+
+            Note on demo1 and demo3
+
+                Your output shows that `demo1` contains the `interns` table with columns `srno`, `name`, `Domain`, and `Duration`. Later, `demo3` displays an `interns` table with columns `id`, `intern_name`, `Domain`, and `Duration`.
+
+                These are different table structures in different databases. Selecting `demo3` does not rename or modify the table in `demo1`. The output alone does not establish how the `demo3` table was created.
+
+            13. Practice Questions
+
+                1. What is SQL?
+                2. What is MySQL?
+                3. What is the difference between SQL and MySQL?
+                4. What is a database?
+                5. What is a table?
+                6. What is the purpose of `SHOW DATABASES;`?
+                7. What does the `USE` command do?
+                8. What is the difference between `INT` and `VARCHAR`?
+                9. What is the purpose of `INSERT INTO`?
+                10. What is the difference between `SELECT *` and selecting specific columns?
+                11. Why must a table contain at least one column?
+                12. What does `Empty set` mean in MySQL?
+
+            **Day 1 Completed:** 
+                MySQL introduction, installation and connection verification, databases, tables, basic data types, inserting records, and retrieving data.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 33(23/10/26):-
+
+        MySQL Notes: Day 2 - Database, Tables, Data Types & INSERT Operations
+
+            1. Creating a Database:-
+
+                The `CREATE DATABASE` command is used to create a new database in MySQL.
+
+                Syntax:
+                    CREATE DATABASE database_name;
+
+                Example:
+                    CREATE DATABASE streamlinetech1;
+
+                To display all databases:
+                    SHOW DATABASES;
+
+                To select a database:
+                    USE streamlinetech1;
+
+                Error:
+                    CREATE DATABASE streamlinetech;
+
+                    ERROR 1007: Can't create database; database exists.
+
+                Solution:
+                    CREATE DATABASE IF NOT EXISTS streamlinetech;
+
+                Here:
+                    - `CREATE DATABASE` → Creates a database
+                    - `SHOW DATABASES` → Displays all available databases
+                    - `USE` → Selects a database
+                    - `IF NOT EXISTS` → Prevents an error if the database already exists
+
+            2. Creating a Table:-
+
+                The `CREATE TABLE` command is used to create a table inside a database.
+
+                Syntax:
+                    CREATE TABLE table_name (
+                        column1 datatype,
+                        column2 datatype
+                    );
+
+                Example:
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        domain VARCHAR(20)
+                    );
+
+                To display all tables:
+                    SHOW TABLES;
+
+                To display table structure:
+                    DESCRIBE interns;
+
+                Error:
+                    CREATE TABLE interns;
+
+                    ERROR 4028: A table must have at least one visible column.
+
+                Solution:
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        domain VARCHAR(20)
+                    );
+
+                Here:
+                    - `interns` → Table name
+                    - `srno`, `name`, `domain` → Column names
+                    - `INT`, `VARCHAR(20)` → Data types
+
+            3. MySQL Data Types:-
+
+                Data types define what kind of values a column can store.
+
+                1. INT:-
+                    Used to store integer values.
+
+                    Example:
+                        emp_id INT
+
+                    Values:
+                        101, 102, 500
+
+                2. VARCHAR(n):-
+                    Used to store variable-length text up to the specified length.
+
+                    Example:
+                        emp_name VARCHAR(15)
+
+                    Here:
+                        - `VARCHAR` → Variable-length character string
+                        - `15` → Maximum allowed length is 15 characters
+
+                3. CHAR(n):-
+                    Used to store fixed-length character strings.
+
+                    Example:
+                        role CHAR(5)
+
+                    Here:
+                        - `CHAR` → Fixed-length character string
+                        - `5` → Maximum declared length is 5 characters
+
+                4. DECIMAL(p,s):-
+                    Used to store exact decimal values, such as salaries and prices.
+
+                    Example:
+                        salary DECIMAL(10,2)
+
+                    Here:
+                        - `10` → Total number of digits allowed
+                        - `2` → Number of digits after the decimal point
+
+                    Example value:
+                        50000.00
+
+                Important:
+                    - `INT` → Whole numbers
+                    - `VARCHAR` → Variable-length text
+                    - `CHAR` → Fixed-length text
+                    - `DECIMAL` → Exact decimal numbers
+
+            4. Creating an Employee Table:-
+
+                Example:
+                    CREATE TABLE employee (
+                        emp_id INT,
+                        emp_name VARCHAR(15),
+                        role CHAR(5),
+                        salary DECIMAL(10,2)
+                    );
+
+                Here:
+                    - `emp_id` → Employee ID
+                    - `emp_name` → Employee name
+                    - `role` → Employee role
+                    - `salary` → Employee salary
+
+                To display the table structure:
+                    DESCRIBE employee;
+
+            5. INSERT Operation:-
+
+                The `INSERT INTO` command is used to add records to a table.
+
+                Syntax:
+                    INSERT INTO table_name (column1, column2)
+                    VALUES (value1, value2);
+
+                Example:
+                    INSERT INTO interns (srno, name, domain)
+                    VALUES (1, 'Naved', 'Data Analyst');
+
+                To display records:
+                    SELECT * FROM interns;
+
+                Output:
+                    +------+-------+--------------+
+                    | srno | name  | domain       |
+                    +------+-------+--------------+
+                    | 1    | Naved | Data Analyst |
+                    +------+-------+--------------+
+
+                Another Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (101, 'Anuj', 'SRDEV', 50000);
+
+                Output:
+                    +--------+----------+-------+----------+
+                    | emp_id | emp_name | role  | salary   |
+                    +--------+----------+-------+----------+
+                    | 101    | Anuj     | SRDEV | 50000.00 |
+                    +--------+----------+-------+----------+
+
+                Here:
+                    - `INSERT INTO` → Specifies the table for insertion
+                    - Column names → Specify where values will be stored
+                    - `VALUES` → Specifies the values to insert
+                    - Text values → Enclosed in single quotes
+                    - Numeric values → Usually written without quotes
+
+            6. Error: Data Too Long for Column:-
+
+                Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (102, 'Naved', 'SRDEV1', 60000);
+
+                Error:
+                    ERROR 1406 (22001): Data too long for column 'role' at row 1
+
+                Reason:
+                    The `role` column is defined as `CHAR(5)`, but `SRDEV1` contains 6 characters.
+
+                Solution:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (102, 'Naved', 'JRDEV', 60000);
+
+                Here:
+                    - `CHAR(5)` → Allows a maximum of 5 characters
+                    - `'SRDEV1'` → Contains 6 characters
+                    - `'JRDEV'` → Contains 5 characters and fits the declared length
+
+                Important:
+                    Always choose a suitable data type and length for each column.
+
+            7. Inserting Duplicate Records:-
+
+                Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (101, 'Anuj', 'SRDEV', 50000);
+
+                This statement successfully inserts another record even though `emp_id` 101 already exists.
+
+                Reason:
+                    The `emp_id` column was created as `INT` without a PRIMARY KEY or UNIQUE constraint.
+
+                Important:
+                    MySQL allows duplicate values in ordinary columns unless a constraint prevents them.
+
+                Better Approach:
+                    CREATE TABLE employee (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(15),
+                        role CHAR(5),
+                        salary DECIMAL(10,2)
+                    );
+
+                Here:
+                    - `PRIMARY KEY` → Uniquely identifies each record
+                    - Duplicate primary key values are not allowed
+                    - A primary key cannot contain NULL values
+
+                Note:
+                    The above table definition is an example for a new table. To add a primary key to an existing table, first check and remove any duplicate employee IDs.
+
+            8. Difference Between CHAR and VARCHAR:-
+
+                | CHAR | VARCHAR |
+                |------|---------|
+                | Fixed-length character type | Variable-length character type |
+                | Suitable for fixed-size values | Suitable for values of varying lengths |
+                | Example: CHAR(5) | Example: VARCHAR(20) |
+                | Declared length is fixed | Actual stored text length can vary |
+
+                Example:
+                    role CHAR(5)
+                    name VARCHAR(20)
+
+                Important:
+                    Both types enforce their declared length limits. Exact storage behavior depends on the data type and MySQL settings.
+
+            9. Important MySQL Commands:-
+
+                SHOW DATABASES;
+                    Displays all databases available to the connected user.
+
+                CREATE DATABASE database_name;
+                    Creates a database.
+
+                USE database_name;
+                    Selects a database.
+
+                SHOW TABLES;
+                    Displays tables in the selected database.
+
+                CREATE TABLE table_name (...);
+                    Creates a table.
+
+                DESCRIBE table_name;
+                    Displays the structure of a table.
+
+                INSERT INTO table_name (...) VALUES (...);
+                    Inserts a new record.
+
+                SELECT * FROM table_name;
+                    Displays all columns and records.
+
+            10. Important Points:-
+
+                - SQL stands for Structured Query Language.
+                - MySQL is a Relational Database Management System (RDBMS).
+                - A database can contain multiple tables.
+                - A table contains rows and columns.
+                - `CREATE DATABASE` creates a database.
+                - `CREATE TABLE` creates a table with defined columns.
+                - `INT` stores integer values.
+                - `VARCHAR(n)` stores variable-length text.
+                - `CHAR(n)` stores fixed-length character strings.
+                - `DECIMAL(p,s)` stores exact decimal values.
+                - `INSERT INTO` adds records to a table.
+                - `SELECT *` retrieves all columns from a table.
+                - Duplicate values are allowed unless prevented by a constraint.
+                - A `PRIMARY KEY` uniquely identifies each record.
+                - SQL statements generally end with a semicolon (;).
+
+            Quick Revision:-
+
+                SQL → Structured Query Language
+                MySQL → Relational Database Management System
+                CREATE DATABASE → Creates a database
+                USE → Selects a database
+                CREATE TABLE → Creates a table
+                SHOW TABLES → Displays tables
+                DESCRIBE → Displays table structure
+                INT → Integer values
+                VARCHAR → Variable-length text
+                CHAR → Fixed-length character strings
+                DECIMAL → Exact decimal values
+                INSERT INTO → Inserts records
+                SELECT * → Retrieves all columns
+                PRIMARY KEY → Uniquely identifies a record
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
