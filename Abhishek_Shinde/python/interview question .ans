@@ -5045,4 +5045,1779 @@ Internship Day 25(6/10/26):-
                 - venv: Creates an isolated Python environment.
                 - Alias: An alternative name referring to an existing object.
                 - MRO: Defines the order in which Python searches classes.
+                - super(): Calls the next implementation according to the MRO.Python Notes: Day 23 - Encapsulation
+
+            1. Encapsulation
+                Encapsulation is one of the **four major pillars of OOP**.
+                Encapsulation means **binding data and methods together inside a class** and controlling access to the data.
+                It helps to protect data from unwanted or direct access.
+
+            2.Access Modifiers
+                Access modifiers are used to control the **accessibility of class members**, such as attributes and methods.
+
+                Python mainly uses three types:
+
+                    1. Public
+                    2. Protected
+                    3. Private
+
+                    1. Public Access Modifier:-
+                        Public members can be accessed **from anywhere**.
+                        In Python, public members are created normally without `_` or `__`.
+
+                        Example:
+                            class Student:
+                                def __init__(self, name):
+                                    self.name = name
+
+                            c1 = Student("John")
+
+                            print(c1.name)
+
+                        Output:
+                            John
+
+                        Here:
+                        `self.name` → Public attribute
+
+                    2. Protected Access Modifier:-
+                        Protected members are intended to be accessed **within the class and its subclasses**.
+                        They are represented using a **single underscore `_`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, age):
+                                    self._age = age
+
+                            c1 = Student(20)
+
+                            print(c1._age)
+
+                        Output:
+                            20
+
+                        Important:
+                        Python does not strictly prevent access to protected members.
+                        The `_` is mainly a convention that means:
+                        "This member is intended for internal/subclass use."
+
+                    3. Private Access Modifier:-
+                        Private members are intended to be accessed **only within the class**.
+                        They are represented using **double underscores `__`**.
+
+                        Example:
+                            class Student:
+                                def __init__(self, marks):
+                                    self.__marks = marks
+
+                            c1 = Student(85)
+
+                            print(c1.__marks)
+
+                        This will raise:
+                            AttributeError
+
+                        The private attribute should not be accessed directly from outside the class.
+
+            3. Example of All Access Modifiers:-
+
+                class Student:
+                    def __init__(self, name, age, marks):
+                        self.name = name
+                        self._age = age
+                        self.__marks = marks
+
+                c1 = Student("John", 20, 85)
+
+                print(c1.name)    # Public
+                print(c1._age)    # Protected
+                # print(c1.__marks)  # Private - AttributeError
+
+                Here:
+                    - `name` → Public
+                    - `_age` → Protected
+                    - `__marks` → Private
+
+            4. Getter Method
+                A getter method is used to **retrieve the value of a private attribute**.
+                It provides controlled access to private data.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def get_marks(self):
+                            return self.__marks
+
+                    c1 = Student(85)
+
+                    print(c1.get_marks())
+
+                Output:
+                    85
+
+                Syntax:
+                    def get_<attribute_name>(self):
+                        return self.__attribute_name
+
+            5. Setter Method:-
+                A setter method is used to **set or update the value of a private attribute**.
+                It can also be used to apply validation before changing the value.
+
+                Example:
+                    class Student:
+                        def __init__(self, marks):
+                            self.__marks = marks
+
+                        def set_marks(self, marks):
+                            self.__marks = marks
+
+                    c1 = Student(85)
+
+                    c1.set_marks(90)
+
+            6. Getter and Setter Example
+
+                Code:-
+                    class Bank:
+                        def __init__(self, balance):
+                            self.__balance = balance
+
+                        def get_balance(self):
+                            return self.__balance
+
+                        def set_balance(self, balance):
+                            if balance >= 0:
+                                self.__balance = balance
+                            else:
+                                print("Balance cannot be negative.")
+
+                    b1 = Bank(1000)
+
+                    print(b1.get_balance())
+
+                    b1.set_balance(-1500)
+
+                    print(b1.get_balance())
+
+                Output:
+                    1000
+                    Balance cannot be negative.
+                    1000
+
+                Here:
+                    - `__balance` → Private attribute
+                    - `get_balance()` → Getter
+                    - `set_balance()` → Setter
+                    - Negative balance is rejected using validation.
+
+            7. Why Do We Use Getter and Setter?
+                Getter and setter methods provide **controlled access to private data**.
+
+                For example:
+                - Getter → Read the value
+                - Setter → Update the value
+                - Setter can validate the new value before updating it.
+
+            8. Difference Between Public, Protected and Private
+
+                | Public                    | Protected                     | Private                |
+                |---------------------------|-------------------------------|------------------------|
+                | No underscore             | Single `_`                    | Double `__`            |
+                | Can be accessed normally  | Intended for class/subclasses | Intended for the class |
+                | `self.name`               | `self._age`                   | `self.__marks`         |
+                | No access restriction     | Convention-based              | Name mangling is used  |
+
+            9. Quick Revision:-
+
+                Encapsulation → Binding data and methods + controlling access
+
+                Public → `self.name`
+                Protected → `self._age`
+                Private → `self.__marks`
+
+                Getter → Reads private data
+                Setter → Updates private data
+
+                `get_marks()` → Get private value
+                `set_marks()` → Set/update private value
+
+                Important:
+                Python does not provide strict access control like some languages.
+                Protected and private members are implemented mainly through naming conventions and name mangling.
+
+        Interview Questions On Day 23:-
+
+            1. What is Encapsulation in Python?
+                Encapsulation is one of the four pillars of OOP.
+                It means binding data and methods together inside a class and controlling access to the data.
+            
+            2. What are Access Modifiers in Python?
+                Access modifiers define the intended accessibility of class members. The three types are:
+                - Public
+                - Protected
+                - Private
+            
+            3. What is a Public Member?
+                A public member can be accessed normally from anywhere.
+                
+                Ex:-
+                    self.name = name
+
+            4. What is a Protected Member?
+                A protected member is intended for use within the class and its subclasses.
+                It is written using a single underscore _.
+                
+                    Ex:-
+                        self._age = age
+                
+                Python does not strictly prevent access to protected members.
+          
+            5. What is a Private Member?
+                A private member is intended to be accessed within its class.
+                It is written using double underscores __.
+                    
+                Ex:-
+                    self.__marks = marks
+                
+            6. What is the difference between Public, Protected and Private Members?
+            
+                | Public              | Protected                       | Private                           |
+                |---------------------|---------------------------------|-----------------------------------|
+                | No underscore       | Single _                        | Double __                         |
+                | self.name           | self._age                       | self.__marks                      |
+                | Accessible normally | Intended for class/subclass use | Intended for use within the class |
+            
+            7. Can we access a Private Attribute directly outside the class?
+                Normally, accessing it by its original name raises an AttributeError.
+                
+                Ex:-
+                    print(obj.__marks)
+                
+                Python uses name mangling for double-underscore attributes, but this is not absolute security.
+            
+            8. What is a Getter Method?
+                A getter method is used to retrieve the value of an attribute, such as a private attribute.
+                
+                Ex:-  
+                    def get_balance(self):
+                        return self.__balance
+
+            9. What is a Setter Method?
+                A setter method is used to update an attribute's value.
+                It can validate the value before updating it.
+            
+                Ex:-
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+        
+            10. What is the difference between Getter and Setter?
+                - Getter → Reads or returns a value.
+                - Setter → Updates a value, optionally after validation.
+      
+            11. Why do we use Getter and Setter Methods?
+                They provide controlled access to data and allow us to validate values before updating them.
+          
+            12. How does Encapsulation protect a Bank Account's balance?
+                We can store the balance in a private attribute and use a setter to reject invalid values.
+            
+                Ex:-
+                class Bank:
+                    def __init__(self, balance):
+                        self.__balance = balance
+
+                    def get_balance(self):
+                        return self.__balance
+
+                    def set_balance(self, balance):
+                        if balance >= 0:
+                            self.__balance = balance
+                        else:
+                            print("Balance cannot be negative")
+                            
+                If the balance is 1000 and we try to set it to -1500, the setter rejects the update, so the balance remains 1000.
+          
+            ⭐ Quick Revision
+                - Encapsulation → Binding data and methods together and controlling access.
+                - Public → self.name
+                - Protected → self._age
+                - Private → self.__marks
+                - Getter → Read a value.
+                - Setter → Update and validate a value.
+                Interview tip: Be ready to explain the Bank Account example, especially how the setter prevents a negative balance.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 26(7/10/26):-
+
+        Python Notes: Day 24 - Abstraction
+
+            1.Abstraction:-
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: While driving a car, we use the steering wheel, brakes, and accelerator without knowing all the internal working mechanisms.
+
+            2. Abstract Class:-
+                An abstract class is a class that provides a blueprint for other classes. 
+                It can define compulsory methods that child classes must implement.
+                In Python, we use the `ABC` class and `@abstractmethod` decorator from the `abc` module.
+
+            3. Important Keywords:-
+                - `ABC`: Used to create an abstract base class.
+                - `@abstractmethod`: Defines a method that child classes must implement.
+                - Abstract Method: A method declared in the abstract class that must be implemented by a concrete child class.
+                - Concrete Class: A class that implements all required abstract methods and can be used to create objects.
+
+            4. Real-World Example:- Car Abstraction
+                In the car example, the abstract class defines three compulsory methods:
+                - `chassis()`
+                - `airbag()`
+                - `body()`
+
+                Every child class must implement these three methods. 
+                It can also define additional methods according to its requirements.
+
+                Example:
+                    from abc import ABC, abstractmethod
+
+                    class Car(ABC):
+                        @abstractmethod
+                        def chassis(self):
+                            pass
+
+                        @abstractmethod
+                        def airbag(self):
+                            pass
+
+                        @abstractmethod
+                        def body(self):
+                            pass
+
+                    class TataCar(Car):
+                        def chassis(self):
+                            print("Chassis implemented")
+
+                        def airbag(self):
+                            print("Airbag implemented")
+
+                        def body(self):
+                            print("Car body implemented")
+
+                        def music_system(self):
+                            print("Music system added")
+
+                    car = TataCar()
+                    car.chassis()
+                    car.airbag()
+                    car.body()
+                    car.music_system()
+
+                Output:
+                    Chassis implemented
+                    Airbag implemented
+                    Car body implemented
+                    Music system added
+
+                Explanation:
+                    - `Car` is an abstract class.
+                    - `chassis()`, `airbag()`, and `body()` are compulsory methods.
+                    - `TataCar` implements all three methods.
+                    - `music_system()` is an additional method.
+                    - If a child class does not implement all abstract methods, Python does not allow its object to be created.
+
+            5. Rules of Abstraction:-
+                - An abstract class can contain abstract and normal methods.
+                - An abstract class cannot be instantiated while it still has unimplemented abstract methods.
+                - A concrete child class must implement all inherited abstract methods.
+                - A child class can add its own methods.
+                - Abstraction helps maintain a common structure across different classes.
+
+            6. Abstraction vs Encapsulation:-
+                Abstraction:
+                    - Hides implementation details.
+                    - Focuses on what an object does.
+                    - Example: A car provides a common structure with compulsory methods.
+
+                Encapsulation:
+                    - Combines data and methods inside a class and controls access to data.
+                    - Focuses on protecting and managing data.
+                    - Example: A bank account uses a private balance with getter and setter methods.
+
+            7. Stand-up Calls and Stand-up Meetings:-
+                A stand-up meeting is a short, regular team meeting used to share progress, plans, and blockers.
+
+                Main purposes:
+                    - Understand the progress of team members.
+                    - Identify problems early.
+                    - Coordinate work among team members.
+                    - Keep everyone updated on project status.
+
+                8. Three Common Stand-up Questions
+                    Each team member generally answers:
+                    1. What did I do yesterday?
+                    2. What will I do today?
+                    3. Am I facing any blockers or difficulties?
+
+                Example:
+                    Yesterday: I completed Python exception-handling notes.
+                    Today: I will learn abstraction and practise coding.
+                    Blocker: I need help understanding abstract methods.
+
+            9. Stand-up Call Etiquette:-
+                - Join the meeting on time.
+                - Keep updates short and clear.
+                - Explain completed and planned work.
+                - Mention blockers honestly.
+                - Listen to other team members.
+                - Avoid unrelated discussions.
+                - Discuss detailed problems separately after the meeting.
+
+            10. Benefits of Stand-up Meetings:-
+                - Improves team communication.
+                - Helps track daily progress.
+                - Identifies blockers quickly.
+                - Encourages accountability.
+                - Keeps the team aligned with project goals.
+
+            11. Quick Revision:-
+                - Abstraction hides implementation details.
+                - `ABC` is used to create an abstract base class.
+                - `@abstractmethod` defines compulsory methods.
+                - In the car example, chassis(), airbag(), and body() must be implemented.
+                - Child classes can add their own methods.
+                - An abstract class with unimplemented abstract methods cannot be instantiated.
+                - Stand-up meetings are short meetings for sharing progress, plans, and blockers.
+                - The three common stand-up questions are: What did I do yesterday? What will I do today? Are there any blockers?
+
+        Interview Questions On Day 24:-
+
+            1. What is abstraction in Python?
+                Abstraction is an OOP concept that hides implementation details and shows only the essential features to the user.
+                Example: We drive a car without knowing all the internal mechanisms of its engine.
+
+            2. What is an abstract class?
+                An abstract class is a blueprint for other classes. 
+                It defines methods that child classes must implement.
+                In Python, we use the ABC class from the abc module.
+
+            3. What is an abstract method?
+                An abstract method is a method declared using the @abstractmethod decorator. 
+                A concrete child class must implement it before its object can be created.
+                
+                Ex:-
+                    from abc import ABC, abstractmethod
+                    class Car(ABC):    
+                        @abstractmethod    
+                        def chassis(self):        
+                        pass
+
+            4. What is the use of the ABC class?
+                ABC stands for Abstract Base Class. It helps us create abstract classes in Python.
+
+            5. What is the use of the @abstractmethod decorator?
+                It marks a method as compulsory for concrete child classes to implement.
+
+            6. Explain abstraction using the Car example.
+                In our Car example, the abstract class contains three compulsory methods:
+                - chassis()
+                - airbag()
+                - body()
+                Every concrete child class must implement all three methods.
+                It can also add extra methods, such as music_system() or sunroof().
+
+            7. Can we create an object of an abstract class?
+                No, not while it has unimplemented abstract methods.
+                We must implement all inherited abstract methods in a concrete child class before creating its object.
+
+            8. What happens if a child class does not implement all abstract methods?
+                Python raises a TypeError when we try to create an object of that child class.
+
+            9. Can an abstract class contain normal methods?
+                Yes. An abstract class can contain both abstract methods and normal methods with complete implementations.
+
+            10. Can a child class add its own methods in abstraction?
+                Yes. A child class must implement all inherited abstract methods,
+                but it can also define additional methods according to its requirements.
+
+            11. What is the difference between abstraction and encapsulation?
+
+                Abstraction	                    Encapsulation
+                Hides implementation details.	Bundles data and methods and controls access to data.
+                Focuses on what an object does.	Focuses on managing and protecting data.
+                Example: Abstract Car class.	Example: Private bank balance with getter/setter methods.
+
+            12. What is a stand-up meeting?
+                A stand-up meeting is a short, regular team meeting where team members share their work progress, plans, and problems.
+                Purpose: To keep the team updated and identify blockers quickly.
+
+            13. What are the three common questions asked in a stand-up meeting?
+                1. What did I do yesterday?
+                2. What will I do today?
+                3. Am I facing any blockers or difficulties?
+
+            14. What is a blocker in a stand-up meeting?
+                A blocker is a problem that prevents or delays a team member from completing their work.
+                Example: Being unable to complete a Python task because of an error or a missing requirement.
+
+            15. What are the benefits of stand-up meetings?
+                - Improve team communication.
+                - Track daily progress.
+                - Identify problems early.
+                - Coordinate tasks.
+                - Keep everyone aligned with project goals.
+
+            Quick revision for interviews
+                Focus especially on these concepts:
+                    - Abstraction: Hiding implementation details.
+                    - ABC: Used to create an abstract base class.
+                    - @abstractmethod: Defines a method that concrete child classes must implement.
+                    - Car example: chassis(), airbag(), and body() are compulsory; additional methods are allowed.
+                    - Stand-up meeting: A short meeting to discuss yesterday's work, today's plan, and blockers.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 27(8/10/26):-
+
+        Python Notes: Day 25 - Exception Handling & Its Ways
+
+            1. Errors:-
+                Errors are problems in a program that can cause the program to stop its execution.
+
+                Common Python Errors:
+
+                    1. ZeroDivisionError
+                        It occurs when we try to divide a number by zero.
+
+                        Example:
+                            a = 10
+                            b = 0
+                            a1 = a / b
+                            print(a1)
+
+                        Error:
+                            ZeroDivisionError
+
+                    2. SyntaxError
+                        It occurs when the Python syntax is incorrect.
+
+                        Example:
+                            i = 10
+                            if i < 5
+                                print(i)
+
+                        Error:
+                            SyntaxError
+
+                    3. IndentationError
+                        It occurs when the indentation of the code is incorrect.
+
+                        Example:
+                            a = 10
+                            if a < 5:
+                            print(a)
+
+                        Error:
+                            IndentationError
+
+                    4. ValueError
+                        It occurs when a function receives a value of the correct type but an invalid value.
+
+                        Example:
+                            num = int(input("Enter a number: "))
+                            print(num)
+
+                        If the user enters:
+                            abc
+
+                        Error:
+                            ValueError
+
+                    5. TypeError
+                        It occurs when an operation is performed between incompatible data types.
+
+                        Example:
+                            a = 10
+                            b = "abc"
+                            c = a + b
+                            print(c)
+
+                        Error:
+                            TypeError
+
+                    6. ModuleNotFoundError
+                        It occurs when Python cannot find the module that we are trying to import.
+
+                        Example:
+                            import nampy
+
+                        Error:
+                            ModuleNotFoundError
+
+            2. Exception Handling
+                Exception handling is used to **handle exceptions that occur during the execution of a program**.
+                It prevents the program from stopping suddenly and allows us to handle the error properly.
+
+                *Ways of Exception Handling:-
+                    Python provides these important keywords:
+
+                    1. try
+                    2. except
+                    3. else
+                    4. finally
+                    5. raise
+
+                    1. try
+                        The `try` block contains the code that may produce an exception.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+
+                    2. except
+                        The `except` block is used to **handle the exception** that occurs in the `try` block.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 0
+                                a1 = a / b
+                                print(a1)
+                            except:
+                                print("Error: Division by zero is not allowed.")
+
+                        Output:
+                            Error: Division by zero is not allowed.
+
+                    3. else
+                        The `else` block executes when **no exception occurs** in the `try` block.
+
+                        Example:
+                            try:
+                                num = int(input("Enter a number: "))
+                                a = 10
+                                b = num
+                                a1 = a / b
+
+                            except:
+                                print("Error: Invalid input or division by zero is not allowed.")
+
+                            else:
+                                print("The output is:", a1)
+
+                    4. finally
+                        The `finally` block **always executes**, whether an exception occurs or not.
+
+                        Example:
+                            try:
+                                a = 10
+                                b = 2
+                                print(a / b)
+
+                            except:
+                                print("Error occurred")
+
+                            finally:
+                                print("Program execution completed")
+
+            3. Complete Exception Handling Structure
+
+                try:
+                    # Code that may cause an exception
+
+                except:
+                    # Handle the exception
+
+                else:
+                    # Executes when there is no exception
+
+                finally:
+                    # Always executes
+
+            4. raise
+                The `raise` keyword is used to **manually raise an exception** when a specific condition is not allowed.
+
+                Example:
+                    age = int(input("Enter your age: "))
+
+                    if age < 18:
+                        raise ValueError("Age less than 18 is not allowed")
+
+                    print("You are eligible to vote")
+
+                If the user enters:
+                    16
+
+                Output:
+                    ValueError: Age less than 18 is not allowed
+
+            5. ATM Example Using Exception Handling
+
+                password = 123
+                i = 0
+
+                while i < 3:
+                    try:
+                        pin = int(input("Enter a PIN: "))
+
+                        if pin == password:
+                            print("Amount Debited")
+                            break
+
+                        else:
+                            i = i + 1
+                            print("Wrong PIN. Try again")
+
+                            if i == 3:
+                                print("Your card is blocked")
+
+                    except ValueError:
+                        i = i + 1
+                        print("Please enter a valid PIN")
+
+                        if i == 3:
+                            print("Your card is blocked")
+
+                    finally:
+                        print("Thank you for using ATM")
+
+            6. Important Points
+
+                - `try` → Contains risky code
+                - `except` → Handles the exception
+                - `else` → Runs when no exception occurs
+                - `finally` → Always runs
+                - `raise` → Manually raises an exception
+                - Exception handling prevents unexpected program termination.
+                - Specific exceptions such as `ValueError` and `ZeroDivisionError` can be handled separately.
+
+            Quick Revision:
+
+                Error → Problem in a program
+
+                ZeroDivisionError → Division by zero
+                SyntaxError → Incorrect syntax
+                IndentationError → Incorrect indentation
+                ValueError → Invalid value
+                TypeError → Incompatible data types
+                ModuleNotFoundError → Module not found
+
+                Exception Handling:
+                try → Test risky code
+                except → Handle error
+                else → No error
+                finally → Always executes
+                raise → Manually raise exception
+
+        Interview Questions On Day 25:-
+
+            1. What is exception handling in Python?
+                Exception handling is a way to handle runtime errors so that a program can continue running instead of terminating unexpectedly.
+                Example: Handling division by zero.
+            
+            2. What is the difference between an error and an exception?
+                - Error: A problem in the program, such as a syntax error.
+                - Exception: An issue that occurs during program execution and can often be handled.
+                Examples: SyntaxError, ZeroDivisionError, ValueError.
+                
+            3. What are the keywords used in exception handling?
+                Python provides five commonly used keywords:
+                - try – Contains code that may cause an exception.
+                - except – Handles the exception.
+                - else – Executes if no exception occurs in the try block.
+                - finally – Executes whether an exception occurs or not, under normal program execution.
+                - raise – Manually raises an exception.
+            
+            4. What is the use of the try and except blocks?
+                The try block contains risky code, and the except block handles an exception if one occurs.
+                    
+                Ex:-    
+                    try:    
+                        print(10 / 0)
+                    
+                    except ZeroDivisionError:    
+                        print("Cannot divide by zero")
+
+                Output:
+                    Cannot divide by zero
+
+            5. What is the use of the else block?
+                The else block executes only when no exception occurs in the try block.
+                
+                Ex:-
+                    try:    
+                        print(10 / 2)
+                    
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                    
+                    else:    
+                        print("Division successful")
+
+                Output:
+                    5.0
+                    Division successful
+
+            6. What is the use of the finally block?
+                The finally block is generally used for cleanup tasks, such as closing files or releasing resources.
+                It runs whether an exception occurs or not during normal execution.
+                
+                Ex:-    
+                    try:    
+                        print(10 / 2)
+                        
+                    except ZeroDivisionError:    
+                        print("Error occurred")
+                        
+                    finally:    
+                        print("Program completed")
+
+                Output:
+                    5.0
+                    Program completed
+
+            7. What is the difference between except and finally?
+             
+                            except	                                    finally
+                Handles an exception.	                    Performs cleanup or final actions.
+                Executes when a matching exception occurs.	Normally executes whether an exception occurs or not.
+            
+            8. What is the raise keyword?
+                The raise keyword is used to manually generate an exception when a condition is not satisfied.
+
+                Ex:-  
+                    age = 16 
+                    if age < 18:    
+                        raise ValueError("Age must be 18 or above")
+
+                Output: 
+                ValueError: Age must be 18 or above
+
+            9. Name some common built-in exceptions in Python.
+ 
+                Exception	            When it occurs
+                ZeroDivisionError	    Dividing by zero
+                ValueError	            Correct type but invalid value
+                TypeError	            Operation uses an incompatible type
+                IndexError	            Accessing an invalid sequence index
+                KeyError	            Accessing a missing dictionary key
+                NameError	            Using an undefined variable
+                ModuleNotFoundError	    Importing a module that cannot be found
+                SyntaxError	            Invalid Python syntax
+            
+            10. What is the difference between ValueError and TypeError?
+                - ValueError: The data type is correct, but the value is invalid.
+                - TypeError: The operation or function receives an inappropriate data type.
+            
+                Examples:
+                    int("hello")      # ValueError
+                    "5" + 5           # TypeError
+
+            11. Why should we avoid using a bare except: block?
+                A bare except: can catch almost every exception, making unexpected problems difficult to identify.
+                It is better to catch specific exceptions.
+            
+                Ex:-    
+                    try:    
+                        num = int(input("Enter a number: "))
+                        
+                    except ValueError:    
+                        print("Please enter a valid integer")
+
+            12. How would you write an ATM PIN program with three attempts?
+                This program allows three attempts.
+                If all attempts are incorrect, the card is blocked.
+
+                Ex:-
+                    correct_pin = "1234"
+                    
+                    for attempt in range(3):    
+                        pin = input("Enter your ATM PIN: ")    
+                        if pin == correct_pin:        
+                            print("Access granted")        
+                            break    
+                        else:        
+                        print("Incorrect PIN")
+                        
+                    else:    
+                    print("Your card is blocked")
+
+                Important concept: 
+                    The for...else block executes only if the loop finishes without encountering break.
+                    This is why the card is blocked only after all three attempts fail.
+
+            Quick revision for your interview
+                Remember these five points especially well:
+                1. try – Tests risky code.
+                2. except – Handles exceptions.
+                3. else – Runs when no exception occurs.
+                4. finally – Used for cleanup and final actions.
+                5. raise – Manually raises an exception.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 28(12/10/26):-
+
+        Python Notes:- Day 26 - File Handling
+
+            1. File Handling:-
+                File handling is the process of creating, reading, writing, appending, and updating data in a file using Python.
+
+            2. File Opening Syntax:-
+                file = open("filename", "mode")
+                file.close()
+
+                Example:
+                    file = open("python.txt", "r")
+                    data = file.read()
+                    file.close()
+                    print(data)
+
+            3. File Opening Modes:-
+                - r  : Read an existing file. Gives an error if the file does not exist.
+                - w  : Write data. Creates a file if it does not exist; overwrites existing content.
+                - a  : Append data at the end. Creates a file if it does not exist.
+                - r+ : Read and write. The file must exist; writing starts at the current cursor position.
+                - x  : Create a new file. Gives an error if the file already exists.
+
+                1. Creating a File:-
+                    The "x" mode creates a new file.
+                   
+                    Ex:-
+                        file = open("demo.txt", "x")
+                        file.close()
+                        print("File created successfully")
+
+                    Note: If demo.txt already exists, Python raises FileExistsError.
+
+                2. Writing Data into a File:-
+                    The "w" mode writes data into a file.
+                    
+                    Ex:-    
+                        file = open("python.txt", "w")
+                        file.write("Hello World!")
+                        file.close()
+                        print("Data written successfully")
+
+                    Note: If the file already contains data, "w" overwrites it.
+
+                3. Reading Data from a File:-
+                    The "r" mode reads the contents of a file.
+                    
+                    Ex:-    
+                        file = open("python.txt", "r")
+                        data = file.read()
+                        file.close()
+                        print(data)
+
+                    Output:
+                        Hello World!
+
+                4. Appending Data to a File
+                    The "a" mode adds new data at the end without removing existing content.
+                    
+                    Ex:-
+                        file = open("python.txt", "a")
+                        file.write("\nGood Morning!")
+                        file.write("\nStreamline Tech")
+                        file.close()
+                        print("Data appended successfully")
+
+                5. Updating a File Using r+
+                    The "r+" mode allows both reading and writing.
+                    It does not automatically add new data at the end.
+                    
+                    Ex:-
+                        file = open("python.txt", "r+")
+                        data = file.read()
+                        file.write("\nWelcome to Streamline Tech")
+                        file.close()
+                        print(data)
+                        print("Data updated successfully")
+
+                    Note: After read(), the file cursor is usually at the end, so the new text is written there.
+                          Use seek() to change the cursor position.
+
+            4. File Reading Methods:-
+                - read(): Reads the entire remaining content as a string by default.
+                - readline(): Reads one line at a time and returns a string.
+                - readlines(): Reads all remaining lines and returns a list of strings.
+
+                Example:
+                    file = open("python.txt", "r")
+                    data = file.readline()
+                    print(data)
+                    file.close()
+
+                Example of readlines():
+                    file = open("python.txt", "r")
+                    data = file.readlines()
+                    print(data)
+                    file.close()
+
+                If the file contains:
+                    Hello World!
+                    Good Morning!
+                    Streamline Tech
+
+                readline() output:
+                    Hello World!
+
+                readlines() output:
+                    ['Hello World!\n', 'Good Morning!\n', 'Streamline Tech']
+
+                Note: The '\n' character represents a newline and may be included in the returned strings.
+
+            5. Difference Between r ead(), readline() and readlines()
+
+                read():
+                - Reads all remaining content by default.
+                - Returns a string.
+
+                readline():
+                - Reads one line at a time.
+                - Returns a string.
+
+                readlines():
+                - Reads all remaining lines.
+                - Returns a list of strings.
+
+            6. File Cursor and seek():-
+                The file cursor indicates the current position from which reading or writing happens.
+                - tell(): Returns the current cursor position.
+                - seek(position): Moves the cursor to a specified position.
+
+                Example:
+                    file = open("python.txt", "r")
+                    print(file.tell())
+                    file.seek(0)
+                    print(file.read())
+                    file.close()
+
+            7. Using the with Statement:-
+                The with statement automatically closes the file after the block finishes, even if an exception occurs.
+
+                Example:
+                    with open("python.txt", "r") as file:
+                        data = file.read()
+                        print(data)
+
+                Advantage: No need to call file.close() manually.
+
+            8. File Handling Exceptions:-
+                - FileNotFoundError: The file does not exist when opening it for reading.
+                - FileExistsError: The file already exists when using "x" mode.
+                - PermissionError: The program does not have the required permission.
+                - IsADirectoryError: A directory is used where a file is expected.
+
+            9. Important Points to Remember:-
+                - "r" reads; "w" writes and overwrites; "a" appends; "x" creates a new file.
+                - "r+" allows reading and writing but requires an existing file.
+                - "w" and "a" create the file if it does not exist.
+                - Always close files when not using the with statement.
+                - Prefer with open() for safer and cleaner file handling.
+                - read(), readline(), and readlines() have different return types.
+                - File paths on Windows can use raw strings, such as r"D:\Streamline batch\Python_batch\python2.txt".
+
+        Interview Questions On day 26:-
+
+            1. What is file handling in Python?
+                File handling is the process of creating, reading, writing, appending, and updating data in files using Python.
+                
+            2. What are the different file opening modes in Python?
+                The important file modes are:
+                Mode	Purpose
+                r	Reads an existing file
+                w	Writes data and overwrites existing content
+                a	Appends data at the end
+                x	Creates a new file
+                r+	Allows reading and writing
+            
+            3. What is the difference between w and a modes?
+                - w: Overwrites existing file content.
+                - a: Adds new content at the end without removing existing content.
+            
+                Ex:-
+                    file = open("demo.txt", "w")
+                    file.write("Hello")
+                    file.close
+                    
+                    ()file = open("demo.txt", "a")
+                    file.write(" World")
+                    file.close()
+
+                File content: Hello World
+
+            4. What is the difference between r and r+ modes?
+                - r: Opens an existing file for reading only.
+                - r+: Opens an existing file for both reading and writing.
+                Both require the file to exist. In r+ mode, writing starts at the current cursor position.
+            
+            5. What is the difference between w and x modes?
+                - w: Creates a file if it does not exist, but overwrites it if it already exists.
+                - x: Creates a new file and raises FileExistsError if the file already exists.
+                
+            6. What is the difference between read(), readline(), and readlines()?
+                This is one of the most important interview questions from this topic.
+           
+                Method	     Purpose	                                Return type
+                
+                read()	     Reads all remaining content by default	    String
+                readline()	 Reads one line	                            String
+                readlines()	 Reads all remaining lines	                List of strings
+           
+            7. What does the readline() method do?
+                The readline() method reads one line at a time from a file.
+                
+                Ex:-
+                    with open("demo.txt", "r") as file:    
+                        print(file.readline())
+
+                It returns a string containing the line, usually including its newline character if present.
+          
+            8. What does the readlines() method do?
+                The readlines() method reads all remaining lines and returns them as a list of strings.
+                
+                Ex:-    
+                    with open("demo.txt", "r") as file:
+                        data = file.readlines()
+                        print(data)
+
+                Example output:
+                    ['Hello\n', 'Python\n', 'Welcome']
+
+            9. What is the difference between write() and writelines()?
+                - write(): Writes a single string.
+                - writelines(): Writes multiple strings from an iterable, such as a list.
+                
+                Important: writelines() does not automatically add newline characters.
+
+                Ex:-    
+                    with open("demo.txt", "w") as file:
+                        file.write("Hello\n")
+                        file.writelines(["Python\n", "Welcome"])
+
+            10. Why is the close() method used?
+                The close() method closes an opened file and releases its associated resources.
+                It helps ensure pending data is properly flushed.
+                
+                Ex:-    
+                    file = open("demo.txt", "r")
+                    print(file.read())
+                    file.close()
+
+            11. What is the with open() statement, and why is it preferred?
+                The with open() statement manages the file automatically and closes it when the block exits.
+
+                Ex:-
+                    with open("demo.txt", "r") as file:
+                        print(file.read())
+
+                Advantage: You do not need to call close() manually.
+
+            12. What is a file cursor? Explain seek() and tell().
+                The file cursor indicates the current position used for reading or writing.
+                - tell(): Returns the current cursor position.
+                - seek(position): Moves the cursor to a specified position.
+                
+                Ex:-    
+                    with open("demo.txt", "r") as file:
+                        print(file.tell())
+                        file.seek(0)
+                        print(file.read())
+
+            13. What happens if we open a nonexistent file in r mode?
+                Python raises a FileNotFoundError.
+
+                Ex:-
+                    with open("missing.txt", "r") as file:
+                        print(file.read())
+
+                If missing.txt does not exist, the program raises the exception.
+            
+            14. What is FileExistsError?
+                FileExistsError occurs when you try to create a file using x mode and that file already exists.
+
+                Ex:-    
+                    file = open("demo.txt", "x")
+
+                If demo.txt already exists, Python raises FileExistsError.
+
+            15. How can you update a file in Python?
+                You can use r+ to read and write an existing file. However, it does not automatically append new data; 
+                the cursor position determines where writing starts.
+
+                Ex:-    
+                    with open("demo.txt", "r+") as file:
+                        data = file.read()
+                        file.write("\nNew content")
+
+                Here, the new content is written at the current cursor position, which is normally the end after read().
+                For replacing specific text, you can read the content, modify the string, and write the updated content back using w mode.
+                Be careful because w truncates the file.
+
+            Quick interview revision
+                Focus on these concepts first:
+                    1. File handling and its purpose.
+                    2. Differences between r, w, a, x, and r+.
+                    3. Differences between read(), readline(), and readlines().
+                    4. Differences between write() and writelines().
+                    5. close() vs with open().
+                    6. File cursor, seek(), and tell().
+                    7. FileNotFoundError and FileExistsError.
+                    8. How to append and update file content.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 29 & 30(13/10/26 & 14/10/26):-
+
+        Python Notes:- Day 27 & 28 - Main Guard, Comprehensions, Iterators, Generators, venv, Aliases & MRO
+
+            1. if __name__ == "__main__":
+                This condition checks whether a Python file is being run directly or imported into another file.
+
+                - __name__: A special built-in variable.
+                - "__main__": The value of __name__ when the file is executed directly.
+                - If the file is imported, __name__ contains the module's name.
+
+                Example:
+                    def greet():
+                        print("Hello Python")
+
+                    if __name__ == "__main__":
+                        greet()
+
+                Output when run directly:
+                    Hello Python
+
+                Use: Prevents certain code from executing automatically when a file is imported into another file.
+
+            2. Comprehensions:-
+                Comprehensions provide a concise way to create collections from iterables.
+
+                Types:
+                    - List comprehension: Creates a list.
+                    - Set comprehension: Creates a set.
+                    - Dictionary comprehension: Creates a dictionary.
+                    - Generator expression: Produces values lazily.
+
+                A. List Comprehension:-
+                    Syntax: [expression for item in iterable if condition]
+
+                    Example:
+                        squares = [x*x for x in range(1, 6)]
+                        print(squares)
+
+                    Output:
+                        [1, 4, 9, 16, 25]
+
+                    With condition:
+                        even = [x for x in range(1, 11) if x % 2 == 0]
+                        print(even)
+
+                    Output:
+                        [2, 4, 6, 8, 10]
+
+                B. Set Comprehension:-
+                    Creates a set of unique values.
+
+                    Example:
+                        squares = {x*x for x in range(1, 6)}
+                        print(squares)
+
+                    Output: A set containing 1, 4, 9, 16, 25 (order may vary).
+
+                C. Dictionary Comprehension:-
+                    Creates key-value pairs.
+
+                    Example:
+                        squares = {x: x*x for x in range(1, 6)}
+                        print(squares)
+
+                    Output:
+                        {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+                D. Generator Expression:-
+                    Creates a generator that produces values when requested.
+
+                    Example:
+                        squares = (x*x for x in range(1, 6))
+                        print(next(squares))
+
+                    Output:
+                        1
+
+            3. Iterators:-
+                An iterator is an object that returns one value at a time when requested.
+
+                Important functions:
+                    - iter(): Creates an iterator from an iterable.
+                    - next(): Retrieves the next value from an iterator.
+
+                Example:
+                    numbers = [10, 20, 30]
+                    it = iter(numbers)
+
+                    print(next(it))
+                    print(next(it))
+                    print(next(it))
+
+                Output:
+                    10
+                    20
+                    30
+
+                If next() is called after all values are consumed, Python raises StopIteration.
+
+            4. Iterable vs Iterator:-
+
+                Iterable:
+                    - An object that can be looped over.
+                    - Examples: list, tuple, string, set.
+                    - Usually provides an __iter__() method.
+
+                Iterator:
+                    - Produces one value at a time.
+                    - Provides __iter__() and __next__() methods.
+                    - Remembers its current position.
+
+                Example:
+                    numbers = [1, 2, 3]  # Iterable
+                    it = iter(numbers)   # Iterator
+
+            5. Generators:-
+                A generator is a special type of iterator that produces values one at a time instead of storing all generated values in memory.
+
+                Benefits:
+                    - Memory efficient for large sequences.
+                    - Values are produced only when needed.
+                    - Useful for processing large datasets.
+
+            6. Generator Functions and yield:-
+                A generator function is a function that uses the yield keyword to produce values one at a time.
+
+                Difference:
+                    - return: Ends the function and returns a result.
+                    - yield: Produces a value and pauses the function, preserving its state for the next request.
+
+                Example:
+                    def numbers():
+                        yield 10
+                        yield 20
+                        yield 30
+
+                    for num in numbers():
+                        print(num)
+
+                Output:
+                    10
+                    20
+                    30
+
+                Example using next():
+                    def count():
+                        yield 1
+                        yield 2
+                        yield 3
+
+                    gen = count()
+                    print(next(gen))
+                    print(next(gen))
+                    print(next(gen))
+
+                Output:
+                    1
+                    2
+                    3
+
+                Note: When a generator has no more values, it raises StopIteration.
+
+            7. Iterator vs Generator:-
+
+                Iterator:
+                    - Any object implementing __iter__() and __next__().
+                    - Can be created using iter() or a custom class.
+                    - May require more code when implemented manually.
+
+                Generator:
+                    - A convenient way to create an iterator.
+                    - Usually uses yield in a function.
+                    - Automatically maintains its execution state.
+
+            8. Virtual Environments Using venv:-
+                A virtual environment creates an isolated Python environment for a project, allowing it to use its own installed packages.
+
+                Advantages:
+                    - Avoids conflicts between project dependencies.
+                    - Keeps project packages separate.
+                    - Makes project setup easier to manage.
+
+                Create a virtual environment:
+                    python -m venv venv
+
+                Activate on Windows (Command Prompt):
+                    venv\Scripts\activate
+
+                Activate on Windows (PowerShell):
+                    .\venv\Scripts\Activate.ps1
+
+                Activate on macOS/Linux:
+                    source venv/bin/activate
+
+                Install a package:
+                    python -m pip install requests
+
+                Deactivate:
+                    deactivate
+
+                Note: The environment folder is commonly named venv, but you can choose another name.
+
+            9. Aliases in Python:-
+                An alias is an alternative name that refers to an existing object or module.
+
+                A. Module Alias:-
+                    import math as m
+                    print(m.sqrt(25))
+
+                    Output:
+                    5.0
+
+                    Here, m is an alias for the math module.
+
+                B. Object Alias:-
+                    numbers = [1, 2, 3]
+                    values = numbers
+
+                    values.append(4)
+                    print(numbers)
+
+                    Output:
+                    [1, 2, 3, 4]
+
+                Explanation: Both names refer to the same list object. Changes through either name affect that object.
+
+                Important: An alias does not automatically create a copy.
+
+            10. Method Resolution Order (MRO):-
+                MRO defines the order in which Python searches classes for a method or attribute, especially when inheritance is involved.
+
+                Python uses the C3 linearization algorithm to determine MRO.
+
+                Example:
+                    class A:
+                        def show(self):
+                            print("Class A")
+
+                    class B(A):
+                        def show(self):
+                            print("Class B")
+
+                    class C(A):
+                        def show(self):
+                            print("Class C")
+
+                    class D(B, C):
+                        pass
+
+                    obj = D()
+                    obj.show()
+                    print(D.mro())
+
+                Output:
+                    Class B
+                    [<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+
+                Explanation:
+                    - D inherits from B and C.
+                    - Python checks D first, then B, then C, then A, then object.
+                    - Since B has show(), Python executes B's method first.
+
+            11. super() and MRO:-
+                The super() function allows a class to call the next implementation in the MRO.
+
+                Example:
+                    class A:
+                        def show(self):
+                            print("A")
+
+                    class B(A):
+                        def show(self):
+                            print("B")
+                            super().show()
+
+                    obj = B()
+                    obj.show()
+
+                Output:
+                    B
+                    A
+
+                Use: Helps reuse parent-class behavior and supports cooperative multiple inheritance.
+
+            12. Quick Revision:-
+
+                - if __name__ == "__main__": Runs code only when the file is executed directly.
+                - Comprehensions: Concise ways to create lists, sets, dictionaries, and generators.
+                - Iterable: An object that can provide values for iteration.
+                - Iterator: An object that produces values one at a time.
+                - Generator: A convenient, memory-efficient way to create an iterator.
+                - yield: Produces a value and pauses the generator.
+                - venv: Creates an isolated Python environment.
+                - Alias: An alternative name referring to an existing object.
+                - MRO: Defines the order in which Python searches classes.
                 - super(): Calls the next implementation according to the MRO.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 31(15/10/26):-
+
+        Python Notes: Day 29 - Gift Shop Billing Software
+
+            1. Billing Software:-
+
+                # =====The Gift Studio====
+                # product:         Price      
+                # flower Pot        150
+                # Gift Box          100
+                # Greeting Card     50
+                # Gift Basket       200
+                # Photo Frame       120
+                # Gift Hamper       250
+                # Toy Cars          80
+
+                product = {
+                    1:"FlowerPot",
+                    2:"GiftBox",
+                    3:"GreetingCard",
+                    4:"GiftBasket",
+                    5:"PhotoFrame",
+                    6:"GiftHamper",
+                    7:"ToyCars"
+                }
+                price = {
+                    1:150,
+                    2:100,
+                    3:50,
+                    4:200,
+                    5:120,
+                    6:250,
+                    7:80                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+                }
+
+                # Buckets to store the items and their quantities
+                item = []
+                quantity = []
+
+
+                print("=" * 100)
+                print(" "*35,"Welcome to The Gift Studio")
+                print("=" * 100)
+                print("|{:^10}|{:^42}|{:^44}|".format("Sr No", "Product", "Price"))
+                print("=" * 100)
+
+                for key in product:
+                    print(f"|{key:^10}| {product[key]:^40} |{price[key]:^44}|")
+                    
+                print("=" * 100)
+                print("8 to Exit")
+                print("=" * 100)
+
+                while True:
+                    choice = int(input("Enter the Product number: "))
+                    if choice == 8:
+                        print("Thank you for shopping with us!")
+                        break
+                    if choice in product:
+                        qty = int(input("Enter the quantity: "))
+                        if choice in item:
+                            index = item.index(choice)
+                            quantity[index] += qty
+                        
+                        else:
+                            item.append(choice)
+                            quantity.append(qty)
+                    print("product Added Sucessfully")
+                    print("=" * 100)
+
+                    # print(item)
+                    # print(quantity)
+                # billing layout
+
+                print("=" * 100)
+                print(" "*35,"Your Total Bill")
+                print("=" * 100)
+                print("|{:^10}|{:^20}|{:^20}|{:^20}|{:^24}|".format("Sr No", "Product", "Price","quantity","total"))
+                print("=" * 100)
+                
+                total = 0
+
+                for i in range(len(item)):
+                    print(f"|{i+1:^10}| {item[i]:^18} |{price[i+1]:^20}|{quantity[i]:^20}|{quantity[i] * price[i+1]:^24}|")
+                    total += quantity[i] * price[i+1]
+                print("=" * 100)
+                print(f"|{'Total Amount':^74}|{total:^23}|")
+                print("=" * 100)
+                print("Thank you for shopping with us!")
+                print("Visit Again!")
+                print("=" * 100)
+
+            2. Project Overview:-
+                The Gift Studio is a simple billing software developed using Python.
+                It displays products and prices, accepts customer selections and quantities, and generates the final bill.
+
+            3. Dictionaries:-
+                Two dictionaries are used to store product details and prices.
+
+                product = {1: "FlowerPot", 2: "GiftBox", 3: "GreetingCard", 4: "GiftBasket", 5: "PhotoFrame", 6: "GiftHamper", 7: "ToyCars"}
+                price = {1: 150, 2: 100, 3: 50, 4: 200, 5: 120, 6: 250, 7: 80}
+
+                - product: Stores product numbers and names.
+                - price: Stores product numbers and their prices.
+                - The same keys connect each product with its corresponding price.
+
+                Example:
+                print(product[1])  # FlowerPot
+                print(price[1])    # 150
+
+            4. Lists:-
+                Two lists store the customer's selections.
+
+                item = []
+                quantity = []
+
+                - item: Stores selected product numbers.
+                - quantity: Stores the quantity of each selected product.
+                - Both lists use matching indexes to connect products with their quantities.
+
+                Example:
+                item = [1, 3]
+                quantity = [2, 4]
+
+                This means 2 FlowerPots and 4 GreetingCards.
+
+            5. For Loop and Dictionary Traversal:-
+                A for loop displays all products and their prices.
+
+                for key in product:
+                    print(product[key], price[key])
+
+                - The loop iterates through the product dictionary keys.
+                - The same key is used to retrieve the product name and price.
+
+            6. While Loop:-
+                The while loop continuously accepts customer choices until the customer enters 8.
+
+                while True:
+                    choice = int(input("Enter the Product number: "))
+                    if choice == 8:
+                        break
+
+                - while True creates a loop that continues until stopped.
+                - break terminates the loop when the exit option is selected.
+
+            7. Conditional Statements:-
+                Conditional statements validate the customer's product selection.
+
+                if choice == 8:
+                    break
+                if choice in product:
+                    qty = int(input("Enter the quantity: "))
+
+                - if checks a condition.
+                - in checks whether a value exists among the dictionary keys.
+                - break exits the loop.
+
+                Important correction: In the original program, the success message is printed even when an invalid product number is entered. It should be printed only after a valid product has been added.
+
+            8. List Methods:-
+                The program uses important list methods.
+
+                - append(): Adds an item to a list.
+                - index(): Finds the index of an existing item.
+
+                Example:
+                item.append(choice)
+                index = item.index(choice)
+
+                The program checks whether a product has already been selected. If it has, its quantity is increased; otherwise, the product and quantity are added to their respective lists.
+
+            9. Updating Product Quantity:-
+                if choice in item:
+                    index = item.index(choice)
+                    quantity[index] += qty
+                else:
+                    item.append(choice)
+                    quantity.append(qty)
+
+                Explanation:
+                - If the product already exists, its quantity is updated.
+                - Otherwise, the product number and quantity are stored as new entries.
+                - This prevents the same product from appearing multiple times in the item list.
+
+            10. Calculating the Bill:-
+                The total price of each product is calculated by multiplying its price by its quantity.
+
+                item_total = quantity[i] * price[item[i]]
+                total += item_total
+
+                - item_total: Cost of one product entry.
+                - total: Accumulates the cost of all selected products.
+
+                Important correction: Use price[item[i]] rather than price[i+1]. The list index is not necessarily the same as the product number.
+
+            11. len() and range():-
+                The billing loop uses len() and range().
+
+                for i in range(len(item)):
+                    print(item[i], quantity[i])
+
+                - len(item): Returns the number of selected product entries.
+                - range(): Generates indexes used to access matching items and quantities.
+
+            12. Formatted Output:-
+                The program uses f-strings and the format() method to display a structured bill.
+
+                Example:
+                print(f"{'Total Amount':^20}")
+
+                - ^ centers the text within the specified width.
+                - :^20 centers text in a field of width 20.
+                - "=" * 100 prints a separator containing 100 equal signs.
+
+            13. Billing Software Workflow:-
+                1. Store product names and prices in dictionaries.
+                2. Display the product menu.
+                3. Accept a product number from the customer.
+                4. Exit the selection loop when the customer enters 8.
+                5. Ask for the quantity of a valid product.
+                6. Update the quantity if the product is already selected.
+                7. Generate the bill after the selection loop ends.
+                8. Calculate each item's cost and the total amount.
+                9. Display the final bill and thank the customer.
+
+            14. Important Improvements:-
+                - Validate product numbers before accepting quantities.
+                - Reject zero or negative quantities.
+                - Handle invalid input, such as letters entered instead of numbers, using exception handling.
+                - Use `price[item[i]]` to retrieve the correct product price.
+                - Use `with` only when working with files; it is not required for this in-memory billing program.
+                - Consider storing product selections and quantities in a dictionary to simplify the program.
+
+            15. Quick Revision:-
+                - Dictionary: Stores product names and prices using keys.
+                - List: Stores selected products and their quantities.
+                - for loop: Displays products and generates the bill.
+                - while loop: Accepts repeated customer choices.
+                - break: Exits the selection loop.
+                - if-else: Checks product selection and updates quantities.
+                - append(): Adds new selections.
+                - index(): Finds an existing product's position.
+                - len() and range(): Help iterate over selected items.
+                - Accumulator: `total += item_total` adds each item's cost to the bill.
+                - f-strings and format(): Display the bill neatly.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
