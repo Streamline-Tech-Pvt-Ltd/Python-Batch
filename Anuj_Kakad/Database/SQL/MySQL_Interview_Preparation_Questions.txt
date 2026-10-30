@@ -1,0 +1,2027 @@
+MySQL Programming Fundamentals - Notes and Study Guide
+
+    Internship Day 32(22/10/26):-
+    
+        My SQL Day 1: MySQL – Installation & Setup
+
+            1. What is SQL?
+
+                SQL (Structured Query Language) is a standard language used to store, retrieve, insert, update, and delete data in relational databases.
+
+                **Uses of SQL:**
+
+                * Store and manage data.
+                * Retrieve specific information.
+                * Insert, update, and delete records.
+                * Create and manage databases and tables.
+                * Filter and organize data.
+
+            2. What is MySQL?
+
+                MySQL is a Relational Database Management System (RDBMS) that uses SQL to manage data stored in tables.
+
+                **Example:** A company can use MySQL to store employee details, intern records, salaries, and department information.
+
+                **SQL vs MySQL:**
+
+                * SQL: A language used to communicate with relational databases.
+                * MySQL: Database management software that understands SQL.
+
+            3. Installation & Setup
+
+                After installing MySQL Server and configuring the root password, open the MySQL Command Line Client and enter the password.
+
+                Successful connection example:
+
+                ```sql
+                Welcome to the MySQL monitor.
+                Server version: 8.0.45 MySQL Community Server
+                ```
+
+                **Important points:**
+
+                    * MySQL Server manages databases and processes SQL queries.
+                    * MySQL Command Line Client allows users to execute SQL commands.
+                    * Most SQL statements end with a semicolon (`;`).
+                    * `mysql>` is the command prompt, not part of the SQL query.
+                    * Never share your database password.
+
+            4. Database
+
+                A database is an organized collection of related data.
+
+                ### Show all databases
+
+                    ```sql
+                    SHOW DATABASES;
+                    ```
+
+                Displays the databases available on the connected MySQL server, subject to your permissions.
+
+                ### Create a database
+
+                    ```sql
+                    CREATE DATABASE demo1;
+                    ```
+
+                Creates a new database named `demo1`.
+
+                ### Error: Database already exists
+
+                    ```sql
+                    CREATE DATABASE demo;
+                    ```
+
+                Error:
+
+                    ```text
+                    ERROR 1007: Can't create database 'demo'; database exists
+                    ```
+
+                **Reason:** A database named `demo` already exists.
+
+                **Solution:**
+
+                    ```sql
+                    CREATE DATABASE IF NOT EXISTS demo;
+                    ```
+
+                Creates the database only if it does not already exist.
+
+            5. Select a Database
+
+                    ```sql
+                    USE demo1;
+                    ```
+
+                Selects `demo1` as the current database for subsequent operations.
+
+                ### Show tables
+
+                    ```sql
+                    SHOW TABLES;
+                    ```
+
+                Displays the tables in the currently selected database.
+
+                If the database is empty, the output is:
+
+                    ```text
+                    Empty set
+                    ```
+
+            6. Table
+
+                A table stores data in rows and columns.
+
+                    * **Column:** Represents an attribute, such as name or age.
+                    * **Row:** Represents one record.
+                    * **Data type:** Defines the kind of data a column can store.
+
+                ### Create a table
+
+                    ```sql
+                    CREATE TABLE streamline_data (
+                        srno INT
+                    );
+                    ```
+
+                Creates a table with one column named `srno` of integer type.
+
+                **Important:** A table must have at least one column.
+
+                ### Error: Table without columns
+
+                    ```sql
+                    CREATE TABLE streamline_data;
+                    ```
+
+                Error:
+
+                    ```text
+                    ERROR 4028: A table must have at least one visible column.
+                    ```
+
+                **Reason:** A table cannot be created without defining any columns.
+
+                ### Display all tables
+
+                    ```sql
+                    SHOW TABLES;
+                    ```
+
+                ### Display table data
+
+                    ```sql
+                    SELECT * FROM streamline_data;
+                    ```
+
+                Displays all columns and rows. If the table has no records, the result is `Empty set`.
+
+            7. SQL Data Types
+
+                Common data types used in this lecture:
+
+                    * `INT`: Stores integer values.
+                    * `VARCHAR(n)`: Stores variable-length text up to the specified character limit.
+
+                **Examples:**
+
+                    ```sql
+                    srno INT
+                    name VARCHAR(20)
+                    Domain VARCHAR(20)
+                    Duration INT
+                    ```
+
+            8. Create a Table with Multiple Columns
+
+                    ```sql
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        Domain VARCHAR(20),
+                        Duration INT
+                    );
+                    ```
+
+                **Explanation:**
+
+                * `srno`: Intern serial number.
+                * `name`: Intern name.
+                * `Domain`: Internship domain.
+                * `Duration`: Internship duration, represented as an integer.
+
+            9. INSERT Statement
+
+                The `INSERT INTO` statement adds new records to a table.
+
+                ### Insert a single record
+
+                    ```sql
+                    INSERT INTO interns (srno, name, Domain, Duration)
+                    VALUES (1, 'anuj', 'python', 6);
+                    ```
+
+                ### Insert another record
+
+                    ```sql
+                    INSERT INTO interns (srno, name, Domain, Duration)
+                    VALUES (2, 'naved', 'DA', 8);
+                    ```
+
+                **Important points:**
+
+                * Text values are written inside single quotes.
+                * Numeric values are written without quotes.
+                * The number and order of supplied values must match the specified columns.
+
+            10. SELECT Statement
+
+                The `SELECT` statement retrieves data from a table.
+
+                ### Display all columns
+
+                    ```sql
+                    SELECT * FROM interns;
+                    ```
+
+                    `*` means all columns.
+
+                ### Display selected columns
+
+                    ```sql
+                    SELECT srno, name FROM interns;
+                    ```
+
+                Displays only the `srno` and `name` columns.
+
+                    ```sql
+                    SELECT srno, name, Domain FROM interns;
+                    ```
+
+                Displays only the specified three columns.
+
+                    **Syntax:**
+
+                    ```sql
+                    SELECT column1, column2
+                    FROM table_name;
+                    ```
+
+            11. Important Commands – Quick Revision
+
+                ```sql
+                SHOW DATABASES;
+                CREATE DATABASE demo1;
+                CREATE DATABASE IF NOT EXISTS demo1;
+                USE demo1;
+                SHOW TABLES;
+                CREATE TABLE students (id INT, name VARCHAR(30));
+                INSERT INTO students (id, name) VALUES (1, 'Anuj');
+                SELECT * FROM students;
+                SELECT id, name FROM students;
+                ```
+
+            12. Important Observations from Practical
+
+                * `SHOW DATABASES;` lists databases available on the server.
+                * `CREATE DATABASE` creates a database.
+                * `USE` selects a database.
+                * `SHOW TABLES;` lists tables in the selected database.
+                * `CREATE TABLE` defines columns and their data types.
+                * `INSERT INTO` adds records.
+                * `SELECT` retrieves records.
+                * A successful `INSERT` does not automatically display the inserted data; use `SELECT` to view it.
+                * `Query OK` indicates that the command executed successfully.
+                * `Empty set` means the query returned no rows.
+
+            Note on demo1 and demo3
+
+                Your output shows that `demo1` contains the `interns` table with columns `srno`, `name`, `Domain`, and `Duration`. Later, `demo3` displays an `interns` table with columns `id`, `intern_name`, `Domain`, and `Duration`.
+
+                These are different table structures in different databases. Selecting `demo3` does not rename or modify the table in `demo1`. The output alone does not establish how the `demo3` table was created.
+
+            13. Practice Questions
+
+                1. What is SQL?
+                2. What is MySQL?
+                3. What is the difference between SQL and MySQL?
+                4. What is a database?
+                5. What is a table?
+                6. What is the purpose of `SHOW DATABASES;`?
+                7. What does the `USE` command do?
+                8. What is the difference between `INT` and `VARCHAR`?
+                9. What is the purpose of `INSERT INTO`?
+                10. What is the difference between `SELECT *` and selecting specific columns?
+                11. Why must a table contain at least one column?
+                12. What does `Empty set` mean in MySQL?
+
+            **Day 1 Completed:** 
+                MySQL introduction, installation and connection verification, databases, tables, basic data types, inserting records, and retrieving data.
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 33(23/10/26):-
+
+        MySQL Notes: Day 2 - Database, Tables, Data Types & INSERT Operations
+
+            1. Creating a Database:-
+
+                The `CREATE DATABASE` command is used to create a new database in MySQL.
+
+                Syntax:
+                    CREATE DATABASE database_name;
+
+                Example:
+                    CREATE DATABASE streamlinetech1;
+
+                To display all databases:
+                    SHOW DATABASES;
+
+                To select a database:
+                    USE streamlinetech1;
+
+                Error:
+                    CREATE DATABASE streamlinetech;
+
+                    ERROR 1007: Can't create database; database exists.
+
+                Solution:
+                    CREATE DATABASE IF NOT EXISTS streamlinetech;
+
+                Here:
+                    - `CREATE DATABASE` → Creates a database
+                    - `SHOW DATABASES` → Displays all available databases
+                    - `USE` → Selects a database
+                    - `IF NOT EXISTS` → Prevents an error if the database already exists
+
+            2. Creating a Table:-
+
+                The `CREATE TABLE` command is used to create a table inside a database.
+
+                Syntax:
+                    CREATE TABLE table_name (
+                        column1 datatype,
+                        column2 datatype
+                    );
+
+                Example:
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        domain VARCHAR(20)
+                    );
+
+                To display all tables:
+                    SHOW TABLES;
+
+                To display table structure:
+                    DESCRIBE interns;
+
+                Error:
+                    CREATE TABLE interns;
+
+                    ERROR 4028: A table must have at least one visible column.
+
+                Solution:
+                    CREATE TABLE interns (
+                        srno INT,
+                        name VARCHAR(20),
+                        domain VARCHAR(20)
+                    );
+
+                Here:
+                    - `interns` → Table name
+                    - `srno`, `name`, `domain` → Column names
+                    - `INT`, `VARCHAR(20)` → Data types
+
+            3. MySQL Data Types:-
+
+                Data types define what kind of values a column can store.
+
+                1. INT:-
+                    Used to store integer values.
+
+                    Example:
+                        emp_id INT
+
+                    Values:
+                        101, 102, 500
+
+                2. VARCHAR(n):-
+                    Used to store variable-length text up to the specified length.
+
+                    Example:
+                        emp_name VARCHAR(15)
+
+                    Here:
+                        - `VARCHAR` → Variable-length character string
+                        - `15` → Maximum allowed length is 15 characters
+
+                3. CHAR(n):-
+                    Used to store fixed-length character strings.
+
+                    Example:
+                        role CHAR(5)
+
+                    Here:
+                        - `CHAR` → Fixed-length character string
+                        - `5` → Maximum declared length is 5 characters
+
+                4. DECIMAL(p,s):-
+                    Used to store exact decimal values, such as salaries and prices.
+
+                    Example:
+                        salary DECIMAL(10,2)
+
+                    Here:
+                        - `10` → Total number of digits allowed
+                        - `2` → Number of digits after the decimal point
+
+                    Example value:
+                        50000.00
+
+                Important:
+                    - `INT` → Whole numbers
+                    - `VARCHAR` → Variable-length text
+                    - `CHAR` → Fixed-length text
+                    - `DECIMAL` → Exact decimal numbers
+
+            4. Creating an Employee Table:-
+
+                Example:
+                    CREATE TABLE employee (
+                        emp_id INT,
+                        emp_name VARCHAR(15),
+                        role CHAR(5),
+                        salary DECIMAL(10,2)
+                    );
+
+                Here:
+                    - `emp_id` → Employee ID
+                    - `emp_name` → Employee name
+                    - `role` → Employee role
+                    - `salary` → Employee salary
+
+                To display the table structure:
+                    DESCRIBE employee;
+
+            5. INSERT Operation:-
+
+                The `INSERT INTO` command is used to add records to a table.
+
+                Syntax:
+                    INSERT INTO table_name (column1, column2)
+                    VALUES (value1, value2);
+
+                Example:
+                    INSERT INTO interns (srno, name, domain)
+                    VALUES (1, 'Naved', 'Data Analyst');
+
+                To display records:
+                    SELECT * FROM interns;
+
+                Output:
+                    +------+-------+--------------+
+                    | srno | name  | domain       |
+                    +------+-------+--------------+
+                    | 1    | Naved | Data Analyst |
+                    +------+-------+--------------+
+
+                Another Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (101, 'Anuj', 'SRDEV', 50000);
+
+                Output:
+                    +--------+----------+-------+----------+
+                    | emp_id | emp_name | role  | salary   |
+                    +--------+----------+-------+----------+
+                    | 101    | Anuj     | SRDEV | 50000.00 |
+                    +--------+----------+-------+----------+
+
+                Here:
+                    - `INSERT INTO` → Specifies the table for insertion
+                    - Column names → Specify where values will be stored
+                    - `VALUES` → Specifies the values to insert
+                    - Text values → Enclosed in single quotes
+                    - Numeric values → Usually written without quotes
+
+            6. Error: Data Too Long for Column:-
+
+                Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (102, 'Naved', 'SRDEV1', 60000);
+
+                Error:
+                    ERROR 1406 (22001): Data too long for column 'role' at row 1
+
+                Reason:
+                    The `role` column is defined as `CHAR(5)`, but `SRDEV1` contains 6 characters.
+
+                Solution:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (102, 'Naved', 'JRDEV', 60000);
+
+                Here:
+                    - `CHAR(5)` → Allows a maximum of 5 characters
+                    - `'SRDEV1'` → Contains 6 characters
+                    - `'JRDEV'` → Contains 5 characters and fits the declared length
+
+                Important:
+                    Always choose a suitable data type and length for each column.
+
+            7. Inserting Duplicate Records:-
+
+                Example:
+                    INSERT INTO employee (emp_id, emp_name, role, salary)
+                    VALUES (101, 'Anuj', 'SRDEV', 50000);
+
+                This statement successfully inserts another record even though `emp_id` 101 already exists.
+
+                Reason:
+                    The `emp_id` column was created as `INT` without a PRIMARY KEY or UNIQUE constraint.
+
+                Important:
+                    MySQL allows duplicate values in ordinary columns unless a constraint prevents them.
+
+                Better Approach:
+                    CREATE TABLE employee (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(15),
+                        role CHAR(5),
+                        salary DECIMAL(10,2)
+                    );
+
+                Here:
+                    - `PRIMARY KEY` → Uniquely identifies each record
+                    - Duplicate primary key values are not allowed
+                    - A primary key cannot contain NULL values
+
+                Note:
+                    The above table definition is an example for a new table. To add a primary key to an existing table, first check and remove any duplicate employee IDs.
+
+            8. Difference Between CHAR and VARCHAR:-
+
+                | CHAR | VARCHAR |
+                |------|---------|
+                | Fixed-length character type | Variable-length character type |
+                | Suitable for fixed-size values | Suitable for values of varying lengths |
+                | Example: CHAR(5) | Example: VARCHAR(20) |
+                | Declared length is fixed | Actual stored text length can vary |
+
+                Example:
+                    role CHAR(5)
+                    name VARCHAR(20)
+
+                Important:
+                    Both types enforce their declared length limits. Exact storage behavior depends on the data type and MySQL settings.
+
+            9. Important MySQL Commands:-
+
+                SHOW DATABASES;
+                    Displays all databases available to the connected user.
+
+                CREATE DATABASE database_name;
+                    Creates a database.
+
+                USE database_name;
+                    Selects a database.
+
+                SHOW TABLES;
+                    Displays tables in the selected database.
+
+                CREATE TABLE table_name (...);
+                    Creates a table.
+
+                DESCRIBE table_name;
+                    Displays the structure of a table.
+
+                INSERT INTO table_name (...) VALUES (...);
+                    Inserts a new record.
+
+                SELECT * FROM table_name;
+                    Displays all columns and records.
+
+            10. Important Points:-
+
+                - SQL stands for Structured Query Language.
+                - MySQL is a Relational Database Management System (RDBMS).
+                - A database can contain multiple tables.
+                - A table contains rows and columns.
+                - `CREATE DATABASE` creates a database.
+                - `CREATE TABLE` creates a table with defined columns.
+                - `INT` stores integer values.
+                - `VARCHAR(n)` stores variable-length text.
+                - `CHAR(n)` stores fixed-length character strings.
+                - `DECIMAL(p,s)` stores exact decimal values.
+                - `INSERT INTO` adds records to a table.
+                - `SELECT *` retrieves all columns from a table.
+                - Duplicate values are allowed unless prevented by a constraint.
+                - A `PRIMARY KEY` uniquely identifies each record.
+                - SQL statements generally end with a semicolon (;).
+
+            Quick Revision:-
+
+                SQL → Structured Query Language
+                MySQL → Relational Database Management System
+                CREATE DATABASE → Creates a database
+                USE → Selects a database
+                CREATE TABLE → Creates a table
+                SHOW TABLES → Displays tables
+                DESCRIBE → Displays table structure
+                INT → Integer values
+                VARCHAR → Variable-length text
+                CHAR → Fixed-length character strings
+                DECIMAL → Exact decimal values
+                INSERT INTO → Inserts records
+                SELECT * → Retrieves all columns
+                PRIMARY KEY → Uniquely identifies a record
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 34(27/10/26):-
+
+        MySQL Notes: Day 3 - Constraints, AUTO_INCREMENT, DELETE & Foreign Key
+
+            1. Constraints in MySQL:-
+
+                Constraints are rules applied to table columns to maintain the accuracy, validity, and integrity of data.
+
+                Types of Constraints:
+                    1. PRIMARY KEY
+                    2. AUTO_INCREMENT
+                    3. NOT NULL
+                    4. UNIQUE
+                    5. CHECK
+                    6. DEFAULT
+                    7. FOREIGN KEY
+
+            2. PRIMARY KEY:-
+
+                A PRIMARY KEY uniquely identifies each record in a table.
+
+                It does not allow duplicate values or NULL values.
+
+                Example:
+                    CREATE TABLE employees (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                    INSERT INTO employees
+                    VALUES (101, 'Anuj', 'PYTHON', 50000);
+
+                    INSERT INTO employees
+                    VALUES (101, 'Naved', 'DA', 40000);
+
+                Error:
+                    ERROR 1062: Duplicate entry '101' for key 'employees.PRIMARY'
+
+                Reason:
+                    The value 101 already exists in the emp_id column.
+
+                Here:
+                    - `PRIMARY KEY` → Uniquely identifies each record
+                    - Duplicate values → Not allowed
+                    - NULL values → Not allowed
+
+            3. AUTO_INCREMENT:-
+
+                AUTO_INCREMENT automatically generates the next numeric value when a new record is inserted without specifying a value for that column.
+
+                Example:
+                    CREATE TABLE employee1 (
+                        emp_id INT PRIMARY KEY AUTO_INCREMENT,
+                        emp_name VARCHAR(20),
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                    INSERT INTO employee1 (emp_name, role, salary)
+                    VALUES ('Naved', 'DA', 40000);
+
+                    INSERT INTO employee1 (emp_name, role, salary)
+                    VALUES ('Anuj', 'PYTHON', 60000);
+
+                    SELECT * FROM employee1;
+
+                Output:
+                    +--------+----------+--------+----------+
+                    | emp_id | emp_name | role   | salary   |
+                    +--------+----------+--------+----------+
+                    | 1      | Naved    | DA     | 40000.00 |
+                    | 2      | Anuj     | PYTHON | 60000.00 |
+                    +--------+----------+--------+----------+
+
+                Here:
+                    - `AUTO_INCREMENT` → Generates numeric IDs automatically
+                    - `PRIMARY KEY` → Prevents duplicate IDs
+                    - `emp_id` → Does not need to be included in these INSERT statements
+
+                Important:
+                    After deleting records, AUTO_INCREMENT does not necessarily restart from 1.
+
+                    Example:
+                        DELETE FROM employee1 WHERE emp_id = 1;
+                        DELETE FROM employee1 WHERE emp_id = 2;
+
+                        INSERT INTO employee1 (emp_name, role, salary)
+                        VALUES ('Anuj', 'PYTHON', 60000);
+
+                    The generated ID was 3 in your practice.
+
+            4. DELETE Statement:-
+
+                The DELETE statement removes records from a table.
+
+                Syntax:
+                    DELETE FROM table_name
+                    WHERE condition;
+
+                Example:
+                    DELETE FROM employee1
+                    WHERE emp_id = 1;
+
+                To delete another record:
+                    DELETE FROM employee1
+                    WHERE emp_id = 2;
+
+                To display remaining records:
+                    SELECT * FROM employee1;
+
+                Output:
+                    Empty set
+
+                Here:
+                    - `DELETE FROM` → Removes records
+                    - `WHERE` → Specifies which records to remove
+                    - `emp_id = 1` → Selects the record whose ID is 1
+
+                Important:
+                    Always use WHERE when you want to delete specific records.
+
+                    Example:
+                        DELETE FROM employee1;
+
+                    This deletes all records from the table but keeps the table structure.
+
+            5. NOT NULL Constraint:-
+
+                The NOT NULL constraint prevents a column from storing NULL values.
+
+                Example:
+                    CREATE TABLE employee2 (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        project VARCHAR(20) NOT NULL,
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                    INSERT INTO employee2
+                    (emp_id, emp_name, project, role, salary)
+                    VALUES (101, 'Raj', 'NMC', 'PYTHON', 60000);
+
+                Valid:
+                    INSERT INTO employee2
+                    (emp_id, emp_name, project, role, salary)
+                    VALUES (102, 'Raj', '', 'PYTHON', 60000);
+
+                The empty string '' is allowed because it is not NULL.
+
+                Invalid:
+                    INSERT INTO employee2
+                    (emp_id, emp_name, role, salary)
+                    VALUES (103, 'Anuj', 'PYTHON', 60000);
+
+                Error:
+                    ERROR 1364: Field 'project' doesn't have a default value
+
+                Reason:
+                    The project column is NOT NULL, and no value or default value was supplied.
+
+                Here:
+                    - `NOT NULL` → Prevents NULL values
+                    - `''` → Empty string, not NULL
+                    - Missing required value → Causes an error when no default is available
+
+            6. UNIQUE Constraint:-
+
+                The UNIQUE constraint prevents duplicate values in a column.
+
+                Example:
+                    CREATE TABLE employee3 (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        project VARCHAR(20) UNIQUE,
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                    INSERT INTO employee3
+                    VALUES (101, 'Anuj', 'NMC', 'PYTHON', 60000);
+
+                    INSERT INTO employee3
+                    VALUES (102, 'Naved', 'NMC', 'PYTHON', 60000);
+
+                Error:
+                    ERROR 1062: Duplicate entry 'NMC' for key 'employee3.project'
+
+                Solution:
+                    INSERT INTO employee3
+                    VALUES (102, 'Naved', 'Recovery', 'PYTHON', 60000);
+
+                Here:
+                    - `UNIQUE` → Prevents duplicate non-NULL values
+                    - `project` → Must have a unique value for each non-NULL entry
+                    - `PRIMARY KEY` → Prevents duplicate employee IDs
+
+                Important:
+                    A UNIQUE column can allow NULL values in MySQL, subject to its definition. Unlike a PRIMARY KEY, UNIQUE does not inherently require every row to have a value.
+
+            7. CHECK Constraint:-
+
+                The CHECK constraint ensures that values satisfy a specified condition.
+
+                Example:
+                    CREATE TABLE employee4 (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        age INT CHECK (age > 18),
+                        project VARCHAR(20) UNIQUE,
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                Invalid:
+                    INSERT INTO employee4
+                    VALUES (102, 'Naved', 18, 'Recovery', 'PYTHON', 60000);
+
+                Error:
+                    ERROR 3819: Check constraint is violated.
+
+                Reason:
+                    The condition age > 18 is not satisfied.
+
+                Valid:
+                    INSERT INTO employee4
+                    VALUES (102, 'Naved', 19, 'Recovery', 'PYTHON', 60000);
+
+                Here:
+                    - `CHECK (age > 18)` → Requires the age to be greater than 18
+                    - Age 18 → Not allowed
+                    - Age 19 → Allowed
+
+                Important:
+                    A CHECK condition that evaluates to FALSE is rejected. NULL handling depends on the condition and other constraints.
+
+            8. DEFAULT Constraint:-
+
+                The DEFAULT constraint supplies a predefined value when an INSERT statement does not provide a value for that column.
+
+                Example:
+                    CREATE TABLE employee5 (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        age INT CHECK (age > 18),
+                        project VARCHAR(20) DEFAULT 'Demo Project',
+                        role VARCHAR(20),
+                        salary DECIMAL(10,2)
+                    );
+
+                    INSERT INTO employee5
+                    (emp_id, emp_name, age, role, salary)
+                    VALUES (102, 'Naved', 19, 'PYTHON', 60000);
+
+                    SELECT * FROM employee5;
+
+                Output:
+                    +--------+----------+------+--------------+--------+----------+
+                    | emp_id | emp_name | age  | project      | role   | salary   |
+                    +--------+----------+------+--------------+--------+----------+
+                    | 102    | Naved    | 19   | Demo Project | PYTHON | 60000.00 |
+                    +--------+----------+------+--------------+--------+----------+
+
+                Here:
+                    - `DEFAULT 'Demo Project'` → Sets a default project name
+                    - Project omitted from INSERT → Default value is used
+                    - Explicitly supplied project → The supplied value is used instead
+
+                Important:
+                    A column's default value is used when the column is omitted or DEFAULT is specified. An explicit NULL does not automatically mean the default value will be used.
+
+            9. FOREIGN KEY Constraint:-
+
+                A FOREIGN KEY connects two tables and maintains referential integrity between them.
+
+                The foreign key value must match an existing referenced key value, unless the foreign key is NULL and its definition allows NULL.
+
+                Example: Parent Table
+                    CREATE TABLE department (
+                        dept_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        dept_name VARCHAR(20)
+                    );
+
+                    INSERT INTO department
+                    VALUES (1, 'Raj', 'DEV');
+
+                    INSERT INTO department
+                    VALUES (2, 'Anuj', 'TEST');
+
+                    INSERT INTO department
+                    VALUES (3, 'Naved', 'DA');
+
+                Example: Child Table
+                    CREATE TABLE employee (
+                        emp_id INT PRIMARY KEY,
+                        emp_name VARCHAR(20),
+                        mob_no VARCHAR(15) UNIQUE,
+                        dept_id INT,
+                        FOREIGN KEY (dept_id)
+                        REFERENCES department(dept_id)
+                    );
+
+                Valid:
+                    INSERT INTO employee
+                    VALUES (1, 'Anuj', '2813722189', 2);
+
+                The record is accepted because dept_id 2 exists in the department table.
+
+                Invalid:
+                    INSERT INTO employee
+                    VALUES (2, 'Anuj', '2813722139', 5);
+
+                Error:
+                    ERROR 1452: Cannot add or update a child row: a foreign key constraint fails.
+
+                Reason:
+                    dept_id 5 does not exist in the department table.
+
+                Here:
+                    - `department` → Parent table
+                    - `employee` → Child table
+                    - `department.dept_id` → Referenced primary key
+                    - `employee.dept_id` → Foreign key
+                    - `REFERENCES` → Specifies the referenced table and column
+
+                Important:
+                    The parent record must exist before inserting a child record that references it.
+
+                    A foreign key does not automatically make its column unique. Multiple employees can belong to the same department.
+
+            10. Correct INSERT Syntax:-
+
+                Syntax:
+                    INSERT INTO table_name (column1, column2)
+                    VALUES (value1, value2);
+
+                Example:
+                    INSERT INTO employee
+                    (emp_id, emp_name, mob_no, dept_id)
+                    VALUES (1, 'Anuj', '2813722189', 2);
+
+                Incorrect:
+                    INSERT INTO employee (1, 'Anuj', 2813722189, 2);
+
+                Reason:
+                    The column list must contain column names, not values.
+
+                Another Important Point:
+                    If you omit the column list, provide values for all columns in the correct table order.
+
+                    Example:
+                        INSERT INTO department
+                        VALUES (1, 'Raj', 'DEV');
+
+                For mobile numbers:
+                    `mob_no VARCHAR(15)` is generally preferable to INT because phone numbers may contain leading zeros or a country code and are not used for arithmetic.
+
+            11. DROP TABLE Statement:-
+
+                The DROP TABLE statement permanently removes a table and its data from the database.
+
+                Incorrect:
+                    DELETE TABLE employee;
+
+                Error:
+                    ERROR 1064: SQL syntax error.
+
+                Correct:
+                    DROP TABLE employee;
+
+                Here:
+                    - `DROP TABLE` → Removes the entire table
+                    - `DELETE FROM` → Removes records but retains the table structure
+
+                Important:
+                    Dropping a table referenced by a foreign key may be blocked by MySQL until the foreign key dependency is handled.
+
+            12. Difference Between DELETE, DROP and TRUNCATE:-
+
+                | DELETE | DROP | TRUNCATE |
+                |--------|------|----------|
+                | Removes records | Removes the entire table | Removes all records |
+                | WHERE can be used | WHERE cannot be used | WHERE cannot be used |
+                | Table structure remains | Table structure is removed | Table structure remains |
+                | Usually removes selected rows when WHERE is used | Removes table definition and data | Empties the table efficiently |
+                | AUTO_INCREMENT is generally not reset by deleting individual rows | Table no longer exists | Resets AUTO_INCREMENT for a normal MySQL table |
+
+                Examples:
+                    DELETE FROM employee WHERE emp_id = 1;
+
+                    DROP TABLE employee;
+
+                    TRUNCATE TABLE employee;
+
+                Important:
+                    DROP and TRUNCATE are DDL operations in MySQL and cause implicit commits. Use them carefully.
+
+            13. Common Errors and Their Solutions:-
+
+                Error 1062: Duplicate Entry
+                    Reason:
+                        A duplicate PRIMARY KEY or UNIQUE value was inserted.
+
+                    Solution:
+                        Use a new unique value.
+
+                Error 1136: Column Count Doesn't Match Value Count
+                    Reason:
+                        The number of supplied values does not match the specified columns.
+
+                    Solution:
+                        Match each column with the correct number of values.
+
+                Error 1364: Field Doesn't Have a Default Value
+                    Reason:
+                        A required column was omitted and has no default value.
+
+                    Solution:
+                        Supply a value or define a suitable default when appropriate.
+
+                Error 3819: Check Constraint Is Violated
+                    Reason:
+                        A value does not satisfy the CHECK condition.
+
+                    Solution:
+                        Insert a value that satisfies the condition.
+
+                Error 1452: Foreign Key Constraint Fails
+                    Reason:
+                        The referenced parent key does not exist.
+
+                    Solution:
+                        Insert a valid existing parent key.
+
+                Error 1064: SQL Syntax Error
+                    Reason:
+                        The SQL statement has incorrect syntax.
+
+                    Solution:
+                        Check command spelling, parentheses, column names, and SQL keywords.
+
+            14. Important Points:-
+
+                - PRIMARY KEY uniquely identifies each record.
+                - AUTO_INCREMENT automatically generates numeric IDs.
+                - DELETE removes records without deleting the table structure.
+                - NOT NULL prevents NULL values.
+                - UNIQUE prevents duplicate non-NULL values.
+                - CHECK validates data against a condition.
+                - DEFAULT supplies a predefined value when applicable.
+                - FOREIGN KEY maintains referential integrity between tables.
+                - A foreign key value must reference an existing parent key unless NULL is permitted.
+                - A foreign key column can contain duplicate values.
+                - Use VARCHAR for phone numbers rather than numeric data types.
+                - DROP TABLE removes the table and its data.
+                - TRUNCATE TABLE removes all records while retaining the table structure.
+                - Always verify the table name, column names, and conditions before deleting data.
+
+            Quick Revision:-
+
+                PRIMARY KEY → Unique record identification
+                AUTO_INCREMENT → Automatically generates numeric IDs
+                DELETE → Removes records
+                NOT NULL → Prevents NULL values
+                UNIQUE → Prevents duplicate non-NULL values
+                CHECK → Validates a condition
+                DEFAULT → Supplies a predefined value
+                FOREIGN KEY → Connects related tables
+                REFERENCES → Specifies the parent table and key
+                DROP TABLE → Removes the entire table
+                TRUNCATE → Removes all records
+                Error 1062 → Duplicate key value
+                Error 1136 → Column/value count mismatch
+                Error 1364 → Missing required value
+                Error 3819 → CHECK condition violated
+                Error 1452 → Foreign key constraint failed
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 35 (29/10/26):-
+
+        MySQL Notes: Day 4 - Aggregate Functions
+
+            1. Aggregate Functions:-
+
+                Aggregate functions perform calculations on multiple rows and return a single result.
+
+                Common Aggregate Functions:
+                    1. COUNT()
+                    2. SUM()
+                    3. AVG()
+                    4. MIN()
+                    5. MAX()
+
+                Note:
+                    FIRST() and LAST() are not standard MySQL aggregate functions.
+
+            2. COUNT() Function:-
+
+                The COUNT() function counts rows or non-NULL values in a column.
+
+                Example:
+                    SELECT COUNT(*) AS total_emp
+                    FROM employees;
+
+                Output:
+                    +-----------+
+                    | total_emp |
+                    +-----------+
+                    | 10        |
+                    +-----------+
+
+                Here:
+                    - `COUNT(*)` → Counts all rows
+                    - `AS total_emp` → Assigns an alias to the result column
+
+                COUNT(column_name):-
+                    Counts only non-NULL values in the specified column.
+
+                    Example:
+                        SELECT COUNT(commission) AS total_comm_count
+                        FROM employees;
+
+                    Output:
+                        +------------------+
+                        | total_comm_count |
+                        +------------------+
+                        | 6                |
+                        +------------------+
+
+                    Here:
+                        `COUNT(commission)` → Counts only rows where commission is not NULL.
+
+            3. SUM() Function:-
+
+                The SUM() function calculates the total of numeric values in a column, ignoring NULL values.
+
+                Example:
+                    SELECT SUM(commission) AS total_commission
+                    FROM employees;
+
+                Output:
+                    +------------------+
+                    | total_commission |
+                    +------------------+
+                    | 34000.00         |
+                    +------------------+
+
+                Another Example:
+                    SELECT SUM(salary) AS total_salary
+                    FROM employees;
+
+                Output:
+                    +--------------+
+                    | total_salary |
+                    +--------------+
+                    | 575000.00    |
+                    +--------------+
+
+                Here:
+                    - `SUM(commission)` → Calculates total commission
+                    - `SUM(salary)` → Calculates total salary
+
+            4. AVG() Function:-
+
+                The AVG() function calculates the average of numeric values in a column, ignoring NULL values.
+
+                Example:
+                    SELECT AVG(salary) AS avg_salary
+                    FROM employees;
+
+                Output:
+                    +--------------+
+                    | avg_salary   |
+                    +--------------+
+                    | 57500.000000 |
+                    +--------------+
+
+                Formula:
+                    Average = Sum of values / Number of non-NULL values
+
+                Here:
+                    - Total salary = 575000
+                    - Total employees = 10
+                    - Average salary = 575000 / 10 = 57500
+
+            5. MIN() Function:-
+
+                The MIN() function returns the minimum value from a column.
+
+                Example:
+                    SELECT MIN(salary) AS min_salary
+                    FROM employees;
+
+                Output:
+                    +------------+
+                    | min_salary |
+                    +------------+
+                    | 38000.00   |
+                    +------------+
+
+                Another Example:
+                    SELECT MIN(hire_date) AS min_hire_date
+                    FROM employees;
+
+                Output:
+                    +---------------+
+                    | min_hire_date |
+                    +---------------+
+                    | 2017-04-18    |
+                    +---------------+
+
+                Here:
+                    - `MIN(salary)` → Returns the lowest salary
+                    - `MIN(hire_date)` → Returns the earliest hire date
+
+            6. MAX() Function:-
+
+                The MAX() function returns the maximum value from a column.
+
+                Example:
+                    SELECT MAX(salary) AS max_salary
+                    FROM employees;
+
+                Output:
+                    +------------+
+                    | max_salary |
+                    +------------+
+                    | 90000.00   |
+                    +------------+
+
+                Another Example:
+                    SELECT MAX(hire_date) AS max_hire_date
+                    FROM employees;
+
+                Output:
+                    +---------------+
+                    | max_hire_date |
+                    +---------------+
+                    | 2022-02-28    |
+                    +---------------+
+
+                Here:
+                    - `MAX(salary)` → Returns the highest salary
+                    - `MAX(hire_date)` → Returns the latest hire date
+
+            7. Using Multiple Aggregate Functions:-
+
+                Multiple aggregate functions can be used in a single SELECT statement.
+
+                Example:
+                    SELECT COUNT(*) AS total_emp,
+                        SUM(salary) AS total_salary,
+                        AVG(salary) AS avg_salary,
+                        MIN(hire_date) AS min_hire_date
+                    FROM employees;
+
+                Output:
+                    +-----------+--------------+--------------+---------------+
+                    | total_emp | total_salary | avg_salary   | min_hire_date |
+                    +-----------+--------------+--------------+---------------+
+                    | 10        | 575000.00    | 57500.000000 | 2017-04-18    |
+                    +-----------+--------------+--------------+---------------+
+
+                Here:
+                    - `COUNT(*)` → Counts employees
+                    - `SUM(salary)` → Calculates total salary
+                    - `AVG(salary)` → Calculates average salary
+                    - `MIN(hire_date)` → Finds the earliest hire date
+
+                Important:
+                    Do not place a comma immediately before the FROM clause.
+
+                    Incorrect:
+                        SELECT COUNT(*) AS total_emp,
+                            SUM(salary) AS total_salary,
+                        FROM employees;
+
+                    Correct:
+                        SELECT COUNT(*) AS total_emp,
+                            SUM(salary) AS total_salary
+                        FROM employees;
+
+            8. Aliases in SQL:-
+
+                An alias gives a temporary name to a column or expression in the query result.
+
+                Example:
+                    SELECT COUNT(*) AS total_emp
+                    FROM employees;
+
+                Here:
+                    - `COUNT(*)` → Expression being calculated
+                    - `AS` → Specifies the alias
+                    - `total_emp` → Temporary result column name
+
+                Important:
+                    An alias does not rename the original table column.
+
+            9. NULL Values in Aggregate Functions:-
+
+                NULL represents a missing or unknown value.
+
+                Example:
+                    SELECT COUNT(*) AS total_emp,
+                        COUNT(commission) AS commission_count,
+                        SUM(commission) AS total_commission,
+                        AVG(commission) AS avg_commission
+                    FROM employees;
+
+                Here:
+                    - `COUNT(*)` → Counts all rows, including rows containing NULL values
+                    - `COUNT(commission)` → Counts non-NULL commission values
+                    - `SUM(commission)` → Adds non-NULL commission values
+                    - `AVG(commission)` → Calculates the average of non-NULL commission values
+
+                Important:
+                    Most aggregate functions ignore NULL values. COUNT(*) is an exception because it counts rows regardless of their column values.
+
+            10. Previously Covered Topics (Quick Reference):-
+
+                Database and Table Commands:
+                    CREATE DATABASE → Creates a database
+                    USE → Selects a database
+                    SHOW DATABASES → Displays databases
+                    SHOW TABLES → Displays tables
+                    CREATE TABLE → Creates a table
+                    DESCRIBE → Displays table structure
+
+                Data Types:
+                    INT → Integer values
+                    VARCHAR → Variable-length text
+                    CHAR → Fixed-length character strings
+                    DECIMAL → Exact decimal values
+
+                Constraints:
+                    PRIMARY KEY → Uniquely identifies records
+                    AUTO_INCREMENT → Generates numeric IDs
+                    NOT NULL → Prevents NULL values
+                    UNIQUE → Prevents duplicate non-NULL values
+                    CHECK → Validates a condition
+                    DEFAULT → Supplies a predefined value
+                    FOREIGN KEY → Maintains relationships between tables
+
+                Data Manipulation:
+                    INSERT INTO → Inserts records
+                    SELECT → Retrieves data
+                    DELETE → Removes records
+                    DROP TABLE → Removes a table
+                    TRUNCATE TABLE → Removes all records
+
+            11. Important Points:-
+
+                - Aggregate functions perform calculations on multiple rows.
+                - COUNT(*) counts all rows.
+                - COUNT(column_name) counts non-NULL values.
+                - SUM() calculates the total of numeric values.
+                - AVG() calculates the average of numeric values.
+                - MIN() returns the minimum value.
+                - MAX() returns the maximum value.
+                - AS assigns an alias to a result column.
+                - Aggregate functions can be combined in one SELECT statement.
+                - Most aggregate functions ignore NULL values.
+                - FIRST() and LAST() are not standard MySQL aggregate functions.
+                - Always check commas and column names when writing SQL queries.
+
+            Quick Revision:-
+
+                COUNT(*) → Counts all rows
+                COUNT(column) → Counts non-NULL values
+                SUM() → Calculates the total
+                AVG() → Calculates the average
+                MIN() → Returns the minimum value
+                MAX() → Returns the maximum value
+                AS → Assigns an alias
+                NULL → Represents missing or unknown data
+                Aggregate Functions → Perform calculations on multiple rows
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 36 (29/10/26):-
+
+        MySQL Notes: Day 5 - SQL Clauses and Data Filtering
+
+            1. SQL Clauses:-
+
+                SQL clauses are used to retrieve, filter, group, sort, and limit data from a database.
+
+                Important SQL Clauses:
+                    1. SELECT
+                    2. FROM
+                    3. WHERE
+                    4. ORDER BY
+                    5. GROUP BY
+                    6. HAVING
+                    7. LIMIT
+                    8. OFFSET
+                    9. DISTINCT
+                    10. BETWEEN
+                    11. IN
+                    12. LIKE
+
+                Other SQL Statements:
+                    INSERT INTO → Inserts records
+                    UPDATE → Modifies existing records
+                    DELETE → Removes records
+                    UNION → Combines query results
+
+            2. SELECT Clause:-
+
+                The SELECT clause specifies which columns or expressions to retrieve from a table.
+
+                Syntax:
+                    SELECT column_name
+                    FROM table_name;
+
+                Example:
+                    SELECT emp_name, salary
+                    FROM employees;
+
+                To retrieve all columns:
+                    SELECT *
+                    FROM employees;
+
+                Here:
+                    - `SELECT` → Specifies the required columns
+                    - `*` → Selects all columns
+
+            3. FROM Clause:-
+
+                The FROM clause specifies the table from which data is retrieved.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name;
+
+                Example:
+                    SELECT *
+                    FROM employees;
+
+                Here:
+                    - `FROM` → Specifies the source table
+                    - `employees` → Table name
+
+            4. WHERE Clause:-
+
+                The WHERE clause filters records according to a specified condition.
+
+                Syntax:
+                    SELECT column1, column2
+                    FROM table_name
+                    WHERE condition;
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    WHERE department = 'IT';
+
+                Output:
+                    +--------+----------+------------+----------+
+                    | emp_id | emp_name | department | salary   |
+                    +--------+----------+------------+----------+
+                    | 1      | Amit     | IT         | 60000.00 |
+                    | 2      | Priya    | IT         | 75000.00 |
+                    | 8      | Anita    | IT         | 90000.00 |
+                    +--------+----------+------------+----------+
+
+                Another Example:
+                    SELECT *
+                    FROM employees
+                    WHERE salary > 70000;
+
+                Here:
+                    - `WHERE` → Filters records
+                    - `department = 'IT'` → Selects employees from IT
+                    - `salary > 70000` → Selects employees earning more than 70000
+
+                Common Comparison Operators:
+                    =   → Equal to
+                    !=  → Not equal to
+                    <>  → Not equal to
+                    >   → Greater than
+                    <   → Less than
+                    >=  → Greater than or equal to
+                    <=  → Less than or equal to
+
+            5. ORDER BY Clause:-
+
+                The ORDER BY clause sorts query results in ascending or descending order.
+
+                Syntax:
+                    SELECT column1, column2
+                    FROM table_name
+                    ORDER BY column_name ASC;
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    ORDER BY salary ASC;
+
+                This displays employees from the lowest salary to the highest salary.
+
+                Descending Order:
+                    SELECT *
+                    FROM employees
+                    ORDER BY salary DESC;
+
+                This displays employees from the highest salary to the lowest salary.
+
+                Here:
+                    - `ASC` → Ascending order; default sorting direction
+                    - `DESC` → Descending order
+
+                Example:
+                    SELECT emp_name, salary
+                    FROM employees
+                    ORDER BY salary DESC;
+
+                Important:
+                    ORDER BY can also sort using multiple columns.
+
+                    Example:
+                        SELECT *
+                        FROM employees
+                        ORDER BY department ASC, salary DESC;
+
+            6. GROUP BY Clause:-
+
+                The GROUP BY clause groups rows that have the same value in one or more columns.
+
+                It is commonly used with aggregate functions such as COUNT(), SUM(), AVG(), MIN(), and MAX().
+
+                Syntax:
+                    SELECT column_name, aggregate_function(column_name)
+                    FROM table_name
+                    GROUP BY column_name;
+
+                Example:
+                    SELECT department, COUNT(*) AS total_emp
+                    FROM employees
+                    GROUP BY department;
+
+                Output:
+                    +------------+-----------+
+                    | department | total_emp |
+                    +------------+-----------+
+                    | IT         | 3         |
+                    | HR         | 2         |
+                    | Sales      | 3         |
+                    | Finance    | 2         |
+                    +------------+-----------+
+
+                Here:
+                    - `GROUP BY department` → Groups employees by department
+                    - `COUNT(*)` → Counts employees in each group
+                    - `total_emp` → Alias for the count result
+
+                Another Example:
+                    SELECT department, AVG(salary) AS avg_salary
+                    FROM employees
+                    GROUP BY department;
+
+                This calculates the average salary for each department.
+
+                Important:
+                    When using GROUP BY, every selected column that is not aggregated should generally be included in the GROUP BY clause.
+
+                    Incorrect:
+                        SELECT emp_name, COUNT(*)
+                        FROM employees;
+
+                    Reason:
+                        `emp_name` is neither aggregated nor grouped.
+
+                    Correct:
+                        SELECT department, COUNT(*)
+                        FROM employees
+                        GROUP BY department;
+
+            7. HAVING Clause:-
+
+                The HAVING clause filters groups created by GROUP BY.
+
+                Syntax:
+                    SELECT column_name, aggregate_function(column_name)
+                    FROM table_name
+                    GROUP BY column_name
+                    HAVING condition;
+
+                Example:
+                    SELECT department, COUNT(*) AS total_emp
+                    FROM employees
+                    GROUP BY department
+                    HAVING COUNT(*) > 2;
+
+                This returns departments having more than two employees.
+
+                Another Example:
+                    SELECT department, COUNT(*) AS total_emp
+                    FROM employees
+                    GROUP BY department
+                    HAVING department = 'IT';
+
+                Output:
+                    +------------+-----------+
+                    | department | total_emp |
+                    +------------+-----------+
+                    | IT         | 3         |
+                    +------------+-----------+
+
+                Here:
+                    - `GROUP BY` → Creates groups
+                    - `HAVING` → Filters the groups
+                    - `COUNT(*) > 2` → Keeps groups containing more than two rows
+
+                Important:
+                    WHERE filters individual rows before grouping.
+                    HAVING filters groups after grouping.
+
+                    Example:
+                        SELECT department, AVG(salary) AS avg_salary
+                        FROM employees
+                        WHERE city = 'Pune'
+                        GROUP BY department
+                        HAVING AVG(salary) > 50000;
+
+                    This first filters employees from Pune, groups them by department, and then keeps groups whose average salary exceeds 50000.
+
+            8. LIMIT Clause:-
+
+                The LIMIT clause restricts the number of rows returned by a query.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name
+                    LIMIT number;
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    LIMIT 5;
+
+                This returns at most five rows.
+
+                Here:
+                    - `LIMIT 5` → Returns at most five records
+                    - Without ORDER BY, the selected rows are not guaranteed to follow a particular order
+
+            9. OFFSET Clause:-
+
+                The OFFSET clause skips a specified number of rows before returning results.
+
+                It is commonly used with LIMIT for pagination.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name
+                    LIMIT number OFFSET number;
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    LIMIT 5 OFFSET 2;
+
+                This skips the first two rows and returns the next five rows.
+
+                Here:
+                    - `LIMIT 5` → Returns at most five rows
+                    - `OFFSET 2` → Skips the first two rows
+
+                Another Example:
+                    SELECT *
+                    FROM employees
+                    ORDER BY emp_id
+                    LIMIT 5 OFFSET 4;
+
+                This returns the fifth through ninth records when ordered by emp_id.
+
+                Important:
+                    Use ORDER BY with LIMIT and OFFSET when consistent pagination is required.
+
+            10. DISTINCT Clause:-
+
+                The DISTINCT keyword removes duplicate rows from the query result.
+
+                Syntax:
+                    SELECT DISTINCT column_name
+                    FROM table_name;
+
+                Example:
+                    SELECT DISTINCT department
+                    FROM employees;
+
+                Output:
+                    +------------+
+                    | department |
+                    +------------+
+                    | IT         |
+                    | HR         |
+                    | Sales      |
+                    | Finance    |
+                    +------------+
+
+                Another Example:
+                    SELECT DISTINCT city
+                    FROM employees;
+
+                Here:
+                    - `DISTINCT department` → Returns each department once
+                    - `DISTINCT city` → Returns each distinct city once
+
+                Important:
+                    DISTINCT applies to the combination of all selected columns when multiple columns are specified.
+
+            11. BETWEEN Operator:-
+
+                The BETWEEN operator checks whether a value falls within a specified range.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name
+                    WHERE column_name BETWEEN value1 AND value2;
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    WHERE salary BETWEEN 50000 AND 70000;
+
+                This returns employees whose salaries are between 50000 and 70000, including both boundary values.
+
+                Here:
+                    - `BETWEEN` → Checks a range
+                    - `50000` → Lower boundary
+                    - `70000` → Upper boundary
+
+                Important:
+                    BETWEEN is inclusive of both endpoints.
+
+                    Equivalent condition:
+                        WHERE salary >= 50000 AND salary <= 70000;
+
+            12. IN Operator:-
+
+                The IN operator checks whether a value matches any value in a specified list.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name
+                    WHERE column_name IN (value1, value2);
+
+                Example:
+                    SELECT *
+                    FROM employees
+                    WHERE salary IN (38000, 42000, 45000);
+
+                This returns employees whose salaries match any of the three specified values.
+
+                Another Example:
+                    SELECT *
+                    FROM employees
+                    WHERE department IN ('IT', 'HR');
+
+                Here:
+                    - `IN` → Matches any value in the list
+                    - Multiple values → Separated by commas
+
+                Important:
+                    IN is useful when checking multiple specific values in the same column.
+
+            13. LIKE Operator:-
+
+                The LIKE operator searches for text matching a specified pattern.
+
+                Syntax:
+                    SELECT *
+                    FROM table_name
+                    WHERE column_name LIKE 'pattern';
+
+                Wildcards:
+                    1. % → Matches zero or more characters
+                    2. _ → Matches exactly one character
+
+                1. Names Starting with a Character:-
+
+                    Example:
+                        SELECT *
+                        FROM employees
+                        WHERE emp_name LIKE 'A%';
+
+                    Matches names starting with A.
+
+                2. Names Ending with a Character:-
+
+                    Example:
+                        SELECT *
+                        FROM employees
+                        WHERE emp_name LIKE '%n';
+
+                    Matches names ending with n.
+
+                3. Names Containing a Character or Pattern:-
+
+                    Example:
+                        SELECT *
+                        FROM employees
+                        WHERE emp_name LIKE '%an%';
+
+                    Matches names containing the pattern 'an'.
+
+                4. Names with a Specific Character Position:-
+
+                    Example:
+                        SELECT *
+                        FROM employees
+                        WHERE emp_name LIKE '_a%';
+
+                    Matches names whose second character is a.
+
+                Here:
+                    - `'A%'` → Starts with A
+                    - `'%n'` → Ends with n
+                    - `'%an%'` → Contains an
+                    - `'_a%'` → Second character is a
+
+                Important:
+                    LIKE matching case sensitivity depends on the column collation. In your MySQL practice, both 'k%' and 'K%' matched Karan.
+
+            14. UNION Operator:-
+
+                UNION combines the results of two or more SELECT statements into a single result.
+
+                Syntax:
+                    SELECT column1, column2, column3
+                    FROM table1
+                    UNION
+                    SELECT column1, column2, column3
+                    FROM table2;
+
+                Example:
+                    SELECT dept_id, emp_name, dept_name
+                    FROM department
+                    UNION
+                    SELECT srno, name, domain
+                    FROM interns;
+
+                Here:
+                    - Both SELECT statements return three columns
+                    - Corresponding columns should have compatible data types
+                    - `UNION` removes duplicate rows from the combined result
+
+                Important:
+                    - Both queries must return the same number of columns.
+                    - Column names in the combined result are generally taken from the first SELECT.
+                    - Use UNION ALL when duplicate rows should be retained.
+                    - UNION does not match records by a common ID; it combines result sets vertically.
+
+            15. UPDATE Statement:-
+
+                The UPDATE statement modifies existing records in a table.
+
+                Syntax:
+                    UPDATE table_name
+                    SET column_name = value
+                    WHERE condition;
+
+                Example:
+                    UPDATE employees
+                    SET emp_name = 'Amit Ranjan'
+                    WHERE emp_id = 1;
+
+                Here:
+                    - `UPDATE` → Specifies the table to modify
+                    - `SET` → Assigns a new value
+                    - `WHERE` → Identifies the record to update
+
+                Important:
+                    Always use WHERE when you intend to update specific records.
+
+                    Without WHERE, all rows may be updated.
+
+            16. DELETE Statement:-
+
+                The DELETE statement removes records that match a specified condition.
+
+                Syntax:
+                    DELETE FROM table_name
+                    WHERE condition;
+
+                Example:
+                    DELETE FROM employees
+                    WHERE emp_id = 10;
+
+                Another Example:
+                    DELETE FROM employees
+                    WHERE salary > 70000;
+
+                Here:
+                    - `DELETE FROM` → Removes records
+                    - `WHERE` → Specifies which records to remove
+
+                Important:
+                    Without WHERE, all records in the table may be deleted. The table structure remains.
+
+            17. SQL Query Execution Order:-
+
+                SQL clauses are written in a particular order, but MySQL logically processes them in a different order.
+
+                Written Order:
+                    SELECT
+                    FROM
+                    WHERE
+                    GROUP BY
+                    HAVING
+                    ORDER BY
+                    LIMIT
+
+                Logical Processing Order:
+                    1. FROM
+                    2. WHERE
+                    3. GROUP BY
+                    4. HAVING
+                    5. SELECT
+                    6. ORDER BY
+                    7. LIMIT
+
+                Example:
+                    SELECT department, AVG(salary) AS avg_salary
+                    FROM employees
+                    WHERE city = 'Pune'
+                    GROUP BY department
+                    HAVING AVG(salary) > 50000
+                    ORDER BY avg_salary DESC
+                    LIMIT 5;
+
+                This query filters employees by city, groups them by department, calculates average salaries, filters groups, sorts the results, and returns at most five rows.
+
+            18. Previously Covered Topics (Quick Reference):-
+
+                Database Commands:
+                    CREATE DATABASE → Creates a database
+                    USE → Selects a database
+                    SHOW DATABASES → Displays databases
+                    SHOW TABLES → Displays tables
+                    DESCRIBE → Displays table structure
+
+                Data Types and Constraints:
+                    INT, VARCHAR, CHAR, DECIMAL
+                    PRIMARY KEY, AUTO_INCREMENT
+                    NOT NULL, UNIQUE, CHECK, DEFAULT, FOREIGN KEY
+
+                Aggregate Functions:
+                    COUNT() → Counts rows or non-NULL values
+                    SUM() → Calculates a total
+                    AVG() → Calculates an average
+                    MIN() → Returns a minimum value
+                    MAX() → Returns a maximum value
+
+            19. Important Points:-
+
+                - SELECT specifies which columns to retrieve.
+                - FROM specifies the source table.
+                - WHERE filters individual rows.
+                - ORDER BY sorts query results.
+                - GROUP BY groups rows with common values.
+                - HAVING filters grouped results.
+                - LIMIT restricts the number of returned rows.
+                - OFFSET skips rows before returning results.
+                - DISTINCT removes duplicate result rows.
+                - BETWEEN includes both boundary values.
+                - IN checks against multiple specified values.
+                - LIKE uses % and _ as wildcards.
+                - UNION combines query results and removes duplicates.
+                - UNION ALL retains duplicate rows.
+                - UPDATE modifies existing records.
+                - DELETE removes matching records.
+                - Always use appropriate WHERE conditions for UPDATE and DELETE.
+                - Use ORDER BY with LIMIT and OFFSET for predictable pagination.
+
+            Quick Revision:-
+
+                SELECT → Selects columns
+                FROM → Specifies the table
+                WHERE → Filters rows
+                ORDER BY → Sorts rows
+                ASC → Ascending order
+                DESC → Descending order
+                GROUP BY → Groups rows
+                HAVING → Filters groups
+                LIMIT → Restricts returned rows
+                OFFSET → Skips rows
+                DISTINCT → Removes duplicates
+                BETWEEN → Checks a range
+                IN → Matches a list of values
+                LIKE → Matches a text pattern
+                % → Zero or more characters
+                _ → Exactly one character
+                UNION → Combines results and removes duplicates
+                UNION ALL → Combines results and retains duplicates
+                UPDATE → Modifies records
+                DELETE → Removes records
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
