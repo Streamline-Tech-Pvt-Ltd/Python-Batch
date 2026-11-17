@@ -2025,3 +2025,438 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 DELETE → Removes records
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+        
+    Internship Day 37 (30/10/26):-
+
+        MySQL Notes: Day 6 - SQL Joins
+
+            1. Introduction to Joins
+                A JOIN is used to combine rows from two or more tables using a related column.
+
+                Example tables:
+                    employees
+                        emp_id, emp_name, department_id, salary
+
+                    departments
+                        department_id, department_name
+
+                Common syntax:
+                    SELECT columns
+                    FROM table1
+                    JOIN table2
+                        ON table1.column = table2.column;
+
+            2. INNER JOIN
+                Returns only rows that have matching values in both tables.
+
+                Syntax:
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    INNER JOIN departments AS d
+                        ON e.department_id = d.department_id;
+
+                Here:
+                    - `e` and `d` are table aliases.
+                    - Only employees whose department_id matches a department are returned.
+
+            3. LEFT JOIN (LEFT OUTER JOIN)
+                Returns all rows from the left table and matching rows from the right table.
+                If there is no match, right-table columns contain NULL.
+
+                Syntax:
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    LEFT JOIN departments AS d
+                        ON e.department_id = d.department_id;
+
+                Here:
+                    - All employees are shown, including those without a matching department.
+                    - `department_name` is NULL when no department matches.
+
+            4. RIGHT JOIN (RIGHT OUTER JOIN)
+                Returns all rows from the right table and matching rows from the left table.
+                If there is no match, left-table columns contain NULL.
+
+                Syntax:
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    RIGHT JOIN departments AS d
+                        ON e.department_id = d.department_id;
+
+                Here:
+                    - All departments are shown, including departments with no employees.
+                    - `emp_name` is NULL when no employee matches.
+
+            5. FULL OUTER JOIN
+                Returns all matching rows plus unmatched rows from both tables.
+                MySQL does not directly support `FULL OUTER JOIN`.
+
+                Equivalent MySQL approach:
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    LEFT JOIN departments AS d
+                        ON e.department_id = d.department_id
+
+                    UNION
+
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    RIGHT JOIN departments AS d
+                        ON e.department_id = d.department_id;
+
+                Here:
+                    - `UNION` combines the results and removes duplicate rows.
+                    - This includes unmatched employees and unmatched departments.
+
+            6. CROSS JOIN
+                Returns every possible combination of rows from both tables.
+
+                Syntax:
+                    SELECT e.emp_name, d.department_name
+                    FROM employees AS e
+                    CROSS JOIN departments AS d;
+
+                If employees has 3 rows and departments has 4 rows, the result contains 12 rows.
+
+            7. SELF JOIN
+                A table is joined with itself, usually to compare rows or show relationships.
+
+                Example: employees table has `manager_id` referencing another employee's `emp_id`.
+
+                Syntax:
+                    SELECT e.emp_name AS employee,
+                        m.emp_name AS manager
+                    FROM employees AS e
+                    LEFT JOIN employees AS m
+                        ON e.manager_id = m.emp_id;
+
+            8. Important Points
+                - `ON` specifies how rows from the tables are related.
+                - Use aliases to make queries shorter and easier to read.
+                - `INNER JOIN` returns matches only.
+                - `LEFT JOIN` keeps every row from the left table.
+                - `RIGHT JOIN` keeps every row from the right table.
+                - MySQL supports `INNER`, `LEFT`, `RIGHT`, `CROSS`, and `SELF JOIN` patterns.
+                - MySQL does not directly support `FULL OUTER JOIN`; use `LEFT JOIN` + `RIGHT JOIN` with `UNION`.
+
+            9. Quick Revision
+                INNER JOIN      - matching rows from both tables
+                LEFT JOIN       - all left rows + matching right rows
+                RIGHT JOIN      - all right rows + matching left rows
+                FULL OUTER JOIN - all rows from both sides; emulate in MySQL with UNION
+                CROSS JOIN      - every possible row combination
+                SELF JOIN       - join a table to itself
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 38 (02/11/26):-
+
+        MySQL Notes: Day 7 - Transactions and User Privileges
+
+            1. Transactions
+                A transaction is a group of SQL operations treated as one unit.
+                It helps keep data consistent when multiple changes are made.
+
+                START TRANSACTION;
+                    -- SQL statements
+                COMMIT;
+
+            2. COMMIT
+                Permanently saves the changes made during the current transaction.
+
+                Example:
+                    START TRANSACTION;
+                    UPDATE employees
+                    SET Salary = 72500
+                    WHERE EmpID = 1002;
+                    COMMIT;
+
+                Here:
+                    - The salary update is saved permanently after `COMMIT`.
+
+            3. ROLLBACK
+                Cancels changes made in the current transaction that have not been committed.
+
+                Example:
+                    START TRANSACTION;
+                    DELETE FROM employees
+                    WHERE EmpID = 1012;
+                    ROLLBACK;
+
+                Here:
+                    - The deleted row is restored because the transaction was rolled back.
+
+                Important:
+                    - `ROLLBACK` cannot undo changes after `COMMIT`.
+                    - In the practice session, `COMMIT` was followed by `ROLLBACK`; the committed changes remained.
+
+            4. SAVEPOINT
+                Creates a point inside a transaction to which you can roll back.
+
+                Syntax:
+                    SAVEPOINT savepoint_name;
+                    ROLLBACK TO savepoint_name;
+
+                Example:
+                    START TRANSACTION;
+
+                    DELETE FROM employees WHERE EmpID = 1011;
+                    SAVEPOINT em1;
+
+                    DELETE FROM employees WHERE EmpID = 1010;
+                    SAVEPOINT em2;
+
+                    DELETE FROM employees WHERE EmpID = 1009;
+                    SAVEPOINT em3;
+
+                    ROLLBACK TO em2;
+
+                Here:
+                    - The deletion of employee 1009 is undone.
+                    - Deletions before `em2` remain in the transaction.
+                    - The changes are not permanent until `COMMIT`.
+
+            5. User Management
+                MySQL allows users to be created and given specific permissions.
+
+                Create a user:
+                    CREATE USER 'anuj'@'localhost'
+                    IDENTIFIED BY 'password';
+
+                Here:
+                    - `'anuj'` is the username.
+                    - `'localhost'` means the user connects from the local machine.
+                    - Use a strong password in real projects.
+
+            6. GRANT
+                Gives permissions to a user.
+
+                Syntax:
+                    GRANT privilege_name
+                    ON database_name.table_name
+                    TO 'username'@'host';
+
+                Examples:
+                    GRANT SELECT ON streamlinetech1.employees
+                    TO 'anuj'@'localhost';
+
+                    GRANT SELECT, DELETE ON streamlinetech1.employees
+                    TO 'anuj'@'localhost';
+
+                    GRANT UPDATE ON streamlinetech1.employees
+                    TO 'anuj'@'localhost';
+
+                Common privileges:
+                    SELECT  - read data
+                    INSERT  - add data
+                    UPDATE  - modify data
+                    DELETE  - delete data
+
+            7. REVOKE
+                Removes permissions previously given to a user.
+
+                Syntax:
+                    REVOKE privilege_name
+                    ON database_name.table_name
+                    FROM 'username'@'host';
+
+                Example:
+                    REVOKE UPDATE ON streamlinetech1.employees
+                    FROM 'anuj'@'localhost';
+
+                Here:
+                    - The user can no longer update rows in the specified table.
+                    - Other granted permissions remain unchanged.
+
+            8. Important Points
+                - `COMMIT` saves transaction changes.
+                - `ROLLBACK` undoes uncommitted transaction changes.
+                - `SAVEPOINT` lets you roll back to a selected point.
+                - `GRANT` gives permissions; `REVOKE` removes permissions.
+                - Transactions require a transactional storage engine such as InnoDB.
+                - Use the correct database and table names when granting permissions.
+
+            9. Quick Revision
+                START TRANSACTION - begins a transaction
+                COMMIT            - saves changes
+                ROLLBACK          - cancels uncommitted changes
+                SAVEPOINT         - marks a point in a transaction
+                ROLLBACK TO       - returns to a savepoint
+                CREATE USER       - creates a MySQL user
+                GRANT             - gives privileges
+                REVOKE            - removes privileges
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+    Internship Day 39 (03/11/26):-
+
+        MySQL Notes: Day 8 - ALTER, Views, Indexes and CASE
+
+            1. RENAME TABLE
+                Changes the name of an existing table.
+
+                Syntax:
+                    RENAME TABLE old_table_name TO new_table_name;
+
+                Example:
+                    RENAME TABLE departments TO streamline;
+
+                Note:
+                    - After renaming, use the new table name in queries.
+                    - MySQL does not support `RENAME DATABASE` directly.
+
+            2. ALTER TABLE
+                Used to add, modify, or remove columns in an existing table.
+
+                Add a column:
+                    ALTER TABLE streamline
+                    ADD city VARCHAR(20);
+
+                Modify a column's data type:
+                    ALTER TABLE streamline
+                    MODIFY ManagerName CHAR(30);
+
+                Here:
+                    - Existing rows receive `NULL` in the new column if no default is specified.
+                    - `MODIFY` changes the column definition; it does not rename the column.
+
+            3. DROP DATABASE
+                Permanently deletes a database and its tables.
+
+                Syntax:
+                    DROP DATABASE database_name;
+
+                Example:
+                    DROP DATABASE yogita;
+
+                Important:
+                    - This is destructive and cannot be undone with `ROLLBACK`.
+                    - Verify the database name before executing.
+
+            4. TRUNCATE TABLE
+                Removes all rows from a table while keeping the table structure.
+
+                Syntax:
+                    TRUNCATE TABLE table_name;
+
+                Important:
+                    - `TRUNCATE` does not use a `WHERE` clause.
+                    - It may fail if another table has a foreign key referencing it.
+                    - In the practice session, truncating `streamline` failed because `employees` referenced it through a foreign key.
+
+            5. DROP TABLE
+                Deletes a table and its structure.
+
+                Syntax:
+                    DROP TABLE table_name;
+
+                Example:
+                    DROP TABLE employees;
+
+                Important:
+                    - `DROP TABLE` removes the table itself.
+                    - `TRUNCATE` removes rows but keeps the table.
+                    - Check the database and table name before running either command.
+
+            6. DATE Format
+                MySQL stores dates in `YYYY-MM-DD` format.
+
+                Correct example:
+                    INSERT INTO employees
+                    VALUES (1, 'anuj', 'anuj@gmail.com', 'Python Dev', 90000, '2026-08-23');
+
+                Incorrect example:
+                    '01-11-2026'
+
+                Here:
+                    - Use `YYYY-MM-DD` for date values.
+                    - The incorrect format caused an invalid date error.
+
+            7. Views
+                A view is a virtual table based on a `SELECT` query.
+
+                Create a view:
+                    CREATE VIEW high_sal_emp AS
+                    SELECT emp_id, name, salary, department
+                    FROM employees
+                    WHERE salary > 50000;
+
+                View the data:
+                    SELECT * FROM high_sal_emp;
+
+                Delete a view:
+                    DROP VIEW high_sal_emp;
+
+                Here:
+                    - A view stores the query definition, not a separate copy of the result rows.
+                    - Use `AS` between the view name and the `SELECT` statement.
+
+            8. Indexes
+                An index helps MySQL find rows more efficiently, especially when searching or filtering.
+
+                Create an index:
+                    CREATE INDEX fast_access_salary
+                    ON employees(salary);
+
+                Query the table normally:
+                    SELECT *
+                    FROM employees
+                    WHERE salary = 38000;
+
+                Drop an index:
+                    DROP INDEX fast_access_salary ON employees;
+
+                Important:
+                    - An index is not a table, so you cannot select rows directly from its name.
+                    - Indexes can speed up reads but may add overhead to inserts, updates, and deletes.
+                    - The index name and table name must be correct when dropping it.
+
+            9. CASE Statement
+                `CASE` returns a value based on conditions. It is useful for creating categories in query results.
+
+                Syntax:
+                    SELECT column_name,
+                        CASE
+                            WHEN condition1 THEN result1
+                            WHEN condition2 THEN result2
+                            ELSE result3
+                        END AS alias_name
+                    FROM table_name;
+
+                Example: Categorize employees by salary.
+
+                    SELECT name, salary,
+                        CASE
+                            WHEN salary < 30000 THEN 'Low'
+                            WHEN salary <= 70000 THEN 'Medium'
+                            ELSE 'High'
+                        END AS salary_category
+                    FROM employees;
+
+                Here:
+                    - MySQL checks each `WHEN` condition from top to bottom.
+                    - The first matching condition is returned.
+                    - Put conditions in the correct order to avoid a broad condition matching too early.
+
+            10. Important Points
+                - `ALTER TABLE` changes a table's structure.
+                - `RENAME TABLE` changes a table's name.
+                - `DROP DATABASE` and `DROP TABLE` remove database objects.
+                - `TRUNCATE TABLE` removes all rows but keeps the table structure.
+                - `CREATE VIEW` must include `AS` before the `SELECT`.
+                - Use `DROP INDEX index_name ON table_name` in MySQL.
+                - Use `YYYY-MM-DD` for date values.
+                - `CASE` conditions are evaluated in order.
+
+            11. Quick Revision
+                RENAME TABLE - rename a table
+                ALTER TABLE  - change table structure
+                DROP DATABASE - delete a database
+                TRUNCATE TABLE - remove all rows, keep table
+                DROP TABLE - delete table and structure
+                CREATE VIEW - create a virtual table from a query
+                CREATE INDEX - create an index
+                DROP INDEX - remove an index
+                CASE - return a value based on conditions
+
+    -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
