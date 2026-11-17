@@ -1,0 +1,1668 @@
+/* =========================================
+   2. GIFTORA PREMIUM NAVBAR
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 14px 0;
+    background: linear-gradient(110deg, #fff0f7, #f0eaff);
+    border-bottom: 1px solid #eed6e9;
+    box-shadow: 0 5px 22px rgba(145, 59, 115, 0.12);
+    z-index: 1030;
+}
+
+/* Logo */
+
+.navbar .navbar-brand {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b34f91 !important;
+    letter-spacing: -1px;
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-brand span {
+    color: #9278c9;
+}
+
+.navbar .navbar-brand:hover {
+    transform: scale(1.04);
+    color: #913b73 !important;
+}
+
+/* Navigation Menu */
+
+.navbar .navbar-nav {
+    align-items: center;
+}
+
+.navbar .navbar-nav .nav-link {
+    position: relative;
+    color: #49364f;
+    font-size: 0.96rem;
+    font-weight: 700;
+    padding: 10px 14px;
+    margin: 0 3px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Hover and Active Link */
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #a63f83;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 3px 12px rgba(179, 79, 145, 0.09);
+}
+
+/* Cart Button */
+
+.navbar .navbar-nav .btn-outline-dark {
+    color: #ffffff;
+    background: linear-gradient(135deg, #b34f91, #9278c9);
+    border: none;
+    font-weight: 700;
+    padding: 11px 23px;
+    box-shadow: 0 5px 14px rgba(145, 59, 115, 0.18);
+    transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav .btn-outline-dark:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #913b73, #765bb2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(145, 59, 115, 0.25);
+}
+
+/* Navbar Toggle Button */
+
+.navbar .navbar-toggler {
+    display: none;
+    border: 1px solid #d9b1d1;
+    border-radius: 12px;
+    padding: 8px 11px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: none !important;
+}
+
+.navbar .navbar-toggler:focus {
+    border-color: #b34f91;
+    box-shadow: 0 0 0 3px rgba(179, 79, 145, 0.15) !important;
+}
+
+/* Mobile and Tablet */
+
+@media (max-width: 991.98px) {
+
+    /* Show hamburger button on mobile/tablet */
+    .navbar .navbar-toggler {
+        display: block;
+    }
+
+    /* Mobile navigation container */
+    .navbar .navbar-collapse {
+        margin-top: 15px;
+        padding: 15px;
+        background: linear-gradient(135deg, #fff7fb, #f5f0ff);
+        border: 1px solid #eed6e9;
+        border-radius: 18px;
+        box-shadow: 0 8px 25px rgba(145, 59, 115, 0.12);
+    }
+
+    /* Stack links vertically */
+    .navbar .navbar-nav {
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding: 11px 15px;
+        margin: 0;
+    }
+
+    .navbar .navbar-nav .nav-link:hover,
+    .navbar .navbar-nav .nav-link.active {
+        background: #ffffff;
+    }
+
+    .navbar .navbar-nav .nav-item:last-child {
+        margin-top: 8px;
+    }
+
+    .navbar .navbar-nav .btn-outline-dark {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small Mobile Screens */
+
+@media (max-width: 575.98px) {
+
+    .navbar {
+        padding: 11px 0;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 1.7rem;
+    }
+}
+
+/* =========================================
+   GIFTORA THEME - SHOP NOW BUTTON
+========================================= */
+
+.btn-primary {
+    background: linear-gradient(135deg, #b34f91, #9278c9);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(179, 79, 145, 0.18);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #913b73, #765bb2);
+    border: none;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(145, 59, 115, 0.25);
+}
+
+/* =========================================
+   GIFTORA - CONSISTENT BUTTON THEME
+========================================= */
+
+/* View Details Buttons */
+.btn-outline-primary {
+    color: #b34f91;
+    border: 1px solid #b34f91;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #b34f91, #9278c9);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(179, 79, 145, 0.18);
+}
+
+/* Product Category Badges */
+.badge.bg-primary {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #b34f91, #9278c9) !important;
+}
+
+/* Primary Background Sections */
+.bg-primary {
+    background: linear-gradient(135deg, #b34f91, #9278c9) !important;
+}
+
+/* Giftora Product Category Badges */
+
+.badge.bg-primary,
+.bg-primary.badge {
+    background: linear-gradient(
+        135deg,
+        #b34f91,
+        #9278c9
+    ) !important;
+
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 50px;
+    padding: 8px 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   GIFTORA - PRODUCT CATEGORY BADGES FIX
+========================================= */
+
+.card .badge,
+.card .badge.bg-primary,
+.badge.bg-primary {
+    background: linear-gradient(
+        135deg,
+        #b34f91 0%,
+        #9278c9 100%
+    ) !important;
+
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 8px 14px !important;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(179, 79, 145, 0.15);
+
+}
+
+/* =========================================
+   GIFTORA - SMART GIFT FINDER SECTION
+========================================= */
+
+section .bg-primary.text-white {
+    background: linear-gradient(
+        120deg,
+        #b34f91,
+        #9278c9
+    ) !important;
+
+    border: none;
+    box-shadow: 0 15px 35px rgba(140, 77, 123, 0.18);
+}
+
+/* Keep text white */
+
+section .bg-primary.text-white h1,
+section .bg-primary.text-white h2,
+section .bg-primary.text-white h3,
+section .bg-primary.text-white p {
+    color: #ffffff !important;
+}
+
+/* Button inside the section */
+
+section .bg-primary.text-white .btn-light {
+    color: #913b73;
+    background: #ffffff;
+    border: none;
+    font-weight: 700;
+}
+
+section .bg-primary.text-white .btn-light:hover {
+    background: #fff0f7;
+    transform: translateY(-2px);
+}
+
+/* Gift Finder Product Card Hover Effect */
+
+.gift-product-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #f0e3f5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(95, 65, 120, 0.07);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.gift-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(149, 99, 214, 0.22);
+    border-color: #d8b4ed;
+    cursor: pointer;
+}
+
+.gift-product-image {
+    transition: transform 0.3s ease;
+}
+
+.gift-product-card:hover .gift-product-image {
+    transform: scale(1.04);
+}
+
+.gift-product-card .btn {
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.gift-product-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(149, 99, 214, 0.18);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .gift-product-card,
+    .gift-product-image,
+    .gift-product-card .btn {
+        transition: none !important;
+    }
+
+    .gift-product-card:hover,
+    .gift-product-card:hover .gift-product-image,
+    .gift-product-card .btn:hover {
+        transform: none;
+    }
+}
+
+/* =========================================
+   GIFTORA - PRODUCT CARD HOVER FIX
+========================================= */
+
+.product-card,
+.gift-product-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.product-card:hover,
+.gift-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(179, 79, 145, 0.22);
+}
+
+/* ==================== HERO GIFT IMAGE ==================== */
+
+/* ==================== HERO GIFT IMAGE ==================== */
+
+.hero-gift-container {
+    position: relative;
+    width: 100%;
+    padding: 24px !important;
+    background: linear-gradient(135deg, #fff0f7, #f0e7ff);
+    border: 1px solid rgba(180, 100, 160, 0.15);
+    border-radius: 32px !important;
+    box-shadow: 0 12px 30px rgba(120, 65, 120, 0.08);
+    overflow: hidden;
+}
+
+/* Gift Image Wrapper */
+.hero-gift-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #f8f2fa;
+    box-shadow: 0 8px 22px rgba(35, 20, 55, 0.12);
+}
+
+/* Gift Image */
+.hero-gift-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 22px;
+    transition: transform 0.5s ease;
+}
+
+.hero-gift-image-wrapper:hover .hero-gift-image {
+    transform: scale(1.03);
+}
+
+/* Decorative Sparkles */
+.hero-sparkle {
+    position: absolute;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.sparkle-one {
+    top: 18px;
+    right: 20px;
+    animation: giftSparkle 2s ease-in-out infinite;
+}
+
+.sparkle-two {
+    bottom: 90px;
+    left: 16px;
+    animation: giftSparkle 2.5s ease-in-out infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .hero-gift-container {
+        padding: 16px !important;
+    }
+
+    .hero-gift-image-wrapper {
+        height: 260px;
+    }
+}
+
+/* Gift Image */
+.hero-gift-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+
+/* Image Hover Effect */
+.hero-gift-image-wrapper:hover .hero-gift-image {
+    transform: scale(1.05);
+}
+
+/* Decorative Sparkles */
+.hero-sparkle {
+    position: absolute;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.sparkle-one {
+    top: 25px;
+    right: 25px;
+    animation: giftSparkle 2s ease-in-out infinite;
+}
+
+.sparkle-two {
+    bottom: 100px;
+    left: 20px;
+    animation: giftSparkle 2.5s ease-in-out infinite;
+}
+
+/* Sparkle Animation */
+@keyframes giftSparkle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .hero-gift-image-wrapper {
+        height: 320px;
+    }
+
+    .hero-gift-container {
+        padding: 24px !important;
+    }
+}
+
+
+/* ==================== GIFTORA HERO TEXT DESIGN ==================== */
+
+.hero-section {
+    padding: 36px 0;
+}
+
+.hero-section .hero-row {
+    align-items: center;
+    row-gap: 35px;
+}
+
+.hero-section .row > .col-lg-6:first-child {
+    padding-right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hero Tagline */
+.hero-section .row > .col-lg-6:first-child > p:first-child {
+    color: #b44f91;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* Main Heading */
+.hero-section .row > .col-lg-6:first-child h1 {
+    font-size: clamp(42px, 4vw, 58px);
+    line-height: 1.17;
+    letter-spacing: -1.5px;
+    font-weight: 800;
+    color: #292333;
+    margin-bottom: 22px;
+}
+
+.hero-section .row > .col-lg-6:first-child h1 span {
+    color: #b44f91;
+}
+
+/* Description */
+.hero-section .row > .col-lg-6:first-child .lead {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #696273;
+    max-width: 510px;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+/* Hero Buttons */
+.hero-section .row > .col-lg-6:first-child .d-flex {
+    margin-top: 28px !important;
+    gap: 16px !important;
+}
+
+.hero-section .row > .col-lg-6:first-child .btn {
+    padding: 13px 26px !important;
+    font-size: 17px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-section .row > .col-lg-6:first-child .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(179, 79, 145, 0.16);
+}
+
+/* Hero Image Card Alignment */
+.hero-section .hero-gift-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================== HERO RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-section .row > .col-lg-6:first-child {
+        padding-right: 12px;
+    }
+
+    .hero-section .row > .col-lg-6:first-child h1 {
+        font-size: clamp(38px, 6vw, 52px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 22px 0;
+    }
+
+    .hero-section .row > .col-lg-6:first-child h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .hero-section .row > .col-lg-6:first-child .lead {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .hero-section .row > .col-lg-6:first-child .d-flex {
+        gap: 12px !important;
+    }
+
+    .hero-section .row > .col-lg-6:first-child .btn {
+        padding: 11px 20px !important;
+        font-size: 15px;
+    }
+}
+
+/* ==================== GIFT FLOATING ANIMATION ==================== */
+
+.hero-gift-image-wrapper {
+    animation: giftFloat 4s ease-in-out infinite;
+}
+
+@keyframes giftFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Smooth Hover Effect */
+.hero-gift-image-wrapper:hover {
+    box-shadow: 0 18px 35px rgba(120, 65, 120, 0.25);
+    transition: box-shadow 0.4s ease;
+}
+
+/* ==================== PREMIUM GIFT IMAGE HOVER ==================== */
+
+.hero-gift-image-wrapper {
+    overflow: hidden;
+    border-radius: 24px;
+    transition: box-shadow 0.4s ease;
+}
+
+.hero-gift-image {
+    transition: transform 0.5s ease;
+}
+
+.hero-gift-image-wrapper:hover .hero-gift-image {
+    transform: scale(1.06);
+}
+
+.hero-gift-image-wrapper:hover {
+    box-shadow: 0 20px 40px rgba(120, 65, 120, 0.25);
+}
+
+/* ==================== GIFT CARD ANIMATION ==================== */
+
+.hero-gift-container {
+    animation: cardFadeIn 1s ease-out;
+    transition: box-shadow 0.4s ease;
+}
+
+.hero-gift-container:hover {
+    box-shadow: 0 20px 45px rgba(120, 65, 120, 0.16);
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== HERO SECTION BACKGROUND ==================== */
+
+header.py-5 {
+    background: linear-gradient(
+        135deg,
+        #fff9fc 0%,
+        #f8f2ff 50%,
+        #fff5f8 100%
+    );
+}
+
+/* Keep the hero section spacious */
+header.py-5 > .container {
+    position: relative;
+}
+
+/* Improve text readability */
+header.py-5 .lead {
+    color: #696273;
+}
+
+/* Smooth background transition */
+header.py-5 {
+    transition: background 0.4s ease;
+}
+
+/* ==================== HERO BUTTON HOVER EFFECTS ==================== */
+
+header.py-5 .btn {
+    transition: all 0.3s ease;
+}
+
+/* Shop Now Button */
+header.py-5 .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(180, 79, 145, 0.25);
+}
+
+/* Find a Gift Button */
+header.py-5 .btn-outline-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(60, 45, 80, 0.12);
+}
+
+/* Button Click Effect */
+header.py-5 .btn:active {
+    transform: scale(0.97);
+}
+
+/* ==================== GIFT CARD TEXT EFFECT ==================== */
+
+.hero-gift-container h2 {
+    color: #292333;
+    transition: color 0.3s ease;
+}
+
+.hero-gift-container p {
+    color: #696273;
+    line-height: 1.7;
+}
+
+/* Heading Hover Effect */
+.hero-gift-container:hover h2 {
+    color: #b44f91;
+}
+
+/* Smooth Text Transition */
+.hero-gift-container h2,
+.hero-gift-container p {
+    transition: color 0.3s ease;
+}
+
+/* ==================== FEATURED CATEGORY CARDS ==================== */
+
+section[aria-labelledby="categoriesHeading"] .card {
+    border-radius: 20px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Category Card Hover Effect */
+section[aria-labelledby="categoriesHeading"] .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(120, 65, 120, 0.15) !important;
+}
+
+/* Category Icons */
+section[aria-labelledby="categoriesHeading"] .display-4 {
+    transition: transform 0.3s ease;
+}
+
+/* Icon Hover Effect */
+section[aria-labelledby="categoriesHeading"] .card:hover .display-4 {
+    transform: scale(1.12);
+}
+
+/* Category Headings */
+section[aria-labelledby="categoriesHeading"] .card h3 {
+    transition: color 0.3s ease;
+}
+
+section[aria-labelledby="categoriesHeading"] .card:hover h3 {
+    color: #b44f91;
+}
+
+/* ==================== TRENDING GIFTS SECTION ==================== */
+
+#trendingProducts .card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Product Card Hover Effect */
+#trendingProducts .card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(120, 65, 120, 0.15);
+}
+
+/* Product Images */
+#trendingProducts .card img {
+    transition: transform 0.4s ease;
+}
+
+/* Product Image Hover Effect */
+#trendingProducts .card:hover img {
+    transform: scale(1.04);
+}
+
+/* Product Titles */
+#trendingProducts .card .card-title {
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+#trendingProducts .card:hover .card-title {
+    color: #b44f91;
+}
+
+/* ==================== SMART GIFT FINDER BANNER ==================== */
+
+section[aria-labelledby="giftFinderHeading"] .container > div {
+    background: linear-gradient(
+        135deg,
+        #a64d91,
+        #7655b7
+    ) !important;
+
+    box-shadow: 0 15px 35px rgba(120, 65, 120, 0.18);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Banner Hover Effect */
+section[aria-labelledby="giftFinderHeading"] .container > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(120, 65, 120, 0.25);
+}
+
+/* Gift Finder Button */
+section[aria-labelledby="giftFinderHeading"] .btn-light {
+    color: #8e4585;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section[aria-labelledby="giftFinderHeading"] .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ==================== NAVBAR AND HERO SPACING ==================== */
+
+/* Reduce space below the navbar */
+header.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+/* Keep hero content vertically centered */
+header.py-5 > .container > .row {
+    align-items: center;
+}
+
+/* Reduce unnecessary spacing around the hero content */
+header.py-5 .hero-gift-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Adjust hero image card spacing */
+.hero-gift-image-wrapper {
+    margin-top: 0;
+}
+
+/* Responsive spacing for mobile screens */
+@media (max-width: 768px) {
+    header.py-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+}
+
+/* =========================================
+   GIFTORA - FINAL HERO SPACING FIX
+========================================= */
+
+/* Compact hero section below the navbar */
+.hero-section {
+    padding-top: 16px !important;
+    padding-bottom: 28px !important;
+
+    background: linear-gradient(
+        135deg,
+        #fff9fc 0%,
+        #f8f2ff 50%,
+        #fff5f8 100%
+    );
+
+    transition: background 0.4s ease;
+}
+
+/* Remove the additional vertical padding from the hero row */
+.hero-section .hero-row {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    --bs-gutter-y: 1.5rem;
+
+    align-items: center;
+}
+
+/* Hero text alignment */
+.hero-section .hero-row > .col-lg-6:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 25px;
+}
+
+/* Hero eyebrow text */
+.hero-section .hero-row > .col-lg-6:first-child > p:first-child {
+    color: #b44f91;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* Hero heading */
+.hero-section .hero-row > .col-lg-6:first-child h1 {
+    font-size: clamp(42px, 4.2vw, 62px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #292333;
+    margin-bottom: 0;
+}
+
+.hero-section .hero-row > .col-lg-6:first-child h1 span {
+    color: #b44f91;
+}
+
+/* Hero description */
+.hero-section .hero-row > .col-lg-6:first-child .lead {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #696273;
+    max-width: 540px;
+    margin-top: 18px !important;
+    margin-bottom: 0;
+}
+
+/* Hero buttons */
+.hero-section .hero-row > .col-lg-6:first-child .d-flex {
+    margin-top: 22px !important;
+}
+
+/* Hero image card */
+.hero-section .hero-gift-container {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Keep existing image size */
+.hero-section .hero-gift-image-wrapper {
+    margin: 0 auto;
+}
+
+/* Hero button hover effects */
+.hero-section .btn {
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(180, 79, 145, 0.25);
+}
+
+.hero-section .btn-outline-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(60, 45, 80, 0.12);
+}
+
+.hero-section .btn:active {
+    transform: scale(0.97);
+}
+
+/* Tablet and mobile layout */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 20px !important;
+        padding-bottom: 25px !important;
+    }
+
+    .hero-section .hero-row > .col-lg-6:first-child {
+        padding-right: 12px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 15px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .hero-section .hero-row > .col-lg-6:first-child h1 {
+        font-size: 40px;
+    }
+
+    .hero-section .hero-row > .col-lg-6:first-child .lead {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
+
+/* ==================== GIFTORA COMMON FOOTER ==================== */
+
+footer.bg-dark {
+    background: linear-gradient(135deg, #292333, #493454) !important;
+    color: #ffffff;
+    border-top: 3px solid #b34f91;
+    padding: 24px 0 18px !important;
+}
+
+/* Keep original footer content visible */
+footer.bg-dark .container > .row {
+    display: flex !important;
+}
+
+footer.bg-dark .container > hr {
+    display: block !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Footer brand */
+footer.bg-dark a {
+    transition: color 0.3s ease;
+}
+
+footer.bg-dark a:hover {
+    color: #f3b6dc !important;
+}
+
+/* Original footer text */
+footer.bg-dark p,
+footer.bg-dark li,
+footer.bg-dark .text-center.small {
+    color: #f8edf7 !important;
+}
+
+/* Copyright line */
+footer.bg-dark .container > .text-center.small {
+    margin: 0 !important;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* ==================== SHOP / WISHLIST / GIFT FINDER ==================== */
+
+/* Keep compact one-line footers on pages with the short footer */
+footer.bg-dark:has(.container > .text-center.small):not(:has(.container > .row)) {
+    padding: 24px 0 !important;
+}
+
+/* Responsive footer */
+@media (max-width: 767px) {
+    footer.bg-dark {
+        padding: 24px 0 18px !important;
+    }
+
+    footer.bg-dark .container > .row {
+        row-gap: 24px;
+    }
+
+    footer.bg-dark .container > .text-center.small {
+        text-align: center;
+        line-height: 1.8;
+    }
+}
+
+/* ==================== GIFTORA COMMON FOOTER ==================== */
+
+.giftora-compact-footer {
+    background: linear-gradient(135deg, #292333, #493454);
+    color: #ffffff;
+    padding: 22px 0;
+    border-top: 3px solid #b34f91;
+}
+
+.giftora-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.giftora-footer-brand {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #f3b6dc;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.giftora-footer-brand:hover {
+    color: #ffffff;
+}
+
+.giftora-footer-tagline,
+.giftora-footer-copyright {
+    color: #f8edf7;
+    font-size: 14px;
+}
+
+/* Mobile responsive footer */
+@media (max-width: 576px) {
+    .giftora-footer-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+/* ==================== GIFTORA COMPACT FOOTER ==================== */
+.giftora-compact-footer {
+    background: linear-gradient(135deg, #292333, #493454);
+    color: #fff;
+    padding: 8px 0;
+    border-top: 3px solid #b34f91;
+}
+
+.giftora-footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.giftora-footer-brand {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #f3b6dc;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.giftora-footer-brand:hover {
+    color: #fff;
+}
+
+.giftora-footer-tagline,
+.giftora-footer-copyright {
+    color: #f8edf7;
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    .giftora-footer-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+}
+
+/* =====================================
+   GIFTORA - PREMIUM PRODUCT CARDS
+===================================== */
+
+/* Product cards */
+.product-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #f0e2ed !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(179, 79, 145, 0.12) !important;
+}
+
+/* Card content spacing */
+.product-card .card-body {
+    padding: 18px !important;
+}
+
+/* Uniform product image section */
+.product-image-wrapper {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 14px !important;
+}
+
+/* Make every product image fill its image section */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.04);
+}
+
+/* Smooth image hover */
+.product-card:hover .product-image {
+    transform: scale(1.04);
+}
+
+/* Category badge */
+.product-card .badge {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #b34f91, #9278c9) !important;
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px !important;
+}
+
+/* Product title */
+.product-card h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 10px 0;
+    color: #30263a;
+}
+
+/* Product description */
+.product-card p.text-muted {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #777080 !important;
+    min-height: 45px;
+    margin-bottom: 12px;
+}
+
+/* Product price */
+.product-card p.fw-bold.fs-5 {
+    font-size: 22px !important;
+    font-weight: 700;
+    color: #a83f84;
+    margin: 12px 0 8px;
+}
+
+/* Product rating */
+.product-card .text-warning {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+/* Product buttons */
+.product-card .btn {
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 13px;
+    margin: 3px 2px;
+    transition: all 0.25s ease;
+}
+
+/* Primary button */
+.product-card .btn-primary {
+    background: linear-gradient(135deg, #b34f91, #9278c9);
+    border: 1px solid transparent;
+}
+
+.product-card .btn-primary:hover {
+    background: linear-gradient(135deg, #963c78, #765bb1);
+    transform: translateY(-2px);
+}
+
+/* View details button */
+.product-card .btn-outline-primary {
+    color: #a34483;
+    border-color: #b34f91;
+}
+
+.product-card .btn-outline-primary:hover {
+    color: #ffffff;
+    background: #b34f91;
+    border-color: #b34f91;
+}
+
+/* Wishlist button */
+.product-card .btn-outline-danger {
+    border-color: #edc5dc;
+    color: #b34f91;
+}
+
+.product-card .btn-outline-danger:hover {
+    background: #b34f91;
+    color: #ffffff;
+    border-color: #b34f91;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    .product-card .card-body {
+        padding: 15px !important;
+    }
+
+    .product-image-wrapper {
+        height: 200px;
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+    }
+
+    .product-card p.text-muted {
+        font-size: 13px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .product-image-wrapper {
+        height: 180px;
+    }
+
+    .product-card h3 {
+        font-size: 17px;
+    }
+
+    .product-card .btn {
+        font-size: 12px;
+        padding: 8px 11px;
+    }
+}
+/* =====================================================
+   GIFTORA - PROFESSIONAL PRODUCT IMAGE STYLING
+   Homepage | Shop | Cart | Wishlist | Gift Finder
+   ===================================================== */
+
+
+/* ---------- COMMON PRODUCT IMAGE CONTAINER ---------- */
+
+.giftora-product-image-container,
+.gift-product-image,
+.wishlist-image {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #fff5fa, #f3edff);
+    border-radius: 16px 16px 0 0;
+}
+
+
+/* ---------- SHOP AND HOMEPAGE IMAGES ---------- */
+
+.product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 12px;
+    border-radius: 16px;
+    transition: transform 0.35s ease;
+}
+
+
+/* Hover effect */
+
+.product-card:hover .product-image {
+    transform: scale(1.06);
+}
+
+
+/* ---------- GIFT FINDER IMAGES ---------- */
+
+.gift-finder-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 12px;
+    transition: transform 0.35s ease;
+}
+
+
+.gift-product-card:hover .gift-finder-product-image {
+    transform: scale(1.05);
+}
+
+
+/* ---------- WISHLIST IMAGES ---------- */
+
+.wishlist-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 12px;
+    transition: transform 0.35s ease;
+}
+
+
+/* ---------- CART IMAGES ---------- */
+
+.cart-product-image-container {
+    width: 110px;
+    height: 110px;
+    flex: 0 0 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #fff5fa, #f3edff);
+}
+
+
+.cart-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 6px;
+    transition: transform 0.3s ease;
+}
+
+
+.cart-product-image-container:hover .cart-product-image {
+    transform: scale(1.06);
+}
+
+
+/* ---------- PRODUCT DETAILS IMAGE ---------- */
+
+.giftora-details-image-container {
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fff5fa, #f3edff);
+}
+
+
+.details-product-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 15px;
+}
+
+
+/* ---------- EMOJI / FALLBACK IMAGE ---------- */
+
+.giftora-image-fallback {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff5fa, #f3edff);
+    border-radius: 14px;
+}
+
+
+/* ---------- PRODUCT CARD DESIGN ---------- */
+
+.product-card,
+.gift-product-card,
+.wishlist-card {
+    overflow: hidden;
+    border-radius: 18px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.product-card:hover,
+.gift-product-card:hover,
+.wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(146, 120, 201, 0.16);
+}
+
+
+/* ---------- RESPONSIVE TABLET ---------- */
+
+@media (max-width: 768px) {
+
+    .giftora-product-image-container,
+    .gift-product-image,
+    .wishlist-image {
+        height: 220px;
+    }
+
+    .cart-product-image-container {
+        width: 90px;
+        height: 90px;
+        flex-basis: 90px;
+    }
+
+    .giftora-details-image-container {
+        height: 240px;
+    }
+}
+
+
+/* ---------- RESPONSIVE MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .giftora-product-image-container,
+    .gift-product-image,
+    .wishlist-image {
+        height: 190px;
+    }
+
+    .product-image,
+    .gift-finder-product-image,
+    .wishlist-product-image {
+        padding: 8px;
+    }
+
+    .cart-product-image-container {
+        width: 76px;
+        height: 76px;
+        flex-basis: 76px;
+    }
+
+    .cart-product-image {
+        padding: 4px;
+    }
+
+    .giftora-details-image-container {
+        height: 210px;
+    }
+}
+
+/* GIFTORA - FULL PRODUCT IMAGE COVER */
+
+.giftora-product-image-container,
+.gift-product-image,
+.wishlist-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    background: linear-gradient(135deg, #fff5fa, #f3edff);
+}
+
+/* Homepage and Shop Images */
+.product-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: block;
+}
+
+/* Gift Finder Images */
+.gift-finder-product-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center;
+    padding: 0 !important;
+    display: block;
+}
+
+/* Wishlist Images */
+.wishlist-product-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center;
+    padding: 0 !important;
+    display: block;
+}
+
+/* Hover Effect */
+.product-card:hover .product-image,
+.gift-product-card:hover .gift-finder-product-image {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .giftora-product-image-container,
+    .gift-product-image,
+    .wishlist-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .giftora-product-image-container,
+    .gift-product-image,
+    .wishlist-image {
+        height: 220px;
+    }
+}
+
+/* Compact footer for Shop, Wishlist and Gift Finder only */
+
+.giftora-compact-footer {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    min-height: unset !important;
+}
+
+.giftora-compact-footer .giftora-footer-content {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    min-height: unset !important;
+}
+
+/* Compact footer for Shop, Wishlist and Gift Finder only */
+
+.shop-page .giftora-compact-footer,
+.wishlist-page .giftora-compact-footer,
+.gift-finder-page .giftora-compact-footer {
+    padding: 8px 0 !important;
+}
+
+.shop-page .giftora-footer-content,
+.wishlist-page .giftora-footer-content,
+.gift-finder-page .giftora-footer-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}

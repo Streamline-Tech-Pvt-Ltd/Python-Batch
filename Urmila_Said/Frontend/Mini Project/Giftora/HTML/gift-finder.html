@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gift Finder | Giftora</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Giftora Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .gift-finder-hero {
+            background: linear-gradient(135deg, #fce4ec, #ede7f6);
+            padding: 65px 20px;
+            text-align: center;
+            border-radius: 0 0 35px 35px;
+        }
+
+        .gift-finder-hero h1 {
+            color: #913b73;
+            font-weight: 800;
+            font-size: 2.7rem;
+        }
+
+        .gift-finder-hero p {
+            color: #6c5875;
+            font-size: 1.1rem;
+        }
+
+        .gift-finder-section {
+            padding: 55px 0;
+        }
+
+        .gift-finder-box {
+            background: #fff;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 8px 30px rgba(145, 59, 115, 0.12);
+        }
+
+        .gift-finder-box label {
+            color: #913b73;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .gift-finder-box .form-select {
+            padding: 13px;
+            border-radius: 12px;
+            border: 1px solid #e7c9df;
+        }
+
+        .gift-finder-box .form-select:focus {
+            border-color: #b34f91;
+            box-shadow: 0 0 0 0.2rem rgba(179, 79, 145, 0.15);
+        }
+
+        .find-gift-btn {
+            background: linear-gradient(135deg, #b34f91, #9278c9);
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .find-gift-btn:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(145, 59, 115, 0.2);
+        }
+
+        .finder-results {
+            padding-top: 45px;
+        }
+
+        .finder-results h2 {
+            color: #913b73;
+            font-weight: 800;
+        }
+
+        .finder-empty {
+            text-align: center;
+            padding: 35px 15px;
+            color: #777;
+        }
+
+        .finder-empty .icon {
+            font-size: 4rem;
+        }
+
+        @media (max-width: 576px) {
+            .gift-finder-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gift-finder-box {
+                padding: 22px;
+            }
+        }
+
+        /* Giftora Gift Finder - Enhanced Design */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #fff7fb, #f4efff);
+    color: #393047;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 4px 18px rgba(95, 65, 120, 0.08);
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #c04d91 !important;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: #51445f;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #c04d91;
+}
+
+/* Hero Section */
+.gift-finder-hero {
+    padding: 55px 20px 35px;
+    text-align: center;
+}
+
+.gift-finder-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    color: #8b4da8;
+    margin-bottom: 15px;
+}
+
+.gift-finder-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #75677f;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Gift Finder Form */
+.gift-finder-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(105, 70, 130, 0.10);
+    border: 1px solid #f0e3f5;
+    margin-bottom: 45px;
+}
+
+.gift-finder-form label {
+    display: block;
+    font-weight: 700;
+    color: #51415f;
+    margin-bottom: 9px;
+}
+
+.gift-finder-form .form-select {
+    min-height: 48px;
+    border: 1px solid #e4d7eb;
+    border-radius: 12px;
+    padding: 10px 14px;
+    background-color: #fffaff;
+}
+
+.gift-finder-form .form-select:focus {
+    border-color: #c078d4;
+    box-shadow: 0 0 0 0.2rem rgba(192, 120, 212, 0.15);
+}
+
+.btn-find-gifts {
+    width: 100%;
+    min-height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d85a9b, #9563d6);
+    color: #ffffff;
+    font-weight: 700;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-find-gifts:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(160, 85, 180, 0.25);
+}
+
+/* Section Heading */
+.gift-results-heading {
+    color: #70428e;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* Product Cards */
+.gift-product-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #f0e3f5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(95, 65, 120, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift-product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px rgba(95, 65, 120, 0.15);
+}
+
+.gift-product-image {
+    min-height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff0f7, #f0e9ff);
+    font-size: 5rem;
+}
+
+.gift-product-card .card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gift-category {
+    display: inline-block;
+    align-self: flex-start;
+    background: #f7e8f7;
+    color: #98529d;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.gift-product-card .card-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #453451;
+    margin-bottom: 10px;
+}
+
+.gift-product-description {
+    color: #82758b;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.gift-rating {
+    color: #e5a329;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.gift-price {
+    color: #bd438a;
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 8px 0 18px;
+}
+
+/* Product Buttons */
+.gift-product-card .btn {
+    border-radius: 30px;
+    font-weight: 700;
+    padding: 10px 14px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.gift-product-card .add-to-cart {
+    background: linear-gradient(135deg, #d85a9b, #a45fc6);
+    border: none;
+}
+
+.gift-product-card .add-to-cart:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #bd438a, #8650b2);
+}
+
+.gift-product-card [data-add-wishlist] {
+    border: 1px solid #e8b1d0;
+    color: #c04d91;
+    background: #fff7fb;
+}
+
+.gift-product-card [data-add-wishlist]:hover {
+    background: #fce7f2;
+    transform: translateY(-2px);
+}
+
+/* Empty Results */
+.gift-empty-state {
+    background: #ffffff;
+    border: 1px dashed #d9b9e8;
+    border-radius: 22px;
+    padding: 45px 20px;
+    text-align: center;
+    margin: 25px 0 45px;
+}
+
+.gift-empty-state .empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.gift-empty-state h3 {
+    color: #8b4da8;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.gift-empty-state p {
+    color: #82758b;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .gift-finder-hero {
+        padding: 35px 15px 25px;
+    }
+
+    .gift-finder-form {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .gift-product-image {
+        min-height: 145px;
+        font-size: 4rem;
+    }
+
+    .gift-product-card .card-body {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                🎁 Giftora
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#giftoraNavbar"
+                    aria-controls="giftoraNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="giftoraNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="wishlist.html">
+                             Wishlist
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gift-finder.html">
+                             Gift Finder
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                             My Cart
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gift-finder-hero">
+    <div class="container">
+        <h1> Find the Perfect Gift</h1>
+
+        <p>
+            Discover thoughtful gifts for the special people in your life.
+            Choose your preferences and let Giftora help you find something
+            truly memorable. 
+        </p>
+    </div>
+</section>
+
+    <!-- Gift Finder Form -->
+    <section class="gift-finder-section">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <div class="gift-finder-box">
+
+                        <div class="text-center mb-4">
+                            <h2 class="fw-bold"> Personalise Your Gift Search</h2>
+
+                            <p class="text-muted">
+                                Tell us a little about your gift and we will suggest some lovely options.
+                            </p>
+                        </div>
+
+                        <form id="giftFinderForm" class="gift-finder-form">
+
+
+                            <div class="row g-4">
+
+                                <!-- Recipient -->
+                                <div class="col-md-6">
+                                    <label for="recipient" class="form-label">
+                                        👤 Who is the gift for?
+                                    </label>
+
+                                    <select id="recipient" class="form-select" required>
+                                        <option value="">Choose a person</option>
+                                        <option value="Kids">Kids</option>
+                                        <option value="Friends">Friends</option>
+                                        <option value="Partner">Partner</option>
+                                        <option value="Family">Family</option>
+                                    </select>
+                                </div>
+
+                                <!-- Occasion -->
+                                <div class="col-md-6">
+                                    <label for="occasion" class="form-label">
+                                        🎉 Select an occasion
+                                    </label>
+
+                                    <select id="occasion" class="form-select" required>
+                                        <option value="">Choose an occasion</option>
+                                        <option value="Birthday">Birthday</option>
+                                        <option value="Anniversary">Anniversary</option>
+                                        <option value="Wedding">Wedding</option>
+                                    </select>
+                                </div>
+
+                                <!-- Budget -->
+                                <div class="col-md-6">
+                                    <label for="budget" class="form-label">
+                                        💰 Your budget
+                                    </label>
+
+                                    <select id="budget" class="form-select" required>
+                                        <option value="">Choose your budget</option>
+                                        <option value="500">Under ₹500</option>
+                                        <option value="1000">₹500 – ₹1,000</option>
+                                        <option value="2000">₹1,000 – ₹2,000</option>
+                                    </select>
+                                </div>
+
+                                <!-- Category -->
+                                <div class="col-md-6">
+                                    <label for="giftCategory" class="form-label">
+                                        🎀 Gift category
+                                    </label>
+
+                                    <select id="giftCategory" class="form-select" required>
+                                        <option value="">Choose a category</option>
+                                        <option value="all">All Gifts</option>
+                                        <option value="Birthday">Birthday Gifts</option>
+                                        <option value="Romantic">Romantic Gifts</option>
+                                        <option value="Personalized">Personalized Gifts</option>
+                                        <option value="Handmade">Handmade Gifts</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <button type="submit" class="btn find-gift-btn">
+                                    🔍 Find My Perfect Gift
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="finder-results" id="finderResults">
+
+                <div class="text-center mb-4">
+                    <h2> Your Gift Recommendations</h2>
+
+                    <p class="text-muted">
+                        Your personalised gift suggestions will appear here.
+                    </p>
+                </div>
+
+                <div class="row g-4" id="giftResults">
+
+                </div>
+
+                <div class="finder-empty" id="finderEmpty">
+                    <div class="icon">🎁</div>
+
+                    <h4 class="mt-3">Your Perfect Gift Is Waiting!</h4>
+
+                    <p>
+                        Select your preferences above and click Find My Perfect Gift.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== COMPACT FOOTER ==================== -->
+<footer class="giftora-compact-footer">
+    <div class="container">
+        <div class="giftora-footer-content">
+            <a href="index.html" class="giftora-footer-brand">Giftora ♡</a>
+
+            <span class="giftora-footer-tagline">
+                Made with ❤️ for every special moment.
+            </span>
+
+            <span class="giftora-footer-copyright">
+                &copy; 2026 Giftora. All rights reserved.
+            </span>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Product Data and JavaScript -->
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
