@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover thoughtful gifts for every occasion at Giftora. Every Gift Tells a Story.">
+
+    <title>Giftora | Every Gift Tells a Story</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Gift of the Day and Special Offers CSS -->
+    <style>
+        /* ================= GIFT OF THE DAY ================= */
+
+        .gift-of-the-day-section {
+            background: linear-gradient(135deg, #fff5fb, #f5f0ff);
+        }
+
+        .gift-day-badge {
+            display: inline-block;
+            padding: 9px 20px;
+            border-radius: 30px;
+            background: #fce7f3;
+            color: #a83279;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .gift-day-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 35px;
+            max-width: 950px;
+            margin: 30px auto 0;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #f0d8e9;
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(179, 79, 145, 0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gift-day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 40px rgba(179, 79, 145, 0.16);
+        }
+
+        .gift-day-image-box {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #fff8fc;
+        }
+
+        .gift-day-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            padding: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .gift-day-card:hover .gift-day-image {
+            transform: scale(1.04);
+        }
+
+        .gift-day-label {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #fce7f3;
+            color: #a83279;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .gift-day-content h3 {
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .gift-day-content p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        .gift-day-rating {
+            margin: 12px 0;
+            color: #e5a000;
+            font-weight: 600;
+        }
+
+        .gift-day-price {
+            margin: 15px 0;
+            color: #a83279 !important;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .gift-day-cart-btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 30px;
+            background: #b34f91;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .gift-day-cart-btn:hover {
+            background: #963b77;
+            color: #fff;
+        }
+
+        .gift-day-cart-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .gift-day-shop-btn {
+            display: block;
+            width: 100%;
+            padding: 11px 18px;
+            border: 1px solid #b34f91;
+            border-radius: 30px;
+            color: #a83279;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .gift-day-shop-btn:hover {
+            background: #b34f91;
+            color: #fff;
+        }
+
+        /* ================= SPECIAL OFFERS ================= */
+
+        .special-offers-section {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff9fc 0%, #f7f1ff 55%, #fff2f8 100%);
+        }
+
+        .offers-eyebrow {
+            display: inline-block;
+            padding: 8px 17px;
+            border-radius: 30px;
+            background: #fce7f3;
+            color: #a83279;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.3px;
+        }
+
+        .offers-heading {
+            color: #30243b;
+            font-weight: 800;
+        }
+
+        .offers-subtitle {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #777080;
+            line-height: 1.8;
+        }
+
+        .offer-product-card {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #f0dfed;
+            border-radius: 22px;
+            box-shadow: 0 8px 25px rgba(120, 65, 120, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .offer-product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 35px rgba(179, 79, 145, 0.16);
+        }
+
+        .offer-image-wrap {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            border-radius: 16px;
+            background: #fff8fc;
+        }
+
+        .offer-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            padding: 10px;
+            transition: transform 0.35s ease;
+        }
+
+        .offer-product-card:hover .offer-image {
+            transform: scale(1.06);
+        }
+
+        .offer-discount-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1;
+            padding: 8px 12px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #b34f91, #9278c9);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+            box-shadow: 0 4px 12px rgba(145, 59, 115, 0.2);
+        }
+
+        .offer-category {
+            display: inline-block;
+            margin-bottom: 9px;
+            padding: 6px 12px;
+            border-radius: 30px;
+            background: #f8eafa;
+            color: #8d478d;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .offer-product-name {
+            min-height: 48px;
+            margin-bottom: 8px;
+            color: #30243b;
+            font-size: 18px;
+            font-weight: 750;
+            line-height: 1.4;
+        }
+
+        .offer-rating {
+            margin-bottom: 12px;
+            color: #d99a00;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .offer-price-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 16px;
+        }
+
+        .offer-sale-price {
+            color: #a83e82;
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .offer-original-price {
+            color: #928b98;
+            font-size: 14px;
+            text-decoration: line-through;
+        }
+
+        .offer-save-label {
+            margin-left: auto;
+            padding: 5px 8px;
+            border-radius: 8px;
+            background: #e8f8ec;
+            color: #278044;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .offer-cart-btn {
+            width: 100%;
+            padding: 11px 15px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #b34f91, #9278c9);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .offer-cart-btn:hover {
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(179, 79, 145, 0.25);
+        }
+
+        .offers-bottom-note {
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px dashed #dcb7d6;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #72516f;
+            font-size: 13px;
+        }
+
+        .offers-empty-message {
+            color: #777080;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .gift-day-card {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                padding: 18px;
+            }
+
+            .gift-day-image-box {
+                height: 250px;
+            }
+
+            .gift-day-content h3 {
+                font-size: 23px;
+            }
+
+            .offer-image-wrap {
+                height: 175px;
+            }
+
+            .offer-product-card {
+                padding: 12px;
+            }
+
+            .offer-product-name {
+                font-size: 16px;
+            }
+
+            .offer-sale-price {
+                font-size: 20px;
+            }
+
+            .offer-save-label {
+                margin-left: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .gift-day-card,
+            .gift-day-image,
+            .offer-product-card,
+            .offer-image,
+            .offer-cart-btn {
+                transition: none !important;
+            }
+
+            .gift-day-card:hover,
+            .offer-product-card:hover,
+            .offer-product-card:hover .offer-image {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ==================== NAVIGATION BAR ==================== -->
+
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            Giftora ♡
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       aria-current="page"
+                       href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="wishlist.html">Wishlist </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="gift-finder.html">Gift Finder </a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a class="btn btn-outline-dark rounded-pill"
+                       href="cart.html">My Cart</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ==================== HERO SECTION ==================== -->
+
+<header class="hero-section">
+    <div class="container">
+
+        <div class="row align-items-center g-4 hero-row">
+
+            <div class="col-lg-6">
+
+                <p class="text-uppercase fw-semibold">
+                    Thoughtful Gifts. Beautiful Moments.
+                </p>
+
+                <h1 class="display-3 fw-bold">
+                    Every Gift <br>
+                    Tells a Story<span>.</span>
+                </h1>
+
+                <p class="lead mt-4">
+                    Make every moment unforgettable with meaningful
+                    gifts for the people who make your world special.
+                    Discover something beautiful for every occasion.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="shop.html"
+                       class="btn btn-primary btn-lg rounded-pill px-4">
+                        Shop Now →
+                    </a>
+
+                    <a href="gift-finder.html"
+                       class="btn btn-outline-secondary btn-lg rounded-pill px-4">
+                        Find a Gift 
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="hero-gift-container text-center p-4 p-md-5 rounded-5">
+
+                    <div class="hero-gift-image-wrapper">
+                        <img
+                            src="../images/gift box hero section.jpg"
+                            alt="Elegant premium gift box with a beautiful ribbon"
+                            class="hero-gift-image"
+                        >
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-4">
+                        A Little Box of Happiness
+                    </h2>
+
+                    <p class="mb-0">
+                        Because the best gifts come from the heart.
+                    </p>
+
+                    <div class="hero-sparkle sparkle-one"
+                         aria-hidden="true"></div>
+
+                    <div class="hero-sparkle sparkle-two"
+                         aria-hidden="true"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- ==================== FEATURED CATEGORIES ==================== -->
+
+<section class="py-5" aria-labelledby="categoriesHeading">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <p class="text-uppercase fw-semibold">Explore Our Collection</p>
+
+            <h2 id="categoriesHeading" class="display-6 fw-bold">
+                Shop by Category
+            </h2>
+
+            <p class="text-muted">
+                Find the perfect surprise for every special person.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html?category=Birthday"
+                   class="text-decoration-none text-dark">
+                    <article class="card h-100 text-center border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="display-4 mb-3" aria-hidden="true">🎂</div>
+                            <h3 class="h5 fw-bold">Birthday Gifts</h3>
+                            <p class="text-muted small mb-0">Make their day memorable.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html?category=Personalized"
+                   class="text-decoration-none text-dark">
+                    <article class="card h-100 text-center border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="display-4 mb-3" aria-hidden="true">💝</div>
+                            <h3 class="h5 fw-bold">Personalized</h3>
+                            <p class="text-muted small mb-0">Make it uniquely theirs.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html?category=Romantic"
+                   class="text-decoration-none text-dark">
+                    <article class="card h-100 text-center border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="display-4 mb-3" aria-hidden="true">🌹</div>
+                            <h3 class="h5 fw-bold">Romantic Gifts</h3>
+                            <p class="text-muted small mb-0">Celebrate your love.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="shop.html?category=Handmade"
+                   class="text-decoration-none text-dark">
+                    <article class="card h-100 text-center border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <div class="display-4 mb-3" aria-hidden="true">🧸</div>
+                            <h3 class="h5 fw-bold">Handmade Gifts</h3>
+                            <p class="text-muted small mb-0">Unique gifts made with love.</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== GIFT OF THE DAY ==================== -->
+
+<section class="gift-of-the-day-section py-5"
+         aria-labelledby="giftDayHeading">
+
+    <div class="container">
+
+        <div class="text-center mb-4">
+            <span class="gift-day-badge">✨ TODAY'S SPECIAL ✨</span>
+
+            <h2 id="giftDayHeading" class="display-6 fw-bold mt-3">
+                Gift of the Day 🎁
+            </h2>
+
+            <p class="text-muted">
+                A special gift, picked just for you!
+            </p>
+        </div>
+
+        <div class="gift-day-card" id="giftOfTheDay">
+
+            <div class="gift-day-image-box">
+                <img id="giftDayImage"
+                     src=""
+                     alt="Gift of the Day"
+                     class="gift-day-image">
+            </div>
+
+            <div class="gift-day-content">
+
+                <span class="gift-day-label">💝 Today's Pick</span>
+
+                <h3 id="giftDayName">Loading your special gift...</h3>
+
+                <p id="giftDayDescription"></p>
+
+                <div class="gift-day-rating" id="giftDayRating"></div>
+
+                <p class="gift-day-price" id="giftDayPrice"></p>
+
+                <button type="button"
+                        class="btn gift-day-cart-btn add-to-cart"
+                        id="giftDayAddToCart"
+                        data-id=""
+                        disabled>
+                    🛒 Add to Cart
+                </button>
+
+                <a href="shop.html" class="btn gift-day-shop-btn">
+                    Explore All Gifts →
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== SPECIAL OFFERS & DISCOUNTS ==================== -->
+
+<section class="special-offers-section py-5"
+         aria-labelledby="specialOffersHeading">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="offers-eyebrow">💖 LIMITED-TIME STYLE OFFERS</span>
+
+            <h2 id="specialOffersHeading"
+                class="display-6 offers-heading mt-3 mb-3">
+                Special Offers & Discounts 🎀
+            </h2>
+
+            <p class="offers-subtitle">
+                Find something beautiful for someone special.
+                Enjoy selected gift deals at lovely prices!
+            </p>
+
+        </div>
+
+        <!-- Offer cards are generated from products.js -->
+        <div class="row g-4" id="specialOffersProducts">
+
+            <div class="col-12">
+                <p class="offers-empty-message">Loading special offers...</p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <div class="offers-bottom-note">
+                🎁 Thoughtful gifts, delightful prices, unforgettable moments.
+            </div>
+
+            <div class="mt-4">
+                <a href="shop.html"
+                   class="btn btn-primary btn-lg rounded-pill px-5">
+                    Explore All Gifts →
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== TRENDING GIFTS ==================== -->
+
+<section class="py-5 bg-light" aria-labelledby="trendingHeading">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <p class="text-uppercase fw-semibold">Loved by Gift Givers</p>
+
+            <h2 id="trendingHeading" class="display-6 fw-bold">
+                Trending Gifts
+            </h2>
+
+            <p class="text-muted">
+                Discover thoughtful surprises for your favourite people.
+            </p>
+        </div>
+
+        <div class="row g-4" id="trendingProducts">
+            <div class="col-12 text-center">
+                <p>Loading gifts...</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="shop.html"
+               class="btn btn-primary btn-lg rounded-pill px-5">
+                View All Gifts →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==================== SMART GIFT FINDER BANNER ==================== -->
+
+<section class="py-5" aria-labelledby="giftFinderHeading">
+    <div class="container">
+
+        <div class="p-4 p-md-5 bg-primary text-white rounded-5 text-center">
+
+            <div class="display-3 mb-3" aria-hidden="true">🎀</div>
+
+            <h2 id="giftFinderHeading" class="display-6 fw-bold">
+                Not Sure What to Gift?
+            </h2>
+
+            <p class="lead mt-3">
+                Tell us the occasion, who you're shopping for,
+                and your budget. We'll help you discover thoughtful gifts.
+            </p>
+
+            <a href="gift-finder.html"
+               class="btn btn-light btn-lg rounded-pill px-5 mt-3">
+                Try Smart Gift Finder ✨
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-5">
+                <a href="index.html"
+                   class="text-white text-decoration-none fs-3 fw-bold">
+                    Giftora ♡
+                </a>
+
+                <p class="text-light mt-3">
+                    Every Gift Tells a Story.
+                    Discover thoughtful gifts that bring people closer
+                    and make every occasion unforgettable.
+                </p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h2 class="h5 fw-bold mb-3">Quick Links</h2>
+
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="index.html" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="shop.html" class="text-white text-decoration-none">Shop</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="wishlist.html" class="text-white text-decoration-none">Wishlist</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="cart.html" class="text-white text-decoration-none">Shopping Cart</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <h2 class="h5 fw-bold mb-3">Discover</h2>
+
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="gift-finder.html" class="text-white text-decoration-none">
+                            Smart Gift Finder
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="shop.html?category=Birthday" class="text-white text-decoration-none">
+                            Birthday Gifts
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="shop.html?category=Personalized" class="text-white text-decoration-none">
+                            Personalized Gifts
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-4">
+
+        <div class="text-center small text-light">
+            &copy; 2026 Giftora. Every Gift Tells a Story.
+            All rights reserved.
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- ==================== PRODUCT DETAILS MODAL ==================== -->
+
+<div class="modal fade"
+     id="productDetailsModal"
+     tabindex="-1"
+     aria-labelledby="productDetailsModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="productDetailsModalLabel">
+                    Product Details
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body" id="productDetailsContent"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ==================== JAVASCRIPT FILES ==================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/products.js"></script>
+<script src="../js/main.js"></script>
+
+
+<!-- ==================== GIFT OF THE DAY JAVASCRIPT ==================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const section = document.getElementById("giftOfTheDay");
+
+    if (
+        !section ||
+        typeof products === "undefined" ||
+        !Array.isArray(products) ||
+        products.length === 0
+    ) {
+        return;
+    }
+
+    const now = new Date();
+
+    const dateKey =
+        now.getFullYear() * 10000 +
+        (now.getMonth() + 1) * 100 +
+        now.getDate();
+
+    const gift = products[dateKey % products.length];
+
+    const image = document.getElementById("giftDayImage");
+    const name = document.getElementById("giftDayName");
+    const description = document.getElementById("giftDayDescription");
+    const rating = document.getElementById("giftDayRating");
+    const price = document.getElementById("giftDayPrice");
+    const button = document.getElementById("giftDayAddToCart");
+
+    if (!image || !name || !description || !rating || !price || !button) {
+        return;
+    }
+
+    image.src = gift.image;
+    image.alt = gift.name;
+
+    image.onerror = function () {
+        this.alt = gift.name + " image unavailable";
+    };
+
+    name.textContent = gift.name;
+    description.textContent = gift.description;
+    rating.textContent = "⭐ " + gift.rating + " / 5";
+
+    price.textContent =
+        "₹" + Number(gift.price).toLocaleString("en-IN");
+
+    button.dataset.id = gift.id;
+    button.disabled = false;
+
+});
+</script>
+
+
+<!-- ==================== SPECIAL OFFERS JAVASCRIPT ==================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const offersContainer = document.getElementById("specialOffersProducts");
+
+    if (!offersContainer) {
+        return;
+    }
+
+    if (
+        typeof products === "undefined" ||
+        !Array.isArray(products) ||
+        products.length === 0
+    ) {
+        offersContainer.innerHTML =
+            '<div class="col-12"><p class="offers-empty-message">Offers are temporarily unavailable. Please visit our Shop.</p></div>';
+        return;
+    }
+
+    /*
+      These are display-only promotional discounts.
+      They do not change the original products array or stored cart prices.
+    */
+    const offerSettings = [
+        { id: 1, discount: 20 },
+        { id: 2, discount: 30 },
+        { id: 3, discount: 20 },
+        { id: 4, discount: 30 }
+    ];
+
+    const offerProducts = offerSettings
+        .map(function (setting) {
+            const product = products.find(function (item) {
+                return String(item.id) === String(setting.id);
+            });
+
+            if (!product || !Number.isFinite(Number(product.price))) {
+                return null;
+            }
+
+            return {
+                product: product,
+                discount: setting.discount,
+                originalPrice: Number(product.price),
+                salePrice: Math.round(
+                    Number(product.price) * (1 - setting.discount / 100)
+                )
+            };
+        })
+        .filter(Boolean);
+
+    if (offerProducts.length === 0) {
+        offersContainer.innerHTML =
+            '<div class="col-12"><p class="offers-empty-message">No special offers are available right now.</p></div>';
+        return;
+    }
+
+    offersContainer.innerHTML = offerProducts.map(function (offer) {
+
+        const product = offer.product;
+
+        return `
+            <div class="col-6 col-md-6 col-lg-3">
+                <article class="offer-product-card">
+
+                    <div class="offer-image-wrap">
+
+                        <span class="offer-discount-badge">
+                            ${offer.discount}% OFF
+                        </span>
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            class="offer-image"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <span class="offer-category">
+                        ${product.category}
+                    </span>
+
+                    <h3 class="offer-product-name">
+                        ${product.name}
+                    </h3>
+
+                    <div class="offer-rating">
+                        ⭐ ${product.rating} / 5
+                    </div>
+
+                    <div class="offer-price-row">
+
+                        <span class="offer-sale-price">
+                            ₹${offer.salePrice.toLocaleString("en-IN")}
+                        </span>
+
+                        <span class="offer-original-price">
+                            ₹${offer.originalPrice.toLocaleString("en-IN")}
+                        </span>
+
+                        <span class="offer-save-label">
+                            Save ₹${(offer.originalPrice - offer.salePrice).toLocaleString("en-IN")}
+                        </span>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn offer-cart-btn add-to-cart"
+                        data-id="${product.id}"
+                        aria-label="Add ${product.name} to cart">
+                        🛒 Add to Cart
+                    </button>
+
+                </article>
+            </div>
+        `;
+
+    }).join("");
+
+});
+</script>
+
+</body>
+</html>

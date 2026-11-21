@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Shop Gifts | Giftora</title>
+
+<!-- Bootstrap CSS -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- PROFESSIONAL GIFTORA NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+            Giftora <span>♡</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#shopNavbar"
+            aria-controls="shopNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="shopNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <!-- Shop -->
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="shop.html"
+                       aria-current="page">
+                        Shop
+                    </a>
+                </li>
+
+                <!-- Wishlist -->
+                <li class="nav-item">
+                    <a class="nav-link" href="wishlist.html">
+                         Wishlist
+                    </a>
+                </li>
+
+                <!-- Gift Finder -->
+                <li class="nav-item">
+                    <a class="nav-link" href="gift-finder.html">
+                         Gift Finder
+                    </a>
+                </li>
+
+                <!-- Cart -->
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-outline-dark rounded-pill"
+                       href="cart.html">
+                         My Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- SHOP HEADER -->
+<header class="py-5 bg-light text-center">
+    <div class="container">
+
+        <p class="text-uppercase fw-semibold">
+            Find Something Special
+        </p>
+
+        <h1 class="display-5 fw-bold">
+            Shop All Gifts 🎁
+        </h1>
+
+        <p class="text-muted mb-0">
+            Thoughtful gifts for every person and every occasion.
+        </p>
+
+    </div>
+</header>
+
+
+<!-- SEARCH AND CATEGORY FILTER -->
+<section class="py-4">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Search -->
+            <div class="col-12 col-md-6">
+                <label for="searchInput" class="form-label fw-semibold">
+                    Search Gifts
+                </label>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    class="form-control form-control-lg rounded-pill"
+                    placeholder="Search for a gift..."
+                    autocomplete="off">
+            </div>
+
+            <!-- Category -->
+            <div class="col-12 col-md-6">
+                <label for="categoryFilter" class="form-label fw-semibold">
+                    Choose Category
+                </label>
+
+                <select
+                    id="categoryFilter"
+                    class="form-select form-select-lg rounded-pill">
+
+                    <option value="all">All Categories</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Personalized">Personalized</option>
+                    <option value="Handmade">Handmade</option>
+
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PRODUCTS SECTION -->
+<main class="py-4">
+    <div class="container">
+
+        <!-- SINGLE TOOLBAR -->
+        <div class="row align-items-end g-3 mb-4">
+
+            <!-- Heading and Count -->
+            <div class="col-12 col-md-6">
+                <h2 class="h4 fw-bold mb-1">
+                    Our Gifts
+                </h2>
+
+                <p class="text-muted small mb-0" id="productCount">
+                    8 products
+                </p>
+            </div>
+
+            <!-- Sorting -->
+            <div class="col-12 col-md-4 ms-md-auto">
+                <label for="sortFilter" class="form-label fw-semibold">
+                    Sort products by
+                </label>
+
+                <select
+                    id="sortFilter"
+                    class="form-select rounded-pill">
+
+                    <option value="default">Recommended</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A to Z</option>
+                    <option value="rating-high">Highest Rated</option>
+
+                </select>
+            </div>
+
+        </div>
+
+        <!-- JavaScript Displays Products Here -->
+        <div class="row g-4" id="shopProducts">
+
+            <div class="col-12 text-center py-5">
+                <p class="text-muted">Loading gifts...</p>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+
+<!-- ==================== GIFTORA COMMON FOOTER ==================== -->
+
+<footer class="giftora-compact-footer">
+    <div class="container">
+        <div class="giftora-footer-content">
+
+            <a href="index.html" class="giftora-footer-brand">
+                Giftora ♡
+            </a>
+
+            <span class="giftora-footer-tagline">
+                Every Gift Tells a Story.
+            </span>
+
+            <span class="giftora-footer-copyright">
+                &copy; 2026 Giftora. All rights reserved.
+            </span>
+
+        </div>
+    </div>
+</footer>
+
+<!-- Product Details Modal -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1"
+     aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="productDetailsModalLabel">
+                    Product Details
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+            </div>
+
+            <div class="modal-body" id="productDetailsContent">
+                <!-- Product details will appear here -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Product Data -->
+<script src="../js/products.js"></script>
+
+<script>
+    console.log("Shop page JavaScript is loading!");
+</script>
+
+<!-- Main JavaScript -->
+<script src="../js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
