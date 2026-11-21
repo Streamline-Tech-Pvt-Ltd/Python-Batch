@@ -2065,6 +2065,205 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 NULL → Represents missing or unknown data
                 Aggregate Functions → Perform calculations on multiple rows
 
+        MySQL Interview Questions – Day 4
+      
+            1. What are Aggregate Functions in MySQL?
+
+                Aggregate functions perform calculations on multiple rows and return a single result.
+
+                Examples:
+                
+                COUNT()
+                SUM()
+                AVG()
+                MIN()
+                MAX()
+
+            2. What is the purpose of COUNT() in MySQL?
+
+                COUNT() is used to count the number of rows or non-NULL values in a column.
+
+                Example:
+
+                SELECT COUNT(*) FROM employees;
+
+                This counts all rows in the employees table.
+
+            3. What is the difference between COUNT(*) and COUNT(column_name)?
+
+                COUNT(*) counts all rows, including rows containing NULL values.
+
+                COUNT(column_name) counts only rows where the specified column is NOT NULL.
+
+            4. What is the purpose of SUM()?
+
+                SUM() calculates the total of numeric values in a column.
+
+                Example:
+
+                SELECT SUM(salary) FROM employees;
+
+                This returns the total salary of all employees.
+
+            5. What is the purpose of AVG()?
+
+                AVG() calculates the average value of a numeric column.
+
+                Example:
+
+                SELECT AVG(salary) FROM employees;
+
+                This returns the average salary of employees.
+
+            6. What is the purpose of MIN()?
+
+                MIN() returns the smallest value from a column.
+
+                Example:
+
+                SELECT MIN(salary) FROM employees;
+
+                This returns the lowest salary.
+
+            7. What is the purpose of MAX()?
+
+                MAX() returns the largest value from a column.
+
+                Example:
+
+                SELECT MAX(salary) FROM employees;
+
+                This returns the highest salary.
+
+            8. What is the difference between MIN() and MAX()?
+
+                MIN() returns the smallest value.
+                
+                MAX() returns the largest value.
+
+            9. What is the difference between SUM() and AVG()?
+
+                SUM() returns the total of all numeric values.
+                
+                AVG() returns the average of numeric values.
+
+            10. Can we use aggregate functions on VARCHAR columns?
+
+                Some aggregate functions, such as MIN() and MAX(), can work with VARCHAR values based on string comparison.
+
+                SUM() and AVG() are intended for numeric values. Using them on text columns can cause implicit numeric conversion and unexpected results.
+
+            11. How do aggregate functions handle NULL values?
+
+                Most aggregate functions ignore NULL values.
+
+                Example:
+
+                SELECT AVG(salary) FROM employees;
+
+                NULL salary values are excluded from the average calculation.
+
+            12. Does COUNT(*) ignore NULL values?
+
+                No. COUNT(*) counts all rows, even if some columns contain NULL values.
+
+            13. What happens if SUM() or AVG() is used on a column containing NULL values?
+
+                NULL values are ignored during the calculation.
+
+            14. What happens when an aggregate function is used on an empty table?
+
+                COUNT() returns 0.
+                
+                SUM(), AVG(), MIN() and MAX() return NULL when there are no applicable values.
+
+            15. Can we use multiple aggregate functions in a single SELECT query?
+
+                Yes. Multiple aggregate functions can be used in the same SELECT statement.
+
+                Example:
+
+                SELECT
+                    COUNT(*) AS total_employees,
+                    SUM(salary) AS total_salary,
+                    AVG(salary) AS average_salary,
+                    MIN(salary) AS minimum_salary,
+                    MAX(salary) AS maximum_salary
+                FROM employees;
+
+            16. What is an Alias in MySQL?
+
+                An alias gives a temporary name to a column or table in a query result.
+
+                Example:
+
+                SELECT AVG(salary) AS average_salary
+                FROM employees;
+
+            17. What is the difference between a column name and an alias?
+
+                A column name is the actual name defined in the table structure.
+
+                An alias is a temporary name assigned in a query result. It does not rename the original table column.
+
+            18. Can we use an alias with aggregate functions?
+
+                Yes. Aliases make aggregate query results easier to understand.
+
+                Example:
+
+                SELECT SUM(salary) AS total_salary
+                FROM employees;
+
+            19. What is the difference between COUNT(1) and COUNT(*)?
+
+                Both count rows in a table in normal usage. COUNT(*) is the standard and clearest way to count all rows.
+
+            20. Can aggregate functions be used without GROUP BY?
+
+                Yes. Aggregate functions can calculate a result across the entire table without GROUP BY.
+
+                Example:
+
+                SELECT MAX(salary) FROM employees;
+
+            Important Interview Points
+        
+                1. Aggregate functions perform calculations on multiple rows.
+                2. COUNT(*) counts all rows.
+                3. COUNT(column_name) ignores NULL values.
+                4. SUM() calculates the total.
+                5. AVG() calculates the average.
+                6. MIN() returns the smallest value.
+                7. MAX() returns the largest value.
+                8. Aggregate functions generally ignore NULL values.
+                9. COUNT() returns 0 for an empty result; other common aggregate functions return NULL.
+                10. AS is used to assign an alias.
+                11. Aggregate functions can be used without GROUP BY.
+                12. Aggregate functions can be combined in a single SELECT query.
+
+            Quick Revision
+    
+                SELECT COUNT(*) FROM employees;
+
+                SELECT COUNT(salary) FROM employees;
+
+                SELECT SUM(salary) FROM employees;
+
+                SELECT AVG(salary) FROM employees;
+
+                SELECT MIN(salary) FROM employees;
+
+                SELECT MAX(salary) FROM employees;
+
+                SELECT
+                    COUNT(*) AS total_employees,
+                    SUM(salary) AS total_salary,
+                    AVG(salary) AS average_salary,
+                    MIN(salary) AS minimum_salary,
+                    MAX(salary) AS maximum_salary
+                FROM employees;
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
     Internship Day 36 (29/10/26):-
