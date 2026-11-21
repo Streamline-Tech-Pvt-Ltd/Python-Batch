@@ -300,6 +300,167 @@ MySQL Programming Fundamentals - Notes and Study Guide
             **Day 1 Completed:** 
                 MySQL introduction, installation and connection verification, databases, tables, basic data types, inserting records, and retrieving data.
 
+        MySQL Interview Questions – Day 1
+            ======================================
+
+            1. What is SQL?
+            
+                SQL (Structured Query Language) is used to communicate with relational databases. It helps us create, retrieve, update and delete data.
+
+            2. What is MySQL?
+                
+                MySQL is an open-source Relational Database Management System (RDBMS) that uses SQL to store and manage data.
+
+            3. What is the difference between SQL and MySQL?
+                
+                SQL is a language used to manage database data, whereas MySQL is a database management system that uses SQL.
+
+            4. What is a Database?
+            
+                A database is an organized collection of data that can be easily stored, accessed, managed and updated.
+
+            5. What is a Table in MySQL?
+                
+                A table is a collection of related data organized into rows and columns.
+
+            6. What are Rows and Columns?
+                
+                Row: Represents a single record in a table.
+                
+                Column: Represents a particular attribute or field of the data.
+
+            7. What are the main features of MySQL?
+            
+                - Open-source and widely used.
+                - Supports relational databases.
+                - Provides data security and access control.
+                - Supports large amounts of data.
+                - Uses SQL queries to manage data.
+
+            8. What are the different types of SQL commands?
+                
+                DDL – Data Definition Language (CREATE, ALTER, DROP, TRUNCATE)
+                
+                DML – Data Manipulation Language (INSERT, UPDATE, DELETE)
+                
+                DQL – Data Query Language (SELECT)
+                
+                DCL – Data Control Language (GRANT, REVOKE)
+                
+                TCL – Transaction Control Language (COMMIT, ROLLBACK)
+
+            9. How do you display all databases in MySQL?
+            
+                SHOW DATABASES;
+
+            10. How do you create a database in MySQL?
+                
+                CREATE DATABASE database_name;
+
+            11. How do you select or switch to a database?
+                
+                USE database_name;
+
+            12. How do you display all tables in the selected database?
+                
+                SHOW TABLES;
+
+            13. How do you create a table in MySQL?
+                
+                CREATE TABLE table_name (
+                    column1 datatype,
+                    column2 datatype
+                );
+
+            14. What is a Data Type in MySQL?
+                
+                A data type defines what kind of values a column can store, such as numbers, text or dates.
+
+            15. What are the commonly used MySQL data types?
+                
+                INT – Stores integer values.
+                
+                VARCHAR(n) – Stores variable-length text.
+                
+                CHAR(n) – Stores fixed-length text.
+                
+                DECIMAL(p,s) – Stores exact decimal values.
+                
+                DATE – Stores date values.
+
+            16. What is the difference between CHAR and VARCHAR?
+                
+                CHAR stores fixed-length strings, whereas VARCHAR stores variable-length strings.
+
+            17. How do you insert records into a table?
+                
+                INSERT INTO table_name (column1, column2)
+                VALUES (value1, value2);
+
+            18. How do you retrieve all records from a table?
+                
+                SELECT * FROM table_name;
+
+            19. What is the difference between SELECT * and SELECT column_name?
+                
+                SELECT * retrieves all columns from a table.
+                
+                SELECT column_name retrieves only the specified column.
+
+            20. What happens if you insert a value into a column using the wrong data type?
+                
+                MySQL may return an error or convert the value depending on the data type and SQL mode.
+
+            21. What is the purpose of the semicolon (;) in MySQL?
+                
+                A semicolon indicates the end of an SQL statement.
+
+            22. How do you delete a database?
+                
+                DROP DATABASE database_name;
+
+            23. How do you delete a table?
+                
+                DROP TABLE table_name;
+
+            24. What is the difference between DROP DATABASE and DROP TABLE?
+                
+                DROP DATABASE deletes the entire database, including its tables.
+                
+                DROP TABLE deletes only the specified table.
+
+            25. Why is MySQL commonly used in web development?
+                
+                MySQL stores and manages application data.
+                It can work with backend technologies such as Python, Django, PHP and Java.
+
+            Important Interview Points
+                ===========================
+
+                1. SQL is a language; MySQL is an RDBMS.
+                2. A database contains tables.
+                3. A table contains rows and columns.
+                4. CREATE is used to create databases and tables.
+                5. USE selects a database.
+                6. SHOW DATABASES displays available databases.
+                7. SHOW TABLES displays tables in the selected database.
+                8. INSERT adds records.
+                9. SELECT retrieves records.
+                10. DROP permanently removes database objects.
+
+            Quick Revision
+                ==============
+
+                SHOW DATABASES;
+                CREATE DATABASE database_name;
+                USE database_name;
+                SHOW TABLES;
+                CREATE TABLE table_name (id INT, name VARCHAR(50));
+                INSERT INTO table_name VALUES (1, 'Amit');
+                SELECT * FROM table_name;
+                DROP TABLE table_name;
+                DROP DATABASE database_name;
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
     Internship Day 33(23/10/26):-
