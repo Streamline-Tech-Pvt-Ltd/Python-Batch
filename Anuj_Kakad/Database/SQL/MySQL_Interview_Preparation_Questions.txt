@@ -301,8 +301,7 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 MySQL introduction, installation and connection verification, databases, tables, basic data types, inserting records, and retrieving data.
 
         MySQL Interview Questions – Day 1
-            ======================================
-
+    
             1. What is SQL?
             
                 SQL (Structured Query Language) is used to communicate with relational databases. It helps us create, retrieve, update and delete data.
@@ -778,6 +777,239 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 INSERT INTO → Inserts records
                 SELECT * → Retrieves all columns
                 PRIMARY KEY → Uniquely identifies a record
+
+        MySQL Interview Questions – Day 2
+
+            1. What is the difference between CHAR and VARCHAR in MySQL?
+
+                CHAR stores fixed-length strings, whereas VARCHAR stores variable-length strings.
+
+                Example:
+                
+                CHAR(10) – Uses a fixed length of 10 characters.
+                
+                VARCHAR(10) – Stores up to 10 characters depending on the actual value.
+
+            2. What is the INT data type in MySQL?
+
+                INT is used to store whole numbers without decimal values.
+
+                Example:
+                
+                age INT;
+                
+                salary INT;
+
+            3. What is the VARCHAR data type?
+
+                VARCHAR is used to store variable-length character strings.
+
+                Example:
+                
+                name VARCHAR(50);
+
+            4. What is the DECIMAL data type in MySQL?
+
+                DECIMAL is used to store exact numeric values with decimal points. It is commonly used for salary and financial data.
+
+                Syntax:
+                
+                DECIMAL(p,s)
+
+                Example:
+                
+                salary DECIMAL(10,2);
+
+                Here:
+                
+                10 represents the maximum total number of digits.
+                
+                2 represents the number of digits after the decimal point.
+
+            5. What is the difference between INT and DECIMAL?
+
+                INT stores whole numbers without decimal values.
+                
+                DECIMAL stores exact numbers with decimal values.
+
+                Example:
+                
+                age INT;
+                
+                salary DECIMAL(10,2);
+
+            6. What is the difference between CHAR, VARCHAR and DECIMAL?
+
+                CHAR – Stores fixed-length character values.
+                
+                VARCHAR – Stores variable-length character values.
+                
+                DECIMAL – Stores exact numeric values with decimal points.
+
+            7. How do you create a table with multiple columns?
+
+                CREATE TABLE employee (
+                    emp_id INT,
+                    emp_name VARCHAR(50),
+                    salary DECIMAL(10,2)
+                );
+
+            8. How do you insert multiple records into a table in a single query?
+
+                INSERT INTO employee (emp_id, emp_name, salary)
+                VALUES
+                (1, 'Amit', 30000.00),
+                (2, 'Priya', 40000.00),
+                (3, 'Rahul', 35000.00);
+
+            9. What happens if you insert a value longer than the VARCHAR column size?
+
+                MySQL may generate a Data Too Long error when strict SQL mode is enabled.
+
+                Example:
+
+                CREATE TABLE student (
+                    name VARCHAR(5)
+                );
+
+                INSERT INTO student VALUES ('AnujKakad');
+
+                Error:
+                
+                Data too long for column 'name'.
+
+                Reason:
+                
+                The column allows a maximum of 5 characters, but the inserted value contains more than 5 characters.
+
+                Solution:
+                
+                Increase the column size or insert a shorter value.
+
+            10. Can a table contain duplicate records?
+
+                Yes, a table can contain duplicate records if no constraint prevents them.
+
+                Example:
+
+                INSERT INTO employee VALUES (1, 'Amit', 30000.00);
+                INSERT INTO employee VALUES (1, 'Amit', 30000.00);
+
+                Both records can be inserted if the table has no restriction on duplicate values.
+
+            11. What is the difference between a duplicate record and a duplicate value?
+
+                Duplicate record means the same complete row appears more than once.
+                
+                Duplicate value means the same value appears in a particular column in multiple rows.
+
+            12. Why should we specify column names while inserting records?
+
+                Specifying column names makes the query clearer and helps avoid mistakes when inserting values.
+
+                Example:
+
+                INSERT INTO employee (emp_id, emp_name, salary)
+                VALUES (1, 'Amit', 30000.00);
+
+            13. Can we insert records without specifying column names?
+
+                Yes, but values must be provided in the same order as the columns are defined in the table.
+
+                Example:
+
+                INSERT INTO employee
+                VALUES (1, 'Amit', 30000.00);
+
+            14. What is the difference between CREATE TABLE and INSERT INTO?
+
+                CREATE TABLE creates the structure of a table.
+                
+                INSERT INTO adds records to an existing table.
+
+            15. What is the purpose of SELECT in MySQL?
+
+                SELECT is used to retrieve data from a table.
+
+                Example:
+
+                SELECT * FROM employee;
+
+            16. What is the difference between SELECT * and selecting specific columns?
+
+                SELECT * retrieves all columns.
+                
+                SELECT emp_name, salary retrieves only the specified columns.
+
+                Example:
+
+                SELECT emp_name, salary FROM employee;
+
+            17. What happens if we insert duplicate values into a column?
+
+                If the column has no restriction such as a UNIQUE or PRIMARY KEY constraint, duplicate values are allowed.
+
+            18. What is the purpose of SHOW TABLES?
+
+                SHOW TABLES displays all tables available in the currently selected database.
+
+                Syntax:
+
+                SHOW TABLES;
+
+            19. What is the purpose of USE database_name?
+
+                USE selects a database so that we can perform operations on its tables without specifying the database name each time.
+
+                Syntax:
+
+                USE database_name;
+
+            20. What is the difference between CHAR(10) and VARCHAR(10)?
+
+                CHAR(10) has a fixed length of 10 characters.
+                
+                VARCHAR(10) can store up to 10 characters and uses storage based on the actual value length, plus length information.
+
+            Important Interview Points
+                ===========================
+
+                1. INT stores whole numbers.
+                2. VARCHAR stores variable-length text.
+                3. CHAR stores fixed-length text.
+                4. DECIMAL stores exact decimal values.
+                5. DECIMAL(10,2) allows 10 total digits, including 2 digits after the decimal point.
+                6. Duplicate records are allowed unless constraints prevent them.
+                7. Data Too Long error occurs when inserted data exceeds the permitted column length.
+                8. INSERT INTO adds records to an existing table.
+                9. SELECT retrieves records from a table.
+                10. Column names can be specified in INSERT queries to make them clearer and safer.
+
+            Quick Revision
+                ==============
+
+                CREATE DATABASE database_name;
+
+                USE database_name;
+
+                CREATE TABLE employee (
+                    emp_id INT,
+                    emp_name VARCHAR(50),
+                    salary DECIMAL(10,2)
+                );
+
+                INSERT INTO employee (emp_id, emp_name, salary)
+                VALUES (1, 'Amit', 30000.00);
+
+                INSERT INTO employee VALUES
+                (2, 'Priya', 40000.00),
+                (3, 'Rahul', 35000.00);
+
+                SELECT * FROM employee;
+
+                SELECT emp_name, salary FROM employee;
+
+                SHOW TABLES;
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
