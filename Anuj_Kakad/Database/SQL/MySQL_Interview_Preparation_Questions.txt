@@ -4140,4 +4140,332 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 DROP INDEX - remove an index
                 CASE - return a value based on conditions
 
+        MySQL Interview Questions – Day 8
+
+            1. What is ALTER TABLE in MySQL?
+
+                ALTER TABLE is used to modify the structure of an existing table, such as adding, deleting, renaming or modifying columns.
+
+                Example:
+
+                ALTER TABLE employees
+                ADD city VARCHAR(30);
+
+            2. How do you add a new column to an existing table?
+
+                We use ALTER TABLE with ADD.
+
+                Syntax:
+
+                ALTER TABLE table_name
+                ADD column_name datatype;
+
+                Example:
+
+                ALTER TABLE employees
+                ADD city VARCHAR(30);
+
+            3. How do you modify the data type of an existing column?
+
+                We use MODIFY with ALTER TABLE.
+
+                Syntax:
+
+                ALTER TABLE table_name
+                MODIFY column_name new_datatype;
+
+                Example:
+
+                ALTER TABLE employees
+                MODIFY emp_name CHAR(50);
+
+            4. How do you rename an existing column in MySQL?
+
+                We use RENAME COLUMN.
+
+                Syntax:
+
+                ALTER TABLE table_name
+                RENAME COLUMN old_name TO new_name;
+
+                Example:
+
+                ALTER TABLE employees
+                RENAME COLUMN emp_name TO employee_name;
+
+            5. How do you delete a column from an existing table?
+
+                We use DROP COLUMN.
+
+                Syntax:
+
+                ALTER TABLE table_name
+                DROP COLUMN column_name;
+
+                Example:
+
+                ALTER TABLE employees
+                DROP COLUMN city;
+
+            6. What is the difference between MODIFY and CHANGE in MySQL?
+
+                MODIFY changes a column's data type or definition without renaming it.
+
+                CHANGE can rename a column and also modify its definition.
+
+                Example:
+
+                ALTER TABLE employees
+                MODIFY salary DECIMAL(10,2);
+
+                ALTER TABLE employees
+                CHANGE emp_name employee_name VARCHAR(50);
+
+            7. How do you rename a table in MySQL?
+
+                We use RENAME TABLE.
+
+                Syntax:
+
+                RENAME TABLE old_table_name TO new_table_name;
+
+                Example:
+
+                RENAME TABLE departments TO streamline;
+
+            8. Can we rename a database directly using RENAME DATABASE?
+
+                No. MySQL does not provide a direct RENAME DATABASE statement.
+
+                A database can be renamed by creating a new database, moving its objects and data, and then removing the old database after verification.
+
+            9. What is DROP DATABASE?
+
+                DROP DATABASE permanently deletes a database and its objects.
+
+                Syntax:
+
+                DROP DATABASE database_name;
+
+            10. What is the difference between DROP TABLE and TRUNCATE TABLE?
+
+                DROP TABLE removes the complete table, including its structure and data.
+
+                TRUNCATE TABLE removes all records but keeps the table structure.
+
+            11. What is a VIEW in MySQL?
+
+                A VIEW is a virtual table based on the result of a SELECT query.
+
+                It stores the query definition rather than storing a separate copy of the result data.
+
+            12. Why do we use VIEW in MySQL?
+
+                Views are used to simplify complex queries, restrict access to selected columns or rows, and present data in a reusable format.
+
+            13. How do you create a VIEW?
+
+                We use CREATE VIEW with AS and a SELECT statement.
+
+                Syntax:
+
+                CREATE VIEW view_name AS
+                SELECT column1, column2
+                FROM table_name;
+
+                Example:
+
+                CREATE VIEW high_sal_emp AS
+                SELECT emp_name, salary
+                FROM employees
+                WHERE salary > 50000;
+
+            14. How do you retrieve data from a VIEW?
+
+                We use SELECT just like a normal table.
+
+                Example:
+
+                SELECT * FROM high_sal_emp;
+
+            15. How do you delete a VIEW?
+
+                We use DROP VIEW.
+
+                Syntax:
+
+                DROP VIEW view_name;
+
+                Example:
+
+                DROP VIEW high_sal_emp;
+
+            16. What is the difference between a TABLE and a VIEW?
+
+                TABLE:
+                - Stores data physically.
+                - Contains rows and columns.
+                - Data is directly stored in the table.
+
+                VIEW:
+                - Stores a SELECT query definition.
+                - Displays data from underlying tables.
+                - Generally does not store a separate copy of the result data.
+
+            17. What is an INDEX in MySQL?
+
+                An INDEX is a database structure that helps MySQL find records faster without scanning every row of a table.
+
+            18. Why do we use INDEX in MySQL?
+
+                Indexes improve the speed of data retrieval, especially when searching or filtering large tables.
+
+            19. How do you create an INDEX?
+
+                We use CREATE INDEX.
+
+                Syntax:
+
+                CREATE INDEX index_name
+                ON table_name(column_name);
+
+                Example:
+
+                CREATE INDEX idx_salary
+                ON employees(salary);
+
+            20. How do you delete an INDEX?
+
+                We use DROP INDEX.
+
+                Syntax:
+
+                DROP INDEX index_name
+                ON table_name;
+
+                Example:
+
+                DROP INDEX idx_salary
+                ON employees;
+
+            21. What is the difference between INDEX and VIEW?
+
+                INDEX:
+                - Improves data retrieval performance.
+                - Helps MySQL locate records faster.
+                - Requires additional storage.
+
+                VIEW:
+                - Represents the result of a SELECT query.
+                - Simplifies data access.
+                - Usually does not store a separate copy of the result data.
+
+            22. Does an INDEX improve every SQL operation?
+
+                No. Indexes mainly improve suitable data retrieval operations.
+
+                They also require storage and can slow down INSERT, UPDATE and DELETE operations because indexes may need to be updated.
+
+            23. What is the CASE statement in MySQL?
+
+                CASE is used to apply conditional logic in SQL queries. It returns a value based on the first matching condition.
+
+                Example:
+
+                SELECT emp_name, salary,
+                CASE
+                    WHEN salary < 30000 THEN 'Low'
+                    WHEN salary <= 70000 THEN 'Medium'
+                    ELSE 'High'
+                END AS salary_category
+                FROM employees;
+
+            24. What is the difference between CASE and IF in MySQL?
+
+                CASE supports multiple conditions and is useful for handling several possible outcomes.
+
+                IF() is a function that checks a condition and returns one value if true and another if false.
+
+                Example:
+
+                SELECT emp_name,
+                    IF(salary > 50000, 'High', 'Low') AS category
+                FROM employees;
+
+            25. Can we use CASE inside a SELECT statement?
+
+                Yes. CASE can be used inside SELECT to generate calculated or conditional result columns.
+
+                Example:
+
+                SELECT emp_name,
+                CASE
+                    WHEN salary >= 50000 THEN 'Eligible'
+                    ELSE 'Not Eligible'
+                END AS status
+                FROM employees;
+
+            Important Interview Points
+
+                1. ALTER TABLE modifies an existing table structure.
+                2. ADD adds a new column.
+                3. MODIFY changes a column definition.
+                4. CHANGE can rename and modify a column.
+                5. RENAME TABLE changes a table name.
+                6. MySQL does not directly support RENAME DATABASE.
+                7. DROP DATABASE deletes the complete database.
+                8. TRUNCATE removes all records but keeps the table structure.
+                9. VIEW is a virtual table based on a SELECT query.
+                10. CREATE VIEW creates a view.
+                11. DROP VIEW deletes a view.
+                12. INDEX improves suitable data retrieval operations.
+                13. CREATE INDEX creates an index.
+                14. DROP INDEX removes an index.
+                15. Indexes require additional storage and can affect write performance.
+                16. CASE is used for conditional logic in SQL queries.
+                17. CASE returns the result of the first matching WHEN condition.
+
+            Quick Revision
+
+                ALTER TABLE employees
+                ADD city VARCHAR(30);
+
+                ALTER TABLE employees
+                MODIFY salary DECIMAL(10,2);
+
+                ALTER TABLE employees
+                RENAME COLUMN emp_name TO employee_name;
+
+                ALTER TABLE employees
+                DROP COLUMN city;
+
+                RENAME TABLE departments TO streamline;
+
+                DROP DATABASE database_name;
+
+                TRUNCATE TABLE employees;
+
+                CREATE VIEW high_sal_emp AS
+                SELECT emp_name, salary
+                FROM employees
+                WHERE salary > 50000;
+
+                SELECT * FROM high_sal_emp;
+
+                DROP VIEW high_sal_emp;
+
+                CREATE INDEX idx_salary
+                ON employees(salary);
+
+                DROP INDEX idx_salary
+                ON employees;
+
+                SELECT emp_name, salary,
+                CASE
+                    WHEN salary < 30000 THEN 'Low'
+                    WHEN salary <= 70000 THEN 'Medium'
+                    ELSE 'High'
+                END AS salary_category
+                FROM employees;
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
