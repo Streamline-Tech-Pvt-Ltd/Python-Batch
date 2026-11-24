@@ -3708,6 +3708,265 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 GRANT             - gives privileges
                 REVOKE            - removes privileges
 
+        MySQL Interview Questions – Day 7
+            
+            1. What is a Transaction in MySQL?
+
+                A transaction is a group of SQL operations treated as a single unit of work. Either all operations are successfully committed or changes can be rolled back.
+
+            2. What are the four properties of ACID in MySQL?
+
+                ACID stands for:
+
+                A – Atomicity: All operations in a transaction succeed together or are rolled back.
+
+                C – Consistency: A transaction keeps the database in a valid state.
+
+                I – Isolation: Concurrent transactions should not interfere with each other improperly.
+
+                D – Durability: Once committed, changes remain saved even after a system failure.
+
+            3. What is START TRANSACTION?
+
+                START TRANSACTION begins a new transaction.
+
+                Example:
+
+                START TRANSACTION;
+
+                UPDATE employees
+                SET salary = 50000
+                WHERE emp_id = 1;
+
+            4. What is COMMIT in MySQL?
+
+                COMMIT permanently saves the changes made during the current transaction.
+
+                Example:
+
+                START TRANSACTION;
+
+                UPDATE employees
+                SET salary = 50000
+                WHERE emp_id = 1;
+
+                COMMIT;
+
+            5. What is ROLLBACK in MySQL?
+
+                ROLLBACK cancels changes made during the current transaction that have not been committed.
+
+                Example:
+
+                START TRANSACTION;
+
+                DELETE FROM employees
+                WHERE emp_id = 1;
+
+                ROLLBACK;
+
+                The deleted record is restored if the transaction is supported by a transactional storage engine.
+
+            6. What is the difference between COMMIT and ROLLBACK?
+
+                COMMIT saves transaction changes permanently.
+
+                ROLLBACK cancels uncommitted transaction changes.
+
+            7. Can we use ROLLBACK after COMMIT?
+
+                No. Once COMMIT is executed, the changes are permanently saved and cannot be undone using ROLLBACK.
+
+            8. What is SAVEPOINT in MySQL?
+
+                SAVEPOINT creates a temporary point inside a transaction to which we can roll back without cancelling the entire transaction.
+
+                Example:
+
+                START TRANSACTION;
+
+                INSERT INTO employees VALUES (1, 'Amit', 30000);
+
+                SAVEPOINT sp1;
+
+                INSERT INTO employees VALUES (2, 'Priya', 40000);
+
+                ROLLBACK TO sp1;
+
+                COMMIT;
+
+                The second INSERT is cancelled, while the first INSERT is committed.
+
+            9. What is ROLLBACK TO SAVEPOINT?
+
+                It rolls back the transaction to a previously created savepoint without ending the entire transaction.
+
+                Syntax:
+
+                ROLLBACK TO SAVEPOINT savepoint_name;
+
+            10. What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?
+
+                ROLLBACK cancels all uncommitted changes in the current transaction.
+
+                ROLLBACK TO SAVEPOINT cancels only the changes made after the specified savepoint.
+
+            11. What is the difference between SAVEPOINT and COMMIT?
+
+                SAVEPOINT creates a point within a transaction to which we can return.
+
+                COMMIT permanently saves all changes made in the transaction.
+
+            12. What is the default storage engine in MySQL?
+
+                In modern MySQL versions, InnoDB is the default storage engine.
+
+                InnoDB supports transactions, COMMIT, ROLLBACK and foreign keys.
+
+            13. Can we use ROLLBACK with every MySQL table?
+
+                No. ROLLBACK works with transactional storage engines such as InnoDB.
+
+                Non-transactional storage engines such as MyISAM do not support transaction rollback.
+
+            14. What is DCL in MySQL?
+
+                DCL stands for Data Control Language.
+
+                It is used to control database access and user permissions.
+
+                Main commands:
+
+                GRANT
+                REVOKE
+
+            15. What is the purpose of CREATE USER?
+
+                CREATE USER is used to create a new MySQL user account.
+
+                Example:
+
+                CREATE USER 'testuser'@'localhost'
+                IDENTIFIED BY 'password123';
+
+            16. What is the purpose of GRANT?
+
+                GRANT provides specific permissions to a MySQL user.
+
+                Example:
+
+                GRANT SELECT, INSERT
+                ON company.*
+                TO 'testuser'@'localhost';
+
+                This gives the user SELECT and INSERT permissions on all tables in the company database.
+
+            17. What is the purpose of REVOKE?
+
+                REVOKE removes previously granted permissions from a MySQL user.
+
+                Example:
+
+                REVOKE INSERT
+                ON company.*
+                FROM 'testuser'@'localhost';
+
+            18. What is the difference between GRANT and REVOKE?
+
+                GRANT provides permissions to a user.
+
+                REVOKE removes permissions from a user.
+
+            19. What are the common privileges in MySQL?
+
+                SELECT – Allows reading records.
+
+                INSERT – Allows inserting records.
+
+                UPDATE – Allows modifying records.
+
+                DELETE – Allows deleting records.
+
+                CREATE – Allows creating databases or tables, depending on the granted scope.
+
+                DROP – Allows dropping databases or tables, depending on the granted scope.
+
+            20. What is the difference between a MySQL user and a database?
+
+                A user is an account used to access MySQL.
+
+                A database is an organized collection of tables and other database objects.
+
+            21. How do you check the current MySQL user?
+
+                SELECT USER();
+
+            22. How do you display the permissions granted to a user?
+
+                SHOW GRANTS FOR 'testuser'@'localhost';
+
+            Important Interview Points
+
+                1. A transaction is a group of SQL operations treated as one unit.
+                2. ACID stands for Atomicity, Consistency, Isolation and Durability.
+                3. START TRANSACTION begins a transaction.
+                4. COMMIT permanently saves transaction changes.
+                5. ROLLBACK cancels uncommitted changes.
+                6. ROLLBACK cannot undo changes after COMMIT.
+                7. SAVEPOINT creates a rollback point inside a transaction.
+                8. ROLLBACK TO SAVEPOINT cancels changes after that savepoint.
+                9. InnoDB supports transactions and foreign keys.
+                10. MyISAM does not support transaction rollback.
+                11. DCL controls database permissions.
+                12. GRANT provides permissions.
+                13. REVOKE removes permissions.
+                14. CREATE USER creates a MySQL account.
+                15. SHOW GRANTS displays user permissions.
+
+            Quick Revision
+
+                START TRANSACTION;
+
+                UPDATE employees
+                SET salary = 50000
+                WHERE emp_id = 1;
+
+                COMMIT;
+
+                START TRANSACTION;
+
+                DELETE FROM employees
+                WHERE emp_id = 1;
+
+                ROLLBACK;
+
+                START TRANSACTION;
+
+                INSERT INTO employees VALUES (1, 'Amit', 30000);
+
+                SAVEPOINT sp1;
+
+                INSERT INTO employees VALUES (2, 'Priya', 40000);
+
+                ROLLBACK TO SAVEPOINT sp1;
+
+                COMMIT;
+
+                CREATE USER 'testuser'@'localhost'
+                IDENTIFIED BY 'password123';
+
+                GRANT SELECT, INSERT
+                ON company.*
+                TO 'testuser'@'localhost';
+
+                REVOKE INSERT
+                ON company.*
+                FROM 'testuser'@'localhost';
+
+                SHOW GRANTS FOR 'testuser'@'localhost';
+
+                SELECT USER();
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
     Internship Day 39 (03/11/26):-
