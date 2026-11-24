@@ -2887,6 +2887,312 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 UPDATE → Modifies records
                 DELETE → Removes records
 
+        MySQL Interview Questions – Day 5
+
+            1. What are SQL Clauses?
+
+                SQL clauses are parts of an SQL query used to filter, sort, group and limit the data retrieved from a database.
+
+            2. What is the purpose of the SELECT clause?
+
+                SELECT is used to retrieve specific columns or all columns from a table.
+
+                Example:
+
+                SELECT emp_name, salary FROM employees;
+
+            3. What is the purpose of the FROM clause?
+
+                FROM specifies the table from which data should be retrieved.
+
+                Example:
+
+                SELECT * FROM employees;
+
+            4. What is the WHERE clause?
+
+                WHERE is used to filter records based on a specified condition.
+
+                Example:
+
+                SELECT * FROM employees
+                WHERE salary > 30000;
+
+            5. What is the difference between WHERE and HAVING?
+
+                WHERE:
+                - Filters individual rows before grouping.
+                - Cannot directly use aggregate functions in its condition.
+
+                HAVING:
+                - Filters groups after GROUP BY.
+                - Can use aggregate functions in its condition.
+
+                Example:
+
+                SELECT department, AVG(salary)
+                FROM employees
+                GROUP BY department
+                HAVING AVG(salary) > 40000;
+
+            6. What is the ORDER BY clause?
+
+                ORDER BY is used to sort query results in ascending or descending order.
+
+                Example:
+
+                SELECT * FROM employees
+                ORDER BY salary DESC;
+
+            7. What is the difference between ASC and DESC?
+
+                ASC sorts values in ascending order.
+                
+                DESC sorts values in descending order.
+
+                Note: ASC is the default sorting order.
+
+            8. What is the GROUP BY clause?
+
+                GROUP BY groups rows having the same values in specified columns. It is commonly used with aggregate functions.
+
+                Example:
+
+                SELECT department, COUNT(*)
+                FROM employees
+                GROUP BY department;
+
+            9. What is the difference between GROUP BY and ORDER BY?
+
+                GROUP BY groups rows having the same values.
+                
+                ORDER BY sorts the final query result.
+
+            10. Can we use GROUP BY without aggregate functions?
+
+                    Yes. GROUP BY can be used without aggregate functions to return distinct combinations of the grouped columns.
+
+                    Example:
+
+                    SELECT department
+                    FROM employees
+                    GROUP BY department;
+
+            11. What is the LIMIT clause?
+
+                LIMIT restricts the number of rows returned by a query.
+
+                Example:
+
+                SELECT * FROM employees
+                LIMIT 5;
+
+                This returns a maximum of 5 records.
+
+            12. What is OFFSET in MySQL?
+
+                OFFSET specifies how many rows should be skipped before returning records.
+
+                Example:
+
+                SELECT * FROM employees
+                LIMIT 5 OFFSET 10;
+
+                This skips the first 10 records and returns the next 5 records.
+
+            13. What is the DISTINCT keyword?
+
+                DISTINCT removes duplicate combinations from the selected columns in the query result.
+
+                Example:
+
+                SELECT DISTINCT department
+                FROM employees;
+
+            14. What is the BETWEEN operator?
+
+                BETWEEN checks whether a value falls within a specified range. Both boundary values are included.
+
+                Example:
+
+                SELECT * FROM employees
+                WHERE salary BETWEEN 30000 AND 50000;
+
+            15. What is the IN operator?
+
+                IN checks whether a column value matches any value from a specified list.
+
+                Example:
+
+                SELECT * FROM employees
+                WHERE city IN ('Pune', 'Mumbai', 'Delhi');
+
+            16. What is the LIKE operator?
+
+                LIKE is used to search for a specified pattern in a column.
+
+                Wildcards:
+                
+                % – Matches zero or more characters.
+                
+                _ – Matches exactly one character.
+
+                Example:
+
+                SELECT * FROM employees
+                WHERE emp_name LIKE 'A%';
+
+                This returns employee names starting with A.
+
+            17. What is the difference between IN and BETWEEN?
+
+                IN checks whether a value matches any value in a given list.
+                
+                BETWEEN checks whether a value falls within a specified range, including both boundaries.
+
+            18. What is the difference between % and _ in LIKE?
+
+                % matches zero or more characters.
+                
+                _ matches exactly one character.
+
+            19. What is the UNION operator?
+
+                UNION combines the results of two or more SELECT queries and removes duplicate rows.
+
+                Example:
+
+                SELECT city FROM employees
+                UNION
+                SELECT city FROM customers;
+
+            20. What is the difference between UNION and UNION ALL?
+
+                UNION combines query results and removes duplicate rows.
+                
+                UNION ALL combines query results and keeps duplicate rows.
+
+            21. What conditions must be satisfied when using UNION?
+
+                - Each SELECT query must return the same number of columns.
+                - Corresponding columns must have compatible data types.
+                - Columns should appear in the same order.
+
+            22. What is the difference between UPDATE and DELETE?
+
+                UPDATE modifies existing records.
+                
+                DELETE removes existing records.
+
+                Example:
+
+                UPDATE employees
+                SET salary = 50000
+                WHERE emp_id = 1;
+
+                DELETE FROM employees
+                WHERE emp_id = 1;
+
+            23. Why is the WHERE clause important in UPDATE and DELETE?
+
+                WHERE specifies which records should be modified or deleted.
+
+                Without WHERE, UPDATE modifies all rows and DELETE removes all rows from the table.
+
+            24. What is the logical execution order of SQL clauses?
+
+                The simplified logical processing order of a SELECT query is:
+
+                1. FROM
+                2. WHERE
+                3. GROUP BY
+                4. HAVING
+                5. SELECT
+                6. ORDER BY
+                7. LIMIT
+
+            25. Can we use WHERE and HAVING together?
+
+                Yes. WHERE filters individual rows before grouping, while HAVING filters the resulting groups.
+
+                Example:
+
+                SELECT department, AVG(salary) AS avg_salary
+                FROM employees
+                WHERE salary > 20000
+                GROUP BY department
+                HAVING AVG(salary) > 40000;
+
+            Important Interview Points
+
+                1. WHERE filters individual rows.
+                2. HAVING filters grouped results.
+                3. GROUP BY is commonly used with aggregate functions.
+                4. ORDER BY sorts records.
+                5. ASC is the default sorting order.
+                6. DESC sorts records in descending order.
+                7. LIMIT restricts the number of returned rows.
+                8. OFFSET skips a specified number of rows.
+                9. DISTINCT removes duplicate combinations from query results.
+                10. BETWEEN includes both boundary values.
+                11. IN checks values against a list.
+                12. LIKE is used for pattern matching.
+                13. % matches zero or more characters.
+                14. _ matches exactly one character.
+                15. UNION removes duplicates.
+                16. UNION ALL keeps duplicates.
+                17. UPDATE modifies records.
+                18. DELETE removes records.
+                19. Always use WHERE carefully with UPDATE and DELETE.
+                20. HAVING is processed after GROUP BY.
+
+            Quick Revision
+
+                SELECT * FROM employees;
+
+                SELECT * FROM employees WHERE salary > 30000;
+
+                SELECT * FROM employees ORDER BY salary DESC;
+
+                SELECT department, COUNT(*)
+                FROM employees
+                GROUP BY department;
+
+                SELECT department, AVG(salary)
+                FROM employees
+                GROUP BY department
+                HAVING AVG(salary) > 40000;
+
+                SELECT * FROM employees LIMIT 5;
+
+                SELECT * FROM employees LIMIT 5 OFFSET 10;
+
+                SELECT DISTINCT department FROM employees;
+
+                SELECT * FROM employees
+                WHERE salary BETWEEN 30000 AND 50000;
+
+                SELECT * FROM employees
+                WHERE city IN ('Pune', 'Mumbai');
+
+                SELECT * FROM employees
+                WHERE emp_name LIKE 'A%';
+
+                SELECT city FROM employees
+                UNION
+                SELECT city FROM customers;
+
+                SELECT city FROM employees
+                UNION ALL
+                SELECT city FROM customers;
+
+                UPDATE employees
+                SET salary = 50000
+                WHERE emp_id = 1;
+
+                DELETE FROM employees
+                WHERE emp_id = 1;
+
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
         
     Internship Day 37 (30/10/26):-
@@ -3009,6 +3315,259 @@ MySQL Programming Fundamentals - Notes and Study Guide
                 FULL OUTER JOIN - all rows from both sides; emulate in MySQL with UNION
                 CROSS JOIN      - every possible row combination
                 SELF JOIN       - join a table to itself
+
+        MySQL Interview Questions – Day 6
+        
+            1. What are Joins in MySQL?
+
+                Joins are used to combine records from two or more tables based on a related column between them.
+
+            2. Why do we use Joins in MySQL?
+
+                Joins help retrieve related data stored in multiple tables without duplicating the same information.
+
+            3. What are the different types of Joins in MySQL?
+
+                INNER JOIN
+                LEFT JOIN
+                RIGHT JOIN
+                CROSS JOIN
+                SELF JOIN
+
+                FULL OUTER JOIN is not directly supported in MySQL, but similar results can be obtained using LEFT JOIN and RIGHT JOIN with UNION.
+
+            4. What is INNER JOIN?
+
+                INNER JOIN returns only the records that have matching values in both tables.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+            5. What is LEFT JOIN?
+
+                LEFT JOIN returns all records from the left table and matching records from the right table.
+
+                If there is no matching record in the right table, NULL values are returned for its columns.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                LEFT JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+            6. What is RIGHT JOIN?
+
+                RIGHT JOIN returns all records from the right table and matching records from the left table.
+
+                If there is no matching record in the left table, NULL values are returned for its columns.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                RIGHT JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+            7. What is the difference between INNER JOIN and LEFT JOIN?
+
+                INNER JOIN returns only matching records from both tables.
+
+                LEFT JOIN returns all records from the left table, including unmatched records from the left table.
+
+            8. What is the difference between LEFT JOIN and RIGHT JOIN?
+
+                LEFT JOIN keeps all records from the left table.
+
+                RIGHT JOIN keeps all records from the right table.
+
+            9. What is FULL OUTER JOIN?
+
+                FULL OUTER JOIN returns all records from both tables, including matching and non-matching records.
+
+                MySQL does not directly support FULL OUTER JOIN.
+
+            10. How can we perform FULL OUTER JOIN in MySQL?
+
+                We can combine LEFT JOIN and RIGHT JOIN using UNION.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                LEFT JOIN departments
+                ON employees.dept_id = departments.dept_id
+
+                UNION
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                RIGHT JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+            11. What is CROSS JOIN?
+
+                CROSS JOIN returns the Cartesian product of two tables.
+
+                It combines every row of the first table with every row of the second table.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                CROSS JOIN departments;
+
+            12. What is SELF JOIN?
+
+                SELF JOIN is used to join a table with itself.
+
+                It is useful when records in the same table are related to each other.
+
+                Example:
+
+                SELECT e.emp_name AS employee,
+                    m.emp_name AS manager
+                FROM employees e
+                INNER JOIN employees m
+                ON e.manager_id = m.emp_id;
+
+            13. What is the difference between CROSS JOIN and INNER JOIN?
+
+                CROSS JOIN returns every possible combination of rows from both tables.
+
+                INNER JOIN returns only records that satisfy the join condition.
+
+            14. What is an ON clause in JOIN?
+
+                ON specifies the condition used to match records between two tables.
+
+                Example:
+
+                SELECT *
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+            15. What is the difference between ON and WHERE in JOIN queries?
+
+                ON specifies the condition used to match records between tables.
+
+                WHERE filters the records returned by the query.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id
+                WHERE departments.dept_name = 'IT';
+
+            16. Can we use WHERE with JOIN?
+
+                Yes. WHERE can be used with JOIN to filter the combined result.
+
+                Example:
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id
+                WHERE departments.dept_name = 'IT';
+
+            17. Can we use GROUP BY with JOIN?
+
+                Yes. GROUP BY can be used with JOIN to group combined records and perform aggregate calculations.
+
+                Example:
+
+                SELECT departments.dept_name, COUNT(employees.emp_id) AS total_employees
+                FROM departments
+                LEFT JOIN employees
+                ON departments.dept_id = employees.dept_id
+                GROUP BY departments.dept_id, departments.dept_name;
+
+            18. Can we use multiple JOINs in a single query?
+
+                Yes. We can join multiple tables in a single query by specifying the required JOIN conditions.
+
+                Example:
+
+                SELECT employees.emp_name,
+                    departments.dept_name,
+                    locations.city
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id
+                INNER JOIN locations
+                ON departments.location_id = locations.location_id;
+
+            19. What happens when there is no matching record in LEFT JOIN?
+
+                All records from the left table are returned, and the columns from the right table contain NULL for unmatched records.
+
+            20. What is a Cartesian Product?
+
+                A Cartesian Product is the combination of every row from one table with every row from another table.
+
+                If the first table has 3 rows and the second table has 4 rows, the result contains 12 rows.
+
+            Important Interview Points
+
+                1. JOIN combines records from multiple tables.
+                2. INNER JOIN returns only matching records.
+                3. LEFT JOIN returns all records from the left table.
+                4. RIGHT JOIN returns all records from the right table.
+                5. MySQL does not directly support FULL OUTER JOIN.
+                6. FULL OUTER JOIN-like results can be achieved using LEFT JOIN UNION RIGHT JOIN.
+                7. CROSS JOIN returns the Cartesian product.
+                8. SELF JOIN joins a table with itself.
+                9. ON specifies the matching condition.
+                10. WHERE filters the query result.
+                11. GROUP BY groups joined records.
+                12. Multiple JOINs can be used in one query.
+
+            Quick Revision
+
+                SELECT *
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+                SELECT *
+                FROM employees
+                LEFT JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+                SELECT *
+                FROM employees
+                RIGHT JOIN departments
+                ON employees.dept_id = departments.dept_id;
+
+                SELECT *
+                FROM employees
+                CROSS JOIN departments;
+
+                SELECT e.emp_name AS employee,
+                    m.emp_name AS manager
+                FROM employees e
+                INNER JOIN employees m
+                ON e.manager_id = m.emp_id;
+
+                SELECT employees.emp_name, departments.dept_name
+                FROM employees
+                INNER JOIN departments
+                ON employees.dept_id = departments.dept_id
+                WHERE departments.dept_name = 'IT';
+
+                SELECT departments.dept_name, COUNT(employees.emp_id)
+                FROM departments
+                LEFT JOIN employees
+                ON departments.dept_id = employees.dept_id
+                GROUP BY departments.dept_id, departments.dept_name;
 
     -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
 
