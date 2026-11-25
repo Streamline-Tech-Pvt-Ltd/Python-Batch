@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            .body{
+                background-color: black;
+            }
+            .demo{
+                background-color : beige;
+                border-collapse: collapse;
+
+            }
+            #name{
+                background-color: rgb(248, 246, 250);
+                border: 2px solid black;
+            }
+            th,td{
+                border: 2px solid black;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <table class='demo'>
+            <tr id='name'>
+                <th>ID</th>
+                <th>Product_name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+            {% for i in products %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.prod_name}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.quantity}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </body>
+</html>

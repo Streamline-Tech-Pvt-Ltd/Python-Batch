@@ -7,4 +7,5 @@ urlpatterns = [
     path('date/', views.date),
     path('calculator/', views.calculator),
     path('ifdemo/', views.ifdemo),
+    path('fordemo/', views.fordemo),
 ]

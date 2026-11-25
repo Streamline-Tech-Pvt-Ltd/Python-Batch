@@ -67,14 +67,14 @@ def ifdemo(request):
     return render(request,templatefilename,dict1)
 
 
-# def fordemo(request):
-#     Products = [
-#         {'id':101,"prod_name":"shirt","price":500,"quantity": 5},
-#         {'id':102,"prod_name":"shorts","price":1000,"quantity": 2},
-#         {'id':103,"prod_name":"jeans","price":700,"quantity": 1},
-#         {'id':104,"prod_name":"hat","price":200,"quantity": 4},
-#         {'id':105,"prod_name":"formal shirt","price":400,"quantity": 10},
-#     ]
-#     templatefilename = 'fordemo.html'
-#     dict1 = {'products':Products}
-#     return render(request,templatefilename,dict1)
+def fordemo(request):
+    Products = [
+        {'id':101,"prod_name":"shirt","price":500,"quantity": 5},
+        {'id':102,"prod_name":"shorts","price":1000,"quantity": 2},
+        {'id':103,"prod_name":"jeans","price":700,"quantity": 1},
+        {'id':104,"prod_name":"hat","price":200,"quantity": 4},
+        {'id':105,"prod_name":"formal shirt","price":400,"quantity": 10},
+    ]
+    templatefilename = 'fordemo.html'
+    dict1 = {'products':Products}
+    return render(request,templatefilename,dict1)
