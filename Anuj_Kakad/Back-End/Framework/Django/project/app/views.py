@@ -24,3 +24,58 @@ def date(request):
         'current_date' : data,
     }
     return render(request, 'date.html', context)
+
+
+def calculator(request):
+    message = ''
+    if (request.method == 'GET'):
+        if (request.GET.get('message') == 'Add'):
+            a = int(request.GET.get('a'))
+            b = int(request.GET.get('b'))
+            message = a + b
+
+        elif (request.GET.get("message") == "Sub"):
+            a = int(request.GET.get ("a"))
+            b = int(request.GET.get ("b"))
+            message = a - b
+
+        elif (request.GET.get('message') == 'Mul'):
+            a = int(request.GET.get('a'))
+            b = int(request.GET.get('b'))
+            message = a * b
+
+        elif (request.GET.get("message") == "Div"):
+            a = int(request.GET.get ("a"))
+            b = int(request.GET.get ("b"))
+            message = a / b
+
+        else:
+            return HttpResponse("Invalid Operation")
+
+    return HttpResponse(f"The Result is :- {message}")
+
+
+# def ifdemo(request):
+#     Data = {
+#         'id': 101,
+#         'name': 'urmila',
+#         'age': 18,
+#         'mob_no': 9822667175,
+#         'is_user': False
+#     }
+#     templatefilename = 'ifdemo.html'
+#     dict1 = {'data': Data}
+#     return render(request,templatefilename,dict1)
+
+
+# def fordemo(request):
+#     Products = [
+#         {'id':101,"prod_name":"shirt","price":500,"quantity": 5},
+#         {'id':102,"prod_name":"shorts","price":1000,"quantity": 2},
+#         {'id':103,"prod_name":"jeans","price":700,"quantity": 1},
+#         {'id':104,"prod_name":"hat","price":200,"quantity": 4},
+#         {'id':105,"prod_name":"formal shirt","price":400,"quantity": 10},
+#     ]
+#     templatefilename = 'fordemo.html'
+#     dict1 = {'products':Products}
+#     return render(request,templatefilename,dict1)

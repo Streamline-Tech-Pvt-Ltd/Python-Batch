@@ -5,4 +5,5 @@ urlpatterns = [
     path('Display/', views.display_message),
     path('home/', views.home),
     path('date/', views.date),
+    path('calculator/', views.calculator),
 ]
