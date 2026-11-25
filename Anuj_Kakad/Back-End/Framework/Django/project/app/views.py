@@ -55,17 +55,16 @@ def calculator(request):
     return HttpResponse(f"The Result is :- {message}")
 
 
-# def ifdemo(request):
-#     Data = {
-#         'id': 101,
-#         'name': 'urmila',
-#         'age': 18,
-#         'mob_no': 9822667175,
-#         'is_user': False
-#     }
-#     templatefilename = 'ifdemo.html'
-#     dict1 = {'data': Data}
-#     return render(request,templatefilename,dict1)
+def ifdemo(request):
+    Data = {
+        'Name': 'Anuj Kakad',
+        'Age': 25,
+        'City': 'Pune',
+        'Country': 'India',
+    }
+    templatefilename = 'ifdemo.html'
+    dict1 = {'data': Data}
+    return render(request,templatefilename,dict1)
 
 
 # def fordemo(request):
