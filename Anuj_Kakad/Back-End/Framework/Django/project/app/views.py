@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from datetime import datetime
+import requests
 
 # Create your views here.
 
@@ -78,3 +79,15 @@ def fordemo(request):
     templatefilename = 'fordemo.html'
     dict1 = {'products':Products}
     return render(request,templatefilename,dict1)
+
+
+def CallRestAPI(request):
+    url = 'https://fakestoreapi.com/users'
+    responce = requests.get(url)
+    return responce
+
+def user_Data(request):
+    templatefile = 'user_data.html'
+    response = CallRestAPI(request)
+    dict = {'data': response.json()}
+    return render(request, templatefile, dict)
